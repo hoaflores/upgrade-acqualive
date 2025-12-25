@@ -12,61 +12,66 @@
 
 @layer base {
   :root {
-    --background: 0 0% 96%;
-    --foreground: 0 0% 9%;
+    --background: 210 20% 97%;
+    --foreground: 215 65% 19%;
 
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 9%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 65% 19%;
 
-    --popover: 0 0% 89%;
-    --popover-foreground: 0 0% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 65% 19%;
 
-    --primary: 20 90% 48%;
-    --primary-foreground: 33 100% 96%;
-    --primary-glow: 186 76% 55%;
+    /* #1d4380 - Azul principal da marca */
+    --primary: 215 62% 31%;
+    --primary-foreground: 0 0% 100%;
+    /* #f26923 - Laranja da marca */
+    --primary-glow: 21 89% 55%;
 
-    --secondary: 0 0% 32%;
-    --secondary-foreground: 0 0% 98%;
+    /* #02265f - Azul escuro */
+    --secondary: 218 97% 19%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 63%;
-    --muted-foreground: 0 0% 9%;
+    --muted: 215 20% 65%;
+    --muted-foreground: 215 30% 35%;
 
-    --accent: 47 100% 96%;
-    --accent-foreground: 37 92% 50%;
+    /* Laranja accent */
+    --accent: 21 89% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 50%;
     --destructive-foreground: 0 85% 97%;
 
-    --border: 0 0% 83%;
-    --input: 0 0% 83%;
-    --ring: 20 90% 48%;
+    --border: 215 20% 85%;
+    --input: 215 20% 85%;
+    --ring: 215 62% 31%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens */
-    --water-light: 186 60% 95%;
-    --water-medium: 186 70% 85%;
-    --water-deep: 200 80% 25%;
-    --gold: 42 90% 55%;
-    --gold-light: 42 80% 70%;
+    /* Custom tokens - Acqualive brand */
+    --water-light: 210 50% 96%;
+    --water-medium: 215 45% 85%;
+    --water-deep: 218 97% 19%;
+    --gold: 21 89% 55%;
+    --gold-light: 21 85% 70%;
 
-    --gradient-water: linear-gradient(135deg, hsl(186 76% 40%) 0%, hsl(200 80% 35%) 100%);
-    --gradient-water-light: linear-gradient(135deg, hsl(186 60% 95%) 0%, hsl(200 50% 90%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(200 30% 98%) 0%, hsl(186 60% 95%) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(186 76% 45%) 0%, hsl(186 76% 35%) 100%);
+    /* Gradientes com cores da marca */
+    --gradient-water: linear-gradient(135deg, hsl(215 62% 31%) 0%, hsl(218 97% 19%) 100%);
+    --gradient-water-light: linear-gradient(135deg, hsl(210 50% 96%) 0%, hsl(215 45% 92%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(210 40% 98%) 0%, hsl(210 50% 96%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(21 89% 55%) 0%, hsl(21 89% 45%) 100%);
 
-    --shadow-soft: 0 4px 20px -4px hsl(186 76% 40% / 0.15);
-    --shadow-elevated: 0 20px 50px -15px hsl(186 76% 40% / 0.25);
-    --shadow-glow: 0 0 40px hsl(186 76% 55% / 0.3);
+    --shadow-soft: 0 4px 20px -4px hsl(215 62% 31% / 0.15);
+    --shadow-elevated: 0 20px 50px -15px hsl(215 62% 31% / 0.25);
+    --shadow-glow: 0 0 40px hsl(21 89% 55% / 0.3);
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 9%;
-    --sidebar-primary: 20 90% 48%;
-    --sidebar-primary-foreground: 33 100% 96%;
-    --sidebar-accent: 0 0% 32%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 0 0% 83%;
-    --sidebar-ring: 20 90% 48%;
+    --sidebar-foreground: 215 65% 19%;
+    --sidebar-primary: 215 62% 31%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 21 89% 55%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 215 20% 85%;
+    --sidebar-ring: 215 62% 31%;
     --chart-1: 27 95% 60%;
     --chart-2: 43 96% 56%;
     --chart-3: 47 95% 53%;
