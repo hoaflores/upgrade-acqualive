@@ -94,15 +94,16 @@ const DonationSection = () => {
           </div>
         </div>
 
-        {/* Highlight Box */}
+        {/* Quote Box - Design diferenciado (não é CTA) */}
         <div className="max-w-3xl mx-auto">
-          <div className="relative bg-gradient-water rounded-2xl p-8 text-center overflow-hidden">
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIxLTEuNzktNC00LTRzLTQgMS43OS00IDQgMS43OSA0IDQgNCA0LTEuNzkgNC00eiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
-            <div className="relative z-10">
-              <Heart className="w-10 h-10 text-primary-foreground/80 mx-auto mb-4" />
-              <p className="font-display text-xl md:text-2xl font-bold text-primary-foreground">
+          <div className="relative bg-card border-l-4 border-primary rounded-xl p-8 shadow-soft">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                <Heart className="w-6 h-6 text-primary" />
+              </div>
+              <blockquote className="text-lg md:text-xl font-medium text-foreground italic leading-relaxed">
                 "Você renova sua saúde e transforma vidas ao mesmo tempo."
-              </p>
+              </blockquote>
             </div>
           </div>
         </div>

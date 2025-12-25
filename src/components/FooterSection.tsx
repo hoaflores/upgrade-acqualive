@@ -26,7 +26,7 @@ const FooterSection = () => {
           </h2>
           <Button
             variant="cta"
-            size="xl"
+            size="lg"
             asChild
             className="bg-primary-foreground text-water-deep hover:bg-primary-foreground/90 shadow-elevated group"
           >
@@ -35,8 +35,8 @@ const FooterSection = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <WhatsAppIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              QUERO MEU ACQUALIVE NOVO
+              <WhatsAppIcon className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
+              <span>QUERO MEU ACQUALIVE</span>
             </a>
           </Button>
         </div>

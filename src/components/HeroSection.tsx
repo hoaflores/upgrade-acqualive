@@ -61,17 +61,17 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up animation-delay-600">
               <Button
                 variant="cta"
-                size="xl"
+                size="lg"
                 asChild
-                className="group"
+                className="group sm:text-base text-sm px-6 sm:px-10"
               >
                 <a
                   href="https://wa.me/555192928468?text=Olá,%20recebi%20um%20e-mail%20com%20um%20desconto%20exclusivo%20para%20fazer%20o%20upgrade%20do%20meu%20filtro%20Acqualive.%20Gostaria%20de%20saber%20mais."
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <WhatsAppIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                  QUERO RESGATAR MEU CRÉDITO AGORA
+                  <WhatsAppIcon className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                  <span>RESGATAR MEU CRÉDITO</span>
                 </a>
               </Button>
             </div>
