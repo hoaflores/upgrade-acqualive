@@ -1,5 +1,6 @@
-import { Droplets, AlertTriangle, Shield } from "lucide-react";
+import { Droplets, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 const FooterSection = () => {
   return (
@@ -34,7 +35,7 @@ const FooterSection = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Shield className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <WhatsAppIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
               QUERO MEU ACQUALIVE NOVO
             </a>
           </Button>
