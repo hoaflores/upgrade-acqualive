@@ -1,4 +1,4 @@
-import { Droplets, Zap, Sparkles } from "lucide-react";
+import { Droplets, Zap, Sparkles, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroProductImage from "@/assets/hero-product.jpg";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
@@ -76,10 +76,21 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            <p className="mt-6 text-sm text-muted-foreground flex items-center justify-center lg:justify-start gap-2 animate-fade-in animation-delay-600">
-              <Sparkles className="w-4 h-4 text-gold" />
-              Oferta exclusiva para clientes antigos
-            </p>
+            {/* Badges */}
+            <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-3 animate-fade-in animation-delay-600">
+              <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2">
+                <Truck className="w-4 h-4 text-accent" />
+                <span className="text-sm font-semibold text-accent">
+                  Frete Grátis
+                </span>
+              </div>
+              <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-4 py-2">
+                <Sparkles className="w-4 h-4 text-gold" />
+                <span className="text-sm font-medium text-foreground">
+                  Oferta exclusiva
+                </span>
+              </div>
+            </div>
           </div>
 
           {/* Product Image */}
