@@ -95,13 +95,15 @@ const HeroSection = () => {
 
           {/* Product Image */}
           <div className="relative order-1 lg:order-2 flex justify-center animate-scale-in animation-delay-200">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-water rounded-full blur-3xl opacity-20 scale-75" />
-              <img
-                src={heroProductImage}
-                alt="Purificador Acqualive Linha V - Design premium com acabamento sofisticado"
-                className="relative w-full max-w-lg lg:max-w-xl object-contain animate-float drop-shadow-2xl"
-              />
+            <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg">
+              <div className="absolute inset-0 bg-gradient-water rounded-3xl blur-3xl opacity-20 scale-90" />
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src={heroProductImage}
+                  alt="Purificador Acqualive Linha V - Design premium com acabamento sofisticado"
+                  className="w-full h-full object-cover object-center animate-float"
+                />
+              </div>
             </div>
           </div>
         </div>
