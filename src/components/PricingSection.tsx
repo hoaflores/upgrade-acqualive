@@ -1,6 +1,7 @@
-import { Check, Gift, Truck, CreditCard, Shield } from "lucide-react";
+import { Check, Gift, Truck, CreditCard } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
+import productActionImage from "@/assets/product-action.jpg";
 const benefits = [
   {
     icon: Gift,
@@ -69,43 +70,58 @@ const PricingSection = () => {
         </div>
 
         {/* Pricing Card */}
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="relative bg-gradient-water rounded-3xl p-1">
-            <div className="bg-card rounded-[1.4rem] p-8 lg:p-12 text-center">
-              <div className="mb-6">
-                <p className="text-muted-foreground mb-2">
-                  Você ganha{" "}
-                  <strong className="text-accent font-bold">R$500,00 de desconto</strong>{" "}
-                  e o seu novo Filtro já vem com um kit de refis!
-                </p>
-                <p className="text-lg font-semibold text-foreground">
-                  Ou seja, Você não paga nada mais para manter sua água
-                  alcalina!
-                </p>
-              </div>
+            <div className="bg-card rounded-[1.4rem] p-8 lg:p-12">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                {/* Product Image */}
+                <div className="relative order-2 md:order-1">
+                  <div className="absolute inset-0 bg-gradient-water rounded-2xl blur-2xl opacity-20" />
+                  <img
+                    src={productActionImage}
+                    alt="Purificador Acqualive em uso - Água pura e alcalina"
+                    className="relative w-full max-w-sm mx-auto rounded-2xl shadow-elevated object-cover aspect-[4/3]"
+                  />
+                </div>
 
-              <div className="mb-8">
-                <p className="text-muted-foreground/60 text-lg line-through mb-2">
-                  De: <span className="text-muted-foreground/60">R$ 1.997,00</span>
-                </p>
-                <p className="font-display text-2xl md:text-3xl font-bold text-foreground">
-                  Por:{" "}
-                  <span className="text-gradient-water">
-                    Clique no botão e descubra o melhor preço!
-                  </span>
-                </p>
-              </div>
+                {/* Pricing Info */}
+                <div className="text-center md:text-left order-1 md:order-2">
+                  <div className="mb-6">
+                    <p className="text-muted-foreground mb-2">
+                      Você ganha{" "}
+                      <strong className="text-accent font-bold">R$500,00 de desconto</strong>{" "}
+                      e o seu novo Filtro já vem com um kit de refis!
+                    </p>
+                    <p className="text-lg font-semibold text-foreground">
+                      Ou seja, Você não paga nada mais para manter sua água
+                      alcalina!
+                    </p>
+                  </div>
 
-              <Button variant="cta" size="xl" asChild className="w-full sm:w-auto group">
-                <a
-                  href="https://wa.me/555192928468?text=Olá,%20recebi%20um%20e-mail%20com%20um%20desconto%20exclusivo%20para%20fazer%20o%20upgrade%20do%20meu%20filtro%20Acqualive.%20Gostaria%20de%20saber%20mais."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Shield className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                  GARANTIR MEU UPGRADE COM BÔNUS
-                </a>
-              </Button>
+                  <div className="mb-8">
+                    <p className="text-muted-foreground/60 text-lg line-through mb-2">
+                      De: <span className="text-muted-foreground/60">R$ 1.997,00</span>
+                    </p>
+                    <p className="font-display text-xl md:text-2xl font-bold text-foreground">
+                      Por:{" "}
+                      <span className="text-gradient-water">
+                        Clique e descubra o melhor preço!
+                      </span>
+                    </p>
+                  </div>
+
+                  <Button variant="cta" size="xl" asChild className="w-full group">
+                    <a
+                      href="https://wa.me/555192928468?text=Olá,%20recebi%20um%20e-mail%20com%20um%20desconto%20exclusivo%20para%20fazer%20o%20upgrade%20do%20meu%20filtro%20Acqualive.%20Gostaria%20de%20saber%20mais."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <WhatsAppIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                      GARANTIR MEU UPGRADE COM BÔNUS
+                    </a>
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
