@@ -5,17 +5,30 @@ import PricingSection from "@/components/PricingSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import FooterSection from "@/components/FooterSection";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const Index = () => {
   return (
     <main className="min-h-screen">
       <HeroSection />
-      <WhyUpgradeSection />
-      <DonationSection />
-      <PricingSection />
-      <TestimonialsSection />
-      <FAQSection />
+      <ScrollReveal>
+        <WhyUpgradeSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <DonationSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <PricingSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <TestimonialsSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <FAQSection />
+      </ScrollReveal>
       <FooterSection />
+      <StickyMobileCTA />
     </main>
   );
 };
