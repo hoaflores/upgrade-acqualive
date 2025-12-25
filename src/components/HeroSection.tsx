@@ -52,9 +52,9 @@ const HeroSection = () => {
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-400">
               Valorizamos sua fidelidade: Seu filtro antigo vale{" "}
-              <strong className="text-foreground">DESCONTOS</strong> que podem
+              <strong className="text-accent font-bold">DESCONTOS</strong> que podem
               fazer um novíssimo Acqualive sair por{" "}
-              <strong className="text-primary">menos de R$1000,00</strong> para
+              <strong className="text-accent font-bold">menos de R$1000,00</strong> para
               você fazer o upgrade agora para os mais modernos Purificadores e
               Ionizadores.
             </p>

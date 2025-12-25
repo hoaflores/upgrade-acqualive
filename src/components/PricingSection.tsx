@@ -75,7 +75,7 @@ const PricingSection = () => {
               <div className="mb-6">
                 <p className="text-muted-foreground mb-2">
                   Você ganha{" "}
-                  <strong className="text-primary">R$500,00 de desconto</strong>{" "}
+                  <strong className="text-accent font-bold">R$500,00 de desconto</strong>{" "}
                   e o seu novo Filtro já vem com um kit de refis!
                 </p>
                 <p className="text-lg font-semibold text-foreground">
@@ -85,8 +85,8 @@ const PricingSection = () => {
               </div>
 
               <div className="mb-8">
-                <p className="text-muted-foreground text-lg line-through mb-2">
-                  De: R$ 1.997,00
+                <p className="text-muted-foreground/60 text-lg line-through mb-2">
+                  De: <span className="text-muted-foreground/60">R$ 1.997,00</span>
                 </p>
                 <p className="font-display text-2xl md:text-3xl font-bold text-foreground">
                   Por:{" "}
