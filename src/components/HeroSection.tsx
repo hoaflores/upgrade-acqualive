@@ -2,11 +2,9 @@ import { Droplets, Zap, Shield, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroProductImage from "@/assets/hero-product.jpg";
 
-const HeroSection = () => {
-  const scrollToPricing = () => {
-    document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
-  };
+const WHATSAPP_LINK = "https://wa.me/555192928468?text=Olá,%20recebi%20um%20e-mail%20com%20um%20desconto%20exclusivo%20para%20fazer%20o%20upgrade%20do%20meu%20filtro%20Acqualive.%20Gostaria%20de%20saber%20mais.";
 
+const HeroSection = () => {
   return (
     <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
       {/* Background decorative elements */}
@@ -63,11 +61,17 @@ const HeroSection = () => {
               <Button
                 variant="cta"
                 size="xl"
-                onClick={scrollToPricing}
+                asChild
                 className="group"
               >
-                <Shield className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                QUERO RESGATAR MEU CRÉDITO AGORA
+                <a
+                  href="https://wa.me/555192928468?text=Olá,%20recebi%20um%20e-mail%20com%20um%20desconto%20exclusivo%20para%20fazer%20o%20upgrade%20do%20meu%20filtro%20Acqualive.%20Gostaria%20de%20saber%20mais."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Shield className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                  QUERO RESGATAR MEU CRÉDITO AGORA
+                </a>
               </Button>
             </div>
 

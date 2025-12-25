@@ -26,10 +26,17 @@ const FooterSection = () => {
           <Button
             variant="cta"
             size="xl"
+            asChild
             className="bg-primary-foreground text-water-deep hover:bg-primary-foreground/90 shadow-elevated group"
           >
-            <Shield className="w-5 h-5 group-hover:scale-110 transition-transform" />
-            QUERO MEU ACQUALIVE NOVO
+            <a
+              href="https://wa.me/555192928468?text=Olá,%20recebi%20um%20e-mail%20com%20um%20desconto%20exclusivo%20para%20fazer%20o%20upgrade%20do%20meu%20filtro%20Acqualive.%20Gostaria%20de%20saber%20mais."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Shield className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              QUERO MEU ACQUALIVE NOVO
+            </a>
           </Button>
         </div>
       </div>
