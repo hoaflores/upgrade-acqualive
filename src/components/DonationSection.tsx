@@ -25,8 +25,9 @@ const steps = [
     number: "4",
     icon: Ticket,
     title: "Nós Apoiamos",
-    description:
-      "Enviamos um Cupom de 30% OFF no refil para quem receber sua doação, garantindo que o novo dono comece com água 100% pura.",
+    description: "Enviamos um Cupom de ",
+    highlight: "30% OFF",
+    descriptionEnd: " no refil para quem receber sua doação, garantindo que o novo dono comece com água 100% pura.",
   },
 ];
 
@@ -81,6 +82,10 @@ const DonationSection = () => {
                     </h4>
                     <p className="text-muted-foreground leading-relaxed">
                       {step.description}
+                      {step.highlight && (
+                        <span className="text-accent font-bold">{step.highlight}</span>
+                      )}
+                      {step.descriptionEnd}
                     </p>
                   </div>
                 </div>
