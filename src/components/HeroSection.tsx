@@ -16,12 +16,12 @@ const HeroSection = () => {
 
       <div className="container relative z-10 pt-8 pb-20 lg:pt-16">
         {/* Header */}
-        <header className="flex items-center justify-between mb-12 lg:mb-20 animate-fade-in">
+        <header className="flex items-center justify-between mb-12 lg:mb-16 animate-fade-in">
           <div className="flex items-center">
             <img 
               src={logoAcqualive} 
               alt="Acqualive" 
-              className="h-8 md:h-10 w-auto"
+              className="h-12 md:h-14 lg:h-16 w-auto"
             />
           </div>
           <div className="hidden md:flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-4 py-2">
@@ -38,25 +38,26 @@ const HeroSection = () => {
             <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/30 rounded-full px-4 py-2 mb-6 animate-fade-in-up">
               <Zap className="w-4 h-4 text-accent" />
               <span className="text-sm font-bold text-accent">
-                Oportunidade Única de Modernização
+                Exclusivo para Clientes Acqualive
               </span>
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 animate-fade-in-up animation-delay-200">
-              Seu Acqualive merece uma{" "}
-              <span className="text-gradient-water">nova geração.</span>
+              Chegou a hora de{" "}
+              <span className="text-gradient-water">modernizar</span>{" "}
+              seu purificador.
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-4 max-w-xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-400">
-              Você já tem a <strong className="text-foreground">melhor água</strong>. Agora, tenha também o{" "}
-              <strong className="text-foreground">purificador mais moderno</strong>: design premium, maior vazão, 
-              menos peças, sem boias e manutenção muito mais fácil.
+            <p className="text-xl md:text-2xl text-foreground font-semibold leading-relaxed mb-4 max-w-xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-400">
+              O purificador mais moderno do Brasil pode sair por{" "}
+              <span className="text-accent font-bold text-3xl md:text-4xl">menos de R$ 1.000</span>{" "}
+              para você!
             </p>
 
-            <p className="text-lg md:text-xl text-foreground font-semibold mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-400">
-              Seu filtro antigo vale até{" "}
-              <strong className="text-accent text-2xl">R$ 500,00</strong>{" "}
-              de desconto no upgrade!
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-400">
+              Design premium, maior vazão, sem boias, manutenção muito mais fácil. 
+              Você já tem a melhor água — agora tenha também a{" "}
+              <strong className="text-foreground">melhor experiência</strong>.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up animation-delay-600">
