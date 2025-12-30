@@ -50,7 +50,7 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-foreground font-semibold leading-relaxed mb-4 max-w-xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-400">
-              O filtro de água alcalina mais poderoso do Brasil pode sair por{" "}
+              Faça um Upgrade para o filtro de água alcalina mais moderno da Acqualive e ele pode sair por{" "}
               <span className="text-accent font-bold text-3xl md:text-4xl">menos de R$ 1.000,00</span>{" "}
               para você!
             </p>
