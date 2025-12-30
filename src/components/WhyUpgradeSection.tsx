@@ -13,7 +13,7 @@ const benefits = [
   },
   {
     icon: Wrench,
-    title: "Manutenção Simplificada",
+    title: "Praticidade no Dia a Dia",
     description: "Sem boias, menos peças. Higienização e troca de refil muito mais fáceis.",
   },
   {
@@ -39,8 +39,8 @@ const WhyUpgradeSection = () => {
             <span className="text-gradient-water">Modernizar</span> agora?
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Você já tem a melhor água. Mas seu purificador pode ser muito mais{" "}
-            <strong className="text-foreground">prático e bonito</strong>. A nova Linha V 
+            Você já tem a melhor água. Mas seu purificador pode ter muito mais{" "}
+            <strong className="text-foreground">praticidade e beleza</strong>. A nova Linha V 
             mantém toda a tecnologia de purificação que você confia, com uma{" "}
             <strong className="text-primary">
               experiência completamente renovada

@@ -16,7 +16,7 @@ const testimonials = [
   {
     name: "Patricia L.",
     location: "Belo Horizonte, MG",
-    text: "A melhor decisão! O fluxo é muito mais rápido e não tem mais aquela boia. Higienização virou brincadeira de tão fácil. Recomendo o upgrade!",
+    text: "A praticidade é outra! O fluxo é muito mais rápido e não tem mais aquela boia. Higienização virou brincadeira de tão fácil. Recomendo o upgrade!",
     rating: 5,
   },
 ];
