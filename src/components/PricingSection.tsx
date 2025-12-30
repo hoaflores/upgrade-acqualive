@@ -93,7 +93,7 @@ const PricingSection = () => {
                       e o seu novo purificador já vem com um kit de refis!
                     </p>
                     <p className="text-lg font-semibold text-foreground">
-                      Modernize sua experiência mantendo a mesma água incrível!
+                      Mais praticidade, mais beleza e a mesma água incrível!
                     </p>
                   </div>
 
