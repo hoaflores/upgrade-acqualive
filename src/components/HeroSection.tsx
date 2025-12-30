@@ -45,7 +45,7 @@ const HeroSection = () => {
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 animate-fade-in-up animation-delay-200">
               Seu Acqualive com{" "}
-              <span className="text-gradient-water">design e estética</span>{" "}
+              <span className="text-gradient-water">design e praticidade</span>{" "}
               de última geração
             </h1>
 
@@ -56,7 +56,7 @@ const HeroSection = () => {
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-400">
-              Mais praticidade, maior vazão, sem boias, manutenção muito mais fácil. 
+              Mais prático, com maior vazão, sem boias, manutenção muito mais fácil. 
               Você já tem a melhor água, agora tenha também a{" "}
               <strong className="text-foreground">melhor experiência</strong>.
             </p>
