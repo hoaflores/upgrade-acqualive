@@ -42,9 +42,6 @@ const HeroSection = () => {
               </span>
             </div>
 
-            <p className="text-sm md:text-base text-accent font-semibold uppercase tracking-wider mb-3 animate-fade-in-up animation-delay-100">
-              Exclusivo para clientes Acqualive
-            </p>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 animate-fade-in-up animation-delay-200">
               Seu Acqualive com{" "}
