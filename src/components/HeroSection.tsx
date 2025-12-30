@@ -1,9 +1,8 @@
-import { Droplets, Zap, Sparkles, Truck } from "lucide-react";
+import { Zap, Sparkles, Truck, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroProductImage from "@/assets/hero-product.jpg";
+import logoAcqualive from "@/assets/logo-acqualive.png";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
-
-const WHATSAPP_LINK = "https://wa.me/555192928468?text=Olá,%20recebi%20um%20e-mail%20com%20um%20desconto%20exclusivo%20para%20fazer%20o%20upgrade%20do%20meu%20filtro%20Acqualive.%20Gostaria%20de%20saber%20mais.";
 
 const HeroSection = () => {
   return (
@@ -18,16 +17,17 @@ const HeroSection = () => {
       <div className="container relative z-10 pt-8 pb-20 lg:pt-16">
         {/* Header */}
         <header className="flex items-center justify-between mb-12 lg:mb-20 animate-fade-in">
-          <div className="flex items-center gap-2">
-            <Droplets className="w-8 h-8 text-primary" />
-            <span className="font-display text-2xl font-bold text-foreground">
-              Acqualive
-            </span>
+          <div className="flex items-center">
+            <img 
+              src={logoAcqualive} 
+              alt="Acqualive" 
+              className="h-8 md:h-10 w-auto"
+            />
           </div>
           <div className="hidden md:flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-4 py-2">
             <Sparkles className="w-4 h-4 text-gold" />
             <span className="text-sm font-medium text-foreground">
-              Oferta exclusiva para clientes antigos
+              Oferta exclusiva para clientes
             </span>
           </div>
         </header>
@@ -35,27 +35,28 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           {/* Content */}
           <div className="text-center lg:text-left order-2 lg:order-1">
-            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6 animate-fade-in-up">
-              <Zap className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">
-                Programa de Fidelidade
+            <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/30 rounded-full px-4 py-2 mb-6 animate-fade-in-up">
+              <Zap className="w-4 h-4 text-accent" />
+              <span className="text-sm font-bold text-accent">
+                Oportunidade Única de Modernização
               </span>
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 animate-fade-in-up animation-delay-200">
-              A tecnologia da sua água{" "}
-              <span className="text-gradient-water">evoluiu.</span>
-              <br />
-              A sua saúde merece acompanhar.
+              Seu Acqualive merece uma{" "}
+              <span className="text-gradient-water">nova geração.</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-400">
-              Valorizamos sua fidelidade: Seu filtro antigo vale{" "}
-              <strong className="text-accent font-bold">DESCONTOS</strong> que podem
-              fazer um novíssimo Acqualive sair por{" "}
-              <strong className="text-accent font-bold">menos de R$1000,00</strong> para
-              você fazer o upgrade agora para os mais modernos Purificadores e
-              Ionizadores.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-4 max-w-xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-400">
+              Você já tem a <strong className="text-foreground">melhor água</strong>. Agora, tenha também o{" "}
+              <strong className="text-foreground">purificador mais moderno</strong>: design premium, maior vazão, 
+              menos peças, sem boias e manutenção muito mais fácil.
+            </p>
+
+            <p className="text-lg md:text-xl text-foreground font-semibold mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-400">
+              Seu filtro antigo vale até{" "}
+              <strong className="text-accent text-2xl">R$ 500,00</strong>{" "}
+              de desconto no upgrade!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up animation-delay-600">
@@ -71,7 +72,8 @@ const HeroSection = () => {
                   rel="noopener noreferrer"
                 >
                   <WhatsAppIcon className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                  <span>RESGATAR MEU CRÉDITO</span>
+                  <span>QUERO MODERNIZAR AGORA</span>
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
             </div>
@@ -87,7 +89,7 @@ const HeroSection = () => {
               <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-4 py-2">
                 <Sparkles className="w-4 h-4 text-gold" />
                 <span className="text-sm font-medium text-foreground">
-                  Oferta exclusiva
+                  Condição exclusiva
                 </span>
               </div>
             </div>

@@ -90,11 +90,10 @@ const PricingSection = () => {
                     <p className="text-muted-foreground mb-2">
                       Você ganha{" "}
                       <strong className="text-accent font-bold">R$500,00 de desconto</strong>{" "}
-                      e o seu novo Filtro já vem com um kit de refis!
+                      e o seu novo purificador já vem com um kit de refis!
                     </p>
                     <p className="text-lg font-semibold text-foreground">
-                      Ou seja, Você não paga nada mais para manter sua água
-                      alcalina!
+                      Modernize sua experiência mantendo a mesma água incrível!
                     </p>
                   </div>
 

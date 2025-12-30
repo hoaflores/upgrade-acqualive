@@ -1,25 +1,25 @@
-import { Gem, Zap, Wrench, Cpu } from "lucide-react";
+import { Gem, Zap, Wrench, Droplets } from "lucide-react";
 
 const benefits = [
   {
     icon: Gem,
     title: "Design Premium",
-    description: "Acabamento sofisticado que valoriza sua cozinha.",
+    description: "Acabamento sofisticado que valoriza sua cozinha e impressiona visitas.",
   },
   {
     icon: Zap,
-    title: "Fluxo Rápido",
-    description: "Encha garrafas e panelas na metade do tempo.",
+    title: "Maior Vazão",
+    description: "Encha garrafas e panelas na metade do tempo com o fluxo mais rápido.",
   },
   {
     icon: Wrench,
-    title: "Menos Manutenção",
-    description: "Construção superior que evita vazamentos e reduz desgastes.",
+    title: "Manutenção Simplificada",
+    description: "Sem boias, menos peças. Higienização e troca de refil muito mais fáceis.",
   },
   {
-    icon: Cpu,
-    title: "Tecnologia de Ponta",
-    description: "Maior eficiência na alcalinização e mineralização.",
+    icon: Droplets,
+    title: "Mesma Água Incrível",
+    description: "A tecnologia de purificação que você já ama, agora em um produto muito mais moderno.",
   },
 ];
 
@@ -35,16 +35,15 @@ const WhyUpgradeSection = () => {
       <div className="container relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Por que fazer o{" "}
-            <span className="text-gradient-water">Upgrade</span> agora?
+            Por que{" "}
+            <span className="text-gradient-water">Modernizar</span> agora?
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Você já sabe que a água é o nutriente mais importante do seu corpo.
-            Mas a tecnologia de purificação deu um{" "}
-            <strong className="text-foreground">salto quântico</strong> nos
-            últimos anos. A nova Linha V não é apenas um filtro novo, é um{" "}
+            Você já tem a melhor água. Mas seu purificador pode ser muito mais{" "}
+            <strong className="text-foreground">prático e bonito</strong>. A nova Linha V 
+            mantém toda a tecnologia de purificação que você confia, com uma{" "}
             <strong className="text-primary">
-              sistema de hidratação superior
+              experiência completamente renovada
             </strong>
             :
           </p>
