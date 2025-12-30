@@ -1,33 +1,33 @@
-import { Gift, Heart, Users, Ticket } from "lucide-react";
+import { Gift, Heart, Users, Ticket, Sparkles, Package } from "lucide-react";
 
 const steps = [
   {
     number: "1",
-    icon: Gift,
-    title: "Você Garante o Novo",
+    icon: Sparkles,
+    title: "Garanta seu Novo Acqualive",
     description:
-      "Aplica seu crédito de fidelidade imediatamente na aquisição da Linha V.",
+      "Aplique seu crédito de fidelidade e modernize para a Linha V com condições exclusivas.",
   },
   {
     number: "2",
-    icon: Heart,
-    title: "Você Fica com o Antigo",
-    description: "Não precisa nos devolver nada.",
+    icon: Package,
+    title: "Receba o Kit de Higienização",
+    description: "Junto com seu novo purificador, você recebe um kit completo para preparar seu aparelho antigo para doação.",
   },
   {
     number: "3",
     icon: Users,
-    title: "Você Doa",
+    title: "Doe para Quem Precisa",
     description:
-      "Higienize e entregue o aparelho antigo para um amigo, parente ou instituição que precisa de água de qualidade.",
+      "Higienize e entregue para um amigo, parente ou instituição. Aquele conhecido que você sabe que precisa de água de qualidade, mas não pode comprar agora.",
   },
   {
     number: "4",
     icon: Ticket,
-    title: "Nós Apoiamos",
-    description: "Enviamos um Cupom de ",
-    highlight: "30% OFF",
-    descriptionEnd: " no refil para quem receber sua doação, garantindo que o novo dono comece com água 100% pura.",
+    title: "Cupom de 30% OFF para o Novo Dono",
+    description: "Quem receber sua doação ganha um cupom de ",
+    highlight: "30% de desconto",
+    descriptionEnd: " no primeiro refil, garantindo que comece a usar imediatamente.",
   },
 ];
 
@@ -46,24 +46,22 @@ const DonationSection = () => {
           <div className="inline-flex items-center gap-2 bg-gold/20 border border-gold/30 rounded-full px-4 py-2 mb-6">
             <Gift className="w-5 h-5 text-gold" />
             <span className="text-sm font-semibold text-foreground">
-              Uma surpresa ainda maior!
+              Bônus Solidário
             </span>
           </div>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Você faz o <span className="text-gradient-water">UPGRADE</span>, e o
-            antigo vira <span className="text-gradient-water">DOAÇÃO!</span>
+            Modernize e <span className="text-gradient-water">Ajude Alguém</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Esqueça a burocracia de embalar e despachar seu filtro antigo. No
-            nosso programa de fidelidade, nós transformamos seu desconto em um{" "}
-            <strong className="text-foreground">ato de solidariedade</strong>,
-            sem complicações.
+            Você ganha um desconto incrível, moderniza seu purificador e ainda ajuda 
+            alguém a ter acesso à água de qualidade. Seu antigo Acqualive pode 
+            transformar a vida de uma pessoa ou família.
           </p>
         </div>
 
         <div className="max-w-5xl mx-auto mb-12">
           <h3 className="font-display text-2xl font-bold text-foreground text-center mb-10">
-            Como funciona:
+            Veja como é simples:
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
             {steps.map((step, index) => (
@@ -72,7 +70,10 @@ const DonationSection = () => {
                 className="relative bg-card rounded-2xl p-6 border border-border shadow-soft hover:shadow-elevated transition-all duration-300"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="flex items-start gap-4">
+                <div className="absolute -top-3 -left-3 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-sm">
+                  {step.number}
+                </div>
+                <div className="flex items-start gap-4 pt-2">
                   <div className="flex-shrink-0 w-12 h-12 bg-gradient-water rounded-xl flex items-center justify-center">
                     <step.icon className="w-6 h-6 text-primary-foreground" />
                   </div>
@@ -101,9 +102,14 @@ const DonationSection = () => {
               <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                 <Heart className="w-6 h-6 text-primary" />
               </div>
-              <blockquote className="text-lg md:text-xl font-medium text-foreground italic leading-relaxed">
-                "Você renova sua saúde e transforma vidas ao mesmo tempo."
-              </blockquote>
+              <div>
+                <blockquote className="text-lg md:text-xl font-medium text-foreground italic leading-relaxed mb-2">
+                  "Você moderniza sua experiência e transforma a vida de alguém ao mesmo tempo."
+                </blockquote>
+                <p className="text-sm text-muted-foreground">
+                  Faz muito sentido: desconto para você, água de qualidade para quem precisa.
+                </p>
+              </div>
             </div>
           </div>
         </div>

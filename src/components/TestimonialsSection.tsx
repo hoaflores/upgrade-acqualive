@@ -4,19 +4,19 @@ const testimonials = [
   {
     name: "Maria Helena S.",
     location: "São Paulo, SP",
-    text: "Fiz o upgrade da Linha V e a diferença é impressionante! O fluxo é muito mais rápido e o design ficou lindo na minha cozinha. Super recomendo!",
+    text: "Já era cliente Acqualive há 5 anos. O upgrade para a Linha V foi incrível: muito mais prático de limpar e o design ficou lindo na minha cozinha!",
     rating: 5,
   },
   {
     name: "Carlos Eduardo M.",
     location: "Rio de Janeiro, RJ",
-    text: "Já era cliente Acqualive há anos. Quando soube do programa de fidelidade, não pensei duas vezes. Ainda pude doar meu filtro antigo para minha mãe!",
+    text: "A água continua sendo a mesma qualidade excelente, mas agora com um aparelho muito mais moderno. Ainda pude doar meu filtro antigo para minha mãe!",
     rating: 5,
   },
   {
     name: "Patricia L.",
     location: "Belo Horizonte, MG",
-    text: "A melhor decisão que tomei! A água está ainda mais pura e o atendimento foi excelente. Adorei poder ajudar uma instituição com meu filtro antigo.",
+    text: "A melhor decisão! O fluxo é muito mais rápido e não tem mais aquela boia. Higienização virou brincadeira de tão fácil. Recomendo o upgrade!",
     rating: 5,
   },
 ];
@@ -33,8 +33,8 @@ const TestimonialsSection = () => {
       <div className="container relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Quem já fez o{" "}
-            <span className="text-gradient-water">Upgrade</span> diz:
+            Quem já{" "}
+            <span className="text-gradient-water">modernizou</span> aprova:
           </h2>
         </div>
 
