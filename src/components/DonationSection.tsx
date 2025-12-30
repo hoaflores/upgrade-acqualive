@@ -11,8 +11,8 @@ const steps = [
   {
     number: "2",
     icon: Package,
-    title: "Receba o Kit de Higienização",
-    description: "Junto com seu novo purificador, você recebe um kit completo para preparar seu aparelho antigo para doação.",
+    title: "Receba o Manual de Higienização",
+    description: "Junto com seu novo purificador, você recebe um manual que explica a melhor forma de higienizar seu aparelho antigo para doação.",
   },
   {
     number: "3",

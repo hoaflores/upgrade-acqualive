@@ -56,7 +56,7 @@ const HeroSection = () => {
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-400">
-              Mais prático, com maior vazão, sem boias, manutenção muito mais fácil. 
+              Mais prático, com tecnologia vaso comunicante e maior vazão, sem boias, manutenção muito mais fácil. 
               Você já tem a melhor água, agora tenha também a{" "}
               <strong className="text-foreground">melhor experiência</strong>.
             </p>
