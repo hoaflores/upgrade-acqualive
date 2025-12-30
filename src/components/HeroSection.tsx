@@ -43,20 +43,19 @@ const HeroSection = () => {
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 animate-fade-in-up animation-delay-200">
-              Chegou a hora de{" "}
-              <span className="text-gradient-water">modernizar</span>{" "}
-              seu purificador.
+              Chegou a hora de ter o Acqualive{" "}
+              <span className="text-gradient-water">mais moderno da história!</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-foreground font-semibold leading-relaxed mb-4 max-w-xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-400">
-              O purificador mais moderno do Brasil pode sair por{" "}
-              <span className="text-accent font-bold text-3xl md:text-4xl">menos de R$ 1.000</span>{" "}
+              O filtro de água alcalina mais poderoso do Brasil pode sair por{" "}
+              <span className="text-accent font-bold text-3xl md:text-4xl">menos de R$ 1.000,00</span>{" "}
               para você!
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-400">
               Design premium, maior vazão, sem boias, manutenção muito mais fácil. 
-              Você já tem a melhor água — agora tenha também a{" "}
+              Você já tem a melhor água, agora tenha também a{" "}
               <strong className="text-foreground">melhor experiência</strong>.
             </p>
 
