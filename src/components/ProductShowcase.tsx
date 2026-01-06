@@ -40,6 +40,7 @@ const ProductShowcase = () => {
               />
             </div>
             <p className="text-center mt-4 font-semibold text-foreground">Acqualive V para Bebedouros</p>
+            <p className="text-center text-xs text-muted-foreground mt-1">*Bebedouro não incluso</p>
           </div>
 
           {/* Product Image 2 - Terracota */}
