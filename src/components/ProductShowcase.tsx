@@ -2,6 +2,7 @@ import { Droplets } from "lucide-react";
 import vBebedourosImage from "@/assets/v-bebedouros.png";
 import terracotaImage from "@/assets/terracota.png";
 import vSelfImage from "@/assets/v-self.png";
+import SectionCTA from "@/components/SectionCTA";
 
 const ProductShowcase = () => {
   return (
@@ -69,6 +70,8 @@ const ProductShowcase = () => {
             <p className="text-center mt-4 font-semibold text-foreground">Acqualive V Self</p>
           </div>
         </div>
+
+        <SectionCTA />
       </div>
     </section>
   );

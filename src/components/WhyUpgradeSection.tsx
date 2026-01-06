@@ -1,4 +1,5 @@
 import { Gem, Zap, Wrench, Droplets } from "lucide-react";
+import SectionCTA from "@/components/SectionCTA";
 
 const benefits = [
   {
@@ -68,6 +69,8 @@ const WhyUpgradeSection = () => {
             </div>
           ))}
         </div>
+
+        <SectionCTA />
       </div>
     </section>
   );
