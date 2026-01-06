@@ -1,6 +1,6 @@
 import { Zap, Sparkles, Truck, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroProductImage from "@/assets/hero-product.jpg";
+import heroProductImage from "@/assets/hero-upgrade.png";
 import logoAcqualive from "@/assets/logo-acqualive.png";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
