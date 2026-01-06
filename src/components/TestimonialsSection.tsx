@@ -1,4 +1,5 @@
 import { Star, Quote } from "lucide-react";
+import SectionCTA from "@/components/SectionCTA";
 
 const testimonials = [
   {
@@ -71,6 +72,8 @@ const TestimonialsSection = () => {
             </div>
           ))}
         </div>
+
+        <SectionCTA />
       </div>
     </section>
   );

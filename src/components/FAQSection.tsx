@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import SectionCTA from "@/components/SectionCTA";
 
 const faqs = [
   {
@@ -57,6 +58,8 @@ const FAQSection = () => {
             ))}
           </Accordion>
         </div>
+
+        <SectionCTA />
       </div>
     </section>
   );

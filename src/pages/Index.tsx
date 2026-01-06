@@ -7,6 +7,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import FooterSection from "@/components/FooterSection";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const Index = () => {
@@ -33,6 +34,7 @@ const Index = () => {
       </ScrollReveal>
       <FooterSection />
       <StickyMobileCTA />
+      <FloatingWhatsApp />
     </main>
   );
 };

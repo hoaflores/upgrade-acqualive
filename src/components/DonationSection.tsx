@@ -1,4 +1,5 @@
 import { Gift, Heart, Users, Ticket, Sparkles, Package } from "lucide-react";
+import SectionCTA from "@/components/SectionCTA";
 
 const steps = [
   {
@@ -113,6 +114,8 @@ const DonationSection = () => {
             </div>
           </div>
         </div>
+
+        <SectionCTA />
       </div>
     </section>
   );
