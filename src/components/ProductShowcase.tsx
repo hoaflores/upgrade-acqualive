@@ -1,4 +1,6 @@
 import { Droplets } from "lucide-react";
+import vSelfImage from "@/assets/v-self.png";
+import terracotaImage from "@/assets/terracota.png";
 
 const ProductShowcase = () => {
   return (
@@ -26,34 +28,30 @@ const ProductShowcase = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* Product Image 1 */}
+          {/* Product Image 1 - V Self */}
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-water rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity" />
             <div className="relative aspect-square bg-card rounded-2xl border border-border overflow-hidden shadow-elevated">
-              <div className="absolute inset-0 flex items-center justify-center bg-muted">
-                <div className="text-center p-6">
-                  <Droplets className="w-16 h-16 text-primary/40 mx-auto mb-4" />
-                  <p className="text-sm text-muted-foreground">Imagem do Filtro Linha V</p>
-                  <p className="text-xs text-muted-foreground/60 mt-1">Placeholder - substituir pela imagem real</p>
-                </div>
-              </div>
+              <img 
+                src={vSelfImage} 
+                alt="Acqualive V Self - Filtro de água alcalina com design moderno"
+                className="w-full h-full object-cover"
+              />
             </div>
-            <p className="text-center mt-4 font-semibold text-foreground">Modelo Bancada</p>
+            <p className="text-center mt-4 font-semibold text-foreground">Acqualive V Self</p>
           </div>
 
-          {/* Product Image 2 */}
+          {/* Product Image 2 - Terracota */}
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-water rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity" />
             <div className="relative aspect-square bg-card rounded-2xl border border-border overflow-hidden shadow-elevated">
-              <div className="absolute inset-0 flex items-center justify-center bg-muted">
-                <div className="text-center p-6">
-                  <Droplets className="w-16 h-16 text-primary/40 mx-auto mb-4" />
-                  <p className="text-sm text-muted-foreground">Imagem do Filtro Linha V</p>
-                  <p className="text-xs text-muted-foreground/60 mt-1">Placeholder - substituir pela imagem real</p>
-                </div>
-              </div>
+              <img 
+                src={terracotaImage} 
+                alt="Acqualive Terracota - Filtro de água alcalina com acabamento terracota"
+                className="w-full h-full object-cover"
+              />
             </div>
-            <p className="text-center mt-4 font-semibold text-foreground">Modelo Premium</p>
+            <p className="text-center mt-4 font-semibold text-foreground">Acqualive Terracota</p>
           </div>
         </div>
       </div>
