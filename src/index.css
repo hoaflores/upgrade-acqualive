@@ -167,6 +167,16 @@
     background-image: var(--gradient-water);
   }
 
+  .text-gradient-orange {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--gold)) 100%);
+  }
+
+  .text-gradient-blue {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+  }
+
   .bg-gradient-water {
     background: var(--gradient-water);
   }
@@ -179,6 +189,14 @@
     background: var(--gradient-water-light);
   }
 
+  .bg-gradient-dark {
+    background: linear-gradient(180deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+  }
+
+  .bg-gradient-summer {
+    background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(21 89% 45%) 50%, hsl(var(--accent)) 100%);
+  }
+
   .shadow-soft {
     box-shadow: var(--shadow-soft);
   }
@@ -189,6 +207,18 @@
 
   .shadow-glow {
     box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-medium {
+    box-shadow: 0 10px 40px -10px hsl(215 62% 31% / 0.2);
+  }
+
+  .shadow-orange {
+    box-shadow: 0 10px 30px -5px hsl(var(--accent) / 0.4);
+  }
+
+  .shadow-neomorphic {
+    box-shadow: 8px 8px 16px hsl(215 20% 85% / 0.5), -8px -8px 16px hsl(0 0% 100% / 0.8);
   }
 }
 

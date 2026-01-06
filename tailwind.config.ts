@@ -95,10 +95,14 @@ export default {
   				medium: 'hsl(var(--water-medium))',
   				deep: 'hsl(var(--water-deep))'
   			},
-  			gold: {
-  				DEFAULT: 'hsl(var(--gold))',
-  				light: 'hsl(var(--gold-light))'
-  			},
+			gold: {
+				DEFAULT: 'hsl(var(--gold))',
+				light: 'hsl(var(--gold-light))'
+			},
+			orange: {
+				DEFAULT: 'hsl(var(--accent))',
+				light: 'hsl(var(--gold-light))'
+			},
   			sidebar: {
   				DEFAULT: 'hsl(var(--sidebar-background))',
   				foreground: 'hsl(var(--sidebar-foreground))',

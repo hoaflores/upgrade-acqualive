@@ -22,6 +22,9 @@ const buttonVariants = cva(
         cta: "bg-gradient-water text-primary-foreground shadow-elevated hover:shadow-glow hover:-translate-y-1 active:translate-y-0 font-bold tracking-wide",
         ctaOutline:
           "border-2 border-primary bg-card/80 backdrop-blur-sm text-primary hover:bg-primary hover:text-primary-foreground shadow-soft hover:shadow-elevated",
+        gold: "bg-gradient-to-r from-accent to-gold text-white shadow-elevated hover:shadow-glow hover:-translate-y-1 active:translate-y-0 font-bold tracking-wide",
+        hero: "bg-white text-primary shadow-elevated hover:shadow-glow hover:-translate-y-1 active:translate-y-0 font-bold tracking-wide",
+        whatsapp: "bg-[#25D366] text-white shadow-soft hover:bg-[#20BD5A] hover:-translate-y-0.5 active:translate-y-0",
       },
       size: {
         default: "h-11 px-6 py-2",
