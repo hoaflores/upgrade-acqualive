@@ -99,13 +99,13 @@ const HeroSection = () => {
 
           {/* Product Image */}
           <div className="relative order-1 lg:order-2 flex justify-center animate-scale-in animation-delay-200">
-            <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg">
+            <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-xl">
               <div className="absolute inset-0 bg-gradient-water rounded-3xl blur-3xl opacity-20 scale-90" />
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden">
                 <img
                   src={heroProductImage}
                   alt="Purificador Acqualive Linha V - Design premium com acabamento sofisticado"
-                  className="w-full h-full object-cover object-center animate-float"
+                  className="w-full h-auto object-contain animate-float"
                 />
               </div>
             </div>
