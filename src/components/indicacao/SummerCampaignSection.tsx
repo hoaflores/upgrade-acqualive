@@ -116,7 +116,7 @@ const SummerCampaignSection = () => {
             
             <div className="relative">
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent to-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Diamond className="w-8 h-8 text-white" />
+                <Gift className="w-8 h-8 text-white" />
               </div>
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-2xl">💎</span>
