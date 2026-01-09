@@ -19,10 +19,10 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        cta: "bg-gradient-water text-primary-foreground shadow-elevated hover:shadow-glow hover:-translate-y-1 active:translate-y-0 font-bold tracking-wide",
+        cta: "bg-gradient-to-r from-accent to-gold text-white shadow-lg shadow-accent/40 hover:shadow-xl hover:shadow-accent/50 hover:-translate-y-1 active:translate-y-0 font-bold tracking-wide ring-2 ring-accent/20",
         ctaOutline:
           "border-2 border-primary bg-card/80 backdrop-blur-sm text-primary hover:bg-primary hover:text-primary-foreground shadow-soft hover:shadow-elevated",
-        gold: "bg-gradient-to-r from-accent to-gold text-white shadow-elevated hover:shadow-glow hover:-translate-y-1 active:translate-y-0 font-bold tracking-wide",
+        gold: "bg-gradient-to-r from-accent via-gold to-accent text-white shadow-lg shadow-accent/40 hover:shadow-xl hover:shadow-accent/50 hover:-translate-y-1 active:translate-y-0 font-bold tracking-wide animate-shimmer bg-[length:200%_100%]",
         hero: "bg-white text-primary shadow-elevated hover:shadow-glow hover:-translate-y-1 active:translate-y-0 font-bold tracking-wide",
         whatsapp: "bg-[#25D366] text-white shadow-soft hover:bg-[#20BD5A] hover:-translate-y-0.5 active:translate-y-0",
       },
