@@ -30,7 +30,7 @@ const healthBenefits = [
   { icon: Activity, text: "Controle glicêmico" },
   { icon: Shield, text: "Imunidade fortalecida" },
   { icon: Bone, text: "Saúde óssea" },
-  { icon: Brain, text: "Clareza mental" },
+  { icon: Brain, text: "Energia e disposição" },
 ];
 
 const HowItWorksSection = () => {
