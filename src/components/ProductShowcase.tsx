@@ -2,7 +2,32 @@ import { Droplets } from "lucide-react";
 import vBebedourosImage from "@/assets/v-bebedouros.png";
 import terracotaImage from "@/assets/terracota.png";
 import vSelfImage from "@/assets/v-self.png";
+import vSelfEssencialImage from "@/assets/v-self-essencial.png";
 import SectionCTA from "@/components/SectionCTA";
+
+const products = [
+  {
+    image: vBebedourosImage,
+    alt: "Acqualive V para bebedouros - Filtro de água alcalina para bebedouros",
+    name: "Acqualive V para Bebedouros",
+    note: "*Bebedouro não incluso",
+  },
+  {
+    image: terracotaImage,
+    alt: "Acqualive Terracota - Filtro de água alcalina com acabamento terracota",
+    name: "Acqualive Terracota",
+  },
+  {
+    image: vSelfImage,
+    alt: "Acqualive V Self - Filtro de água alcalina com design moderno",
+    name: "Acqualive V Self",
+  },
+  {
+    image: vSelfEssencialImage,
+    alt: "Acqualive V Self Essencial - Filtro de água alcalina compacto",
+    name: "Acqualive V Self Essencial",
+  },
+];
 
 const ProductShowcase = () => {
   return (
@@ -29,46 +54,27 @@ const ProductShowcase = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {/* Product Image 1 - V para Bebedouros */}
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-water rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity" />
-            <div className="relative aspect-square bg-card rounded-2xl border border-border overflow-hidden shadow-elevated">
-              <img 
-                src={vBebedourosImage} 
-                alt="Acqualive V para bebedouros - Filtro de água alcalina para bebedouros"
-                className="w-full h-full object-cover"
-              />
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          {products.map((product, index) => (
+            <div key={index} className="relative group">
+              <div className="absolute inset-0 bg-gradient-water rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity" />
+              <div className="relative aspect-square bg-card rounded-2xl border border-border overflow-hidden shadow-elevated group-hover:shadow-lg transition-shadow">
+                <img
+                  src={product.image}
+                  alt={product.alt}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <p className="text-center mt-4 font-semibold text-foreground text-sm md:text-base">
+                {product.name}
+              </p>
+              {product.note && (
+                <p className="text-center text-xs text-muted-foreground mt-1">
+                  {product.note}
+                </p>
+              )}
             </div>
-            <p className="text-center mt-4 font-semibold text-foreground">Acqualive V para Bebedouros</p>
-            <p className="text-center text-xs text-muted-foreground mt-1">*Bebedouro não incluso</p>
-          </div>
-
-          {/* Product Image 2 - Terracota */}
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-water rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity" />
-            <div className="relative aspect-square bg-card rounded-2xl border border-border overflow-hidden shadow-elevated">
-              <img 
-                src={terracotaImage} 
-                alt="Acqualive Terracota - Filtro de água alcalina com acabamento terracota"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <p className="text-center mt-4 font-semibold text-foreground">Acqualive Terracota</p>
-          </div>
-
-          {/* Product Image 3 - V Self */}
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-water rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity" />
-            <div className="relative aspect-square bg-card rounded-2xl border border-border overflow-hidden shadow-elevated">
-              <img 
-                src={vSelfImage} 
-                alt="Acqualive V Self - Filtro de água alcalina com design moderno"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <p className="text-center mt-4 font-semibold text-foreground">Acqualive V Self</p>
-          </div>
+          ))}
         </div>
 
         <SectionCTA />
