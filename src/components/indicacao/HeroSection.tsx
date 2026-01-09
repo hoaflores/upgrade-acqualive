@@ -2,13 +2,57 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Sparkles, ArrowRight } from "lucide-react";
 import familyImage from "@/assets/terracota-familia.jpg";
+import logoAzul from "@/assets/logo-acqualive-azul.png";
+import iconAcqualive from "@/assets/icon-acqualive.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-primary">
-      {/* Decorative elements */}
-      <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-accent/20 blur-[100px]" />
-      <div className="absolute bottom-1/4 left-1/4 w-96 h-96 rounded-full bg-accent/10 blur-[120px]" />
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary via-primary to-secondary">
+      {/* Mesh gradient background */}
+      <div className="absolute inset-0 opacity-40">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_hsl(21_89%_55%_/_0.3),_transparent_50%)]" />
+        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_left,_hsl(218_97%_30%_/_0.5),_transparent_50%)]" />
+      </div>
+      
+      {/* Animated orbs */}
+      <motion.div 
+        className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-accent/30 blur-[100px]"
+        animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+        transition={{ duration: 8, repeat: Infinity }}
+      />
+      <motion.div 
+        className="absolute bottom-1/4 left-1/4 w-96 h-96 rounded-full bg-white/10 blur-[120px]"
+        animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.4, 0.2] }}
+        transition={{ duration: 10, repeat: Infinity }}
+      />
+      
+      {/* Header with logo */}
+      <motion.header 
+        className="absolute top-0 left-0 right-0 z-50 py-6"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="container">
+          <div className="flex items-center justify-between">
+            <a href="/" className="flex items-center gap-2">
+              <img 
+                src={logoAzul} 
+                alt="Acqualive" 
+                className="h-8 md:h-10 w-auto brightness-0 invert"
+              />
+            </a>
+            
+            <a
+              href="#formulario"
+              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-semibold hover:bg-white/20 transition-all duration-300"
+            >
+              <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+              Indicar agora
+            </a>
+          </div>
+        </div>
+      </motion.header>
 
       {/* Content */}
       <div className="container relative z-10 py-20 lg:py-32">
@@ -122,13 +166,20 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator with icon */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.5 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
       >
+        <motion.img 
+          src={iconAcqualive}
+          alt=""
+          className="w-8 h-8 opacity-50"
+          animate={{ y: [0, -5, 0] }}
+          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+        />
         <motion.div
           animate={{ y: [0, 12, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}

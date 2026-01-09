@@ -6,6 +6,7 @@ import SummerCampaignSection from "@/components/indicacao/SummerCampaignSection"
 import FAQSection from "@/components/indicacao/FAQSection";
 import FormSection from "@/components/indicacao/FormSection";
 import FooterSection from "@/components/indicacao/FooterSection";
+import FloatingWhatsAppIndicacao from "@/components/indicacao/FloatingWhatsAppIndicacao";
 
 const ProgramaIndicacao = () => {
   return (
@@ -32,6 +33,8 @@ const ProgramaIndicacao = () => {
         <FormSection />
         <FooterSection />
       </main>
+      
+      <FloatingWhatsAppIndicacao />
     </>
   );
 };
