@@ -35,18 +35,13 @@ const HeroSection = () => {
       >
         <div className="container">
           <div className="flex items-center justify-between">
-            <a href="/" className="flex items-center gap-3">
+            <div className="flex items-center gap-3">
               <img 
                 src={iconAcqualive} 
                 alt="Acqualive" 
-                className="h-10 md:h-14 w-auto"
+                className="h-12 md:h-16 w-auto"
               />
-              <img 
-                src={logoAzul} 
-                alt="Acqualive" 
-                className="h-7 md:h-10 w-auto brightness-0 invert hidden sm:block"
-              />
-            </a>
+            </div>
             
             <a
               href="#formulario"
