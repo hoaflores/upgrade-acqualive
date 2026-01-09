@@ -1,56 +1,61 @@
 import { motion } from "framer-motion";
 import { Smartphone, Handshake, Droplets, Quote, Heart, Users, Shield, Bone, Brain, Activity } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const steps = [
-  {
-    icon: Smartphone,
-    title: "Você Indica",
-    description:
-      "Compartilhe o nome e WhatsApp de amigos ou familiares que merecem beber a melhor água do mundo.",
-    color: "primary",
-  },
-  {
-    icon: Handshake,
-    title: "Nós Cuidamos de Tudo",
-    description:
-      "Nossa equipe entra em contato com uma condição especial, exclusiva para indicados.",
-    color: "accent",
-  },
-  {
-    icon: Droplets,
-    title: "Vocês Dois Ganham",
-    description:
-      "Seu amigo ganha saúde com água alcalina. Você ganha 1 Kit de Refis grátis assim que a compra for confirmada.",
-    color: "orange",
-  },
-];
-
-const healthBenefits = [
-  { icon: Activity, text: "Maior Hidratação" },
-  { icon: Shield, text: "Imunidade fortalecida" },
-  { icon: Bone, text: "Saúde óssea" },
-  { icon: Brain, text: "Energia e disposição" },
-];
-
+const steps = [{
+  icon: Smartphone,
+  title: "Você Indica",
+  description: "Compartilhe o nome e WhatsApp de amigos ou familiares que merecem beber a melhor água do mundo.",
+  color: "primary"
+}, {
+  icon: Handshake,
+  title: "Nós Cuidamos de Tudo",
+  description: "Nossa equipe entra em contato com uma condição especial, exclusiva para indicados.",
+  color: "accent"
+}, {
+  icon: Droplets,
+  title: "Vocês Dois Ganham",
+  description: "Seu amigo ganha saúde com água alcalina. Você ganha 1 Kit de Refis grátis assim que a compra for confirmada.",
+  color: "orange"
+}];
+const healthBenefits = [{
+  icon: Activity,
+  text: "Controle glicêmico"
+}, {
+  icon: Shield,
+  text: "Imunidade fortalecida"
+}, {
+  icon: Bone,
+  text: "Saúde óssea"
+}, {
+  icon: Brain,
+  text: "Clareza mental"
+}];
 const HowItWorksSection = () => {
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: {
+      opacity: 0
+    },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
-      },
-    },
+        staggerChildren: 0.15
+      }
+    }
   };
-
   const itemVariants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+    hidden: {
+      opacity: 0,
+      y: 40
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6
+      }
+    }
   };
-
-  return (
-    <section className="py-28 bg-gradient-to-b from-background via-background to-secondary/20 relative overflow-hidden">
+  return <section className="py-28 bg-gradient-to-b from-background via-background to-secondary/20 relative overflow-hidden">
       {/* Elegant mesh gradient background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-[radial-gradient(ellipse_at_top_right,_hsl(21_89%_55%_/_0.05),_transparent_60%)]" />
@@ -59,36 +64,39 @@ const HowItWorksSection = () => {
       
       {/* Subtle pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `radial-gradient(circle at 20% 20%, hsl(var(--accent)) 1px, transparent 1px)`,
-            backgroundSize: "40px 40px",
-          }}
-        />
+        <div className="absolute inset-0" style={{
+        backgroundImage: `radial-gradient(circle at 20% 20%, hsl(var(--accent)) 1px, transparent 1px)`,
+        backgroundSize: "40px 40px"
+      }} />
       </div>
       
       {/* Animated gradient orbs */}
-      <motion.div 
-        className="absolute top-20 left-10 w-72 h-72 rounded-full bg-gradient-to-br from-accent/10 to-transparent blur-[80px]"
-        animate={{ scale: [1, 1.1, 1] }}
-        transition={{ duration: 6, repeat: Infinity }}
-      />
-      <motion.div 
-        className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-gradient-to-tl from-primary/10 to-transparent blur-[100px]"
-        animate={{ scale: [1.1, 1, 1.1] }}
-        transition={{ duration: 8, repeat: Infinity }}
-      />
+      <motion.div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-gradient-to-br from-accent/10 to-transparent blur-[80px]" animate={{
+      scale: [1, 1.1, 1]
+    }} transition={{
+      duration: 6,
+      repeat: Infinity
+    }} />
+      <motion.div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-gradient-to-tl from-primary/10 to-transparent blur-[100px]" animate={{
+      scale: [1.1, 1, 1.1]
+    }} transition={{
+      duration: 8,
+      repeat: Infinity
+    }} />
 
       <div className="container relative">
         {/* STORYTELLING SECTION */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto text-center mb-24"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.6
+      }} className="max-w-4xl mx-auto text-center mb-24">
           <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-semibold border border-accent/20">
             <Heart className="w-4 h-4" />
             Por que criamos este programa
@@ -123,26 +131,26 @@ const HowItWorksSection = () => {
           </div>
 
           {/* Health benefits showcase */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-12 p-8 rounded-3xl bg-gradient-to-br from-primary/5 to-accent/5 border border-border/50"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.6,
+          delay: 0.2
+        }} className="mt-12 p-8 rounded-3xl bg-gradient-to-br from-primary/5 to-accent/5 border border-border/50">
             <p className="text-foreground font-semibold mb-6 text-lg">
               Quem você indica pode conquistar:
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {healthBenefits.map((benefit, index) => (
-                <div 
-                  key={index}
-                  className="flex flex-col items-center gap-2 p-4 rounded-2xl bg-background/80 border border-border/30"
-                >
+              {healthBenefits.map((benefit, index) => <div key={index} className="flex flex-col items-center gap-2 p-4 rounded-2xl bg-background/80 border border-border/30">
                   <benefit.icon className="w-6 h-6 text-accent" />
                   <span className="text-sm font-medium text-foreground">{benefit.text}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
             <p className="mt-6 text-muted-foreground">
               Diabetes, obesidade, desgaste ósseo, perda de massa magra... 
@@ -159,13 +167,17 @@ const HowItWorksSection = () => {
         </div>
 
         {/* HOW IT WORKS TITLE */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.6
+      }} className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6">
             Como <span className="text-gradient-blue">funciona</span>?
           </h2>
@@ -176,19 +188,10 @@ const HowItWorksSection = () => {
           </p>
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-8 lg:gap-10 mb-20"
-        >
-          {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              className="relative group"
-            >
+        <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{
+        once: true
+      }} className="grid md:grid-cols-3 gap-8 lg:gap-10 mb-20">
+          {steps.map((step, index) => <motion.div key={index} variants={itemVariants} className="relative group">
               <div className="bg-card rounded-3xl p-8 shadow-soft hover:shadow-medium transition-all duration-500 h-full border border-border/50 hover:border-accent/30 relative overflow-hidden">
                 {/* Hover gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -199,15 +202,7 @@ const HowItWorksSection = () => {
                 </div>
 
                 {/* Icon */}
-                <div
-                  className={`w-16 h-16 rounded-2xl mb-6 flex items-center justify-center transition-all duration-300 group-hover:scale-110 ${
-                    step.color === "primary"
-                      ? "bg-primary/10 text-primary"
-                      : step.color === "accent"
-                      ? "bg-accent/10 text-accent"
-                      : "bg-accent/10 text-accent"
-                  }`}
-                >
+                <div className={`w-16 h-16 rounded-2xl mb-6 flex items-center justify-center transition-all duration-300 group-hover:scale-110 ${step.color === "primary" ? "bg-primary/10 text-primary" : step.color === "accent" ? "bg-accent/10 text-accent" : "bg-accent/10 text-accent"}`}>
                   <step.icon className="w-8 h-8" />
                 </div>
 
@@ -220,23 +215,25 @@ const HowItWorksSection = () => {
               </div>
 
               {/* Connector line */}
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-5 lg:-right-6 w-10 lg:w-12">
+              {index < steps.length - 1 && <div className="hidden md:block absolute top-1/2 -right-5 lg:-right-6 w-10 lg:w-12">
                   <div className="h-0.5 bg-gradient-to-r from-border via-accent/30 to-transparent" />
-                </div>
-              )}
-            </motion.div>
-          ))}
+                </div>}
+            </motion.div>)}
         </motion.div>
 
         {/* Testimonial Box */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="max-w-3xl mx-auto mb-16"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        scale: 0.95
+      }} whileInView={{
+        opacity: 1,
+        scale: 1
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.6,
+        delay: 0.3
+      }} className="max-w-3xl mx-auto mb-16">
           <div className="relative bg-gradient-to-br from-primary via-secondary to-primary rounded-3xl p-10 md:p-12 text-center shadow-elevated overflow-hidden border border-white/10">
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-accent/30 blur-3xl" />
@@ -260,29 +257,26 @@ const HowItWorksSection = () => {
         </motion.div>
         
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-center"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.5,
+        delay: 0.4
+      }} className="text-center">
           <Button variant="gold" size="xl" asChild className="group shadow-orange">
-            <a 
-              href="https://wa.me/555192928468?text=Olá!%20Quero%20participar%20do%20Programa%20Embaixador%20Acqualive."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg viewBox="0 0 48 48" className="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor">
-                <path d="M24.04 4.32c-10.84 0-19.68 8.84-19.68 19.68 0 3.47.91 6.84 2.64 9.82L4.32 43.68l10.13-2.64c2.88 1.57 6.12 2.4 9.59 2.4 10.84 0 19.68-8.84 19.68-19.68S34.88 4.32 24.04 4.32zm0 36.01c-3.31 0-6.55-.9-9.38-2.61l-.67-.4-6.96 1.82 1.85-6.77-.44-.7c-1.87-2.97-2.86-6.41-2.86-9.91 0-9.01 7.32-16.34 16.34-16.34s16.34 7.32 16.34 16.34c.12 9.02-7.2 16.46-16.22 16.57zm8.96-12.24c-.49-.25-2.91-1.44-3.36-1.6-.45-.16-.78-.25-1.1.25-.33.49-1.27 1.6-1.56 1.93-.29.33-.57.37-1.06.12-.49-.24-2.07-.76-3.95-2.43-1.46-1.3-2.44-2.91-2.73-3.4-.29-.49-.03-.75.22-1 .22-.22.49-.57.74-.86.24-.29.33-.49.49-.82.16-.33.08-.61-.04-.86-.12-.24-1.1-2.64-1.51-3.61-.4-.95-.8-.82-1.1-.84-.29-.02-.61-.02-.94-.02-.33 0-.86.12-1.31.61-.45.49-1.72 1.68-1.72 4.1s1.76 4.76 2.01 5.08c.24.33 3.47 5.29 8.41 7.42 1.18.51 2.1.81 2.81 1.04 1.18.38 2.26.32 3.11.2.95-.14 2.91-1.19 3.32-2.34.41-1.15.41-2.13.29-2.34-.13-.2-.45-.33-.94-.57z"/>
-              </svg>
+            <a href="https://wa.me/555192928468?text=Olá!%20Quero%20participar%20do%20Programa%20Embaixador%20Acqualive." target="_blank" rel="noopener noreferrer">
+              
               Falar com meu Consultor Exclusivo
             </a>
           </Button>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HowItWorksSection;

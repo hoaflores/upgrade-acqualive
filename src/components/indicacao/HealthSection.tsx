@@ -2,17 +2,21 @@ import { motion } from "framer-motion";
 import { CheckCircle, Zap, Moon, Shield, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import familyImage from "@/assets/family-acqualive.jpeg";
-
-const benefits = [
-  { icon: Zap, text: "Mais energia e disposição mental" },
-  { icon: Moon, text: "Sono reparador e profundo" },
-  { icon: Shield, text: "Imunidade blindada" },
-  { icon: Heart, text: "Hidratação celular avançada" },
-];
-
+const benefits = [{
+  icon: Zap,
+  text: "Mais energia e disposição mental"
+}, {
+  icon: Moon,
+  text: "Sono reparador e profundo"
+}, {
+  icon: Shield,
+  text: "Imunidade blindada"
+}, {
+  icon: Heart,
+  text: "Hidratação celular avançada"
+}];
 const HealthSection = () => {
-  return (
-    <section className="py-20 md:py-28 relative overflow-hidden">
+  return <section className="py-20 md:py-28 relative overflow-hidden">
       {/* Elegant gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 via-background to-primary/5" />
       
@@ -24,13 +28,17 @@ const HealthSection = () => {
       
       <div className="container relative">
         {/* Header centered */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center max-w-3xl mx-auto mb-12 md:mb-16"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 30
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.8
+      }} className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground leading-tight mb-6">
             Você não está indicando um filtro.
             <br />
@@ -46,30 +54,35 @@ const HealthSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Image - Larger */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          x: -50
+        }} whileInView={{
+          opacity: 1,
+          x: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.8
+        }} className="relative">
             <div className="relative rounded-3xl overflow-hidden shadow-medium aspect-[4/3]">
-              <img
-                src={familyImage}
-                alt="Família feliz reunida tomando água pura"
-                className="w-full h-full object-cover"
-              />
+              <img src={familyImage} alt="Família feliz reunida tomando água pura" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent" />
             </div>
             
             {/* Floating badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5, type: "spring" }}
-              className="absolute -bottom-5 right-4 md:right-8 bg-card rounded-2xl p-4 shadow-medium border border-border/50"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            scale: 0
+          }} whileInView={{
+            opacity: 1,
+            scale: 1
+          }} viewport={{
+            once: true
+          }} transition={{
+            delay: 0.5,
+            type: "spring"
+          }} className="absolute -bottom-5 right-4 md:right-8 bg-card rounded-2xl p-4 shadow-medium border border-border/50">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-gold flex items-center justify-center">
                   <CheckCircle className="w-6 h-6 text-white" />
@@ -82,50 +95,67 @@ const HealthSection = () => {
             </motion.div>
             
             {/* Second floating element */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.7, duration: 0.5 }}
-              className="absolute -top-4 left-4 md:left-8 bg-accent text-white rounded-2xl px-4 py-2.5 shadow-orange"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            delay: 0.7,
+            duration: 0.5
+          }} className="absolute -top-4 left-4 md:left-8 bg-accent text-white rounded-2xl px-4 py-2.5 shadow-orange">
               <span className="font-display font-bold">+5.000</span>
               <span className="text-sm ml-1 opacity-90">famílias saudáveis</span>
             </motion.div>
           </motion.div>
 
           {/* Content - More compact */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+          <motion.div initial={{
+          opacity: 0,
+          x: 50
+        }} whileInView={{
+          opacity: 1,
+          x: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.8
+        }}>
             <div className="grid grid-cols-2 gap-3 mb-8">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
-                  className="flex items-center gap-3 bg-card p-3.5 rounded-xl border border-border/50 hover:border-accent/30 hover:shadow-soft transition-all duration-300"
-                >
+              {benefits.map((benefit, index) => <motion.div key={index} initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true
+            }} transition={{
+              delay: index * 0.1,
+              duration: 0.5
+            }} className="flex items-center gap-3 bg-card p-3.5 rounded-xl border border-border/50 hover:border-accent/30 hover:shadow-soft transition-all duration-300">
                   <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-5 h-5 text-accent" />
                   </div>
                   <p className="text-foreground font-medium text-sm">{benefit.text}</p>
-                </motion.div>
-              ))}
+                </motion.div>)}
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              className="bg-gradient-to-br from-card to-secondary/20 rounded-2xl p-5 border-l-4 border-l-accent border border-border/50 shadow-soft"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            delay: 0.4,
+            duration: 0.5
+          }} className="bg-gradient-to-br from-card to-secondary/20 rounded-2xl p-5 border-l-4 border-l-accent border border-border/50 shadow-soft">
               <p className="text-foreground leading-relaxed">
                 Ao indicar a Acqualive, você tira quem você ama da{" "}
                 <strong className="text-destructive">"guerra ácida"</strong> dos refrigerantes 
@@ -137,22 +167,21 @@ const HealthSection = () => {
             </motion.div>
             
             {/* CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5, duration: 0.5 }}
-              className="mt-8"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            delay: 0.5,
+            duration: 0.5
+          }} className="mt-8">
               <Button variant="gold" size="lg" asChild className="group shadow-orange w-full sm:w-auto">
-                <a 
-                  href="https://wa.me/555192928468?text=Olá!%20Quero%20participar%20do%20Programa%20Embaixador%20Acqualive."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg viewBox="0 0 48 48" className="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor">
-                    <path d="M24.04 4.32c-10.84 0-19.68 8.84-19.68 19.68 0 3.47.91 6.84 2.64 9.82L4.32 43.68l10.13-2.64c2.88 1.57 6.12 2.4 9.59 2.4 10.84 0 19.68-8.84 19.68-19.68S34.88 4.32 24.04 4.32zm0 36.01c-3.31 0-6.55-.9-9.38-2.61l-.67-.4-6.96 1.82 1.85-6.77-.44-.7c-1.87-2.97-2.86-6.41-2.86-9.91 0-9.01 7.32-16.34 16.34-16.34s16.34 7.32 16.34 16.34c.12 9.02-7.2 16.46-16.22 16.57zm8.96-12.24c-.49-.25-2.91-1.44-3.36-1.6-.45-.16-.78-.25-1.1.25-.33.49-1.27 1.6-1.56 1.93-.29.33-.57.37-1.06.12-.49-.24-2.07-.76-3.95-2.43-1.46-1.3-2.44-2.91-2.73-3.4-.29-.49-.03-.75.22-1 .22-.22.49-.57.74-.86.24-.29.33-.49.49-.82.16-.33.08-.61-.04-.86-.12-.24-1.1-2.64-1.51-3.61-.4-.95-.8-.82-1.1-.84-.29-.02-.61-.02-.94-.02-.33 0-.86.12-1.31.61-.45.49-1.72 1.68-1.72 4.1s1.76 4.76 2.01 5.08c.24.33 3.47 5.29 8.41 7.42 1.18.51 2.1.81 2.81 1.04 1.18.38 2.26.32 3.11.2.95-.14 2.91-1.19 3.32-2.34.41-1.15.41-2.13.29-2.34-.13-.2-.45-.33-.94-.57z"/>
-                  </svg>
+                <a href="https://wa.me/555192928468?text=Olá!%20Quero%20participar%20do%20Programa%20Embaixador%20Acqualive." target="_blank" rel="noopener noreferrer">
+                  
                   Quero indicar um amigo agora
                 </a>
               </Button>
@@ -160,8 +189,6 @@ const HealthSection = () => {
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HealthSection;
