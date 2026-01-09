@@ -1,6 +1,7 @@
-import { Droplets, AlertTriangle } from "lucide-react";
+import { AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
+import logoBranca from "@/assets/logo-branca.png";
 
 const FooterSection = () => {
   return (
@@ -47,8 +48,7 @@ const FooterSection = () => {
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <Droplets className="w-6 h-6" />
-              <span className="font-display text-xl font-bold">Acqualive</span>
+              <img src={logoBranca} alt="Acqualive" className="h-8 w-auto" />
             </div>
             <p className="text-sm text-primary-foreground/70 text-center md:text-right">
               © {new Date().getFullYear()} Acqualive. Todos os direitos
