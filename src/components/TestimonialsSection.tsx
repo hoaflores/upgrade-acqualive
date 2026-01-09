@@ -5,7 +5,7 @@ const testimonials = [
   {
     name: "Maria Helena S.",
     location: "São Paulo, SP",
-    text: "Já era cliente Acqualive há 5 anos. O upgrade para a Linha V foi incrível: muito mais prático de limpar e o design ficou lindo na minha cozinha!",
+    text: "Já era cliente Acqualive há 5 anos. A troca para a Linha V foi incrível: muito mais prático de limpar e o design ficou lindo na minha cozinha!",
     rating: 5,
   },
   {
@@ -17,7 +17,7 @@ const testimonials = [
   {
     name: "Patricia L.",
     location: "Belo Horizonte, MG",
-    text: "A praticidade é outra! O fluxo é muito mais rápido e não tem mais aquela boia. Higienização virou brincadeira de tão fácil. Recomendo o upgrade!",
+    text: "A praticidade é outra! O fluxo é muito mais rápido e não tem mais aquela boia. Higienização virou brincadeira de tão fácil. Recomendo a modernização!",
     rating: 5,
   },
 ];

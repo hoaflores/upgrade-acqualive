@@ -68,7 +68,7 @@ const HeroSection = () => {
                 className="group sm:text-base text-sm px-6 sm:px-10"
               >
                 <a
-                  href="https://wa.me/555192928468?text=Olá,%20recebi%20um%20e-mail%20com%20um%20desconto%20exclusivo%20para%20fazer%20o%20upgrade%20do%20meu%20filtro%20Acqualive.%20Gostaria%20de%20saber%20mais."
+                  href="https://wa.me/555192928468?text=Olá,%20recebi%20um%20e-mail%20com%20um%20desconto%20exclusivo%20para%20trocar%20meu%20filtro%20Acqualive%20pelo%20novo%20modelo.%20Gostaria%20de%20saber%20mais."
                   target="_blank"
                   rel="noopener noreferrer"
                 >
