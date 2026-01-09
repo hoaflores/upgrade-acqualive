@@ -117,7 +117,7 @@ const HowItWorksSection = () => {
             <p>
               Por isso criamos uma forma de{" "}
               <span className="text-accent font-semibold">retribuir essa confiança</span>. 
-              Quando você indica alguém, não está vendendo nada — está presenteando 
+              Quando você indica alguém, não está vendendo nada, está presenteando 
               com a possibilidade de uma vida mais saudável.
             </p>
           </div>
