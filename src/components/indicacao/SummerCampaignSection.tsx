@@ -4,13 +4,28 @@ import { Button } from "@/components/ui/button";
 
 const SummerCampaignSection = () => {
   return (
-    <section className="py-28 bg-gradient-summer relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-10 left-10 w-40 h-40 rounded-full bg-white/10 blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-white/10 blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-white/5 blur-[100px]" />
+    <section className="py-28 relative overflow-hidden">
+      {/* Premium gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-accent via-[hsl(21_89%_48%)] to-[hsl(21_89%_40%)]" />
+      
+      {/* Decorative mesh overlay */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,_hsl(0_0%_100%_/_0.15),_transparent_50%)]" />
+        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_right,_hsl(21_89%_30%_/_0.4),_transparent_50%)]" />
       </div>
+      
+      {/* Animated orbs */}
+      <motion.div 
+        className="absolute top-10 left-10 w-40 h-40 rounded-full bg-white/15 blur-3xl"
+        animate={{ scale: [1, 1.2, 1], opacity: [0.15, 0.25, 0.15] }}
+        transition={{ duration: 6, repeat: Infinity }}
+      />
+      <motion.div 
+        className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-white/10 blur-3xl"
+        animate={{ scale: [1.2, 1, 1.2], opacity: [0.1, 0.2, 0.1] }}
+        transition={{ duration: 8, repeat: Infinity }}
+      />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-white/5 blur-[100px]" />
       
       {/* Animated stars */}
       <div className="absolute inset-0 overflow-hidden">
