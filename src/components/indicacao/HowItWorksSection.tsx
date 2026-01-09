@@ -27,7 +27,7 @@ const steps = [
 ];
 
 const healthBenefits = [
-  { icon: Activity, text: "Controle glicêmico" },
+  { icon: Activity, text: "Maior Hidratação" },
   { icon: Shield, text: "Imunidade fortalecida" },
   { icon: Bone, text: "Saúde óssea" },
   { icon: Brain, text: "Energia e disposição" },
