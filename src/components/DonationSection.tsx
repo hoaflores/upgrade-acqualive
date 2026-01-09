@@ -7,7 +7,7 @@ const steps = [
     icon: Sparkles,
     title: "Garanta seu Novo Acqualive",
     description:
-      "Aplique seu crédito de fidelidade e modernize para a Linha V com condições exclusivas.",
+      "Por apenas R$ 860,00 a mais que o custo dos refis, você leva um Acqualive de última geração.",
   },
   {
     number: "2",

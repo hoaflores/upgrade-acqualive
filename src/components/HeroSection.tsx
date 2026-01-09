@@ -44,20 +44,19 @@ const HeroSection = () => {
 
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 animate-fade-in-up animation-delay-200">
-              Seu Acqualive com{" "}
-              <span className="text-gradient-water">design e praticidade</span>{" "}
-              de última geração
+              Vai trocar os <span className="text-gradient-water">Refis</span> do seu Acqualive?
             </h1>
 
             <p className="text-xl md:text-2xl text-foreground font-semibold leading-relaxed mb-4 max-w-xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-400">
-              Troque seu filtro atual pelo nosso lançamento mais moderno por{" "}
-              <span className="text-accent font-bold text-3xl md:text-4xl">menos de R$ 1.000,00</span>
+              Por apenas{" "}
+              <span className="text-accent font-bold text-3xl md:text-4xl">R$ 860,00 a mais</span>{" "}
+              você leva um Acqualive de Última Geração!
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-400">
-              Mais prático, com tecnologia vaso comunicante e maior vazão, sem boias, manutenção muito mais fácil. 
-              Você já tem a melhor água, agora tenha também a{" "}
-              <strong className="text-foreground">melhor experiência</strong>.
+              Em vez de só trocar os refis, leve um purificador novo com design moderno, 
+              tecnologia vaso comunicante, maior vazão e manutenção muito mais fácil.{" "}
+              <strong className="text-foreground">Já vem com kit de refis incluso!</strong>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up animation-delay-600">
@@ -68,12 +67,12 @@ const HeroSection = () => {
                 className="group sm:text-base text-sm px-6 sm:px-10"
               >
                 <a
-                  href="https://wa.me/555192928468?text=Olá,%20recebi%20um%20e-mail%20com%20um%20desconto%20exclusivo%20para%20trocar%20meu%20filtro%20Acqualive%20pelo%20novo%20modelo.%20Gostaria%20de%20saber%20mais."
+                  href="https://wa.me/555192928468?text=Olá,%20vi%20que%20por%20R$860%20a%20mais%20que%20os%20refis%20posso%20levar%20um%20Acqualive%20novo.%20Quero%20saber%20mais!"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <WhatsAppIcon className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                  <span>QUERO MEU DESCONTO</span>
+                  <span>QUERO MEU ACQUALIVE NOVO</span>
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
