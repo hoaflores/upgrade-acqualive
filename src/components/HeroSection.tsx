@@ -73,7 +73,7 @@ const HeroSection = () => {
                   rel="noopener noreferrer"
                 >
                   <WhatsAppIcon className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                  <span>QUERO MODERNIZAR AGORA</span>
+                  <span>QUERO MEU DESCONTO</span>
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
