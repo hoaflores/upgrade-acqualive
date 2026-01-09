@@ -4,6 +4,7 @@ import { Send, MessageCircle, User, Phone, Users, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const FormSection = () => {
   const { toast } = useToast();
@@ -24,17 +25,39 @@ const FormSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const { data, error } = await supabase.functions.invoke("add-to-activecampaign", {
+        body: formData,
+      });
 
-    toast({
-      title: "Indicação enviada com sucesso! 🎉",
-      description:
-        "Nossa equipe entrará em contato com você e seu amigo em breve.",
-    });
+      if (error) {
+        console.error("Error submitting form:", error);
+        toast({
+          title: "Erro ao enviar indicação",
+          description: "Por favor, tente novamente ou entre em contato pelo WhatsApp.",
+          variant: "destructive",
+        });
+        setIsSubmitting(false);
+        return;
+      }
 
-    setFormData({ name: "", phone: "", friendName: "", friendPhone: "" });
-    setIsSubmitting(false);
+      toast({
+        title: "Indicação enviada com sucesso! 🎉",
+        description:
+          "Nossa equipe entrará em contato com você e seu amigo em breve.",
+      });
+
+      setFormData({ name: "", phone: "", friendName: "", friendPhone: "" });
+    } catch (error) {
+      console.error("Error:", error);
+      toast({
+        title: "Erro ao enviar indicação",
+        description: "Por favor, tente novamente ou entre em contato pelo WhatsApp.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const whatsappNumber = "555192928468";
