@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
 import { Trophy, Diamond, Flame, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const SummerCampaignSection = () => {
-  return (
-    <section className="py-28 relative overflow-hidden">
+  return <section className="py-28 relative overflow-hidden">
       {/* Elegant gradient background - softer, more sophisticated */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-primary" />
       
@@ -15,31 +13,40 @@ const SummerCampaignSection = () => {
       </div>
       
       {/* Subtle animated orbs */}
-      <motion.div 
-        className="absolute top-10 left-10 w-40 h-40 rounded-full bg-accent/20 blur-3xl"
-        animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.35, 0.2] }}
-        transition={{ duration: 6, repeat: Infinity }}
-      />
-      <motion.div 
-        className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-gold/15 blur-3xl"
-        animate={{ scale: [1.2, 1, 1.2], opacity: [0.15, 0.25, 0.15] }}
-        transition={{ duration: 8, repeat: Infinity }}
-      />
+      <motion.div className="absolute top-10 left-10 w-40 h-40 rounded-full bg-accent/20 blur-3xl" animate={{
+      scale: [1, 1.2, 1],
+      opacity: [0.2, 0.35, 0.2]
+    }} transition={{
+      duration: 6,
+      repeat: Infinity
+    }} />
+      <motion.div className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-gold/15 blur-3xl" animate={{
+      scale: [1.2, 1, 1.2],
+      opacity: [0.15, 0.25, 0.15]
+    }} transition={{
+      duration: 8,
+      repeat: Infinity
+    }} />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-white/5 blur-[100px]" />
       
       <div className="container relative">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-14"
-        >
-          <motion.div 
-            className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm rounded-full px-6 py-2.5 mb-8 border border-accent/30"
-            animate={{ scale: [1, 1.02, 1] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.6
+      }} className="text-center mb-14">
+          <motion.div className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm rounded-full px-6 py-2.5 mb-8 border border-accent/30" animate={{
+          scale: [1, 1.02, 1]
+        }} transition={{
+          duration: 2,
+          repeat: Infinity
+        }}>
             <Flame className="w-5 h-5 text-gold-light" />
             <span className="text-gold-light font-bold text-sm uppercase tracking-wider">
               Exclusivo — Campanha de Verão
@@ -60,13 +67,18 @@ const SummerCampaignSection = () => {
 
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-14">
           {/* Prize Card 1 */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white rounded-3xl p-8 shadow-medium hover:shadow-lg transition-all duration-300 group relative overflow-hidden"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.6,
+          delay: 0.2
+        }} className="bg-white rounded-3xl p-8 shadow-medium hover:shadow-lg transition-all duration-300 group relative overflow-hidden">
             {/* Hover gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
@@ -87,13 +99,18 @@ const SummerCampaignSection = () => {
           </motion.div>
 
           {/* Prize Card 2 */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="bg-white rounded-3xl p-8 shadow-medium hover:shadow-lg transition-all duration-300 group relative overflow-hidden"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.6,
+          delay: 0.3
+        }} className="bg-white rounded-3xl p-8 shadow-medium hover:shadow-lg transition-all duration-300 group relative overflow-hidden">
             {/* Hover gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
@@ -103,9 +120,7 @@ const SummerCampaignSection = () => {
               </div>
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-2xl">💎</span>
-                <h3 className="text-xl font-display font-bold text-foreground">
-                  Status Embaixador Vitalício
-                </h3>
+                <h3 className="text-xl font-display font-bold text-foreground">Promoções Exclusivas</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
                 Acumule 5 indicações convertidas e desbloqueie{" "}
@@ -116,13 +131,18 @@ const SummerCampaignSection = () => {
         </div>
 
         {/* Bonus indicator */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex justify-center mb-10"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        scale: 0.9
+      }} whileInView={{
+        opacity: 1,
+        scale: 1
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.5,
+        delay: 0.4
+      }} className="flex justify-center mb-10">
           <div className="inline-flex items-center gap-3 bg-gold/20 backdrop-blur-sm rounded-full px-6 py-3 border border-gold/30">
             <Gift className="w-5 h-5 text-gold-light" />
             <span className="text-primary-foreground font-medium">
@@ -131,13 +151,18 @@ const SummerCampaignSection = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-center"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.6,
+        delay: 0.5
+      }} className="text-center">
           <Button variant="hero" size="xl" asChild>
             <a href="#formulario" className="group">
               ATIVAR MINHA CAMPANHA DE VERÃO
@@ -146,8 +171,6 @@ const SummerCampaignSection = () => {
           </Button>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default SummerCampaignSection;
