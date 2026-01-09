@@ -1,6 +1,6 @@
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
-const WHATSAPP_LINK = "https://wa.me/555192928468?text=Olá,%20recebi%20um%20e-mail%20com%20um%20desconto%20exclusivo%20para%20trocar%20meu%20filtro%20Acqualive%20pelo%20novo%20modelo.%20Gostaria%20de%20saber%20mais.";
+const WHATSAPP_LINK = "https://wa.me/555192928468?text=Olá,%20vi%20que%20por%20R$860%20a%20mais%20que%20os%20refis%20posso%20levar%20um%20Acqualive%20novo.%20Quero%20saber%20mais!";
 
 const FloatingWhatsApp = () => {
   return (

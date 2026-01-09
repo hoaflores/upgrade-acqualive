@@ -36,17 +36,15 @@ const WhyUpgradeSection = () => {
       <div className="container relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Por que{" "}
-            <span className="text-gradient-water">Modernizar</span> agora?
+            Por que levar o{" "}
+            <span className="text-gradient-water">Novo Modelo</span>?
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Você já tem a melhor água. Mas seu purificador pode ter muito mais{" "}
-            <strong className="text-foreground">praticidade e beleza</strong>. A nova Linha V 
-            mantém toda a tecnologia de purificação que você confia, com uma{" "}
-            <strong className="text-primary">
-              experiência completamente renovada
-            </strong>
-            :
+            Você ia gastar com refis de qualquer forma. Por apenas{" "}
+            <strong className="text-accent">R$ 860,00 a mais</strong>, você leva um Acqualive novinho 
+            com muito mais{" "}
+            <strong className="text-primary">praticidade e design</strong>. 
+            E o melhor: já vem com kit de refis incluso!
           </p>
         </div>
 

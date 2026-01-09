@@ -5,23 +5,23 @@ import productActionImage from "@/assets/product-action.jpg";
 const benefits = [
   {
     icon: Gift,
-    title: "Crédito de Fidelidade",
-    description: "Seu usado abate até R$ 500,00 no valor final.",
+    title: "Kit de Refis Incluso",
+    description: "Seu novo Acqualive já vem com os refis. Sem custo adicional!",
   },
   {
     icon: Check,
-    title: "Kit de refis já incluso",
-    description: "Ia trocar os refis? Seu novo filtro já vem com um kit!",
+    title: "Crédito de Fidelidade",
+    description: "Seu aparelho usado abate até R$ 500,00 no valor final.",
   },
   {
     icon: CreditCard,
-    title: "Bônus Extra",
+    title: "Parcele em até 12x",
     description: "Condição especial de parcelamento ou desconto à vista.",
   },
   {
     icon: Truck,
     title: "Frete Grátis",
-    description: "Para todo o Brasil.",
+    description: "Entrega para todo o Brasil sem custo.",
   },
 ];
 
@@ -36,11 +36,15 @@ const PricingSection = () => {
       <div className="container relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Faça as contas.{" "}
+            Faça as contas:{" "}
             <span className="text-gradient-water">
-              Nunca foi tão fácil ter o melhor.
+              Vale muito mais a pena!
             </span>
           </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Refis custam em média R$ 600,00. Por apenas R$ 860,00 a mais, você leva um Acqualive novo 
+            <strong className="text-foreground"> com os refis já inclusos</strong>.
+          </p>
         </div>
 
         {/* Benefits Grid */}
@@ -87,36 +91,30 @@ const PricingSection = () => {
                 {/* Pricing Info */}
                 <div className="text-center md:text-left order-1 md:order-2">
                   <div className="mb-6">
-                    <p className="text-muted-foreground mb-2">
-                      Você ganha{" "}
-                      <strong className="text-accent font-bold">R$500,00 de desconto</strong>{" "}
-                      e o seu novo purificador já vem com um kit de refis!
+                    <p className="text-lg text-muted-foreground mb-2">
+                      Você ia gastar <strong className="text-foreground">~R$ 600,00</strong> em refis...
                     </p>
-                    <p className="text-lg font-semibold text-foreground">
-                      Mais praticidade, mais beleza e a mesma água incrível!
+                    <p className="text-xl font-semibold text-foreground">
+                      Por apenas <span className="text-accent font-bold">R$ 860,00 a mais</span>, leve um Acqualive novinho!
                     </p>
                   </div>
 
-                  <div className="mb-8">
-                    <p className="text-muted-foreground/60 text-lg line-through mb-2">
-                      De: <span className="text-muted-foreground/60">R$ 1.997,00</span>
+                  <div className="mb-8 bg-accent/10 rounded-xl p-4 border border-accent/20">
+                    <p className="text-sm text-muted-foreground mb-1">Diferença para ter um novo:</p>
+                    <p className="font-display text-3xl md:text-4xl font-bold text-accent">
+                      Apenas R$ 860,00
                     </p>
-                    <p className="font-display text-xl md:text-2xl font-bold text-foreground">
-                      Por:{" "}
-                      <span className="text-gradient-water">
-                        Clique e descubra o melhor preço!
-                      </span>
-                    </p>
+                    <p className="text-xs text-muted-foreground mt-1">*Já com kit de refis incluso</p>
                   </div>
 
                   <Button variant="cta" size="lg" asChild className="w-full group">
                     <a
-                      href="https://wa.me/555192928468?text=Olá,%20recebi%20um%20e-mail%20com%20um%20desconto%20exclusivo%20para%20trocar%20meu%20filtro%20Acqualive%20pelo%20novo%20modelo.%20Gostaria%20de%20saber%20mais."
+                      href="https://wa.me/555192928468?text=Olá,%20vi%20que%20por%20R$860%20a%20mais%20que%20os%20refis%20posso%20levar%20um%20Acqualive%20novo.%20Quero%20saber%20mais!"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <WhatsAppIcon className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                      <span>GARANTIR MEU NOVO FILTRO</span>
+                      <span>QUERO MEU ACQUALIVE NOVO</span>
                     </a>
                   </Button>
                 </div>
