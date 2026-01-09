@@ -123,8 +123,7 @@ const SummerCampaignSection = () => {
                 <h3 className="text-xl font-display font-bold text-foreground">Promoções Exclusivas</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                Acumule 5 indicações convertidas e desbloqueie{" "}
-                <strong className="text-foreground">10% de DESCONTO VITALÍCIO*</strong> na compra de produtos Acqualive por 3 anos.
+                Ao participar das indicações, você e seus indicados recebem <strong className="text-foreground">promoções e descontos exclusivos!</strong>
               </p>
             </div>
           </motion.div>
