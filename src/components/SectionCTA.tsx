@@ -18,7 +18,7 @@ const SectionCTA = () => {
           rel="noopener noreferrer"
         >
           <WhatsAppIcon className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
-          <span>QUERO MODERNIZAR AGORA</span>
+          <span>QUERO MEU DESCONTO</span>
         </a>
       </Button>
     </div>
