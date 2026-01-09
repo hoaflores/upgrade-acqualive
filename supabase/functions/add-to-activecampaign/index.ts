@@ -200,12 +200,8 @@ serve(async (req) => {
     const firstName = nameParts[0];
     const lastName = nameParts.slice(1).join(" ");
 
-    const friendNameParts = friendName.trim().split(" ");
-    const friendFirstName = friendNameParts[0];
-    const friendLastName = friendNameParts.slice(1).join(" ");
-
-    // Add the referrer (who indicated)
-    const referrerContactId = await addContactToActiveCampaign(
+    // Create a single contact with all referral data
+    const contactId = await addContactToActiveCampaign(
       apiUrl,
       apiKey,
       {
@@ -213,37 +209,36 @@ serve(async (req) => {
         lastName,
         phone,
         fieldValues: [
-          { field: "1", value: `Indicou: ${friendName} - ${friendPhone}` }, // Custom field for notes
+          { field: "1", value: `Amigo Indicado: ${friendName} | Telefone: ${friendPhone}` },
         ],
       },
       listId,
       tagId
     );
 
-    // Add the referred friend
-    const friendContactId = await addContactToActiveCampaign(
-      apiUrl,
-      apiKey,
-      {
-        firstName: friendFirstName,
-        lastName: friendLastName,
-        phone: friendPhone,
-        fieldValues: [
-          { field: "1", value: `Indicado por: ${name} - ${phone}` }, // Custom field for notes
-        ],
+    // Add a note with the referral details
+    await fetch(`${apiUrl}/api/3/notes`, {
+      method: "POST",
+      headers: {
+        "Api-Token": apiKey,
+        "Content-Type": "application/json",
       },
-      listId,
-      tagId
-    );
+      body: JSON.stringify({
+        note: {
+          note: `📱 INDICAÇÃO DO PROGRAMA EMBAIXADOR\n\n👤 Quem Indicou:\nNome: ${name}\nTelefone: ${phone}\n\n👥 Amigo Indicado:\nNome: ${friendName}\nTelefone: ${friendPhone}\n\n📅 Data: ${new Date().toLocaleDateString("pt-BR")}`,
+          relid: contactId,
+          reltype: "Subscriber",
+        },
+      }),
+    });
 
-    console.log("Both contacts added successfully");
+    console.log("Contact added successfully with all referral data");
 
     return new Response(
       JSON.stringify({
         success: true,
-        message: "Contatos adicionados com sucesso",
-        referrerContactId,
-        friendContactId,
+        message: "Indicação registrada com sucesso",
+        contactId,
       }),
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
