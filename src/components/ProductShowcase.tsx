@@ -19,8 +19,8 @@ const products = [
   },
   {
     image: vSelfImage,
-    alt: "Acqualive V Self - Filtro de água alcalina com design moderno",
-    name: "Acqualive V Self",
+    alt: "Acqualive V Self Premium - Filtro de água alcalina com design moderno",
+    name: "Acqualive V Self Premium",
   },
   {
     image: vSelfEssencialImage,
