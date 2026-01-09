@@ -1,56 +1,31 @@
 import { motion } from "framer-motion";
-import { Trophy, Diamond, Flame, Gift, Star } from "lucide-react";
+import { Trophy, Diamond, Flame, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const SummerCampaignSection = () => {
   return (
     <section className="py-28 relative overflow-hidden">
-      {/* Premium gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent via-[hsl(21_89%_48%)] to-[hsl(21_89%_40%)]" />
+      {/* Elegant gradient background - softer, more sophisticated */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-primary" />
       
       {/* Decorative mesh overlay */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,_hsl(0_0%_100%_/_0.15),_transparent_50%)]" />
-        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_right,_hsl(21_89%_30%_/_0.4),_transparent_50%)]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,_hsl(21_89%_55%_/_0.25),_transparent_50%)]" />
+        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_right,_hsl(218_97%_20%_/_0.5),_transparent_50%)]" />
       </div>
       
-      {/* Animated orbs */}
+      {/* Subtle animated orbs */}
       <motion.div 
-        className="absolute top-10 left-10 w-40 h-40 rounded-full bg-white/15 blur-3xl"
-        animate={{ scale: [1, 1.2, 1], opacity: [0.15, 0.25, 0.15] }}
+        className="absolute top-10 left-10 w-40 h-40 rounded-full bg-accent/20 blur-3xl"
+        animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.35, 0.2] }}
         transition={{ duration: 6, repeat: Infinity }}
       />
       <motion.div 
-        className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-white/10 blur-3xl"
-        animate={{ scale: [1.2, 1, 1.2], opacity: [0.1, 0.2, 0.1] }}
+        className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-gold/15 blur-3xl"
+        animate={{ scale: [1.2, 1, 1.2], opacity: [0.15, 0.25, 0.15] }}
         transition={{ duration: 8, repeat: Infinity }}
       />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-white/5 blur-[100px]" />
-      
-      {/* Animated stars */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(5)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute"
-            style={{
-              top: `${20 + i * 15}%`,
-              left: `${10 + i * 20}%`,
-            }}
-            animate={{
-              y: [0, -20, 0],
-              opacity: [0.3, 0.7, 0.3],
-            }}
-            transition={{
-              duration: 3 + i,
-              repeat: Infinity,
-              delay: i * 0.5,
-            }}
-          >
-            <Star className="w-4 h-4 text-white/20 fill-white/20" />
-          </motion.div>
-        ))}
-      </div>
       
       <div className="container relative">
         <motion.div
@@ -61,25 +36,25 @@ const SummerCampaignSection = () => {
           className="text-center mb-14"
         >
           <motion.div 
-            className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-2.5 mb-8 border border-white/20"
+            className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm rounded-full px-6 py-2.5 mb-8 border border-accent/30"
             animate={{ scale: [1, 1.02, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <Flame className="w-5 h-5 text-white" />
-            <span className="text-white font-bold text-sm uppercase tracking-wider">
+            <Flame className="w-5 h-5 text-gold-light" />
+            <span className="text-gold-light font-bold text-sm uppercase tracking-wider">
               Exclusivo — Campanha de Verão
             </span>
           </motion.div>
           
-          <h2 className="text-3xl md:text-4xl lg:text-6xl font-display font-bold text-white leading-tight mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-6xl font-display font-bold text-primary-foreground leading-tight mb-6">
             O jogo ficou maior:
             <br />
             <span className="text-gold-light">Ganhe Status de Lenda.</span>
           </h2>
 
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
             Além de garantir seus refis a cada venda, suas indicações feitas entre{" "}
-            <strong>Dezembro e Junho</strong> desbloqueiam prêmios extras:
+            <strong className="text-gold-light">Dezembro e Junho</strong> desbloqueiam prêmios extras:
           </p>
         </motion.div>
 
@@ -148,9 +123,9 @@ const SummerCampaignSection = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex justify-center mb-10"
         >
-          <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
+          <div className="inline-flex items-center gap-3 bg-gold/20 backdrop-blur-sm rounded-full px-6 py-3 border border-gold/30">
             <Gift className="w-5 h-5 text-gold-light" />
-            <span className="text-white font-medium">
+            <span className="text-primary-foreground font-medium">
               Bônus: Cada indicação = <strong className="text-gold-light">+1 número</strong> para o sorteio
             </span>
           </div>

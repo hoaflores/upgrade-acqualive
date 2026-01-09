@@ -35,11 +35,16 @@ const HeroSection = () => {
       >
         <div className="container">
           <div className="flex items-center justify-between">
-            <a href="/" className="flex items-center gap-2">
+            <a href="/" className="flex items-center gap-3">
+              <img 
+                src={iconAcqualive} 
+                alt="Acqualive" 
+                className="h-10 md:h-14 w-auto"
+              />
               <img 
                 src={logoAzul} 
                 alt="Acqualive" 
-                className="h-8 md:h-10 w-auto brightness-0 invert"
+                className="h-7 md:h-10 w-auto brightness-0 invert hidden sm:block"
               />
             </a>
             
@@ -151,7 +156,8 @@ const HeroSection = () => {
                 <img
                   src={familyImage}
                   alt="Família feliz ao redor do filtro Acqualive Terracota"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto object-cover object-top"
+                  style={{ marginBottom: '-60px', clipPath: 'inset(0 0 60px 0)' }}
                 />
                 
                 {/* Subtle overlay for harmony */}
