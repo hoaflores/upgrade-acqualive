@@ -12,8 +12,8 @@ const benefits = [{
   description: "Seu aparelho usado abate até R$ 500,00 no valor final."
 }, {
   icon: CreditCard,
-  title: "Parcele em até 12x",
-  description: "Condição especial de parcelamento ou desconto à vista."
+  title: "Parcele em até 10x",
+  description: "Parcelamento Sem Juros ou desconto à vista."
 }, {
   icon: Truck,
   title: "Frete Grátis",
