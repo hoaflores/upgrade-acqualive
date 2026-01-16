@@ -17,7 +17,7 @@ const benefits = [{
 }, {
   icon: Truck,
   title: "Frete Grátis",
-  description: "Entrega para todo o Brasil sem custo."
+  description: "Consulte regiões disponíveis"
 }];
 const PricingSection = () => {
   return <section id="pricing" className="py-20 lg:py-28 bg-card relative overflow-hidden">
