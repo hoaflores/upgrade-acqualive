@@ -103,6 +103,13 @@ export default {
 				DEFAULT: 'hsl(var(--accent))',
 				light: 'hsl(var(--gold-light))'
 			},
+			emoto: {
+				bg: 'hsl(var(--emoto-bg))',
+				deep: 'hsl(var(--emoto-deep))',
+				cyan: 'hsl(var(--emoto-cyan))',
+				gold: 'hsl(var(--emoto-gold))',
+				silver: 'hsl(var(--emoto-silver))'
+			},
   			sidebar: {
   				DEFAULT: 'hsl(var(--sidebar-background))',
   				foreground: 'hsl(var(--sidebar-foreground))',
