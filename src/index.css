@@ -91,6 +91,13 @@
     --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
     --tracking-normal: 0em;
     --spacing: 0.25rem;
+
+    /* Emoto LP Colors - Dark Mystical Theme */
+    --emoto-bg: 220 20% 3%;
+    --emoto-deep: 220 40% 8%;
+    --emoto-cyan: 187 100% 50%;
+    --emoto-gold: 43 80% 60%;
+    --emoto-silver: 220 10% 75%;
   }
 
   .dark {
