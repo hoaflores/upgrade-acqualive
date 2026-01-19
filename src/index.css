@@ -92,12 +92,12 @@
     --tracking-normal: 0em;
     --spacing: 0.25rem;
 
-    /* Emoto LP Colors - Dark Mystical Theme */
-    --emoto-bg: 220 20% 3%;
-    --emoto-deep: 220 40% 8%;
-    --emoto-cyan: 187 100% 50%;
-    --emoto-gold: 43 80% 60%;
-    --emoto-silver: 220 10% 75%;
+    /* Emoto LP Colors - Dark Theme with Acqualive brand */
+    --emoto-bg: 218 60% 6%;
+    --emoto-deep: 218 50% 12%;
+    --emoto-accent: 215 62% 45%;
+    --emoto-highlight: 21 89% 55%;
+    --emoto-silver: 215 20% 75%;
   }
 
   .dark {

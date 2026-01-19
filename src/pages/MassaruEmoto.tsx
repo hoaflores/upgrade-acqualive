@@ -6,10 +6,6 @@ import EmotoWordsSection from "@/components/emoto/EmotoWordsSection";
 import EmotoTestimonialsSection from "@/components/emoto/EmotoTestimonialsSection";
 import EmotoCTASection from "@/components/emoto/EmotoCTASection";
 import EmotoFloatingParticles from "@/components/emoto/EmotoFloatingParticles";
-import "@fontsource/cinzel/400.css";
-import "@fontsource/cinzel/700.css";
-import "@fontsource/space-mono/400.css";
-import "@fontsource/space-mono/700.css";
 
 const MassaruEmoto = () => {
   return (

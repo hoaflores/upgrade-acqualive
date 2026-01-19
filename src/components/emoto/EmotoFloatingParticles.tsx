@@ -15,7 +15,7 @@ const EmotoFloatingParticles = () => {
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
-          className="absolute rounded-full bg-emoto-cyan/20"
+          className="absolute rounded-full bg-emoto-accent/20"
           style={{
             left: `${particle.x}%`,
             top: `${particle.y}%`,
