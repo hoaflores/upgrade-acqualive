@@ -22,7 +22,7 @@ const EmotoCTASection = () => {
           className="w-[600px] h-[600px] rounded-full"
           style={{
             background:
-              "radial-gradient(circle, rgba(0,212,255,0.2) 0%, transparent 70%)",
+              "radial-gradient(circle, rgba(29,67,128,0.3) 0%, transparent 70%)",
           }}
         />
       </div>
@@ -49,24 +49,24 @@ const EmotoCTASection = () => {
           <motion.div
             animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="absolute inset-0 rounded-full border border-emoto-cyan/30"
+            className="absolute inset-0 rounded-full border border-emoto-accent/40"
           />
           <motion.div
             animate={{ scale: [1, 1.4, 1], opacity: [0.3, 0, 0.3] }}
             transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-            className="absolute inset-0 rounded-full border border-emoto-cyan/20"
+            className="absolute inset-0 rounded-full border border-emoto-accent/30"
           />
           <motion.div
             animate={{ scale: [1, 1.6, 1], opacity: [0.2, 0, 0.2] }}
             transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-            className="absolute inset-0 rounded-full border border-emoto-cyan/10"
+            className="absolute inset-0 rounded-full border border-emoto-accent/20"
           />
 
           {/* Center Glow */}
-          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-emoto-cyan/30 to-emoto-gold/20 blur-xl" />
+          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-emoto-accent/30 to-emoto-highlight/20 blur-xl" />
 
           {/* Inner Circle */}
-          <div className="absolute inset-4 rounded-full bg-emoto-bg/50 backdrop-blur-sm border border-emoto-cyan/30 flex items-center justify-center">
+          <div className="absolute inset-4 rounded-full bg-emoto-bg/50 backdrop-blur-sm border border-emoto-accent/30 flex items-center justify-center">
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -78,63 +78,63 @@ const EmotoCTASection = () => {
                   cy="50"
                   r="20"
                   fill="none"
-                  stroke="hsl(var(--emoto-cyan))"
+                  stroke="hsl(215 62% 45%)"
                   strokeWidth="0.5"
-                  opacity="0.5"
+                  opacity="0.6"
                 />
                 <circle
                   cx="50"
                   cy="30"
                   r="20"
                   fill="none"
-                  stroke="hsl(var(--emoto-cyan))"
+                  stroke="hsl(215 62% 45%)"
                   strokeWidth="0.5"
-                  opacity="0.5"
+                  opacity="0.6"
                 />
                 <circle
                   cx="67"
                   cy="40"
                   r="20"
                   fill="none"
-                  stroke="hsl(var(--emoto-cyan))"
+                  stroke="hsl(215 62% 45%)"
                   strokeWidth="0.5"
-                  opacity="0.5"
+                  opacity="0.6"
                 />
                 <circle
                   cx="67"
                   cy="60"
                   r="20"
                   fill="none"
-                  stroke="hsl(var(--emoto-cyan))"
+                  stroke="hsl(215 62% 45%)"
                   strokeWidth="0.5"
-                  opacity="0.5"
+                  opacity="0.6"
                 />
                 <circle
                   cx="50"
                   cy="70"
                   r="20"
                   fill="none"
-                  stroke="hsl(var(--emoto-cyan))"
+                  stroke="hsl(215 62% 45%)"
                   strokeWidth="0.5"
-                  opacity="0.5"
+                  opacity="0.6"
                 />
                 <circle
                   cx="33"
                   cy="60"
                   r="20"
                   fill="none"
-                  stroke="hsl(var(--emoto-cyan))"
+                  stroke="hsl(215 62% 45%)"
                   strokeWidth="0.5"
-                  opacity="0.5"
+                  opacity="0.6"
                 />
                 <circle
                   cx="33"
                   cy="40"
                   r="20"
                   fill="none"
-                  stroke="hsl(var(--emoto-cyan))"
+                  stroke="hsl(215 62% 45%)"
                   strokeWidth="0.5"
-                  opacity="0.5"
+                  opacity="0.6"
                 />
               </svg>
             </motion.div>
@@ -148,22 +148,16 @@ const EmotoCTASection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          <h2
-            className="font-serif text-3xl md:text-5xl text-white mb-6"
-            style={{ fontFamily: "'Cinzel', serif" }}
-          >
+          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl text-white mb-6 font-bold">
             Inicie sua transformação
           </h2>
-          <p
-            className="font-mono text-emoto-silver/70 text-sm max-w-lg mx-auto mb-10"
-            style={{ fontFamily: "'Space Mono', monospace" }}
-          >
+          <p className="font-body text-emoto-silver text-base md:text-lg max-w-lg mx-auto mb-10 leading-relaxed">
             Seu corpo é 70% água. A qualidade dessa água define a qualidade da
             sua vida. Comece hoje.
           </p>
         </motion.div>
 
-        {/* CTA Button - Glassmorphism */}
+        {/* CTA Button */}
         <motion.a
           href={WHATSAPP_URL}
           target="_blank"
@@ -174,20 +168,9 @@ const EmotoCTASection = () => {
           transition={{ delay: 0.5, duration: 0.6 }}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="inline-block relative group"
+          className="inline-block px-10 py-5 rounded-xl bg-gradient-to-r from-emoto-highlight to-orange-500 text-white font-display font-bold text-lg md:text-xl shadow-lg shadow-emoto-highlight/40 hover:shadow-xl hover:shadow-emoto-highlight/50 transition-all duration-300"
         >
-          {/* Glow Effect */}
-          <div className="absolute inset-0 bg-gradient-to-r from-emoto-cyan to-emoto-gold rounded-xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
-
-          {/* Button */}
-          <div className="relative px-10 py-5 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 hover:border-emoto-cyan/50 transition-all duration-300">
-            <span
-              className="font-serif text-white text-lg tracking-wide"
-              style={{ fontFamily: "'Cinzel', serif" }}
-            >
-              Iniciar Protocolo de Hidratação
-            </span>
-          </div>
+          QUERO MEU DESCONTO
         </motion.a>
 
         {/* Secondary Info */}
@@ -196,8 +179,7 @@ const EmotoCTASection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.7, duration: 0.6 }}
-          className="font-mono text-emoto-silver/40 text-xs mt-8"
-          style={{ fontFamily: "'Space Mono', monospace" }}
+          className="font-body text-emoto-silver/60 text-sm mt-6"
         >
           Fale com um especialista via WhatsApp
         </motion.p>
@@ -211,16 +193,10 @@ const EmotoCTASection = () => {
         className="relative z-10 mt-24 pt-8 border-t border-white/5"
       >
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <p
-            className="font-mono text-emoto-silver/30 text-xs"
-            style={{ fontFamily: "'Space Mono', monospace" }}
-          >
+          <p className="font-body text-emoto-silver/40 text-xs">
             © 2025 Acqualive. Todos os direitos reservados.
           </p>
-          <p
-            className="font-mono text-emoto-silver/30 text-xs"
-            style={{ fontFamily: "'Space Mono', monospace" }}
-          >
+          <p className="font-body text-emoto-silver/40 text-xs">
             Inspirado nos estudos do Dr. Masaru Emoto
           </p>
         </div>

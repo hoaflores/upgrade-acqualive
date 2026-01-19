@@ -106,8 +106,8 @@ export default {
 			emoto: {
 				bg: 'hsl(var(--emoto-bg))',
 				deep: 'hsl(var(--emoto-deep))',
-				cyan: 'hsl(var(--emoto-cyan))',
-				gold: 'hsl(var(--emoto-gold))',
+				accent: 'hsl(var(--emoto-accent))',
+				highlight: 'hsl(var(--emoto-highlight))',
 				silver: 'hsl(var(--emoto-silver))'
 			},
   			sidebar: {

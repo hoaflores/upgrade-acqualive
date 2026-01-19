@@ -3,6 +3,9 @@ import { useRef } from "react";
 import productMonolith from "@/assets/emoto/product-monolith.jpg";
 import cymaticsPattern from "@/assets/emoto/cymatics-pattern.jpg";
 
+const WHATSAPP_URL =
+  "https://api.whatsapp.com/send?phone=554130777777&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20Masaru%20Emoto%20e%20quero%20saber%20mais%20sobre%20o%20Acqualive.";
+
 const features = [
   {
     title: "Filtração em 5 Estágios",
@@ -56,22 +59,13 @@ const EmotoProductSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16 lg:mb-24"
         >
-          <span
-            className="font-mono text-emoto-gold text-xs tracking-[0.3em] uppercase block mb-4"
-            style={{ fontFamily: "'Space Mono', monospace" }}
-          >
+          <span className="font-body text-emoto-highlight text-xs md:text-sm tracking-[0.2em] uppercase font-medium block mb-4">
             A tecnologia que imita a criação
           </span>
-          <h2
-            className="font-serif text-3xl md:text-5xl text-white mb-6"
-            style={{ fontFamily: "'Cinzel', serif" }}
-          >
-            O Monolito
+          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl text-white mb-6 font-bold">
+            O Purificador
           </h2>
-          <p
-            className="font-mono text-emoto-silver/70 text-sm max-w-xl mx-auto"
-            style={{ fontFamily: "'Space Mono', monospace" }}
-          >
+          <p className="font-body text-emoto-silver text-base md:text-lg max-w-xl mx-auto leading-relaxed">
             Engenharia de precisão inspirada nos padrões da geometria sagrada
           </p>
         </motion.div>
@@ -93,7 +87,7 @@ const EmotoProductSection = () => {
                   cy="200"
                   r="150"
                   fill="none"
-                  stroke="hsl(var(--emoto-gold))"
+                  stroke="hsl(21 89% 55%)"
                   strokeWidth="0.5"
                   className="animate-[spin_60s_linear_infinite]"
                 />
@@ -102,7 +96,7 @@ const EmotoProductSection = () => {
                   cy="200"
                   r="120"
                   fill="none"
-                  stroke="hsl(var(--emoto-gold))"
+                  stroke="hsl(21 89% 55%)"
                   strokeWidth="0.5"
                   className="animate-[spin_45s_linear_infinite_reverse]"
                 />
@@ -111,7 +105,7 @@ const EmotoProductSection = () => {
                   cy="200"
                   r="90"
                   fill="none"
-                  stroke="hsl(var(--emoto-cyan))"
+                  stroke="hsl(215 62% 45%)"
                   strokeWidth="0.5"
                   className="animate-[spin_30s_linear_infinite]"
                 />
@@ -126,7 +120,7 @@ const EmotoProductSection = () => {
           </motion.div>
 
           {/* Features */}
-          <div className="order-1 lg:order-2 space-y-8">
+          <div className="order-1 lg:order-2 space-y-6">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -137,30 +131,39 @@ const EmotoProductSection = () => {
                 className="group"
               >
                 {/* Glassmorphism Card */}
-                <div className="relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-emoto-cyan/30 transition-all duration-500">
+                <div className="relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-emoto-accent/40 transition-all duration-500">
                   {/* Index Number */}
-                  <span
-                    className="absolute -left-3 top-1/2 -translate-y-1/2 font-mono text-emoto-gold/30 text-4xl font-bold"
-                    style={{ fontFamily: "'Space Mono', monospace" }}
-                  >
+                  <span className="absolute -left-3 top-1/2 -translate-y-1/2 font-display text-emoto-highlight/30 text-4xl font-bold">
                     0{index + 1}
                   </span>
 
-                  <h3
-                    className="font-serif text-lg text-white mb-2 group-hover:text-emoto-cyan transition-colors"
-                    style={{ fontFamily: "'Cinzel', serif" }}
-                  >
+                  <h3 className="font-display text-lg md:text-xl text-white font-semibold mb-2 group-hover:text-emoto-accent transition-colors">
                     {feature.title}
                   </h3>
-                  <p
-                    className="font-mono text-emoto-silver/60 text-xs"
-                    style={{ fontFamily: "'Space Mono', monospace" }}
-                  >
+                  <p className="font-body text-emoto-silver/80 text-sm md:text-base">
                     {feature.description}
                   </p>
                 </div>
               </motion.div>
             ))}
+
+            {/* CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="pt-6"
+            >
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full text-center px-8 py-4 rounded-xl bg-gradient-to-r from-emoto-highlight to-orange-500 text-white font-display font-semibold text-base md:text-lg shadow-lg shadow-emoto-highlight/30 hover:shadow-xl hover:shadow-emoto-highlight/40 hover:scale-[1.02] transition-all duration-300"
+              >
+                QUERO MEU ACQUALIVE
+              </a>
+            </motion.div>
           </div>
         </div>
       </div>

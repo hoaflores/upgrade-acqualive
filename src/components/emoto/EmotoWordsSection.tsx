@@ -16,22 +16,13 @@ const EmotoWordsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span
-            className="font-mono text-emoto-gold text-xs tracking-[0.3em] uppercase block mb-4"
-            style={{ fontFamily: "'Space Mono', monospace" }}
-          >
+          <span className="font-body text-emoto-highlight text-xs md:text-sm tracking-[0.2em] uppercase font-medium block mb-4">
             O experimento
           </span>
-          <h2
-            className="font-serif text-3xl md:text-5xl text-white mb-6"
-            style={{ fontFamily: "'Cinzel', serif" }}
-          >
+          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl text-white mb-6 font-bold">
             Palavras têm poder
           </h2>
-          <p
-            className="font-mono text-emoto-silver/70 text-sm max-w-xl mx-auto"
-            style={{ fontFamily: "'Space Mono', monospace" }}
-          >
+          <p className="font-body text-emoto-silver text-base md:text-lg max-w-xl mx-auto leading-relaxed">
             Passe o mouse sobre as palavras e veja como a água responde a
             diferentes intenções
           </p>
@@ -49,29 +40,25 @@ const EmotoWordsSection = () => {
             whileTap={{ scale: 0.98 }}
             className={`relative px-12 py-6 rounded-xl transition-all duration-500 ${
               activeWord === "love"
-                ? "bg-emoto-cyan/20 shadow-[0_0_60px_rgba(0,212,255,0.3)]"
+                ? "bg-emoto-accent/20 shadow-[0_0_60px_rgba(29,67,128,0.4)]"
                 : "bg-white/5 hover:bg-white/10"
             } backdrop-blur-sm border ${
               activeWord === "love"
-                ? "border-emoto-cyan/50"
+                ? "border-emoto-accent/50"
                 : "border-white/10"
             }`}
           >
             <span
-              className={`font-serif text-4xl md:text-5xl transition-colors duration-300 ${
-                activeWord === "love" ? "text-emoto-cyan" : "text-white"
+              className={`font-display text-4xl md:text-5xl font-bold transition-colors duration-300 ${
+                activeWord === "love" ? "text-emoto-accent" : "text-white"
               }`}
-              style={{ fontFamily: "'Cinzel', serif" }}
             >
               AMOR
             </span>
           </motion.button>
 
           {/* VS Divider */}
-          <span
-            className="font-mono text-emoto-silver/30 text-sm"
-            style={{ fontFamily: "'Space Mono', monospace" }}
-          >
+          <span className="font-body text-emoto-silver/40 text-sm font-medium">
             vs
           </span>
 
@@ -92,10 +79,9 @@ const EmotoWordsSection = () => {
             }`}
           >
             <span
-              className={`font-serif text-4xl md:text-5xl transition-colors duration-300 ${
+              className={`font-display text-4xl md:text-5xl font-bold transition-colors duration-300 ${
                 activeWord === "hate" ? "text-red-400" : "text-white"
               }`}
-              style={{ fontFamily: "'Cinzel', serif" }}
             >
               ÓDIO
             </span>
@@ -118,11 +104,8 @@ const EmotoWordsSection = () => {
             className="absolute inset-0 flex items-center justify-center"
           >
             <div className="text-center">
-              <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-emoto-cyan/20 to-emoto-gold/20 blur-2xl" />
-              <p
-                className="font-mono text-emoto-silver/50 text-sm mt-8"
-                style={{ fontFamily: "'Space Mono', monospace" }}
-              >
+              <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-emoto-accent/20 to-emoto-highlight/20 blur-2xl" />
+              <p className="font-body text-emoto-silver/60 text-sm mt-8">
                 Interaja com as palavras acima
               </p>
             </div>
@@ -138,17 +121,14 @@ const EmotoWordsSection = () => {
             className="absolute inset-0 flex flex-col items-center justify-center"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-emoto-cyan/30 blur-3xl rounded-full" />
+              <div className="absolute inset-0 bg-emoto-accent/30 blur-3xl rounded-full" />
               <img
                 src={crystalLove}
                 alt="Cristal formado por amor"
-                className="relative w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-2 border-emoto-cyan/30"
+                className="relative w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-2 border-emoto-accent/40"
               />
             </div>
-            <p
-              className="font-mono text-emoto-cyan text-sm mt-6"
-              style={{ fontFamily: "'Space Mono', monospace" }}
-            >
+            <p className="font-body text-emoto-accent text-sm md:text-base mt-6 font-medium">
               Geometria perfeita • Harmonia • Vida
             </p>
           </motion.div>
@@ -170,10 +150,7 @@ const EmotoWordsSection = () => {
                 className="relative w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-2 border-red-500/30 filter grayscale-[20%]"
               />
             </div>
-            <p
-              className="font-mono text-red-400 text-sm mt-6"
-              style={{ fontFamily: "'Space Mono', monospace" }}
-            >
+            <p className="font-body text-red-400 text-sm md:text-base mt-6 font-medium">
               Estrutura fragmentada • Caos • Destruição
             </p>
           </motion.div>
@@ -184,12 +161,11 @@ const EmotoWordsSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center font-mono text-emoto-silver/60 text-sm max-w-lg mx-auto mt-12"
-          style={{ fontFamily: "'Space Mono', monospace" }}
+          className="text-center font-body text-emoto-silver/80 text-base md:text-lg max-w-lg mx-auto mt-12 leading-relaxed"
         >
           Se palavras fazem isso em uma tela...
           <br />
-          <span className="text-white">
+          <span className="text-white font-semibold">
             imagine o que fazem dentro do seu corpo.
           </span>
         </motion.p>
