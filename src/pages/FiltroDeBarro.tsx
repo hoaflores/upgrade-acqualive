@@ -1,43 +1,51 @@
 import { Helmet } from "react-helmet-async";
-import TerracotaHeroSection from "@/components/terracota/TerracotaHeroSection";
-import TerracotaBenefitsSection from "@/components/terracota/TerracotaBenefitsSection";
-import TerracotaTechSection from "@/components/terracota/TerracotaTechSection";
-import TerracotaComparisonSection from "@/components/terracota/TerracotaComparisonSection";
-import TerracotaFAQSection from "@/components/terracota/TerracotaFAQSection";
-import TerracotaCTASection from "@/components/terracota/TerracotaCTASection";
 import FooterSection from "@/components/FooterSection";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ScrollReveal from "@/components/ScrollReveal";
+import FiltroBenefitsSection from "@/components/filtro-barro/FiltroBenefitsSection";
+import FiltroHeroSection from "@/components/filtro-barro/FiltroHeroSection";
+import FiltroHistorySection from "@/components/filtro-barro/FiltroHistorySection";
+import FiltroWhyBestSection from "@/components/filtro-barro/FiltroWhyBestSection";
+import FiltroAcqualiveSection from "@/components/filtro-barro/FiltroAcqualiveSection";
+import FiltroComparisonSection from "@/components/filtro-barro/FiltroComparisonSection";
+import FiltroFAQSection from "@/components/filtro-barro/FiltroFAQSection";
+import FiltroCTASection from "@/components/filtro-barro/FiltroCTASection";
 
-const WHATSAPP_LINK = "https://wa.me/555192928468?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Purificador%20Acqualive%20Terracota!";
+const WHATSAPP_LINK = "https://wa.me/555192928468?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Filtro%20de%20Barro%20Acqualive!";
 
 const FiltroDeBarro = () => {
   return (
     <>
       <Helmet>
-        <title>Purificador Acqualive Terracota | A Evolução do Filtro de Barro</title>
+        <title>Filtro de Barro | Por Que é o Melhor do Mundo? | Acqualive</title>
         <meta 
           name="description" 
-          content="Descubra o Purificador Acqualive Terracota: design vintage, água alcalina e ionizada, rica em magnésio. A evolução do tradicional filtro de barro." 
+          content="Descubra por que o filtro de barro brasileiro é considerado o melhor do mundo e como o Acqualive Terracota eleva essa tradição com tecnologia de ponta." 
         />
       </Helmet>
       <main className="min-h-screen bg-background">
-        <TerracotaHeroSection whatsappLink={WHATSAPP_LINK} />
+        <FiltroHeroSection whatsappLink={WHATSAPP_LINK} />
         <ScrollReveal>
-          <TerracotaBenefitsSection />
+          <FiltroHistorySection />
         </ScrollReveal>
         <ScrollReveal>
-          <TerracotaTechSection />
+          <FiltroWhyBestSection />
         </ScrollReveal>
         <ScrollReveal>
-          <TerracotaComparisonSection />
+          <FiltroBenefitsSection whatsappLink={WHATSAPP_LINK} />
         </ScrollReveal>
         <ScrollReveal>
-          <TerracotaFAQSection />
+          <FiltroAcqualiveSection whatsappLink={WHATSAPP_LINK} />
         </ScrollReveal>
         <ScrollReveal>
-        <TerracotaCTASection whatsappLink={WHATSAPP_LINK} />
+          <FiltroComparisonSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <FiltroFAQSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <FiltroCTASection whatsappLink={WHATSAPP_LINK} />
         </ScrollReveal>
         <FooterSection />
         <StickyMobileCTA />
