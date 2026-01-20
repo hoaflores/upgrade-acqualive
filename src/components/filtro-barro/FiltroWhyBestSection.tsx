@@ -1,102 +1,127 @@
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 import { Droplets, ThermometerSnowflake, Shield, Leaf, Zap, Heart } from "lucide-react";
 
 const reasons = [
   {
     icon: Droplets,
-    title: "Filtragem Natural por Gravidade",
-    description: "A cerâmica porosa filtra a água gota a gota, eliminando impurezas, bactérias e vírus sem necessidade de eletricidade ou produtos químicos.",
-    highlight: "99,9% de eficiência",
+    number: "01",
+    title: "Filtragem Natural",
+    highlight: "99,9%",
+    description: "A cerâmica porosa elimina impurezas, bactérias e vírus sem eletricidade.",
+    color: "barro-water",
   },
   {
     icon: ThermometerSnowflake,
-    title: "Água Naturalmente Gelada",
-    description: "O barro permite a evaporação natural da água pela parede externa, mantendo a água fresca mesmo em dias quentes - um ar condicionado natural!",
-    highlight: "5-7°C mais fria",
+    number: "02",
+    title: "Naturalmente Gelada",
+    highlight: "-7°C",
+    description: "O barro permite evaporação natural, mantendo a água fresca.",
+    color: "barro-water",
   },
   {
     icon: Shield,
-    title: "Prata Coloidal Bactericida",
-    description: "A cerâmica impregnada com prata coloidal impede a proliferação de microrganismos, garantindo água segura por muito mais tempo.",
-    highlight: "Proteção 24/7",
+    number: "03",
+    title: "Proteção Contínua",
+    highlight: "24/7",
+    description: "Prata coloidal impede proliferação de microrganismos.",
+    color: "barro-terracota",
   },
   {
     icon: Leaf,
-    title: "Zero Impacto Ambiental",
-    description: "Não usa eletricidade, não gera resíduos plásticos e é totalmente biodegradável. O filtro mais ecológico que existe.",
-    highlight: "100% sustentável",
+    number: "04",
+    title: "Zero Impacto",
+    highlight: "100%",
+    description: "Totalmente sustentável, biodegradável, sem resíduos plásticos.",
+    color: "barro-leaf",
   },
   {
     icon: Zap,
-    title: "Sem Custos de Energia",
-    description: "Diferente de purificadores elétricos, o filtro de barro funciona por gravidade, eliminando custos com energia e manutenção complexa.",
-    highlight: "R$ 0 de luz",
+    number: "05",
+    title: "Sem Energia",
+    highlight: "R$0",
+    description: "Funciona por gravidade. Zero custos com eletricidade.",
+    color: "barro-terracota-light",
   },
   {
     icon: Heart,
-    title: "Melhora o Sabor da Água",
-    description: "Remove o cloro e outras substâncias que alteram o sabor, devolvendo à água seu gosto puro e natural.",
-    highlight: "Sabor superior",
+    number: "06",
+    title: "Sabor Superior",
+    highlight: "Puro",
+    description: "Remove cloro e substâncias que alteram o sabor natural.",
+    color: "barro-terracota",
   },
 ];
 
 const FiltroWhyBestSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+
   return (
-    <section className="py-20 lg:py-28 bg-background">
-      <div className="container">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block text-sm font-bold text-accent uppercase tracking-wider mb-4">
+    <section ref={ref} className="relative py-24 lg:py-32 bg-barro-sand overflow-hidden">
+      {/* Decorative circles */}
+      <div className="absolute top-20 right-10 w-64 h-64 rounded-full border border-barro-terracota/10" />
+      <div className="absolute bottom-20 left-10 w-48 h-48 rounded-full border border-barro-terracota/10" />
+
+      <div className="container relative z-10">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="max-w-3xl mb-16 lg:mb-24"
+        >
+          <span className="text-barro-terracota font-display font-bold text-sm tracking-[0.2em] uppercase mb-4 block">
             A Ciência
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            6 Razões Científicas Para Ser o <span className="text-gradient-water">Melhor do Mundo</span>
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-barro-earth leading-tight">
+            Por que é o 
+            <span className="block text-barro-terracota italic font-serif font-normal">melhor do mundo?</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Não é apenas tradição - a ciência comprova a superioridade do filtro de barro
-          </p>
-        </div>
+        </motion.div>
 
-        {/* Reasons Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Bento-style grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
           {reasons.map((reason, index) => (
-            <div
+            <motion.div
               key={index}
-              className="group bg-card border border-border rounded-2xl p-6 hover:shadow-elevated transition-all duration-300 hover:-translate-y-1"
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={`
+                group relative bg-barro-cream rounded-3xl p-6 lg:p-8
+                hover:shadow-xl transition-all duration-500
+                ${index === 0 ? 'lg:col-span-2 lg:row-span-1' : ''}
+                ${index === 3 ? 'lg:col-span-2' : ''}
+              `}
             >
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <reason.icon className="w-6 h-6 text-primary" />
-              </div>
-              <div className="inline-block bg-accent/10 border border-accent/30 rounded-full px-3 py-1 mb-3">
-                <span className="text-xs font-bold text-accent">{reason.highlight}</span>
-              </div>
-              <h3 className="font-display text-lg font-bold text-foreground mb-2">
-                {reason.title}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {reason.description}
-              </p>
-            </div>
-          ))}
-        </div>
+              {/* Number watermark */}
+              <span className="absolute top-4 right-6 text-6xl font-display font-bold text-barro-terracota/5 select-none">
+                {reason.number}
+              </span>
 
-        {/* Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="text-center p-6 bg-muted/50 rounded-2xl">
-            <div className="text-4xl font-bold text-primary mb-2">200+</div>
-            <div className="text-sm text-muted-foreground">Anos de tradição</div>
-          </div>
-          <div className="text-center p-6 bg-muted/50 rounded-2xl">
-            <div className="text-4xl font-bold text-[#8B4513] mb-2">50M+</div>
-            <div className="text-sm text-muted-foreground">Lares brasileiros</div>
-          </div>
-          <div className="text-center p-6 bg-muted/50 rounded-2xl">
-            <div className="text-4xl font-bold text-accent mb-2">99,9%</div>
-            <div className="text-sm text-muted-foreground">Eficiência filtragem</div>
-          </div>
-          <div className="text-center p-6 bg-muted/50 rounded-2xl">
-            <div className="text-4xl font-bold text-primary mb-2">0</div>
-            <div className="text-sm text-muted-foreground">Impacto ambiental</div>
-          </div>
+              <div className="relative z-10">
+                {/* Icon */}
+                <div className={`w-12 h-12 rounded-2xl bg-${reason.color}/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                  <reason.icon className={`w-6 h-6 text-${reason.color}`} />
+                </div>
+
+                {/* Highlight number */}
+                <div className={`text-3xl md:text-4xl font-display font-bold text-${reason.color} mb-2`}>
+                  {reason.highlight}
+                </div>
+
+                <h3 className="font-display text-lg font-bold text-barro-earth mb-2">
+                  {reason.title}
+                </h3>
+
+                <p className="text-sm text-barro-earth/60 leading-relaxed">
+                  {reason.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

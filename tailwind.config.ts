@@ -110,6 +110,15 @@ export default {
 				highlight: 'hsl(var(--emoto-highlight))',
 				silver: 'hsl(var(--emoto-silver))'
 			},
+			barro: {
+				cream: 'hsl(var(--barro-cream))',
+				sand: 'hsl(var(--barro-sand))',
+				terracota: 'hsl(var(--barro-terracota))',
+				'terracota-light': 'hsl(var(--barro-terracota-light))',
+				earth: 'hsl(var(--barro-earth))',
+				water: 'hsl(var(--barro-water))',
+				leaf: 'hsl(var(--barro-leaf))'
+			},
   			sidebar: {
   				DEFAULT: 'hsl(var(--sidebar-background))',
   				foreground: 'hsl(var(--sidebar-foreground))',
