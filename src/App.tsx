@@ -9,6 +9,7 @@ import Upgrade from "./pages/Upgrade";
 import ProgramaIndicacao from "./pages/ProgramaIndicacao";
 import MassaruEmoto from "./pages/MassaruEmoto";
 import FiltroDeBarro from "./pages/FiltroDeBarro";
+import Terracota from "./pages/Terracota";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/programa-de-indicacao" element={<ProgramaIndicacao />} />
             <Route path="/massaru-emoto" element={<MassaruEmoto />} />
             <Route path="/filtro-de-barro" element={<FiltroDeBarro />} />
+            <Route path="/terracota" element={<Terracota />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
