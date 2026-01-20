@@ -98,6 +98,15 @@
     --emoto-accent: 215 62% 45%;
     --emoto-highlight: 21 89% 55%;
     --emoto-silver: 215 20% 75%;
+
+    /* Terracota/Barro LP Colors - Earthy organic theme */
+    --barro-cream: 35 45% 96%;
+    --barro-sand: 30 35% 88%;
+    --barro-terracota: 18 60% 40%;
+    --barro-terracota-light: 18 55% 55%;
+    --barro-earth: 25 40% 25%;
+    --barro-water: 200 45% 45%;
+    --barro-leaf: 145 35% 35%;
   }
 
   .dark {
