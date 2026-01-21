@@ -1,20 +1,20 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Sparkles } from "lucide-react";
 import logoAcqualive from "@/assets/logo-acqualive.png";
+import filtroBarro from "@/assets/filtro-barro-hero.jpg";
+
 const FiltroHeroSection = () => {
-  return <section className="relative min-h-screen bg-barro-cream overflow-hidden flex flex-col">
-      {/* Organic background shapes */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Main gradient orb */}
-        <div className="absolute top-0 right-0 w-[120vw] h-[120vw] -translate-y-1/2 translate-x-1/4 rounded-full bg-gradient-to-bl from-barro-terracota/8 via-barro-sand/40 to-transparent" />
-        
-        {/* Subtle water accent */}
-        <div className="absolute bottom-0 left-0 w-[60vw] h-[60vw] translate-y-1/2 -translate-x-1/4 rounded-full bg-gradient-to-tr from-barro-water/6 to-transparent" />
-        
-        {/* Fine grain texture */}
-        <div className="absolute inset-0 opacity-[0.025]" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
-      }} />
+  return <section className="relative min-h-screen overflow-hidden flex flex-col">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img 
+          src={filtroBarro} 
+          alt="Filtro de barro tradicional" 
+          className="w-full h-full object-cover object-center"
+        />
+        {/* Overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-barro-cream/95 via-barro-cream/80 to-barro-cream/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-barro-cream/60 via-transparent to-barro-cream/30" />
       </div>
 
       {/* Header */}
