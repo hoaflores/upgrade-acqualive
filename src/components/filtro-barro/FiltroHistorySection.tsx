@@ -18,7 +18,7 @@ const timelineItems = [
   {
     era: "Hoje",
     title: "A Evolução",
-    description: "E se pudéssemos unir 200 anos de sabedoria com a ciência moderna?",
+    description: "A Acqualive desenvolve a evolução dos filtros de barro comuns, unindo tradição com a mais alta tecnologia!",
     color: "#5D7F4A", // barro-leaf
   },
 ];
