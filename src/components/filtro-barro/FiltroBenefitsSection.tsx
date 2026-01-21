@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
-import terracotaLifestyle from "@/assets/terracota-lifestyle.png";
+import filtroBarro from "@/assets/filtro-barro-lifestyle.png";
 interface FiltroBenefitsSectionProps {
   whatsappLink: string;
 }
@@ -37,24 +37,8 @@ const FiltroBenefitsSection = ({
               
               {/* Image */}
               <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
-                <img src={terracotaLifestyle} alt="Filtro de Barro em ambiente" className="w-full h-auto" />
+                <img src={filtroBarro} alt="Filtro de Barro em ambiente" className="w-full h-auto" />
               </div>
-
-              {/* Floating badge */}
-              <motion.div initial={{
-              opacity: 0,
-              y: 20
-            }} animate={isInView ? {
-              opacity: 1,
-              y: 0
-            } : {}} transition={{
-              delay: 0.5
-            }} className="absolute -bottom-6 -right-6 lg:right-auto lg:-left-6 bg-barro-earth text-barro-cream rounded-2xl p-4 shadow-xl">
-                
-                <span className="text-barro-cream/70 font-extrabold text-sm">O FILTRO MAIS
-AMADO DO BRASIL!
-              </span>
-              </motion.div>
             </div>
           </motion.div>
 
