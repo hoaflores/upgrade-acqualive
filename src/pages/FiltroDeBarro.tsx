@@ -6,6 +6,7 @@ import FiltroHeroSection from "@/components/filtro-barro/FiltroHeroSection";
 import FiltroHistorySection from "@/components/filtro-barro/FiltroHistorySection";
 import FiltroWhyBestSection from "@/components/filtro-barro/FiltroWhyBestSection";
 import FiltroBenefitsSection from "@/components/filtro-barro/FiltroBenefitsSection";
+import FiltroTransitionSection from "@/components/filtro-barro/FiltroTransitionSection";
 import FiltroAcqualiveSection from "@/components/filtro-barro/FiltroAcqualiveSection";
 import FiltroComparisonSection from "@/components/filtro-barro/FiltroComparisonSection";
 import FiltroFAQSection from "@/components/filtro-barro/FiltroFAQSection";
@@ -28,6 +29,7 @@ const FiltroDeBarro = () => {
         <FiltroHistorySection />
         <FiltroWhyBestSection />
         <FiltroBenefitsSection whatsappLink={WHATSAPP_LINK} />
+        <FiltroTransitionSection />
         <FiltroAcqualiveSection whatsappLink={WHATSAPP_LINK} />
         <FiltroComparisonSection />
         <FiltroFAQSection />
