@@ -4,15 +4,15 @@ import { useRef } from "react";
 import { Check, X, Crown } from "lucide-react";
 
 const comparisons = [
-  { feature: "Filtragem natural por gravidade", comum: true, terracota: true, eletrico: false },
-  { feature: "Água naturalmente gelada", comum: true, terracota: true, eletrico: false },
-  { feature: "Zero consumo de energia", comum: true, terracota: true, eletrico: false },
-  { feature: "100% sustentável", comum: true, terracota: true, eletrico: false },
-  { feature: "Água Alcalina e Ionizada", comum: false, terracota: true, eletrico: false },
-  { feature: "Rica em Magnésio", comum: false, terracota: true, eletrico: false },
-  { feature: "Tecnologia TriWay", comum: false, terracota: true, eletrico: false },
-  { feature: "Design Premium", comum: false, terracota: true, eletrico: true },
-  { feature: "Certificação INMETRO", comum: false, terracota: true, eletrico: true },
+  { feature: "Filtragem natural por gravidade", barro: true, terracota: true, comum: false },
+  { feature: "Água naturalmente fresquinha", barro: true, terracota: true, comum: false },
+  { feature: "Zero consumo de energia", barro: true, terracota: true, comum: false },
+  { feature: "100% sustentável", barro: true, terracota: true, comum: false },
+  { feature: "Água Alcalina e Ionizada", barro: false, terracota: true, comum: false },
+  { feature: "Rica em Magnésio", barro: false, terracota: true, comum: false },
+  { feature: "Tecnologia TriWay", barro: false, terracota: true, comum: false },
+  { feature: "Design Premium", barro: false, terracota: true, comum: true },
+  { feature: "Certificação INMETRO", barro: false, terracota: true, comum: true },
 ];
 
 const FiltroComparisonSection = () => {
@@ -45,7 +45,7 @@ const FiltroComparisonSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="grid md:grid-cols-3 gap-6 lg:gap-8"
         >
-          {/* Filtro Comum */}
+          {/* Filtro de Barro Comum */}
           <div className="bg-barro-sand rounded-3xl p-6 lg:p-8">
             <div className="text-center mb-8">
               <span className="text-barro-earth/50 font-display font-bold text-sm uppercase tracking-wider">
@@ -58,7 +58,7 @@ const FiltroComparisonSection = () => {
             <div className="space-y-4">
               {comparisons.map((item, index) => (
                 <div key={index} className="flex items-center gap-3">
-                  {item.comum ? (
+                  {item.barro ? (
                     <div className="w-6 h-6 rounded-full bg-barro-leaf/20 flex items-center justify-center flex-shrink-0">
                       <Check className="w-3.5 h-3.5 text-barro-leaf" />
                     </div>
@@ -67,7 +67,7 @@ const FiltroComparisonSection = () => {
                       <X className="w-3.5 h-3.5 text-barro-earth/30" />
                     </div>
                   )}
-                  <span className={`text-sm ${item.comum ? 'text-barro-earth' : 'text-barro-earth/40'}`}>
+                  <span className={`text-sm ${item.barro ? 'text-barro-earth' : 'text-barro-earth/40'}`}>
                     {item.feature}
                   </span>
                 </div>
@@ -110,20 +110,20 @@ const FiltroComparisonSection = () => {
             </div>
           </div>
 
-          {/* Purificador Elétrico */}
+          {/* Purificador Comum */}
           <div className="bg-barro-sand rounded-3xl p-6 lg:p-8">
             <div className="text-center mb-8">
               <span className="text-barro-earth/50 font-display font-bold text-sm uppercase tracking-wider">
                 Purificador
               </span>
               <h3 className="font-display text-xl font-bold text-barro-earth mt-2">
-                Elétrico
+                Comum
               </h3>
             </div>
             <div className="space-y-4">
               {comparisons.map((item, index) => (
                 <div key={index} className="flex items-center gap-3">
-                  {item.eletrico ? (
+                  {item.comum ? (
                     <div className="w-6 h-6 rounded-full bg-barro-leaf/20 flex items-center justify-center flex-shrink-0">
                       <Check className="w-3.5 h-3.5 text-barro-leaf" />
                     </div>
@@ -132,7 +132,7 @@ const FiltroComparisonSection = () => {
                       <X className="w-3.5 h-3.5 text-barro-earth/30" />
                     </div>
                   )}
-                  <span className={`text-sm ${item.eletrico ? 'text-barro-earth' : 'text-barro-earth/40'}`}>
+                  <span className={`text-sm ${item.comum ? 'text-barro-earth' : 'text-barro-earth/40'}`}>
                     {item.feature}
                   </span>
                 </div>
