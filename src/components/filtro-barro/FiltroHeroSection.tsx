@@ -85,13 +85,13 @@ Mas a Acqualive foi além.<span className="block text-barro-terracota">perfeito.
             duration: 0.6,
             delay: 0.6
           }} className="max-w-2xl mb-12">
-              <p className="text-lg text-barro-earth/70 leading-relaxed mb-6 md:text-2xl">Descubra como 200 anos de tradição encontraram a tecnologia para criar algo ainda melhor!<span className="text-barro-terracota font-medium"> Quase.</span>
+              <p className="text-lg text-barro-earth/70 leading-relaxed mb-6 md:text-2xl">Descubra como 200 anos de tradição encontraram a tecnologiapara criar algo ainda melhor!<span className="text-barro-terracota font-medium"> Quase.</span>
               </p>
               
               <div className="flex items-start gap-3 p-4 bg-barro-sand/50 rounded-2xl border border-barro-terracota/10">
                 <Sparkles className="w-5 h-5 text-barro-terracota flex-shrink-0 mt-0.5" />
                 <p className="text-sm text-barro-earth/80 leading-relaxed">
-                  <span className="font-semibold text-barro-earth">E se pudéssemos ir além?</span>
+                  <span className="font-semibold text-barro-earth">CONHEÇA A EVOLUÇÃO DOS FILTROS DE BARRO!</span>
                   {" "}Descubra como 200 anos de tradição encontraram a tecnologia 
                   para criar algo ainda melhor.
                 </p>
