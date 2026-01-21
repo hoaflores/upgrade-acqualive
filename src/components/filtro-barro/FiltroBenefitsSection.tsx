@@ -13,7 +13,7 @@ interface FiltroBenefitsSectionProps {
 const benefits = [
   "Elimina 99,9% de bactérias e vírus",
   "Remove cloro, agrotóxicos e metais",
-  "Água naturalmente gelada",
+  "Água naturalmente fresquinha (-2° a -4°C)",
   "Preserva minerais essenciais",
   "Zero consumo de energia",
   "Vida útil de décadas",
