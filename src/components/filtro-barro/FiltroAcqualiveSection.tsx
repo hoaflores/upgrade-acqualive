@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { Sparkles, Droplets, Shield, Award, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
-import terracotaFront from "@/assets/terracota-front.png";
+import terracotaFront from "@/assets/filtro-acqualive-terracota.webp";
 
 interface FiltroAcqualiveSectionProps {
   whatsappLink: string;
