@@ -34,7 +34,12 @@ const FiltroDeBarro = () => {
         <FiltroComparisonSection />
         <FiltroFAQSection />
         <FiltroCTASection whatsappLink={WHATSAPP_LINK} />
-        <FooterSection />
+        <FooterSection 
+          whatsappLink={WHATSAPP_LINK} 
+          ctaLabel="QUERO MEU TERRACOTA AGORA" 
+          heading="Leve água pura para sua família"
+          showUrgencyBanner={false}
+        />
         <StickyMobileCTA whatsappLink={WHATSAPP_LINK} label="QUERO MEU TERRACOTA AGORA" />
         <FloatingWhatsApp whatsappLink={WHATSAPP_LINK} />
       </main>
