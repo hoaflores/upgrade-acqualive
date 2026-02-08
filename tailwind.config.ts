@@ -119,6 +119,16 @@ export default {
 				water: 'hsl(var(--barro-water))',
 				leaf: 'hsl(var(--barro-leaf))'
 			},
+			vip: {
+				bg: 'hsl(var(--vip-bg))',
+				surface: 'hsl(var(--vip-surface))',
+				'surface-hover': 'hsl(var(--vip-surface-hover))',
+				gold: 'hsl(var(--vip-gold))',
+				'gold-light': 'hsl(var(--vip-gold-light))',
+				blue: 'hsl(var(--vip-blue))',
+				text: 'hsl(var(--vip-text))',
+				'text-muted': 'hsl(var(--vip-text-muted))'
+			},
   			sidebar: {
   				DEFAULT: 'hsl(var(--sidebar-background))',
   				foreground: 'hsl(var(--sidebar-foreground))',

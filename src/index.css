@@ -99,6 +99,16 @@
     --emoto-highlight: 21 89% 55%;
     --emoto-silver: 215 20% 75%;
 
+    /* VIP Ecosystem Colors - Premium dark theme */
+    --vip-bg: 220 40% 6%;
+    --vip-surface: 220 35% 10%;
+    --vip-surface-hover: 220 30% 14%;
+    --vip-gold: 42 78% 55%;
+    --vip-gold-light: 42 70% 70%;
+    --vip-blue: 215 62% 45%;
+    --vip-text: 220 15% 85%;
+    --vip-text-muted: 220 10% 55%;
+
     /* Terracota/Barro LP Colors - Earthy organic theme */
     --barro-cream: 35 45% 96%;
     --barro-sand: 30 35% 88%;
