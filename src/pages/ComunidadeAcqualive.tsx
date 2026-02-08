@@ -1,8 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import VipHeroSection from "@/components/vip/VipHeroSection";
 import VipBenefitsSection from "@/components/vip/VipBenefitsSection";
-import VipScarcitySection from "@/components/vip/VipScarcitySection";
+import VipVideoChallenge from "@/components/vip/VipVideoChallenge";
 import VipStepsSection from "@/components/vip/VipStepsSection";
+import VipFAQSection from "@/components/vip/VipFAQSection";
 import VipFooterSection from "@/components/vip/VipFooterSection";
 import iconAcqualive from "@/assets/icon-acqualive.png";
 
@@ -29,9 +30,10 @@ const ComunidadeAcqualive = () => {
 
         <VipHeroSection whatsappLink={WHATSAPP_LINK} />
         <VipBenefitsSection />
-        <VipScarcitySection />
-        <VipStepsSection whatsappLink={WHATSAPP_LINK} />
-        <VipFooterSection />
+        <VipVideoChallenge />
+        <VipStepsSection />
+        <VipFAQSection />
+        <VipFooterSection whatsappLink={WHATSAPP_LINK} />
       </main>
     </>
   );
