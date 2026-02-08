@@ -11,6 +11,7 @@ import MassaruEmoto from "./pages/MassaruEmoto";
 import FiltroDeBarro from "./pages/FiltroDeBarro";
 import Terracota from "./pages/Terracota";
 import ComunidadeAcqualive from "./pages/ComunidadeAcqualive";
+import ApresentacaoComunidade from "./pages/ApresentacaoComunidade";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/filtro-de-barro" element={<FiltroDeBarro />} />
             <Route path="/terracota" element={<Terracota />} />
             <Route path="/comunidade-acqualive" element={<ComunidadeAcqualive />} />
+            <Route path="/apresentacao-comunidade-projeto" element={<ApresentacaoComunidade />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
