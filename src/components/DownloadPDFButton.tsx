@@ -15,54 +15,73 @@ const DownloadPDFButton = ({ fileName = "landing-page.pdf" }: DownloadPDFButtonP
       const html2canvas = (await import("html2canvas")).default;
       const { jsPDF } = await import("jspdf");
 
-      // Hide the download button itself during capture
-      const btn = document.getElementById("pdf-download-btn");
-      if (btn) btn.style.display = "none";
+      const mainEl = document.querySelector("main") as HTMLElement;
+      if (!mainEl) return;
 
-      // Also hide floating WhatsApp and sticky CTA
-      const floatingEls = document.querySelectorAll<HTMLElement>(
-        '[class*="FloatingWhatsApp"], [class*="StickyMobile"], [id="pdf-download-btn"]'
-      );
-      floatingEls.forEach((el) => (el.style.display = "none"));
+      // 1. Hide floating elements
+      const hideSelectors = "#pdf-download-btn, [class*='Floating'], [class*='Sticky']";
+      const hiddenEls = document.querySelectorAll<HTMLElement>(hideSelectors);
+      hiddenEls.forEach((el) => (el.style.visibility = "hidden"));
 
-      const element = document.querySelector("main") as HTMLElement;
-      if (!element) return;
+      // 2. Freeze ALL animations by injecting a global style
+      const freezeStyle = document.createElement("style");
+      freezeStyle.id = "pdf-freeze";
+      freezeStyle.textContent = `
+        *, *::before, *::after {
+          animation: none !important;
+          transition: none !important;
+          transform: none !important;
+          opacity: 1 !important;
+        }
+      `;
+      document.head.appendChild(freezeStyle);
 
-      const canvas = await html2canvas(element, {
+      // 3. Wait for reflow
+      await new Promise((r) => setTimeout(r, 500));
+
+      // 4. Capture
+      const canvas = await html2canvas(mainEl, {
         scale: 2,
         useCORS: true,
         allowTaint: true,
-        scrollY: -window.scrollY,
-        windowWidth: element.scrollWidth,
-        windowHeight: element.scrollHeight,
+        scrollY: 0,
+        y: 0,
+        width: mainEl.scrollWidth,
+        height: mainEl.scrollHeight,
+        windowWidth: 1440,
+        windowHeight: mainEl.scrollHeight,
       });
 
-      const imgData = canvas.toDataURL("image/jpeg", 0.92);
-      const imgWidth = 210; // A4 width in mm
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      const pageHeight = 297; // A4 height in mm
+      // 5. Remove freeze style & restore visibility
+      freezeStyle.remove();
+      hiddenEls.forEach((el) => (el.style.visibility = ""));
+
+      // 6. Build PDF with proper pagination
+      const imgData = canvas.toDataURL("image/jpeg", 0.95);
+      const pdfWidth = 210; // A4 mm
+      const pdfPageHeight = 297;
+      const imgHeight = (canvas.height * pdfWidth) / canvas.width;
 
       const pdf = new jsPDF("p", "mm", "a4");
-      let position = 0;
+      let y = 0;
+      let page = 0;
 
-      // Multi-page support
-      while (position < imgHeight) {
-        if (position > 0) pdf.addPage();
-        pdf.addImage(imgData, "JPEG", 0, -position, imgWidth, imgHeight);
-        position += pageHeight;
+      while (y < imgHeight) {
+        if (page > 0) pdf.addPage();
+        pdf.addImage(imgData, "JPEG", 0, -y, pdfWidth, imgHeight);
+        y += pdfPageHeight;
+        page++;
       }
 
       pdf.save(fileName);
     } catch (err) {
       console.error("Erro ao gerar PDF:", err);
     } finally {
-      // Restore hidden elements
+      // Ensure cleanup even on error
+      const freeze = document.getElementById("pdf-freeze");
+      if (freeze) freeze.remove();
       const btn = document.getElementById("pdf-download-btn");
-      if (btn) btn.style.display = "";
-      const floatingEls = document.querySelectorAll<HTMLElement>(
-        '[class*="FloatingWhatsApp"], [class*="StickyMobile"]'
-      );
-      floatingEls.forEach((el) => (el.style.display = ""));
+      if (btn) btn.style.visibility = "";
       setLoading(false);
     }
   };
@@ -74,7 +93,7 @@ const DownloadPDFButton = ({ fileName = "landing-page.pdf" }: DownloadPDFButtonP
       disabled={loading}
       variant="outline"
       size="icon"
-      className="fixed top-4 right-4 z-[9999] bg-white/90 backdrop-blur-sm shadow-lg hover:bg-white border-gray-200 text-gray-700 rounded-full w-12 h-12"
+      className="fixed top-4 right-4 z-[9999] bg-background/90 backdrop-blur-sm shadow-lg hover:bg-background border-border text-foreground rounded-full w-12 h-12"
       title="Baixar PDF"
     >
       {loading ? (
