@@ -7,10 +7,12 @@ import FAQSection from "@/components/indicacao/FAQSection";
 import FormSection from "@/components/indicacao/FormSection";
 import FooterSection from "@/components/indicacao/FooterSection";
 import FloatingWhatsAppIndicacao from "@/components/indicacao/FloatingWhatsAppIndicacao";
+import DownloadPDFButton from "@/components/DownloadPDFButton";
 
 const ProgramaIndicacao = () => {
   return (
     <>
+      <DownloadPDFButton fileName="Programa-Embaixador-Acqualive.pdf" />
       <Helmet>
         <title>Programa Embaixador Acqualive | Ganhe Refis Grátis</title>
         <meta
