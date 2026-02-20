@@ -12,6 +12,7 @@ import FiltroDeBarro from "./pages/FiltroDeBarro";
 import Terracota from "./pages/Terracota";
 import ComunidadeAcqualive from "./pages/ComunidadeAcqualive";
 import ApresentacaoComunidade from "./pages/ApresentacaoComunidade";
+import IndicaPDF from "./pages/IndicaPDF";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/terracota" element={<Terracota />} />
             <Route path="/comunidade-acqualive" element={<ComunidadeAcqualive />} />
             <Route path="/apresentacao-comunidade-projeto" element={<ApresentacaoComunidade />} />
+            <Route path="/indica-pdf" element={<IndicaPDF />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
