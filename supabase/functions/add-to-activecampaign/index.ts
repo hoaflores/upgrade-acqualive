@@ -6,11 +6,64 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
-interface ContactData {
-  name: string;
-  phone: string;
-  friendName: string;
-  friendPhone: string;
+// Simple in-memory rate limiter (per IP, resets on cold start)
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT_MAX = 5;
+const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 minute
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitMap.get(ip);
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+  entry.count++;
+  return entry.count > RATE_LIMIT_MAX;
+}
+
+// Input validation and sanitization
+function sanitize(input: string): string {
+  return input
+    .replace(/[<>]/g, "") // Strip angle brackets
+    .replace(/[\x00-\x1F\x7F]/g, "") // Strip control characters
+    .trim();
+}
+
+function validateContactData(body: unknown): { valid: true; data: { name: string; phone: string; friendName: string; friendPhone: string } } | { valid: false; error: string } {
+  if (!body || typeof body !== "object") {
+    return { valid: false, error: "Invalid request body" };
+  }
+
+  const { name, phone, friendName, friendPhone } = body as Record<string, unknown>;
+
+  if (typeof name !== "string" || typeof phone !== "string" || typeof friendName !== "string" || typeof friendPhone !== "string") {
+    return { valid: false, error: "All fields must be strings" };
+  }
+
+  const sName = sanitize(name);
+  const sPhone = sanitize(phone);
+  const sFriendName = sanitize(friendName);
+  const sFriendPhone = sanitize(friendPhone);
+
+  if (sName.length < 2 || sName.length > 100) {
+    return { valid: false, error: "Nome deve ter entre 2 e 100 caracteres" };
+  }
+  if (sFriendName.length < 2 || sFriendName.length > 100) {
+    return { valid: false, error: "Nome do amigo deve ter entre 2 e 100 caracteres" };
+  }
+
+  // Allow Brazilian phone formats: (XX) XXXXX-XXXX or just digits, 10-15 chars after stripping
+  const phoneDigits = sPhone.replace(/\D/g, "");
+  const friendPhoneDigits = sFriendPhone.replace(/\D/g, "");
+  if (phoneDigits.length < 10 || phoneDigits.length > 15) {
+    return { valid: false, error: "Telefone inválido (mínimo 10 dígitos)" };
+  }
+  if (friendPhoneDigits.length < 10 || friendPhoneDigits.length > 15) {
+    return { valid: false, error: "Telefone do amigo inválido (mínimo 10 dígitos)" };
+  }
+
+  return { valid: true, data: { name: sName, phone: sPhone, friendName: sFriendName, friendPhone: sFriendPhone } };
 }
 
 async function addContactToActiveCampaign(
@@ -20,7 +73,6 @@ async function addContactToActiveCampaign(
   listId: string,
   tagId: string
 ) {
-  // Create or update contact
   const contactResponse = await fetch(`${apiUrl}/api/3/contact/sync`, {
     method: "POST",
     headers: {
@@ -41,12 +93,11 @@ async function addContactToActiveCampaign(
   if (!contactResponse.ok) {
     const errorText = await contactResponse.text();
     console.error("Error creating contact:", errorText);
-    throw new Error(`Failed to create contact: ${errorText}`);
+    throw new Error("Failed to create contact in CRM");
   }
 
   const contactData = await contactResponse.json();
   const contactId = contactData.contact.id;
-  console.log("Contact created/updated with ID:", contactId);
 
   // Add contact to list
   const listResponse = await fetch(`${apiUrl}/api/3/contactLists`, {
@@ -59,17 +110,13 @@ async function addContactToActiveCampaign(
       contactList: {
         list: listId,
         contact: contactId,
-        status: 1, // 1 = subscribed
+        status: 1,
       },
     }),
   });
 
   if (!listResponse.ok) {
-    const errorText = await listResponse.text();
-    console.error("Error adding to list:", errorText);
-    // Don't throw - contact might already be on list
-  } else {
-    console.log("Contact added to list");
+    console.error("Error adding to list");
   }
 
   // Add tag to contact
@@ -88,11 +135,7 @@ async function addContactToActiveCampaign(
   });
 
   if (!tagResponse.ok) {
-    const errorText = await tagResponse.text();
-    console.error("Error adding tag:", errorText);
-    // Don't throw - tag might already be added
-  } else {
-    console.log("Tag added to contact");
+    console.error("Error adding tag");
   }
 
   return contactId;
@@ -100,38 +143,22 @@ async function addContactToActiveCampaign(
 
 async function getListIdByName(apiUrl: string, apiKey: string, listName: string): Promise<string | null> {
   const response = await fetch(`${apiUrl}/api/3/lists?filters[name]=${encodeURIComponent(listName)}`, {
-    headers: {
-      "Api-Token": apiKey,
-    },
+    headers: { "Api-Token": apiKey },
   });
 
-  if (!response.ok) {
-    console.error("Error fetching lists");
-    return null;
-  }
-
+  if (!response.ok) return null;
   const data = await response.json();
-  if (data.lists && data.lists.length > 0) {
-    return data.lists[0].id;
-  }
-  return null;
+  return data.lists?.[0]?.id ?? null;
 }
 
 async function getTagIdByName(apiUrl: string, apiKey: string, tagName: string): Promise<string | null> {
   const response = await fetch(`${apiUrl}/api/3/tags?search=${encodeURIComponent(tagName)}`, {
-    headers: {
-      "Api-Token": apiKey,
-    },
+    headers: { "Api-Token": apiKey },
   });
 
-  if (!response.ok) {
-    console.error("Error fetching tags");
-    return null;
-  }
-
+  if (!response.ok) return null;
   const data = await response.json();
-  if (data.tags && data.tags.length > 0) {
-    // Find exact match
+  if (data.tags?.length > 0) {
     const exactMatch = data.tags.find((tag: any) => tag.tag.toLowerCase() === tagName.toLowerCase());
     return exactMatch ? exactMatch.id : data.tags[0].id;
   }
@@ -139,34 +166,51 @@ async function getTagIdByName(apiUrl: string, apiKey: string, tagName: string): 
 }
 
 serve(async (req) => {
-  // Handle CORS preflight request
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
+    // Rate limiting
+    const clientIp = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    if (isRateLimited(clientIp)) {
+      return new Response(
+        JSON.stringify({ error: "Muitas tentativas. Aguarde um momento e tente novamente." }),
+        { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
     const apiUrl = Deno.env.get("ACTIVECAMPAIGN_API_URL");
     const apiKey = Deno.env.get("ACTIVECAMPAIGN_API_KEY");
 
     if (!apiUrl || !apiKey) {
       console.error("Missing ActiveCampaign credentials");
       return new Response(
-        JSON.stringify({ error: "Missing ActiveCampaign credentials" }),
+        JSON.stringify({ error: "Erro de configuração do servidor" }),
         { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    const { name, phone, friendName, friendPhone }: ContactData = await req.json();
-
-    // Validate input
-    if (!name || !phone || !friendName || !friendPhone) {
+    // Parse and validate input
+    let rawBody: unknown;
+    try {
+      rawBody = await req.json();
+    } catch {
       return new Response(
-        JSON.stringify({ error: "All fields are required" }),
+        JSON.stringify({ error: "Corpo da requisição inválido" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    console.log("Processing referral:", { name, phone, friendName, friendPhone });
+    const validation = validateContactData(rawBody);
+    if (!validation.valid) {
+      return new Response(
+        JSON.stringify({ error: validation.error }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    const { name, phone, friendName, friendPhone } = validation.data;
 
     // Get list and tag IDs
     const listName = "Lovable - Programa de Indicação";
@@ -177,30 +221,26 @@ serve(async (req) => {
       getTagIdByName(apiUrl, apiKey, tagName),
     ]);
 
-    console.log("List ID:", listId, "Tag ID:", tagId);
-
     if (!listId) {
       console.error("List not found:", listName);
       return new Response(
-        JSON.stringify({ error: `Lista "${listName}" não encontrada no ActiveCampaign` }),
-        { status: 404, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        JSON.stringify({ error: "Configuração de lista não encontrada" }),
+        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
     if (!tagId) {
       console.error("Tag not found:", tagName);
       return new Response(
-        JSON.stringify({ error: `Tag "${tagName}" não encontrada no ActiveCampaign` }),
-        { status: 404, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        JSON.stringify({ error: "Configuração de tag não encontrada" }),
+        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    // Split name into first and last name
-    const nameParts = name.trim().split(" ");
+    const nameParts = name.split(" ");
     const firstName = nameParts[0];
     const lastName = nameParts.slice(1).join(" ");
 
-    // Create a single contact with all referral data
     const contactId = await addContactToActiveCampaign(
       apiUrl,
       apiKey,
@@ -216,7 +256,7 @@ serve(async (req) => {
       tagId
     );
 
-    // Add a note with the referral details
+    // Add note with referral details
     await fetch(`${apiUrl}/api/3/notes`, {
       method: "POST",
       headers: {
@@ -225,28 +265,24 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         note: {
-          note: `📱 INDICAÇÃO DO PROGRAMA EMBAIXADOR\n\n👤 Quem Indicou:\nNome: ${name}\nTelefone: ${phone}\n\n👥 Amigo Indicado:\nNome: ${friendName}\nTelefone: ${friendPhone}\n\n📅 Data: ${new Date().toLocaleDateString("pt-BR")}`,
+          note: `INDICAÇÃO DO PROGRAMA EMBAIXADOR\n\nQuem Indicou:\nNome: ${name}\nTelefone: ${phone}\n\nAmigo Indicado:\nNome: ${friendName}\nTelefone: ${friendPhone}\n\nData: ${new Date().toLocaleDateString("pt-BR")}`,
           relid: contactId,
           reltype: "Subscriber",
         },
       }),
     });
 
-    console.log("Contact added successfully with all referral data");
-
     return new Response(
       JSON.stringify({
         success: true,
         message: "Indicação registrada com sucesso",
-        contactId,
       }),
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   } catch (error) {
     console.error("Error processing request:", error);
-    const errorMessage = error instanceof Error ? error.message : "Internal server error";
     return new Response(
-      JSON.stringify({ error: errorMessage }),
+      JSON.stringify({ error: "Erro interno do servidor. Tente novamente." }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }
