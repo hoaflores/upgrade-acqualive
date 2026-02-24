@@ -530,6 +530,34 @@ const FAQSection = () => {
       question: "Quem pode participar do Acqualive Club?",
       answer: "Qualquer pessoa que tenha uma conta no site da Acqualive pode participar. Basta criar sua conta gratuita e você já ganha 500 pontos de boas-vindas (R$ 10,00).",
     },
+    {
+      question: "Se eu devolver um produto, perco os pontos da compra?",
+      answer: "Sim. Em caso de devolução ou cancelamento, os pontos referentes àquela compra serão estornados automaticamente do seu saldo. Pontos já resgatados como cupom poderão ser descontados de créditos futuros.",
+    },
+    {
+      question: "E se o amigo que eu indiquei devolver o produto?",
+      answer: "Se a compra do seu amigo for cancelada ou devolvida, os 21.400 pontos da indicação serão estornados do seu saldo. Os pontos só são definitivos após o prazo de troca/devolução do pedido.",
+    },
+    {
+      question: "Posso transferir meus pontos para outra pessoa?",
+      answer: "Não. Os pontos são pessoais e intransferíveis, vinculados exclusivamente à sua conta no Acqualive Club.",
+    },
+    {
+      question: "Minha avaliação precisa ser aprovada para eu ganhar os pontos?",
+      answer: "Sim. Todas as avaliações passam por uma moderação rápida para garantir que sejam genuínas e relevantes. Avaliações com conteúdo ofensivo, spam ou que não tenham relação com o produto não serão aprovadas e não gerarão pontos.",
+    },
+    {
+      question: "Posso avaliar o mesmo produto mais de uma vez?",
+      answer: "Não. Cada produto só pode ser avaliado uma vez por conta. Porém, se você comprou produtos diferentes, pode avaliar cada um deles e acumular até 900 pontos por produto.",
+    },
+    {
+      question: "Quais são os requisitos para foto e vídeo na avaliação?",
+      answer: "A foto deve mostrar o produto de forma clara e nítida. O vídeo deve ter no mínimo 10 segundos mostrando o produto em uso ou um depoimento sobre sua experiência. Imagens genéricas ou vídeos muito curtos podem não ser aprovados na moderação.",
+    },
+    {
+      question: "Existe um valor mínimo de pontos para resgatar?",
+      answer: "Sim. O resgate mínimo é de 500 pontos (R$ 10,00). A partir desse saldo, você pode gerar seu cupom de desconto a qualquer momento pelo Acqualive Club.",
+    },
   ];
 
   return (
