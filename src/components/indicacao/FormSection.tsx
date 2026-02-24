@@ -129,6 +129,8 @@ const FormSection = () => {
                   onChange={handleChange}
                   placeholder="Digite seu nome"
                   required
+                  minLength={2}
+                  maxLength={100}
                   className="h-12 rounded-xl bg-background/50 border-border/50 focus:border-accent focus:ring-accent/20"
                 />
               </div>
@@ -149,6 +151,8 @@ const FormSection = () => {
                   onChange={handleChange}
                   placeholder="(00) 00000-0000"
                   required
+                  pattern="[\d\s\(\)\-\+]{10,20}"
+                  title="Insira um número de telefone válido"
                   className="h-12 rounded-xl bg-background/50 border-border/50 focus:border-accent focus:ring-accent/20"
                 />
               </div>
@@ -178,6 +182,8 @@ const FormSection = () => {
                   onChange={handleChange}
                   placeholder="Nome do seu amigo"
                   required
+                  minLength={2}
+                  maxLength={100}
                   className="h-12 rounded-xl bg-background/50 border-border/50 focus:border-accent focus:ring-accent/20"
                 />
               </div>
@@ -198,6 +204,8 @@ const FormSection = () => {
                   onChange={handleChange}
                   placeholder="(00) 00000-0000"
                   required
+                  pattern="[\d\s\(\)\-\+]{10,20}"
+                  title="Insira um número de telefone válido"
                   className="h-12 rounded-xl bg-background/50 border-border/50 focus:border-accent focus:ring-accent/20"
                 />
               </div>
