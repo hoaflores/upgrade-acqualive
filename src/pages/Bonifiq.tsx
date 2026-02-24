@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { Gift, Share2, Star, MessageSquare, Camera, Video, UserPlus, Cake, Instagram, ShoppingCart, ArrowRight, CheckCircle, Sparkles, Trophy, Heart } from "lucide-react";
+import { Gift, Share2, Star, MessageSquare, Camera, Video, UserPlus, Cake, Instagram, ShoppingCart, ArrowRight, CheckCircle, Sparkles, Trophy, Heart, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import iconAcqualive from "@/assets/icon-acqualive.png";
 import logoAcqualiveBranca from "@/assets/logo-branca.png";
 import bonifiqHero from "@/assets/bonifiq-hero.jpg";
@@ -494,6 +495,105 @@ const ConversionSection = () => {
   );
 };
 
+/* ───────────── FAQ ───────────── */
+const FAQSection = () => {
+  const faqs = [
+    {
+      question: "Como resgatar meus pontos?",
+      answer: "Acesse o Acqualive Club, vá até a seção 'Meus Pontos' e clique em 'Resgatar'. Seus pontos serão convertidos em um cupom de desconto que pode ser usado na próxima compra no site da Acqualive.",
+    },
+    {
+      question: "Quanto tempo leva para os pontos aparecerem?",
+      answer: "Pontos por avaliações e ações (seguir no Instagram, criar conta) aparecem em até 24 horas. Pontos de indicação são creditados após a confirmação do pagamento da compra do seu amigo, o que pode levar de 3 a 7 dias úteis.",
+    },
+    {
+      question: "Meus pontos expiram?",
+      answer: "Sim. Todos os pontos e cupons gerados têm validade de 365 dias a partir da data em que foram creditados. Fique atento para usá-los antes do vencimento!",
+    },
+    {
+      question: "Posso indicar mais de um amigo?",
+      answer: "Sim! Não há limite de indicações. Cada amigo que comprar usando seu link gera 21.400 pontos (R$ 428,00) para você. Indique quantos quiser e acumule refis grátis.",
+    },
+    {
+      question: "Meu amigo precisa usar meu link para eu ganhar os pontos?",
+      answer: "Sim. O amigo precisa clicar no seu link exclusivo de indicação e finalizar a compra por ele. Caso contrário, o sistema não consegue vincular a compra à sua indicação.",
+    },
+    {
+      question: "Posso combinar o cupom de pontos com outras promoções?",
+      answer: "Os cupons gerados pelo Acqualive Club podem ser usados em conjunto com promoções vigentes no site, salvo exceções indicadas nos termos de cada campanha.",
+    },
+    {
+      question: "Como faço uma avaliação para ganhar pontos?",
+      answer: "Acesse o Acqualive Club, vá em 'Avaliar Produtos' e selecione o item que deseja avaliar. Você pode deixar uma nota, escrever um comentário, enviar foto e/ou vídeo. Quanto mais completa, mais pontos você ganha — até 900 pontos por produto!",
+    },
+    {
+      question: "Quem pode participar do Acqualive Club?",
+      answer: "Qualquer pessoa que tenha uma conta no site da Acqualive pode participar. Basta criar sua conta gratuita e você já ganha 500 pontos de boas-vindas (R$ 10,00).",
+    },
+  ];
+
+  return (
+    <section className="py-24 bg-background">
+      <div className="container">
+        <motion.div
+          className="text-center mb-14"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
+          <motion.span variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
+            <HelpCircle className="w-4 h-4" />
+            Dúvidas Frequentes
+          </motion.span>
+          <motion.h2 variants={fadeInUp} className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
+            Perguntas <span className="text-gradient-water">frequentes</span>
+          </motion.h2>
+          <motion.p variants={fadeInUp} className="text-muted-foreground text-lg max-w-xl mx-auto">
+            Tudo que você precisa saber sobre o Acqualive Club.
+          </motion.p>
+        </motion.div>
+
+        <motion.div
+          className="max-w-3xl mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <Accordion type="single" collapsible className="space-y-3">
+            {faqs.map((faq, idx) => (
+              <AccordionItem
+                key={idx}
+                value={`faq-${idx}`}
+                className="bg-card rounded-xl border border-border/50 shadow-soft px-6 data-[state=open]:shadow-elevated transition-shadow"
+              >
+                <AccordionTrigger className="text-left text-foreground font-display font-semibold hover:no-underline py-5 text-base">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-5 text-sm">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+
+          <div className="mt-10 text-center">
+            <p className="text-muted-foreground text-sm mb-4">
+              Ainda tem dúvidas? Fale com a gente!
+            </p>
+            <Button variant="ctaOutline" size="lg" asChild>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                Falar no WhatsApp
+              </a>
+            </Button>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
 /* ───────────── CTA FINAL ───────────── */
 const FinalCTASection = () => (
   <section className="py-24 bg-gradient-water relative overflow-hidden">
@@ -576,6 +676,7 @@ const Bonifiq = () => {
         <ReviewsSection />
         <OtherWaysSection />
         <ConversionSection />
+        <FAQSection />
         <FinalCTASection />
         <BonifiqFooter />
       </main>
