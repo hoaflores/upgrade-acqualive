@@ -13,6 +13,7 @@ import Terracota from "./pages/Terracota";
 import ComunidadeAcqualive from "./pages/ComunidadeAcqualive";
 import ApresentacaoComunidade from "./pages/ApresentacaoComunidade";
 import IndicaPDF from "./pages/IndicaPDF";
+import Bonifiq from "./pages/Bonifiq";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
             <Route path="/comunidade-acqualive" element={<ComunidadeAcqualive />} />
             <Route path="/apresentacao-comunidade-projeto" element={<ApresentacaoComunidade />} />
             <Route path="/indica-pdf" element={<IndicaPDF />} />
+            <Route path="/bonifiq" element={<Bonifiq />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

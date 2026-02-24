@@ -1,0 +1,586 @@
+import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
+import { Gift, Share2, Star, MessageSquare, Camera, Video, UserPlus, Cake, Instagram, ShoppingCart, ArrowRight, CheckCircle, Sparkles, Trophy, Heart } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import iconAcqualive from "@/assets/icon-acqualive.png";
+import logoAcqualiveBranca from "@/assets/logo-branca.png";
+import bonifiqHero from "@/assets/bonifiq-hero.jpg";
+
+const CLUB_LINK = "https://www.acqualive.com.br/pages/acqualive-club";
+const WHATSAPP_LINK = "https://wa.me/555192928468?text=Olá,%20quero%20saber%20mais%20sobre%20o%20Acqualive%20Club%20e%20o%20programa%20de%20indicação!";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.15 } },
+};
+
+/* ───────────── HERO ───────────── */
+const HeroSection = () => (
+  <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    {/* Background image with overlay */}
+    <div className="absolute inset-0">
+      <img src={bonifiqHero} alt="" className="w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-primary/90 to-secondary/80" />
+    </div>
+
+    {/* Floating decorative elements */}
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {[...Array(5)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-2 h-2 rounded-full bg-accent/30"
+          style={{ left: `${20 + i * 15}%`, top: `${30 + i * 10}%` }}
+          animate={{ y: [0, -20, 0], opacity: [0.3, 0.7, 0.3] }}
+          transition={{ duration: 3 + i, repeat: Infinity, delay: i * 0.5 }}
+        />
+      ))}
+    </div>
+
+    <div className="container relative z-10 py-20">
+      <motion.div
+        className="max-w-3xl"
+        initial="hidden"
+        animate="visible"
+        variants={staggerContainer}
+      >
+        <motion.div variants={fadeInUp} className="flex items-center gap-3 mb-6">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/30 text-accent text-sm font-semibold backdrop-blur-sm">
+            <Sparkles className="w-4 h-4" />
+            Acqualive Club × Bonifiq
+          </span>
+        </motion.div>
+
+        <motion.h1
+          variants={fadeInUp}
+          className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-primary-foreground leading-tight mb-6"
+        >
+          Ganhe seu próximo{" "}
+          <span className="text-accent">Refil Grátis</span>{" "}
+          indicando amigos.
+        </motion.h1>
+
+        <motion.p
+          variants={fadeInUp}
+          className="text-lg sm:text-xl text-primary-foreground/80 max-w-2xl mb-4 leading-relaxed"
+        >
+          No Acqualive Club, sua indicação vale{" "}
+          <strong className="text-accent">R$&nbsp;428,00 em cashback</strong>{" "}
+          e seu amigo ainda ganha{" "}
+          <strong className="text-primary-foreground">R$&nbsp;100,00 de desconto</strong>{" "}
+          na primeira compra.
+        </motion.p>
+
+        <motion.p
+          variants={fadeInUp}
+          className="text-sm text-primary-foreground/60 mb-8"
+        >
+          Programa de fidelidade com cashback real, avaliações que valem descontos e muito mais.
+        </motion.p>
+
+        <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
+          <Button variant="cta" size="xl" asChild className="group">
+            <a href={CLUB_LINK} target="_blank" rel="noopener noreferrer">
+              <Gift className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              Quero Indicar Agora
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </Button>
+          <Button variant="ctaOutline" size="lg" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
+            <a href="#como-funciona">Como funciona</a>
+          </Button>
+        </motion.div>
+
+        {/* Value highlight strip */}
+        <motion.div
+          variants={fadeInUp}
+          className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4"
+        >
+          {[
+            { icon: Gift, label: "R$ 428", desc: "de cashback por indicação" },
+            { icon: Star, label: "R$ 18", desc: "por avaliação completa" },
+            { icon: Heart, label: "R$ 20", desc: "de presente de aniversário" },
+          ].map((item) => (
+            <div
+              key={item.label}
+              className="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/10"
+            >
+              <item.icon className="w-5 h-5 text-accent flex-shrink-0" />
+              <div>
+                <p className="text-lg font-bold text-primary-foreground">{item.label}</p>
+                <p className="text-xs text-primary-foreground/60">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </motion.div>
+      </motion.div>
+    </div>
+  </section>
+);
+
+/* ───────────── COMO FUNCIONA - INDICAÇÃO ───────────── */
+const ReferralSection = () => {
+  const steps = [
+    {
+      step: "01",
+      icon: Share2,
+      title: "Compartilhe seu link exclusivo",
+      description: "Gere seu link personalizado pelo Acqualive Club e envie para amigos e familiares que merecem a melhor água.",
+    },
+    {
+      step: "02",
+      icon: Gift,
+      title: "Seu amigo ganha R$ 100 de desconto",
+      description: "Seu amigo recebe R$ 100,00 de desconto para comprar um Purificador ou Filtro Acqualive. Um presente de verdade.",
+    },
+    {
+      step: "03",
+      icon: Trophy,
+      title: "Você recebe 21.400 pontos na hora",
+      description: "Quando a compra do seu amigo for confirmada, você ganha 21.400 pontos automaticamente — o valor exato de um refil novo.",
+    },
+  ];
+
+  return (
+    <section id="como-funciona" className="py-24 bg-background relative overflow-hidden">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(hsl(var(--primary)) 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
+
+      <div className="container relative">
+        <motion.div
+          className="text-center mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
+          <motion.span variants={fadeInUp} className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
+            Programa de Indicação
+          </motion.span>
+          <motion.h2 variants={fadeInUp} className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
+            Indique, ganhe e{" "}
+            <span className="text-gradient-water">repita</span>
+          </motion.h2>
+          <motion.p variants={fadeInUp} className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Três passos simples para transformar sua recomendação em cashback de verdade.
+          </motion.p>
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
+          {steps.map((step) => (
+            <motion.div
+              key={step.step}
+              variants={fadeInUp}
+              className="relative group"
+            >
+              <div className="bg-card rounded-2xl p-8 border border-border/50 shadow-soft h-full hover:shadow-elevated transition-all duration-500 hover:-translate-y-1">
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-5xl font-display font-bold text-primary/10 group-hover:text-primary/20 transition-colors">
+                    {step.step}
+                  </span>
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                    <step.icon className="w-6 h-6" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-display font-bold text-foreground mb-3">
+                  {step.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Value comparison box */}
+        <motion.div
+          className="max-w-2xl mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-1">
+            <div className="bg-card rounded-xl p-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="text-center p-6 rounded-xl bg-primary/5 border border-primary/10">
+                  <p className="text-sm text-muted-foreground mb-2 font-medium">VOCÊ GANHA</p>
+                  <p className="text-4xl font-display font-bold text-primary">R$ 428</p>
+                  <p className="text-sm text-muted-foreground mt-1">em cashback (21.400 pts)</p>
+                  <p className="text-xs text-accent font-semibold mt-2">= 1 Refil Completo</p>
+                </div>
+                <div className="text-center p-6 rounded-xl bg-accent/5 border border-accent/10">
+                  <p className="text-sm text-muted-foreground mb-2 font-medium">SEU AMIGO GANHA</p>
+                  <p className="text-4xl font-display font-bold text-accent">R$ 100</p>
+                  <p className="text-sm text-muted-foreground mt-1">de desconto imediato</p>
+                  <p className="text-xs text-primary font-semibold mt-2">Na primeira compra</p>
+                </div>
+              </div>
+              <div className="text-center mt-6">
+                <Button variant="cta" size="lg" asChild className="group">
+                  <a href={CLUB_LINK} target="_blank" rel="noopener noreferrer">
+                    <Gift className="w-5 h-5" />
+                    Gerar meu link de indicação
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+/* ───────────── REVIEWS ───────────── */
+const ReviewsSection = () => {
+  const rewards = [
+    { icon: Star, emoji: "⭐", action: "Avaliação simples", points: "100 pts", value: "R$ 2,00", color: "primary" },
+    { icon: MessageSquare, emoji: "💬", action: "Comentário escrito", points: "+200 pts", value: "R$ 4,00", color: "primary" },
+    { icon: Camera, emoji: "📸", action: "Foto do produto", points: "+200 pts", value: "R$ 4,00", color: "primary" },
+    { icon: Video, emoji: "🎥", action: "Vídeo do produto", points: "+400 pts", value: "R$ 8,00", color: "accent" },
+  ];
+
+  return (
+    <section className="py-24 bg-gradient-water-light relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+
+      <div className="container relative">
+        <motion.div
+          className="text-center mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
+          <motion.span variants={fadeInUp} className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-semibold mb-4">
+            Sua Opinião Vale Ouro
+          </motion.span>
+          <motion.h2 variants={fadeInUp} className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
+            Transforme seu feedback em{" "}
+            <span className="text-gradient-orange">descontos</span>
+          </motion.h2>
+          <motion.p variants={fadeInUp} className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Avalie seus produtos Acqualive e acumule pontos a cada review. Quanto mais detalhada, mais você ganha.
+          </motion.p>
+        </motion.div>
+
+        {/* Points ladder */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
+          {rewards.map((reward, idx) => (
+            <motion.div key={idx} variants={fadeInUp} className="group">
+              <div className="bg-card rounded-2xl p-6 border border-border/50 shadow-soft h-full hover:shadow-elevated hover:-translate-y-1 transition-all duration-500 text-center relative overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <span className="text-4xl mb-4 block">{reward.emoji}</span>
+                <h3 className="font-display font-bold text-foreground mb-2">{reward.action}</h3>
+                <p className="text-2xl font-display font-bold text-primary mb-1">{reward.points}</p>
+                <p className="text-sm text-accent font-semibold">{reward.value}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Combo highlight */}
+        <motion.div
+          className="max-w-3xl mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <div className="relative bg-gradient-to-r from-accent to-gold rounded-2xl p-8 text-center text-primary-foreground overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_60%)]" />
+            <div className="relative">
+              <Sparkles className="w-8 h-8 mx-auto mb-4 opacity-80" />
+              <h3 className="text-2xl font-display font-bold mb-3">O Combo Completo</h3>
+              <p className="text-lg mb-2 opacity-90">
+                Avalie com <strong>Texto + Foto + Vídeo</strong> e ganhe
+              </p>
+              <p className="text-5xl font-display font-bold mb-2">900 pontos</p>
+              <p className="text-lg opacity-80">R$ 18,00 de desconto por produto avaliado</p>
+              <Button variant="hero" size="lg" asChild className="mt-6 group text-accent">
+                <a href={CLUB_LINK} target="_blank" rel="noopener noreferrer">
+                  Avaliar minhas compras e ganhar
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </Button>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+/* ───────────── OUTRAS FORMAS ───────────── */
+const OtherWaysSection = () => {
+  const ways = [
+    {
+      icon: UserPlus,
+      emoji: "🎉",
+      title: "Boas-vindas",
+      desc: "Criou a conta? Ganhe pontos na hora.",
+      points: "500 pts",
+      value: "R$ 10,00",
+    },
+    {
+      icon: Cake,
+      emoji: "🎂",
+      title: "Aniversário",
+      desc: "Nosso presente para você no seu mês.",
+      points: "1.000 pts",
+      value: "R$ 20,00",
+    },
+    {
+      icon: Instagram,
+      emoji: "📱",
+      title: "Siga no Instagram",
+      desc: "Siga a @acqualive e ganhe pontos.",
+      points: "100 pts",
+      value: "R$ 2,00",
+    },
+    {
+      icon: ShoppingCart,
+      emoji: "🛒",
+      title: "Compras",
+      desc: "R$ 1,00 gasto = 1 ponto. Cashback de 2% em todas as compras.",
+      points: "1 pt/R$",
+      value: "2% cashback",
+    },
+  ];
+
+  return (
+    <section className="py-24 bg-background">
+      <div className="container">
+        <motion.div
+          className="text-center mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
+          <motion.span variants={fadeInUp} className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
+            Mais Formas de Ganhar
+          </motion.span>
+          <motion.h2 variants={fadeInUp} className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
+            Seus pontos não param de{" "}
+            <span className="text-gradient-water">crescer</span>
+          </motion.h2>
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
+          {ways.map((way, idx) => (
+            <motion.div key={idx} variants={fadeInUp} className="group">
+              <div className="bg-card rounded-2xl p-6 border border-border/50 shadow-soft h-full hover:shadow-elevated hover:-translate-y-1 transition-all duration-500">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                  <way.icon className="w-7 h-7" />
+                </div>
+                <h3 className="text-lg font-display font-bold text-foreground mb-2">{way.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">{way.desc}</p>
+                <div className="flex items-center justify-between pt-4 border-t border-border/50">
+                  <span className="text-xl font-display font-bold text-primary">{way.points}</span>
+                  <span className="text-sm font-semibold text-accent">{way.value}</span>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+/* ───────────── TABELA DE CONVERSÃO ───────────── */
+const ConversionSection = () => {
+  const rows = [
+    { action: "Indicar Amigo (Compra Filtro)", points: "21.400 pts", value: "R$ 428,00", highlight: "1 Refil Grátis", featured: true },
+    { action: "Review Completo (Texto + Foto + Vídeo)", points: "900 pts", value: "R$ 18,00", highlight: "" },
+    { action: "Presente de Aniversário", points: "1.000 pts", value: "R$ 20,00", highlight: "" },
+    { action: "Criação de Conta", points: "500 pts", value: "R$ 10,00", highlight: "" },
+    { action: "Seguir no Instagram", points: "100 pts", value: "R$ 2,00", highlight: "" },
+    { action: "Compras (por R$ 1,00 gasto)", points: "1 pt", value: "R$ 0,02", highlight: "2% cashback" },
+  ];
+
+  return (
+    <section className="py-24 bg-gradient-water-light">
+      <div className="container">
+        <motion.div
+          className="text-center mb-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
+          <motion.span variants={fadeInUp} className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
+            Transparência Total
+          </motion.span>
+          <motion.h2 variants={fadeInUp} className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-4">
+            Tabela de conversão
+          </motion.h2>
+          <motion.p variants={fadeInUp} className="text-muted-foreground max-w-xl mx-auto">
+            Cada ponto vale R$ 0,02. Confira todas as formas de acumular.
+          </motion.p>
+        </motion.div>
+
+        <motion.div
+          className="max-w-3xl mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <div className="bg-card rounded-2xl border border-border/50 shadow-elevated overflow-hidden">
+            {/* Table header */}
+            <div className="grid grid-cols-3 gap-4 px-6 py-4 bg-primary text-primary-foreground text-sm font-semibold">
+              <span>Ação</span>
+              <span className="text-center">Pontos</span>
+              <span className="text-right">Valor em R$</span>
+            </div>
+            {/* Rows */}
+            {rows.map((row, idx) => (
+              <div
+                key={idx}
+                className={`grid grid-cols-3 gap-4 px-6 py-4 border-b border-border/30 last:border-0 items-center ${row.featured ? "bg-accent/5" : ""}`}
+              >
+                <div>
+                  <span className="text-sm font-medium text-foreground">{row.action}</span>
+                  {row.highlight && (
+                    <span className="block text-xs font-semibold text-accent mt-0.5">{row.highlight}</span>
+                  )}
+                </div>
+                <span className="text-center text-sm font-bold text-primary">{row.points}</span>
+                <span className="text-right text-sm font-bold text-foreground">{row.value}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Golden rule */}
+          <div className="mt-8 bg-card rounded-xl p-6 border border-accent/20 shadow-soft flex items-start gap-4">
+            <CheckCircle className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+            <div>
+              <h4 className="font-display font-bold text-foreground mb-1">Regra de Ouro</h4>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Todos os seus pontos e cupons têm validade de <strong className="text-foreground">365 dias</strong>. Use com calma, mas não deixe de usar!
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+/* ───────────── CTA FINAL ───────────── */
+const FinalCTASection = () => (
+  <section className="py-24 bg-gradient-water relative overflow-hidden">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.08),transparent_50%)]" />
+    <div className="container relative text-center">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={staggerContainer}
+        className="max-w-2xl mx-auto"
+      >
+        <motion.h2
+          variants={fadeInUp}
+          className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-primary-foreground mb-6"
+        >
+          Pronto para ganhar seu{" "}
+          <span className="text-accent">Refil Grátis</span>?
+        </motion.h2>
+        <motion.p variants={fadeInUp} className="text-lg text-primary-foreground/80 mb-10 max-w-lg mx-auto">
+          Entre para o Acqualive Club agora e comece acumulando pontos desde o primeiro momento.
+        </motion.p>
+        <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="cta" size="xl" asChild className="group shadow-glow">
+            <a href={CLUB_LINK} target="_blank" rel="noopener noreferrer">
+              <Gift className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              Entrar para o Clube e ganhar 500 pontos
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </Button>
+        </motion.div>
+      </motion.div>
+    </div>
+  </section>
+);
+
+/* ───────────── FOOTER ───────────── */
+const BonifiqFooter = () => (
+  <footer className="py-12 bg-secondary">
+    <div className="container">
+      <div className="flex flex-col items-center gap-6 text-center">
+        <img src={logoAcqualiveBranca} alt="Acqualive" className="h-8 w-auto opacity-70" />
+        <p className="text-primary-foreground/50 text-sm max-w-md">
+          O Acqualive Club é operado pela plataforma Bonifiq. Pontos, cupons e regras estão sujeitos aos termos do programa.
+        </p>
+        <div className="flex gap-6 text-primary-foreground/40 text-xs">
+          <a href="https://www.acqualive.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground/70 transition-colors">
+            acqualive.com.br
+          </a>
+          <a href="https://www.instagram.com/acqualivegroup/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground/70 transition-colors">
+            @acqualive
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+);
+
+/* ───────────── PAGE ───────────── */
+const Bonifiq = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Acqualive Club — Cashback e Recompensas | Bonifiq</title>
+        <meta
+          name="description"
+          content="Ganhe R$ 428 em cashback indicando amigos, acumule pontos com avaliações e compras. Acqualive Club: seu programa de fidelidade com recompensas reais."
+        />
+      </Helmet>
+      <main className="bg-background text-foreground min-h-screen overflow-hidden">
+        {/* Minimal header */}
+        <header className="absolute top-0 left-0 right-0 z-50 py-5">
+          <div className="container flex justify-center">
+            <img src={iconAcqualive} alt="Acqualive" className="h-10 w-auto opacity-80" />
+          </div>
+        </header>
+
+        <HeroSection />
+        <ReferralSection />
+        <ReviewsSection />
+        <OtherWaysSection />
+        <ConversionSection />
+        <FinalCTASection />
+        <BonifiqFooter />
+      </main>
+    </>
+  );
+};
+
+export default Bonifiq;
