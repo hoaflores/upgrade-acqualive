@@ -29,21 +29,23 @@ const HeroSection = () => (
     {/* Background with water image */}
     <div className="absolute inset-0">
       <img src={bonifiqHero} alt="" className="w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-b from-secondary/95 via-primary/85 to-secondary/95" />
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary/95 via-primary/90 to-secondary/95" />
     </div>
 
     {/* Geometric decorations */}
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       <motion.div
-        className="absolute top-[15%] right-[10%] w-72 h-72 rounded-full border border-accent/20"
+        className="absolute top-[15%] right-[10%] w-72 h-72 rounded-full border border-primary-foreground/10"
         animate={{ scale: [1, 1.1, 1], rotate: [0, 90, 0] }}
         transition={{ duration: 20, repeat: Infinity }}
       />
       <motion.div
-        className="absolute bottom-[20%] left-[5%] w-48 h-48 rounded-full border border-primary-foreground/10"
+        className="absolute bottom-[20%] left-[5%] w-48 h-48 rounded-full border border-primary-foreground/5"
         animate={{ scale: [1.1, 1, 1.1] }}
         transition={{ duration: 15, repeat: Infinity }}
       />
+      {/* Warm glow */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-accent/10 blur-[150px]" />
     </div>
 
     {/* Header */}
@@ -57,7 +59,7 @@ const HeroSection = () => (
         <img src={iconAcqualive} alt="Acqualive" className="h-12 md:h-14 w-auto" />
         <a
           href="#formulario"
-          className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent/20 backdrop-blur-sm border border-accent/30 text-accent text-sm font-semibold hover:bg-accent/30 transition-all"
+          className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 text-primary-foreground text-sm font-semibold hover:bg-primary-foreground/20 transition-all"
         >
           <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
           Indicar agora
@@ -73,8 +75,8 @@ const HeroSection = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <span className="inline-flex items-center gap-2 mb-8 px-5 py-2.5 rounded-full bg-accent/15 text-accent text-sm font-bold border border-accent/25 backdrop-blur-sm">
-            <Gift className="w-4 h-4" />
+          <span className="inline-flex items-center gap-2 mb-8 px-5 py-2.5 rounded-full bg-primary-foreground/10 text-primary-foreground/90 text-sm font-bold border border-primary-foreground/15 backdrop-blur-sm">
+            <Gift className="w-4 h-4 text-accent" />
             Programa Indique e Ganhe
           </span>
         </motion.div>
@@ -86,26 +88,26 @@ const HeroSection = () => (
           className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-primary-foreground leading-[1.05] mb-8"
         >
           Nunca mais pague por sua{" "}
-          <span className="text-accent">água alcalina Acqualive</span>
+          <span className="text-gradient-orange inline-block">água alcalina Acqualive</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-lg sm:text-xl text-primary-foreground/85 max-w-2xl mx-auto mb-5 leading-relaxed"
+          className="text-lg sm:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-5 leading-relaxed"
         >
           Para cada amigo que comprar um Acqualive pela sua indicação,
-          você ganha <strong className="text-accent font-bold">1 Kit de Refis completo GRÁTIS</strong>.
+          você ganha <strong className="text-primary-foreground font-bold">1 Kit de Refis completo GRÁTIS</strong>.
         </motion.p>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="text-base text-accent font-semibold mb-10 max-w-lg mx-auto"
+          className="text-base text-primary-foreground/60 font-medium mb-10 max-w-lg mx-auto"
         >
-          Uma indicação por semestre e você nunca mais paga para ter água alcalina de qualidade.
+          Indicou, comprou, ganhou. Simples assim. Sem sorteios, sem limites.
         </motion.p>
 
         <motion.div
@@ -135,8 +137,8 @@ const HeroSection = () => (
             { value: "6 meses", label: "de economia garantida" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="text-2xl sm:text-3xl font-display font-bold text-accent">{stat.value}</p>
-              <p className="text-xs text-primary-foreground/50 uppercase tracking-wider mt-1">{stat.label}</p>
+              <p className="text-2xl sm:text-3xl font-display font-bold text-primary-foreground">{stat.value}</p>
+              <p className="text-xs text-primary-foreground/40 uppercase tracking-wider mt-1">{stat.label}</p>
             </div>
           ))}
         </motion.div>
@@ -153,9 +155,9 @@ const HeroSection = () => (
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
-        className="w-6 h-10 rounded-full border-2 border-primary-foreground/25 flex items-start justify-center p-1.5"
+        className="w-6 h-10 rounded-full border-2 border-primary-foreground/20 flex items-start justify-center p-1.5"
       >
-        <div className="w-1.5 h-2.5 rounded-full bg-primary-foreground/40" />
+        <div className="w-1.5 h-2.5 rounded-full bg-primary-foreground/30" />
       </motion.div>
     </motion.div>
   </section>
