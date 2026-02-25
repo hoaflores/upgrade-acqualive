@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import {
   Sparkles, ArrowRight, Gift, Share2, Trophy, CheckCircle,
   HelpCircle, Star, Send, User, Phone, Users, MessageCircle,
-  Zap, Moon, Shield, Heart, Brain, Activity, Droplets, Smartphone, Handshake
+  Zap, Moon, Shield, Heart, Brain, Activity, Droplets, Smartphone, Handshake,
+  Quote, Bone
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -84,8 +85,8 @@ const HeroSection = () => (
           transition={{ duration: 0.7, delay: 0.1 }}
           className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-primary-foreground leading-[1.05] mb-8"
         >
-          Indicou, comprou,{" "}
-          <span className="text-accent">ganhou.</span>
+          Nunca mais pague por sua{" "}
+          <span className="text-accent">água alcalina Acqualive</span>
         </motion.h1>
 
         <motion.p
@@ -95,7 +96,7 @@ const HeroSection = () => (
           className="text-lg sm:text-xl text-primary-foreground/85 max-w-2xl mx-auto mb-5 leading-relaxed"
         >
           Para cada amigo que comprar um Acqualive pela sua indicação,
-          você ganha <strong className="text-accent font-bold">1 Kit de Refis completo — GRÁTIS</strong>.
+          você ganha <strong className="text-accent font-bold">1 Kit de Refis completo GRÁTIS</strong>.
         </motion.p>
 
         <motion.p
@@ -271,6 +272,119 @@ const HowItWorksSection = () => {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+
+/* ───────────── STORYTELLING — POR QUE CRIAMOS ───────────── */
+const StorytellingSection = () => {
+  const healthBenefits = [
+    { icon: Activity, text: "Controle glicêmico" },
+    { icon: Shield, text: "Imunidade fortalecida" },
+    { icon: Bone, text: "Saúde óssea" },
+    { icon: Brain, text: "Clareza mental" },
+  ];
+
+  return (
+    <section className="py-28 bg-gradient-to-b from-background via-secondary/10 to-background relative overflow-hidden">
+      <div className="absolute inset-0">
+        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-[radial-gradient(ellipse_at_top_right,_hsl(21_89%_55%_/_0.05),_transparent_60%)]" />
+        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-[radial-gradient(ellipse_at_bottom_left,_hsl(215_62%_31%_/_0.05),_transparent_60%)]" />
+      </div>
+
+      <div className="container relative">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-semibold border border-accent/20">
+            <Heart className="w-4 h-4" />
+            Por que criamos este programa
+          </div>
+
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-8 leading-tight">
+            A Acqualive cresceu graças a{" "}
+            <span className="text-gradient-orange">você</span>.
+          </h2>
+
+          <div className="space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed text-left md:text-center">
+            <p>
+              A maior parte dos nossos clientes chegou até nós por uma indicação.
+              Alguém que experimentou a diferença na própria saúde e{" "}
+              <strong className="text-foreground">não conseguiu ficar calado</strong>.
+            </p>
+            <p>
+              Isso nos mostrou algo importante: quando o produto é realmente bom,
+              as pessoas naturalmente querem compartilhar com quem amam.{" "}
+              <strong className="text-foreground">
+                A melhor validação vem de quem já vive a transformação.
+              </strong>
+            </p>
+            <p>
+              Por isso criamos uma forma de{" "}
+              <span className="text-accent font-semibold">retribuir essa confiança</span>.
+              Quando você indica alguém, não está vendendo nada, está presenteando
+              com a possibilidade de uma vida mais saudável.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Health benefits grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="max-w-3xl mx-auto p-8 rounded-3xl bg-gradient-to-br from-primary/5 to-accent/5 border border-border/50 mb-16"
+        >
+          <p className="text-foreground font-semibold mb-6 text-lg text-center">
+            Quem você indica pode conquistar:
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {healthBenefits.map((benefit, i) => (
+              <div key={i} className="flex flex-col items-center gap-2 p-4 rounded-2xl bg-background/80 border border-border/30">
+                <benefit.icon className="w-6 h-6 text-accent" />
+                <span className="text-sm font-medium text-foreground">{benefit.text}</span>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 text-muted-foreground text-center">
+            Diabetes, obesidade, desgaste ósseo, perda de massa magra...
+            <strong className="text-foreground"> A água certa faz diferença real.</strong>
+          </p>
+        </motion.div>
+
+        {/* Testimonial */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="max-w-3xl mx-auto"
+        >
+          <div className="relative bg-gradient-to-br from-primary via-secondary to-primary rounded-3xl p-10 md:p-12 text-center shadow-elevated overflow-hidden border border-primary-foreground/10">
+            <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-accent/30 blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-32 h-32 rounded-full bg-primary-foreground/10 blur-2xl" />
+
+            <Quote className="w-12 h-12 text-accent/60 mx-auto mb-4 relative" />
+
+            <p className="text-lg md:text-xl text-primary-foreground leading-relaxed mb-6 relative font-medium">
+              Indiquei meus 3 irmãos e 2 vizinhos. Resultado: já garanti água pura para minha casa pelos próximos anos sem gastar um centavo!
+            </p>
+            <div className="flex items-center justify-center gap-3 relative">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-gold flex items-center justify-center">
+                <span className="text-primary-foreground font-bold">M</span>
+              </div>
+              <p className="text-primary-foreground/90 font-semibold">
+                Maria S. — Cliente Acqualive
+              </p>
             </div>
           </div>
         </motion.div>
@@ -777,6 +891,7 @@ const IndicaClub = () => (
     <main>
       <HeroSection />
       <HowItWorksSection />
+      <StorytellingSection />
       <HealthSection />
       <ClubRewardsSection />
       <FAQSection />
