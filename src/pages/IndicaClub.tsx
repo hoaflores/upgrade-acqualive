@@ -78,15 +78,6 @@ const HeroSection = () => (
           </span>
         </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-primary-foreground leading-[1.05] mb-8"
-        >
-          Indicou, comprou,{" "}
-          <span className="text-accent">ganhou.</span>
-        </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
