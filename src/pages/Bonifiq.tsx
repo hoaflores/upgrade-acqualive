@@ -69,11 +69,12 @@ const HeroSection = () => (
           variants={fadeInUp}
           className="text-lg sm:text-xl text-primary-foreground/80 max-w-2xl mb-4 leading-relaxed"
         >
-          No Acqualive Club, sua indicação vale{" "}
-          <strong className="text-accent">R$&nbsp;428,00 em cashback</strong>{" "}
+          No Acqualive Club, cada indicação vale um{" "}
+          <strong className="text-accent">Kit de Refis GRÁTIS</strong>{" "}
           e seu amigo ainda ganha{" "}
           <strong className="text-primary-foreground">R$&nbsp;100,00 de desconto</strong>{" "}
-          na primeira compra.
+          na primeira compra.{" "}
+          <strong className="text-accent">Uma indicação por semestre e você nunca mais paga para ter água alcalina de qualidade!</strong>
         </motion.p>
 
         <motion.p
@@ -102,7 +103,7 @@ const HeroSection = () => (
           className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4"
         >
           {[
-            { icon: Gift, label: "R$ 428", desc: "de cashback por indicação" },
+            { icon: Gift, label: "Refis GRÁTIS", desc: "a cada indicação confirmada" },
             { icon: Star, label: "R$ 18", desc: "por avaliação completa" },
             { icon: Heart, label: "R$ 20", desc: "de presente de aniversário" },
           ].map((item) => (
@@ -141,8 +142,8 @@ const ReferralSection = () => {
     {
       step: "03",
       icon: Trophy,
-      title: "Você recebe 21.400 pontos na hora",
-      description: "Quando a compra do seu amigo for confirmada, você ganha 21.400 pontos automaticamente — o valor exato de um refil novo.",
+      title: "Você ganha um Kit de Refis GRÁTIS!",
+      description: "Quando a compra do seu amigo for confirmada, você ganha 21.400 pontos automaticamente — o equivalente a um kit de refis completo. Uma indicação por semestre e você nunca mais paga para ter água alcalina de qualidade!",
     },
   ];
 
@@ -217,9 +218,10 @@ const ReferralSection = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="text-center p-6 rounded-xl bg-primary/5 border border-primary/10">
                   <p className="text-sm text-muted-foreground mb-2 font-medium">VOCÊ GANHA</p>
-                  <p className="text-4xl font-display font-bold text-primary">R$ 428</p>
-                  <p className="text-sm text-muted-foreground mt-1">em cashback (21.400 pts)</p>
-                  <p className="text-xs text-accent font-semibold mt-2">= 1 Refil Completo</p>
+                  <p className="text-3xl sm:text-4xl font-display font-bold text-primary">Kit de Refis</p>
+                  <p className="text-lg font-bold text-accent mt-1">GRÁTIS!</p>
+                  <p className="text-xs text-muted-foreground mt-1">21.400 pts por indicação</p>
+                  <p className="text-xs text-primary font-semibold mt-2">1 indicação/semestre = água alcalina para sempre</p>
                 </div>
                 <div className="text-center p-6 rounded-xl bg-accent/5 border border-accent/10">
                   <p className="text-sm text-muted-foreground mb-2 font-medium">SEU AMIGO GANHA</p>
@@ -418,7 +420,7 @@ const OtherWaysSection = () => {
 /* ───────────── TABELA DE CONVERSÃO ───────────── */
 const ConversionSection = () => {
   const rows = [
-    { action: "Indicar Amigo (Compra Filtro)", points: "21.400 pts", value: "R$ 428,00", highlight: "1 Refil Grátis", featured: true },
+    { action: "Indicar Amigo (Compra Filtro)", points: "21.400 pts", value: "Kit de Refis GRÁTIS", highlight: "1 indicação/semestre = nunca mais pagar!", featured: true },
     { action: "Review Completo (Texto + Foto + Vídeo)", points: "900 pts", value: "R$ 18,00", highlight: "" },
     { action: "Presente de Aniversário", points: "1.000 pts", value: "R$ 20,00", highlight: "" },
     { action: "Criação de Conta", points: "500 pts", value: "R$ 10,00", highlight: "" },
@@ -512,7 +514,7 @@ const FAQSection = () => {
     },
     {
       question: "Posso indicar mais de um amigo?",
-      answer: "Sim! Não há limite de indicações. Cada amigo que comprar usando seu link gera 21.400 pontos (R$ 428,00) para você. Indique quantos quiser e acumule refis grátis.",
+      answer: "Sim! Não há limite de indicações. Cada amigo que comprar usando seu link gera 21.400 pontos — o equivalente a um kit de refis GRÁTIS. Com apenas uma indicação por semestre, você nunca mais paga para ter água alcalina de qualidade!",
     },
     {
       question: "Meu amigo precisa usar meu link para eu ganhar os pontos?",
@@ -642,7 +644,7 @@ const FinalCTASection = () => (
           <span className="text-accent">Refil Grátis</span>?
         </motion.h2>
         <motion.p variants={fadeInUp} className="text-lg text-primary-foreground/80 mb-10 max-w-lg mx-auto">
-          Entre para o Acqualive Club agora e comece acumulando pontos desde o primeiro momento.
+          Entre para o Acqualive Club agora. Com apenas <strong className="text-accent">uma indicação por semestre</strong>, você nunca mais paga para ter água alcalina de qualidade!
         </motion.p>
         <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button variant="cta" size="xl" asChild className="group shadow-glow">
@@ -688,7 +690,7 @@ const Bonifiq = () => {
         <title>Acqualive Club — Cashback e Recompensas | Bonifiq</title>
         <meta
           name="description"
-          content="Ganhe R$ 428 em cashback indicando amigos, acumule pontos com avaliações e compras. Acqualive Club: seu programa de fidelidade com recompensas reais."
+          content="Ganhe um kit de refis GRÁTIS indicando amigos. Uma indicação por semestre e você nunca mais paga por água alcalina. Acqualive Club: recompensas reais."
         />
       </Helmet>
       <main className="bg-background text-foreground min-h-screen overflow-hidden">
