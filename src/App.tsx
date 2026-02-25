@@ -35,7 +35,7 @@ const App = () => (
             <Route path="/comunidade-acqualive" element={<ComunidadeAcqualive />} />
             <Route path="/apresentacao-comunidade-projeto" element={<ApresentacaoComunidade />} />
             <Route path="/indica-pdf" element={<IndicaPDF />} />
-            <Route path="/bonifiq" element={<Bonifiq />} />
+            <Route path="/acqualive-club" element={<Bonifiq />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
