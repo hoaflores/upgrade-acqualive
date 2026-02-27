@@ -251,9 +251,9 @@ const ReferralSection = () => {
 const ReviewsSection = () => {
   const rewards = [
     { icon: Star, emoji: "⭐", action: "Avaliação simples", points: "100 pts", value: "R$ 2,00", color: "primary" },
-    { icon: MessageSquare, emoji: "💬", action: "Comentário escrito", points: "+200 pts", value: "R$ 4,00", color: "primary" },
-    { icon: Camera, emoji: "📸", action: "Foto do produto", points: "+200 pts", value: "R$ 4,00", color: "primary" },
-    { icon: Video, emoji: "🎥", action: "Vídeo do produto", points: "+400 pts", value: "R$ 8,00", color: "accent" },
+    { icon: MessageSquare, emoji: "💬", action: "Comentário escrito", points: "+50 pts", value: "R$ 1,00", color: "primary" },
+    { icon: Camera, emoji: "📸", action: "Foto do produto", points: "+50 pts", value: "R$ 1,00", color: "primary" },
+    { icon: Video, emoji: "🎥", action: "Vídeo do produto", points: "+50 pts", value: "R$ 1,00", color: "accent" },
   ];
 
   return (
@@ -317,8 +317,8 @@ const ReviewsSection = () => {
               <p className="text-lg mb-2 opacity-90">
                 Avalie com <strong>Texto + Foto + Vídeo</strong> e ganhe
               </p>
-              <p className="text-5xl font-display font-bold mb-2">900 pontos</p>
-              <p className="text-lg opacity-80">R$ 18,00 de desconto por produto avaliado</p>
+              <p className="text-5xl font-display font-bold mb-2">250 pontos</p>
+              <p className="text-lg opacity-80">R$ 5,00 de desconto por produto avaliado</p>
               <Button variant="hero" size="lg" asChild className="mt-6 group text-accent">
                 <a href={CLUB_LINK} target="_blank" rel="noopener noreferrer">
                   Avaliar minhas compras e ganhar
