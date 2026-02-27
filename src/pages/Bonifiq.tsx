@@ -92,8 +92,11 @@ const HeroSection = () => (
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>
-          <Button variant="ctaOutline" size="lg" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
-            <a href="#como-funciona">Como funciona</a>
+          <Button variant="cta" size="xl" asChild className="group bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-2xl shadow-primary-foreground/30 ring-4 ring-primary-foreground/20">
+            <a href="#como-funciona">
+              Como funciona
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
           </Button>
         </motion.div>
 
