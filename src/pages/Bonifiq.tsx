@@ -7,7 +7,7 @@ import iconAcqualive from "@/assets/icon-acqualive.png";
 import logoAcqualiveBranca from "@/assets/logo-branca.png";
 import bonifiqHero from "@/assets/bonifiq-hero.jpg";
 
-const CLUB_LINK = "https://www.acqualive.com.br/pages/acqualive-club";
+const CLUB_LINK = "https://www.acqualive.com.br/pages/acqualive-club?bqreferralopen=true&_gl=1*1ia8mva*_gcl_aw*R0NMLjE3NjYxNjc5NDguQ2owS0NRaUFqSlRLQmhDakFSSXNBSU1DNDQ1NUstZFN2b1NucFBkZjFFR1FFZTNSWGs1SEJLX29HOWxYMnQ4Nlg5dUF4Xy1aYWVLcWp0Y2FBakdnRUFMd193Y0I.*_gcl_au*ODM0OTg0MjU3LjE3NjcwMTkwMDkuNzQ0MTc0ODM3LjE3NzIxNTIxNDcuMTc3MjE1MjE0Ng";
 const WHATSAPP_LINK = "https://wa.me/555192928468?text=Olá,%20quero%20saber%20mais%20sobre%20o%20Acqualive%20Club%20e%20o%20programa%20de%20indicação!";
 
 const fadeInUp = {
@@ -52,7 +52,7 @@ const HeroSection = () => (
         <motion.div variants={fadeInUp} className="flex items-center gap-3 mb-6">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/30 text-accent text-sm font-semibold backdrop-blur-sm">
             <Sparkles className="w-4 h-4" />
-            Acqualive Club × Bonifiq
+            Acqualive Club
           </span>
         </motion.div>
 
@@ -107,7 +107,7 @@ const HeroSection = () => (
         >
           {[
             { icon: Gift, label: "Refis GRÁTIS", desc: "a cada indicação confirmada" },
-            { icon: Star, label: "R$ 18", desc: "por avaliação completa" },
+            { icon: Star, label: "R$ 5", desc: "por avaliação completa" },
             { icon: Heart, label: "R$ 20", desc: "de presente de aniversário" },
           ].map((item) => (
             <div
@@ -424,7 +424,7 @@ const OtherWaysSection = () => {
 const ConversionSection = () => {
   const rows = [
     { action: "Indicar Amigo (Compra Filtro)", points: "21.400 pts", value: "Kit de Refis GRÁTIS", highlight: "1 indicação/semestre = nunca mais pagar!", featured: true },
-    { action: "Review Completo (Texto + Foto + Vídeo)", points: "900 pts", value: "R$ 18,00", highlight: "" },
+    { action: "Review Completo (Texto + Foto + Vídeo)", points: "250 pts", value: "R$ 5,00", highlight: "" },
     { action: "Presente de Aniversário", points: "1.000 pts", value: "R$ 20,00", highlight: "" },
     { action: "Criação de Conta", points: "500 pts", value: "R$ 10,00", highlight: "" },
     { action: "Seguir no Instagram", points: "100 pts", value: "R$ 2,00", highlight: "" },
@@ -529,7 +529,7 @@ const FAQSection = () => {
     },
     {
       question: "Como faço uma avaliação para ganhar pontos?",
-      answer: "Acesse o Acqualive Club, vá em 'Avaliar Produtos' e selecione o item que deseja avaliar. Você pode deixar uma nota, escrever um comentário, enviar foto e/ou vídeo. Quanto mais completa, mais pontos você ganha — até 900 pontos por produto!",
+      answer: "Acesse o Acqualive Club, vá em 'Avaliar Produtos' e selecione o item que deseja avaliar. Você pode deixar uma nota, escrever um comentário, enviar foto e/ou vídeo. Quanto mais completa, mais pontos você ganha — até 250 pontos por produto!",
     },
     {
       question: "Quem pode participar do Acqualive Club?",
@@ -553,7 +553,7 @@ const FAQSection = () => {
     },
     {
       question: "Posso avaliar o mesmo produto mais de uma vez?",
-      answer: "Não. Cada produto só pode ser avaliado uma vez por conta. Porém, se você comprou produtos diferentes, pode avaliar cada um deles e acumular até 900 pontos por produto.",
+      answer: "Não. Cada produto só pode ser avaliado uma vez por conta. Porém, se você comprou produtos diferentes, pode avaliar cada um deles e acumular até 250 pontos por produto.",
     },
     {
       question: "Quais são os requisitos para foto e vídeo na avaliação?",
@@ -670,7 +670,7 @@ const BonifiqFooter = () => (
       <div className="flex flex-col items-center gap-6 text-center">
         <img src={logoAcqualiveBranca} alt="Acqualive" className="h-8 w-auto opacity-70" />
         <p className="text-primary-foreground/50 text-sm max-w-md">
-          O Acqualive Club é operado pela plataforma Bonifiq. Pontos, cupons e regras estão sujeitos aos termos do programa.
+          Pontos, cupons e regras estão sujeitos aos termos do programa Acqualive Club.
         </p>
         <div className="flex gap-6 text-primary-foreground/40 text-xs">
           <a href="https://www.acqualive.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground/70 transition-colors">
@@ -690,7 +690,7 @@ const Bonifiq = () => {
   return (
     <>
       <Helmet>
-        <title>Acqualive Club — Cashback e Recompensas | Bonifiq</title>
+        <title>Acqualive Club — Cashback e Recompensas</title>
         <meta
           name="description"
           content="Ganhe um kit de refis GRÁTIS indicando amigos. Uma indicação por semestre e você nunca mais paga por água alcalina. Acqualive Club: recompensas reais."
