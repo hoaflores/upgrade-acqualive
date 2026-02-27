@@ -18,7 +18,7 @@ import iconAcqualive from "@/assets/icon-acqualive.png";
 import logoBranca from "@/assets/logo-acqualive-branca.png";
 import familyImage from "@/assets/terracota-familia.jpg";
 import familyAcqualive from "@/assets/family-acqualive.jpeg";
-import bonifiqHero from "@/assets/bonifiq-hero.jpg";
+import heroBackground from "@/assets/bonifiq-hero.jpg";
 
 const CLUB_LINK = "https://www.acqualive.com.br/pages/acqualive-club";
 const WHATSAPP_LINK = "https://wa.me/555192928468?text=Olá,%20quero%20saber%20mais%20sobre%20o%20programa%20de%20indicação%20Acqualive!";
@@ -28,7 +28,7 @@ const HeroSection = () => (
   <section className="relative min-h-screen flex items-center overflow-hidden">
     {/* Background with water image */}
     <div className="absolute inset-0">
-      <img src={bonifiqHero} alt="" className="w-full h-full object-cover" />
+      <img src={heroBackground} alt="" className="w-full h-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/95 via-primary/90 to-secondary/95" />
     </div>
 
@@ -116,10 +116,10 @@ const HeroSection = () => (
           transition={{ duration: 0.7, delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <Button variant="gold" size="xl" className="group" asChild>
+          <Button variant="gold" size="xl" className="group text-lg px-14 py-5 h-auto shadow-2xl shadow-accent/50 ring-4 ring-accent/30 animate-pulse-soft" asChild>
             <a href="#formulario">
               QUERO INDICAR E GANHAR
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>
         </motion.div>
@@ -268,10 +268,10 @@ const HowItWorksSection = () => {
                 Indicou, o indicado comprou, você já ganha. Cada indicação = <strong className="text-accent">1 Kit de Refis GRÁTIS</strong>. 
                 Uma por semestre e nunca mais pague por água alcalina.
               </p>
-              <Button variant="gold" size="lg" asChild className="group">
+              <Button variant="gold" size="xl" asChild className="group shadow-2xl shadow-accent/50 ring-4 ring-accent/30 text-lg px-12">
                 <a href="#formulario">
                   QUERO INDICAR AGORA
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
             </div>
@@ -497,10 +497,10 @@ const HealthSection = () => {
 /* ───────────── GANHE MAIS COM O ACQUALIVE CLUB ───────────── */
 const ClubRewardsSection = () => {
   const rewards = [
-    { emoji: "⭐", action: "Avaliação simples", points: "100 pts", value: "R$ 2" },
-    { emoji: "💬", action: "Comentário escrito", points: "+200 pts", value: "R$ 4" },
-    { emoji: "📸", action: "Foto do produto", points: "+200 pts", value: "R$ 4" },
-    { emoji: "🎥", action: "Vídeo do produto", points: "+400 pts", value: "R$ 8" },
+    { emoji: "⭐", action: "Review", points: "100 pts", value: "R$ 2" },
+    { emoji: "💬", action: "Review com comentário", points: "+50 pts", value: "R$ 1" },
+    { emoji: "📸", action: "Review com foto", points: "+50 pts", value: "R$ 1" },
+    { emoji: "🎥", action: "Review com vídeo", points: "+50 pts", value: "R$ 1" },
   ];
 
   return (
@@ -531,9 +531,9 @@ const ClubRewardsSection = () => {
               <div className="bg-gradient-to-r from-accent to-gold rounded-2xl p-6 text-primary-foreground relative overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.1),transparent)]" />
                 <div className="relative">
-                  <p className="text-sm opacity-80 mb-1 font-medium">Combo Completo (Texto + Foto + Vídeo)</p>
-                  <p className="text-4xl font-display font-bold">900 pontos</p>
-                  <p className="text-sm opacity-80 mt-1">= R$ 18,00 por produto avaliado</p>
+              <p className="text-sm opacity-80 mb-1 font-medium">Combo Completo (Comentário + Foto + Vídeo)</p>
+                  <p className="text-4xl font-display font-bold">250 pontos</p>
+                  <p className="text-sm opacity-80 mt-1">= R$ 5,00 por produto avaliado</p>
                 </div>
               </div>
             </div>
@@ -833,7 +833,7 @@ const FormSection = () => {
                   <Input id="friendPhone" name="friendPhone" type="tel" value={formData.friendPhone} onChange={handleChange} placeholder="(00) 00000-0000" required pattern="[\d\s\(\)\-\+]{10,20}" title="Insira um número de telefone válido" className="h-12 rounded-xl bg-background/50 border-border/50 focus:border-accent focus:ring-accent/20" />
                 </div>
 
-                <Button type="submit" variant="gold" size="xl" className="w-full mt-6" disabled={isSubmitting}>
+                <Button type="submit" variant="gold" size="xl" className="w-full mt-6 shadow-2xl shadow-accent/50 ring-4 ring-accent/30 text-lg h-auto py-5" disabled={isSubmitting}>
                   {isSubmitting ? (
                     <span className="flex items-center gap-2">
                       <motion.span animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: "linear" }}>⏳</motion.span>
