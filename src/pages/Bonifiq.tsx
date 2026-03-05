@@ -86,7 +86,7 @@ const HeroSection = () => (
 
         <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
           <Button variant="cta" size="xl" asChild className="group">
-            <a href={CLUB_LINK} target="_blank" rel="noopener noreferrer">
+            <a href={CLUB_LINK} target="_top" rel="noopener noreferrer">
               <Gift className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Quero Indicar Agora
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -235,7 +235,7 @@ const ReferralSection = () => {
               </div>
               <div className="text-center mt-6">
                 <Button variant="cta" size="lg" asChild className="group">
-                  <a href={CLUB_LINK} target="_blank" rel="noopener noreferrer">
+                  <a href={CLUB_LINK} target="_top" rel="noopener noreferrer">
                     <Gift className="w-5 h-5" />
                     Gerar meu link de indicação
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -323,7 +323,7 @@ const ReviewsSection = () => {
               <p className="text-5xl font-display font-bold mb-2">250 pontos</p>
               <p className="text-lg opacity-80">R$ 5,00 de desconto por produto avaliado</p>
               <Button variant="hero" size="lg" asChild className="mt-6 group text-accent">
-                <a href={CLUB_LINK} target="_blank" rel="noopener noreferrer">
+                <a href={CLUB_LINK} target="_top" rel="noopener noreferrer">
                   Avaliar minhas compras e ganhar
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
@@ -616,7 +616,7 @@ const FAQSection = () => {
               Ainda tem dúvidas? Fale com a gente!
             </p>
             <Button variant="ctaOutline" size="lg" asChild>
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              <a href={WHATSAPP_LINK} target="_top" rel="noopener noreferrer">
                 Falar no WhatsApp
               </a>
             </Button>
@@ -651,7 +651,7 @@ const FinalCTASection = () => (
         </motion.p>
         <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button variant="cta" size="xl" asChild className="group shadow-glow">
-            <a href={CLUB_LINK} target="_blank" rel="noopener noreferrer">
+            <a href={CLUB_LINK} target="_top" rel="noopener noreferrer">
               <Gift className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Entrar para o Clube e ganhar 500 pontos
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -673,10 +673,10 @@ const BonifiqFooter = () => (
           Pontos, cupons e regras estão sujeitos aos termos do programa Acqualive Club.
         </p>
         <div className="flex gap-6 text-primary-foreground/40 text-xs">
-          <a href="https://www.acqualive.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground/70 transition-colors">
+          <a href="https://www.acqualive.com.br" target="_top" rel="noopener noreferrer" className="hover:text-primary-foreground/70 transition-colors">
             acqualive.com.br
           </a>
-          <a href="https://www.instagram.com/acqualivegroup/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground/70 transition-colors">
+          <a href="https://www.instagram.com/acqualivegroup/" target="_top" rel="noopener noreferrer" className="hover:text-primary-foreground/70 transition-colors">
             @acqualive
           </a>
         </div>
