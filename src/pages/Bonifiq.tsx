@@ -616,7 +616,7 @@ const FAQSection = () => {
               Ainda tem dúvidas? Fale com a gente!
             </p>
             <Button variant="ctaOutline" size="lg" asChild>
-              <a href={WHATSAPP_LINK} target="_top" rel="noopener noreferrer">
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 Falar no WhatsApp
               </a>
             </Button>
