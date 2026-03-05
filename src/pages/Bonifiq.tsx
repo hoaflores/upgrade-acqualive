@@ -696,6 +696,19 @@ const Bonifiq = () => {
           content="Ganhe um kit de refis GRÁTIS indicando amigos. Uma indicação por semestre e você nunca mais paga por água alcalina. Acqualive Club: recompensas reais."
         />
         <script>{`
+          // Auto-resize: notify parent iframe of content height
+          (function() {
+            function sendHeight() {
+              var height = document.documentElement.scrollHeight;
+              window.parent.postMessage({ type: 'resize', height: height }, '*');
+            }
+            if (window !== window.top) {
+              sendHeight();
+              window.addEventListener('load', sendHeight);
+              window.addEventListener('resize', sendHeight);
+              setInterval(sendHeight, 1000);
+            }
+          })();
           (function(window,document,script,filename) {
             window.bnq = window.bnq || function() {
               (window.bnq.q = window.bnq.q || []).push(arguments)
