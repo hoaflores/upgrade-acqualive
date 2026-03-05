@@ -695,6 +695,21 @@ const Bonifiq = () => {
           name="description"
           content="Ganhe um kit de refis GRÁTIS indicando amigos. Uma indicação por semestre e você nunca mais paga por água alcalina. Acqualive Club: recompensas reais."
         />
+        <script>{`
+          (function(window,document,script,filename) {
+            window.bnq = window.bnq || function() {
+              (window.bnq.q = window.bnq.q || []).push(arguments)
+            };
+            window._bnqConfig = {
+              uuid: 'c81e2bd6-4e73-4fba-a470-23ee3191d448'
+            };
+            var a = document.getElementsByTagName('head')[0];
+            var r = document.createElement('script');
+            r.async = 1;
+            r.src = script + window._bnqConfig.uuid + filename;
+            a.appendChild(r);
+          })(window,document,'https://bq-scripts.s3.amazonaws.com/scripts/','/bqloader.js');
+        `}</script>
       </Helmet>
       <main className="bg-background text-foreground min-h-screen overflow-hidden">
         {/* Minimal header */}
@@ -712,6 +727,7 @@ const Bonifiq = () => {
         <FAQSection />
         <FinalCTASection />
         <BonifiqFooter />
+        <div id="bq-landing-page" />
       </main>
     </>
   );
