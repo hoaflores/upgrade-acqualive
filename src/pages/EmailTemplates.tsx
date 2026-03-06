@@ -36,11 +36,11 @@ const EMAILS = [
 
 <p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Ol&aacute;!</p>
 
-<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Voc&ecirc; j&aacute; sabe a diferen&ccedil;a que a &aacute;gua Acqualive faz no seu dia a dia. O sabor muda, a disposi&ccedil;&atilde;o melhora, a fam&iacute;lia inteira sente. Mas talvez voc&ecirc; nunca tenha ouvido como tudo isso come&ccedil;ou.</p>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Voc&ecirc; j&aacute; sabe a diferen&ccedil;a que a &aacute;gua Acqualive faz no seu dia a dia. O sabor muda, a disposi&ccedil;&atilde;o melhora, a fam&iacute;lia inteira sente. Mas talvez voc&ecirc; nunca tenha ouvido como tudo isso come&ccedil;ou. E essa &eacute; uma hist&oacute;ria que merece ser contada.</p>
 
-<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">A Acqualive nasceu de uma pergunta simples: <strong style="color:#1a2e35;">por que a gente cuida tanto do que come, mas t&atilde;o pouco da &aacute;gua que bebe?</strong></p>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Tudo nasceu de uma inquieta&ccedil;&atilde;o. Vivemos em um pa&iacute;s onde a gente pesquisa r&oacute;tulo de alimento, escolhe org&acirc;nico, evita ultraprocessado, mas quando o assunto &eacute; &aacute;gua, a maioria das pessoas simplesmente abre a torneira e confia. Confia no cloro, confia nos canos antigos, confia no filtro de barro que os av&oacute;s usavam. Ningu&eacute;m para e pergunta: <strong style="color:#1a2e35;">ser&aacute; que essa &aacute;gua est&aacute; realmente cuidando de mim?</strong></p>
 
-<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Essa inquieta&ccedil;&atilde;o virou prop&oacute;sito. Hoje, s&atilde;o mais de 15 anos dedicados a levar &aacute;gua alcalina ionizada de verdade para dentro das casas brasileiras. N&atilde;o &aacute;gua de prateleira, n&atilde;o promessa de marketing, mas tecnologia que transforma a &aacute;gua da torneira em algo que o corpo reconhece e agradece.</p>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Foi exatamente essa pergunta que deu origem &agrave; Acqualive. N&atilde;o come&ccedil;ou com um grande investidor ou um laborat&oacute;rio multinacional. Come&ccedil;ou com pessoas que acreditavam que a &aacute;gua podia ser muito mais do que apenas "sem gosto e sem cheiro". Que a &aacute;gua podia, de verdade, nutrir o corpo, equilibrar o organismo e transformar a sa&uacute;de de fam&iacute;lias inteiras.</p>
 </td></tr>
 
 <!-- Highlight Quote -->
@@ -49,74 +49,143 @@ const EMAILS = [
 <tr>
 <td style="width:4px;background-color:#1a4d5c;border-radius:2px;"></td>
 <td style="padding:20px 24px;">
-<p style="margin:0;font-size:18px;line-height:1.6;color:#1a2e35;font-style:italic;">"Nosso prop&oacute;sito &eacute; simples: transformar a &aacute;gua para cuidar da vida. Cada purificador que sai da nossa f&aacute;brica carrega essa miss&atilde;o."</p>
+<p style="margin:0;font-size:18px;line-height:1.6;color:#1a2e35;font-style:italic;">"Nosso prop&oacute;sito sempre foi simples: transformar a &aacute;gua para cuidar da vida. Cada purificador que sai da nossa f&aacute;brica carrega essa miss&atilde;o."</p>
 </td>
 </tr>
 </table>
 </td></tr>
 
-<!-- Content continues -->
+<!-- Storytelling continues -->
 <tr><td style="padding:0 40px 24px;">
-<h2 style="margin:0 0 16px;font-size:20px;color:#1a2e35;font-weight:400;">O que nos torna diferentes</h2>
+<h2 style="margin:0 0 16px;font-size:20px;color:#1a2e35;font-weight:400;">Do primeiro purificador &agrave; presen&ccedil;a nacional</h2>
 
-<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Enquanto a maioria dos filtros remove impurezas e para por a&iacute;, a Acqualive vai al&eacute;m. Nossos purificadores transformam a &aacute;gua em tr&ecirc;s n&iacute;veis:</p>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Nos primeiros anos, a Acqualive funcionava de um jeito bem artesanal. Um time enxuto, um produto excelente e muita conversa. Conversa de verdade: na sala de estar das pessoas, explicando por que a &aacute;gua da torneira, mesmo tratada, ainda carrega subst&acirc;ncias que o corpo n&atilde;o precisa. Explicando que filtrar &eacute; bom, mas n&atilde;o &eacute; tudo.</p>
+
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Essas conversas geraram algo poderoso: confian&ccedil;a. E a confian&ccedil;a gerou indica&ccedil;&otilde;es. Clientes satisfeitos contavam para amigos, que contavam para vizinhos, que contavam para fam&iacute;lia. O crescimento foi org&acirc;nico, constru&iacute;do na base do resultado real, n&atilde;o de propaganda.</p>
+
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Com o tempo, a demanda cresceu al&eacute;m da capacidade daquele time inicial. A solu&ccedil;&atilde;o n&atilde;o foi montar uma f&aacute;brica gigantesca e vender em rede de varejo. A escolha foi outra: convidar pessoas que j&aacute; acreditavam no produto a levar essa transforma&ccedil;&atilde;o para suas pr&oacute;prias cidades. Assim nasceu o modelo de franquia da Acqualive.</p>
+</td></tr>
+
+<!-- Second Image -->
+<tr><td style="padding:0;">
+<img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663153389074/bOGqaxJqXpnTjBuv.jpeg" alt="Familia Acqualive" width="600" style="display:block;width:100%;height:auto;">
+</td></tr>
+
+<!-- Technology Section -->
+<tr><td style="padding:36px 40px 24px;">
+<h2 style="margin:0 0 16px;font-size:20px;color:#1a2e35;font-weight:400;">N&atilde;o &eacute; s&oacute; filtrar. &Eacute; transformar.</h2>
+
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Voc&ecirc; j&aacute; deve ter percebido que a &aacute;gua Acqualive &eacute; diferente de qualquer outra que voc&ecirc; j&aacute; experimentou. Isso acontece porque nossos purificadores n&atilde;o fazem s&oacute; uma coisa. Eles fazem tr&ecirc;s:</p>
 
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 24px;">
-<tr><td style="padding:12px 0;border-bottom:1px solid #e8e8e3;">
-<p style="margin:0 0 4px;font-size:15px;font-weight:700;color:#1a2e35;font-family:Arial,Helvetica,sans-serif;">Purifica&ccedil;&atilde;o</p>
-<p style="margin:0;font-size:14px;line-height:1.6;color:#5a6a6f;">Remove cloro, metais pesados, bact&eacute;rias e mais de 80 contaminantes.</p>
+<tr><td style="padding:16px 0;border-bottom:1px solid #e8e8e3;">
+<p style="margin:0 0 6px;font-size:15px;font-weight:700;color:#1a2e35;font-family:Arial,Helvetica,sans-serif;">1. Purifica&ccedil;&atilde;o profunda</p>
+<p style="margin:0;font-size:14px;line-height:1.7;color:#5a6a6f;">Remove cloro, metais pesados, agrot&oacute;xicos, bact&eacute;rias e mais de 80 contaminantes que podem estar presentes na &aacute;gua tratada da sua cidade. O filtro de carv&atilde;o ativado e as membranas de alta precis&atilde;o garantem que s&oacute; passe o que faz bem.</p>
 </td></tr>
-<tr><td style="padding:12px 0;border-bottom:1px solid #e8e8e3;">
-<p style="margin:0 0 4px;font-size:15px;font-weight:700;color:#1a2e35;font-family:Arial,Helvetica,sans-serif;">Alcaliniza&ccedil;&atilde;o</p>
-<p style="margin:0;font-size:14px;line-height:1.6;color:#5a6a6f;">Eleva o pH da &aacute;gua para a faixa alcalina, ajudando no equil&iacute;brio do organismo.</p>
+<tr><td style="padding:16px 0;border-bottom:1px solid #e8e8e3;">
+<p style="margin:0 0 6px;font-size:15px;font-weight:700;color:#1a2e35;font-family:Arial,Helvetica,sans-serif;">2. Alcaliniza&ccedil;&atilde;o natural</p>
+<p style="margin:0;font-size:14px;line-height:1.7;color:#5a6a6f;">Ap&oacute;s a purifica&ccedil;&atilde;o, a &aacute;gua passa por minerais bioceram&icirc;cos que elevam o pH para a faixa alcalina, entre 8.5 e 9.5. Isso ajuda a equilibrar a acidez do corpo, que &eacute; agravada pela alimenta&ccedil;&atilde;o moderna, pelo estresse e pela polui&ccedil;&atilde;o.</p>
 </td></tr>
-<tr><td style="padding:12px 0;">
-<p style="margin:0 0 4px;font-size:15px;font-weight:700;color:#1a2e35;font-family:Arial,Helvetica,sans-serif;">Ioniza&ccedil;&atilde;o</p>
-<p style="margin:0;font-size:14px;line-height:1.6;color:#5a6a6f;">Reestrutura a &aacute;gua em microclusters, facilitando a absor&ccedil;&atilde;o celular.</p>
+<tr><td style="padding:16px 0;">
+<p style="margin:0 0 6px;font-size:15px;font-weight:700;color:#1a2e35;font-family:Arial,Helvetica,sans-serif;">3. Ioniza&ccedil;&atilde;o e reestrutura&ccedil;&atilde;o molecular</p>
+<p style="margin:0;font-size:14px;line-height:1.7;color:#5a6a6f;">Aqui est&aacute; o verdadeiro diferencial. A &aacute;gua &eacute; reestruturada em microclusters, agrupamentos moleculares menores que facilitam a absor&ccedil;&atilde;o celular. Na pr&aacute;tica, significa que seu corpo absorve mais &aacute;gua com menos volume, hidratando de forma mais eficiente.</p>
 </td></tr>
 </table>
 
-<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Isso n&atilde;o &eacute; teoria. S&atilde;o mais de 200 mil fam&iacute;lias que j&aacute; experimentaram e sentiram a diferen&ccedil;a. Voc&ecirc; &eacute; uma delas.</p>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Essa combina&ccedil;&atilde;o &eacute; exclusiva. Nenhum filtro convencional, purificador de geladeira ou gal&atilde;o de &aacute;gua mineral entrega esses tr&ecirc;s n&iacute;veis juntos. E voc&ecirc; j&aacute; sente isso no dia a dia, mesmo que n&atilde;o soubesse exatamente o porqu&ecirc;.</p>
 </td></tr>
 
 <!-- Numbers Section -->
 <tr><td style="padding:0 40px 28px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f5f5f0;border-radius:8px;">
 <tr>
-<td width="33%" style="padding:24px 12px;text-align:center;">
-<p style="margin:0;font-size:28px;font-weight:700;color:#1a4d5c;font-family:Arial,Helvetica,sans-serif;">15+</p>
-<p style="margin:4px 0 0;font-size:11px;color:#7a8a8e;text-transform:uppercase;letter-spacing:1px;font-family:Arial,Helvetica,sans-serif;">anos de<br>mercado</p>
+<td width="25%" style="padding:24px 8px;text-align:center;">
+<p style="margin:0;font-size:26px;font-weight:700;color:#1a4d5c;font-family:Arial,Helvetica,sans-serif;">15+</p>
+<p style="margin:4px 0 0;font-size:10px;color:#7a8a8e;text-transform:uppercase;letter-spacing:1px;font-family:Arial,Helvetica,sans-serif;">anos de<br>mercado</p>
 </td>
-<td width="33%" style="padding:24px 12px;text-align:center;border-left:1px solid #e0e0d8;border-right:1px solid #e0e0d8;">
-<p style="margin:0;font-size:28px;font-weight:700;color:#1a4d5c;font-family:Arial,Helvetica,sans-serif;">200k+</p>
-<p style="margin:4px 0 0;font-size:11px;color:#7a8a8e;text-transform:uppercase;letter-spacing:1px;font-family:Arial,Helvetica,sans-serif;">fam&iacute;lias<br>atendidas</p>
+<td width="25%" style="padding:24px 8px;text-align:center;border-left:1px solid #e0e0d8;">
+<p style="margin:0;font-size:26px;font-weight:700;color:#1a4d5c;font-family:Arial,Helvetica,sans-serif;">200k+</p>
+<p style="margin:4px 0 0;font-size:10px;color:#7a8a8e;text-transform:uppercase;letter-spacing:1px;font-family:Arial,Helvetica,sans-serif;">fam&iacute;lias<br>atendidas</p>
 </td>
-<td width="33%" style="padding:24px 12px;text-align:center;">
-<p style="margin:0;font-size:28px;font-weight:700;color:#1a4d5c;font-family:Arial,Helvetica,sans-serif;">3x</p>
-<p style="margin:4px 0 0;font-size:11px;color:#7a8a8e;text-transform:uppercase;letter-spacing:1px;font-family:Arial,Helvetica,sans-serif;">selo great<br>place to work</p>
+<td width="25%" style="padding:24px 8px;text-align:center;border-left:1px solid #e0e0d8;">
+<p style="margin:0;font-size:26px;font-weight:700;color:#1a4d5c;font-family:Arial,Helvetica,sans-serif;">3x</p>
+<p style="margin:4px 0 0;font-size:10px;color:#7a8a8e;text-transform:uppercase;letter-spacing:1px;font-family:Arial,Helvetica,sans-serif;">selo GPTW</p>
+</td>
+<td width="25%" style="padding:24px 8px;text-align:center;border-left:1px solid #e0e0d8;">
+<p style="margin:0;font-size:26px;font-weight:700;color:#1a4d5c;font-family:Arial,Helvetica,sans-serif;">27</p>
+<p style="margin:4px 0 0;font-size:10px;color:#7a8a8e;text-transform:uppercase;letter-spacing:1px;font-family:Arial,Helvetica,sans-serif;">estados<br>com opera&ccedil;&atilde;o</p>
 </td>
 </tr>
 </table>
+</td></tr>
+
+<!-- Impact Section -->
+<tr><td style="padding:0 40px 24px;">
+<h2 style="margin:0 0 16px;font-size:20px;color:#1a2e35;font-weight:400;">O impacto que voc&ecirc; n&atilde;o v&ecirc;, mas sente</h2>
+
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Quando a gente fala em "transformar a &aacute;gua", n&atilde;o &eacute; figura de linguagem. Os efeitos s&atilde;o reais e percept&iacute;veis. Clientes relatam melhora na digest&atilde;o nas primeiras semanas. Outros percebem que a pele fica mais hidratada, que o sono melhora, que a disposi&ccedil;&atilde;o ao longo do dia &eacute; outra.</p>
+
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Isso n&atilde;o &eacute; m&aacute;gica. &Eacute; ci&ecirc;ncia. O corpo humano &eacute; composto por mais de 70% de &aacute;gua. Quando voc&ecirc; melhora a qualidade dessa &aacute;gua, melhora o funcionamento de cada c&eacute;lula. &Eacute; como trocar o combust&iacute;vel de um carro: o motor &eacute; o mesmo, mas o desempenho muda completamente.</p>
+
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Estudos cient&iacute;ficos j&aacute; demonstraram os benef&iacute;cios da &aacute;gua alcalina ionizada na redu&ccedil;&atilde;o do estresse oxidativo, no suporte ao sistema imunol&oacute;gico e na melhora da hidrata&ccedil;&atilde;o celular. N&atilde;o &eacute; tend&ecirc;ncia, &eacute; evolu&ccedil;&atilde;o.</p>
+</td></tr>
+
+<!-- Quote 2 -->
+<tr><td style="padding:0 40px 28px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td style="width:4px;background-color:#1a4d5c;border-radius:2px;"></td>
+<td style="padding:20px 24px;">
+<p style="margin:0;font-size:18px;line-height:1.6;color:#1a2e35;font-style:italic;">"Eu comprei o purificador pensando s&oacute; no sabor da &aacute;gua. Tr&ecirc;s meses depois, percebi que minha fam&iacute;lia inteira estava mais disposta, dormindo melhor, ficando menos doente. A &aacute;gua mudou tudo."</p>
+<p style="margin:12px 0 0;font-size:13px;color:#7a8a8e;font-family:Arial,Helvetica,sans-serif;">Cl&aacute;udia M., cliente desde 2021</p>
+</td>
+</tr>
+</table>
+</td></tr>
+
+<!-- Community Section -->
+<tr><td style="padding:0 40px 24px;">
+<h2 style="margin:0 0 16px;font-size:20px;color:#1a2e35;font-weight:400;">Mais do que uma empresa: uma comunidade</h2>
+
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Uma das coisas que mais nos orgulha &eacute; a comunidade que se formou ao redor da Acqualive. N&atilde;o somos apenas uma marca que vende purificadores. Somos um movimento de pessoas que acreditam que cuidar da sa&uacute;de come&ccedil;a pelo b&aacute;sico, pelo essencial, pelo que a gente consome todos os dias sem pensar.</p>
+
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Temos clientes que est&atilde;o conosco desde o in&iacute;cio, h&aacute; mais de 15 anos. Fam&iacute;lias que j&aacute; trocaram o refil v&aacute;rias vezes, que j&aacute; indicaram para dezenas de pessoas, que j&aacute; presentearam filhos e pais com purificadores. Esse v&iacute;nculo n&atilde;o se constr&oacute;i com marketing. Se constr&oacute;i com resultado.</p>
+
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">E &eacute; justamente por isso que a Acqualive cresceu de um jeito diferente. Cresceu de dentro para fora, do cliente para o mercado, da experi&ecirc;ncia para a expans&atilde;o.</p>
 </td></tr>
 
 <!-- Did you know section -->
 <tr><td style="padding:0 40px 24px;">
 <h2 style="margin:0 0 16px;font-size:20px;color:#1a2e35;font-weight:400;">Voc&ecirc; sabia?</h2>
 
-<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">A Acqualive &eacute; uma franquia brasileira com opera&ccedil;&atilde;o em todo o pa&iacute;s. O que come&ccedil;ou como um sonho de democratizar a &aacute;gua de qualidade virou uma rede com centenas de franqueados, presente em todos os estados.</p>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">A Acqualive &eacute; uma franquia brasileira com opera&ccedil;&atilde;o em todos os 27 estados do pa&iacute;s. O que come&ccedil;ou como um sonho de democratizar a &aacute;gua de qualidade virou uma rede com centenas de franqueados espalhados de norte a sul.</p>
 
-<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Muitos dos nossos franqueados come&ccedil;aram exatamente como voc&ecirc;: como clientes. Pessoas que experimentaram, sentiram a diferen&ccedil;a e pensaram: "e se eu pudesse levar isso para mais gente?"</p>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">O modelo de expans&atilde;o foi pensado para ser acess&iacute;vel. Diferente das franquias tradicionais, que exigem ponto comercial, funcion&aacute;rios e alto investimento, a Acqualive criou um formato chamado <strong style="color:#1a2e35;">Franquia Solo</strong>: uma opera&ccedil;&atilde;o enxuta, que pode ser tocada por uma &uacute;nica pessoa, de casa, com suporte completo da marca.</p>
+
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Muitos dos nossos franqueados come&ccedil;aram exatamente como voc&ecirc;: como clientes. Pessoas que experimentaram a &aacute;gua, sentiram a diferen&ccedil;a na pr&oacute;pria sa&uacute;de e na da fam&iacute;lia, e em algum momento pensaram: <strong style="color:#1a2e35;">"e se eu pudesse levar isso para mais gente?"</strong></p>
+
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">N&atilde;o &eacute; sobre vender um produto. &Eacute; sobre compartilhar algo que voc&ecirc; j&aacute; sabe que funciona. &Eacute; sobre transformar uma convic&ccedil;&atilde;o pessoal em uma atividade profissional com prop&oacute;sito.</p>
 </td></tr>
 
 <!-- Soft CTA -->
 <tr><td style="padding:0 40px 36px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f5f5f0;border-radius:8px;">
 <tr><td style="padding:28px 24px;text-align:center;">
-<p style="margin:0 0 12px;font-size:16px;line-height:1.7;color:#3a4a4f;">Se voc&ecirc; j&aacute; pensou em empreender com algo que acredita de verdade, talvez valha a pena conhecer como funciona.</p>
-<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:inline-block;padding:12px 28px;background-color:#1a4d5c;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;border-radius:6px;font-family:Arial,Helvetica,sans-serif;letter-spacing:0.5px;">Conhecer o modelo de franquia</a>
-<p style="margin:12px 0 0;font-size:12px;color:#7a8a8e;">Sem compromisso. &Eacute; s&oacute; para saber mais.</p>
+<p style="margin:0 0 8px;font-size:18px;line-height:1.5;color:#1a2e35;font-weight:400;">Se isso fez sentido para voc&ecirc;</p>
+<p style="margin:0 0 18px;font-size:15px;line-height:1.7;color:#3a4a4f;">Se em algum momento voc&ecirc; j&aacute; pensou em empreender com algo que acredita de verdade, talvez valha a pena conhecer como funciona o modelo Solo. Sem compromisso, sem press&atilde;o. &Eacute; s&oacute; uma porta aberta para quem quiser saber mais.</p>
+<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:inline-block;padding:14px 32px;background-color:#1a4d5c;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;border-radius:6px;font-family:Arial,Helvetica,sans-serif;letter-spacing:0.5px;">Conhecer o modelo de franquia</a>
+<p style="margin:14px 0 0;font-size:12px;color:#7a8a8e;">Sem compromisso. &Eacute; s&oacute; para saber mais.</p>
 </td></tr>
 </table>
+</td></tr>
+
+<!-- Closing -->
+<tr><td style="padding:0 40px 32px;">
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Independente de qualquer coisa, obrigado por fazer parte dessa comunidade. Cada fam&iacute;lia que escolhe a Acqualive fortalece esse prop&oacute;sito e nos motiva a continuar.</p>
+
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Nos pr&oacute;ximos dias, vou compartilhar mais conte&uacute;dos sobre sa&uacute;de, &aacute;gua e oportunidades. Fique &agrave; vontade para responder este email se tiver qualquer d&uacute;vida ou quiser conversar.</p>
+
+<p style="margin:0;font-size:16px;line-height:1.8;color:#3a4a4f;">Um abra&ccedil;o,<br><strong style="color:#1a2e35;">Equipe Acqualive</strong></p>
 </td></tr>
 
 <!-- Footer -->
