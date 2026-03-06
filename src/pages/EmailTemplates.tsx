@@ -262,7 +262,7 @@ const EMAILS = [
 <!-- Video Thumbnail with Play Button -->
 <tr><td style="padding:0;text-align:center;background-color:#0d1117;">
 <a href="https://www.youtube.com/watch?v=hjFlK337Cjc" target="_blank" style="display:block;text-decoration:none;">
-<img src="https://upgrade-acqualive.lovable.app/images/video-thumb-solo.png" alt="Assista ao depoimento" width="600" style="display:block;width:100%;height:auto;border:0;">
+<img src="https://upgrade-acqualive.lovable.app/images/video-thumb-solo-play.png" alt="Assista ao depoimento" width="600" style="display:block;width:100%;height:auto;border:0;">
 </a>
 </td></tr>
 
