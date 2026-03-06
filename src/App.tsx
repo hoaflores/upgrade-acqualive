@@ -39,6 +39,7 @@ const App = () => (
             <Route path="/indica-pdf" element={<IndicaPDF />} />
             <Route path="/acqualive-club" element={<Bonifiq />} />
             <Route path="/indica-club" element={<IndicaClub />} />
+            <Route path="/email-templates" element={<EmailTemplates />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
