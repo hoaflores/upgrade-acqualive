@@ -259,10 +259,22 @@ const EMAILS = [
 <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663153389074/noYGaqqpOTGvWHLS.png" alt="Acqualive" width="160" style="display:block;margin:0 auto;">
 </td></tr>
 
-<!-- Video Thumbnail -->
-<tr><td style="padding:0;position:relative;">
-<a href="https://www.youtube.com/watch?v=hjFlK337Cjc" target="_blank" style="display:block;text-decoration:none;">
-<img src="https://img.youtube.com/vi/hjFlK337Cjc/maxresdefault.jpg" alt="Assista ao vídeo" width="600" style="display:block;width:100%;height:auto;">
+<!-- Video Thumbnail with Play Button -->
+<tr><td style="padding:0;text-align:center;">
+<a href="https://www.youtube.com/watch?v=hjFlK337Cjc" target="_blank" style="display:block;text-decoration:none;position:relative;">
+<!--[if mso]>
+<v:group xmlns:v="urn:schemas-microsoft-com:vml" style="width:600px;height:338px;">
+<v:image src="https://img.youtube.com/vi/hjFlK337Cjc/maxresdefault.jpg" style="width:600px;height:338px;"/>
+</v:group>
+<![endif]-->
+<!--[if !mso]><!-->
+<div style="position:relative;display:inline-block;width:100%;max-width:600px;">
+<img src="https://img.youtube.com/vi/hjFlK337Cjc/maxresdefault.jpg" alt="Assista ao depoimento" width="600" style="display:block;width:100%;height:auto;">
+<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80px;height:80px;background-color:rgba(249,115,22,0.9);border-radius:50%;text-align:center;line-height:80px;">
+<div style="display:inline-block;width:0;height:0;border-style:solid;border-width:18px 0 18px 32px;border-color:transparent transparent transparent #ffffff;margin-left:6px;vertical-align:middle;"></div>
+</div>
+</div>
+<!--<![endif]-->
 </a>
 </td></tr>
 
