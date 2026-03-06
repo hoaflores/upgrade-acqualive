@@ -17,55 +17,86 @@ const EMAILS = [
 <body style="margin:0;padding:0;background-color:#ffffff;font-family:Arial,Helvetica,sans-serif;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#ffffff;">
 <tr><td align="center" style="padding:20px 0;">
-<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#0d1117;border-radius:12px;overflow:hidden;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#0d1117;border-radius:16px;overflow:hidden;">
 
-<!-- Header -->
-<tr><td style="padding:32px 40px 24px;text-align:center;border-bottom:1px solid #1c2333;">
-<img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663153389074/noYGaqqpOTGvWHLS.png" alt="Acqualive" width="180" style="display:block;margin:0 auto;">
+<!-- Header with gradient -->
+<tr><td style="background:linear-gradient(135deg,#0d1117 0%,#1a2332 100%);padding:32px 40px 24px;text-align:center;">
+<img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663153389074/noYGaqqpOTGvWHLS.png" alt="Acqualive" width="160" style="display:block;margin:0 auto;">
 </td></tr>
 
-<!-- Hero -->
+<!-- Hero Image -->
+<tr><td style="padding:0;">
+<img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663153389074/KNbHZLJGeBdnHFPM.webp" alt="Franqueada Acqualive" width="600" style="display:block;width:100%;height:auto;">
+</td></tr>
+
+<!-- Orange Accent Line -->
+<tr><td style="padding:0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="height:4px;background:linear-gradient(90deg,#f97316,#fbbf24,#f97316);"></td></tr></table></td></tr>
+
+<!-- Content -->
 <tr><td style="padding:40px 40px 24px;">
-<p style="margin:0 0 8px;font-size:13px;color:#f97316;text-transform:uppercase;letter-spacing:2px;font-weight:700;">Franquia Solo</p>
-<h1 style="margin:0 0 20px;font-size:28px;line-height:1.3;color:#ffffff;">Você já tem o filtro.<br><span style="color:#f97316;">E se pudesse lucrar com ele?</span></h1>
-<p style="margin:0 0 16px;font-size:16px;line-height:1.6;color:#9ca3af;">Olá,</p>
-<p style="margin:0 0 16px;font-size:16px;line-height:1.6;color:#9ca3af;">Você já conhece a qualidade da água Acqualive. Sabe a diferença que faz na saúde, no sabor e no dia a dia da sua família.</p>
-<p style="margin:0 0 16px;font-size:16px;line-height:1.6;color:#9ca3af;">Agora imagine <strong style="color:#ffffff;">transformar essa experiência em um negócio lucrativo</strong> — sem precisar de loja física, sem funcionários, trabalhando no seu ritmo.</p>
-<p style="margin:0 0 24px;font-size:16px;line-height:1.6;color:#9ca3af;">Essa é a <strong style="color:#ffffff;">Franquia Solo Acqualive</strong>: o modelo perfeito para quem já vive a marca e quer empreender com ela.</p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+<tr><td style="text-align:center;padding-bottom:24px;">
+<p style="margin:0;display:inline-block;padding:6px 20px;background-color:#f97316;color:#ffffff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;border-radius:20px;">🏢 Franquia Solo</p>
+</td></tr>
+</table>
+<h1 style="margin:0 0 24px;font-size:30px;line-height:1.3;color:#ffffff;text-align:center;">Você já tem o filtro.<br><span style="color:#f97316;">E se pudesse lucrar com ele?</span></h1>
+
+<!-- Divider -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:0 0 24px;text-align:center;"><table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td style="width:40px;height:2px;background-color:#f97316;"></td><td style="width:12px;"></td><td style="width:8px;height:8px;border-radius:50%;background-color:#f97316;"></td><td style="width:12px;"></td><td style="width:40px;height:2px;background-color:#f97316;"></td></tr></table></td></tr></table>
+
+<p style="margin:0 0 16px;font-size:16px;line-height:1.7;color:#d1d5db;">Olá! 👋</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.7;color:#d1d5db;">Você já conhece a qualidade da água Acqualive. Sabe a diferença que faz na saúde, no sabor e no dia a dia da sua família.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.7;color:#d1d5db;">Agora imagine <strong style="color:#ffffff;">transformar essa experiência em um negócio lucrativo</strong>, sem precisar de loja física, sem funcionários, trabalhando no seu ritmo.</p>
 </td></tr>
 
-<!-- Stats -->
+<!-- Highlight Box -->
+<tr><td style="padding:0 40px 32px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;">
+<tr><td style="padding:28px;text-align:center;">
+<p style="margin:0 0 8px;font-size:40px;">💡</p>
+<p style="margin:0;font-size:18px;line-height:1.5;color:#ffffff;">Essa é a <strong style="color:#f97316;">Franquia Solo Acqualive</strong>:<br>o modelo perfeito para quem já vive a marca<br>e quer empreender com ela.</p>
+</td></tr>
+</table>
+</td></tr>
+
+<!-- Stats with visual cards -->
 <tr><td style="padding:0 40px 32px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
 <tr>
-<td width="33%" style="text-align:center;padding:20px 8px;background-color:#161b26;border-radius:8px;">
-<p style="margin:0;font-size:28px;font-weight:800;color:#f97316;">15+</p>
-<p style="margin:4px 0 0;font-size:12px;color:#6b7280;">Anos de mercado</p>
+<td width="32%" style="text-align:center;padding:24px 8px;background:linear-gradient(180deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;">
+<p style="margin:0 0 4px;font-size:32px;font-weight:800;color:#f97316;">15+</p>
+<p style="margin:0;font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">Anos de<br>mercado</p>
 </td>
-<td width="8"></td>
-<td width="33%" style="text-align:center;padding:20px 8px;background-color:#161b26;border-radius:8px;">
-<p style="margin:0;font-size:28px;font-weight:800;color:#f97316;">200k+</p>
-<p style="margin:4px 0 0;font-size:12px;color:#6b7280;">Clientes satisfeitos</p>
+<td width="2%"></td>
+<td width="32%" style="text-align:center;padding:24px 8px;background:linear-gradient(180deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;">
+<p style="margin:0 0 4px;font-size:32px;font-weight:800;color:#f97316;">200k+</p>
+<p style="margin:0;font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">Clientes<br>satisfeitos</p>
 </td>
-<td width="8"></td>
-<td width="33%" style="text-align:center;padding:20px 8px;background-color:#161b26;border-radius:8px;">
-<p style="margin:0;font-size:28px;font-weight:800;color:#f97316;">R$30k</p>
-<p style="margin:4px 0 0;font-size:12px;color:#6b7280;">Investimento inicial</p>
+<td width="2%"></td>
+<td width="32%" style="text-align:center;padding:24px 8px;background:linear-gradient(180deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;">
+<p style="margin:0 0 4px;font-size:32px;font-weight:800;color:#f97316;">R$30k</p>
+<p style="margin:0;font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">Investimento<br>inicial</p>
 </td>
 </tr>
 </table>
 </td></tr>
 
 <!-- CTA -->
+<tr><td style="padding:0 40px 16px;text-align:center;">
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+<tr><td style="background:linear-gradient(135deg,#f97316,#ea580c);border-radius:10px;padding:2px;">
+<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:block;padding:16px 44px;color:#ffffff;text-decoration:none;font-size:16px;font-weight:700;letter-spacing:0.5px;">QUERO CONHECER O MODELO SOLO →</a>
+</td></tr>
+</table>
+</td></tr>
 <tr><td style="padding:0 40px 40px;text-align:center;">
-<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:inline-block;padding:16px 40px;background-color:#f97316;color:#ffffff;text-decoration:none;font-size:16px;font-weight:700;border-radius:8px;letter-spacing:0.5px;">QUERO CONHECER O MODELO SOLO →</a>
-<p style="margin:16px 0 0;font-size:13px;color:#6b7280;">Nos próximos dias, vou te mostrar os números e depoimentos de quem já faz parte.</p>
+<p style="margin:0;font-size:13px;color:#64748b;">📩 Nos próximos dias, vou te mostrar os números e depoimentos de quem já faz parte.</p>
 </td></tr>
 
 <!-- Footer -->
-<tr><td style="padding:24px 40px;background-color:#0a0e14;text-align:center;border-top:1px solid #1c2333;">
+<tr><td style="padding:24px 40px;background:linear-gradient(180deg,#0a0e14,#060810);text-align:center;border-top:1px solid #1c2333;">
 <p style="margin:0;font-size:12px;color:#4b5563;">© 2025 Acqualive. Todos os direitos reservados.</p>
-<p style="margin:8px 0 0;font-size:12px;color:#4b5563;">Você recebeu este email porque é cliente Acqualive.</p>
+<p style="margin:8px 0 0;font-size:11px;color:#374151;">Você recebeu este email porque é cliente Acqualive.</p>
 </td></tr>
 
 </table>
@@ -87,74 +118,89 @@ const EMAILS = [
 <body style="margin:0;padding:0;background-color:#ffffff;font-family:Arial,Helvetica,sans-serif;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#ffffff;">
 <tr><td align="center" style="padding:20px 0;">
-<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#0d1117;border-radius:12px;overflow:hidden;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#0d1117;border-radius:16px;overflow:hidden;">
 
 <!-- Header -->
-<tr><td style="padding:32px 40px 24px;text-align:center;border-bottom:1px solid #1c2333;">
-<img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663153389074/noYGaqqpOTGvWHLS.png" alt="Acqualive" width="180" style="display:block;margin:0 auto;">
+<tr><td style="background:linear-gradient(135deg,#0d1117 0%,#1a2332 100%);padding:32px 40px 24px;text-align:center;">
+<img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663153389074/noYGaqqpOTGvWHLS.png" alt="Acqualive" width="160" style="display:block;margin:0 auto;">
 </td></tr>
 
-<!-- Hero -->
+<!-- Green Growth Banner -->
+<tr><td style="padding:0;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#065f46,#047857);">
+<tr><td style="padding:20px 40px;text-align:center;">
+<p style="margin:0;font-size:13px;font-weight:700;color:#a7f3d0;text-transform:uppercase;letter-spacing:2px;">📈 Dados Oficiais ABF 2024</p>
+<p style="margin:8px 0 0;font-size:20px;font-weight:800;color:#ffffff;">O mercado não para de crescer</p>
+</td></tr>
+</table>
+</td></tr>
+
+<!-- Content -->
 <tr><td style="padding:40px 40px 16px;">
-<p style="margin:0 0 8px;font-size:13px;color:#f97316;text-transform:uppercase;letter-spacing:2px;font-weight:700;">Dados Oficiais ABF 2024</p>
-<h1 style="margin:0 0 20px;font-size:28px;line-height:1.3;color:#ffffff;">Os números não mentem:<br><span style="color:#f97316;">este mercado só cresce.</span></h1>
-<p style="margin:0 0 16px;font-size:16px;line-height:1.6;color:#9ca3af;">Na segunda, te contei sobre a Franquia Solo. Hoje quero te mostrar <strong style="color:#ffffff;">por que este é o momento certo</strong> para começar.</p>
+<h1 style="margin:0 0 20px;font-size:28px;line-height:1.3;color:#ffffff;text-align:center;">Os números não mentem:<br><span style="color:#f97316;">este mercado só cresce.</span></h1>
+
+<!-- Divider -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:0 0 24px;text-align:center;"><table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td style="width:40px;height:2px;background-color:#f97316;"></td><td style="width:12px;"></td><td style="width:8px;height:8px;border-radius:50%;background-color:#f97316;"></td><td style="width:12px;"></td><td style="width:40px;height:2px;background-color:#f97316;"></td></tr></table></td></tr></table>
+
+<p style="margin:0 0 24px;font-size:16px;line-height:1.7;color:#d1d5db;">Na segunda, te contei sobre a Franquia Solo. Hoje quero te mostrar <strong style="color:#ffffff;">por que este é o momento certo</strong> para começar.</p>
 </td></tr>
 
-<!-- Market Data -->
-<tr><td style="padding:0 40px 24px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+<!-- Big Market Stats -->
+<tr><td style="padding:0 40px 16px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;overflow:hidden;">
 <tr>
-<td width="48%" style="padding:24px;background-color:#161b26;border-radius:8px;border-left:4px solid #f97316;">
-<p style="margin:0;font-size:36px;font-weight:800;color:#f97316;">16,5%</p>
-<p style="margin:4px 0 0;font-size:14px;color:#9ca3af;">Crescimento do setor de<br>Saúde e Bem-Estar em 2024</p>
+<td width="50%" style="padding:28px 20px;text-align:center;border-right:1px solid #334155;">
+<p style="margin:0;font-size:48px;font-weight:800;color:#22c55e;">16,5%</p>
+<p style="margin:8px 0 0;font-size:13px;color:#94a3b8;line-height:1.4;">Crescimento do setor<br>Saúde e Bem-Estar</p>
 </td>
-<td width="4%"></td>
-<td width="48%" style="padding:24px;background-color:#161b26;border-radius:8px;border-left:4px solid #f97316;">
-<p style="margin:0;font-size:36px;font-weight:800;color:#f97316;">R$64,8</p>
-<p style="margin:4px 0 0;font-size:14px;color:#9ca3af;">Bilhões em faturamento<br>no setor de Franquias</p>
+<td width="50%" style="padding:28px 20px;text-align:center;">
+<p style="margin:0;font-size:48px;font-weight:800;color:#22c55e;">R$64,8</p>
+<p style="margin:8px 0 0;font-size:13px;color:#94a3b8;line-height:1.4;">Bilhões em faturamento<br>Setor de Franquias</p>
 </td>
 </tr>
 </table>
 </td></tr>
 
-<!-- Returns -->
-<tr><td style="padding:0 40px 32px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#161b26;border-radius:8px;overflow:hidden;">
-<tr><td style="padding:28px 24px;">
-<h2 style="margin:0 0 20px;font-size:20px;color:#ffffff;text-align:center;">💰 Seus ganhos como Franqueado Solo</h2>
+<tr><td style="padding:0 40px 24px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
 <tr>
-<td style="padding:12px 0;border-bottom:1px solid #1c2333;">
-<p style="margin:0;font-size:14px;color:#6b7280;">Payback médio</p>
+<td width="48%" style="text-align:center;padding:20px;background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;">
+<p style="margin:0;font-size:36px;font-weight:800;color:#22c55e;">200k+</p>
+<p style="margin:4px 0 0;font-size:12px;color:#94a3b8;">Franquias Ativas<br>Setor Saúde</p>
 </td>
-<td style="padding:12px 0;border-bottom:1px solid #1c2333;text-align:right;">
-<p style="margin:0;font-size:16px;font-weight:700;color:#f97316;">6 a 18 meses</p>
-</td>
-</tr>
-<tr>
-<td style="padding:12px 0;border-bottom:1px solid #1c2333;">
-<p style="margin:0;font-size:14px;color:#6b7280;">Lucratividade</p>
-</td>
-<td style="padding:12px 0;border-bottom:1px solid #1c2333;text-align:right;">
-<p style="margin:0;font-size:16px;font-weight:700;color:#f97316;">18% a 25%</p>
+<td width="4%"></td>
+<td width="48%" style="text-align:center;padding:20px;background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;">
+<p style="margin:0;font-size:36px;font-weight:800;color:#22c55e;">10,4%</p>
+<p style="margin:4px 0 0;font-size:12px;color:#94a3b8;">Crescimento Anual<br>Projeção até 2034</p>
 </td>
 </tr>
+</table>
+</td></tr>
+
+<!-- Returns Table -->
+<tr><td style="padding:0 40px 32px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;overflow:hidden;">
+<tr><td style="padding:24px 24px 16px;text-align:center;border-bottom:1px solid #334155;">
+<p style="margin:0;font-size:28px;">💰</p>
+<h2 style="margin:8px 0 0;font-size:20px;color:#ffffff;">Seus ganhos como Franqueado Solo</h2>
+</td></tr>
+<tr><td style="padding:0;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
 <tr>
-<td style="padding:12px 0;border-bottom:1px solid #1c2333;">
-<p style="margin:0;font-size:14px;color:#6b7280;">Renda por cliente/ano</p>
-</td>
-<td style="padding:12px 0;border-bottom:1px solid #1c2333;text-align:right;">
-<p style="margin:0;font-size:16px;font-weight:700;color:#f97316;">R$ 850</p>
-</td>
+<td style="padding:16px 24px;border-bottom:1px solid #1e293b;"><p style="margin:0;font-size:14px;color:#94a3b8;">Payback médio</p></td>
+<td style="padding:16px 24px;border-bottom:1px solid #1e293b;text-align:right;"><p style="margin:0;font-size:17px;font-weight:700;color:#f97316;">6 a 18 meses</p></td>
 </tr>
 <tr>
-<td style="padding:12px 0;">
-<p style="margin:0;font-size:14px;color:#6b7280;">Investimento</p>
-</td>
-<td style="padding:12px 0;text-align:right;">
-<p style="margin:0;font-size:16px;font-weight:700;color:#f97316;">A partir de R$ 30k</p>
-</td>
+<td style="padding:16px 24px;border-bottom:1px solid #1e293b;"><p style="margin:0;font-size:14px;color:#94a3b8;">Lucratividade</p></td>
+<td style="padding:16px 24px;border-bottom:1px solid #1e293b;text-align:right;"><p style="margin:0;font-size:17px;font-weight:700;color:#f97316;">18% a 25%</p></td>
+</tr>
+<tr>
+<td style="padding:16px 24px;border-bottom:1px solid #1e293b;"><p style="margin:0;font-size:14px;color:#94a3b8;">Renda por cliente/ano</p></td>
+<td style="padding:16px 24px;border-bottom:1px solid #1e293b;text-align:right;"><p style="margin:0;font-size:17px;font-weight:700;color:#f97316;">R$ 850</p></td>
+</tr>
+<tr>
+<td style="padding:16px 24px;"><p style="margin:0;font-size:14px;color:#94a3b8;">Investimento</p></td>
+<td style="padding:16px 24px;text-align:right;"><p style="margin:0;font-size:17px;font-weight:700;color:#f97316;">A partir de R$ 30k</p></td>
 </tr>
 </table>
 </td></tr>
@@ -163,22 +209,30 @@ const EMAILS = [
 
 <!-- Highlight -->
 <tr><td style="padding:0 40px 32px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1a2332,#0d1117);border:1px solid #f97316;border-radius:8px;">
-<tr><td style="padding:24px;text-align:center;">
-<p style="margin:0;font-size:18px;color:#ffffff;line-height:1.5;"><strong>100% do valor investido</strong> é convertido em produtos.<br><span style="color:#f97316;font-weight:700;">Sem taxa de franquia!</span></p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:2px solid #f97316;border-radius:12px;overflow:hidden;">
+<tr><td style="background:linear-gradient(135deg,#431407,#0d1117);padding:28px;text-align:center;">
+<p style="margin:0 0 4px;font-size:28px;">🎁</p>
+<p style="margin:0;font-size:20px;color:#ffffff;line-height:1.5;"><strong>100% do valor investido</strong> é convertido em produtos.</p>
+<p style="margin:8px 0 0;font-size:18px;color:#f97316;font-weight:700;">Sem taxa de franquia!</p>
 </td></tr>
 </table>
 </td></tr>
 
 <!-- CTA -->
+<tr><td style="padding:0 40px 16px;text-align:center;">
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+<tr><td style="background:linear-gradient(135deg,#f97316,#ea580c);border-radius:10px;padding:2px;">
+<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:block;padding:16px 44px;color:#ffffff;text-decoration:none;font-size:16px;font-weight:700;">QUERO SABER MAIS SOBRE A FRANQUIA →</a>
+</td></tr>
+</table>
+</td></tr>
 <tr><td style="padding:0 40px 40px;text-align:center;">
-<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:inline-block;padding:16px 40px;background-color:#f97316;color:#ffffff;text-decoration:none;font-size:16px;font-weight:700;border-radius:8px;">QUERO SABER MAIS SOBRE A FRANQUIA →</a>
-<p style="margin:16px 0 0;font-size:13px;color:#6b7280;">Amanhã vou te apresentar histórias de quem já está lucrando.</p>
+<p style="margin:0;font-size:13px;color:#64748b;">📩 Amanhã vou te apresentar histórias de quem já está lucrando.</p>
 </td></tr>
 
 <!-- Footer -->
-<tr><td style="padding:24px 40px;background-color:#0a0e14;text-align:center;border-top:1px solid #1c2333;">
-<p style="margin:0;font-size:11px;color:#4b5563;">Fonte: Associação Brasileira de Franchising (ABF) - Relatório 2024</p>
+<tr><td style="padding:24px 40px;background:linear-gradient(180deg,#0a0e14,#060810);text-align:center;border-top:1px solid #1c2333;">
+<p style="margin:0;font-size:11px;color:#475569;">Fonte: Associação Brasileira de Franchising (ABF), Relatório 2024</p>
 <p style="margin:8px 0 0;font-size:12px;color:#4b5563;">© 2025 Acqualive. Todos os direitos reservados.</p>
 </td></tr>
 
@@ -190,7 +244,7 @@ const EMAILS = [
   },
   {
     day: "Quinta-feira",
-    subject: "\"Em 2 anos recuperei todo o investimento\" — Roberto, Franqueado Solo",
+    subject: "\"Em 2 anos recuperei todo o investimento\", Roberto, Franqueado Solo",
     html: `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -201,86 +255,133 @@ const EMAILS = [
 <body style="margin:0;padding:0;background-color:#ffffff;font-family:Arial,Helvetica,sans-serif;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#ffffff;">
 <tr><td align="center" style="padding:20px 0;">
-<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#0d1117;border-radius:12px;overflow:hidden;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#0d1117;border-radius:16px;overflow:hidden;">
 
 <!-- Header -->
-<tr><td style="padding:32px 40px 24px;text-align:center;border-bottom:1px solid #1c2333;">
-<img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663153389074/noYGaqqpOTGvWHLS.png" alt="Acqualive" width="180" style="display:block;margin:0 auto;">
+<tr><td style="background:linear-gradient(135deg,#0d1117 0%,#1a2332 100%);padding:32px 40px 24px;text-align:center;">
+<img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663153389074/noYGaqqpOTGvWHLS.png" alt="Acqualive" width="160" style="display:block;margin:0 auto;">
 </td></tr>
 
-<!-- Hero -->
+<!-- Video Thumbnail -->
+<tr><td style="padding:0;position:relative;">
+<a href="https://www.youtube.com/watch?v=hjFlK337Cjc" target="_blank" style="display:block;text-decoration:none;">
+<img src="https://img.youtube.com/vi/hjFlK337Cjc/maxresdefault.jpg" alt="Assista ao vídeo" width="600" style="display:block;width:100%;height:auto;">
+</a>
+</td></tr>
+
+<!-- Orange Accent -->
+<tr><td style="padding:0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="height:4px;background:linear-gradient(90deg,#f97316,#fbbf24,#f97316);"></td></tr></table></td></tr>
+
+<!-- Content -->
 <tr><td style="padding:40px 40px 16px;">
-<p style="margin:0 0 8px;font-size:13px;color:#f97316;text-transform:uppercase;letter-spacing:2px;font-weight:700;">Histórias de Sucesso</p>
-<h1 style="margin:0 0 20px;font-size:28px;line-height:1.3;color:#ffffff;">Quem já faz parte<br><span style="color:#f97316;">recomenda.</span></h1>
-<p style="margin:0 0 24px;font-size:16px;line-height:1.6;color:#9ca3af;">Hoje quero que você conheça pessoas reais que deram o passo e <strong style="color:#ffffff;">transformaram suas vidas com a Franquia Solo</strong>.</p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+<tr><td style="text-align:center;padding-bottom:16px;">
+<p style="margin:0;display:inline-block;padding:6px 20px;background-color:#f97316;color:#ffffff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;border-radius:20px;">⭐ Histórias de Sucesso</p>
+</td></tr>
+</table>
+<h1 style="margin:0 0 20px;font-size:28px;line-height:1.3;color:#ffffff;text-align:center;">Quem já faz parte<br><span style="color:#f97316;">recomenda.</span></h1>
+
+<!-- Divider -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:0 0 24px;text-align:center;"><table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td style="width:40px;height:2px;background-color:#f97316;"></td><td style="width:12px;"></td><td style="width:8px;height:8px;border-radius:50%;background-color:#f97316;"></td><td style="width:12px;"></td><td style="width:40px;height:2px;background-color:#f97316;"></td></tr></table></td></tr></table>
+
+<p style="margin:0 0 24px;font-size:16px;line-height:1.7;color:#d1d5db;text-align:center;">Hoje quero que você conheça pessoas reais que deram o passo e <strong style="color:#ffffff;">transformaram suas vidas com a Franquia Solo</strong>.</p>
 </td></tr>
 
 <!-- Testimonial 1 -->
 <tr><td style="padding:0 40px 16px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#161b26;border-radius:8px;border-left:4px solid #f97316;">
-<tr><td style="padding:24px;">
-<p style="margin:0 0 12px;font-size:24px;">⭐⭐⭐⭐⭐</p>
-<p style="margin:0 0 16px;font-size:15px;line-height:1.6;color:#d1d5db;font-style:italic;">"Saí do mundo corporativo e hoje tenho minha própria franquia Acqualive. Em 2 anos, já recuperei todo o investimento e construí uma renda passiva que me dá liberdade."</p>
-<p style="margin:0;font-size:14px;font-weight:700;color:#ffffff;">Roberto Fernandes</p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;overflow:hidden;">
+<tr><td style="padding:4px 24px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="height:3px;background:linear-gradient(90deg,#f97316,#fbbf24);border-radius:0 0 4px 4px;"></td></tr></table></td></tr>
+<tr><td style="padding:20px 24px 24px;">
+<p style="margin:0 0 12px;font-size:36px;line-height:1;">❝</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.7;color:#e2e8f0;font-style:italic;">Saí do mundo corporativo e hoje tenho minha própria franquia Acqualive. Em 2 anos, já recuperei todo o investimento e construí uma renda passiva que me dá liberdade.</p>
+<table role="presentation" cellpadding="0" cellspacing="0">
+<tr>
+<td style="width:48px;height:48px;background:linear-gradient(135deg,#f97316,#ea580c);border-radius:50%;text-align:center;vertical-align:middle;"><p style="margin:0;font-size:20px;font-weight:700;color:#ffffff;">RF</p></td>
+<td style="padding-left:14px;">
+<p style="margin:0;font-size:15px;font-weight:700;color:#ffffff;">Roberto Fernandes</p>
 <p style="margin:2px 0 0;font-size:13px;color:#f97316;">Franqueado há 3 anos</p>
+</td>
+</tr>
+</table>
 </td></tr>
 </table>
 </td></tr>
 
 <!-- Testimonial 2 -->
 <tr><td style="padding:0 40px 16px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#161b26;border-radius:8px;border-left:4px solid #f97316;">
-<tr><td style="padding:24px;">
-<p style="margin:0 0 12px;font-size:24px;">⭐⭐⭐⭐⭐</p>
-<p style="margin:0 0 16px;font-size:15px;line-height:1.6;color:#d1d5db;font-style:italic;">"A Acqualive transformou minha forma de me hidratar. A água alcalina é fundamental para minha performance e recuperação. Recomendo para todos que buscam qualidade de vida."</p>
-<p style="margin:0;font-size:14px;font-weight:700;color:#ffffff;">Lyoto Machida</p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;overflow:hidden;">
+<tr><td style="padding:4px 24px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="height:3px;background:linear-gradient(90deg,#f97316,#fbbf24);border-radius:0 0 4px 4px;"></td></tr></table></td></tr>
+<tr><td style="padding:20px 24px 24px;">
+<p style="margin:0 0 12px;font-size:36px;line-height:1;">❝</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.7;color:#e2e8f0;font-style:italic;">A Acqualive transformou minha forma de me hidratar. A água alcalina é fundamental para minha performance e recuperação. Recomendo para todos que buscam qualidade de vida.</p>
+<table role="presentation" cellpadding="0" cellspacing="0">
+<tr>
+<td style="width:48px;height:48px;background:linear-gradient(135deg,#f97316,#ea580c);border-radius:50%;text-align:center;vertical-align:middle;"><p style="margin:0;font-size:20px;font-weight:700;color:#ffffff;">LM</p></td>
+<td style="padding-left:14px;">
+<p style="margin:0;font-size:15px;font-weight:700;color:#ffffff;">Lyoto Machida</p>
 <p style="margin:2px 0 0;font-size:13px;color:#f97316;">Campeão UFC</p>
+</td>
+</tr>
+</table>
 </td></tr>
 </table>
 </td></tr>
 
 <!-- How it works -->
-<tr><td style="padding:16px 40px 32px;">
-<h2 style="margin:0 0 20px;font-size:22px;color:#ffffff;text-align:center;">Como funciona a Franquia Solo?</h2>
+<tr><td style="padding:16px 40px 8px;text-align:center;">
+<p style="margin:0 0 4px;font-size:28px;">🔧</p>
+<h2 style="margin:0 0 20px;font-size:22px;color:#ffffff;">Como funciona a Franquia Solo?</h2>
+</td></tr>
+
+<tr><td style="padding:0 40px 12px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
 <tr>
-<td style="padding:16px;background-color:#161b26;border-radius:8px;vertical-align:top;" width="48%">
-<p style="margin:0 0 8px;font-size:28px;">📦</p>
-<p style="margin:0 0 4px;font-size:14px;font-weight:700;color:#ffffff;">Enxoval de Produtos</p>
-<p style="margin:0;font-size:13px;line-height:1.5;color:#6b7280;">Seu investimento volta em purificadores para vender e lucrar.</p>
+<td width="48%" style="padding:20px 16px;background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;text-align:center;vertical-align:top;">
+<p style="margin:0 0 10px;font-size:32px;">📦</p>
+<p style="margin:0 0 6px;font-size:14px;font-weight:700;color:#ffffff;">Enxoval de Produtos</p>
+<p style="margin:0;font-size:12px;line-height:1.5;color:#94a3b8;">Seu investimento volta em purificadores para vender e lucrar.</p>
 </td>
 <td width="4%"></td>
-<td style="padding:16px;background-color:#161b26;border-radius:8px;vertical-align:top;" width="48%">
-<p style="margin:0 0 8px;font-size:28px;">🏷️</p>
-<p style="margin:0 0 4px;font-size:14px;font-weight:700;color:#ffffff;">Direito de Uso da Marca</p>
-<p style="margin:0;font-size:13px;line-height:1.5;color:#6b7280;">Utilize a força da Acqualive para fechar negócios.</p>
+<td width="48%" style="padding:20px 16px;background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;text-align:center;vertical-align:top;">
+<p style="margin:0 0 10px;font-size:32px;">🏷️</p>
+<p style="margin:0 0 6px;font-size:14px;font-weight:700;color:#ffffff;">Uso da Marca</p>
+<p style="margin:0;font-size:12px;line-height:1.5;color:#94a3b8;">Utilize a força da Acqualive para fechar negócios.</p>
 </td>
 </tr>
-<tr><td colspan="3" style="height:12px;"></td></tr>
+</table>
+</td></tr>
+<tr><td style="padding:0 40px 32px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
 <tr>
-<td style="padding:16px;background-color:#161b26;border-radius:8px;vertical-align:top;" width="48%">
-<p style="margin:0 0 8px;font-size:28px;">📊</p>
-<p style="margin:0 0 4px;font-size:14px;font-weight:700;color:#ffffff;">Tabela Comercial Exclusiva</p>
-<p style="margin:0;font-size:13px;line-height:1.5;color:#6b7280;">Margens agressivas para recuperar o investimento rápido.</p>
+<td width="48%" style="padding:20px 16px;background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;text-align:center;vertical-align:top;">
+<p style="margin:0 0 10px;font-size:32px;">📊</p>
+<p style="margin:0 0 6px;font-size:14px;font-weight:700;color:#ffffff;">Tabela Exclusiva</p>
+<p style="margin:0;font-size:12px;line-height:1.5;color:#94a3b8;">Margens agressivas para retorno rápido.</p>
 </td>
 <td width="4%"></td>
-<td style="padding:16px;background-color:#161b26;border-radius:8px;vertical-align:top;" width="48%">
-<p style="margin:0 0 8px;font-size:28px;">🚀</p>
-<p style="margin:0 0 4px;font-size:14px;font-weight:700;color:#ffffff;">Modelo Escalável</p>
-<p style="margin:0;font-size:13px;line-height:1.5;color:#6b7280;">Comece sozinho e monte sua equipe quando quiser.</p>
+<td width="48%" style="padding:20px 16px;background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;text-align:center;vertical-align:top;">
+<p style="margin:0 0 10px;font-size:32px;">🚀</p>
+<p style="margin:0 0 6px;font-size:14px;font-weight:700;color:#ffffff;">Modelo Escalável</p>
+<p style="margin:0;font-size:12px;line-height:1.5;color:#94a3b8;">Comece sozinho e monte sua equipe quando quiser.</p>
 </td>
 </tr>
 </table>
 </td></tr>
 
 <!-- CTA -->
+<tr><td style="padding:0 40px 16px;text-align:center;">
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+<tr><td style="background:linear-gradient(135deg,#f97316,#ea580c);border-radius:10px;padding:2px;">
+<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:block;padding:16px 44px;color:#ffffff;text-decoration:none;font-size:16px;font-weight:700;">QUERO SER UM FRANQUEADO →</a>
+</td></tr>
+</table>
+</td></tr>
 <tr><td style="padding:0 40px 40px;text-align:center;">
-<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:inline-block;padding:16px 40px;background-color:#f97316;color:#ffffff;text-decoration:none;font-size:16px;font-weight:700;border-radius:8px;">QUERO SER UM FRANQUEADO →</a>
-<p style="margin:16px 0 0;font-size:13px;color:#6b7280;">No sábado, uma surpresa especial para você. Fique atento!</p>
+<p style="margin:0;font-size:13px;color:#64748b;">🎁 No sábado, uma surpresa especial para você. Fique atento!</p>
 </td></tr>
 
 <!-- Footer -->
-<tr><td style="padding:24px 40px;background-color:#0a0e14;text-align:center;border-top:1px solid #1c2333;">
+<tr><td style="padding:24px 40px;background:linear-gradient(180deg,#0a0e14,#060810);text-align:center;border-top:1px solid #1c2333;">
 <p style="margin:0;font-size:12px;color:#4b5563;">© 2025 Acqualive. Todos os direitos reservados.</p>
 </td></tr>
 
@@ -292,7 +393,7 @@ const EMAILS = [
   },
   {
     day: "Sábado",
-    subject: "⚡ Oferta exclusiva: Franquia Solo SEM taxa de franquia — só até esta semana",
+    subject: "⚡ Oferta exclusiva: Franquia Solo SEM taxa de franquia, só até esta semana",
     html: `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -303,65 +404,99 @@ const EMAILS = [
 <body style="margin:0;padding:0;background-color:#ffffff;font-family:Arial,Helvetica,sans-serif;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#ffffff;">
 <tr><td align="center" style="padding:20px 0;">
-<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#0d1117;border-radius:12px;overflow:hidden;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#0d1117;border-radius:16px;overflow:hidden;">
 
 <!-- Header -->
-<tr><td style="padding:32px 40px 24px;text-align:center;border-bottom:1px solid #1c2333;">
-<img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663153389074/noYGaqqpOTGvWHLS.png" alt="Acqualive" width="180" style="display:block;margin:0 auto;">
+<tr><td style="background:linear-gradient(135deg,#0d1117 0%,#1a2332 100%);padding:32px 40px 24px;text-align:center;">
+<img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663153389074/noYGaqqpOTGvWHLS.png" alt="Acqualive" width="160" style="display:block;margin:0 auto;">
 </td></tr>
 
 <!-- Urgency Banner -->
 <tr><td style="padding:0;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#f97316,#ea580c);">
-<tr><td style="padding:16px;text-align:center;">
-<p style="margin:0;font-size:14px;font-weight:700;color:#ffffff;text-transform:uppercase;letter-spacing:1px;">⚡ Campanha por tempo limitado ⚡</p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#f97316,#dc2626);">
+<tr><td style="padding:20px;text-align:center;">
+<p style="margin:0 0 4px;font-size:28px;">⚡</p>
+<p style="margin:0;font-size:16px;font-weight:700;color:#ffffff;text-transform:uppercase;letter-spacing:1.5px;">Campanha por tempo limitado</p>
+<p style="margin:6px 0 0;font-size:13px;color:#fef3c7;">Últimas vagas disponíveis para sua região</p>
 </td></tr>
 </table>
 </td></tr>
 
-<!-- Hero -->
+<!-- Hero Product Image -->
+<tr><td style="padding:0;">
+<img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663153389074/XwFuetyxeUpzCqxU.png" alt="Acqualive - Transformar a água para cuidar da vida" width="600" style="display:block;width:100%;height:auto;">
+</td></tr>
+
+<!-- Content -->
 <tr><td style="padding:40px 40px 16px;">
-<p style="margin:0 0 8px;font-size:13px;color:#f97316;text-transform:uppercase;letter-spacing:2px;font-weight:700;">Oferta Exclusiva</p>
-<h1 style="margin:0 0 20px;font-size:28px;line-height:1.3;color:#ffffff;">Esta semana, sua chance de empreender <span style="color:#f97316;">sem taxa de franquia.</span></h1>
-<p style="margin:0 0 16px;font-size:16px;line-height:1.6;color:#9ca3af;">Ao longo desta semana, você viu:</p>
-<table role="presentation" cellpadding="0" cellspacing="0" style="margin-bottom:20px;">
-<tr><td style="padding:4px 0;font-size:15px;color:#d1d5db;">✅ Como a Franquia Solo funciona sem loja física</td></tr>
-<tr><td style="padding:4px 0;font-size:15px;color:#d1d5db;">✅ O mercado crescendo 16,5% ao ano</td></tr>
-<tr><td style="padding:4px 0;font-size:15px;color:#d1d5db;">✅ Franqueados recuperando investimento em até 18 meses</td></tr>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+<tr><td style="text-align:center;padding-bottom:16px;">
+<p style="margin:0;display:inline-block;padding:6px 20px;background:linear-gradient(135deg,#f97316,#ea580c);color:#ffffff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;border-radius:20px;">🔥 Oferta Exclusiva</p>
+</td></tr>
 </table>
-<p style="margin:0 0 24px;font-size:16px;line-height:1.6;color:#9ca3af;">Agora, <strong style="color:#ffffff;">a melhor parte</strong>:</p>
+<h1 style="margin:0 0 20px;font-size:28px;line-height:1.3;color:#ffffff;text-align:center;">Esta semana, sua chance de empreender <span style="color:#f97316;">sem taxa de franquia.</span></h1>
+
+<!-- Divider -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:0 0 24px;text-align:center;"><table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td style="width:40px;height:2px;background-color:#f97316;"></td><td style="width:12px;"></td><td style="width:8px;height:8px;border-radius:50%;background-color:#f97316;"></td><td style="width:12px;"></td><td style="width:40px;height:2px;background-color:#f97316;"></td></tr></table></td></tr></table>
+
+<p style="margin:0 0 16px;font-size:16px;line-height:1.7;color:#d1d5db;">Ao longo desta semana, você viu:</p>
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 20px;">
+<tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">
+<table role="presentation" cellpadding="0" cellspacing="0"><tr>
+<td style="width:28px;height:28px;background-color:#065f46;border-radius:50%;text-align:center;vertical-align:middle;"><p style="margin:0;font-size:14px;color:#ffffff;">✓</p></td>
+<td style="padding-left:12px;font-size:15px;color:#e2e8f0;">Como a Franquia Solo funciona sem loja física</td>
+</tr></table>
+</td></tr>
+<tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">
+<table role="presentation" cellpadding="0" cellspacing="0"><tr>
+<td style="width:28px;height:28px;background-color:#065f46;border-radius:50%;text-align:center;vertical-align:middle;"><p style="margin:0;font-size:14px;color:#ffffff;">✓</p></td>
+<td style="padding-left:12px;font-size:15px;color:#e2e8f0;">O mercado crescendo 16,5% ao ano</td>
+</tr></table>
+</td></tr>
+<tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">
+<table role="presentation" cellpadding="0" cellspacing="0"><tr>
+<td style="width:28px;height:28px;background-color:#065f46;border-radius:50%;text-align:center;vertical-align:middle;"><p style="margin:0;font-size:14px;color:#ffffff;">✓</p></td>
+<td style="padding-left:12px;font-size:15px;color:#e2e8f0;">Franqueados recuperando investimento em até 18 meses</td>
+</tr></table>
+</td></tr>
+</table>
+<p style="margin:0 0 24px;font-size:18px;line-height:1.6;color:#ffffff;text-align:center;"><strong>Agora, a melhor parte:</strong></p>
 </td></tr>
 
 <!-- Offer Box -->
 <tr><td style="padding:0 40px 24px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#161b26;border:2px solid #f97316;border-radius:12px;overflow:hidden;">
-<tr><td style="padding:32px;text-align:center;">
-<p style="margin:0 0 4px;font-size:13px;color:#6b7280;text-transform:uppercase;">Franquia Solo Acqualive</p>
-<p style="margin:0 0 16px;font-size:14px;color:#f97316;font-weight:600;">OFERTA EXCLUSIVA</p>
-<p style="margin:0 0 4px;font-size:16px;color:#9ca3af;">A partir de</p>
-<p style="margin:0 0 20px;font-size:42px;font-weight:800;color:#ffffff;">R$ 30 mil</p>
-<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 20px;">
-<tr><td style="padding:6px 0;font-size:14px;color:#d1d5db;">✓ <strong>100% do investimento</strong> convertido em produtos</td></tr>
-<tr><td style="padding:6px 0;font-size:14px;color:#d1d5db;">✓ <strong>Sem loja física</strong> — trabalhe de qualquer lugar</td></tr>
-<tr><td style="padding:6px 0;font-size:14px;color:#d1d5db;">✓ <strong>Treinamento completo</strong> e suporte contínuo</td></tr>
-<tr><td style="padding:6px 0;font-size:14px;color:#d1d5db;">✓ <strong>Material de marketing</strong> profissional</td></tr>
-<tr><td style="padding:6px 0;font-size:14px;color:#d1d5db;">✓ <strong>Mentoria</strong> com franqueados de sucesso</td></tr>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:2px solid #f97316;border-radius:16px;overflow:hidden;">
+<!-- Orange top bar -->
+<tr><td style="background:linear-gradient(135deg,#f97316,#ea580c);padding:16px;text-align:center;">
+<p style="margin:0;font-size:14px;font-weight:700;color:#ffffff;text-transform:uppercase;letter-spacing:1px;">Franquia Solo Acqualive</p>
+</td></tr>
+<tr><td style="background:linear-gradient(180deg,#1e293b,#0f172a);padding:32px;text-align:center;">
+<p style="margin:0 0 4px;font-size:16px;color:#94a3b8;">A partir de</p>
+<p style="margin:0 0 24px;font-size:48px;font-weight:800;color:#ffffff;">R$ 30 mil</p>
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 24px;">
+<tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">✅ <strong>100% do investimento</strong> convertido em produtos</td></tr>
+<tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">✅ <strong>Sem loja física</strong>, trabalhe de qualquer lugar</td></tr>
+<tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">✅ <strong>Treinamento completo</strong> e suporte contínuo</td></tr>
+<tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">✅ <strong>Material de marketing</strong> profissional</td></tr>
+<tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">✅ <strong>Mentoria</strong> com franqueados de sucesso</td></tr>
 </table>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px;">
+
+<!-- Stats mini -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
 <tr>
-<td width="33%" style="text-align:center;padding:12px 4px;background-color:#0d1117;border-radius:6px;">
-<p style="margin:0;font-size:16px;font-weight:700;color:#f97316;">6-18 meses</p>
-<p style="margin:2px 0 0;font-size:11px;color:#6b7280;">Payback</p>
+<td width="32%" style="text-align:center;padding:16px 4px;background-color:#0d1117;border-radius:8px;">
+<p style="margin:0;font-size:20px;font-weight:800;color:#f97316;">6-18</p>
+<p style="margin:2px 0 0;font-size:10px;color:#94a3b8;text-transform:uppercase;">meses payback</p>
 </td>
 <td width="2%"></td>
-<td width="33%" style="text-align:center;padding:12px 4px;background-color:#0d1117;border-radius:6px;">
-<p style="margin:0;font-size:16px;font-weight:700;color:#f97316;">18-25%</p>
-<p style="margin:2px 0 0;font-size:11px;color:#6b7280;">Lucratividade</p>
+<td width="32%" style="text-align:center;padding:16px 4px;background-color:#0d1117;border-radius:8px;">
+<p style="margin:0;font-size:20px;font-weight:800;color:#f97316;">18-25%</p>
+<p style="margin:2px 0 0;font-size:10px;color:#94a3b8;text-transform:uppercase;">lucratividade</p>
 </td>
 <td width="2%"></td>
-<td width="33%" style="text-align:center;padding:12px 4px;background-color:#0d1117;border-radius:6px;">
-<p style="margin:0;font-size:16px;font-weight:700;color:#f97316;">R$850</p>
-<p style="margin:2px 0 0;font-size:11px;color:#6b7280;">Renda/cliente/ano</p>
+<td width="32%" style="text-align:center;padding:16px 4px;background-color:#0d1117;border-radius:8px;">
+<p style="margin:0;font-size:20px;font-weight:800;color:#f97316;">R$850</p>
+<p style="margin:2px 0 0;font-size:10px;color:#94a3b8;text-transform:uppercase;">renda/cliente/ano</p>
 </td>
 </tr>
 </table>
@@ -371,19 +506,27 @@ const EMAILS = [
 
 <!-- Final CTA -->
 <tr><td style="padding:0 40px 16px;text-align:center;">
-<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:inline-block;padding:18px 48px;background-color:#f97316;color:#ffffff;text-decoration:none;font-size:18px;font-weight:700;border-radius:8px;letter-spacing:0.5px;">QUERO GARANTIR MINHA VAGA →</a>
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+<tr><td style="background:linear-gradient(135deg,#f97316,#ea580c);border-radius:12px;padding:2px;">
+<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:block;padding:20px 48px;color:#ffffff;text-decoration:none;font-size:18px;font-weight:700;letter-spacing:0.5px;">🔥 QUERO GARANTIR MINHA VAGA →</a>
 </td></tr>
-<tr><td style="padding:0 40px 12px;text-align:center;">
-<p style="margin:0;font-size:13px;color:#6b7280;">Últimas vagas disponíveis para sua região</p>
+</table>
+</td></tr>
+<tr><td style="padding:8px 40px 16px;text-align:center;">
+<p style="margin:0;font-size:13px;color:#ef4444;font-weight:600;">⏰ Últimas vagas disponíveis para sua região</p>
 </td></tr>
 <tr><td style="padding:0 40px 40px;text-align:center;">
-<a href="https://wa.me/554391280555?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Franquia%20Solo%20Acqualive" target="_blank" style="display:inline-block;padding:14px 32px;background-color:#25d366;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;">💬 Ou fale direto no WhatsApp</a>
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+<tr><td style="background-color:#25d366;border-radius:10px;">
+<a href="https://wa.me/554391280555?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Franquia%20Solo%20Acqualive" target="_blank" style="display:block;padding:14px 32px;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">💬 Ou fale direto no WhatsApp</a>
+</td></tr>
+</table>
 </td></tr>
 
 <!-- Footer -->
-<tr><td style="padding:24px 40px;background-color:#0a0e14;text-align:center;border-top:1px solid #1c2333;">
+<tr><td style="padding:24px 40px;background:linear-gradient(180deg,#0a0e14,#060810);text-align:center;border-top:1px solid #1c2333;">
 <p style="margin:0;font-size:12px;color:#4b5563;">© 2025 Acqualive. Todos os direitos reservados.</p>
-<p style="margin:8px 0 0;font-size:12px;color:#4b5563;">Você recebeu este email porque é cliente Acqualive.</p>
+<p style="margin:8px 0 0;font-size:11px;color:#374151;">Você recebeu este email porque é cliente Acqualive.</p>
 </td></tr>
 
 </table>
@@ -420,7 +563,7 @@ const EmailTemplates = () => {
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-3">
           <div className="flex items-center gap-2 flex-1">
             <h1 className="text-sm font-bold text-[#f97316]">Email {currentIndex + 1}/4</h1>
-            <span className="text-sm text-gray-400">— {email.day}</span>
+            <span className="text-sm text-gray-400">{email.day}</span>
           </div>
 
           <div className="flex items-center gap-2">
@@ -504,7 +647,7 @@ const EmailTemplates = () => {
               srcDoc={email.html}
               title={`Email ${currentIndex + 1}`}
               className="w-full border-0"
-              style={{ minHeight: "800px" }}
+              style={{ minHeight: "900px" }}
             />
           </div>
         ) : (
