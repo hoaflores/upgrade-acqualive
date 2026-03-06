@@ -807,7 +807,7 @@ const BlogTemplates = () => {
   const [copied, setCopied] = useState(false);
 
   const article = ARTICLES[currentIndex];
-  const resolvedHtml = article.html.replaceAll("https://upgrade-acqualive.lovable.app", window.location.origin);
+  const resolvedHtml = article.html.split("https://upgrade-acqualive.lovable.app").join(window.location.origin);
 
   const copyHtml = () => {
     navigator.clipboard.writeText(article.html);
