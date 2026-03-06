@@ -41,6 +41,7 @@ const App = () => (
             <Route path="/acqualive-club" element={<Bonifiq />} />
             <Route path="/indica-club" element={<IndicaClub />} />
             <Route path="/email-templates" element={<EmailTemplates />} />
+            <Route path="/blog-templates" element={<BlogTemplates />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
