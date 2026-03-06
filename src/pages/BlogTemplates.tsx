@@ -12,141 +12,224 @@ const ARTICLES = [
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Qual é o melhor filtro de água? Guia Completo 2025</title>
-<meta name="description" content="Descubra qual é o melhor filtro de água para sua casa. Comparamos filtros de barro, purificadores comuns, filtros de osmose reversa e filtros de água alcalina ionizada.">
+<title>Qual é o Melhor Filtro de Água? Guia Completo 2025 | Acqualive</title>
+<meta name="description" content="Descubra qual é o melhor filtro de água para sua casa em 2025. Comparamos filtro de barro, purificadores, osmose reversa e filtro de água alcalina ionizada. Saiba qual filtro de água comprar.">
+<meta name="keywords" content="filtro de água, melhor filtro de água, água alcalina, filtro de água alcalina, purificador de água, água alcalina ionizada, filtro de água para casa, qual melhor filtro de água, água filtrada, purificador de água alcalina">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Acqualive">
+<link rel="canonical" href="https://blog.acqualive.com.br/qual-o-melhor-filtro-de-agua/">
+<meta property="og:title" content="Qual é o Melhor Filtro de Água? Guia Completo 2025">
+<meta property="og:description" content="Analisamos todos os tipos de filtro de água do mercado. Descubra qual filtro de água é o melhor para a saúde da sua família.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Qual é o Melhor Filtro de Água? Guia Completo 2025",
+  "description": "Comparativo completo entre todos os tipos de filtro de água disponíveis no mercado brasileiro. Descubra qual filtro de água é ideal para sua casa.",
+  "author": {"@type": "Organization", "name": "Acqualive"},
+  "publisher": {"@type": "Organization", "name": "Acqualive"},
+  "datePublished": "2025-03-01",
+  "dateModified": "2025-03-06",
+  "mainEntityOfPage": {"@type": "WebPage"},
+  "keywords": "filtro de água, água alcalina, purificador de água, filtro de água alcalina ionizada, melhor filtro de água"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qual é o melhor filtro de água para casa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O melhor filtro de água para casa é o purificador de água alcalina ionizada, pois além de filtrar contaminantes, ele alcaliniza a água, adiciona minerais essenciais e possui poder antioxidante."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Água alcalina é realmente melhor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, a água alcalina ionizada é superior à água comum pois equilibra o pH do organismo, é rica em minerais como magnésio e possui PRAL negativo, que é o poder alcalinizante real comprovado cientificamente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Filtro de barro é um bom filtro de água?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O filtro de barro é uma tradição brasileira e possui vantagens como manter a água fresca, porém não remove cloro, agrotóxicos ou vírus, e não adiciona nenhum benefício à água filtrada."
+      }
+    }
+  ]
+}
+</script>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
   
   * { margin: 0; padding: 0; box-sizing: border-box; }
   
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background-color: #ffffff;
-    color: #1a1a2e;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #fafbfc;
+    color: #18181b;
     line-height: 1.8;
     -webkit-font-smoothing: antialiased;
   }
 
+  /* HEADER */
   .article-header {
-    background: linear-gradient(135deg, #0a1628 0%, #162544 50%, #0d3b66 100%);
-    padding: 80px 24px 100px;
-    text-align: center;
+    background: #08101e;
+    padding: 64px 24px 0;
     position: relative;
     overflow: hidden;
   }
-
   .article-header::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: radial-gradient(ellipse at 30% 80%, rgba(59,130,246,0.15) 0%, transparent 60%),
-                radial-gradient(ellipse at 70% 20%, rgba(6,182,212,0.1) 0%, transparent 50%);
+    background: 
+      radial-gradient(ellipse at 20% 100%, rgba(59,130,246,0.12) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 0%, rgba(6,182,212,0.08) 0%, transparent 50%);
   }
-
-  .header-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
-
+  .header-inner {
+    position: relative; z-index: 1;
+    max-width: 720px; margin: 0 auto;
+    text-align: center;
+    padding-bottom: 48px;
+  }
   .badge {
     display: inline-block;
-    background: rgba(59,130,246,0.2);
-    border: 1px solid rgba(59,130,246,0.3);
+    background: rgba(59,130,246,0.12);
+    border: 1px solid rgba(59,130,246,0.25);
     color: #93c5fd;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 6px 20px;
+    letter-spacing: 2.5px;
+    padding: 6px 18px;
     border-radius: 100px;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
-
   .article-header h1 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(32px, 5vw, 56px);
-    font-weight: 800;
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 900;
     color: #ffffff;
     line-height: 1.15;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+    letter-spacing: -0.02em;
   }
-
   .article-header h1 span { color: #60a5fa; }
-
-  .article-header .subtitle {
-    font-size: 18px;
+  .header-desc {
+    font-size: 17px;
     color: #94a3b8;
-    max-width: 600px;
+    max-width: 560px;
     margin: 0 auto;
     line-height: 1.7;
   }
-
-  .article-header .meta {
-    margin-top: 28px;
+  .header-meta {
+    margin-top: 24px;
     font-size: 13px;
-    color: #64748b;
+    color: #475569;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
   }
-  .article-header .meta span { color: #93c5fd; font-weight: 600; }
-
-  .article-body {
-    max-width: 760px;
-    margin: -40px auto 0;
-    padding: 0 24px 80px;
+  .header-meta span { color: #93c5fd; font-weight: 600; }
+  .hero-img-wrap {
     position: relative;
     z-index: 2;
+    max-width: 860px;
+    margin: 0 auto;
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+    box-shadow: 0 -4px 40px rgba(0,0,0,0.3);
+  }
+  .hero-img-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
-  .content-card {
-    background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 4px 40px rgba(0,0,0,0.08);
-    padding: 48px clamp(24px, 5vw, 56px);
+  /* BODY */
+  .article-body {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
   }
 
-  /* Table of Contents */
+  /* TOC */
   .toc {
-    background: linear-gradient(135deg, #f0f9ff, #eff6ff);
-    border: 1px solid #bfdbfe;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
     border-radius: 16px;
     padding: 28px 32px;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
-  .toc h3 {
-    font-size: 14px;
+  .toc-title {
+    font-size: 13px;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #1e40af;
+    letter-spacing: 2px;
+    color: #3b82f6;
     margin-bottom: 16px;
   }
   .toc ol { padding-left: 20px; }
   .toc li {
     font-size: 14px;
     color: #3b82f6;
-    padding: 4px 0;
-    cursor: pointer;
+    padding: 5px 0;
+    line-height: 1.5;
   }
-  .toc li:hover { color: #1d4ed8; text-decoration: underline; }
 
   h2 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(24px, 3.5vw, 32px);
+    font-size: clamp(22px, 3.5vw, 30px);
     font-weight: 800;
-    color: #0f172a;
-    margin: 48px 0 20px;
-    line-height: 1.3;
+    color: #09090b;
+    margin: 56px 0 18px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
   }
-
   h3 {
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 700;
-    color: #1e293b;
-    margin: 32px 0 12px;
+    color: #18181b;
+    margin: 36px 0 12px;
+  }
+  p {
+    margin-bottom: 18px;
+    font-size: 16.5px;
+    color: #3f3f46;
+  }
+  .lead {
+    font-size: 18px;
+    color: #52525b;
+    line-height: 1.9;
   }
 
-  p { margin-bottom: 18px; font-size: 16.5px; color: #374151; }
+  /* IMAGES */
+  .article-img {
+    width: 100%;
+    border-radius: 14px;
+    margin: 28px 0;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  }
+  .img-caption {
+    text-align: center;
+    font-size: 13px;
+    color: #a1a1aa;
+    margin: -16px 0 28px;
+  }
 
-  .lead { font-size: 18px; color: #475569; line-height: 1.9; }
-
+  /* BOXES */
   .highlight-box {
-    background: linear-gradient(135deg, #0a1628, #162544);
+    background: #08101e;
     border-radius: 16px;
     padding: 32px;
     margin: 36px 0;
@@ -157,95 +240,109 @@ const ARTICLES = [
   .highlight-box strong { color: #ffffff; }
 
   .info-box {
-    background: #fffbeb;
-    border-left: 4px solid #f59e0b;
-    border-radius: 0 12px 12px 0;
+    background: #fefce8;
+    border-left: 4px solid #eab308;
+    border-radius: 0 14px 14px 0;
     padding: 20px 24px;
     margin: 28px 0;
   }
-  .info-box p { color: #92400e; margin: 0; font-size: 15px; }
+  .info-box p { color: #854d0e; margin: 0; font-size: 15px; }
 
-  .comparison-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
+  /* COMPARISON TABLE */
+  .table-wrap {
+    overflow-x: auto;
     margin: 32px 0;
     border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+  }
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
   }
   .comparison-table thead th {
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: #ffffff;
-    font-size: 13px;
+    background: #09090b;
+    color: #fafafa;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 16px 14px;
+    padding: 16px 12px;
     text-align: center;
+    white-space: nowrap;
   }
-  .comparison-table thead th:first-child { text-align: left; }
+  .comparison-table thead th:first-child { text-align: left; padding-left: 20px; }
   .comparison-table thead th.winner {
-    background: linear-gradient(135deg, #1e40af, #3b82f6);
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
   }
   .comparison-table tbody td {
-    padding: 14px;
+    padding: 13px 12px;
     font-size: 14px;
-    border-bottom: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f4f4f5;
     text-align: center;
-    color: #475569;
+    color: #52525b;
+    background: #ffffff;
   }
   .comparison-table tbody td:first-child {
     text-align: left;
-    font-weight: 500;
-    color: #1e293b;
+    font-weight: 600;
+    color: #18181b;
+    padding-left: 20px;
   }
   .comparison-table tbody tr:last-child td { border-bottom: none; }
-  .comparison-table tbody tr:hover { background: #f8fafc; }
-  .check { color: #22c55e; font-weight: 700; font-size: 18px; }
-  .cross { color: #ef4444; font-weight: 700; font-size: 18px; }
-  .partial { color: #f59e0b; font-weight: 700; font-size: 14px; }
+  .check { color: #16a34a; font-weight: 700; font-size: 18px; }
+  .cross { color: #dc2626; font-weight: 700; font-size: 18px; }
+  .partial { color: #d97706; font-weight: 600; font-size: 13px; }
 
+  /* BENEFIT GRID */
   .benefit-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
+    gap: 14px;
     margin: 28px 0;
   }
   .benefit-card {
-    background: linear-gradient(135deg, #f0f9ff, #ffffff);
-    border: 1px solid #dbeafe;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
     border-radius: 14px;
-    padding: 24px 20px;
+    padding: 24px 18px;
     text-align: center;
+    transition: box-shadow 0.2s;
   }
-  .benefit-card .icon { font-size: 32px; margin-bottom: 10px; }
-  .benefit-card h4 { font-size: 14px; font-weight: 700; color: #1e40af; margin-bottom: 6px; }
-  .benefit-card p { font-size: 13px; color: #64748b; margin: 0; line-height: 1.5; }
+  .benefit-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .benefit-icon {
+    width: 48px; height: 48px;
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 14px;
+    font-size: 13px; font-weight: 800; color: #2563eb;
+  }
+  .benefit-card h4 { font-size: 14px; font-weight: 700; color: #1d4ed8; margin-bottom: 6px; }
+  .benefit-card p { font-size: 13px; color: #71717a; margin: 0; line-height: 1.5; }
 
-  /* CTA Section */
+  /* CTA */
   .cta-section {
-    background: linear-gradient(135deg, #0a1628 0%, #162544 50%, #0d3b66 100%);
+    background: #08101e;
     border-radius: 20px;
-    padding: 48px 36px;
+    padding: 48px 32px;
     text-align: center;
-    margin: 48px 0 24px;
+    margin: 56px 0 24px;
     position: relative;
     overflow: hidden;
   }
   .cta-section::before {
     content: '';
     position: absolute;
-    top: -50%; right: -30%;
-    width: 300px; height: 300px;
-    background: radial-gradient(circle, rgba(59,130,246,0.15), transparent 70%);
+    top: -40%; right: -20%;
+    width: 280px; height: 280px;
+    background: radial-gradient(circle, rgba(59,130,246,0.12), transparent 70%);
     border-radius: 50%;
   }
   .cta-section h2 {
-    font-family: 'Playfair Display', Georgia, serif;
     color: #ffffff;
     margin: 0 0 12px;
-    font-size: 28px;
+    font-size: 26px;
     position: relative;
   }
   .cta-section h2 span { color: #60a5fa; }
@@ -259,98 +356,97 @@ const ARTICLES = [
     display: inline-block;
     background: linear-gradient(135deg, #3b82f6, #2563eb);
     color: #ffffff;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
-    padding: 16px 40px;
+    padding: 16px 36px;
     border-radius: 12px;
     text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s;
     position: relative;
-    box-shadow: 0 4px 20px rgba(59,130,246,0.4);
+    box-shadow: 0 4px 24px rgba(37,99,235,0.35);
+    letter-spacing: 0.3px;
+    transition: transform 0.2s, box-shadow 0.2s;
   }
   .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(59,130,246,0.5);
+    box-shadow: 0 8px 32px rgba(37,99,235,0.45);
   }
 
   .mid-cta {
-    background: linear-gradient(135deg, #eff6ff, #dbeafe);
-    border: 1px solid #bfdbfe;
+    background: #ffffff;
+    border: 1px solid #dbeafe;
     border-radius: 16px;
-    padding: 28px 32px;
+    padding: 24px 28px;
     margin: 36px 0;
     text-align: center;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.03);
   }
-  .mid-cta p { color: #1e40af; font-weight: 600; margin-bottom: 16px; font-size: 16px; }
+  .mid-cta p { color: #1e40af; font-weight: 600; margin-bottom: 14px; font-size: 15px; }
   .mid-cta a {
     display: inline-block;
     background: #2563eb;
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
-    padding: 12px 28px;
+    padding: 11px 24px;
     border-radius: 10px;
     text-decoration: none;
+    transition: background 0.2s;
   }
+  .mid-cta a:hover { background: #1d4ed8; }
 
+  /* CHECK LIST */
   ul.check-list {
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    margin: 18px 0;
   }
   ul.check-list li {
-    padding: 8px 0 8px 32px;
+    padding: 7px 0 7px 28px;
     position: relative;
     font-size: 15.5px;
-    color: #374151;
+    color: #3f3f46;
   }
   ul.check-list li::before {
-    content: '✓';
+    content: '\\2713';
     position: absolute;
     left: 0;
-    color: #22c55e;
+    color: #16a34a;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   blockquote {
-    border-left: 4px solid #3b82f6;
+    border-left: 3px solid #3b82f6;
     background: #f8fafc;
-    padding: 20px 24px;
+    padding: 18px 24px;
     margin: 28px 0;
-    border-radius: 0 12px 12px 0;
+    border-radius: 0 14px 14px 0;
     font-style: italic;
-    color: #475569;
+    color: #52525b;
   }
 
   .divider {
     height: 1px;
-    background: linear-gradient(90deg, transparent, #cbd5e1, transparent);
-    margin: 48px 0;
+    background: linear-gradient(90deg, transparent, #d4d4d8, transparent);
+    margin: 56px 0;
   }
 
+  /* FOOTER */
   .footer-article {
     text-align: center;
     padding: 40px 24px;
-    background: #f8fafc;
-    border-top: 1px solid #e2e8f0;
+    background: #f4f4f5;
+    border-top: 1px solid #e4e4e7;
   }
-  .footer-article img { height: 32px; margin-bottom: 12px; }
-  .footer-article p { font-size: 13px; color: #94a3b8; }
-
-  .numbered-section {
-    counter-reset: section-counter;
-  }
-  .numbered-section h2::before {
-    counter-increment: section-counter;
-  }
+  .footer-article p { font-size: 13px; color: #a1a1aa; }
 
   @media (max-width: 640px) {
-    .article-header { padding: 48px 20px 72px; }
-    .content-card { padding: 28px 20px; }
+    .article-header { padding: 40px 16px 0; }
+    .header-inner { padding-bottom: 32px; }
+    .article-body { padding: 32px 16px 60px; }
     .cta-section { padding: 32px 20px; }
-    .comparison-table { font-size: 12px; }
-    .comparison-table thead th, .comparison-table tbody td { padding: 10px 6px; }
+    .comparison-table thead th, .comparison-table tbody td { padding: 10px 8px; font-size: 12px; }
+    .benefit-grid { grid-template-columns: 1fr 1fr; }
   }
 </style>
 </head>
@@ -358,160 +454,176 @@ const ARTICLES = [
 
 <!-- HEADER -->
 <header class="article-header">
-  <div class="header-content">
+  <div class="header-inner">
     <div class="badge">Guia Completo 2025</div>
     <h1>Qual é o melhor <span>filtro de água</span>?</h1>
-    <p class="subtitle">Analisamos todos os tipos de filtros e purificadores do mercado para você tomar a melhor decisão para a saúde da sua família.</p>
-    <p class="meta">Por <span>Equipe Acqualive</span> · Atualizado em Março 2025 · Leitura: 12 min</p>
+    <p class="header-desc">Analisamos todos os tipos de filtro de água e purificador de água do mercado para você fazer a melhor escolha para a saúde da sua família.</p>
+    <div class="header-meta">
+      <span>Equipe Acqualive</span>
+      <span>Março 2025</span>
+      <span>Leitura: 12 min</span>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://upgrade-acqualive.lovable.app/images/blog-agua-pura.jpg" alt="Água pura e cristalina sendo servida em um copo de vidro, representando a qualidade de um bom filtro de água" width="860" height="430" loading="eager">
   </div>
 </header>
 
 <!-- ARTICLE BODY -->
 <main class="article-body">
-  <div class="content-card">
 
-    <!-- TABLE OF CONTENTS -->
-    <nav class="toc">
-      <h3>📑 Índice do Artigo</h3>
-      <ol>
-        <li>Introdução: Por que a escolha do filtro importa tanto?</li>
-        <li>Os tipos de filtros de água disponíveis</li>
-        <li>Filtro de barro: tradição com limitações</li>
-        <li>Filtros de torneira e chuveiro</li>
-        <li>Purificadores convencionais</li>
-        <li>Osmose reversa: pureza extrema, mas a que custo?</li>
-        <li>Filtro de água alcalina ionizada: a evolução</li>
-        <li>Comparativo completo entre todos os tipos</li>
-        <li>5 critérios essenciais para escolher o melhor filtro</li>
-        <li>Por que a Acqualive é a melhor escolha</li>
-      </ol>
-    </nav>
+  <!-- TOC -->
+  <nav class="toc" aria-label="Índice do artigo sobre filtro de água">
+    <div class="toc-title">Índice do Artigo</div>
+    <ol>
+      <li>Por que a escolha do filtro de água é tão importante?</li>
+      <li>Os tipos de filtro de água disponíveis no mercado</li>
+      <li>Filtro de barro: tradição com limitações</li>
+      <li>Filtros de torneira e chuveiro</li>
+      <li>Purificadores de água convencionais</li>
+      <li>Osmose reversa: pureza extrema, mas vale a pena?</li>
+      <li>Filtro de água alcalina ionizada: a evolução definitiva</li>
+      <li>Comparativo completo entre todos os filtros de água</li>
+      <li>5 critérios para escolher o melhor filtro de água</li>
+      <li>Por que a Acqualive é o melhor purificador de água alcalina</li>
+    </ol>
+  </nav>
 
-    <!-- INTRODUCTION -->
-    <h2>Por que a escolha do filtro de água importa tanto?</h2>
-    
-    <p class="lead">Você sabia que a água da torneira, mesmo tratada, pode conter cloro, agrotóxicos, metais pesados e microplásticos? A escolha do filtro certo não é apenas uma questão de sabor — é uma <strong>decisão de saúde</strong> para toda a sua família.</p>
+  <!-- INTRO -->
+  <h2>Por que a escolha do filtro de água é tão importante?</h2>
+  
+  <p class="lead">A água que chega à torneira da sua casa, mesmo após o tratamento convencional, pode conter cloro, agrotóxicos, metais pesados e microplásticos. Escolher o filtro de água certo vai muito além do sabor. É uma decisão direta sobre a <strong>saúde de toda a sua família</strong>.</p>
 
-    <p>Com centenas de marcas e modelos no mercado, é fácil cair no erro de achar que todos os filtros são iguais. A verdade é que existe uma diferença enorme entre simplesmente filtrar impurezas e realmente <strong>transformar a água</strong> em algo que beneficia seu organismo.</p>
+  <p>Com centenas de marcas e modelos de filtro de água no mercado brasileiro, é comum acreditar que todos funcionam da mesma forma. A verdade, porém, é bem diferente: existe uma distância enorme entre simplesmente remover impurezas e realmente <strong>transformar a água</strong> em algo que beneficia o seu organismo.</p>
 
-    <p>Neste guia completo, vamos analisar cada tipo de filtro disponível no Brasil, seus prós e contras, e mostrar — com base em critérios técnicos e científicos — qual é a melhor opção para quem busca saúde, praticidade e economia.</p>
+  <p>Neste guia, vamos analisar cada tipo de filtro de água disponível no Brasil, seus pontos fortes e suas limitações. Ao final, você terá clareza total sobre qual é a melhor opção para quem busca saúde, praticidade e economia.</p>
 
-    <div class="info-box">
-      <p>💡 <strong>Dica importante:</strong> Antes de comprar qualquer filtro, verifique se ele possui certificação do INMETRO. Sem esse selo, não há garantia de que o produto realmente faz o que promete.</p>
+  <div class="info-box">
+    <p><strong>Dica importante:</strong> antes de comprar qualquer filtro de água, verifique se o produto possui certificação do INMETRO. Sem esse selo, não há garantia de que o filtro realmente cumpre o que promete.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- TYPES -->
+  <h2>Os tipos de filtro de água disponíveis no mercado</h2>
+
+  <p>Para descobrir qual é o melhor filtro de água, é necessário conhecer as opções. Cada tecnologia possui vantagens e limitações específicas. Vamos analisar cada uma delas.</p>
+
+  <!-- FILTRO DE BARRO -->
+  <h3>1. Filtro de barro</h3>
+
+  <img src="https://upgrade-acqualive.lovable.app/images/blog-filtro-barro.jpg" alt="Filtro de barro tradicional brasileiro, um dos tipos mais conhecidos de filtro de água" class="article-img" width="720" height="360" loading="lazy">
+  <p class="img-caption">O filtro de barro é um ícone cultural, mas possui limitações técnicas como filtro de água.</p>
+  
+  <p>O filtro de barro é um clássico da cultura brasileira. Presente em milhões de lares, ele utiliza uma vela cerâmica para reter partículas e algumas bactérias. A argila natural mantém a água fresca, sem necessidade de energia elétrica.</p>
+
+  <p><strong>Vantagens do filtro de barro:</strong></p>
+  <ul class="check-list">
+    <li>Tradição e identidade cultural brasileira</li>
+    <li>Baixo custo de aquisição</li>
+    <li>Mantém a água fresca naturalmente</li>
+    <li>Não consome energia elétrica</li>
+  </ul>
+
+  <p><strong>Limitações do filtro de barro:</strong></p>
+  <p>Apesar da tradição, o filtro de barro <strong>não remove cloro, agrotóxicos, metais pesados e vírus</strong>. A vela cerâmica possui capacidade de filtração limitada e exige manutenção constante para evitar a proliferação de microrganismos. Além disso, o filtro de barro não adiciona nenhum benefício à água filtrada.</p>
+
+  <!-- FILTRO TORNEIRA -->
+  <h3>2. Filtros de torneira e chuveiro</h3>
+  
+  <p>São filtros de água compactos, acoplados diretamente na saída de água. Utilizam carvão ativado para reduzir o cloro e melhorar o sabor. São práticos, mas possuem vida útil curta e eficiência limitada como filtro de água.</p>
+
+  <p>Esses filtros representam uma solução básica para quem deseja apenas remover o gosto de cloro. Porém, <strong>não eliminam bactérias, vírus ou contaminantes químicos mais pesados</strong>.</p>
+
+  <!-- PURIFICADORES CONVENCIONAIS -->
+  <h3>3. Purificadores de água convencionais</h3>
+
+  <img src="https://upgrade-acqualive.lovable.app/images/blog-purificador-cozinha.jpg" alt="Purificador de água convencional instalado em uma cozinha moderna" class="article-img" width="720" height="360" loading="lazy">
+  <p class="img-caption">Purificadores convencionais filtram a água, mas raramente vão além da filtração básica.</p>
+  
+  <p>Os purificadores de água de bancada ou parede são os mais populares no Brasil. Utilizam uma combinação de elementos filtrantes, como carvão ativado e membrana microfiltrante, para reter partículas, reduzir o cloro e, em alguns modelos, eliminar bactérias.</p>
+
+  <p>Muitos possuem certificação do INMETRO e são eficientes na <strong>filtração básica da água</strong>. Porém, a maioria dos purificadores de água se limita a isso: filtrar. Não alcalinizam a água, não adicionam minerais e não possuem poder antioxidante.</p>
+
+  <blockquote>
+    "A principal função de um purificador de água é filtrar, mas os melhores aparelhos fazem disso apenas o começo." 
+  </blockquote>
+
+  <!-- OSMOSE REVERSA -->
+  <h3>4. Osmose reversa: pureza extrema, mas vale a pena?</h3>
+  
+  <p>Os sistemas de osmose reversa são os mais potentes em termos de filtração pura de água. Removem até 99% dos contaminantes, incluindo sais minerais, flúor e praticamente tudo que estiver dissolvido na água.</p>
+
+  <p>O problema é que a osmose reversa remove <strong>absolutamente tudo</strong>, inclusive os minerais essenciais como cálcio, magnésio e potássio que o corpo humano necessita. O resultado é uma água extremamente pura, porém <strong>"morta"</strong>, sem os nutrientes que a tornam benéfica para a saúde. Além disso, o sistema desperdiça até 3 litros de água para cada 1 litro filtrado.</p>
+
+  <div class="info-box">
+    <p><strong>Atenção:</strong> a Organização Mundial da Saúde reconhece que a água desmineralizada não é ideal para consumo prolongado. A ausência de minerais na água pode contribuir para a desmineralização do organismo ao longo do tempo.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- FILTRO ALCALINO -->
+  <h2>Filtro de água alcalina ionizada: a evolução definitiva</h2>
+
+  <img src="https://upgrade-acqualive.lovable.app/images/blog-agua-alcalina.jpg" alt="Teste de pH em água alcalina ionizada mostrando resultado alcalino, representando a qualidade do filtro de água alcalina" class="article-img" width="720" height="360" loading="lazy">
+  <p class="img-caption">A água alcalina ionizada possui pH elevado comprovado por testes científicos.</p>
+
+  <p class="lead">Aqui está onde a tecnologia encontra a saúde. O filtro de água alcalina ionizada não apenas filtra; ele <strong>transforma a água</strong>, elevando a qualidade a um nível completamente diferente de qualquer outro filtro de água do mercado.</p>
+
+  <p>Diferente de todos os outros tipos de filtro de água, o purificador de água alcalina ionizada realiza múltiplas funções simultaneamente:</p>
+
+  <div class="benefit-grid">
+    <div class="benefit-card">
+      <div class="benefit-icon">01</div>
+      <h4>Purificação Total</h4>
+      <p>Remove cloro, agrotóxicos, metais pesados, vírus e bactérias da água</p>
     </div>
-
-    <div class="divider"></div>
-
-    <!-- TYPES OF FILTERS -->
-    <h2>Os tipos de filtros de água disponíveis no mercado</h2>
-
-    <p>Para entender qual é o melhor filtro, precisamos conhecer as opções. Cada tecnologia tem suas vantagens e limitações. Vamos analisar cada uma:</p>
-
-    <!-- FILTRO DE BARRO -->
-    <h3>1. Filtro de Barro — A tradição brasileira</h3>
-    
-    <p>O filtro de barro é um ícone da cultura brasileira. Presente em milhões de lares, ele utiliza uma vela cerâmica (elemento filtrante) para reter partículas e algumas bactérias. A argila natural mantém a água fresca, dispensando energia elétrica.</p>
-
-    <p><strong>Prós:</strong></p>
-    <ul class="check-list">
-      <li>Tradição e cultura brasileira</li>
-      <li>Baixo custo de aquisição</li>
-      <li>Mantém a água fresca naturalmente</li>
-      <li>Não usa energia elétrica</li>
-    </ul>
-
-    <p><strong>Limitações:</strong></p>
-    <p>Apesar do charme, o filtro de barro <strong>não remove cloro, agrotóxicos, metais pesados e vírus</strong>. A vela cerâmica tem uma capacidade de filtração limitada e precisa de manutenção constante para evitar proliferação de microrganismos. Além disso, não adiciona nenhum benefício à água — apenas remove algumas impurezas maiores.</p>
-
-    <!-- FILTRO DE TORNEIRA -->
-    <h3>2. Filtros de Torneira e Chuveiro</h3>
-    
-    <p>São filtros compactos acoplados diretamente na saída de água. Usam carvão ativado para reduzir o cloro e melhorar o sabor. São práticos, mas têm vida útil curta e eficiência limitada.</p>
-
-    <p>Esses filtros são uma solução básica, ideal para quem quer apenas remover o gosto de cloro. Porém, <strong>não eliminam bactérias, vírus ou contaminantes químicos mais pesados</strong>.</p>
-
-    <!-- PURIFICADORES CONVENCIONAIS -->
-    <h3>3. Purificadores Convencionais</h3>
-    
-    <p>Os purificadores de bancada ou parede são os mais populares no Brasil. Utilizam uma combinação de elementos filtrantes (carvão ativado, membrana microfiltrante) para reter partículas, reduzir cloro e, em alguns modelos, eliminar bactérias.</p>
-
-    <p>Muitos possuem certificação do INMETRO e são eficientes na <strong>filtragem básica</strong>. Porém, a maioria se limita a isso: filtrar. Não alcalinizam, não adicionam minerais e não possuem poder antioxidante.</p>
-
-    <blockquote>
-      "A principal função de um purificador é filtrar a água, mas os melhores aparelhos fazem disso um começo e não um fim." — Blog Acqualive
-    </blockquote>
-
-    <!-- OSMOSE REVERSA -->
-    <h3>4. Osmose Reversa — Pureza extrema, mas a que custo?</h3>
-    
-    <p>Os sistemas de osmose reversa são os mais potentes em termos de filtração pura. Removem até 99% dos contaminantes, incluindo sais minerais, flúor e praticamente tudo que estiver dissolvido na água.</p>
-
-    <p>O problema? A osmose reversa remove <strong>tudo</strong> — inclusive os minerais essenciais como cálcio, magnésio e potássio que seu corpo precisa. O resultado é uma água extremamente pura, porém <strong>"morta"</strong>, sem os nutrientes que a tornam benéfica para a saúde. Além disso, desperdiça até 3 litros de água para cada 1 litro filtrado.</p>
-
-    <div class="info-box">
-      <p>⚠️ <strong>Atenção:</strong> Água sem minerais pode, ao longo do tempo, contribuir para a desmineralização do organismo. A OMS reconhece que a água desmineralizada não é ideal para consumo prolongado.</p>
+    <div class="benefit-card">
+      <div class="benefit-icon">02</div>
+      <h4>pH Alcalino</h4>
+      <p>Eleva o pH da água para a faixa alcalina, equilibrando o organismo</p>
     </div>
-
-    <div class="divider"></div>
-
-    <!-- FILTRO ALCALINO IONIZADO -->
-    <h2>Filtro de Água Alcalina Ionizada — A evolução definitiva</h2>
-
-    <p class="lead">Aqui está onde a tecnologia se encontra com a saúde. O filtro de água alcalina ionizada não apenas filtra — ele <strong>transforma</strong> a água, elevando-a a um nível completamente novo.</p>
-
-    <p>Diferente de todos os outros tipos, o purificador alcalino ionizado realiza múltiplas funções simultaneamente:</p>
-
-    <div class="benefit-grid">
-      <div class="benefit-card">
-        <div class="icon">🛡️</div>
-        <h4>Purificação Total</h4>
-        <p>Remove cloro, agrotóxicos, metais pesados, vírus e bactérias</p>
-      </div>
-      <div class="benefit-card">
-        <div class="icon">⚗️</div>
-        <h4>pH Alcalino</h4>
-        <p>Eleva o pH da água para faixa alcalina, equilibrando o organismo</p>
-      </div>
-      <div class="benefit-card">
-        <div class="icon">💎</div>
-        <h4>Rica em Minerais</h4>
-        <p>Preserva e enriquece com magnésio, cálcio e potássio</p>
-      </div>
-      <div class="benefit-card">
-        <div class="icon">⚡</div>
-        <h4>Antioxidante</h4>
-        <p>Combate radicais livres, retardando o envelhecimento celular</p>
-      </div>
-      <div class="benefit-card">
-        <div class="icon">💧</div>
-        <h4>Hidratação Superior</h4>
-        <p>Maior capacidade de absorção celular que a água comum</p>
-      </div>
-      <div class="benefit-card">
-        <div class="icon">🔬</div>
-        <h4>PRAL Negativo</h4>
-        <p>Poder alcalinizante real, mantendo o efeito mesmo após ingestão</p>
-      </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">03</div>
+      <h4>Rica em Minerais</h4>
+      <p>Preserva e enriquece a água com magnésio, cálcio e potássio</p>
     </div>
-
-    <div class="highlight-box">
-      <h3>O que é PRAL Negativo?</h3>
-      <p>PRAL (Potential Renal Acid Load) é um índice científico que mede se um alimento ou bebida tem efeito ácido ou alcalino <strong>real</strong> no organismo. Não basta a água ter pH alto — ela precisa ter <strong>poder alcalinizante</strong>, ou seja, manter-se alcalina mesmo depois de ingerida.</p>
-      <p>Muitas marcas prometem "água alcalina", mas se não há PRAL negativo comprovado, a promessa é vazia. Água alcalina sem poder alcalinizante é basicamente <strong>cobrar mais caro por um produto incompleto</strong>.</p>
+    <div class="benefit-card">
+      <div class="benefit-icon">04</div>
+      <h4>Antioxidante</h4>
+      <p>Combate radicais livres, retardando o envelhecimento celular</p>
     </div>
-
-    <div class="mid-cta">
-      <p>🔍 Quer entender por que médicos e especialistas recomendam água alcalina ionizada?</p>
-      <a href="https://www.acqualive.com.br/pages/porque-acqualive" target="_blank">Descubra a Ciência por Trás</a>
+    <div class="benefit-card">
+      <div class="benefit-icon">05</div>
+      <h4>Hidratação Superior</h4>
+      <p>Maior capacidade de absorção celular que a água comum</p>
     </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">06</div>
+      <h4>PRAL Negativo</h4>
+      <p>Poder alcalinizante real, mantendo o efeito mesmo após ingestão</p>
+    </div>
+  </div>
 
-    <div class="divider"></div>
+  <div class="highlight-box">
+    <h3>O que é PRAL Negativo e por que importa na escolha do filtro de água?</h3>
+    <p>PRAL (Potential Renal Acid Load) é um índice científico que mede se um alimento ou bebida possui efeito ácido ou alcalino <strong>real</strong> no organismo. Não basta a água ter pH alto. Ela precisa ter <strong>poder alcalinizante</strong>, ou seja, manter o efeito alcalino mesmo depois de ingerida.</p>
+    <p>Muitas marcas de filtro de água prometem "água alcalina", mas se não há PRAL negativo comprovado, a promessa é vazia. Água alcalina sem poder alcalinizante é basicamente <strong>cobrar mais caro por um produto incompleto</strong>.</p>
+  </div>
 
-    <!-- COMPARISON TABLE -->
-    <h2>Comparativo Completo: Todos os Tipos de Filtro</h2>
+  <div class="mid-cta">
+    <p>Quer entender por que médicos e especialistas recomendam água alcalina ionizada?</p>
+    <a href="https://www.acqualive.com.br/pages/porque-acqualive" target="_blank" rel="noopener">Descubra a Ciência por Trás</a>
+  </div>
 
-    <p>Agora que você conhece cada tecnologia, vamos colocá-las lado a lado para facilitar sua decisão:</p>
+  <div class="divider"></div>
 
+  <!-- COMPARISON -->
+  <h2>Comparativo completo: todos os tipos de filtro de água</h2>
+
+  <p>Agora que você conhece cada tecnologia de filtro de água, vamos colocá-las lado a lado para facilitar sua decisão:</p>
+
+  <div class="table-wrap">
     <table class="comparison-table">
       <thead>
         <tr>
@@ -528,160 +640,160 @@ const ARTICLES = [
           <td>Certificação INMETRO</td>
           <td><span class="partial">Alguns</span></td>
           <td><span class="partial">Alguns</span></td>
-          <td><span class="check">✓</span></td>
-          <td><span class="check">✓</span></td>
-          <td><span class="check">✓</span></td>
+          <td><span class="check">&#10003;</span></td>
+          <td><span class="check">&#10003;</span></td>
+          <td><span class="check">&#10003;</span></td>
         </tr>
         <tr>
-          <td>Remove cloro</td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="check">✓</span></td>
-          <td><span class="check">✓</span></td>
-          <td><span class="check">✓</span></td>
-          <td><span class="check">✓</span></td>
+          <td>Remove cloro da água</td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="check">&#10003;</span></td>
+          <td><span class="check">&#10003;</span></td>
+          <td><span class="check">&#10003;</span></td>
+          <td><span class="check">&#10003;</span></td>
         </tr>
         <tr>
           <td>Elimina bactérias e vírus</td>
           <td><span class="partial">Parcial</span></td>
-          <td><span class="cross">✗</span></td>
+          <td><span class="cross">&#10007;</span></td>
           <td><span class="partial">Alguns</span></td>
-          <td><span class="check">✓</span></td>
-          <td><span class="check">✓</span></td>
+          <td><span class="check">&#10003;</span></td>
+          <td><span class="check">&#10003;</span></td>
         </tr>
         <tr>
           <td>Remove agrotóxicos</td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="cross">✗</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="cross">&#10007;</span></td>
           <td><span class="partial">Alguns</span></td>
-          <td><span class="check">✓</span></td>
-          <td><span class="check">✓</span></td>
+          <td><span class="check">&#10003;</span></td>
+          <td><span class="check">&#10003;</span></td>
         </tr>
         <tr>
-          <td>Preserva minerais</td>
-          <td><span class="check">✓</span></td>
-          <td><span class="check">✓</span></td>
-          <td><span class="check">✓</span></td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="check">✓</span></td>
+          <td>Preserva minerais na água</td>
+          <td><span class="check">&#10003;</span></td>
+          <td><span class="check">&#10003;</span></td>
+          <td><span class="check">&#10003;</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="check">&#10003;</span></td>
         </tr>
         <tr>
           <td>Água alcalina</td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="check">✓</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="check">&#10003;</span></td>
         </tr>
         <tr>
           <td>PRAL negativo</td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="check">✓</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="check">&#10003;</span></td>
         </tr>
         <tr>
           <td>Poder antioxidante</td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="check">✓</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="check">&#10003;</span></td>
         </tr>
         <tr>
           <td>Rica em magnésio</td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="check">✓</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="check">&#10003;</span></td>
         </tr>
         <tr>
           <td>Hidratação superior</td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="cross">✗</span></td>
-          <td><span class="check">✓</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="cross">&#10007;</span></td>
+          <td><span class="check">&#10003;</span></td>
         </tr>
       </tbody>
     </table>
-
-    <p>Como o comparativo deixa claro: enquanto outros filtros resolvem <em>parte</em> do problema, o filtro de água alcalina ionizada é o único que <strong>resolve tudo e vai além</strong>, adicionando benefícios reais para a saúde.</p>
-
-    <div class="divider"></div>
-
-    <!-- 5 CRITERIA -->
-    <h2>5 Critérios Essenciais para Escolher o Melhor Filtro</h2>
-
-    <p>Para não comprar "gato por lebre", avalie qualquer filtro com estes 5 critérios:</p>
-
-    <h3>1. Certificação INMETRO</h3>
-    <p>O INMETRO é o órgão federal que atesta qualidade e segurança dos produtos. Se o filtro não possui esse selo, <strong>cancele a compra imediatamente</strong>. Nenhum filtro sem essa certificação garante a pureza que você precisa.</p>
-
-    <h3>2. Eficiência nos 3 testes básicos</h3>
-    <p>Mesmo com selo INMETRO, purificadores têm capacidades diferentes. Confira a eficácia em:</p>
-    <ul class="check-list">
-      <li><strong>Retenção de Partículas</strong> — Quanto menor a partícula filtrada, melhor</li>
-      <li><strong>Redução de Cloro Livre</strong> — Mínimo de 75% de remoção</li>
-      <li><strong>Eficiência Bacteriológica</strong> — Capacidade de eliminar bactérias</li>
-    </ul>
-
-    <h3>3. O que faz além de filtrar?</h3>
-    <p>Os melhores purificadores vão muito além da filtração. Verifique se o aparelho alcaliniza a água, adiciona minerais, torna a água antioxidante e aumenta o potencial de hidratação.</p>
-
-    <h3>4. Capacidade de alcalinizar</h3>
-    <p>Nosso corpo mantém um equilíbrio sanguíneo de pH levemente alcalino. Uma dieta muito ácida faz o organismo retirar minerais dos ossos para compensar. Beber água alcalina é fundamental para a saúde, especialmente a saúde óssea.</p>
-
-    <h3>5. Mais que alcalina: Alcalinizante!</h3>
-    <p>Este é o critério que separa os bons dos excelentes. Não basta pH alto — a água precisa ter <strong>PRAL negativo</strong>, ou seja, poder alcalinizante real. Sem isso, é apenas marketing.</p>
-
-    <div class="divider"></div>
-
-    <!-- ACQUALIVE -->
-    <h2>Por que a Acqualive é a melhor escolha em filtros de água alcalina ionizada</h2>
-
-    <p class="lead">Com mais de 15 anos de mercado e <strong>mais de 150 mil famílias atendidas</strong>, a Acqualive se consolidou como referência absoluta em purificação e tratamento de água no Brasil.</p>
-
-    <p>Os purificadores Acqualive foram desenvolvidos com a mais alta tecnologia em transformação de água — um sistema que replica, quase à perfeição, o caminho natural que a água percorre na natureza. Isso significa que, independente de onde você mora, você terá acesso a uma água perfeitamente natural, como se fosse retirada de uma fonte intocada.</p>
-
-    <div class="highlight-box">
-      <h3>O que a Acqualive entrega que ninguém mais entrega:</h3>
-      <p>✅ <strong>Pureza certificada pelo INMETRO</strong> — Elimina cloro, agrotóxicos, vírus e bactérias<br>
-      ✅ <strong>pH alcalino comprovado</strong> — Equilibra o organismo e fortalece a saúde<br>
-      ✅ <strong>PRAL negativo</strong> — Poder alcalinizante real, não apenas pH alto<br>
-      ✅ <strong>Rica em magnésio</strong> — Mineral essencial para mais de 300 funções do corpo<br>
-      ✅ <strong>Poder antioxidante</strong> — Combate radicais livres e retarda o envelhecimento<br>
-      ✅ <strong>Hidratação funcional</strong> — Muito mais eficaz que a água comum<br>
-      ✅ <strong>Médicos e atletas recomendam</strong> — Benefícios comprovados pela ciência<br>
-      ✅ <strong>Tecnologia TriWay exclusiva</strong> — Sistema patenteado de purificação</p>
-    </div>
-
-    <blockquote>
-      "Purificadores comuns prometem. Acqualive entrega." — A Acqualive garante o melhor copo de água do mundo, e isso vai transformar a saúde da sua família.
-    </blockquote>
-
-    <h3>E a água engarrafada? Também não é solução.</h3>
-    <p>As águas engarrafadas parecem saudáveis, mas possuem problemas sérios: contaminação por microplásticos, armazenamento inadequado, procedência duvidosa e custo elevado. Você já parou para pensar no quanto é complicado carregar galões de 20 litros?</p>
-
-    <p>Com a Acqualive, você tem acesso à água perfeita <strong>24 horas por dia</strong>, direto na sua cozinha, por um custo até <strong>66% menor</strong> que a água engarrafada.</p>
-
-    <!-- FINAL CTA -->
-    <div class="cta-section">
-      <h2>Pare de procurar.<br><span>Escolha Acqualive.</span></h2>
-      <p>Junte-se às mais de 150 mil famílias que já transformaram sua saúde com a melhor água do mundo.</p>
-      <a href="https://www.acqualive.com.br/collections/purificadores" target="_blank" class="cta-button">QUERO MEU ACQUALIVE AGORA →</a>
-    </div>
-
-    <p style="text-align:center;font-size:14px;color:#94a3b8;margin-top:24px;">Dúvidas? <a href="https://www.acqualive.com.br/pages/porque-acqualive" target="_blank" style="color:#3b82f6;">Descubra por que a Acqualive é diferente →</a></p>
-
   </div>
+
+  <p>O comparativo deixa claro: enquanto outros filtros de água resolvem <em>parte</em> do problema, o filtro de água alcalina ionizada é o único que <strong>resolve tudo e vai além</strong>, adicionando benefícios reais para a saúde.</p>
+
+  <div class="divider"></div>
+
+  <!-- 5 CRITERIA -->
+  <h2>5 critérios essenciais para escolher o melhor filtro de água</h2>
+
+  <p>Para não errar na compra do seu filtro de água, avalie qualquer modelo com estes 5 critérios:</p>
+
+  <h3>1. Certificação INMETRO</h3>
+  <p>O INMETRO é o órgão federal que atesta a qualidade e a segurança dos produtos fabricados no Brasil. Se o filtro de água não possui esse selo, <strong>não compre</strong>. Nenhum filtro de água sem essa certificação garante a pureza que você e sua família precisam.</p>
+
+  <h3>2. Eficiência nos 3 testes básicos</h3>
+  <p>Mesmo com selo INMETRO, diferentes filtros de água possuem capacidades diferentes. Confira a eficácia do filtro de água nos seguintes testes:</p>
+  <ul class="check-list">
+    <li><strong>Retenção de Partículas:</strong> quanto menor a partícula filtrada, melhor o filtro de água</li>
+    <li><strong>Redução de Cloro Livre:</strong> o mínimo aceitável é 75% de remoção</li>
+    <li><strong>Eficiência Bacteriológica:</strong> capacidade de eliminar bactérias da água</li>
+  </ul>
+
+  <h3>3. O que o filtro de água faz além de filtrar?</h3>
+  <p>Os melhores filtros de água vão muito além da filtração básica. Verifique se o purificador de água alcaliniza, adiciona minerais, torna a água antioxidante e aumenta o potencial de hidratação.</p>
+
+  <h3>4. Capacidade de alcalinizar a água</h3>
+  <p>O corpo humano mantém um equilíbrio sanguíneo de pH levemente alcalino. Uma dieta muito ácida, rica em produtos industrializados e açúcar, força o organismo a retirar minerais dos ossos para compensar. Beber água alcalina é fundamental para a manutenção da saúde, especialmente a saúde óssea.</p>
+
+  <h3>5. Mais que água alcalina: água alcalinizante</h3>
+  <p>Este é o critério que separa os bons filtros de água dos excelentes. Não basta o pH ser alto. A água precisa ter <strong>PRAL negativo</strong>, ou seja, poder alcalinizante real. Sem esse poder alcalinizante comprovado, é apenas marketing.</p>
+
+  <div class="divider"></div>
+
+  <!-- ACQUALIVE -->
+  <h2>Por que a Acqualive é o melhor purificador de água alcalina ionizada</h2>
+
+  <p class="lead">Com mais de 15 anos de mercado e <strong>mais de 150 mil famílias atendidas</strong>, a Acqualive se consolidou como referência absoluta em purificação de água e tratamento de água alcalina no Brasil.</p>
+
+  <p>Os purificadores de água Acqualive foram desenvolvidos com a mais alta tecnologia em transformação de água. O sistema replica, quase à perfeição, o caminho natural que a água percorre na natureza. Isso significa que, independente da cidade onde você mora, você terá acesso a uma água perfeitamente natural, como se fosse retirada de uma fonte intocada.</p>
+
+  <div class="highlight-box">
+    <h3>O que a Acqualive entrega em cada copo de água:</h3>
+    <p>Pureza certificada pelo INMETRO: elimina cloro, agrotóxicos, vírus e bactérias da água.</p>
+    <p>pH alcalino comprovado: equilibra o organismo e fortalece a saúde.</p>
+    <p>PRAL negativo: poder alcalinizante real, não apenas pH alto na água.</p>
+    <p>Rica em magnésio: mineral essencial para mais de 300 funções do corpo.</p>
+    <p>Poder antioxidante: combate radicais livres e retarda o envelhecimento.</p>
+    <p>Hidratação funcional: muito mais eficaz que a água comum.</p>
+    <p>Médicos e atletas recomendam: benefícios da água alcalina comprovados pela ciência.</p>
+    <p>Tecnologia TriWay exclusiva: sistema patenteado de purificação de água.</p>
+  </div>
+
+  <blockquote>
+    "Purificadores de água comuns prometem. Acqualive entrega. O melhor copo de água do mundo vai transformar a saúde da sua família."
+  </blockquote>
+
+  <h3>Água engarrafada também não é solução</h3>
+  <p>As águas engarrafadas podem parecer saudáveis, mas apresentam problemas sérios: contaminação por microplásticos, armazenamento inadequado, procedência duvidosa e custo elevado. Sem falar na dificuldade de carregar galões de 20 litros até sua casa.</p>
+
+  <p>Com o purificador de água Acqualive, você tem acesso à água alcalina perfeita <strong>24 horas por dia</strong>, direto na sua cozinha, por um custo até <strong>66% menor</strong> que a água engarrafada comum.</p>
+
+  <!-- FINAL CTA -->
+  <div class="cta-section">
+    <h2>Pare de procurar o melhor filtro de água.<br><span>Escolha Acqualive.</span></h2>
+    <p>Junte-se às mais de 150 mil famílias que já transformaram sua saúde com o melhor purificador de água alcalina do Brasil.</p>
+    <a href="https://www.acqualive.com.br/collections/purificadores" target="_blank" rel="noopener" class="cta-button">QUERO MEU ACQUALIVE AGORA</a>
+  </div>
+
+  <p style="text-align:center;font-size:14px;color:#a1a1aa;margin-top:20px;">Ainda tem dúvidas sobre qual filtro de água escolher? <a href="https://www.acqualive.com.br/pages/porque-acqualive" target="_blank" rel="noopener" style="color:#3b82f6;">Descubra por que a Acqualive é diferente.</a></p>
+
 </main>
 
 <!-- FOOTER -->
 <footer class="footer-article">
-  <p>© 2025 Acqualive. Todos os direitos reservados.</p>
-  <p style="margin-top:8px;">Conteúdo educativo. Fontes: Blog Acqualive, INMETRO, OMS.</p>
+  <p>&copy; 2025 Acqualive. Todos os direitos reservados.</p>
+  <p style="margin-top:6px;">Conteúdo educativo sobre filtro de água e água alcalina. Fontes: Blog Acqualive, INMETRO, OMS.</p>
 </footer>
 
 </body>
@@ -799,7 +911,7 @@ const BlogTemplates = () => {
               srcDoc={article.html}
               title={`Blog ${currentIndex + 1}`}
               className="w-full border-0"
-              style={{ minHeight: "2400px" }}
+              style={{ minHeight: "2800px" }}
             />
           </div>
         ) : (
