@@ -807,6 +807,7 @@ const BlogTemplates = () => {
   const [copied, setCopied] = useState(false);
 
   const article = ARTICLES[currentIndex];
+  const resolvedHtml = article.html.split("https://upgrade-acqualive.lovable.app").join(window.location.origin);
 
   const copyHtml = () => {
     navigator.clipboard.writeText(article.html);
@@ -908,7 +909,7 @@ const BlogTemplates = () => {
         {viewMode === "preview" ? (
           <div className="rounded-lg overflow-hidden bg-white">
             <iframe
-              srcDoc={article.html}
+              srcDoc={resolvedHtml}
               title={`Blog ${currentIndex + 1}`}
               className="w-full border-0"
               style={{ minHeight: "2800px" }}
