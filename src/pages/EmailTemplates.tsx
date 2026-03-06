@@ -14,10 +14,10 @@ const EMAILS = [
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Franquia Solo Acqualive</title>
 </head>
-<body style="margin:0;padding:0;background-color:#ffffff;font-family:Arial,Helvetica,sans-serif;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#ffffff;">
-<tr><td align="center" style="padding:20px 0;">
-<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#0d1117;border-radius:16px;overflow:hidden;">
+<body style="margin:0;padding:0;background-color:#0d1117;font-family:Arial,Helvetica,sans-serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#0d1117;">
+<tr><td align="center" style="padding:0;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#0d1117;overflow:hidden;">
 
 <!-- Header with gradient -->
 <tr><td style="background:linear-gradient(135deg,#0d1117 0%,#1a2332 100%);padding:32px 40px 24px;text-align:center;">
@@ -36,7 +36,7 @@ const EMAILS = [
 <tr><td style="padding:40px 40px 24px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
 <tr><td style="text-align:center;padding-bottom:24px;">
-<p style="margin:0;display:inline-block;padding:6px 20px;background-color:#f97316;color:#ffffff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;border-radius:20px;">🏢 Franquia Solo</p>
+<p style="margin:0;display:inline-block;padding:6px 20px;background-color:#f97316;color:#ffffff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;border-radius:20px;">Franquia Solo</p>
 </td></tr>
 </table>
 <h1 style="margin:0 0 24px;font-size:30px;line-height:1.3;color:#ffffff;text-align:center;">Você já tem o filtro.<br><span style="color:#f97316;">E se pudesse lucrar com ele?</span></h1>
@@ -44,7 +44,7 @@ const EMAILS = [
 <!-- Divider -->
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:0 0 24px;text-align:center;"><table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td style="width:40px;height:2px;background-color:#f97316;"></td><td style="width:12px;"></td><td style="width:8px;height:8px;border-radius:50%;background-color:#f97316;"></td><td style="width:12px;"></td><td style="width:40px;height:2px;background-color:#f97316;"></td></tr></table></td></tr></table>
 
-<p style="margin:0 0 16px;font-size:16px;line-height:1.7;color:#d1d5db;">Olá! 👋</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.7;color:#d1d5db;">Olá!</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.7;color:#d1d5db;">Você já conhece a qualidade da água Acqualive. Sabe a diferença que faz na saúde, no sabor e no dia a dia da sua família.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.7;color:#d1d5db;">Agora imagine <strong style="color:#ffffff;">transformar essa experiência em um negócio lucrativo</strong>, sem precisar de loja física, sem funcionários, trabalhando no seu ritmo.</p>
 </td></tr>
@@ -53,7 +53,6 @@ const EMAILS = [
 <tr><td style="padding:0 40px 32px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;">
 <tr><td style="padding:28px;text-align:center;">
-<p style="margin:0 0 8px;font-size:40px;">💡</p>
 <p style="margin:0;font-size:18px;line-height:1.5;color:#ffffff;">Essa é a <strong style="color:#f97316;">Franquia Solo Acqualive</strong>:<br>o modelo perfeito para quem já vive a marca<br>e quer empreender com ela.</p>
 </td></tr>
 </table>
@@ -85,12 +84,12 @@ const EMAILS = [
 <tr><td style="padding:0 40px 16px;text-align:center;">
 <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
 <tr><td style="background:linear-gradient(135deg,#f97316,#ea580c);border-radius:10px;padding:2px;">
-<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:block;padding:16px 44px;color:#ffffff;text-decoration:none;font-size:16px;font-weight:700;letter-spacing:0.5px;">QUERO CONHECER O MODELO SOLO →</a>
+<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:block;padding:16px 44px;color:#ffffff;text-decoration:none;font-size:16px;font-weight:700;letter-spacing:0.5px;">QUERO CONHECER O MODELO SOLO</a>
 </td></tr>
 </table>
 </td></tr>
 <tr><td style="padding:0 40px 40px;text-align:center;">
-<p style="margin:0;font-size:13px;color:#64748b;">📩 Nos próximos dias, vou te mostrar os números e depoimentos de quem já faz parte.</p>
+<p style="margin:0;font-size:13px;color:#64748b;">Nos próximos dias, vou te mostrar os números e depoimentos de quem já faz parte.</p>
 </td></tr>
 
 <!-- Footer -->
@@ -115,10 +114,10 @@ const EMAILS = [
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Franquia Solo - Oportunidade</title>
 </head>
-<body style="margin:0;padding:0;background-color:#ffffff;font-family:Arial,Helvetica,sans-serif;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#ffffff;">
-<tr><td align="center" style="padding:20px 0;">
-<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#0d1117;border-radius:16px;overflow:hidden;">
+<body style="margin:0;padding:0;background-color:#0d1117;font-family:Arial,Helvetica,sans-serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#0d1117;">
+<tr><td align="center" style="padding:0;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#0d1117;overflow:hidden;">
 
 <!-- Header -->
 <tr><td style="background:linear-gradient(135deg,#0d1117 0%,#1a2332 100%);padding:32px 40px 24px;text-align:center;">
@@ -129,7 +128,7 @@ const EMAILS = [
 <tr><td style="padding:0;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#065f46,#047857);">
 <tr><td style="padding:20px 40px;text-align:center;">
-<p style="margin:0;font-size:13px;font-weight:700;color:#a7f3d0;text-transform:uppercase;letter-spacing:2px;">📈 Dados Oficiais ABF 2024</p>
+<p style="margin:0;font-size:13px;font-weight:700;color:#a7f3d0;text-transform:uppercase;letter-spacing:2px;">Dados Oficiais ABF 2024</p>
 <p style="margin:8px 0 0;font-size:20px;font-weight:800;color:#ffffff;">O mercado não para de crescer</p>
 </td></tr>
 </table>
@@ -181,8 +180,7 @@ const EMAILS = [
 <tr><td style="padding:0 40px 32px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;overflow:hidden;">
 <tr><td style="padding:24px 24px 16px;text-align:center;border-bottom:1px solid #334155;">
-<p style="margin:0;font-size:28px;">💰</p>
-<h2 style="margin:8px 0 0;font-size:20px;color:#ffffff;">Seus ganhos como Franqueado Solo</h2>
+<h2 style="margin:0;font-size:20px;color:#ffffff;">Seus ganhos como Franqueado Solo</h2>
 </td></tr>
 <tr><td style="padding:0;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
@@ -211,7 +209,6 @@ const EMAILS = [
 <tr><td style="padding:0 40px 32px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:2px solid #f97316;border-radius:12px;overflow:hidden;">
 <tr><td style="background:linear-gradient(135deg,#431407,#0d1117);padding:28px;text-align:center;">
-<p style="margin:0 0 4px;font-size:28px;">🎁</p>
 <p style="margin:0;font-size:20px;color:#ffffff;line-height:1.5;"><strong>100% do valor investido</strong> é convertido em produtos.</p>
 <p style="margin:8px 0 0;font-size:18px;color:#f97316;font-weight:700;">Sem taxa de franquia!</p>
 </td></tr>
@@ -222,12 +219,12 @@ const EMAILS = [
 <tr><td style="padding:0 40px 16px;text-align:center;">
 <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
 <tr><td style="background:linear-gradient(135deg,#f97316,#ea580c);border-radius:10px;padding:2px;">
-<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:block;padding:16px 44px;color:#ffffff;text-decoration:none;font-size:16px;font-weight:700;">QUERO SABER MAIS SOBRE A FRANQUIA →</a>
+<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:block;padding:16px 44px;color:#ffffff;text-decoration:none;font-size:16px;font-weight:700;">QUERO SABER MAIS SOBRE A FRANQUIA</a>
 </td></tr>
 </table>
 </td></tr>
 <tr><td style="padding:0 40px 40px;text-align:center;">
-<p style="margin:0;font-size:13px;color:#64748b;">📩 Amanhã vou te apresentar histórias de quem já está lucrando.</p>
+<p style="margin:0;font-size:13px;color:#64748b;">Amanhã vou te apresentar histórias de quem já está lucrando.</p>
 </td></tr>
 
 <!-- Footer -->
@@ -252,10 +249,10 @@ const EMAILS = [
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Franquia Solo - Depoimentos</title>
 </head>
-<body style="margin:0;padding:0;background-color:#ffffff;font-family:Arial,Helvetica,sans-serif;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#ffffff;">
-<tr><td align="center" style="padding:20px 0;">
-<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#0d1117;border-radius:16px;overflow:hidden;">
+<body style="margin:0;padding:0;background-color:#0d1117;font-family:Arial,Helvetica,sans-serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#0d1117;">
+<tr><td align="center" style="padding:0;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#0d1117;overflow:hidden;">
 
 <!-- Header -->
 <tr><td style="background:linear-gradient(135deg,#0d1117 0%,#1a2332 100%);padding:32px 40px 24px;text-align:center;">
@@ -276,7 +273,7 @@ const EMAILS = [
 <tr><td style="padding:40px 40px 16px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
 <tr><td style="text-align:center;padding-bottom:16px;">
-<p style="margin:0;display:inline-block;padding:6px 20px;background-color:#f97316;color:#ffffff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;border-radius:20px;">⭐ Histórias de Sucesso</p>
+<p style="margin:0;display:inline-block;padding:6px 20px;background-color:#f97316;color:#ffffff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;border-radius:20px;">Histórias de Sucesso</p>
 </td></tr>
 </table>
 <h1 style="margin:0 0 20px;font-size:28px;line-height:1.3;color:#ffffff;text-align:center;">Quem já faz parte<br><span style="color:#f97316;">recomenda.</span></h1>
@@ -292,7 +289,6 @@ const EMAILS = [
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;overflow:hidden;">
 <tr><td style="padding:4px 24px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="height:3px;background:linear-gradient(90deg,#f97316,#fbbf24);border-radius:0 0 4px 4px;"></td></tr></table></td></tr>
 <tr><td style="padding:20px 24px 24px;">
-<p style="margin:0 0 12px;font-size:36px;line-height:1;">❝</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.7;color:#e2e8f0;font-style:italic;">Saí do mundo corporativo e hoje tenho minha própria franquia Acqualive. Em 2 anos, já recuperei todo o investimento e construí uma renda passiva que me dá liberdade.</p>
 <table role="presentation" cellpadding="0" cellspacing="0">
 <tr>
@@ -312,7 +308,6 @@ const EMAILS = [
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;overflow:hidden;">
 <tr><td style="padding:4px 24px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="height:3px;background:linear-gradient(90deg,#f97316,#fbbf24);border-radius:0 0 4px 4px;"></td></tr></table></td></tr>
 <tr><td style="padding:20px 24px 24px;">
-<p style="margin:0 0 12px;font-size:36px;line-height:1;">❝</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.7;color:#e2e8f0;font-style:italic;">A Acqualive transformou minha forma de me hidratar. A água alcalina é fundamental para minha performance e recuperação. Recomendo para todos que buscam qualidade de vida.</p>
 <table role="presentation" cellpadding="0" cellspacing="0">
 <tr>
@@ -329,7 +324,6 @@ const EMAILS = [
 
 <!-- How it works -->
 <tr><td style="padding:16px 40px 8px;text-align:center;">
-<p style="margin:0 0 4px;font-size:28px;">🔧</p>
 <h2 style="margin:0 0 20px;font-size:22px;color:#ffffff;">Como funciona a Franquia Solo?</h2>
 </td></tr>
 
@@ -337,13 +331,11 @@ const EMAILS = [
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
 <tr>
 <td width="48%" style="padding:20px 16px;background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;text-align:center;vertical-align:top;">
-<p style="margin:0 0 10px;font-size:32px;">📦</p>
 <p style="margin:0 0 6px;font-size:14px;font-weight:700;color:#ffffff;">Enxoval de Produtos</p>
 <p style="margin:0;font-size:12px;line-height:1.5;color:#94a3b8;">Seu investimento volta em purificadores para vender e lucrar.</p>
 </td>
 <td width="4%"></td>
 <td width="48%" style="padding:20px 16px;background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;text-align:center;vertical-align:top;">
-<p style="margin:0 0 10px;font-size:32px;">🏷️</p>
 <p style="margin:0 0 6px;font-size:14px;font-weight:700;color:#ffffff;">Uso da Marca</p>
 <p style="margin:0;font-size:12px;line-height:1.5;color:#94a3b8;">Utilize a força da Acqualive para fechar negócios.</p>
 </td>
@@ -354,13 +346,11 @@ const EMAILS = [
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
 <tr>
 <td width="48%" style="padding:20px 16px;background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;text-align:center;vertical-align:top;">
-<p style="margin:0 0 10px;font-size:32px;">📊</p>
 <p style="margin:0 0 6px;font-size:14px;font-weight:700;color:#ffffff;">Tabela Exclusiva</p>
 <p style="margin:0;font-size:12px;line-height:1.5;color:#94a3b8;">Margens agressivas para retorno rápido.</p>
 </td>
 <td width="4%"></td>
 <td width="48%" style="padding:20px 16px;background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;text-align:center;vertical-align:top;">
-<p style="margin:0 0 10px;font-size:32px;">🚀</p>
 <p style="margin:0 0 6px;font-size:14px;font-weight:700;color:#ffffff;">Modelo Escalável</p>
 <p style="margin:0;font-size:12px;line-height:1.5;color:#94a3b8;">Comece sozinho e monte sua equipe quando quiser.</p>
 </td>
@@ -372,12 +362,12 @@ const EMAILS = [
 <tr><td style="padding:0 40px 16px;text-align:center;">
 <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
 <tr><td style="background:linear-gradient(135deg,#f97316,#ea580c);border-radius:10px;padding:2px;">
-<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:block;padding:16px 44px;color:#ffffff;text-decoration:none;font-size:16px;font-weight:700;">QUERO SER UM FRANQUEADO →</a>
+<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:block;padding:16px 44px;color:#ffffff;text-decoration:none;font-size:16px;font-weight:700;">QUERO SER UM FRANQUEADO</a>
 </td></tr>
 </table>
 </td></tr>
 <tr><td style="padding:0 40px 40px;text-align:center;">
-<p style="margin:0;font-size:13px;color:#64748b;">🎁 No sábado, uma surpresa especial para você. Fique atento!</p>
+<p style="margin:0;font-size:13px;color:#64748b;">No sábado, uma surpresa especial para você. Fique atento!</p>
 </td></tr>
 
 <!-- Footer -->
@@ -393,7 +383,7 @@ const EMAILS = [
   },
   {
     day: "Sábado",
-    subject: "⚡ Oferta exclusiva: Franquia Solo SEM taxa de franquia, só até esta semana",
+    subject: "Oferta exclusiva: Franquia Solo SEM taxa de franquia, só até esta semana",
     html: `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -401,10 +391,10 @@ const EMAILS = [
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Franquia Solo - Oferta Exclusiva</title>
 </head>
-<body style="margin:0;padding:0;background-color:#ffffff;font-family:Arial,Helvetica,sans-serif;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#ffffff;">
-<tr><td align="center" style="padding:20px 0;">
-<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#0d1117;border-radius:16px;overflow:hidden;">
+<body style="margin:0;padding:0;background-color:#0d1117;font-family:Arial,Helvetica,sans-serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#0d1117;">
+<tr><td align="center" style="padding:0;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#0d1117;overflow:hidden;">
 
 <!-- Header -->
 <tr><td style="background:linear-gradient(135deg,#0d1117 0%,#1a2332 100%);padding:32px 40px 24px;text-align:center;">
@@ -415,7 +405,6 @@ const EMAILS = [
 <tr><td style="padding:0;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#f97316,#dc2626);">
 <tr><td style="padding:20px;text-align:center;">
-<p style="margin:0 0 4px;font-size:28px;">⚡</p>
 <p style="margin:0;font-size:16px;font-weight:700;color:#ffffff;text-transform:uppercase;letter-spacing:1.5px;">Campanha por tempo limitado</p>
 <p style="margin:6px 0 0;font-size:13px;color:#fef3c7;">Últimas vagas disponíveis para sua região</p>
 </td></tr>
@@ -431,7 +420,7 @@ const EMAILS = [
 <tr><td style="padding:40px 40px 16px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
 <tr><td style="text-align:center;padding-bottom:16px;">
-<p style="margin:0;display:inline-block;padding:6px 20px;background:linear-gradient(135deg,#f97316,#ea580c);color:#ffffff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;border-radius:20px;">🔥 Oferta Exclusiva</p>
+<p style="margin:0;display:inline-block;padding:6px 20px;background:linear-gradient(135deg,#f97316,#ea580c);color:#ffffff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;border-radius:20px;">Oferta Exclusiva</p>
 </td></tr>
 </table>
 <h1 style="margin:0 0 20px;font-size:28px;line-height:1.3;color:#ffffff;text-align:center;">Esta semana, sua chance de empreender <span style="color:#f97316;">sem taxa de franquia.</span></h1>
@@ -443,19 +432,19 @@ const EMAILS = [
 <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 20px;">
 <tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">
 <table role="presentation" cellpadding="0" cellspacing="0"><tr>
-<td style="width:28px;height:28px;background-color:#065f46;border-radius:50%;text-align:center;vertical-align:middle;"><p style="margin:0;font-size:14px;color:#ffffff;">✓</p></td>
+<td style="width:28px;height:28px;background-color:#065f46;border-radius:50%;text-align:center;vertical-align:middle;"><p style="margin:0;font-size:14px;color:#ffffff;">&#10003;</p></td>
 <td style="padding-left:12px;font-size:15px;color:#e2e8f0;">Como a Franquia Solo funciona sem loja física</td>
 </tr></table>
 </td></tr>
 <tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">
 <table role="presentation" cellpadding="0" cellspacing="0"><tr>
-<td style="width:28px;height:28px;background-color:#065f46;border-radius:50%;text-align:center;vertical-align:middle;"><p style="margin:0;font-size:14px;color:#ffffff;">✓</p></td>
+<td style="width:28px;height:28px;background-color:#065f46;border-radius:50%;text-align:center;vertical-align:middle;"><p style="margin:0;font-size:14px;color:#ffffff;">&#10003;</p></td>
 <td style="padding-left:12px;font-size:15px;color:#e2e8f0;">O mercado crescendo 16,5% ao ano</td>
 </tr></table>
 </td></tr>
 <tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">
 <table role="presentation" cellpadding="0" cellspacing="0"><tr>
-<td style="width:28px;height:28px;background-color:#065f46;border-radius:50%;text-align:center;vertical-align:middle;"><p style="margin:0;font-size:14px;color:#ffffff;">✓</p></td>
+<td style="width:28px;height:28px;background-color:#065f46;border-radius:50%;text-align:center;vertical-align:middle;"><p style="margin:0;font-size:14px;color:#ffffff;">&#10003;</p></td>
 <td style="padding-left:12px;font-size:15px;color:#e2e8f0;">Franqueados recuperando investimento em até 18 meses</td>
 </tr></table>
 </td></tr>
@@ -474,11 +463,11 @@ const EMAILS = [
 <p style="margin:0 0 4px;font-size:16px;color:#94a3b8;">A partir de</p>
 <p style="margin:0 0 24px;font-size:48px;font-weight:800;color:#ffffff;">R$ 30 mil</p>
 <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 24px;">
-<tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">✅ <strong>100% do investimento</strong> convertido em produtos</td></tr>
-<tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">✅ <strong>Sem loja física</strong>, trabalhe de qualquer lugar</td></tr>
-<tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">✅ <strong>Treinamento completo</strong> e suporte contínuo</td></tr>
-<tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">✅ <strong>Material de marketing</strong> profissional</td></tr>
-<tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">✅ <strong>Mentoria</strong> com franqueados de sucesso</td></tr>
+<tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">&#10003; <strong>100% do investimento</strong> convertido em produtos</td></tr>
+<tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">&#10003; <strong>Sem loja física</strong>, trabalhe de qualquer lugar</td></tr>
+<tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">&#10003; <strong>Treinamento completo</strong> e suporte contínuo</td></tr>
+<tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">&#10003; <strong>Material de marketing</strong> profissional</td></tr>
+<tr><td style="padding:8px 0;font-size:15px;color:#e2e8f0;">&#10003; <strong>Mentoria</strong> com franqueados de sucesso</td></tr>
 </table>
 
 <!-- Stats mini -->
@@ -508,17 +497,17 @@ const EMAILS = [
 <tr><td style="padding:0 40px 16px;text-align:center;">
 <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
 <tr><td style="background:linear-gradient(135deg,#f97316,#ea580c);border-radius:12px;padding:2px;">
-<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:block;padding:20px 48px;color:#ffffff;text-decoration:none;font-size:18px;font-weight:700;letter-spacing:0.5px;">🔥 QUERO GARANTIR MINHA VAGA →</a>
+<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:block;padding:20px 48px;color:#ffffff;text-decoration:none;font-size:18px;font-weight:700;letter-spacing:0.5px;">QUERO GARANTIR MINHA VAGA</a>
 </td></tr>
 </table>
 </td></tr>
 <tr><td style="padding:8px 40px 16px;text-align:center;">
-<p style="margin:0;font-size:13px;color:#ef4444;font-weight:600;">⏰ Últimas vagas disponíveis para sua região</p>
+<p style="margin:0;font-size:13px;color:#ef4444;font-weight:600;">Últimas vagas disponíveis para sua região</p>
 </td></tr>
 <tr><td style="padding:0 40px 40px;text-align:center;">
 <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
 <tr><td style="background-color:#25d366;border-radius:10px;">
-<a href="https://wa.me/554391280555?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Franquia%20Solo%20Acqualive" target="_blank" style="display:block;padding:14px 32px;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">💬 Ou fale direto no WhatsApp</a>
+<a href="https://wa.me/554391280555?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Franquia%20Solo%20Acqualive" target="_blank" style="display:block;padding:14px 32px;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">Ou fale direto no WhatsApp</a>
 </td></tr>
 </table>
 </td></tr>
@@ -642,7 +631,7 @@ const EmailTemplates = () => {
       {/* Content */}
       <div className="max-w-5xl mx-auto px-4 pb-12">
         {viewMode === "preview" ? (
-          <div className="bg-white rounded-lg overflow-hidden">
+          <div className="rounded-lg overflow-hidden">
             <iframe
               srcDoc={email.html}
               title={`Email ${currentIndex + 1}`}
