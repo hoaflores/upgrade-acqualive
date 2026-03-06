@@ -577,19 +577,31 @@ const EmailTemplates = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [viewMode, setViewMode] = useState<"preview" | "code">("preview");
   const [copied, setCopied] = useState(false);
+  const [editedHtmlByIndex, setEditedHtmlByIndex] = useState<Record<number, string>>({});
+  const [editedSubjectByIndex, setEditedSubjectByIndex] = useState<Record<number, string>>({});
 
   const email = EMAILS[currentIndex];
+  const currentHtml = editedHtmlByIndex[currentIndex] ?? email.html;
+  const currentSubject = editedSubjectByIndex[currentIndex] ?? email.subject;
 
   const copyHtml = async () => {
-    await navigator.clipboard.writeText(email.html);
+    await navigator.clipboard.writeText(currentHtml);
     setCopied(true);
     toast.success("HTML copiado para a área de transferência!");
     setTimeout(() => setCopied(false), 2000);
   };
 
   const copySubject = async () => {
-    await navigator.clipboard.writeText(email.subject);
+    await navigator.clipboard.writeText(currentSubject);
     toast.success("Assunto copiado!");
+  };
+
+  const handleHtmlChange = (value: string) => {
+    setEditedHtmlByIndex((prev) => ({ ...prev, [currentIndex]: value }));
+  };
+
+  const handleSubjectChange = (value: string) => {
+    setEditedSubjectByIndex((prev) => ({ ...prev, [currentIndex]: value }));
   };
 
   return (
@@ -670,7 +682,16 @@ const EmailTemplates = () => {
       <div className="max-w-5xl mx-auto px-4 py-4">
         <div className="flex items-center gap-3 bg-[#161b26] rounded-lg px-4 py-3 border border-[#1c2333]">
           <span className="text-xs text-gray-500 uppercase font-bold shrink-0">Assunto:</span>
-          <span className="text-sm text-gray-200 flex-1">{email.subject}</span>
+          {viewMode === "code" ? (
+            <input
+              type="text"
+              value={currentSubject}
+              onChange={(e) => handleSubjectChange(e.target.value)}
+              className="flex-1 bg-[#0d1117] border border-[#1c2333] rounded px-3 py-2 text-sm text-gray-200 focus:outline-none focus:border-[#f97316]"
+            />
+          ) : (
+            <span className="text-sm text-gray-200 flex-1">{currentSubject}</span>
+          )}
           <button onClick={copySubject} className="text-xs text-[#f97316] hover:underline shrink-0">Copiar</button>
         </div>
       </div>
@@ -680,16 +701,20 @@ const EmailTemplates = () => {
         {viewMode === "preview" ? (
           <div className="rounded-lg overflow-hidden">
             <iframe
-              srcDoc={email.html}
+              srcDoc={currentHtml}
               title={`Email ${currentIndex + 1}`}
               className="w-full border-0"
               style={{ minHeight: "900px" }}
             />
           </div>
         ) : (
-          <pre className="bg-[#161b26] rounded-lg p-6 overflow-x-auto text-xs text-gray-300 border border-[#1c2333]" style={{ maxHeight: "80vh" }}>
-            {email.html}
-          </pre>
+          <textarea
+            value={currentHtml}
+            onChange={(e) => handleHtmlChange(e.target.value)}
+            className="w-full bg-[#161b26] rounded-lg p-6 text-xs text-gray-300 border border-[#1c2333] focus:outline-none focus:border-[#f97316] font-mono"
+            style={{ minHeight: "80vh" }}
+            spellCheck={false}
+          />
         )}
       </div>
     </div>
