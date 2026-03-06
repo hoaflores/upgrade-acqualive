@@ -16,6 +16,7 @@ import IndicaPDF from "./pages/IndicaPDF";
 import Bonifiq from "./pages/Bonifiq";
 import IndicaClub from "./pages/IndicaClub";
 import EmailTemplates from "./pages/EmailTemplates";
+import BlogTemplates from "./pages/BlogTemplates";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
