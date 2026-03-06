@@ -260,21 +260,13 @@ const EMAILS = [
 </td></tr>
 
 <!-- Video Thumbnail with Play Button -->
-<tr><td style="padding:0;text-align:center;">
-<a href="https://www.youtube.com/watch?v=hjFlK337Cjc" target="_blank" style="display:block;text-decoration:none;position:relative;">
-<!--[if mso]>
-<v:group xmlns:v="urn:schemas-microsoft-com:vml" style="width:600px;height:338px;">
-<v:image src="https://img.youtube.com/vi/hjFlK337Cjc/maxresdefault.jpg" style="width:600px;height:338px;"/>
-</v:group>
-<![endif]-->
-<!--[if !mso]><!-->
-<div style="position:relative;display:inline-block;width:100%;max-width:600px;">
-<img src="https://img.youtube.com/vi/hjFlK337Cjc/maxresdefault.jpg" alt="Assista ao depoimento" width="600" style="display:block;width:100%;height:auto;">
-<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80px;height:80px;background-color:rgba(249,115,22,0.9);border-radius:50%;text-align:center;line-height:80px;">
-<div style="display:inline-block;width:0;height:0;border-style:solid;border-width:18px 0 18px 32px;border-color:transparent transparent transparent #ffffff;margin-left:6px;vertical-align:middle;"></div>
-</div>
-</div>
-<!--<![endif]-->
+<tr><td style="padding:0;text-align:center;background-color:#0d1117;">
+<a href="https://www.youtube.com/watch?v=hjFlK337Cjc" target="_blank" style="display:block;text-decoration:none;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-image:url('https://img.youtube.com/vi/hjFlK337Cjc/hqdefault.jpg');background-size:cover;background-position:center;">
+<tr><td align="center" style="padding:80px 0;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/120px-YouTube_full-color_icon_%282017%29.svg.png" alt="Assistir vídeo" width="72" style="display:block;">
+</td></tr>
+</table>
 </a>
 </td></tr>
 
