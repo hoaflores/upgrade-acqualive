@@ -6,96 +6,123 @@ import { toast } from "sonner";
 const EMAILS = [
   {
     day: "Segunda-feira",
-    subject: "Você já tem o filtro… e se pudesse lucrar com ele?",
+    subject: "A história por trás da água que você bebe todos os dias",
     html: `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Franquia Solo Acqualive</title>
+<title>Newsletter Acqualive</title>
 </head>
-<body style="margin:0;padding:0;background-color:#0d1117;font-family:Arial,Helvetica,sans-serif;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#0d1117;">
-<tr><td align="center" style="padding:0;">
-<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#0d1117;overflow:hidden;">
+<body style="margin:0;padding:0;background-color:#f5f5f0;font-family:Georgia,'Times New Roman',serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f5f5f0;">
+<tr><td align="center" style="padding:24px 16px;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#ffffff;border-radius:4px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.08);">
 
-<!-- Header with gradient -->
-<tr><td style="background:linear-gradient(135deg,#0d1117 0%,#1a2332 100%);padding:32px 40px 24px;text-align:center;">
-<img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663153389074/noYGaqqpOTGvWHLS.png" alt="Acqualive" width="160" style="display:block;margin:0 auto;">
+<!-- Header -->
+<tr><td style="padding:32px 40px 24px;text-align:center;border-bottom:2px solid #1a4d5c;">
+<img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663153389074/noYGaqqpOTGvWHLS.png" alt="Acqualive" width="140" style="display:block;margin:0 auto 12px;">
+<p style="margin:0;font-size:11px;color:#7a8a8e;text-transform:uppercase;letter-spacing:3px;font-family:Arial,Helvetica,sans-serif;">Newsletter para clientes</p>
 </td></tr>
 
 <!-- Hero Image -->
 <tr><td style="padding:0;">
-<img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663153389074/KNbHZLJGeBdnHFPM.webp" alt="Franqueada Acqualive" width="600" style="display:block;width:100%;height:auto;">
+<img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663153389074/KNbHZLJGeBdnHFPM.webp" alt="Equipe Acqualive" width="600" style="display:block;width:100%;height:auto;">
 </td></tr>
 
-<!-- Orange Accent Line -->
-<tr><td style="padding:0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="height:4px;background:linear-gradient(90deg,#f97316,#fbbf24,#f97316);"></td></tr></table></td></tr>
+<!-- Main Content -->
+<tr><td style="padding:36px 40px 24px;">
+<h1 style="margin:0 0 24px;font-size:26px;line-height:1.4;color:#1a2e35;font-weight:400;">A hist&oacute;ria por tr&aacute;s da &aacute;gua que voc&ecirc; bebe todos os dias</h1>
 
-<!-- Content -->
-<tr><td style="padding:40px 40px 24px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-<tr><td style="text-align:center;padding-bottom:24px;">
-<p style="margin:0;display:inline-block;padding:6px 20px;background-color:#f97316;color:#ffffff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;border-radius:20px;">Franquia Solo</p>
-</td></tr>
-</table>
-<h1 style="margin:0 0 24px;font-size:30px;line-height:1.3;color:#ffffff;text-align:center;">Você já tem o filtro.<br><span style="color:#f97316;">E se pudesse lucrar com ele?</span></h1>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Ol&aacute;!</p>
 
-<!-- Divider -->
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:0 0 24px;text-align:center;"><table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;"><tr><td style="width:40px;height:2px;background-color:#f97316;"></td><td style="width:12px;"></td><td style="width:8px;height:8px;border-radius:50%;background-color:#f97316;"></td><td style="width:12px;"></td><td style="width:40px;height:2px;background-color:#f97316;"></td></tr></table></td></tr></table>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Voc&ecirc; j&aacute; sabe a diferen&ccedil;a que a &aacute;gua Acqualive faz no seu dia a dia. O sabor muda, a disposi&ccedil;&atilde;o melhora, a fam&iacute;lia inteira sente. Mas talvez voc&ecirc; nunca tenha ouvido como tudo isso come&ccedil;ou.</p>
 
-<p style="margin:0 0 16px;font-size:16px;line-height:1.7;color:#d1d5db;">Olá!</p>
-<p style="margin:0 0 16px;font-size:16px;line-height:1.7;color:#d1d5db;">Você já conhece a qualidade da água Acqualive. Sabe a diferença que faz na saúde, no sabor e no dia a dia da sua família.</p>
-<p style="margin:0 0 16px;font-size:16px;line-height:1.7;color:#d1d5db;">Agora imagine <strong style="color:#ffffff;">transformar essa experiência em um negócio lucrativo</strong>, sem precisar de loja física, sem funcionários, trabalhando no seu ritmo.</p>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">A Acqualive nasceu de uma pergunta simples: <strong style="color:#1a2e35;">por que a gente cuida tanto do que come, mas t&atilde;o pouco da &aacute;gua que bebe?</strong></p>
+
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Essa inquieta&ccedil;&atilde;o virou prop&oacute;sito. Hoje, s&atilde;o mais de 15 anos dedicados a levar &aacute;gua alcalina ionizada de verdade para dentro das casas brasileiras. N&atilde;o &aacute;gua de prateleira, n&atilde;o promessa de marketing, mas tecnologia que transforma a &aacute;gua da torneira em algo que o corpo reconhece e agradece.</p>
 </td></tr>
 
-<!-- Highlight Box -->
-<tr><td style="padding:0 40px 32px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;">
-<tr><td style="padding:28px;text-align:center;">
-<p style="margin:0;font-size:18px;line-height:1.5;color:#ffffff;">Essa é a <strong style="color:#f97316;">Franquia Solo Acqualive</strong>:<br>o modelo perfeito para quem já vive a marca<br>e quer empreender com ela.</p>
-</td></tr>
-</table>
-</td></tr>
-
-<!-- Stats with visual cards -->
-<tr><td style="padding:0 40px 32px;">
+<!-- Highlight Quote -->
+<tr><td style="padding:0 40px 28px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
 <tr>
-<td width="32%" style="text-align:center;padding:24px 8px;background:linear-gradient(180deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;">
-<p style="margin:0 0 4px;font-size:32px;font-weight:800;color:#f97316;">15+</p>
-<p style="margin:0;font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">Anos de<br>mercado</p>
-</td>
-<td width="2%"></td>
-<td width="32%" style="text-align:center;padding:24px 8px;background:linear-gradient(180deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;">
-<p style="margin:0 0 4px;font-size:32px;font-weight:800;color:#f97316;">200k+</p>
-<p style="margin:0;font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">Clientes<br>satisfeitos</p>
-</td>
-<td width="2%"></td>
-<td width="32%" style="text-align:center;padding:24px 8px;background:linear-gradient(180deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;">
-<p style="margin:0 0 4px;font-size:32px;font-weight:800;color:#f97316;">R$30k</p>
-<p style="margin:0;font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">Investimento<br>inicial</p>
+<td style="width:4px;background-color:#1a4d5c;border-radius:2px;"></td>
+<td style="padding:20px 24px;">
+<p style="margin:0;font-size:18px;line-height:1.6;color:#1a2e35;font-style:italic;">"Nosso prop&oacute;sito &eacute; simples: transformar a &aacute;gua para cuidar da vida. Cada purificador que sai da nossa f&aacute;brica carrega essa miss&atilde;o."</p>
 </td>
 </tr>
 </table>
 </td></tr>
 
-<!-- CTA -->
-<tr><td style="padding:0 40px 16px;text-align:center;">
-<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
-<tr><td style="background:linear-gradient(135deg,#f97316,#ea580c);border-radius:10px;padding:2px;">
-<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:block;padding:16px 44px;color:#ffffff;text-decoration:none;font-size:16px;font-weight:700;letter-spacing:0.5px;">QUERO CONHECER O MODELO SOLO</a>
+<!-- Content continues -->
+<tr><td style="padding:0 40px 24px;">
+<h2 style="margin:0 0 16px;font-size:20px;color:#1a2e35;font-weight:400;">O que nos torna diferentes</h2>
+
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Enquanto a maioria dos filtros remove impurezas e para por a&iacute;, a Acqualive vai al&eacute;m. Nossos purificadores transformam a &aacute;gua em tr&ecirc;s n&iacute;veis:</p>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 24px;">
+<tr><td style="padding:12px 0;border-bottom:1px solid #e8e8e3;">
+<p style="margin:0 0 4px;font-size:15px;font-weight:700;color:#1a2e35;font-family:Arial,Helvetica,sans-serif;">Purifica&ccedil;&atilde;o</p>
+<p style="margin:0;font-size:14px;line-height:1.6;color:#5a6a6f;">Remove cloro, metais pesados, bact&eacute;rias e mais de 80 contaminantes.</p>
+</td></tr>
+<tr><td style="padding:12px 0;border-bottom:1px solid #e8e8e3;">
+<p style="margin:0 0 4px;font-size:15px;font-weight:700;color:#1a2e35;font-family:Arial,Helvetica,sans-serif;">Alcaliniza&ccedil;&atilde;o</p>
+<p style="margin:0;font-size:14px;line-height:1.6;color:#5a6a6f;">Eleva o pH da &aacute;gua para a faixa alcalina, ajudando no equil&iacute;brio do organismo.</p>
+</td></tr>
+<tr><td style="padding:12px 0;">
+<p style="margin:0 0 4px;font-size:15px;font-weight:700;color:#1a2e35;font-family:Arial,Helvetica,sans-serif;">Ioniza&ccedil;&atilde;o</p>
+<p style="margin:0;font-size:14px;line-height:1.6;color:#5a6a6f;">Reestrutura a &aacute;gua em microclusters, facilitando a absor&ccedil;&atilde;o celular.</p>
+</td></tr>
+</table>
+
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Isso n&atilde;o &eacute; teoria. S&atilde;o mais de 200 mil fam&iacute;lias que j&aacute; experimentaram e sentiram a diferen&ccedil;a. Voc&ecirc; &eacute; uma delas.</p>
+</td></tr>
+
+<!-- Numbers Section -->
+<tr><td style="padding:0 40px 28px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f5f5f0;border-radius:8px;">
+<tr>
+<td width="33%" style="padding:24px 12px;text-align:center;">
+<p style="margin:0;font-size:28px;font-weight:700;color:#1a4d5c;font-family:Arial,Helvetica,sans-serif;">15+</p>
+<p style="margin:4px 0 0;font-size:11px;color:#7a8a8e;text-transform:uppercase;letter-spacing:1px;font-family:Arial,Helvetica,sans-serif;">anos de<br>mercado</p>
+</td>
+<td width="33%" style="padding:24px 12px;text-align:center;border-left:1px solid #e0e0d8;border-right:1px solid #e0e0d8;">
+<p style="margin:0;font-size:28px;font-weight:700;color:#1a4d5c;font-family:Arial,Helvetica,sans-serif;">200k+</p>
+<p style="margin:4px 0 0;font-size:11px;color:#7a8a8e;text-transform:uppercase;letter-spacing:1px;font-family:Arial,Helvetica,sans-serif;">fam&iacute;lias<br>atendidas</p>
+</td>
+<td width="33%" style="padding:24px 12px;text-align:center;">
+<p style="margin:0;font-size:28px;font-weight:700;color:#1a4d5c;font-family:Arial,Helvetica,sans-serif;">3x</p>
+<p style="margin:4px 0 0;font-size:11px;color:#7a8a8e;text-transform:uppercase;letter-spacing:1px;font-family:Arial,Helvetica,sans-serif;">selo great<br>place to work</p>
+</td>
+</tr>
+</table>
+</td></tr>
+
+<!-- Did you know section -->
+<tr><td style="padding:0 40px 24px;">
+<h2 style="margin:0 0 16px;font-size:20px;color:#1a2e35;font-weight:400;">Voc&ecirc; sabia?</h2>
+
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">A Acqualive &eacute; uma franquia brasileira com opera&ccedil;&atilde;o em todo o pa&iacute;s. O que come&ccedil;ou como um sonho de democratizar a &aacute;gua de qualidade virou uma rede com centenas de franqueados, presente em todos os estados.</p>
+
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#3a4a4f;">Muitos dos nossos franqueados come&ccedil;aram exatamente como voc&ecirc;: como clientes. Pessoas que experimentaram, sentiram a diferen&ccedil;a e pensaram: "e se eu pudesse levar isso para mais gente?"</p>
+</td></tr>
+
+<!-- Soft CTA -->
+<tr><td style="padding:0 40px 36px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f5f5f0;border-radius:8px;">
+<tr><td style="padding:28px 24px;text-align:center;">
+<p style="margin:0 0 12px;font-size:16px;line-height:1.7;color:#3a4a4f;">Se voc&ecirc; j&aacute; pensou em empreender com algo que acredita de verdade, talvez valha a pena conhecer como funciona.</p>
+<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:inline-block;padding:12px 28px;background-color:#1a4d5c;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;border-radius:6px;font-family:Arial,Helvetica,sans-serif;letter-spacing:0.5px;">Conhecer o modelo de franquia</a>
+<p style="margin:12px 0 0;font-size:12px;color:#7a8a8e;">Sem compromisso. &Eacute; s&oacute; para saber mais.</p>
 </td></tr>
 </table>
 </td></tr>
-<tr><td style="padding:0 40px 40px;text-align:center;">
-<p style="margin:0;font-size:13px;color:#64748b;">Nos próximos dias, vou te mostrar os números e depoimentos de quem já faz parte.</p>
-</td></tr>
 
 <!-- Footer -->
-<tr><td style="padding:24px 40px;background:linear-gradient(180deg,#0a0e14,#060810);text-align:center;border-top:1px solid #1c2333;">
-<p style="margin:0;font-size:12px;color:#4b5563;">© 2025 Acqualive. Todos os direitos reservados.</p>
-<p style="margin:8px 0 0;font-size:11px;color:#374151;">Você recebeu este email porque é cliente Acqualive.</p>
+<tr><td style="padding:24px 40px;text-align:center;border-top:1px solid #e8e8e3;">
+<p style="margin:0;font-size:12px;color:#7a8a8e;font-family:Arial,Helvetica,sans-serif;">&copy; 2025 Acqualive. Todos os direitos reservados.</p>
+<p style="margin:8px 0 0;font-size:11px;color:#a0aab0;font-family:Arial,Helvetica,sans-serif;">Voc&ecirc; recebeu este email porque &eacute; cliente Acqualive.</p>
 </td></tr>
 
 </table>
