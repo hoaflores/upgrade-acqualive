@@ -261,13 +261,15 @@ const EMAILS = [
 
 <!-- Video Thumbnail with Play Button -->
 <tr><td style="padding:0;text-align:center;background-color:#0d1117;">
-<a href="https://www.youtube.com/watch?v=hjFlK337Cjc" target="_blank" style="display:block;text-decoration:none;position:relative;">
-<div style="position:relative;display:inline-block;width:100%;max-width:600px;">
-<img src="https://upgrade-acqualive.lovable.app/images/video-thumb-solo.png" alt="Assista ao depoimento" width="600" style="display:block;width:100%;height:auto;">
-<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/120px-YouTube_full-color_icon_%282017%29.svg.png" alt="Play" width="68" style="display:block;">
-</div>
-</div>
+<a href="https://www.youtube.com/watch?v=hjFlK337Cjc" target="_blank" style="display:block;text-decoration:none;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">
+<tr><td style="position:relative;text-align:center;">
+<img src="${window.location.origin}/images/video-thumb-solo.png" alt="Assista ao depoimento" width="600" style="display:block;width:100%;height:auto;">
+</td></tr>
+<tr><td align="center" style="margin-top:-50px;padding:0;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/120px-YouTube_full-color_icon_%282017%29.svg.png" alt="Play" width="68" style="display:block;margin-top:-50px;">
+</td></tr>
+</table>
 </a>
 </td></tr>
 
