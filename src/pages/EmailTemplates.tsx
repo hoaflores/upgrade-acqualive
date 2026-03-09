@@ -109,12 +109,12 @@ const EMAILS = [
 </td></tr>
 
 <!-- Did you know section -->
-<tr><td style="padding:0 40px 24px;">
-<h2 style="margin:0 0 16px;font-size:20px;color:#ffffff;font-weight:700;">Voc&ecirc; sabia?</h2>
+<tr><td style="padding:0 34px 20px;">
+<h2 style="margin:0 0 12px;font-size:17px;color:#ffffff;font-weight:700;">Voc&ecirc; sabia?</h2>
 
-<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">A Acqualive &eacute; uma franquia brasileira presente em todos os 27 estados. Muitos dos nossos franqueados come&ccedil;aram exatamente como voc&ecirc;: como clientes que sentiram a diferen&ccedil;a e pensaram <strong style="color:#ffffff;">"e se eu pudesse levar isso para mais gente?"</strong></p>
+<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">A Acqualive &eacute; uma franquia brasileira presente em todos os 27 estados. Muitos dos nossos franqueados come&ccedil;aram exatamente como voc&ecirc;: como clientes que sentiram a diferen&ccedil;a e pensaram <strong style="color:#ffffff;">"e se eu pudesse levar isso para mais gente?"</strong></p>
 
-<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">N&atilde;o &eacute; sobre vender um produto. &Eacute; sobre compartilhar algo que voc&ecirc; j&aacute; sabe que funciona, transformando uma convic&ccedil;&atilde;o pessoal em uma atividade profissional com prop&oacute;sito.</p>
+<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">N&atilde;o &eacute; sobre vender um produto. &Eacute; sobre compartilhar algo que voc&ecirc; j&aacute; sabe que funciona, transformando uma convic&ccedil;&atilde;o pessoal em uma atividade profissional com prop&oacute;sito.</p>
 </td></tr>
 
 <!-- Soft CTA -->
