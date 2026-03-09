@@ -33,16 +33,16 @@ const EMAILS = [
 <tr><td style="padding:0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="height:4px;background:linear-gradient(90deg,#f97316,#fbbf24,#f97316);"></td></tr></table></td></tr>
 
 <!-- Main Content -->
-<tr><td style="padding:40px 40px 24px;">
-<h1 style="margin:0 0 24px;font-size:26px;line-height:1.4;color:#ffffff;font-weight:700;">A hist&oacute;ria por tr&aacute;s da &aacute;gua que voc&ecirc; bebe todos os dias</h1>
+<tr><td style="padding:34px 34px 20px;">
+<h1 style="margin:0 0 20px;font-size:22px;line-height:1.4;color:#ffffff;font-weight:700;">A hist&oacute;ria por tr&aacute;s da &aacute;gua que voc&ecirc; bebe todos os dias</h1>
 
-<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">Ol&aacute;!</p>
+<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">Ol&aacute;!</p>
 
-<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">Voc&ecirc; j&aacute; sabe a diferen&ccedil;a que a &aacute;gua Acqualive faz no seu dia a dia. O sabor muda, a disposi&ccedil;&atilde;o melhora, a fam&iacute;lia inteira sente. Mas talvez voc&ecirc; nunca tenha ouvido como tudo isso come&ccedil;ou.</p>
+<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">Voc&ecirc; j&aacute; sabe a diferen&ccedil;a que a &aacute;gua Acqualive faz no seu dia a dia. O sabor muda, a disposi&ccedil;&atilde;o melhora, a fam&iacute;lia inteira sente. Mas talvez voc&ecirc; nunca tenha ouvido como tudo isso come&ccedil;ou.</p>
 
-<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">Tudo nasceu de uma inquieta&ccedil;&atilde;o: a gente cuida tanto do que come, mas quase ningu&eacute;m para e pergunta <strong style="color:#ffffff;">ser&aacute; que a &aacute;gua que eu bebo est&aacute; realmente cuidando de mim?</strong></p>
+<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">Tudo nasceu de uma inquieta&ccedil;&atilde;o: a gente cuida tanto do que come, mas quase ningu&eacute;m para e pergunta <strong style="color:#ffffff;">ser&aacute; que a &aacute;gua que eu bebo est&aacute; realmente cuidando de mim?</strong></p>
 
-<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">Foi essa pergunta que deu origem &agrave; Acqualive. Come&ccedil;ou com pessoas que acreditavam que a &aacute;gua podia ser muito mais do que "sem gosto e sem cheiro". Que podia, de verdade, nutrir o corpo e transformar a sa&uacute;de de fam&iacute;lias inteiras.</p>
+<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">Foi essa pergunta que deu origem &agrave; Acqualive. Come&ccedil;ou com pessoas que acreditavam que a &aacute;gua podia ser muito mais do que "sem gosto e sem cheiro". Que podia, de verdade, nutrir o corpo e transformar a sa&uacute;de de fam&iacute;lias inteiras.</p>
 </td></tr>
 
 <!-- Highlight Quote -->
