@@ -56,14 +56,16 @@ const HeroSection = () => (
           </span>
         </motion.div>
 
-        <motion.h1
+        <h1 className="sr-only">Acqualive Club</h1>
+
+        <motion.h2
           variants={fadeInUp}
           className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-primary-foreground leading-tight mb-6"
         >
           Ganhe seu próximo{" "}
           <span className="text-accent">Refil Grátis</span>{" "}
           indicando amigos.
-        </motion.h1>
+        </motion.h2>
 
         <motion.p
           variants={fadeInUp}
