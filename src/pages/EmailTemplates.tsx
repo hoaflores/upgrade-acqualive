@@ -133,16 +133,16 @@ const EMAILS = [
 </td></tr>
 
 <!-- Closing -->
-<tr><td style="padding:0 40px 32px;">
-<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">Nos pr&oacute;ximos dias, vou compartilhar mais conte&uacute;dos sobre sa&uacute;de, &aacute;gua e oportunidades. Fique &agrave; vontade para responder este email.</p>
+<tr><td style="padding:0 34px 26px;">
+<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">Nos pr&oacute;ximos dias, vou compartilhar mais conte&uacute;dos sobre sa&uacute;de, &aacute;gua e oportunidades. Fique &agrave; vontade para responder este email.</p>
 
-<p style="margin:0;font-size:16px;line-height:1.8;color:#d1d5db;">Um abra&ccedil;o,<br><strong style="color:#ffffff;">Equipe Acqualive</strong></p>
+<p style="margin:0;font-size:14px;line-height:1.75;color:#d1d5db;">Um abra&ccedil;o,<br><strong style="color:#ffffff;">Equipe Acqualive</strong></p>
 </td></tr>
 
 <!-- Footer -->
-<tr><td style="padding:24px 40px;background:linear-gradient(180deg,#0a0e14,#060810);text-align:center;border-top:1px solid #1c2333;">
-<p style="margin:0;font-size:12px;color:#4b5563;">&copy; 2025 Acqualive. Todos os direitos reservados.</p>
-<p style="margin:8px 0 0;font-size:11px;color:#374151;">Voc&ecirc; recebeu este email porque &eacute; cliente Acqualive.</p>
+<tr><td style="padding:20px 34px;background:linear-gradient(180deg,#0a0e14,#060810);text-align:center;border-top:1px solid #1c2333;">
+<p style="margin:0;font-size:11px;color:#4b5563;">&copy; 2025 Acqualive. Todos os direitos reservados.</p>
+<p style="margin:6px 0 0;font-size:10px;color:#374151;">Voc&ecirc; recebeu este email porque &eacute; cliente Acqualive.</p>
 </td></tr>
 
 </table>
