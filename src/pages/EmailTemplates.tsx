@@ -58,12 +58,12 @@ const EMAILS = [
 </td></tr>
 
 <!-- Growth Story -->
-<tr><td style="padding:0 40px 24px;">
-<h2 style="margin:0 0 16px;font-size:20px;color:#ffffff;font-weight:700;">Do primeiro purificador &agrave; presen&ccedil;a nacional</h2>
+<tr><td style="padding:0 34px 20px;">
+<h2 style="margin:0 0 12px;font-size:17px;color:#ffffff;font-weight:700;">Do primeiro purificador &agrave; presen&ccedil;a nacional</h2>
 
-<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">Nos primeiros anos, a Acqualive funcionava de um jeito artesanal. Um time enxuto, um produto excelente e muita conversa. O crescimento veio do boca a boca: clientes satisfeitos que contavam para amigos, que contavam para vizinhos. Tudo constru&iacute;do na base do resultado real.</p>
+<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">Nos primeiros anos, a Acqualive funcionava de um jeito artesanal. Um time enxuto, um produto excelente e muita conversa. O crescimento veio do boca a boca: clientes satisfeitos que contavam para amigos, que contavam para vizinhos. Tudo constru&iacute;do na base do resultado real.</p>
 
-<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">Quando a demanda cresceu, a escolha n&atilde;o foi vender em varejo. Foi convidar pessoas que j&aacute; acreditavam no produto a levar essa transforma&ccedil;&atilde;o para suas pr&oacute;prias cidades. Assim nasceu o modelo de franquia.</p>
+<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">Quando a demanda cresceu, a escolha n&atilde;o foi vender em varejo. Foi convidar pessoas que j&aacute; acreditavam no produto a levar essa transforma&ccedil;&atilde;o para suas pr&oacute;prias cidades. Assim nasceu o modelo de franquia.</p>
 </td></tr>
 
 <!-- Technology Section -->
