@@ -33,116 +33,116 @@ const EMAILS = [
 <tr><td style="padding:0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="height:4px;background:linear-gradient(90deg,#f97316,#fbbf24,#f97316);"></td></tr></table></td></tr>
 
 <!-- Main Content -->
-<tr><td style="padding:34px 34px 20px;">
-<h1 style="margin:0 0 20px;font-size:22px;line-height:1.4;color:#ffffff;font-weight:700;">A hist&oacute;ria por tr&aacute;s da &aacute;gua que voc&ecirc; bebe todos os dias</h1>
+<tr><td style="padding:40px 40px 24px;">
+<h1 style="margin:0 0 24px;font-size:26px;line-height:1.4;color:#ffffff;font-weight:700;">A hist&oacute;ria por tr&aacute;s da &aacute;gua que voc&ecirc; bebe todos os dias</h1>
 
-<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">Ol&aacute;!</p>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">Ol&aacute;!</p>
 
-<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">Voc&ecirc; j&aacute; sabe a diferen&ccedil;a que a &aacute;gua Acqualive faz no seu dia a dia. O sabor muda, a disposi&ccedil;&atilde;o melhora, a fam&iacute;lia inteira sente. Mas talvez voc&ecirc; nunca tenha ouvido como tudo isso come&ccedil;ou.</p>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">Voc&ecirc; j&aacute; sabe a diferen&ccedil;a que a &aacute;gua Acqualive faz no dia a dia. O sabor muda, a disposi&ccedil;&atilde;o melhora, a fam&iacute;lia inteira sente. Mas talvez voc&ecirc; nunca tenha ouvido como tudo come&ccedil;ou.</p>
 
-<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">Tudo nasceu de uma inquieta&ccedil;&atilde;o: a gente cuida tanto do que come, mas quase ningu&eacute;m para e pergunta <strong style="color:#ffffff;">ser&aacute; que a &aacute;gua que eu bebo est&aacute; realmente cuidando de mim?</strong></p>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">Nasceu de uma inquieta&ccedil;&atilde;o: a gente cuida tanto do que come, mas quase ningu&eacute;m pergunta <strong style="color:#ffffff;">ser&aacute; que a &aacute;gua que eu bebo est&aacute; cuidando de mim?</strong></p>
 
-<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">Foi essa pergunta que deu origem &agrave; Acqualive. Come&ccedil;ou com pessoas que acreditavam que a &aacute;gua podia ser muito mais do que "sem gosto e sem cheiro". Que podia, de verdade, nutrir o corpo e transformar a sa&uacute;de de fam&iacute;lias inteiras.</p>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">Foi essa pergunta que deu origem &agrave; Acqualive. Pessoas que acreditavam que a &aacute;gua podia ser mais do que "sem gosto e sem cheiro". Que podia nutrir o corpo e transformar a sa&uacute;de de fam&iacute;lias inteiras.</p>
 </td></tr>
 
 <!-- Highlight Quote -->
-<tr><td style="padding:0 34px 22px;">
+<tr><td style="padding:0 40px 28px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
 <tr>
-<td style="width:3px;background-color:#f97316;border-radius:2px;"></td>
-<td style="padding:16px 20px;">
-<p style="margin:0;font-size:15px;line-height:1.6;color:#ffffff;font-style:italic;">"Nosso prop&oacute;sito &eacute; simples: transformar a &aacute;gua para cuidar da vida. Cada purificador que sai da nossa f&aacute;brica carrega essa miss&atilde;o."</p>
+<td style="width:4px;background-color:#f97316;border-radius:2px;"></td>
+<td style="padding:20px 24px;">
+<p style="margin:0;font-size:18px;line-height:1.6;color:#ffffff;font-style:italic;">"Nosso prop&oacute;sito &eacute; simples: transformar a &aacute;gua para cuidar da vida."</p>
 </td>
 </tr>
 </table>
 </td></tr>
 
 <!-- Growth Story -->
-<tr><td style="padding:0 34px 20px;">
-<h2 style="margin:0 0 12px;font-size:17px;color:#ffffff;font-weight:700;">Do primeiro purificador &agrave; presen&ccedil;a nacional</h2>
+<tr><td style="padding:0 40px 24px;">
+<h2 style="margin:0 0 16px;font-size:20px;color:#ffffff;font-weight:700;">Do primeiro purificador &agrave; presen&ccedil;a nacional</h2>
 
-<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">Nos primeiros anos, a Acqualive funcionava de um jeito artesanal. Um time enxuto, um produto excelente e muita conversa. O crescimento veio do boca a boca: clientes satisfeitos que contavam para amigos, que contavam para vizinhos. Tudo constru&iacute;do na base do resultado real.</p>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">Nos primeiros anos, a Acqualive funcionava de forma artesanal. Time enxuto, produto excelente e muita conversa. O crescimento veio do boca a boca: clientes satisfeitos que indicavam para amigos e vizinhos.</p>
 
-<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">Quando a demanda cresceu, a escolha n&atilde;o foi vender em varejo. Foi convidar pessoas que j&aacute; acreditavam no produto a levar essa transforma&ccedil;&atilde;o para suas pr&oacute;prias cidades. Assim nasceu o modelo de franquia.</p>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">Quando a demanda cresceu, a escolha n&atilde;o foi vender em varejo. Foi convidar quem j&aacute; acreditava no produto a levar essa transforma&ccedil;&atilde;o para outras cidades. Assim nasceu o modelo de franquia.</p>
 </td></tr>
 
 <!-- Technology Section -->
-<tr><td style="padding:0 34px 20px;">
-<h2 style="margin:0 0 12px;font-size:17px;color:#ffffff;font-weight:700;">N&atilde;o &eacute; s&oacute; filtrar. &Eacute; transformar.</h2>
+<tr><td style="padding:0 40px 24px;">
+<h2 style="margin:0 0 16px;font-size:20px;color:#ffffff;font-weight:700;">N&atilde;o &eacute; s&oacute; filtrar. &Eacute; transformar.</h2>
 
-<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">Nossos purificadores fazem tr&ecirc;s coisas que nenhum filtro convencional entrega junto:</p>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">Nossos purificadores entregam tr&ecirc;s coisas que nenhum filtro convencional oferece junto:</p>
 
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 20px;">
-<tr><td style="padding:12px 0;border-bottom:1px solid #1e293b;">
-<p style="margin:0 0 3px;font-size:13px;font-weight:700;color:#f97316;">Purifica&ccedil;&atilde;o profunda</p>
-<p style="margin:0;font-size:12px;line-height:1.7;color:#94a3b8;">Remove cloro, metais pesados, bact&eacute;rias e mais de 80 contaminantes.</p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 24px;">
+<tr><td style="padding:16px 0;border-bottom:1px solid #1e293b;">
+<p style="margin:0 0 4px;font-size:15px;font-weight:700;color:#f97316;">Purifica&ccedil;&atilde;o profunda</p>
+<p style="margin:0;font-size:14px;line-height:1.7;color:#94a3b8;">Remove cloro, metais pesados e mais de 80 contaminantes.</p>
 </td></tr>
-<tr><td style="padding:12px 0;border-bottom:1px solid #1e293b;">
-<p style="margin:0 0 3px;font-size:13px;font-weight:700;color:#f97316;">Alcaliniza&ccedil;&atilde;o natural</p>
-<p style="margin:0;font-size:12px;line-height:1.7;color:#94a3b8;">Eleva o pH para a faixa alcalina (8.5 a 9.5), ajudando a equilibrar a acidez do organismo.</p>
+<tr><td style="padding:16px 0;border-bottom:1px solid #1e293b;">
+<p style="margin:0 0 4px;font-size:15px;font-weight:700;color:#f97316;">Alcaliniza&ccedil;&atilde;o natural</p>
+<p style="margin:0;font-size:14px;line-height:1.7;color:#94a3b8;">Eleva o pH para a faixa alcalina (8.5 a 9.5), equilibrando a acidez do organismo.</p>
 </td></tr>
-<tr><td style="padding:12px 0;">
-<p style="margin:0 0 3px;font-size:13px;font-weight:700;color:#f97316;">Ioniza&ccedil;&atilde;o molecular</p>
-<p style="margin:0;font-size:12px;line-height:1.7;color:#94a3b8;">Reestrutura a &aacute;gua em microclusters para facilitar a absor&ccedil;&atilde;o celular e hidratar de forma mais eficiente.</p>
+<tr><td style="padding:16px 0;">
+<p style="margin:0 0 4px;font-size:15px;font-weight:700;color:#f97316;">Ioniza&ccedil;&atilde;o molecular</p>
+<p style="margin:0;font-size:14px;line-height:1.7;color:#94a3b8;">Reestrutura a &aacute;gua em microclusters para hidratar de forma mais eficiente.</p>
 </td></tr>
 </table>
 </td></tr>
 
 <!-- Numbers Section -->
-<tr><td style="padding:0 34px 22px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:10px;border:1px solid #334155;overflow:hidden;">
+<tr><td style="padding:0 40px 28px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;overflow:hidden;">
 <tr>
-<td width="33%" style="padding:18px 10px;text-align:center;">
-<p style="margin:0;font-size:24px;font-weight:800;color:#f97316;">15+</p>
-<p style="margin:3px 0 0;font-size:10px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">anos de<br>mercado</p>
+<td width="33%" style="padding:24px 12px;text-align:center;">
+<p style="margin:0;font-size:28px;font-weight:800;color:#f97316;">15+</p>
+<p style="margin:4px 0 0;font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">anos de<br>mercado</p>
 </td>
-<td width="33%" style="padding:18px 10px;text-align:center;border-left:1px solid #334155;border-right:1px solid #334155;">
-<p style="margin:0;font-size:24px;font-weight:800;color:#f97316;">200k+</p>
-<p style="margin:3px 0 0;font-size:10px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">fam&iacute;lias<br>atendidas</p>
+<td width="33%" style="padding:24px 12px;text-align:center;border-left:1px solid #334155;border-right:1px solid #334155;">
+<p style="margin:0;font-size:28px;font-weight:800;color:#f97316;">200k+</p>
+<p style="margin:4px 0 0;font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">fam&iacute;lias<br>atendidas</p>
 </td>
-<td width="33%" style="padding:18px 10px;text-align:center;">
-<p style="margin:0;font-size:24px;font-weight:800;color:#f97316;">3x</p>
-<p style="margin:3px 0 0;font-size:10px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">selo great<br>place to work</p>
+<td width="33%" style="padding:24px 12px;text-align:center;">
+<p style="margin:0;font-size:28px;font-weight:800;color:#f97316;">3x</p>
+<p style="margin:4px 0 0;font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">selo great<br>place to work</p>
 </td>
 </tr>
 </table>
 </td></tr>
 
 <!-- Did you know section -->
-<tr><td style="padding:0 34px 20px;">
-<h2 style="margin:0 0 12px;font-size:17px;color:#ffffff;font-weight:700;">Voc&ecirc; sabia?</h2>
+<tr><td style="padding:0 40px 24px;">
+<h2 style="margin:0 0 16px;font-size:20px;color:#ffffff;font-weight:700;">Voc&ecirc; sabia?</h2>
 
-<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">A Acqualive &eacute; uma franquia brasileira presente em todos os 27 estados. Muitos dos nossos franqueados come&ccedil;aram exatamente como voc&ecirc;: como clientes que sentiram a diferen&ccedil;a e pensaram <strong style="color:#ffffff;">"e se eu pudesse levar isso para mais gente?"</strong></p>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">A Acqualive est&aacute; presente em todos os 27 estados. Muitos franqueados come&ccedil;aram como voc&ecirc;: clientes que sentiram a diferen&ccedil;a e pensaram <strong style="color:#ffffff;">"e se eu pudesse levar isso para mais gente?"</strong></p>
 
-<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">N&atilde;o &eacute; sobre vender um produto. &Eacute; sobre compartilhar algo que voc&ecirc; j&aacute; sabe que funciona, transformando uma convic&ccedil;&atilde;o pessoal em uma atividade profissional com prop&oacute;sito.</p>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">N&atilde;o &eacute; sobre vender um produto. &Eacute; sobre compartilhar algo que voc&ecirc; j&aacute; sabe que funciona.</p>
 </td></tr>
 
 <!-- Soft CTA -->
-<tr><td style="padding:0 34px 30px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:10px;border:1px solid #334155;">
-<tr><td style="padding:22px 20px;text-align:center;">
-<p style="margin:0 0 14px;font-size:14px;line-height:1.7;color:#d1d5db;">Se em algum momento voc&ecirc; j&aacute; pensou em empreender com algo que acredita de verdade, talvez valha a pena conhecer como funciona.</p>
+<tr><td style="padding:0 40px 36px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;">
+<tr><td style="padding:28px 24px;text-align:center;">
+<p style="margin:0 0 18px;font-size:16px;line-height:1.7;color:#d1d5db;">Se voc&ecirc; j&aacute; pensou em empreender com algo que acredita de verdade, talvez valha a pena conhecer.</p>
 <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
-<tr><td style="background:linear-gradient(135deg,#f97316,#ea580c);border-radius:8px;padding:2px;">
-<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:block;padding:12px 28px;color:#ffffff;text-decoration:none;font-size:13px;font-weight:700;">Conhecer o modelo de franquia</a>
+<tr><td style="background:linear-gradient(135deg,#f97316,#ea580c);border-radius:10px;padding:2px;">
+<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:block;padding:14px 32px;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">Conhecer o modelo de franquia</a>
 </td></tr>
 </table>
-<p style="margin:12px 0 0;font-size:11px;color:#64748b;">Sem compromisso. &Eacute; s&oacute; para saber mais.</p>
+<p style="margin:14px 0 0;font-size:12px;color:#64748b;">Sem compromisso. &Eacute; s&oacute; para saber mais.</p>
 </td></tr>
 </table>
 </td></tr>
 
 <!-- Closing -->
-<tr><td style="padding:0 34px 26px;">
-<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">Nos pr&oacute;ximos dias, vou compartilhar mais conte&uacute;dos sobre sa&uacute;de, &aacute;gua e oportunidades. Fique &agrave; vontade para responder este email.</p>
+<tr><td style="padding:0 40px 32px;">
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">Nos pr&oacute;ximos dias, compartilho mais sobre sa&uacute;de, &aacute;gua e oportunidades. Fique &agrave; vontade para responder.</p>
 
-<p style="margin:0;font-size:14px;line-height:1.75;color:#d1d5db;">Um abra&ccedil;o,<br><strong style="color:#ffffff;">Equipe Acqualive</strong></p>
+<p style="margin:0;font-size:16px;line-height:1.8;color:#d1d5db;">Um abra&ccedil;o,<br><strong style="color:#ffffff;">Equipe Acqualive</strong></p>
 </td></tr>
 
 <!-- Footer -->
-<tr><td style="padding:20px 34px;background:linear-gradient(180deg,#0a0e14,#060810);text-align:center;border-top:1px solid #1c2333;">
-<p style="margin:0;font-size:11px;color:#4b5563;">&copy; 2025 Acqualive. Todos os direitos reservados.</p>
-<p style="margin:6px 0 0;font-size:10px;color:#374151;">Voc&ecirc; recebeu este email porque &eacute; cliente Acqualive.</p>
+<tr><td style="padding:24px 40px;background:linear-gradient(180deg,#0a0e14,#060810);text-align:center;border-top:1px solid #1c2333;">
+<p style="margin:0;font-size:12px;color:#4b5563;">&copy; 2025 Acqualive. Todos os direitos reservados.</p>
+<p style="margin:8px 0 0;font-size:11px;color:#374151;">Voc&ecirc; recebeu este email porque &eacute; cliente Acqualive.</p>
 </td></tr>
 
 </table>
