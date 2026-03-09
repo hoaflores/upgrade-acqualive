@@ -65,7 +65,7 @@ const HeroSection = () => (
           Ganhe seu próximo{" "}
           <span className="text-accent">Refil Grátis</span>{" "}
           indicando amigos.
-        </motion.h1>
+        </motion.h2>
 
         <motion.p
           variants={fadeInUp}
