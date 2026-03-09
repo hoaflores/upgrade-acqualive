@@ -118,16 +118,16 @@ const EMAILS = [
 </td></tr>
 
 <!-- Soft CTA -->
-<tr><td style="padding:0 40px 36px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;">
-<tr><td style="padding:28px 24px;text-align:center;">
-<p style="margin:0 0 18px;font-size:16px;line-height:1.7;color:#d1d5db;">Se em algum momento voc&ecirc; j&aacute; pensou em empreender com algo que acredita de verdade, talvez valha a pena conhecer como funciona.</p>
+<tr><td style="padding:0 34px 30px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:10px;border:1px solid #334155;">
+<tr><td style="padding:22px 20px;text-align:center;">
+<p style="margin:0 0 14px;font-size:14px;line-height:1.7;color:#d1d5db;">Se em algum momento voc&ecirc; j&aacute; pensou em empreender com algo que acredita de verdade, talvez valha a pena conhecer como funciona.</p>
 <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
-<tr><td style="background:linear-gradient(135deg,#f97316,#ea580c);border-radius:10px;padding:2px;">
-<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:block;padding:14px 32px;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">Conhecer o modelo de franquia</a>
+<tr><td style="background:linear-gradient(135deg,#f97316,#ea580c);border-radius:8px;padding:2px;">
+<a href="https://franquias.acqualive.com.br/solo" target="_blank" style="display:block;padding:12px 28px;color:#ffffff;text-decoration:none;font-size:13px;font-weight:700;">Conhecer o modelo de franquia</a>
 </td></tr>
 </table>
-<p style="margin:14px 0 0;font-size:12px;color:#64748b;">Sem compromisso. &Eacute; s&oacute; para saber mais.</p>
+<p style="margin:12px 0 0;font-size:11px;color:#64748b;">Sem compromisso. &Eacute; s&oacute; para saber mais.</p>
 </td></tr>
 </table>
 </td></tr>
