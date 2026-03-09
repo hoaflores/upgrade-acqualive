@@ -46,12 +46,12 @@ const EMAILS = [
 </td></tr>
 
 <!-- Highlight Quote -->
-<tr><td style="padding:0 40px 28px;">
+<tr><td style="padding:0 34px 22px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
 <tr>
-<td style="width:4px;background-color:#f97316;border-radius:2px;"></td>
-<td style="padding:20px 24px;">
-<p style="margin:0;font-size:18px;line-height:1.6;color:#ffffff;font-style:italic;">"Nosso prop&oacute;sito &eacute; simples: transformar a &aacute;gua para cuidar da vida. Cada purificador que sai da nossa f&aacute;brica carrega essa miss&atilde;o."</p>
+<td style="width:3px;background-color:#f97316;border-radius:2px;"></td>
+<td style="padding:16px 20px;">
+<p style="margin:0;font-size:15px;line-height:1.6;color:#ffffff;font-style:italic;">"Nosso prop&oacute;sito &eacute; simples: transformar a &aacute;gua para cuidar da vida. Cada purificador que sai da nossa f&aacute;brica carrega essa miss&atilde;o."</p>
 </td>
 </tr>
 </table>
