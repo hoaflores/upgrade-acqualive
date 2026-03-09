@@ -67,23 +67,23 @@ const EMAILS = [
 </td></tr>
 
 <!-- Technology Section -->
-<tr><td style="padding:0 40px 24px;">
-<h2 style="margin:0 0 16px;font-size:20px;color:#ffffff;font-weight:700;">N&atilde;o &eacute; s&oacute; filtrar. &Eacute; transformar.</h2>
+<tr><td style="padding:0 34px 20px;">
+<h2 style="margin:0 0 12px;font-size:17px;color:#ffffff;font-weight:700;">N&atilde;o &eacute; s&oacute; filtrar. &Eacute; transformar.</h2>
 
-<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#d1d5db;">Nossos purificadores fazem tr&ecirc;s coisas que nenhum filtro convencional entrega junto:</p>
+<p style="margin:0 0 14px;font-size:14px;line-height:1.75;color:#d1d5db;">Nossos purificadores fazem tr&ecirc;s coisas que nenhum filtro convencional entrega junto:</p>
 
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 24px;">
-<tr><td style="padding:16px 0;border-bottom:1px solid #1e293b;">
-<p style="margin:0 0 4px;font-size:15px;font-weight:700;color:#f97316;">Purifica&ccedil;&atilde;o profunda</p>
-<p style="margin:0;font-size:14px;line-height:1.7;color:#94a3b8;">Remove cloro, metais pesados, bact&eacute;rias e mais de 80 contaminantes.</p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 20px;">
+<tr><td style="padding:12px 0;border-bottom:1px solid #1e293b;">
+<p style="margin:0 0 3px;font-size:13px;font-weight:700;color:#f97316;">Purifica&ccedil;&atilde;o profunda</p>
+<p style="margin:0;font-size:12px;line-height:1.7;color:#94a3b8;">Remove cloro, metais pesados, bact&eacute;rias e mais de 80 contaminantes.</p>
 </td></tr>
-<tr><td style="padding:16px 0;border-bottom:1px solid #1e293b;">
-<p style="margin:0 0 4px;font-size:15px;font-weight:700;color:#f97316;">Alcaliniza&ccedil;&atilde;o natural</p>
-<p style="margin:0;font-size:14px;line-height:1.7;color:#94a3b8;">Eleva o pH para a faixa alcalina (8.5 a 9.5), ajudando a equilibrar a acidez do organismo.</p>
+<tr><td style="padding:12px 0;border-bottom:1px solid #1e293b;">
+<p style="margin:0 0 3px;font-size:13px;font-weight:700;color:#f97316;">Alcaliniza&ccedil;&atilde;o natural</p>
+<p style="margin:0;font-size:12px;line-height:1.7;color:#94a3b8;">Eleva o pH para a faixa alcalina (8.5 a 9.5), ajudando a equilibrar a acidez do organismo.</p>
 </td></tr>
-<tr><td style="padding:16px 0;">
-<p style="margin:0 0 4px;font-size:15px;font-weight:700;color:#f97316;">Ioniza&ccedil;&atilde;o molecular</p>
-<p style="margin:0;font-size:14px;line-height:1.7;color:#94a3b8;">Reestrutura a &aacute;gua em microclusters para facilitar a absor&ccedil;&atilde;o celular e hidratar de forma mais eficiente.</p>
+<tr><td style="padding:12px 0;">
+<p style="margin:0 0 3px;font-size:13px;font-weight:700;color:#f97316;">Ioniza&ccedil;&atilde;o molecular</p>
+<p style="margin:0;font-size:12px;line-height:1.7;color:#94a3b8;">Reestrutura a &aacute;gua em microclusters para facilitar a absor&ccedil;&atilde;o celular e hidratar de forma mais eficiente.</p>
 </td></tr>
 </table>
 </td></tr>
