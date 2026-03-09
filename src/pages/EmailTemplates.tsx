@@ -89,20 +89,20 @@ const EMAILS = [
 </td></tr>
 
 <!-- Numbers Section -->
-<tr><td style="padding:0 40px 28px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:12px;border:1px solid #334155;overflow:hidden;">
+<tr><td style="padding:0 34px 22px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1e293b,#0f172a);border-radius:10px;border:1px solid #334155;overflow:hidden;">
 <tr>
-<td width="33%" style="padding:24px 12px;text-align:center;">
-<p style="margin:0;font-size:28px;font-weight:800;color:#f97316;">15+</p>
-<p style="margin:4px 0 0;font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">anos de<br>mercado</p>
+<td width="33%" style="padding:18px 10px;text-align:center;">
+<p style="margin:0;font-size:24px;font-weight:800;color:#f97316;">15+</p>
+<p style="margin:3px 0 0;font-size:10px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">anos de<br>mercado</p>
 </td>
-<td width="33%" style="padding:24px 12px;text-align:center;border-left:1px solid #334155;border-right:1px solid #334155;">
-<p style="margin:0;font-size:28px;font-weight:800;color:#f97316;">200k+</p>
-<p style="margin:4px 0 0;font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">fam&iacute;lias<br>atendidas</p>
+<td width="33%" style="padding:18px 10px;text-align:center;border-left:1px solid #334155;border-right:1px solid #334155;">
+<p style="margin:0;font-size:24px;font-weight:800;color:#f97316;">200k+</p>
+<p style="margin:3px 0 0;font-size:10px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">fam&iacute;lias<br>atendidas</p>
 </td>
-<td width="33%" style="padding:24px 12px;text-align:center;">
-<p style="margin:0;font-size:28px;font-weight:800;color:#f97316;">3x</p>
-<p style="margin:4px 0 0;font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">selo great<br>place to work</p>
+<td width="33%" style="padding:18px 10px;text-align:center;">
+<p style="margin:0;font-size:24px;font-weight:800;color:#f97316;">3x</p>
+<p style="margin:3px 0 0;font-size:10px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">selo great<br>place to work</p>
 </td>
 </tr>
 </table>
