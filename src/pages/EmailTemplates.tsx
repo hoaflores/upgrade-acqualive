@@ -20,8 +20,8 @@ const EMAILS = [
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#0d1117;overflow:hidden;">
 
 <!-- Header -->
-<tr><td style="background:linear-gradient(135deg,#0d1117 0%,#1a2332 100%);padding:32px 40px 24px;text-align:center;">
-<img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663153389074/noYGaqqpOTGvWHLS.png" alt="Acqualive" width="160" style="display:block;margin:0 auto;">
+<tr><td style="background:linear-gradient(135deg,#0d1117 0%,#1a2332 100%);padding:27px 34px 20px;text-align:center;">
+<img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663153389074/noYGaqqpOTGvWHLS.png" alt="Acqualive" width="140" style="display:block;margin:0 auto;">
 </td></tr>
 
 <!-- Hero Image -->
