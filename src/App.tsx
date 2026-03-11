@@ -16,6 +16,7 @@ import IndicaPDF from "./pages/IndicaPDF";
 import Bonifiq from "./pages/Bonifiq";
 import IndicaClub from "./pages/IndicaClub";
 import EmailTemplates from "./pages/EmailTemplates";
+import EmailRefilTemplates from "./pages/EmailRefilTemplates";
 import BlogTemplates from "./pages/BlogTemplates";
 import NotFound from "./pages/NotFound";
 
@@ -41,6 +42,7 @@ const App = () => (
             <Route path="/acqualive-club" element={<Bonifiq />} />
             <Route path="/indica-club" element={<IndicaClub />} />
             <Route path="/email-templates" element={<EmailTemplates />} />
+            <Route path="/email-refil" element={<EmailRefilTemplates />} />
             <Route path="/blog-templates" element={<BlogTemplates />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
