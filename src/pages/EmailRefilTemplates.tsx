@@ -67,63 +67,67 @@ const EMAILS = [
 <tr><td style="padding:0 40px 32px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
 <tr>
-<!-- PRODUTO 1 - Altere o link da imagem e o href abaixo -->
+<!-- PRODUTO 1 - Refil Acqualive Fresh -->
 <td width="50%" style="padding:0 6px 12px 0;vertical-align:top;">
-<a href="https://acqualive.com.br/refil-1" target="_blank" style="text-decoration:none;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#141414;border-radius:12px;border:1px solid #222222;overflow:hidden;">
 <tr><td style="padding:16px;text-align:center;">
-<img src="IMG_PRODUTO_1" alt="Refil Acqualive" width="120" style="display:block;margin:0 auto;max-width:120px;height:auto;">
+<img src="https://upgrade-acqualive.lovable.app/images/refil-fresh.png" alt="Refil Acqualive Fresh" width="130" style="display:block;margin:0 auto;max-width:130px;height:auto;">
 </td></tr>
-<tr><td style="padding:0 16px 14px;text-align:center;">
-<p style="margin:0 0 4px;font-size:13px;font-weight:700;color:#ffffff;">Acqualive Fresh</p>
-<p style="margin:0;font-size:11px;color:#888888;">Para purificadores da linha Premium</p>
+<tr><td style="padding:0 16px 6px;text-align:center;">
+<p style="margin:0 0 4px;font-size:14px;font-weight:700;color:#ffffff;">Refil Acqualive Fresh</p>
+<p style="margin:0;font-size:11px;color:#888888;line-height:1.5;">Para os purificadores Fresh 10L, Fresh e Vittro</p>
+</td></tr>
+<tr><td style="padding:8px 16px 16px;text-align:center;">
+<a href="https://www.acqualive.com.br/collections/refis/products/kit-refil-fresh" target="_blank" style="display:inline-block;background-color:#ffffff;color:#0d1117;font-size:12px;font-weight:700;text-decoration:none;padding:10px 24px;border-radius:6px;text-transform:uppercase;letter-spacing:1px;">Trocar agora</a>
 </td></tr>
 </table>
-</a>
 </td>
-<!-- PRODUTO 2 - Altere o link da imagem e o href abaixo -->
+<!-- PRODUTO 2 - Refil Acqualive Fresh Nanno -->
 <td width="50%" style="padding:0 0 12px 6px;vertical-align:top;">
-<a href="https://acqualive.com.br/refil-2" target="_blank" style="text-decoration:none;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#141414;border-radius:12px;border:1px solid #222222;overflow:hidden;">
 <tr><td style="padding:16px;text-align:center;">
-<img src="IMG_PRODUTO_2" alt="Refil Acqualive" width="120" style="display:block;margin:0 auto;max-width:120px;height:auto;">
+<img src="https://upgrade-acqualive.lovable.app/images/refil-fresh-nanno.png" alt="Refil Acqualive Fresh Nanno" width="130" style="display:block;margin:0 auto;max-width:130px;height:auto;">
 </td></tr>
-<tr><td style="padding:0 16px 14px;text-align:center;">
-<p style="margin:0 0 4px;font-size:13px;font-weight:700;color:#ffffff;">Acqualive Fresh Nanno</p>
-<p style="margin:0;font-size:11px;color:#888888;">Para purificadores da linha Terracota</p>
+<tr><td style="padding:0 16px 6px;text-align:center;">
+<p style="margin:0 0 4px;font-size:14px;font-weight:700;color:#ffffff;">Refil Acqualive Fresh Nanno</p>
+<p style="margin:0;font-size:11px;color:#888888;line-height:1.5;">Para os purificadores Fresh 10L, Fresh e Vittro</p>
+</td></tr>
+<tr><td style="padding:8px 16px 16px;text-align:center;">
+<a href="https://www.acqualive.com.br/collections/refis/products/kit-refil-fresh-nanno" target="_blank" style="display:inline-block;background-color:#ffffff;color:#0d1117;font-size:12px;font-weight:700;text-decoration:none;padding:10px 24px;border-radius:6px;text-transform:uppercase;letter-spacing:1px;">Trocar agora</a>
 </td></tr>
 </table>
-</a>
 </td>
 </tr>
 <tr>
-<!-- PRODUTO 3 - Altere o link da imagem e o href abaixo -->
+<!-- PRODUTO 3 - Refil Acqualive Fresh V -->
 <td width="50%" style="padding:0 6px 0 0;vertical-align:top;">
-<a href="https://acqualive.com.br/refil-3" target="_blank" style="text-decoration:none;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#141414;border-radius:12px;border:1px solid #222222;overflow:hidden;">
 <tr><td style="padding:16px;text-align:center;">
-<img src="IMG_PRODUTO_3" alt="Refil Acqualive" width="120" style="display:block;margin:0 auto;max-width:120px;height:auto;">
+<img src="https://upgrade-acqualive.lovable.app/images/refil-fresh-v.png" alt="Refil Acqualive Fresh V" width="130" style="display:block;margin:0 auto;max-width:130px;height:auto;">
 </td></tr>
-<tr><td style="padding:0 16px 14px;text-align:center;">
-<p style="margin:0 0 4px;font-size:13px;font-weight:700;color:#ffffff;">Kit Refil Fresh</p>
-<p style="margin:0;font-size:11px;color:#888888;">Para purificadores da linha Premium</p>
+<tr><td style="padding:0 16px 6px;text-align:center;">
+<p style="margin:0 0 4px;font-size:14px;font-weight:700;color:#ffffff;">Refil Acqualive Fresh V</p>
+<p style="margin:0;font-size:11px;color:#888888;line-height:1.5;">Para os purificadores da Linha V e Terracota</p>
+</td></tr>
+<tr><td style="padding:8px 16px 16px;text-align:center;">
+<a href="https://www.acqualive.com.br/collections/refis/products/kit-refil-fresh-v" target="_blank" style="display:inline-block;background-color:#ffffff;color:#0d1117;font-size:12px;font-weight:700;text-decoration:none;padding:10px 24px;border-radius:6px;text-transform:uppercase;letter-spacing:1px;">Trocar agora</a>
 </td></tr>
 </table>
-</a>
 </td>
-<!-- PRODUTO 4 - Altere o link da imagem e o href abaixo -->
+<!-- PRODUTO 4 - Refil Acqualive Fresh V Nanno -->
 <td width="50%" style="padding:0 0 0 6px;vertical-align:top;">
-<a href="https://acqualive.com.br/refil-4" target="_blank" style="text-decoration:none;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#141414;border-radius:12px;border:1px solid #222222;overflow:hidden;">
 <tr><td style="padding:16px;text-align:center;">
-<img src="IMG_PRODUTO_4" alt="Refil Acqualive" width="120" style="display:block;margin:0 auto;max-width:120px;height:auto;">
+<img src="https://upgrade-acqualive.lovable.app/images/refil-fresh-v-nanno.png" alt="Refil Acqualive Fresh V Nanno" width="130" style="display:block;margin:0 auto;max-width:130px;height:auto;">
 </td></tr>
-<tr><td style="padding:0 16px 14px;text-align:center;">
-<p style="margin:0 0 4px;font-size:13px;font-weight:700;color:#ffffff;">Kit Refil Fresh Nanno</p>
-<p style="margin:0;font-size:11px;color:#888888;">Para purificadores da linha Terracota</p>
+<tr><td style="padding:0 16px 6px;text-align:center;">
+<p style="margin:0 0 4px;font-size:14px;font-weight:700;color:#ffffff;">Refil Acqualive Fresh V Nanno</p>
+<p style="margin:0;font-size:11px;color:#888888;line-height:1.5;">Para os purificadores da Linha V e Terracota</p>
+</td></tr>
+<tr><td style="padding:8px 16px 16px;text-align:center;">
+<a href="https://www.acqualive.com.br/collections/refis/products/kit-refil-fresh-nanno-v" target="_blank" style="display:inline-block;background-color:#ffffff;color:#0d1117;font-size:12px;font-weight:700;text-decoration:none;padding:10px 24px;border-radius:6px;text-transform:uppercase;letter-spacing:1px;">Trocar agora</a>
 </td></tr>
 </table>
-</a>
 </td>
 </tr>
 </table>
