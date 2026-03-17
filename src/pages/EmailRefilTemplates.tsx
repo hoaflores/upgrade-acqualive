@@ -815,8 +815,8 @@ const EmailRefilTemplates = () => {
             <Button
               size="sm"
               variant="outline"
-              onClick={() => setCurrentIndex(Math.min(2, currentIndex + 1))}
-              disabled={currentIndex === 2}
+              onClick={() => setCurrentIndex(Math.min(EMAILS.length - 1, currentIndex + 1))}
+              disabled={currentIndex === EMAILS.length - 1}
               className="border-[#1c2333] bg-transparent text-gray-300 hover:bg-[#1c2333]"
             >
               <ChevronRight className="h-4 w-4" />
