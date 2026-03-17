@@ -318,7 +318,6 @@ ${PRODUCT_GRID_HTML}
 </body>
 </html>`,
   },
-  },
   {
     label: "Indicação 1",
     subject: "Você sabia que pode nunca mais pagar pelos seus refis?",
