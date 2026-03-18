@@ -995,6 +995,9 @@ const ARTICLES = [
 
   <p>A grande questão não é se existem microplásticos na água. <strong>A ciência já confirmou que existem.</strong> A questão agora é: o que eles fazem no corpo humano e como evitá-los.</p>
 
+  <img src="https://upgrade-acqualive.lovable.app/images/blog-microplasticos-agua.jpg" alt="Microplásticos visíveis em copo de água sob iluminação lateral, mostrando partículas plásticas microscópicas flutuando na água" class="article-img" loading="lazy" width="1200" height="672" />
+  <p class="img-caption">Imagem ilustrativa: partículas de microplástico em água sob luz de laboratório</p>
+
 <!-- ═══════════════════════════════════════════ -->
 <!-- BLOCO 5: NÚMEROS / ESTATÍSTICAS -->
 <!-- ═══════════════════════════════════════════ -->
@@ -1085,6 +1088,9 @@ const ARTICLES = [
   <h2>Água engarrafada: a falsa sensação de segurança</h2>
 
   <p>Muitas pessoas compram água engarrafada acreditando que estão consumindo uma água mais pura. Os dados mostram o contrário.</p>
+
+  <img src="https://upgrade-acqualive.lovable.app/images/blog-microplasticos-garrafas.jpg" alt="Garrafas plásticas e resíduos de microplásticos espalhados em praia com ondas do mar ao fundo, poluição ambiental" class="article-img" loading="lazy" width="1200" height="672" />
+  <p class="img-caption">Garrafas plásticas descartadas contribuem diretamente para a contaminação por microplásticos na água</p>
 
   <p>O estudo da Universidade de Columbia, publicado na revista Proceedings of the National Academy of Sciences (PNAS), analisou três marcas populares de água engarrafada e encontrou entre <strong>110.000 e 370.000 partículas de nanoplástico por litro</strong>, sendo a média de 240.000. A maioria das partículas era composta por nylon e PET, provenientes do próprio processo de envase e da embalagem.</p>
 
@@ -1445,6 +1451,9 @@ const ARTICLES = [
 <!-- ═══════════════════════════════════════════ -->
   <h2>O que é inflamação crônica e por que ela é perigosa?</h2>
 
+  <img src="https://upgrade-acqualive.lovable.app/images/blog-agua-alcalina-copo.jpg" alt="Pessoa servindo água alcalina cristalina de um purificador premium em um copo de vidro, cozinha moderna com luz natural" class="article-img" loading="lazy" width="1200" height="672" />
+  <p class="img-caption">Água alcalina ionizada: pureza e saúde direto do purificador para o seu copo</p>
+
   <p class="lead">A inflamação é uma resposta natural do sistema imunológico. Quando você se machuca ou contrai uma infecção, o corpo ativa processos inflamatórios para combater ameaças e reparar tecidos. O problema surge quando essa inflamação <strong>não desliga</strong>.</p>
 
   <p>A inflamação crônica, também chamada de inflamação silenciosa, acontece quando o organismo mantém uma resposta inflamatória constante, mesmo sem uma ameaça real. Isso desgasta o corpo ao longo do tempo e está associado a:</p>
@@ -1555,6 +1564,9 @@ const ARTICLES = [
   </div>
 
   <p>Esses três mecanismos atuam em conjunto. Não é apenas o pH alto ou apenas os minerais. É a combinação de alcalinidade real, mineralização e poder antioxidante que confere à água alcalina ionizada suas propriedades anti-inflamatórias.</p>
+
+  <img src="https://upgrade-acqualive.lovable.app/images/blog-familia-saudavel.jpg" alt="Família saudável bebendo água juntos em cozinha moderna e iluminada, estilo de vida saudável" class="article-img" loading="lazy" width="1200" height="672" />
+  <p class="img-caption">Toda a família se beneficia da água alcalina ionizada no dia a dia</p>
 
   <div class="highlight-box">
     <h3>Magnésio: o mineral anti-inflamatório que falta no seu corpo</h3>
