@@ -1451,6 +1451,9 @@ const ARTICLES = [
 <!-- ═══════════════════════════════════════════ -->
   <h2>O que é inflamação crônica e por que ela é perigosa?</h2>
 
+  <img src="https://upgrade-acqualive.lovable.app/images/blog-agua-alcalina-copo.jpg" alt="Pessoa servindo água alcalina cristalina de um purificador premium em um copo de vidro, cozinha moderna com luz natural" class="article-img" loading="lazy" width="1200" height="672" />
+  <p class="img-caption">Água alcalina ionizada: pureza e saúde direto do purificador para o seu copo</p>
+
   <p class="lead">A inflamação é uma resposta natural do sistema imunológico. Quando você se machuca ou contrai uma infecção, o corpo ativa processos inflamatórios para combater ameaças e reparar tecidos. O problema surge quando essa inflamação <strong>não desliga</strong>.</p>
 
   <p>A inflamação crônica, também chamada de inflamação silenciosa, acontece quando o organismo mantém uma resposta inflamatória constante, mesmo sem uma ameaça real. Isso desgasta o corpo ao longo do tempo e está associado a:</p>
