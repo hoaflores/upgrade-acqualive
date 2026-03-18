@@ -1089,6 +1089,9 @@ const ARTICLES = [
 
   <p>Muitas pessoas compram água engarrafada acreditando que estão consumindo uma água mais pura. Os dados mostram o contrário.</p>
 
+  <img src="https://upgrade-acqualive.lovable.app/images/blog-microplasticos-garrafas.jpg" alt="Garrafas plásticas e resíduos de microplásticos espalhados em praia com ondas do mar ao fundo, poluição ambiental" class="article-img" loading="lazy" width="1200" height="672" />
+  <p class="img-caption">Garrafas plásticas descartadas contribuem diretamente para a contaminação por microplásticos na água</p>
+
   <p>O estudo da Universidade de Columbia, publicado na revista Proceedings of the National Academy of Sciences (PNAS), analisou três marcas populares de água engarrafada e encontrou entre <strong>110.000 e 370.000 partículas de nanoplástico por litro</strong>, sendo a média de 240.000. A maioria das partículas era composta por nylon e PET, provenientes do próprio processo de envase e da embalagem.</p>
 
   <p>Além dos microplásticos, a água engarrafada apresenta outros problemas:</p>
