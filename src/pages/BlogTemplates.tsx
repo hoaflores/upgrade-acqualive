@@ -995,6 +995,9 @@ const ARTICLES = [
 
   <p>A grande questão não é se existem microplásticos na água. <strong>A ciência já confirmou que existem.</strong> A questão agora é: o que eles fazem no corpo humano e como evitá-los.</p>
 
+  <img src="https://upgrade-acqualive.lovable.app/images/blog-microplasticos-agua.jpg" alt="Microplásticos visíveis em copo de água sob iluminação lateral, mostrando partículas plásticas microscópicas flutuando na água" class="article-img" loading="lazy" width="1200" height="672" />
+  <p class="img-caption">Imagem ilustrativa: partículas de microplástico em água sob luz de laboratório</p>
+
 <!-- ═══════════════════════════════════════════ -->
 <!-- BLOCO 5: NÚMEROS / ESTATÍSTICAS -->
 <!-- ═══════════════════════════════════════════ -->
