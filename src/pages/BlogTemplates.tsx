@@ -1565,6 +1565,9 @@ const ARTICLES = [
 
   <p>Esses três mecanismos atuam em conjunto. Não é apenas o pH alto ou apenas os minerais. É a combinação de alcalinidade real, mineralização e poder antioxidante que confere à água alcalina ionizada suas propriedades anti-inflamatórias.</p>
 
+  <img src="https://upgrade-acqualive.lovable.app/images/blog-familia-saudavel.jpg" alt="Família saudável bebendo água juntos em cozinha moderna e iluminada, estilo de vida saudável" class="article-img" loading="lazy" width="1200" height="672" />
+  <p class="img-caption">Toda a família se beneficia da água alcalina ionizada no dia a dia</p>
+
   <div class="highlight-box">
     <h3>Magnésio: o mineral anti-inflamatório que falta no seu corpo</h3>
     <p>Estudos estimam que <strong>mais de 60% da população brasileira</strong> não consome magnésio suficiente na dieta. A deficiência de magnésio está associada ao aumento de interleucina-6 (IL-6) e fator de necrose tumoral (TNF-alfa), dois dos principais marcadores de inflamação crônica.</p>
