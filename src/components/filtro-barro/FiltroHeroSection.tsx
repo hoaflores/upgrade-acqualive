@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Sparkles } from "lucide-react";
 import logoAcqualive from "@/assets/logo-acqualive.png";
-import filtroBarro from "@/assets/terracota-hero-bg.jpg";
+import filtroBarro from "@/assets/filtro-barro-lifestyle.png";
 
 const FiltroHeroSection = () => {
   return <section className="relative min-h-screen overflow-hidden flex flex-col">
