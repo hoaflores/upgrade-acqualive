@@ -1670,35 +1670,35 @@ const ARTICLES = [
 </html>`,
   },
   {
-    title: "Dr. Dayan Siebra revela: a agua que voce bebe pode estar te adoecendo",
-    slug: "podcast-dr-dayan-siebra-agua-saude",
+    title: "Podcast Acqualive com Dr. Dayan Siebra: o que a medicina não ensina sobre água e saúde",
+    slug: "podcast-acqualive-dr-dayan-siebra-agua-saude",
     html: `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr. Dayan Siebra Revela: A Agua que Voce Bebe Pode Estar Te Adoecendo | Acqualive</title>
-<meta name="description" content="No podcast mais completo sobre agua e saude, o Dr. Dayan Siebra, cirurgiao vascular e medico mais seguido do Brasil, revela como a qualidade da agua impacta diretamente a circulacao, a inflamacao cronica e o envelhecimento precoce.">
-<meta name="keywords" content="Dr Dayan Siebra, agua alcalina, agua e saude, podcast agua, agua ionizada, desidratacao cronica, pH da agua, agua antioxidante, Acqualive, inflamacao cronica, circulacao sanguinea, agua de qualidade">
+<title>Podcast Acqualive com Dr. Dayan Siebra: O Que a Medicina Não Ensina Sobre Água e Saúde</title>
+<meta name="description" content="A Acqualive recebeu o Dr. Dayan Siebra, cirurgião vascular e médico mais seguido do Brasil, para um podcast revelador sobre como a qualidade da água impacta a circulação sanguínea, a inflamação crônica e o envelhecimento precoce. Assista e descubra.">
+<meta name="keywords" content="Dr Dayan Siebra, água alcalina, água e saúde, podcast Acqualive, água ionizada, desidratação crônica, pH da água, água antioxidante, Acqualive, inflamação crônica, circulação sanguínea, água de qualidade, purificador de água alcalina">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Acqualive">
-<link rel="canonical" href="https://blog.acqualive.com.br/podcast-dr-dayan-siebra-agua-saude/">
-<meta property="og:title" content="Dr. Dayan Siebra Revela: A Agua que Voce Bebe Pode Estar Te Adoecendo">
-<meta property="og:description" content="Podcast exclusivo com o medico mais seguido do Brasil. Descubra o que a medicina nao ensina sobre agua e por que sua saude depende dessa escolha.">
+<link rel="canonical" href="https://blog.acqualive.com.br/podcast-acqualive-dr-dayan-siebra-agua-saude/">
+<meta property="og:title" content="Podcast Acqualive com Dr. Dayan Siebra: O Que a Medicina Não Ensina Sobre Água e Saúde">
+<meta property="og:description" content="A Acqualive convidou o médico mais seguido do Brasil para revelar o que ninguém te contou sobre a água que você bebe. Assista ao podcast completo.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="pt_BR">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Dr. Dayan Siebra Revela: A Agua que Voce Bebe Pode Estar Te Adoecendo",
-  "description": "Podcast completo com Dr. Dayan Siebra sobre a relacao entre qualidade da agua, inflamacao cronica, circulacao sanguinea e prevencao de doencas. Evidencias cientificas e demonstracao ao vivo.",
+  "headline": "Podcast Acqualive com Dr. Dayan Siebra: O Que a Medicina Não Ensina Sobre Água e Saúde",
+  "description": "A Acqualive recebeu o Dr. Dayan Siebra para um podcast completo sobre a relação entre qualidade da água, inflamação crônica, circulação sanguínea e prevenção de doenças. Evidências científicas e demonstração ao vivo.",
   "author": {"@type": "Organization", "name": "Acqualive"},
   "publisher": {"@type": "Organization", "name": "Acqualive"},
   "datePublished": "2025-03-29",
   "dateModified": "2025-03-29",
   "mainEntityOfPage": {"@type": "WebPage"},
-  "keywords": "Dr Dayan Siebra, agua alcalina, agua ionizada, pH da agua, inflamacao cronica, Acqualive, agua antioxidante"
+  "keywords": "Dr Dayan Siebra, água alcalina, água ionizada, pH da água, inflamação crônica, Acqualive, água antioxidante, podcast água saúde"
 }
 </script>
 <script type="application/ld+json">
@@ -1708,34 +1708,34 @@ const ARTICLES = [
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Por que a agua da torneira pode ser prejudicial a saude?",
+      "name": "Por que a água da torneira pode ser prejudicial à saúde?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A agua da torneira contem cloro, que ao reagir com materia organica em decomposicao forma subprodutos chamados trihalometanos, classificados como carcinogenicos. Alem disso, a agua transportada por tubulacoes perde propriedades energeticas e pode ter pH acido, contribuindo para a desidratacao cronica e a acidose metabolica."
+        "text": "A água da torneira contém cloro, que ao reagir com matéria orgânica em decomposição forma subprodutos chamados trihalometanos, classificados como carcinogênicos. Além disso, a água transportada por tubulações perde propriedades energéticas e pode ter pH ácido, contribuindo para a desidratação crônica e a acidose metabólica."
       }
     },
     {
       "@type": "Question",
-      "name": "O que e acidose metabolica de baixo grau e qual a relacao com a agua?",
+      "name": "O que é acidose metabólica de baixo grau e qual a relação com a água?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A acidose metabolica de baixo grau e uma condicao em que o organismo mantem um nivel de acidez ligeiramente elevado de forma cronica. Isso sobrecarrega os sistemas de tamponamento do corpo, causando fadiga, queda de cabelo, fraqueza nas unhas e predisposicao a doencas inflamatorias. Beber agua alcalina ajuda o organismo a equilibrar o pH sem gastar energia propria."
+        "text": "A acidose metabólica de baixo grau é uma condição em que o organismo mantém um nível de acidez ligeiramente elevado de forma crônica. Isso sobrecarrega os sistemas de tamponamento do corpo, causando fadiga, queda de cabelo, fraqueza nas unhas e predisposição a doenças inflamatórias. Beber água alcalina ajuda o organismo a equilibrar o pH sem gastar energia própria."
       }
     },
     {
       "@type": "Question",
-      "name": "A agua alcalina realmente funciona ou e mito?",
+      "name": "A água alcalina realmente funciona ou é mito?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Estudos cientificos, incluindo pesquisa publicada no PubMed com 28 pacientes em Belem, demonstraram que a agua alcalina ionizada reduziu marcadores inflamatorios e ativou microRNAs relacionados a imunidade e supressao tumoral. A agua alcalina nao e mito; possui evidencias clinicas de beneficios para a saude."
+        "text": "Estudos científicos, incluindo pesquisa publicada no PubMed com 28 pacientes em Belém, demonstraram que a água alcalina ionizada reduziu marcadores inflamatórios e ativou microRNAs relacionados à imunidade e supressão tumoral. A água alcalina não é mito; possui evidências clínicas de benefícios para a saúde."
       }
     },
     {
       "@type": "Question",
-      "name": "Qual a diferenca entre agua filtrada comum e agua alcalina ionizada?",
+      "name": "Qual a diferença entre água filtrada comum e água alcalina ionizada?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A agua filtrada comum remove apenas impurezas visiveis e, em alguns casos, parte do cloro. A agua alcalina ionizada vai alem: ela alcaliniza, reduz a tensao superficial para melhor absorcao celular, possui potencial antioxidante negativo (ORP) e contem minerais essenciais. E uma transformacao completa da agua."
+        "text": "A água filtrada comum remove apenas impurezas visíveis e, em alguns casos, parte do cloro. A água alcalina ionizada vai além: ela alcaliniza, reduz a tensão superficial para melhor absorção celular, possui potencial antioxidante negativo (ORP) e contém minerais essenciais. É uma transformação completa da água."
       }
     }
   ]
@@ -1754,7 +1754,6 @@ const ARTICLES = [
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ===== HERO ===== */
   .podcast-hero {
     background: linear-gradient(165deg, #020617 0%, #0f172a 40%, #1e293b 100%);
     padding: 80px 24px 0;
@@ -1866,14 +1865,12 @@ const ARTICLES = [
   }
   .hero-img-wrap img { display: block; width: 100%; height: auto; }
 
-  /* ===== ARTICLE BODY ===== */
   .article-body {
     max-width: 760px;
     margin: 0 auto;
     padding: 56px 24px 80px;
   }
 
-  /* ===== TYPOGRAPHY ===== */
   h2 {
     font-size: clamp(24px, 4vw, 34px);
     font-weight: 900;
@@ -1912,12 +1909,13 @@ const ARTICLES = [
   }
   strong { color: #18181b; }
 
-  /* ===== IMAGES ===== */
   .article-img {
     width: 100%;
     border-radius: 16px;
     margin: 32px 0;
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    aspect-ratio: 16/9;
+    object-fit: cover;
   }
   .img-caption {
     text-align: center;
@@ -1927,7 +1925,60 @@ const ARTICLES = [
     font-style: italic;
   }
 
-  /* ===== QUOTE BLOCKS ===== */
+  .video-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin: 40px 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+    background: #000;
+  }
+  .video-embed iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: 0;
+  }
+  .video-embed .video-placeholder {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #94a3b8;
+    font-size: 15px;
+    gap: 12px;
+  }
+  .video-embed .play-icon {
+    width: 72px; height: 72px;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .video-embed .play-icon::after {
+    content: '';
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 14px 0 14px 24px;
+    border-color: transparent transparent transparent #60a5fa;
+    margin-left: 4px;
+  }
+  .video-caption {
+    text-align: center;
+    font-size: 13px;
+    color: #a1a1aa;
+    margin: -28px 0 32px;
+    font-style: italic;
+  }
+
   .podcast-quote {
     background: linear-gradient(135deg, #020617, #0f172a);
     border-radius: 20px;
@@ -1963,7 +2014,6 @@ const ARTICLES = [
     letter-spacing: 1.5px;
   }
 
-  /* ===== HIGHLIGHT BOXES ===== */
   .insight-box {
     background: #ffffff;
     border: 1px solid #e2e8f0;
@@ -2020,7 +2070,6 @@ const ARTICLES = [
   .science-box p { color: #14532d; margin: 0; font-size: 15px; line-height: 1.7; }
   .science-box a { color: #15803d; font-weight: 600; }
 
-  /* ===== DATA CARDS ===== */
   .stat-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -2049,7 +2098,6 @@ const ARTICLES = [
     line-height: 1.4;
   }
 
-  /* ===== PILLAR LIST ===== */
   .pillar-list {
     list-style: none;
     padding: 0;
@@ -2087,7 +2135,6 @@ const ARTICLES = [
   }
   .pillar-list li strong { color: #1e40af; }
 
-  /* ===== CHECK LIST ===== */
   ul.check-list {
     list-style: none;
     padding: 0;
@@ -2109,7 +2156,6 @@ const ARTICLES = [
     font-size: 16px;
   }
 
-  /* ===== COMPARISON TABLE ===== */
   .table-wrap {
     overflow-x: auto;
     margin: 36px 0;
@@ -2133,9 +2179,7 @@ const ARTICLES = [
     white-space: nowrap;
   }
   .comparison-table thead th:first-child { text-align: left; padding-left: 20px; }
-  .comparison-table thead th.winner {
-    background: linear-gradient(135deg, #1d4ed8, #2563eb);
-  }
+  .comparison-table thead th.winner { background: linear-gradient(135deg, #1d4ed8, #2563eb); }
   .comparison-table tbody td {
     padding: 14px;
     font-size: 14px;
@@ -2154,14 +2198,12 @@ const ARTICLES = [
   .cross { color: #dc2626; font-weight: 700; font-size: 18px; }
   .partial { color: #d97706; font-weight: 600; font-size: 13px; }
 
-  /* ===== SECTION DIVIDER ===== */
   .section-divider {
     height: 1px;
     background: linear-gradient(90deg, transparent, #d4d4d8, transparent);
     margin: 64px 0;
   }
 
-  /* ===== CTA ===== */
   .cta-section {
     background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
     border-radius: 24px;
@@ -2177,14 +2219,6 @@ const ARTICLES = [
     top: -40%; right: -15%;
     width: 350px; height: 350px;
     background: radial-gradient(circle, rgba(59,130,246,0.1), transparent 70%);
-    border-radius: 50%;
-  }
-  .cta-section::after {
-    content: '';
-    position: absolute;
-    bottom: -30%; left: -10%;
-    width: 250px; height: 250px;
-    background: radial-gradient(circle, rgba(6,182,212,0.08), transparent 70%);
     border-radius: 50%;
   }
   .cta-section h2 {
@@ -2247,7 +2281,6 @@ const ARTICLES = [
   }
   .mid-cta a:hover { background: #1d4ed8; }
 
-  /* ===== SEO SHEET ===== */
   .seo-sheet {
     background: #f8fafc;
     border: 1px solid #e2e8f0;
@@ -2279,7 +2312,6 @@ const ARTICLES = [
   }
   .seo-value { color: #334155; }
 
-  /* ===== FOOTER ===== */
   .footer-article {
     text-align: center;
     padding: 40px 24px;
@@ -2288,7 +2320,6 @@ const ARTICLES = [
   }
   .footer-article p { font-size: 13px; color: #a1a1aa; }
 
-  /* ===== REFERENCES ===== */
   .references {
     margin: 48px 0 0;
     padding: 28px 0 0;
@@ -2302,9 +2333,7 @@ const ARTICLES = [
     color: #94a3b8;
     margin: 0 0 16px;
   }
-  .references ol {
-    padding-left: 20px;
-  }
+  .references ol { padding-left: 20px; }
   .references li {
     font-size: 13px;
     color: #71717a;
@@ -2329,290 +2358,304 @@ const ARTICLES = [
 </head>
 <body>
 
-<!-- BLOCO 1: HERO / CABECALHO -->
+<!-- BLOCO 1: HERO / CABEÇALHO -->
 <header class="podcast-hero">
   <div class="hero-inner">
     <div class="hero-badge-row">
-      <span class="hero-badge badge-podcast">Podcast Exclusivo</span>
-      <span class="hero-badge badge-exclusive">Pillar Page</span>
+      <span class="hero-badge badge-podcast">Podcast Acqualive</span>
+      <span class="hero-badge badge-exclusive">Conteúdo Exclusivo</span>
     </div>
-    <h1>A agua que voce bebe pode estar <span class="highlight-warm">te adoecendo</span>. E a medicina <span class="highlight">nunca te contou isso</span>.</h1>
-    <p class="hero-subtitle">No podcast mais revelador sobre agua e saude, o Dr. Dayan Siebra, o pesquisador Sidnei Rodrigues e o apresentador Fernando Carvalho desmontam tudo o que voce achava que sabia sobre hidratacao.</p>
+    <h1>O que a medicina <span class="highlight-warm">não ensina</span> sobre a água que você bebe. <span class="highlight">Dr. Dayan Siebra explica.</span></h1>
+    <p class="hero-subtitle">A Acqualive convidou o Dr. Dayan Siebra, cirurgião vascular e o médico mais seguido do Brasil, junto com o pesquisador Sidnei Rodrigues, para uma conversa que vai mudar a forma como você enxerga a sua água.</p>
     <div class="hero-guests">
-      <div class="guest-tag"><span class="guest-dot dot-blue"></span> Dr. Dayan Siebra, Cirurgiao Vascular</div>
-      <div class="guest-tag"><span class="guest-dot dot-orange"></span> Sidnei Rodrigues, Pesquisador de Agua</div>
+      <div class="guest-tag"><span class="guest-dot dot-blue"></span> Dr. Dayan Siebra, Cirurgião Vascular</div>
+      <div class="guest-tag"><span class="guest-dot dot-orange"></span> Sidnei Rodrigues, Pesquisador de Água</div>
       <div class="guest-tag"><span class="guest-dot dot-green"></span> Fernando Carvalho, Apresentador</div>
     </div>
     <div class="hero-meta">
-      <span>Marco 2025</span>
+      <span>Março 2025</span>
       <span>Leitura: 22 min</span>
-      <span>Baseado no podcast Terca Positiva</span>
+      <span>Podcast Terça Positiva</span>
     </div>
   </div>
   <div class="hero-img-wrap">
-    <img src="https://upgrade-acqualive.lovable.app/images/blog-podcast-dayan-hero.jpg" alt="Dr. Dayan Siebra e Sidnei Rodrigues em estudio de podcast discutindo sobre agua e saude" width="1280" height="640" loading="eager">
+    <img src="https://upgrade-acqualive.lovable.app/images/blog-podcast-dayan-hero.jpg" alt="Dr. Dayan Siebra e Sidnei Rodrigues em estúdio de podcast da Acqualive discutindo sobre água e saúde" width="1200" height="672" loading="eager">
   </div>
 </header>
 
-<!-- BLOCO 2: INTRODUCAO E CONTEXTO -->
+<!-- BLOCO 2: EMBED DO VÍDEO -->
 <main class="article-body">
 
-  <h2>O medico mais seguido do Brasil admite: nunca aprendeu sobre agua na faculdade</h2>
+  <!-- SUBSTITUA O ID_DO_VIDEO PELO ID REAL DO YOUTUBE QUANDO O VÍDEO FOR PUBLICADO -->
+  <div class="video-embed">
+    <!-- <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO" title="Podcast Acqualive com Dr. Dayan Siebra" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    <div class="video-placeholder">
+      <div class="play-icon"></div>
+      <span>Vídeo em breve. Substitua pelo embed do YouTube.</span>
+    </div>
+  </div>
+  <p class="video-caption">Assista ao podcast completo com Dr. Dayan Siebra no canal da Acqualive</p>
+
+  <div class="section-divider"></div>
+
+<!-- BLOCO 3: INTRODUÇÃO E CONTEXTO -->
+
+  <h2>Nosso convidado admite: nunca aprendeu sobre água na faculdade de medicina</h2>
   
-  <p class="lead">Zero horas. Esse e o tempo que o Dr. Dayan Siebra, cirurgiao vascular com mais de 12 milhoes de seguidores nas redes sociais, dedicou ao estudo da agua durante toda a sua formacao medica. A revelacao, feita logo nos primeiros minutos do podcast, resume um problema sistemico que afeta a saude de milhoes de brasileiros.</p>
+  <p class="lead">Zero horas. Esse é o tempo que o Dr. Dayan Siebra, cirurgião vascular com mais de 12 milhões de seguidores nas redes sociais, dedicou ao estudo da água durante toda a sua formação médica. A revelação, feita logo nos primeiros minutos do nosso podcast, resume um problema sistêmico que afeta a saúde de milhões de brasileiros.</p>
 
-  <p>Enquanto os cursos de medicina dedicam centenas de horas a decorar listas de doencas e protocolos farmacologicos, o elemento que constitui 70% do corpo humano permanece ignorado. "A gente se detém a estudar, decorar inumeras listas de doencas e de remedio. E ai a gente ve no final da vida dos pacientes, eles carregando prescricoes com dez, 15 remedios e nao tem uma orientacao sobre a agua que tem que tomar", afirmou o Dr. Dayan durante a gravacao.</p>
+  <p>Enquanto os cursos de medicina dedicam centenas de horas a decorar listas de doenças e protocolos farmacológicos, o elemento que constitui 70% do corpo humano permanece ignorado. "A gente se detém a estudar, decorar inúmeras listas de doenças e de remédio. E aí a gente vê no final da vida dos pacientes, eles carregando prescrições com dez, 15 remédios e não tem uma orientação sobre a água que tem que tomar", afirmou o Dr. Dayan durante a gravação.</p>
 
-  <p>Essa lacuna na formacao medica nao e exclusividade brasileira. O proprio <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener">Dr. Lair Ribeiro ja declarou</a> que teve apenas 6 horas de nutricao em toda a faculdade. Se a nutricao ja e negligenciada, a agua, que e o veiculo principal de tudo o que acontece no organismo, simplesmente nao existe no curriculo.</p>
+  <p>Essa lacuna na formação médica não é exclusividade brasileira. O próprio <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener">Dr. Lair Ribeiro já declarou</a> que teve apenas 6 horas de nutrição em toda a faculdade. Se a nutrição já é negligenciada, a água, que é o veículo principal de tudo o que acontece no organismo, simplesmente não existe no currículo.</p>
 
   <div class="insight-box">
     <h4>Dado Relevante</h4>
-    <p>Segundo a <a href="https://www.who.int/news-room/fact-sheets/detail/drinking-water" target="_blank" rel="noopener">Organizacao Mundial da Saude (OMS)</a>, a qualidade da agua consumida diariamente e um dos determinantes mais criticos da saude publica, mas permanece sub-representada na educacao medica formal em todo o mundo.</p>
+    <p>Segundo a <a href="https://www.who.int/news-room/fact-sheets/detail/drinking-water" target="_blank" rel="noopener">Organização Mundial da Saúde (OMS)</a>, a qualidade da água consumida diariamente é um dos determinantes mais críticos da saúde pública, mas permanece sub-representada na educação médica formal em todo o mundo.</p>
   </div>
 
   <div class="section-divider"></div>
 
-<!-- BLOCO 3: DESIDRATACAO CRONICA -->
+<!-- BLOCO 4: DESIDRATAÇÃO CRÔNICA -->
 
-  <h2>Desidratacao cronica: voce pode estar desidratado agora mesmo sem saber</h2>
+  <h2>Desidratação crônica: você pode estar desidratado agora mesmo sem saber</h2>
 
-  <p>Uma das revelacoes mais impactantes do podcast e que a sede nao e o primeiro sinal de desidratacao. E o ultimo. Quando voce sente sede, seu corpo ja esta desidratado ha muito tempo. Os sinais reais da desidratacao cronica sao muito mais sutis e frequentemente confundidos com outras condicoes.</p>
+  <p>Uma das revelações mais impactantes do podcast é que a sede não é o primeiro sinal de desidratação. É o último. Quando você sente sede, seu corpo já está desidratado há muito tempo. Os sinais reais da desidratação crônica são muito mais sutis e frequentemente confundidos com outras condições.</p>
 
   <div class="podcast-quote">
-    <p>"A desidratacao acontece de forma silenciosa. E uma fadiga, e uma memoria fraca, e uma dor de cabeca, e uma concentracao ruim. Quando vem a sede, ja faz muito tempo que o corpo esta pedindo agua."</p>
-    <span class="quote-author">Dr. Dayan Siebra, no podcast</span>
+    <p>"A desidratação acontece de forma silenciosa. É uma fadiga, é uma memória fraca, é uma dor de cabeça, é uma concentração ruim. Quando vem a sede, já faz muito tempo que o corpo está pedindo água."</p>
+    <span class="quote-author">Dr. Dayan Siebra, no podcast Acqualive</span>
   </div>
 
-  <p>O problema se agrava com a populacao idosa, que perde progressivamente a sensacao de sede. Pessoas de 60, 70 anos vivem completamente desidratadas sem perceber, o que compromete todo o sistema cardiovascular. O sangue, que e essencialmente agua, torna-se mais viscoso, dificultando a circulacao e sobrecarregando o coracao.</p>
+  <p>O problema se agrava com a população idosa, que perde progressivamente a sensação de sede. Pessoas de 60, 70 anos vivem completamente desidratadas sem perceber, o que compromete todo o sistema cardiovascular. O sangue, que é essencialmente água, torna-se mais viscoso, dificultando a circulação e sobrecarregando o coração.</p>
 
   <h3>Os sinais que o seu corpo envia antes da sede</h3>
   
   <ul class="check-list">
-    <li>Fadiga constante e cansaco ao acordar, mesmo dormindo bem</li>
-    <li>Dificuldade de concentracao e memoria fraca</li>
-    <li>Dores de cabeca recorrentes, especialmente a tarde</li>
-    <li>Queda de cabelo e unhas fracas e quebradicass</li>
+    <li>Fadiga constante e cansaço ao acordar, mesmo dormindo bem</li>
+    <li>Dificuldade de concentração e memória fraca</li>
+    <li>Dores de cabeça recorrentes, especialmente à tarde</li>
+    <li>Queda de cabelo e unhas fracas e quebradiças</li>
     <li>Pele ressecada e com aspecto envelhecido</li>
-    <li>Constipacao intestinal cronica</li>
+    <li>Constipação intestinal crônica</li>
   </ul>
 
-  <p>Um conselho pratico compartilhado no podcast, atribuido ao Dr. Lair Ribeiro: "Quando lembrar de tomar agua, tome dois copos. Um pelo que lembrou e outro por precaucao, caso esqueca nos proximos 30 minutos."</p>
+  <p>Um conselho prático compartilhado no podcast, atribuído ao Dr. Lair Ribeiro: "Quando lembrar de tomar água, tome dois copos. Um pelo que lembrou e outro por precaução, caso esqueça nos próximos 30 minutos."</p>
 
   <div class="stat-grid">
     <div class="stat-card">
       <div class="stat-number">60%+</div>
-      <div class="stat-label">da populacao americana esta cronicamente desidratada</div>
+      <div class="stat-label">da população americana está cronicamente desidratada</div>
     </div>
     <div class="stat-card">
       <div class="stat-number">70%</div>
-      <div class="stat-label">do corpo humano e composto por agua</div>
+      <div class="stat-label">do corpo humano é composto por água</div>
     </div>
     <div class="stat-card">
       <div class="stat-number">85%</div>
-      <div class="stat-label">do cerebro e constituido por agua</div>
+      <div class="stat-label">do cérebro é constituído por água</div>
     </div>
     <div class="stat-card">
       <div class="stat-number">0h</div>
-      <div class="stat-label">de aula sobre agua na maioria das faculdades de medicina</div>
+      <div class="stat-label">de aula sobre água na maioria das faculdades de medicina</div>
     </div>
   </div>
 
   <div class="mid-cta">
-    <p>Descubra como a tecnologia Acqualive transforma a agua que voce bebe</p>
+    <p>Descubra como a tecnologia Acqualive transforma a água que você bebe</p>
     <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener">Conhecer a Tecnologia Acqualive</a>
   </div>
 
   <div class="section-divider"></div>
 
-<!-- BLOCO 4: CIRCULACAO SANGUINEA E TROMBOSE -->
+<!-- BLOCO 5: CIRCULAÇÃO SANGUÍNEA E TROMBOSE -->
 
-  <h2>Sangue grosso, trombose e infarto: a conexao que a medicina convencional ignora</h2>
+  <h2>Sangue grosso, trombose e infarto: a conexão que a medicina convencional ignora</h2>
 
-  <img src="https://upgrade-acqualive.lovable.app/images/blog-podcast-circulacao.jpg" alt="Ilustracao do sistema cardiovascular mostrando celulas sanguineas em circulacao" class="article-img" width="1200" height="600" loading="lazy">
-  <p class="img-caption">A qualidade da agua impacta diretamente a viscosidade do sangue e a saude cardiovascular</p>
+  <img src="https://upgrade-acqualive.lovable.app/images/blog-podcast-circulacao.jpg" alt="Ilustração do sistema cardiovascular mostrando células sanguíneas em circulação saudável" class="article-img" width="1200" height="672" loading="lazy">
+  <p class="img-caption">A qualidade da água impacta diretamente a viscosidade do sangue e a saúde cardiovascular</p>
 
-  <p>Como cirurgiao vascular, o Dr. Dayan trouxe uma perspectiva unica sobre a relacao entre agua e saude cardiovascular. Ele explicou a chamada <strong>Triade de Virchow</strong>, o conjunto de tres fatores que causam obstrucoes arteriais: hipercoagulabilidade sanguinea (sangue grosso), lesao vascular e estase sanguinea (ficar muito tempo parado).</p>
+  <p>Como cirurgião vascular, o Dr. Dayan trouxe ao nosso podcast uma perspectiva única sobre a relação entre água e saúde cardiovascular. Ele explicou a chamada <strong>Tríade de Virchow</strong>, o conjunto de três fatores que causam obstruções arteriais: hipercoagulabilidade sanguínea (sangue grosso), lesão vascular e estase sanguínea (ficar muito tempo parado).</p>
 
-  <p>A desidratacao cronica e a ingestao de agua de baixa qualidade contribuem diretamente para o primeiro fator: o sangue deixa de ter uma consistencia fluida e passa a se comportar como uma "sopa grossa", nas palavras do proprio medico.</p>
+  <p>A desidratação crônica e a ingestão de água de baixa qualidade contribuem diretamente para o primeiro fator: o sangue deixa de ter uma consistência fluida e passa a se comportar como uma "sopa grossa", nas palavras do próprio médico.</p>
 
   <div class="podcast-quote">
-    <p>"Se voce esta muito tempo parado e bebendo pouca agua, uma agua de ma qualidade, e tem uma lesao dentro dos vasos, e carro-chefe para trombose. E ai voce ve o que as pessoas fazem hoje: sedentarismo, anabolizantes e agua de pessima qualidade."</p>
-    <span class="quote-author">Dr. Dayan Siebra, sobre a triade de Virchow</span>
+    <p>"Se você está muito tempo parado e bebendo pouca água, uma água de má qualidade, e tem uma lesão dentro dos vasos, é carro-chefe para trombose. E aí você vê o que as pessoas fazem hoje: sedentarismo, anabolizantes e água de péssima qualidade."</p>
+    <span class="quote-author">Dr. Dayan Siebra, sobre a Tríade de Virchow</span>
   </div>
 
-  <p>O pesquisador Sidnei Rodrigues acrescentou uma dimensao ainda mais preocupante: o <strong>potencial zeta</strong> da agua. Nas estacoes de tratamento, substancias sao adicionadas para inverter o potencial zeta da agua, fazendo com que particulas se agrupem e decantem. Quando essa agua chega ao consumidor, o mesmo efeito coagulante pode ocorrer no sangue.</p>
+  <p>Nosso pesquisador Sidnei Rodrigues acrescentou uma dimensão ainda mais preocupante: o <strong>potencial zeta</strong> da água. Nas estações de tratamento, substâncias são adicionadas para inverter o potencial zeta da água, fazendo com que partículas se agrupem e decantem. Quando essa água chega ao consumidor, o mesmo efeito coagulante pode ocorrer no sangue.</p>
 
-  <p>Isso explicaria por que tantas pessoas aparentemente saudaveis, que nao fumam, nao bebem e praticam exercicios, sofrem episodios de "morte subita". A <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">literatura cientifica indexada no PubMed</a> ja documenta amplamente a relacao entre hidratacao inadequada e eventos cardiovasculares.</p>
+  <p>Isso explicaria por que tantas pessoas aparentemente saudáveis, que não fumam, não bebem e praticam exercícios, sofrem episódios de "morte súbita". A <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">literatura científica indexada no PubMed</a> já documenta amplamente a relação entre hidratação inadequada e eventos cardiovasculares.</p>
 
   <div class="danger-box">
-    <h4>Atencao</h4>
-    <p>Pessoas que combinam sedentarismo, uso de anticoncepcionais ou anabolizantes e consumo de agua de baixa qualidade estao exponencialmente mais expostas ao risco de trombose, AVC e infarto, segundo o Dr. Dayan Siebra.</p>
+    <h4>Atenção</h4>
+    <p>Pessoas que combinam sedentarismo, uso de anticoncepcionais ou anabolizantes e consumo de água de baixa qualidade estão exponencialmente mais expostas ao risco de trombose, AVC e infarto, segundo o Dr. Dayan Siebra.</p>
   </div>
 
   <div class="section-divider"></div>
 
-<!-- BLOCO 5: TENSAO SUPERFICIAL -->
+<!-- BLOCO 6: TENSÃO SUPERFICIAL -->
 
-  <h2>Tensao superficial: por que voce pode beber agua e continuar desidratado</h2>
+  <h2>Tensão superficial: por que você pode beber água e continuar desidratado</h2>
 
-  <p>Nem toda agua hidrata de verdade. Essa foi uma das afirmacoes mais surpreendentes do podcast. Sidnei Rodrigues explicou o conceito de <strong>tensao superficial</strong>, uma propriedade fisica que determina a capacidade da agua de penetrar nas celulas.</p>
+  <p>Nem toda água hidrata de verdade. Essa foi uma das afirmações mais surpreendentes do nosso podcast. Sidnei Rodrigues explicou o conceito de <strong>tensão superficial</strong>, uma propriedade física que determina a capacidade da água de penetrar nas células.</p>
 
-  <p>A agua e formada por moleculas que se atraem mutuamente. Quando a agua fica parada ou percorre longas distancias por tubulacoes, essas moleculas se agrupam, formando clusters maiores. Quanto maior o cluster, maior a tensao superficial e menor a capacidade de hidratacao celular.</p>
+  <p>A água é formada por moléculas que se atraem mutuamente. Quando a água fica parada ou percorre longas distâncias por tubulações, essas moléculas se agrupam, formando clusters maiores. Quanto maior o cluster, maior a tensão superficial e menor a capacidade de hidratação celular.</p>
 
-  <p>"Tem gente tomando agua, mas quanto mais toma, mais seco fica", explicou Sidnei. "A analogia com o vinho e perfeita: um bom vinho nao faz gota quando voce inclina a taca, porque sua tensao superficial e praticamente zero. A boa agua deveria se comportar da mesma forma."</p>
+  <p>"Tem gente tomando água, mas quanto mais toma, mais seco fica", explicou Sidnei. "A analogia com o vinho é perfeita: um bom vinho não faz gota quando você inclina a taça, porque sua tensão superficial é praticamente zero. A boa água deveria se comportar da mesma forma."</p>
 
   <div class="insight-box">
-    <h4>Entenda na pratica</h4>
-    <p>Voce pode testar a tensao superficial da sua agua em casa: coloque uma agulha de costura cuidadosamente sobre a superficie da agua em um copo. Se a agulha flutuar sem afundar, a tensao superficial esta alta, indicando que essa agua tera dificuldade em penetrar nas celulas do seu corpo.</p>
+    <h4>Entenda na prática</h4>
+    <p>Você pode testar a tensão superficial da sua água em casa: coloque uma agulha de costura cuidadosamente sobre a superfície da água em um copo. Se a agulha flutuar sem afundar, a tensão superficial está alta, indicando que essa água terá dificuldade em penetrar nas células do seu corpo.</p>
   </div>
 
   <div class="section-divider"></div>
 
-<!-- BLOCO 6: pH E ACIDOSE METABOLICA -->
+<!-- BLOCO 7: pH E ACIDOSE METABÓLICA -->
 
-  <h2>pH e acidose metabolica: o terreno biologico que prepara o corpo para a doenca</h2>
+  <h2>pH e acidose metabólica: o terreno biológico que prepara o corpo para a doença</h2>
 
-  <img src="https://upgrade-acqualive.lovable.app/images/blog-podcast-laboratorio.jpg" alt="Teste de pH comparando diferentes tipos de agua com indicadores colorimetricos" class="article-img" width="1200" height="600" loading="lazy">
-  <p class="img-caption">Teste ao vivo durante o podcast: amostras de agua com indicadores de pH revelam diferencas drasticas</p>
+  <img src="https://upgrade-acqualive.lovable.app/images/blog-podcast-laboratorio.jpg" alt="Teste de pH comparando diferentes tipos de água com indicadores colorimétricos em laboratório" class="article-img" width="1200" height="672" loading="lazy">
+  <p class="img-caption">Teste ao vivo durante o podcast: amostras de água com indicadores de pH revelam diferenças drásticas</p>
 
-  <p>O Dr. Dayan explicou que a maioria absoluta das doencas cronicas modernas nasce na <strong>acidose metabolica de baixo grau</strong>. Trata-se de uma condicao em que o organismo mantem um nivel de acidez ligeiramente elevado de forma cronica, sobrecarregando os sistemas naturais de tamponamento do corpo.</p>
+  <p>O Dr. Dayan explicou que a maioria absoluta das doenças crônicas modernas nasce na <strong>acidose metabólica de baixo grau</strong>. Trata-se de uma condição em que o organismo mantém um nível de acidez ligeiramente elevado de forma crônica, sobrecarregando os sistemas naturais de tamponamento do corpo.</p>
 
-  <p>O pH sanguineo humano opera numa faixa extremamente estreita, entre 7,35 e 7,45. Embora essa variacao pareca pequena, trata-se de uma escala logaritmica: qualquer oscilacao, por menor que seja, representa um impacto significativo para o organismo.</p>
+  <p>O pH sanguíneo humano opera numa faixa extremamente estreita, entre 7,35 e 7,45. Embora essa variação pareça pequena, trata-se de uma escala logarítmica: qualquer oscilação, por menor que seja, representa um impacto significativo para o organismo.</p>
 
   <div class="podcast-quote">
-    <p>"Se voce nao ajuda o corpo a equilibrar o pH, ele vai gastar energia para equilibrar por ele mesmo. Ai voce nao sabe depois por que acorda cansado, fatigado. A noite treinou, perdeu sal, perdeu suor e se hidratou com agua que nao repoe, nao equilibrou seu pH."</p>
-    <span class="quote-author">Dr. Dayan Siebra, sobre acidose metabolica</span>
+    <p>"Se você não ajuda o corpo a equilibrar o pH, ele vai gastar energia para equilibrar por ele mesmo. Aí você não sabe depois por que acorda cansado, fatigado. À noite treinou, perdeu sal, perdeu suor e se hidratou com água que não repõe, não equilibrou seu pH."</p>
+    <span class="quote-author">Dr. Dayan Siebra, sobre acidose metabólica</span>
   </div>
 
-  <p>Quando o corpo gasta energia excessiva para manter o pH equilibrado, ele comeca a priorizar orgaos vitais como coracao, figado, rins e cerebro, abandonando funcoes consideradas "secundarias". E por isso que os sintomas iniciais da acidose cronica aparecem na periferia: queda de cabelo, unhas fracas, pele ressecada, dores articulares.</p>
+  <p>Quando o corpo gasta energia excessiva para manter o pH equilibrado, ele começa a priorizar órgãos vitais como coração, fígado, rins e cérebro, abandonando funções consideradas "secundárias". É por isso que os sintomas iniciais da acidose crônica aparecem na periferia: queda de cabelo, unhas fracas, pele ressecada, dores articulares.</p>
 
-  <h3>O pH da agua que voce bebe importa</h3>
+  <h3>O pH da água que você bebe importa</h3>
 
-  <p>A legislacao brasileira permite que a agua tenha pH entre 6,0 e 9,5. No entanto, Sidnei Rodrigues revelou no podcast que ja encontrou aguas com pH 4,5 sendo vendidas como "agua mineral" em capitais brasileiras. Para referencia, isso esta mais proximo do acido de bateria do que da agua ideal para consumo.</p>
+  <p>A legislação brasileira permite que a água tenha pH entre 6,0 e 9,5. No entanto, Sidnei Rodrigues revelou no nosso podcast que já encontrou águas com pH 4,5 sendo vendidas como "água mineral" em capitais brasileiras. Para referência, isso está mais próximo do ácido de bateria do que da água ideal para consumo.</p>
 
-  <p>Em Belem do Para, o <a href="https://www.mpf.mp.br/" target="_blank" rel="noopener">Ministerio Publico Federal</a> ja entrou com acao contra produtores de agua, obrigando a troca do rotulo de "agua mineral" para "agua potavel" quando o pH nao atendia os parametros minimos de saude.</p>
+  <p>Em Belém do Pará, o <a href="https://www.mpf.mp.br/" target="_blank" rel="noopener">Ministério Público Federal</a> já entrou com ação contra produtores de água, obrigando a troca do rótulo de "água mineral" para "água potável" quando o pH não atendia os parâmetros mínimos de saúde.</p>
 
   <div class="section-divider"></div>
 
-<!-- BLOCO 7: INFLAMACAO CRONICA -->
+<!-- BLOCO 8: INFLAMAÇÃO CRÔNICA -->
 
-  <h2>Inflamacao cronica: a mae de todas as doencas e o papel silencioso da agua</h2>
+  <h2>Inflamação crônica: a mãe de todas as doenças e o papel silencioso da água</h2>
 
-  <img src="https://upgrade-acqualive.lovable.app/images/blog-podcast-inflamacao.jpg" alt="Representacao microscopica de celulas inflamadas versus celulas saudaveis" class="article-img" width="1200" height="600" loading="lazy">
-  <p class="img-caption">A inflamacao cronica celular e o ponto de partida para as doencas mais graves da atualidade</p>
+  <img src="https://upgrade-acqualive.lovable.app/images/blog-podcast-inflamacao.jpg" alt="Representação microscópica de células inflamadas versus células saudáveis" class="article-img" width="1200" height="672" loading="lazy">
+  <p class="img-caption">A inflamação crônica celular é o ponto de partida para as doenças mais graves da atualidade</p>
 
-  <p>O Dr. Dayan diferenciou dois tipos de inflamacao durante o podcast. A <strong>inflamacao aguda</strong>, que e a resposta natural do corpo a uma pancada ou ferimento, e benefica e temporaria. Ja a <strong>inflamacao cronica</strong> e silenciosa, constante e devastadora.</p>
+  <p>O Dr. Dayan diferenciou dois tipos de inflamação durante o nosso podcast. A <strong>inflamação aguda</strong>, que é a resposta natural do corpo a uma pancada ou ferimento, é benéfica e temporária. Já a <strong>inflamação crônica</strong> é silenciosa, constante e devastadora.</p>
 
-  <p>A inflamacao cronica opera no nivel celular. As celulas possuem receptores em suas membranas que funcionam como sensores de estresse. Quando expostas a ambientes acidos, radicais livres, alimentacao inadequada ou agua de baixa qualidade, essas celulas entram em estado de irritacao permanente.</p>
+  <p>A inflamação crônica opera no nível celular. As células possuem receptores em suas membranas que funcionam como sensores de estresse. Quando expostas a ambientes ácidos, radicais livres, alimentação inadequada ou água de baixa qualidade, essas células entram em estado de irritação permanente.</p>
 
-  <p>O ponto mais grave, segundo o Dr. Dayan, e que a inflamacao cronica celular interfere nos mecanismos que controlam o nosso codigo genetico. Todos nos carregamos predisposicoes geneticas para diversas doencas, como Alzheimer, cancer e diabetes. Em condicoes normais, o organismo mantem esses genes "silenciados". Mas quando a celula esta cronicamente inflamada, esse controle se perde.</p>
+  <p>O ponto mais grave, segundo o Dr. Dayan, é que a inflamação crônica celular interfere nos mecanismos que controlam o nosso código genético. Todos nós carregamos predisposições genéticas para diversas doenças, como Alzheimer, câncer e diabetes. Em condições normais, o organismo mantém esses genes "silenciados". Mas quando a célula está cronicamente inflamada, esse controle se perde.</p>
 
   <div class="podcast-quote">
-    <p>"Eu posso ter o gene para ter Alzheimer, para ter cancer, para ter diabetes, e aquilo fica ali silencioso. Mas se a minha celula esta inflamada por algum motivo, por uma comida ruim, por radicais livres, por um ambiente acido, eu comeco a perder o controle desses genes ruins."</p>
-    <span class="quote-author">Dr. Dayan Siebra, sobre epigenetica e inflamacao</span>
+    <p>"Eu posso ter o gene para ter Alzheimer, para ter câncer, para ter diabetes, e aquilo fica ali silencioso. Mas se a minha célula está inflamada por algum motivo, por uma comida ruim, por radicais livres, por um ambiente ácido, eu começo a perder o controle desses genes ruins."</p>
+    <span class="quote-author">Dr. Dayan Siebra, sobre epigenética e inflamação</span>
   </div>
 
-  <p>Estudos publicados no <a href="https://www.nature.com/articles/s41591-019-0675-0" target="_blank" rel="noopener">Nature Medicine</a> ja demonstram que a inflamacao cronica de baixo grau e o denominador comum de doencas cardiovasculares, neurodegenerativas, metabolicas e oncologicas. A contribuicao da agua de qualidade no controle dessa inflamacao esta sendo cada vez mais documentada pela ciencia.</p>
+  <p>Estudos publicados no <a href="https://www.nature.com/articles/s41591-019-0675-0" target="_blank" rel="noopener">Nature Medicine</a> já demonstram que a inflamação crônica de baixo grau é o denominador comum de doenças cardiovasculares, neurodegenerativas, metabólicas e oncológicas. A contribuição da água de qualidade no controle dessa inflamação está sendo cada vez mais documentada pela ciência.</p>
 
   <div class="section-divider"></div>
 
-<!-- BLOCO 8: CLORO E TRIHALOMETANOS -->
+<!-- BLOCO 9: CLORO E TRIHALOMETANOS -->
 
-  <h2>Cloro na agua: o pesticida que voce consome todos os dias sem perceber</h2>
+  <h2>Cloro na água: o pesticida que você consome todos os dias sem perceber</h2>
 
-  <p>Uma das passagens mais impactantes do podcast foi a explicacao detalhada de Sidnei Rodrigues sobre os <strong>trihalometanos (THMs)</strong>, subprodutos da interacao entre o cloro e materia organica em decomposicao presentes na agua tratada.</p>
+  <p>Uma das passagens mais impactantes do podcast foi a explicação detalhada de Sidnei Rodrigues sobre os <strong>trihalometanos (THMs)</strong>, subprodutos da interação entre o cloro e matéria orgânica em decomposição presentes na água tratada.</p>
 
-  <p>O cloro foi classificado como pesticida em 2011 pela EPA (Environmental Protection Agency) dos Estados Unidos. Sua funcao e matar bacterias, o que ele faz com eficiencia. O problema e o que acontece depois: as bacterias mortas entram em decomposicao e, ao reagirem com o cloro que continua presente na agua, produzem quatro tipos de trihalometanos, sendo o principal deles o <strong>cloroformio</strong>.</p>
+  <p>O cloro foi classificado como pesticida em 2011 pela EPA (Environmental Protection Agency) dos Estados Unidos. Sua função é matar bactérias, o que ele faz com eficiência. O problema é o que acontece depois: as bactérias mortas entram em decomposição e, ao reagirem com o cloro que continua presente na água, produzem quatro tipos de trihalometanos, sendo o principal deles o <strong>clorofórmio</strong>.</p>
 
-  <p>Todos os quatro tipos de trihalometanos sao classificados como <strong>carcinogenicos</strong>. Isso significa que toda agua tratada com cloro que contenha materia organica residual pode carregar substancias que aumentam o risco de cancer.</p>
+  <p>Todos os quatro tipos de trihalometanos são classificados como <strong>carcinogênicos</strong>. Isso significa que toda água tratada com cloro que contenha matéria orgânica residual pode carregar substâncias que aumentam o risco de câncer.</p>
 
   <div class="danger-box">
     <h4>Alerta para gestantes</h4>
-    <p>O figado do bebe em gestacao ainda nao produz as enzimas necessarias para metabolizar trihalometanos. Segundo dados apresentados no podcast, um banho de 15 minutos a 35 graus com 2 ppm de cloro equivale a exposicao de um cigarro. Gestantes devem considerar seriamente a filtragem da agua, inclusive a do chuveiro.</p>
+    <p>O fígado do bebê em gestação ainda não produz as enzimas necessárias para metabolizar trihalometanos. Segundo dados apresentados no podcast, um banho de 15 minutos a 35 graus com 2 ppm de cloro equivale à exposição de um cigarro. Gestantes devem considerar seriamente a filtragem da água, inclusive a do chuveiro. <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener" style="color:#dc2626;font-weight:700;">A Acqualive tem solução para chuveiro.</a></p>
   </div>
 
-  <h3>O que verificar no seu filtro de agua</h3>
+  <h3>O que verificar no seu filtro de água</h3>
 
-  <p>O INMETRO avalia tres criterios nos filtros de agua: <strong>retencao de cloro</strong>, <strong>retencao de particulado</strong> (classes A a F) e <strong>eficiencia bacteriologica</strong>. Porem, Sidnei alertou que o selo do INMETRO pode ser enganoso: filtros que removem apenas 75% do cloro recebem o mesmo selo que filtros que removem 100%.</p>
+  <p>O INMETRO avalia três critérios nos filtros de água: <strong>retenção de cloro</strong>, <strong>retenção de particulado</strong> (classes A a F) e <strong>eficiência bacteriológica</strong>. Porém, Sidnei alertou que o selo do INMETRO pode ser enganoso: filtros que removem apenas 75% do cloro recebem o mesmo selo que filtros que removem 100%.</p>
 
   <ol class="pillar-list">
-    <li><strong>Retencao de particulado:</strong> procure filtros classe A, que retêm as menores particulas. Filtros classe B, C ou D deixam passar impurezas que seus rins terao que filtrar.</li>
-    <li><strong>Retencao de cloro:</strong> verifique o percentual exato. A diferenca entre 75% e 100% e significativa para sua saude.</li>
-    <li><strong>Eficiencia bacteriologica:</strong> se o rotulo diz "nao se aplica", significa que o filtro nao impede a passagem de bacterias.</li>
+    <li><strong>Retenção de particulado:</strong> procure filtros classe A, que retêm as menores partículas. Filtros classe B, C ou D deixam passar impurezas que seus rins terão que filtrar.</li>
+    <li><strong>Retenção de cloro:</strong> verifique o percentual exato. A diferença entre 75% e 100% é significativa para sua saúde.</li>
+    <li><strong>Eficiência bacteriológica:</strong> se o rótulo diz "não se aplica", significa que o filtro não impede a passagem de bactérias.</li>
   </ol>
 
   <div class="mid-cta">
-    <p>A Acqualive e a unica empresa brasileira com estudo clinico publicado sobre os efeitos da sua agua na saude</p>
+    <p>A Acqualive é a única empresa brasileira com estudo clínico publicado sobre os efeitos da sua água na saúde</p>
     <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener">Conhecer a Acqualive</a>
   </div>
 
   <div class="section-divider"></div>
 
-<!-- BLOCO 9: ESTUDO CIENTIFICO COM 28 PACIENTES -->
+<!-- BLOCO 10: ESTUDO CIENTÍFICO COM 28 PACIENTES -->
 
-  <h2>O estudo que chocou a comunidade medica: 28 pacientes, 4 meses, so agua</h2>
+  <h2>O estudo que chocou a comunidade médica: 28 pacientes, 4 meses, só água Acqualive</h2>
 
-  <p>Um dos momentos mais poderosos do podcast foi a revelacao do estudo clinico conduzido pela Dra. Juliana Ramos Chaves em Belem do Para, em parceria com o Hospital de Base Naval e a Universidade Federal do Para.</p>
+  <p>Um dos momentos mais poderosos do podcast foi a revelação do estudo clínico conduzido pela Dra. Juliana Ramos Chaves em Belém do Pará, em parceria com o Hospital de Base Naval e a Universidade Federal do Pará, utilizando exclusivamente a tecnologia Acqualive.</p>
 
-  <p>A pesquisa selecionou 28 pacientes com azia cronica e lesoes gastricas documentadas por endoscopia. Durante quatro meses, os pacientes foram orientados a suspender a medicacao e utilizar exclusivamente agua alcalina ionizada produzida pela tecnologia Acqualive.</p>
+  <p>A pesquisa selecionou 28 pacientes com azia crônica e lesões gástricas documentadas por endoscopia. Durante quatro meses, os pacientes foram orientados a suspender a medicação e utilizar exclusivamente água alcalina ionizada produzida pela tecnologia Acqualive.</p>
 
   <h3>Os resultados</h3>
 
-  <p>Alem da regressao clinica dos sintomas, o estudo mediu a expressao de microRNAs, moleculas que regulam o comportamento genetico celular. Os resultados foram extraordinarios:</p>
+  <p>Além da regressão clínica dos sintomas, o estudo mediu a expressão de microRNAs, moléculas que regulam o comportamento genético celular. Os resultados foram extraordinários:</p>
 
   <div class="stat-grid">
     <div class="stat-card">
       <div class="stat-number">300%</div>
-      <div class="stat-label">de aumento na expressao do microRNA ligado a imunidade</div>
+      <div class="stat-label">de aumento na expressão do microRNA ligado à imunidade</div>
     </div>
     <div class="stat-card">
       <div class="stat-number">100%</div>
-      <div class="stat-label">de aumento em microRNAs de supressao tumoral</div>
+      <div class="stat-label">de aumento em microRNAs de supressão tumoral</div>
     </div>
     <div class="stat-card">
       <div class="stat-number">28</div>
-      <div class="stat-label">pacientes acompanhados com rigor cientifico</div>
+      <div class="stat-label">pacientes acompanhados com rigor científico</div>
     </div>
     <div class="stat-card">
       <div class="stat-number">4</div>
-      <div class="stat-label">meses de acompanhamento exclusivo com agua alcalina</div>
+      <div class="stat-label">meses de acompanhamento exclusivo com água Acqualive</div>
     </div>
   </div>
 
-  <p>O estudo foi apresentado em <strong>Praga</strong>, no maior congresso de canceres do esofago do mundo, depois em <strong>Nova York</strong>, e finalmente publicado em uma <strong>revista medica americana de classificacao A1</strong>, disponivel no <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed</a>.</p>
+  <p>O estudo foi apresentado em <strong>Praga</strong>, no maior congresso de cânceres do esôfago do mundo, depois em <strong>Nova York</strong>, e finalmente publicado em uma <strong>revista médica americana de classificação A1</strong>, disponível no <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed</a>.</p>
 
   <div class="science-box">
-    <h4>Evidencia Cientifica</h4>
-    <p>A pesquisa demonstrou que a agua alcalina ionizada foi capaz de ativar microRNAs relacionados a supressao tumoral e controle inflamatorio, algo que farmacos anti-inflamatorios convencionais nem sempre conseguem. E o primeiro estudo brasileiro desse tipo e um dos poucos no mundo com esse nivel de rigor. <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener">Saiba mais sobre a tecnologia por tras da pesquisa.</a></p>
+    <h4>Evidência Científica</h4>
+    <p>A pesquisa demonstrou que a água alcalina ionizada Acqualive foi capaz de ativar microRNAs relacionados à supressão tumoral e controle inflamatório, algo que fármacos anti-inflamatórios convencionais nem sempre conseguem. É o primeiro estudo brasileiro desse tipo e um dos poucos no mundo com esse nível de rigor. <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener">Saiba mais sobre a tecnologia por trás da pesquisa.</a></p>
   </div>
 
   <div class="section-divider"></div>
 
-<!-- BLOCO 10: DEMONSTRACAO AO VIVO -->
+<!-- BLOCO 11: DEMONSTRAÇÃO AO VIVO -->
 
-  <h2>Laboratorio ao vivo: a transformacao da agua diante das cameras</h2>
+  <h2>Laboratório ao vivo: a transformação da água diante das câmeras</h2>
 
-  <p>Na segunda metade do podcast, Sidnei Rodrigues montou um mini laboratorio no estudio para demonstrar, com aparelhos e reagentes, as diferencas entre os tipos de agua. O Dr. Dayan, que assistia pela primeira vez, nao escondeu a surpresa com os resultados.</p>
+  <p>Na segunda metade do podcast, Sidnei Rodrigues montou um mini laboratório no estúdio para demonstrar, com aparelhos e reagentes, as diferenças entre os tipos de água. O Dr. Dayan, que assistia pela primeira vez, não escondeu a surpresa com os resultados.</p>
 
-  <h3>Teste de ORP (potencial de oxidacao e reducao)</h3>
+  <h3>Teste de ORP (potencial de oxidação e redução)</h3>
 
-  <p>A agua da torneira de Fortaleza marcou <strong>+267 mV</strong> no medidor de ORP, indicando alto potencial oxidante, ou seja, uma agua que literalmente "enferruja" o organismo por dentro. A mesma agua, apos passar pela tecnologia Acqualive, despencou para <strong>-220 mV</strong>, tornando-se antioxidante.</p>
+  <p>A água da torneira de Fortaleza marcou <strong>+267 mV</strong> no medidor de ORP, indicando alto potencial oxidante, ou seja, uma água que literalmente "enferruja" o organismo por dentro. A mesma água, após passar pela tecnologia Acqualive, despencou para <strong>-220 mV</strong>, tornando-se antioxidante.</p>
 
-  <p>Para contextualizar: uma agua antioxidante produzida pela tecnologia Acqualive e ate tres vezes mais antioxidante que o cha verde, um dos alimentos mais celebrados por essa propriedade.</p>
+  <p>Para contextualizar: a água antioxidante produzida pela tecnologia Acqualive é até três vezes mais antioxidante que o chá verde, um dos alimentos mais celebrados por essa propriedade.</p>
 
   <h3>Teste de pH</h3>
 
-  <p>Utilizando indicadores colorimetricos, as amostras revelaram um cenario preocupante: a agua mineral de garrafa apresentou pH inferior ao da propria agua da torneira. Ja o refrigerante registrou acidez extrema. A agua processada pela tecnologia Acqualive, por outro lado, alcancou pH proximo a 10, com coloracao azul intensa no indicador.</p>
+  <p>Utilizando indicadores colorimétricos, as amostras revelaram um cenário preocupante: a água mineral de garrafa apresentou pH inferior ao da própria água da torneira. Já o refrigerante registrou acidez extrema. A água processada pela tecnologia Acqualive, por outro lado, alcançou pH próximo a 10, com coloração azul intensa no indicador.</p>
 
   <div class="table-wrap">
     <table class="comparison-table">
       <thead>
         <tr>
-          <th>Parametro</th>
-          <th>Agua Torneira</th>
-          <th>Agua Mineral</th>
+          <th>Parâmetro</th>
+          <th>Água Torneira</th>
+          <th>Água Mineral</th>
           <th>Refrigerante</th>
-          <th class="winner">Agua Acqualive</th>
+          <th class="winner">Água Acqualive</th>
         </tr>
       </thead>
       <tbody>
@@ -2631,14 +2674,14 @@ const ARTICLES = [
           <td><strong style="color:#16a34a">9,0 a 10,0</strong></td>
         </tr>
         <tr>
-          <td>Acao no corpo</td>
+          <td>Ação no corpo</td>
           <td class="partial">Oxidante</td>
           <td class="partial">Oxidante</td>
           <td class="cross">Altamente oxidante</td>
           <td class="check">Antioxidante</td>
         </tr>
         <tr>
-          <td>Tensao superficial</td>
+          <td>Tensão superficial</td>
           <td class="partial">Alta</td>
           <td class="partial">Alta</td>
           <td class="cross">Alta</td>
@@ -2647,7 +2690,7 @@ const ARTICLES = [
         <tr>
           <td>Minerais alcalinos</td>
           <td class="cross">Ausentes</td>
-          <td class="partial">Variavel</td>
+          <td class="partial">Variável</td>
           <td class="cross">Ausentes</td>
           <td class="check">Presentes</td>
         </tr>
@@ -2657,91 +2700,91 @@ const ARTICLES = [
 
   <div class="section-divider"></div>
 
-<!-- BLOCO 11: 5 PILARES DA AGUA IDEAL -->
+<!-- BLOCO 12: 5 PILARES DA ÁGUA IDEAL -->
 
-  <h2>Os 5 pilares da agua ideal, segundo 30 anos de pesquisa</h2>
+  <h2>Os 5 pilares da água ideal, segundo 30 anos de pesquisa Acqualive</h2>
 
-  <img src="https://upgrade-acqualive.lovable.app/images/blog-podcast-acqualive.jpg" alt="Purificador Acqualive em cozinha moderna com copo de agua cristalina" class="article-img" width="1200" height="600" loading="lazy">
-  <p class="img-caption">A tecnologia Acqualive reune em um unico equipamento os cinco pilares da agua ideal</p>
+  <img src="https://upgrade-acqualive.lovable.app/images/blog-podcast-acqualive.jpg" alt="Purificador de água alcalina Acqualive em cozinha moderna com copo de água cristalina" class="article-img" width="1200" height="672" loading="lazy">
+  <p class="img-caption">A tecnologia Acqualive reúne em um único equipamento os cinco pilares da água ideal</p>
 
-  <p>Sidnei Rodrigues, que dedicou mais de 30 anos a pesquisa sobre agua, viajou a Coreia do Sul mais de 12 vezes, participou do Forum Mundial da Agua em Bali e apresentou projetos na sede da ONU em Nova York. Todo esse percurso levou a identificacao de cinco caracteristicas presentes nas aguas consumidas pelas populacoes mais longevas do planeta, que vivem em regioes distantes e com dietas completamente diferentes, mas compartilham um unico ponto em comum: a qualidade da agua.</p>
+  <p>Sidnei Rodrigues, fundador da Acqualive, dedicou mais de 30 anos à pesquisa sobre água, viajou à Coreia do Sul mais de 12 vezes, participou do Fórum Mundial da Água em Bali e apresentou projetos na sede da ONU em Nova York. Todo esse percurso levou à identificação de cinco características presentes nas águas consumidas pelas populações mais longevas do planeta, que vivem em regiões distantes e com dietas completamente diferentes, mas compartilham um único ponto em comum: a qualidade da água.</p>
 
   <ol class="pillar-list">
-    <li><strong>pH alcalino:</strong> acima de 8,5, para ajudar o organismo a manter o equilibrio acido-basico sem gastar energia propria.</li>
-    <li><strong>Potencial antioxidante (ORP negativo):</strong> agua com capacidade de neutralizar radicais livres, combatendo o envelhecimento e a oxidacao celular.</li>
-    <li><strong>Baixa tensao superficial:</strong> moleculas menores que penetram com facilidade nas celulas, garantindo hidratacao real.</li>
-    <li><strong>Rica em minerais alcalinos:</strong> magnesio, calcio e outros minerais essenciais que o solo brasileiro, depredado pela agricultura intensiva, ja nao fornece naturalmente.</li>
-    <li><strong>Livre de contaminantes:</strong> sem cloro, trihalometanos, bacterias, agrotoxicos e microplasticos.</li>
+    <li><strong>pH alcalino:</strong> acima de 8,5, para ajudar o organismo a manter o equilíbrio ácido-básico sem gastar energia própria.</li>
+    <li><strong>Potencial antioxidante (ORP negativo):</strong> água com capacidade de neutralizar radicais livres, combatendo o envelhecimento e a oxidação celular.</li>
+    <li><strong>Baixa tensão superficial:</strong> moléculas menores que penetram com facilidade nas células, garantindo hidratação real.</li>
+    <li><strong>Rica em minerais alcalinos:</strong> magnésio, cálcio e outros minerais essenciais que o solo brasileiro, depredado pela agricultura intensiva, já não fornece naturalmente.</li>
+    <li><strong>Livre de contaminantes:</strong> sem cloro, trihalometanos, bactérias, agrotóxicos e microplásticos.</li>
   </ol>
 
-  <p>A Acqualive desenvolveu uma tecnologia patenteada capaz de reunir esses cinco pilares em um unico equipamento domestico, a um custo estimado de R$ 0,02 por litro, democratizando o acesso a uma agua que, em outros formatos, custaria R$ 18 a R$ 25 por meio litro em garrafas importadas.</p>
+  <p>A Acqualive desenvolveu uma tecnologia patenteada capaz de reunir esses cinco pilares em um único equipamento doméstico, a um custo estimado de R$ 0,02 por litro, democratizando o acesso a uma água que, em outros formatos, custaria R$ 18 a R$ 25 por meio litro em garrafas importadas.</p>
 
   <div class="section-divider"></div>
 
-<!-- BLOCO 12: DEPOIMENTO FINAL DO DR. DAYAN -->
+<!-- BLOCO 13: DEPOIMENTO FINAL DO DR. DAYAN -->
 
-  <h2>O compromisso publico do Dr. Dayan Siebra</h2>
+  <h2>O compromisso público do Dr. Dayan Siebra após conhecer a Acqualive</h2>
 
-  <p>Ao final do podcast, visivelmente impactado pelas demonstracoes e evidencias apresentadas, o Dr. Dayan Siebra fez um compromisso publico: levar a mensagem sobre a importancia da agua para seus mais de 12 milhoes de seguidores.</p>
+  <p>Ao final do nosso podcast, visivelmente impactado pelas demonstrações e evidências apresentadas, o Dr. Dayan Siebra fez um compromisso público: levar a mensagem sobre a importância da água para seus mais de 12 milhões de seguidores.</p>
 
   <div class="podcast-quote">
-    <p>"Ja encomendei o meu. Estou ansioso para chegar e compartilhar com meus seguidores. A gente fala de carboidrato, de proteina, de creatina, de suplemento. Vamos colocar um capitulo da agua no nosso dia a dia tambem para ajudar as pessoas."</p>
-    <span class="quote-author">Dr. Dayan Siebra, ao final do podcast</span>
+    <p>"Já encomendei o meu. Estou ansioso para chegar e compartilhar com meus seguidores. A gente fala de carboidrato, de proteína, de creatina, de suplemento. Vamos colocar um capítulo da água no nosso dia a dia também para ajudar as pessoas."</p>
+    <span class="quote-author">Dr. Dayan Siebra, ao final do podcast Acqualive</span>
   </div>
 
-  <p>O medico tambem destacou que, a partir daquele momento, a primeira pergunta que faria a seus pacientes em consulta seria: "Quanta agua voce bebe por dia? E que tipo de agua voce esta bebendo?" Duas perguntas simples que, segundo ele, deveriam fazer parte de toda anamnese medica.</p>
+  <p>O médico também destacou que, a partir daquele momento, a primeira pergunta que faria a seus pacientes em consulta seria: "Quanta água você bebe por dia? E que tipo de água você está bebendo?" Duas perguntas simples que, segundo ele, deveriam fazer parte de toda anamnese médica.</p>
 
-  <h3>A mensagem final para quem esta em casa</h3>
+  <h3>A mensagem final para quem está em casa</h3>
 
-  <p>"Faca o basico. Comece pela agua, por uma boa alimentacao e va experimentando um pouquinho cada dia. E voce vai perceber sua saude melhorar. Todo dia e aquele 1% que vai fazendo, que vai chegar no final como uma grande transformacao", concluiu o Dr. Dayan.</p>
+  <p>"Faça o básico. Comece pela água, por uma boa alimentação e vá experimentando um pouquinho cada dia. E você vai perceber sua saúde melhorar. Todo dia é aquele 1% que vai fazendo, que vai chegar no final como uma grande transformação", concluiu o Dr. Dayan.</p>
 
-  <p>A mudanca nao exige radicalismo. Exige consciencia. Se voce mudar a agua, que e 70% de voce, ja esta mudando a maior parte do seu constituinte biologico. O resto vem como consequencia.</p>
+  <p>A mudança não exige radicalismo. Exige consciência. Se você mudar a água, que é 70% de você, já está mudando a maior parte do seu constituinte biológico. O resto vem como consequência.</p>
 
   <div class="section-divider"></div>
 
-<!-- BLOCO 13: CTA FINAL -->
+<!-- BLOCO 14: CTA FINAL -->
 
   <div class="cta-section">
-    <h2>Transforme a agua da sua casa com a <span>tecnologia Acqualive</span></h2>
-    <p>A mesma tecnologia validada em estudo clinico publicado internacionalmente, agora acessivel para a sua familia. Agua alcalina, antioxidante e purificada por menos de R$ 0,02 o litro.</p>
+    <h2>Transforme a água da sua casa com a <span>tecnologia Acqualive</span></h2>
+    <p>A mesma tecnologia validada em estudo clínico publicado internacionalmente, agora acessível para a sua família. Água alcalina, antioxidante e purificada por menos de R$ 0,02 o litro.</p>
     <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Quero Conhecer a Acqualive</a>
   </div>
 
-<!-- BLOCO 14: REFERENCIAS -->
+<!-- BLOCO 15: REFERÊNCIAS -->
 
   <div class="references">
-    <h3>Referencias e Fontes</h3>
+    <h3>Referências e Fontes</h3>
     <ol>
-      <li>Podcast "Terca Positiva" com Dr. Dayan Siebra e Sidnei Rodrigues, gravado em Fortaleza, CE.</li>
-      <li>Organizacao Mundial da Saude (OMS). <a href="https://www.who.int/news-room/fact-sheets/detail/drinking-water" target="_blank" rel="noopener">Drinking Water Quality Guidelines</a>.</li>
-      <li>Environmental Protection Agency (EPA). Classificacao do cloro como pesticida, 2011.</li>
-      <li>Estudo clinico com 28 pacientes, Dra. Juliana Ramos Chaves, Hospital de Base Naval de Belem / UFPA. Publicado em revista americana A1, disponivel no <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed</a>.</li>
+      <li>Podcast Acqualive "Terça Positiva" com Dr. Dayan Siebra e Sidnei Rodrigues, gravado em Fortaleza, CE.</li>
+      <li>Organização Mundial da Saúde (OMS). <a href="https://www.who.int/news-room/fact-sheets/detail/drinking-water" target="_blank" rel="noopener">Drinking Water Quality Guidelines</a>.</li>
+      <li>Environmental Protection Agency (EPA). Classificação do cloro como pesticida, 2011.</li>
+      <li>Estudo clínico com 28 pacientes, Dra. Juliana Ramos Chaves, Hospital de Base Naval de Belém / UFPA. Publicado em revista americana A1, disponível no <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed</a>.</li>
       <li>Nature Medicine. <a href="https://www.nature.com/articles/s41591-019-0675-0" target="_blank" rel="noopener">Chronic low-grade inflammation and disease</a>.</li>
-      <li>Robbins, Tratado de Patologia. Sobre agentes etiologicos multiplos.</li>
-      <li>Otto Warburg, Premio Nobel de Medicina, sobre terreno biologico acido e desenvolvimento de canceres.</li>
-      <li><a href="https://lp.acqualive.com.br" target="_blank" rel="noopener">Acqualive, Tecnologia de Agua Alcalina Ionizada</a>.</li>
+      <li>Robbins, Tratado de Patologia. Sobre agentes etiológicos múltiplos.</li>
+      <li>Otto Warburg, Prêmio Nobel de Medicina, sobre terreno biológico ácido e desenvolvimento de cânceres.</li>
+      <li><a href="https://lp.acqualive.com.br" target="_blank" rel="noopener">Acqualive, Tecnologia de Água Alcalina Ionizada</a>.</li>
     </ol>
   </div>
 
-<!-- BLOCO 15: FICHA TECNICA SEO -->
+<!-- BLOCO 16: FICHA TÉCNICA SEO -->
 
   <div class="seo-sheet">
-    <h3>Ficha Tecnica SEO</h3>
+    <h3>Ficha Técnica SEO</h3>
     <div class="seo-row">
       <span class="seo-label">Slug:</span>
-      <span class="seo-value">podcast-dr-dayan-siebra-agua-saude</span>
+      <span class="seo-value">podcast-acqualive-dr-dayan-siebra-agua-saude</span>
     </div>
     <div class="seo-row">
       <span class="seo-label">Meta Title:</span>
-      <span class="seo-value">Dr. Dayan Siebra Revela: A Agua que Voce Bebe Pode Estar Te Adoecendo | Acqualive</span>
+      <span class="seo-value">Podcast Acqualive com Dr. Dayan Siebra: O Que a Medicina Não Ensina Sobre Água e Saúde</span>
     </div>
     <div class="seo-row">
       <span class="seo-label">Meta Description:</span>
-      <span class="seo-value">No podcast mais completo sobre agua e saude, o Dr. Dayan Siebra, cirurgiao vascular e medico mais seguido do Brasil, revela como a qualidade da agua impacta diretamente a circulacao, a inflamacao cronica e o envelhecimento precoce.</span>
+      <span class="seo-value">A Acqualive recebeu o Dr. Dayan Siebra, cirurgião vascular e médico mais seguido do Brasil, para um podcast revelador sobre como a qualidade da água impacta a circulação, a inflamação crônica e o envelhecimento precoce.</span>
     </div>
     <div class="seo-row">
       <span class="seo-label">Keywords:</span>
-      <span class="seo-value">Dr Dayan Siebra, agua alcalina, agua e saude, podcast agua, agua ionizada, desidratacao cronica, pH da agua, agua antioxidante, Acqualive, inflamacao cronica, agua de qualidade, trihalometanos, agua alcalina ionizada</span>
+      <span class="seo-value">Dr Dayan Siebra, água alcalina, água e saúde, podcast Acqualive, água ionizada, desidratação crônica, pH da água, água antioxidante, Acqualive, inflamação crônica, água de qualidade, trihalometanos, água alcalina ionizada, purificador de água alcalina</span>
     </div>
     <div class="seo-row">
       <span class="seo-label">Schemas:</span>
@@ -2749,28 +2792,28 @@ const ARTICLES = [
     </div>
     <div class="seo-row">
       <span class="seo-label">Canonical:</span>
-      <span class="seo-value">https://blog.acqualive.com.br/podcast-dr-dayan-siebra-agua-saude/</span>
+      <span class="seo-value">https://blog.acqualive.com.br/podcast-acqualive-dr-dayan-siebra-agua-saude/</span>
     </div>
     <div class="seo-row">
-      <span class="seo-label">Palavra-chave primaria:</span>
-      <span class="seo-value">Dr Dayan Siebra agua</span>
+      <span class="seo-label">Palavra-chave primária:</span>
+      <span class="seo-value">podcast Dr Dayan Siebra água alcalina</span>
     </div>
     <div class="seo-row">
-      <span class="seo-label">Palavras-chave secundarias:</span>
-      <span class="seo-value">agua alcalina funciona, agua da torneira faz mal, desidratacao cronica sintomas, pH da agua mineral, cloro na agua cancer, agua antioxidante beneficios</span>
+      <span class="seo-label">Palavras-chave secundárias:</span>
+      <span class="seo-value">água alcalina funciona, água da torneira faz mal, desidratação crônica sintomas, pH da água mineral, cloro na água câncer, água antioxidante benefícios, Acqualive purificador, água alcalina ionizada comprar</span>
     </div>
   </div>
 
 </main>
 
-<!-- BLOCO 16: RODAPE -->
+<!-- BLOCO 17: RODAPÉ -->
 <footer class="footer-article">
-  <p>Acqualive. A melhor agua do mundo, agora na sua casa.</p>
-  <p style="margin-top:8px">Conteudo baseado no podcast "Terca Positiva" com Dr. Dayan Siebra e Sidnei Rodrigues.</p>
+  <p>Acqualive. A melhor água do mundo, agora na sua casa.</p>
+  <p style="margin-top:8px">Conteúdo produzido pela Acqualive, baseado no podcast "Terça Positiva" com Dr. Dayan Siebra.</p>
 </footer>
 
 </body>
-</html>`,
+</html>\`,
   },
 ];
 
