@@ -87,12 +87,10 @@ const HeroSection = () => (
         </motion.p>
 
         <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
-          <Button variant="cta" size="xl" asChild className="group">
-            <a href={CLUB_LINK} target="_top" rel="noopener noreferrer">
+          <Button variant="cta" size="xl" className="group cursor-pointer" onClick={() => (window as any).bonifiq?.openReferral()}>
               <Gift className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Quero Indicar Agora
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
           </Button>
           <Button variant="cta" size="xl" asChild className="group bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-2xl shadow-primary-foreground/30 ring-4 ring-primary-foreground/20">
             <a href="#como-funciona">
