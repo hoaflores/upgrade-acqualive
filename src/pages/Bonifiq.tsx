@@ -652,10 +652,12 @@ const FinalCTASection = () => (
           Entre para o Acqualive Club agora. Com apenas <strong className="text-accent">uma indicação por semestre</strong>, você nunca mais paga para ter água alcalina de qualidade!
         </motion.p>
         <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button variant="cta" size="xl" className="group shadow-glow cursor-pointer" onClick={() => (window as any).bonifiq?.openReferral()}>
+          <Button variant="cta" size="xl" asChild className="group shadow-glow">
+            <a href={CLUB_LINK} target="_top">
               <Gift className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Entrar para o Clube e ganhar 500 pontos
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
           </Button>
         </motion.div>
       </motion.div>
