@@ -236,10 +236,12 @@ const ReferralSection = () => {
                 </div>
               </div>
               <div className="text-center mt-6">
-                <Button variant="cta" size="lg" className="group cursor-pointer" onClick={() => (window as any).bonifiq?.openReferral()}>
+                <Button variant="cta" size="lg" asChild className="group">
+                  <a href={CLUB_LINK} target="_top">
                     <Gift className="w-5 h-5" />
                     Gerar meu link de indicação
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
                 </Button>
               </div>
             </div>
