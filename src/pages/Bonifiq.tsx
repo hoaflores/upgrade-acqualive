@@ -320,11 +320,9 @@ const ReviewsSection = () => {
               </p>
               <p className="text-5xl font-display font-bold mb-2">250 pontos</p>
               <p className="text-lg opacity-80">R$ 5,00 de desconto por produto avaliado</p>
-              <Button variant="hero" size="lg" asChild className="mt-6 group text-accent">
-                <a href={CLUB_LINK} target="_top" rel="noopener noreferrer">
-                  Avaliar minhas compras e ganhar
+              <Button variant="hero" size="lg" className="mt-6 group text-accent cursor-pointer" onClick={() => (window as any).bonifiq?.openReferral()}>
+                  Ativar minhas compras e ganhar
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
               </Button>
             </div>
           </div>
