@@ -87,12 +87,10 @@ const HeroSection = () => (
         </motion.p>
 
         <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
-          <Button variant="cta" size="xl" asChild className="group">
-            <a href={CLUB_LINK} target="_top" rel="noopener noreferrer">
+          <Button variant="cta" size="xl" className="group cursor-pointer" onClick={() => (window as any).bonifiq?.openReferral()}>
               <Gift className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Quero Indicar Agora
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
           </Button>
           <Button variant="cta" size="xl" asChild className="group bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-2xl shadow-primary-foreground/30 ring-4 ring-primary-foreground/20">
             <a href="#como-funciona">
@@ -236,12 +234,10 @@ const ReferralSection = () => {
                 </div>
               </div>
               <div className="text-center mt-6">
-                <Button variant="cta" size="lg" asChild className="group">
-                  <a href={CLUB_LINK} target="_top" rel="noopener noreferrer">
+                <Button variant="cta" size="lg" className="group cursor-pointer" onClick={() => (window as any).bonifiq?.openReferral()}>
                     <Gift className="w-5 h-5" />
                     Gerar meu link de indicação
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </a>
                 </Button>
               </div>
             </div>
@@ -324,11 +320,9 @@ const ReviewsSection = () => {
               </p>
               <p className="text-5xl font-display font-bold mb-2">250 pontos</p>
               <p className="text-lg opacity-80">R$ 5,00 de desconto por produto avaliado</p>
-              <Button variant="hero" size="lg" asChild className="mt-6 group text-accent">
-                <a href={CLUB_LINK} target="_top" rel="noopener noreferrer">
-                  Avaliar minhas compras e ganhar
+              <Button variant="hero" size="lg" className="mt-6 group text-accent cursor-pointer" onClick={() => (window as any).bonifiq?.openReferral()}>
+                  Ativar minhas compras e ganhar
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
               </Button>
             </div>
           </div>
@@ -652,12 +646,10 @@ const FinalCTASection = () => (
           Entre para o Acqualive Club agora. Com apenas <strong className="text-accent">uma indicação por semestre</strong>, você nunca mais paga para ter água alcalina de qualidade!
         </motion.p>
         <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button variant="cta" size="xl" asChild className="group shadow-glow">
-            <a href={CLUB_LINK} target="_top" rel="noopener noreferrer">
+          <Button variant="cta" size="xl" className="group shadow-glow cursor-pointer" onClick={() => (window as any).bonifiq?.openReferral()}>
               <Gift className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Entrar para o Clube e ganhar 500 pontos
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
           </Button>
         </motion.div>
       </motion.div>
