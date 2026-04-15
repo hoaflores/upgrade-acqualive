@@ -1695,8 +1695,8 @@ const ARTICLES = [
   "description": "A Acqualive recebeu o Dr. Dayan Siebra para um podcast completo sobre a relação entre qualidade da água, inflamação crônica, circulação sanguínea e prevenção de doenças. Evidências científicas e demonstração ao vivo.",
   "author": {"@type": "Organization", "name": "Acqualive"},
   "publisher": {"@type": "Organization", "name": "Acqualive"},
-  "datePublished": "2025-03-29",
-  "dateModified": "2025-03-29",
+  "datePublished": "2026-04-01",
+  "dateModified": "2026-04-15",
   "mainEntityOfPage": {"@type": "WebPage"},
   "keywords": "Dr Dayan Siebra, água alcalina, água ionizada, pH da água, inflamação crônica, Acqualive, água antioxidante, podcast água saúde"
 }
