@@ -2282,35 +2282,42 @@ const ARTICLES = [
   .mid-cta a:hover { background: #1d4ed8; }
 
   .seo-sheet {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 16px;
-    padding: 32px;
-    margin: 48px 0 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    height: 1px;
+    opacity: 0;
   }
   .seo-sheet h3 {
-    font-size: 14px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #2563eb;
-    margin: 0 0 20px;
+    font-size: 1px;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1;
   }
   .seo-row {
     display: flex;
-    gap: 12px;
-    padding: 10px 0;
-    border-bottom: 1px solid #e2e8f0;
-    font-size: 14px;
+    gap: 0;
+    padding: 0;
+    border-bottom: none;
+    font-size: 1px;
+    line-height: 1;
+    color: #ffffff;
   }
   .seo-row:last-child { border-bottom: none; }
   .seo-label {
-    font-weight: 700;
-    color: #475569;
-    min-width: 140px;
+    font-weight: 400;
+    color: #ffffff;
+    min-width: 0;
     flex-shrink: 0;
+    font-size: 1px;
   }
-  .seo-value { color: #334155; }
+  .seo-value { color: #ffffff; font-size: 1px; }
 
   .footer-article {
     text-align: center;
@@ -2373,28 +2380,21 @@ const ARTICLES = [
       <div class="guest-tag"><span class="guest-dot dot-green"></span> Fernando Carvalho, Apresentador</div>
     </div>
     <div class="hero-meta">
-      <span>Março 2025</span>
-      <span>Leitura: 22 min</span>
-      <span>Podcast Terça Positiva</span>
+      <span>Abril 2026</span>
     </div>
   </div>
   <div class="hero-img-wrap">
-    <img src="https://upgrade-acqualive.lovable.app/images/blog-podcast-dayan-hero.jpg" alt="Dr. Dayan Siebra e Sidnei Rodrigues em estúdio de podcast da Acqualive discutindo sobre água e saúde" width="1200" height="672" loading="eager">
+    <img src="https://upgrade-acqualive.lovable.app/images/blog-podcast-dayan-real.png" alt="Dr. Dayan Siebra em estúdio de podcast discutindo sobre água e saúde" width="1200" height="672" loading="eager" style="object-fit:cover;">
   </div>
 </header>
 
 <!-- BLOCO 2: EMBED DO VÍDEO -->
 <main class="article-body">
 
-  <!-- SUBSTITUA O ID_DO_VIDEO PELO ID REAL DO YOUTUBE QUANDO O VÍDEO FOR PUBLICADO -->
   <div class="video-embed">
-    <!-- <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO" title="Podcast Acqualive com Dr. Dayan Siebra" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-    <div class="video-placeholder">
-      <div class="play-icon"></div>
-      <span>Vídeo em breve. Substitua pelo embed do YouTube.</span>
-    </div>
+    <iframe src="https://www.youtube.com/embed/0r7bQudJy5U" title="Podcast com Dr. Dayan Siebra" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
-  <p class="video-caption">Assista ao podcast completo com Dr. Dayan Siebra no canal da Acqualive</p>
+  <p class="video-caption">Assista ao episódio completo com Dr. Dayan Siebra</p>
 
   <div class="section-divider"></div>
 
@@ -2704,7 +2704,7 @@ const ARTICLES = [
 
   <h2>Os 5 pilares da água ideal, segundo 30 anos de pesquisa Acqualive</h2>
 
-  <img src="https://upgrade-acqualive.lovable.app/images/blog-podcast-acqualive.jpg" alt="Purificador de água alcalina Acqualive em cozinha moderna com copo de água cristalina" class="article-img" width="1200" height="672" loading="lazy">
+  <img src="https://upgrade-acqualive.lovable.app/images/blog-podcast-terracota-real.jpg" alt="Purificadores de água alcalina Acqualive Terracota em exposição" class="article-img" width="1200" height="672" loading="lazy" style="object-fit:cover;">
   <p class="img-caption">A tecnologia Acqualive reúne em um único equipamento os cinco pilares da água ideal</p>
 
   <p>Sidnei Rodrigues, fundador da Acqualive, dedicou mais de 30 anos à pesquisa sobre água, viajou à Coreia do Sul mais de 12 vezes, participou do Fórum Mundial da Água em Bali e apresentou projetos na sede da ONU em Nova York. Todo esse percurso levou à identificação de cinco características presentes nas águas consumidas pelas populações mais longevas do planeta, que vivem em regiões distantes e com dietas completamente diferentes, mas compartilham um único ponto em comum: a qualidade da água.</p>
