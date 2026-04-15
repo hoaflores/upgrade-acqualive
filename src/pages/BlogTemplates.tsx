@@ -2240,46 +2240,47 @@ const ARTICLES = [
     margin-right: auto;
   }
   .cta-button {
-    display: inline-block;
-    background: linear-gradient(135deg, #3b82f6, #2563eb);
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 700;
-    padding: 18px 40px;
-    border-radius: 14px;
-    text-decoration: none;
+    display: inline-block !important;
+    background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+    color: #ffffff !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    padding: 18px 40px !important;
+    border-radius: 14px !important;
+    text-decoration: none !important;
     position: relative;
-    box-shadow: 0 4px 28px rgba(37,99,235,0.4);
+    box-shadow: 0 4px 28px rgba(37,99,235,0.4) !important;
     letter-spacing: 0.3px;
     transition: transform 0.2s, box-shadow 0.2s;
   }
   .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 36px rgba(37,99,235,0.5);
+    box-shadow: 0 8px 36px rgba(37,99,235,0.5) !important;
+    color: #ffffff !important;
   }
 
   .mid-cta {
-    background: #ffffff;
-    border: 1px solid #dbeafe;
-    border-radius: 16px;
-    padding: 24px 28px;
+    background: #ffffff !important;
+    border: 1px solid #dbeafe !important;
+    border-radius: 16px !important;
+    padding: 24px 28px !important;
     margin: 40px 0;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.03);
   }
-  .mid-cta p { color: #1e40af; font-weight: 600; margin-bottom: 14px; font-size: 15px; }
+  .mid-cta p { color: #1e40af !important; font-weight: 600 !important; margin-bottom: 14px !important; font-size: 15px !important; }
   .mid-cta a {
-    display: inline-block;
-    background: #2563eb;
-    color: #fff;
-    font-size: 13px;
-    font-weight: 700;
-    padding: 12px 28px;
-    border-radius: 10px;
-    text-decoration: none;
+    display: inline-block !important;
+    background: #2563eb !important;
+    color: #ffffff !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    padding: 12px 28px !important;
+    border-radius: 10px !important;
+    text-decoration: none !important;
     transition: background 0.2s;
   }
-  .mid-cta a:hover { background: #1d4ed8; }
+  .mid-cta a:hover { background: #1d4ed8 !important; color: #ffffff !important; }
 
   .seo-sheet {
     background: transparent;
@@ -2747,7 +2748,7 @@ const ARTICLES = [
   <div class="cta-section">
     <h2>Transforme a água da sua casa com a <span>tecnologia Acqualive</span></h2>
     <p>A mesma tecnologia validada em estudo clínico publicado internacionalmente, agora acessível para a sua família. Água alcalina, antioxidante e purificada por menos de R$ 0,02 o litro.</p>
-    <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Quero Conhecer a Acqualive</a>
+    <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener" class="cta-button" style="display:inline-block;background:linear-gradient(135deg,#3b82f6,#2563eb);color:#ffffff;font-size:15px;font-weight:700;padding:18px 40px;border-radius:14px;text-decoration:none;box-shadow:0 4px 28px rgba(37,99,235,0.4);">Quero Conhecer a Acqualive</a>
   </div>
 
 <!-- BLOCO 15: REFERÊNCIAS -->
