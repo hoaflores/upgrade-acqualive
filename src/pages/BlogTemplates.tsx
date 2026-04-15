@@ -2463,7 +2463,7 @@ const ARTICLES = [
 
   <div class="mid-cta">
     <p>Descubra como a tecnologia Acqualive transforma a água que você bebe</p>
-    <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener">Conhecer a Tecnologia Acqualive</a>
+    <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener" style="display:inline-block;background:#2563eb;color:#ffffff;font-size:13px;font-weight:700;padding:12px 28px;border-radius:10px;text-decoration:none;">Conhecer a Tecnologia Acqualive</a>
   </div>
 
   <div class="section-divider"></div>
@@ -2587,7 +2587,7 @@ const ARTICLES = [
 
   <div class="mid-cta">
     <p>A Acqualive é a única empresa brasileira com estudo clínico publicado sobre os efeitos da sua água na saúde</p>
-    <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener">Conhecer a Acqualive</a>
+    <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener" style="display:inline-block;background:#2563eb;color:#ffffff;font-size:13px;font-weight:700;padding:12px 28px;border-radius:10px;text-decoration:none;">Conhecer a Acqualive</a>
   </div>
 
   <div class="section-divider"></div>
