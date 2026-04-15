@@ -2373,11 +2373,11 @@ const ARTICLES = [
       <span class="hero-badge badge-exclusive">Conteúdo Exclusivo</span>
     </div>
     <h1>O que a medicina <span class="highlight-warm">não ensina</span> sobre a água que você bebe. <span class="highlight">Dr. Dayan Siebra explica.</span></h1>
-    <p class="hero-subtitle">A Acqualive convidou o Dr. Dayan Siebra, cirurgião vascular e o médico mais seguido do Brasil, junto com o pesquisador Sidnei Rodrigues, para uma conversa que vai mudar a forma como você enxerga a sua água.</p>
+    <p class="hero-subtitle">A Acqualive convidou o Dr. Dayan Siebra, cirurgião vascular e o médico mais seguido do Brasil, junto com o pesquisador Sidney Rodrigues, para uma conversa que vai mudar a forma como você enxerga a sua água.</p>
     <div class="hero-guests">
       <div class="guest-tag"><span class="guest-dot dot-blue"></span> Dr. Dayan Siebra, Cirurgião Vascular</div>
-      <div class="guest-tag"><span class="guest-dot dot-orange"></span> Sidnei Rodrigues, Pesquisador de Água</div>
-      <div class="guest-tag"><span class="guest-dot dot-green"></span> Fernando Carvalho, Apresentador</div>
+      <div class="guest-tag"><span class="guest-dot dot-orange"></span> Sidney Rodrigues, Pesquisador de Água</div>
+      <div class="guest-tag"><span class="guest-dot dot-green"></span> Fernando Beteti, Apresentador</div>
     </div>
     <div class="hero-meta">
       <span>Abril 2026</span>
@@ -2483,7 +2483,7 @@ const ARTICLES = [
     <span class="quote-author">Dr. Dayan Siebra, sobre a Tríade de Virchow</span>
   </div>
 
-  <p>Nosso pesquisador Sidnei Rodrigues acrescentou uma dimensão ainda mais preocupante: o <strong>potencial zeta</strong> da água. Nas estações de tratamento, substâncias são adicionadas para inverter o potencial zeta da água, fazendo com que partículas se agrupem e decantem. Quando essa água chega ao consumidor, o mesmo efeito coagulante pode ocorrer no sangue.</p>
+  <p>Nosso pesquisador Sidney Rodrigues acrescentou uma dimensão ainda mais preocupante: o <strong>potencial zeta</strong> da água. Nas estações de tratamento, substâncias são adicionadas para inverter o potencial zeta da água, fazendo com que partículas se agrupem e decantem. Quando essa água chega ao consumidor, o mesmo efeito coagulante pode ocorrer no sangue.</p>
 
   <p>Isso explicaria por que tantas pessoas aparentemente saudáveis, que não fumam, não bebem e praticam exercícios, sofrem episódios de "morte súbita". A <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">literatura científica indexada no PubMed</a> já documenta amplamente a relação entre hidratação inadequada e eventos cardiovasculares.</p>
 
@@ -2498,7 +2498,7 @@ const ARTICLES = [
 
   <h2>Tensão superficial: por que você pode beber água e continuar desidratado</h2>
 
-  <p>Nem toda água hidrata de verdade. Essa foi uma das afirmações mais surpreendentes do nosso podcast. Sidnei Rodrigues explicou o conceito de <strong>tensão superficial</strong>, uma propriedade física que determina a capacidade da água de penetrar nas células.</p>
+  <p>Nem toda água hidrata de verdade. Essa foi uma das afirmações mais surpreendentes do nosso podcast. Sidney Rodrigues explicou o conceito de <strong>tensão superficial</strong>, uma propriedade física que determina a capacidade da água de penetrar nas células.</p>
 
   <p>A água é formada por moléculas que se atraem mutuamente. Quando a água fica parada ou percorre longas distâncias por tubulações, essas moléculas se agrupam, formando clusters maiores. Quanto maior o cluster, maior a tensão superficial e menor a capacidade de hidratação celular.</p>
 
@@ -2531,7 +2531,7 @@ const ARTICLES = [
 
   <h3>O pH da água que você bebe importa</h3>
 
-  <p>A legislação brasileira permite que a água tenha pH entre 6,0 e 9,5. No entanto, Sidnei Rodrigues revelou no nosso podcast que já encontrou águas com pH 4,5 sendo vendidas como "água mineral" em capitais brasileiras. Para referência, isso está mais próximo do ácido de bateria do que da água ideal para consumo.</p>
+  <p>A legislação brasileira permite que a água tenha pH entre 6,0 e 9,5. No entanto, Sidney Rodrigues revelou no nosso podcast que já encontrou águas com pH 4,5 sendo vendidas como "água mineral" em capitais brasileiras. Para referência, isso está mais próximo do ácido de bateria do que da água ideal para consumo.</p>
 
   <p>Em Belém do Pará, o <a href="https://www.mpf.mp.br/" target="_blank" rel="noopener">Ministério Público Federal</a> já entrou com ação contra produtores de água, obrigando a troca do rótulo de "água mineral" para "água potável" quando o pH não atendia os parâmetros mínimos de saúde.</p>
 
@@ -2563,7 +2563,7 @@ const ARTICLES = [
 
   <h2>Cloro na água: o pesticida que você consome todos os dias sem perceber</h2>
 
-  <p>Uma das passagens mais impactantes do podcast foi a explicação detalhada de Sidnei Rodrigues sobre os <strong>trihalometanos (THMs)</strong>, subprodutos da interação entre o cloro e matéria orgânica em decomposição presentes na água tratada.</p>
+  <p>Uma das passagens mais impactantes do podcast foi a explicação detalhada de Sidney Rodrigues sobre os <strong>trihalometanos (THMs)</strong>, subprodutos da interação entre o cloro e matéria orgânica em decomposição presentes na água tratada.</p>
 
   <p>O cloro foi classificado como pesticida em 2011 pela EPA (Environmental Protection Agency) dos Estados Unidos. Sua função é matar bactérias, o que ele faz com eficiência. O problema é o que acontece depois: as bactérias mortas entram em decomposição e, ao reagirem com o cloro que continua presente na água, produzem quatro tipos de trihalometanos, sendo o principal deles o <strong>clorofórmio</strong>.</p>
 
@@ -2635,7 +2635,7 @@ const ARTICLES = [
 
   <h2>Laboratório ao vivo: a transformação da água diante das câmeras</h2>
 
-  <p>Na segunda metade do podcast, Sidnei Rodrigues montou um mini laboratório no estúdio para demonstrar, com aparelhos e reagentes, as diferenças entre os tipos de água. O Dr. Dayan, que assistia pela primeira vez, não escondeu a surpresa com os resultados.</p>
+  <p>Na segunda metade do podcast, Sidney Rodrigues montou um mini laboratório no estúdio para demonstrar, com aparelhos e reagentes, as diferenças entre os tipos de água. O Dr. Dayan, que assistia pela primeira vez, não escondeu a surpresa com os resultados.</p>
 
   <h3>Teste de ORP (potencial de oxidação e redução)</h3>
 
@@ -2707,7 +2707,7 @@ const ARTICLES = [
   <img src="https://upgrade-acqualive.lovable.app/images/blog-podcast-terracota-real.jpg" alt="Purificadores de água alcalina Acqualive Terracota em exposição" class="article-img" width="1200" height="672" loading="lazy" style="object-fit:cover;">
   <p class="img-caption">A tecnologia Acqualive reúne em um único equipamento os cinco pilares da água ideal</p>
 
-  <p>Sidnei Rodrigues, fundador da Acqualive, dedicou mais de 30 anos à pesquisa sobre água, viajou à Coreia do Sul mais de 12 vezes, participou do Fórum Mundial da Água em Bali e apresentou projetos na sede da ONU em Nova York. Todo esse percurso levou à identificação de cinco características presentes nas águas consumidas pelas populações mais longevas do planeta, que vivem em regiões distantes e com dietas completamente diferentes, mas compartilham um único ponto em comum: a qualidade da água.</p>
+  <p>Sidney Rodrigues, fundador da Acqualive, dedicou mais de 30 anos à pesquisa sobre água, viajou à Coreia do Sul mais de 12 vezes, participou do Fórum Mundial da Água em Bali e apresentou projetos na sede da ONU em Nova York. Todo esse percurso levou à identificação de cinco características presentes nas águas consumidas pelas populações mais longevas do planeta, que vivem em regiões distantes e com dietas completamente diferentes, mas compartilham um único ponto em comum: a qualidade da água.</p>
 
   <ol class="pillar-list">
     <li><strong>pH alcalino:</strong> acima de 8,5, para ajudar o organismo a manter o equilíbrio ácido-básico sem gastar energia própria.</li>
@@ -2755,7 +2755,7 @@ const ARTICLES = [
   <div class="references">
     <h3>Referências e Fontes</h3>
     <ol>
-      <li>Podcast Acqualive "Terça Positiva" com Dr. Dayan Siebra e Sidnei Rodrigues, gravado em Fortaleza, CE.</li>
+      <li>Podcast Acqualive "Terça Positiva" com Dr. Dayan Siebra e Sidney Rodrigues, gravado em Fortaleza, CE.</li>
       <li>Organização Mundial da Saúde (OMS). <a href="https://www.who.int/news-room/fact-sheets/detail/drinking-water" target="_blank" rel="noopener">Drinking Water Quality Guidelines</a>.</li>
       <li>Environmental Protection Agency (EPA). Classificação do cloro como pesticida, 2011.</li>
       <li>Estudo clínico com 28 pacientes, Dra. Juliana Ramos Chaves, Hospital de Base Naval de Belém / UFPA. Publicado em revista americana A1, disponível no <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed</a>.</li>
