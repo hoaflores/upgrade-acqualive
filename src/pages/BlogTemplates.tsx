@@ -2816,6 +2816,894 @@ const ARTICLES = [
 </body>
 </html>`,
   },
+  {
+    title: "7 alimentos anti-inflamatórios que você deveria consumir todos os dias",
+    slug: "7-alimentos-anti-inflamatorios",
+    html: `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7 Alimentos Anti-inflamatórios Que Você Deveria Consumir Todos os Dias | Acqualive</title>
+<meta name="description" content="Descubra os 7 alimentos anti-inflamatórios mais poderosos para incluir na sua rotina. O sétimo vai surpreender você: água alcalina ionizada. Saiba como combater a inflamação crônica com alimentação.">
+<meta name="keywords" content="alimentos anti-inflamatórios, anti-inflamatório natural, inflamação crônica, água alcalina, água ionizada, cúrcuma, gengibre, frutas vermelhas, peixes ômega 3, azeite, vegetais verdes escuros, Acqualive">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Acqualive">
+<link rel="canonical" href="https://blog.acqualive.com.br/7-alimentos-anti-inflamatorios/">
+<meta property="og:title" content="7 Alimentos Anti-inflamatórios Que Você Deveria Consumir Todos os Dias">
+<meta property="og:description" content="A inflamação crônica é a raiz de doenças graves. Conheça os 7 alimentos que combatem esse processo silencioso, incluindo um que você bebe todos os dias.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "7 Alimentos Anti-inflamatórios Que Você Deveria Consumir Todos os Dias",
+  "description": "Guia completo sobre os 7 alimentos anti-inflamatórios mais poderosos, incluindo água alcalina ionizada. Combata a inflamação crônica com escolhas inteligentes.",
+  "author": {"@type": "Organization", "name": "Acqualive"},
+  "publisher": {"@type": "Organization", "name": "Acqualive"},
+  "datePublished": "2026-04-10",
+  "dateModified": "2026-04-15",
+  "mainEntityOfPage": {"@type": "WebPage"},
+  "keywords": "alimentos anti-inflamatórios, inflamação crônica, água alcalina, cúrcuma, gengibre, ômega 3, Acqualive"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quais são os melhores alimentos anti-inflamatórios?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Os melhores alimentos anti-inflamatórios incluem cúrcuma, gengibre, frutas vermelhas, peixes ricos em ômega 3, azeite de oliva extravirgem, vegetais verde-escuros e água alcalina ionizada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Água alcalina é anti-inflamatória?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Estudos clínicos publicados demonstram que a água alcalina ionizada reduz marcadores inflamatórios no organismo, ativa microRNAs relacionados à supressão tumoral e auxilia no equilíbrio do pH corporal, combatendo a acidose metabólica de baixo grau."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que causa a inflamação crônica no corpo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A inflamação crônica é causada por estresse oxidativo, alimentação rica em ultraprocessados, sedentarismo, excesso de açúcar, consumo de água de baixa qualidade com cloro e trihalometanos, e acidose metabólica de baixo grau."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como combater a inflamação crônica naturalmente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Para combater a inflamação crônica de forma natural, inclua alimentos anti-inflamatórios na dieta diária, pratique exercícios regularmente, reduza o consumo de ultraprocessados e beba água alcalina ionizada de qualidade."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #fafbfc;
+    color: #18181b;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .podcast-hero {
+    background: linear-gradient(165deg, #020617 0%, #0f172a 40%, #1e293b 100%);
+    padding: 80px 24px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .podcast-hero::before {
+    content: '';
+    position: absolute;
+    top: -20%; right: -10%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(34,197,94,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .podcast-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: -10%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(249,115,22,0.06) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero-inner {
+    position: relative; z-index: 1;
+    max-width: 800px; margin: 0 auto;
+    text-align: center;
+    padding-bottom: 48px;
+  }
+  .hero-badge-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .hero-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    padding: 6px 16px;
+    border-radius: 100px;
+  }
+  .badge-saude {
+    background: rgba(34,197,94,0.12);
+    border: 1px solid rgba(34,197,94,0.3);
+    color: #86efac;
+  }
+  .badge-nutricao {
+    background: rgba(249,115,22,0.12);
+    border: 1px solid rgba(249,115,22,0.25);
+    color: #fdba74;
+  }
+  .podcast-hero h1 {
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -0.03em;
+  }
+  .podcast-hero h1 .highlight { color: #60a5fa; }
+  .podcast-hero h1 .highlight-green { color: #4ade80; }
+  .hero-subtitle {
+    font-size: 18px;
+    color: #94a3b8;
+    max-width: 640px;
+    margin: 0 auto 28px;
+    line-height: 1.7;
+  }
+  .hero-meta {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #475569;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .hero-meta span { color: #64748b; }
+  .hero-img-wrap {
+    position: relative; z-index: 2;
+    max-width: 900px; margin: 0 auto;
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+    box-shadow: 0 -4px 60px rgba(0,0,0,0.4);
+  }
+  .hero-img-wrap img { display: block; width: 100%; height: auto; }
+
+  .article-body {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  h2 {
+    font-size: clamp(24px, 4vw, 34px);
+    font-weight: 900;
+    color: #09090b;
+    margin: 64px 0 20px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    position: relative;
+    padding-left: 20px;
+  }
+  h2::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 4px; bottom: 4px;
+    width: 4px;
+    background: linear-gradient(180deg, #16a34a, #06b6d4);
+    border-radius: 2px;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #18181b;
+    margin: 40px 0 14px;
+  }
+  p {
+    margin-bottom: 20px;
+    font-size: 17px;
+    color: #3f3f46;
+    line-height: 1.85;
+  }
+  .lead {
+    font-size: 19px;
+    color: #52525b;
+    line-height: 1.9;
+    font-weight: 500;
+  }
+  strong { color: #18181b; }
+
+  .article-img {
+    width: 100%;
+    border-radius: 16px;
+    margin: 32px 0;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  .img-caption {
+    text-align: center;
+    font-size: 13px;
+    color: #a1a1aa;
+    margin: -20px 0 32px;
+    font-style: italic;
+  }
+
+  .food-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 32px;
+    margin: 36px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    position: relative;
+    overflow: hidden;
+  }
+  .food-card::before {
+    content: attr(data-number);
+    position: absolute;
+    top: -10px; right: 16px;
+    font-size: 100px;
+    font-weight: 900;
+    color: rgba(0,0,0,0.03);
+    line-height: 1;
+  }
+  .food-card h3 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #09090b;
+  }
+  .food-card .food-emoji {
+    font-size: 40px;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .food-card p { font-size: 16px; }
+  .food-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0;
+  }
+  .food-card ul li {
+    padding: 6px 0 6px 28px;
+    position: relative;
+    font-size: 15px;
+    color: #3f3f46;
+  }
+  .food-card ul li::before {
+    content: '\\2713';
+    position: absolute;
+    left: 0;
+    color: #16a34a;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .food-card-highlight {
+    background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+    border: 1px solid rgba(59,130,246,0.2);
+    color: #e2e8f0;
+  }
+  .food-card-highlight h3 { color: #60a5fa; }
+  .food-card-highlight p { color: #cbd5e1; }
+  .food-card-highlight strong { color: #ffffff; }
+  .food-card-highlight ul li { color: #cbd5e1; }
+  .food-card-highlight ul li::before { color: #4ade80; }
+  .food-card-highlight::before { color: rgba(255,255,255,0.04); }
+
+  .podcast-quote {
+    background: linear-gradient(135deg, #020617, #0f172a);
+    border-radius: 20px;
+    padding: 36px 32px;
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .podcast-quote::before {
+    content: '\\201C';
+    position: absolute;
+    top: 12px; left: 20px;
+    font-size: 80px;
+    color: rgba(34,197,94,0.15);
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+  .podcast-quote p {
+    color: #e2e8f0;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+    line-height: 1.7;
+  }
+  .podcast-quote .quote-author {
+    font-size: 13px;
+    color: #4ade80;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  .insight-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #16a34a;
+    border-radius: 0 16px 16px 0;
+    padding: 24px 28px;
+    margin: 32px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+  .insight-box h4 {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #16a34a;
+    margin-bottom: 10px;
+  }
+  .insight-box p { color: #475569; margin: 0; font-size: 15px; }
+
+  .danger-box {
+    background: linear-gradient(135deg, #fef2f2, #fff1f2);
+    border: 1px solid #fecaca;
+    border-left: 4px solid #ef4444;
+    border-radius: 0 16px 16px 0;
+    padding: 24px 28px;
+    margin: 32px 0;
+  }
+  .danger-box h4 {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #dc2626;
+    margin-bottom: 10px;
+  }
+  .danger-box p { color: #7f1d1d; margin: 0; font-size: 15px; }
+
+  .science-box {
+    background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+    border: 1px solid #bbf7d0;
+    border-left: 4px solid #22c55e;
+    border-radius: 0 16px 16px 0;
+    padding: 24px 28px;
+    margin: 32px 0;
+  }
+  .science-box h4 {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #16a34a;
+    margin-bottom: 10px;
+  }
+  .science-box p { color: #14532d; margin: 0; font-size: 15px; line-height: 1.7; }
+  .science-box a { color: #15803d; font-weight: 600; }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 36px 0;
+  }
+  .stat-card {
+    background: #020617;
+    border-radius: 16px;
+    padding: 28px 20px;
+    text-align: center;
+  }
+  .stat-number {
+    font-size: 36px;
+    font-weight: 900;
+    background: linear-gradient(135deg, #4ade80, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+  .stat-label {
+    font-size: 13px;
+    color: #94a3b8;
+    line-height: 1.4;
+  }
+
+  .toc {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 48px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .toc-title {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #16a34a;
+    margin-bottom: 16px;
+  }
+  .toc ol { padding-left: 20px; }
+  .toc li {
+    font-size: 14px;
+    color: #16a34a;
+    padding: 5px 0;
+    line-height: 1.5;
+  }
+
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d4d4d8, transparent);
+    margin: 64px 0;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+    border-radius: 24px;
+    padding: 56px 36px;
+    text-align: center;
+    margin: 64px 0 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: -40%; right: -15%;
+    width: 350px; height: 350px;
+    background: radial-gradient(circle, rgba(34,197,94,0.1), transparent 70%);
+    border-radius: 50%;
+  }
+  .cta-section h2 {
+    color: #ffffff;
+    margin: 0 0 14px;
+    font-size: 28px;
+    position: relative;
+    padding-left: 0;
+  }
+  .cta-section h2::before { display: none; }
+  .cta-section h2 span { color: #4ade80; }
+  .cta-section p {
+    color: #94a3b8;
+    font-size: 16px;
+    margin-bottom: 32px;
+    position: relative;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta-button {
+    display: inline-block !important;
+    background: linear-gradient(135deg, #16a34a, #15803d) !important;
+    color: #ffffff !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    padding: 18px 40px !important;
+    border-radius: 14px !important;
+    text-decoration: none !important;
+    position: relative;
+    box-shadow: 0 4px 28px rgba(22,163,74,0.4) !important;
+    letter-spacing: 0.3px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 36px rgba(22,163,74,0.5) !important;
+    color: #ffffff !important;
+  }
+
+  .mid-cta {
+    background: #ffffff !important;
+    border: 1px solid #bbf7d0 !important;
+    border-radius: 16px !important;
+    padding: 24px 28px !important;
+    margin: 40px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  }
+  .mid-cta p { color: #15803d !important; font-weight: 600 !important; margin-bottom: 14px !important; font-size: 15px !important; }
+  .mid-cta a {
+    display: inline-block !important;
+    background: #16a34a !important;
+    color: #ffffff !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    padding: 12px 28px !important;
+    border-radius: 10px !important;
+    text-decoration: none !important;
+    transition: background 0.2s;
+  }
+  .mid-cta a:hover { background: #15803d !important; color: #ffffff !important; }
+
+  ul.check-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  ul.check-list li {
+    padding: 8px 0 8px 30px;
+    position: relative;
+    font-size: 16px;
+    color: #3f3f46;
+    line-height: 1.7;
+  }
+  ul.check-list li::before {
+    content: '\\2713';
+    position: absolute;
+    left: 0;
+    color: #16a34a;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .seo-sheet {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    height: 1px;
+    opacity: 0;
+  }
+  .seo-sheet h3, .seo-row, .seo-label, .seo-value {
+    font-size: 1px;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1;
+    font-weight: 400;
+  }
+  .seo-row {
+    display: flex;
+    gap: 0;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .footer-article {
+    text-align: center;
+    padding: 40px 24px;
+    background: #f4f4f5;
+    border-top: 1px solid #e4e4e7;
+  }
+  .footer-article p { font-size: 13px; color: #a1a1aa; }
+
+  .references {
+    margin: 48px 0 0;
+    padding: 28px 0 0;
+    border-top: 1px solid #e5e7eb;
+  }
+  .references h3 {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #94a3b8;
+    margin: 0 0 16px;
+  }
+  .references ol { padding-left: 20px; }
+  .references li {
+    font-size: 13px;
+    color: #71717a;
+    padding: 4px 0;
+    line-height: 1.6;
+  }
+  .references a { color: #16a34a; text-decoration: none; }
+  .references a:hover { text-decoration: underline; }
+
+  @media (max-width: 640px) {
+    .podcast-hero { padding: 48px 16px 0; }
+    .hero-inner { padding-bottom: 32px; }
+    .article-body { padding: 36px 16px 60px; }
+    .podcast-quote { padding: 28px 24px; }
+    .stat-grid { grid-template-columns: 1fr 1fr; }
+    .cta-section { padding: 36px 20px; }
+    .food-card { padding: 24px; }
+    h2 { padding-left: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- BLOCO 1: HERO -->
+<header class="podcast-hero">
+  <div class="hero-inner">
+    <div class="hero-badge-row">
+      <span class="hero-badge badge-saude">Nutrição e Saúde</span>
+      <span class="hero-badge badge-nutricao">Guia Completo</span>
+    </div>
+    <h1>7 alimentos <span class="highlight-green">anti-inflamatórios</span> que você deveria consumir <span class="highlight">todos os dias</span></h1>
+    <p class="hero-subtitle">A inflamação crônica é a raiz silenciosa das doenças mais graves da atualidade. Descubra quais alimentos combatem esse processo e por que o sétimo da lista pode ser o mais importante de todos.</p>
+    <div class="hero-meta">
+      <span>Equipe Acqualive</span>
+      <span>Abril 2026</span>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://upgrade-acqualive.lovable.app/images/blog-anti-inflamatorios-hero.jpg" alt="Mesa com alimentos anti-inflamatórios coloridos incluindo cúrcuma, frutas vermelhas, gengibre, peixes e vegetais verdes" width="900" height="500" loading="eager">
+  </div>
+</header>
+
+<!-- ARTICLE BODY -->
+<main class="article-body">
+
+  <!-- TOC -->
+  <nav class="toc" aria-label="Índice do artigo">
+    <div class="toc-title">Índice do Artigo</div>
+    <ol>
+      <li>O que é inflamação crônica e por que você deveria se preocupar</li>
+      <li>Cúrcuma: o anti-inflamatório milenar</li>
+      <li>Gengibre: potência termogênica e anti-inflamatória</li>
+      <li>Frutas vermelhas: antioxidantes que protegem suas células</li>
+      <li>Peixes ricos em ômega 3: gordura que combate inflamação</li>
+      <li>Azeite de oliva extravirgem: o ouro líquido mediterrâneo</li>
+      <li>Vegetais verde-escuros: fibras, vitaminas e defesa celular</li>
+      <li>Água alcalina ionizada: o anti-inflamatório que você bebe</li>
+      <li>Como montar um prato anti-inflamatório completo</li>
+    </ol>
+  </nav>
+
+  <!-- INTRODUÇÃO -->
+  <h2>O que é inflamação crônica e por que você deveria se preocupar</h2>
+
+  <p class="lead">Você provavelmente já ouviu falar em inflamação. Quando você corta o dedo e a região fica vermelha e inchada, isso é inflamação aguda: uma resposta natural e benéfica do seu corpo. Mas existe outro tipo de inflamação que opera em silêncio, dia após dia, sem que você perceba.</p>
+
+  <p>A <strong>inflamação crônica de baixo grau</strong> é considerada pela ciência moderna como a raiz de doenças cardiovasculares, diabetes tipo 2, Alzheimer, artrite e diversos tipos de câncer. Ela acontece quando o sistema imunológico permanece em estado de alerta constante, liberando citocinas inflamatórias mesmo sem uma ameaça real.</p>
+
+  <p>A boa notícia é que a alimentação é uma das ferramentas mais poderosas para controlar esse processo. E não se trata de dietas restritivas ou suplementos caros: são alimentos acessíveis que, consumidos diariamente, podem transformar o ambiente celular do seu corpo.</p>
+
+  <div class="danger-box">
+    <h4>Sinais de inflamação crônica</h4>
+    <p>Fadiga constante, dores articulares, problemas digestivos, ganho de peso inexplicável, pele com acne ou irritações frequentes, queda de cabelo e dificuldade de concentração podem ser sinais de que seu corpo está cronicamente inflamado.</p>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ALIMENTO 1: CÚRCUMA -->
+  <div class="food-card" data-number="1">
+    <span class="food-emoji">&#127798;</span>
+    <h3>Cúrcuma (Açafrão-da-terra)</h3>
+    <p>A cúrcuma é considerada o <strong>anti-inflamatório natural mais estudado do mundo</strong>. Seu princípio ativo, a <strong>curcumina</strong>, inibe a ação da enzima COX-2 e bloqueia a via do NF-kB, dois dos principais mecanismos que disparam a resposta inflamatória no corpo.</p>
+    <p>Estudos publicados no <em>Journal of Medicinal Food</em> demonstram que a curcumina é tão eficaz quanto alguns anti-inflamatórios farmacêuticos, sem os efeitos colaterais gástricos.</p>
+    <ul>
+      <li>Reduz marcadores inflamatórios como a proteína C reativa (PCR)</li>
+      <li>Ação antioxidante potente contra radicais livres</li>
+      <li>Melhora a saúde articular e a mobilidade</li>
+      <li>Dica: consuma sempre com pimenta-preta (piperina) para aumentar a absorção em até 2.000%</li>
+    </ul>
+  </div>
+
+  <!-- ALIMENTO 2: GENGIBRE -->
+  <div class="food-card" data-number="2">
+    <span class="food-emoji">&#129388;</span>
+    <h3>Gengibre</h3>
+    <p>O gengibre contém <strong>gingerol e shogaol</strong>, compostos bioativos que bloqueiam a produção de prostaglandinas e leucotrienos, substâncias diretamente envolvidas na cascata inflamatória do organismo.</p>
+    <p>Além do poder anti-inflamatório, o gengibre é termogênico, auxilia na digestão e fortalece o sistema imunológico. Uma metanálise publicada na <em>Phytomedicine</em> confirmou sua eficácia na redução de dores musculares e articulares.</p>
+    <ul>
+      <li>Inibe a produção de prostaglandinas inflamatórias</li>
+      <li>Ação termogênica que auxilia no metabolismo</li>
+      <li>Reduz náusea e melhora a digestão</li>
+      <li>Pode ser consumido fresco, em chá, ralado ou em pó</li>
+    </ul>
+  </div>
+
+  <div class="mid-cta">
+    <p>Quer potencializar os efeitos dos alimentos anti-inflamatórios? Descubra como a água que você bebe faz toda a diferença</p>
+    <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener" style="display:inline-block;background:#16a34a;color:#ffffff;font-size:13px;font-weight:700;padding:12px 28px;border-radius:10px;text-decoration:none;">Conhecer a Acqualive</a>
+  </div>
+
+  <!-- ALIMENTO 3: FRUTAS VERMELHAS -->
+  <div class="food-card" data-number="3">
+    <span class="food-emoji">&#127827;</span>
+    <h3>Frutas vermelhas</h3>
+    <p>Mirtilos, morangos, framboesas e amoras são verdadeiras <strong>bombas de antocianinas</strong>, flavonoides responsáveis pela coloração vibrante dessas frutas e por uma poderosa ação anti-inflamatória e antioxidante.</p>
+    <p>As antocianinas neutralizam radicais livres e reduzem a expressão de genes pró-inflamatórios. Pesquisa publicada no <em>Advances in Nutrition</em> mostrou que o consumo regular de frutas vermelhas reduz significativamente a proteína C reativa e a interleucina-6 (IL-6).</p>
+    <ul>
+      <li>Ricas em antocianinas com ação antioxidante potente</li>
+      <li>Reduzem marcadores inflamatórios no sangue</li>
+      <li>Protegem contra o envelhecimento celular precoce</li>
+      <li>Versáteis: podem ser consumidas in natura, em smoothies ou saladas</li>
+    </ul>
+  </div>
+
+  <!-- ALIMENTO 4: PEIXES ÔMEGA 3 -->
+  <div class="food-card" data-number="4">
+    <span class="food-emoji">&#128031;</span>
+    <h3>Peixes ricos em ômega 3</h3>
+    <p>Salmão, sardinha, atum e cavalinha são fontes riquíssimas de <strong>ácidos graxos ômega 3 (EPA e DHA)</strong>, que são precursores das resolvinas e protectinas, moléculas que literalmente "desligam" a resposta inflamatória do corpo.</p>
+    <p>O ômega 3 compete com o ômega 6 (abundante em óleos vegetais processados) pelas mesmas enzimas. Quando há mais ômega 3 disponível, o corpo produz menos mediadores inflamatórios e mais mediadores de resolução.</p>
+    <ul>
+      <li>EPA e DHA são os anti-inflamatórios mais potentes da natureza</li>
+      <li>Reduzem triglicerídeos e protegem o coração</li>
+      <li>Melhoram a função cerebral e a memória</li>
+      <li>Recomendação: consumir ao menos 2 porções por semana</li>
+    </ul>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ALIMENTO 5: AZEITE -->
+  <div class="food-card" data-number="5">
+    <span class="food-emoji">&#129383;</span>
+    <h3>Azeite de oliva extravirgem</h3>
+    <p>O azeite de oliva extravirgem contém <strong>oleocanthal</strong>, um composto fenólico que funciona de maneira similar ao ibuprofeno, inibindo as enzimas COX-1 e COX-2 sem os efeitos colaterais dos medicamentos.</p>
+    <p>Pesquisadores da Universidade da Pensilvânia descobriram que 50 ml de azeite extravirgem por dia equivalem a cerca de 10% de uma dose de ibuprofeno em termos de ação anti-inflamatória. A dieta mediterrânea, rica em azeite, está associada à menor incidência de doenças crônicas no mundo.</p>
+    <ul>
+      <li>Oleocanthal atua como anti-inflamatório natural similar ao ibuprofeno</li>
+      <li>Rico em polifenóis e vitamina E</li>
+      <li>Protege contra doenças cardiovasculares</li>
+      <li>Importante: use sempre extravirgem e, de preferência, a frio</li>
+    </ul>
+  </div>
+
+  <!-- ALIMENTO 6: VEGETAIS VERDE-ESCUROS -->
+  <div class="food-card" data-number="6">
+    <span class="food-emoji">&#129388;</span>
+    <h3>Vegetais verde-escuros</h3>
+    <p>Couve, espinafre, brócolis e rúcula são ricos em <strong>sulforafano, luteína, vitamina K e ácido fólico</strong>, nutrientes que modulam a resposta imunológica e reduzem a inflamação sistêmica.</p>
+    <p>O sulforafano, presente especialmente no brócolis, ativa a via Nrf2, um dos principais mecanismos de defesa antioxidante do organismo. Ele estimula a produção de enzimas que neutralizam toxinas e reduzem o estresse oxidativo celular.</p>
+    <ul>
+      <li>Sulforafano ativa defesas antioxidantes naturais</li>
+      <li>Ricos em fibras que alimentam a microbiota intestinal</li>
+      <li>Vitamina K essencial para a saúde óssea e cardiovascular</li>
+      <li>Consumir ao menos 2 porções diárias para efeito consistente</li>
+    </ul>
+  </div>
+
+  <div class="podcast-quote">
+    <p>"A inflamação crônica não é uma doença em si. Ela é o terreno biológico que permite que todas as doenças se instalem. Controlar a inflamação é, portanto, a estratégia mais inteligente de prevenção que existe."</p>
+    <span class="quote-author">Baseado em evidências publicadas no Nature Medicine</span>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ALIMENTO 7: ÁGUA ALCALINA - O DESTAQUE -->
+  <h2>O sétimo alimento: a surpresa que você bebe todos os dias</h2>
+
+  <p class="lead">Quando pensamos em anti-inflamatórios naturais, pensamos em alimentos sólidos. Mas a ciência tem mostrado que <strong>a água que você bebe pode ser o fator mais determinante</strong> no controle da inflamação crônica.</p>
+
+  <div class="food-card food-card-highlight" data-number="7">
+    <span class="food-emoji">&#128167;</span>
+    <h3>Água alcalina ionizada</h3>
+    <p>A água alcalina ionizada não é apenas água filtrada. Ela passa por um processo que altera suas propriedades físico-químicas, resultando em uma água com <strong>pH alcalino, potencial antioxidante negativo (ORP) e tensão superficial reduzida</strong>.</p>
+    <p>Diferente dos outros seis alimentos desta lista, a água é consumida o dia inteiro. Você bebe entre 2 e 3 litros por dia. Isso significa que, se essa água tiver propriedades anti-inflamatórias, o efeito cumulativo é potencialmente o maior de todos.</p>
+    <ul>
+      <li><strong>pH alcalino (9,0 a 10,0):</strong> ajuda a neutralizar a acidose metabólica de baixo grau</li>
+      <li><strong>ORP negativo (-200 a -400 mV):</strong> ação antioxidante superior à do chá verde</li>
+      <li><strong>Tensão superficial reduzida:</strong> penetra melhor nas células, hidratando de verdade</li>
+      <li><strong>Minerais alcalinos:</strong> magnésio, cálcio e potássio biodisponíveis</li>
+    </ul>
+  </div>
+
+  <h3>A ciência por trás da água anti-inflamatória</h3>
+
+  <p>Um estudo clínico conduzido em Belém do Pará, publicado em revista médica americana de classificação A1 e disponível no PubMed, acompanhou 28 pacientes que utilizaram exclusivamente água alcalina ionizada durante 4 meses. Os resultados foram surpreendentes:</p>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-number">300%</div>
+      <div class="stat-label">de aumento na expressão de microRNAs ligados à imunidade</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">100%</div>
+      <div class="stat-label">de aumento em microRNAs de supressão tumoral</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">-220</div>
+      <div class="stat-label">mV de ORP: potencial antioxidante da água processada</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">2-3L</div>
+      <div class="stat-label">consumo diário: efeito anti-inflamatório contínuo</div>
+    </div>
+  </div>
+
+  <div class="science-box">
+    <h4>Evidência Científica</h4>
+    <p>A pesquisa demonstrou que a água alcalina ionizada ativou microRNAs relacionados à supressão tumoral e controle inflamatório, algo que anti-inflamatórios farmacêuticos convencionais nem sempre conseguem. O estudo foi apresentado em congressos internacionais em Praga e Nova York. <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener">Conheça a tecnologia Acqualive.</a></p>
+  </div>
+
+  <h3>Por que a água comum pode estar inflamando seu corpo</h3>
+
+  <p>A água que chega à sua torneira contém cloro, que ao reagir com matéria orgânica forma <strong>trihalometanos (THMs)</strong>, substâncias classificadas como carcinogênicas. Além disso, a maioria das águas minerais engarrafadas possui pH ácido (entre 4,5 e 6,5), contribuindo para a acidose metabólica.</p>
+
+  <p>Isso significa que você pode estar consumindo alimentos anti-inflamatórios durante o dia inteiro e, ao mesmo tempo, anulando parte desse efeito ao beber uma água que promove inflamação.</p>
+
+  <div class="insight-box">
+    <h4>A conta é simples</h4>
+    <p>Se você consome 200g de cúrcuma por semana (improvável) e 2,5 litros de água ácida e oxidante por dia (muito provável), o volume de água inflamatória que seu corpo processa é centenas de vezes maior do que o volume de alimentos anti-inflamatórios. A qualidade da sua água é, portanto, a base de qualquer estratégia anti-inflamatória.</p>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- COMO MONTAR UM PRATO -->
+  <h2>Como montar um prato anti-inflamatório completo</h2>
+
+  <p>A estratégia ideal é combinar vários alimentos anti-inflamatórios em cada refeição, criando um efeito sinérgico. Aqui está um modelo prático:</p>
+
+  <ul class="check-list">
+    <li><strong>Proteína:</strong> salmão grelhado ou sardinha assada (ômega 3)</li>
+    <li><strong>Base verde:</strong> salada de couve, espinafre e rúcula (sulforafano + fibras)</li>
+    <li><strong>Gordura boa:</strong> azeite de oliva extravirgem como tempero (oleocanthal)</li>
+    <li><strong>Temperos:</strong> cúrcuma com pimenta-preta e gengibre ralado (curcumina + gingerol)</li>
+    <li><strong>Sobremesa:</strong> mix de frutas vermelhas (antocianinas)</li>
+    <li><strong>Hidratação:</strong> água alcalina ionizada durante todo o dia (pH alcalino + ORP negativo)</li>
+  </ul>
+
+  <p>Esse prato simples ataca a inflamação por seis mecanismos diferentes, simultaneamente. Quando combinado com a hidratação adequada com água de qualidade, o efeito é potencializado ao longo do tempo.</p>
+
+  <div class="podcast-quote">
+    <p>"Não existe medicamento no mundo que substitua uma alimentação anti-inflamatória consistente. E não existe alimentação anti-inflamatória completa sem uma água que trabalhe a favor do seu corpo, e não contra."</p>
+    <span class="quote-author">Equipe Acqualive</span>
+  </div>
+
+  <!-- CTA FINAL -->
+  <div class="cta-section">
+    <h2>Sua água é <span>anti-inflamatória</span>?</h2>
+    <p>Descubra como a tecnologia Acqualive transforma a água da sua torneira em uma aliada poderosa contra a inflamação crônica.</p>
+    <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener" class="cta-button" style="display:inline-block;background:linear-gradient(135deg,#16a34a,#15803d);color:#ffffff;font-size:15px;font-weight:700;padding:18px 40px;border-radius:14px;text-decoration:none;box-shadow:0 4px 28px rgba(22,163,74,0.4);">Conhecer a Tecnologia Acqualive</a>
+  </div>
+
+  <!-- FICHA TÉCNICA SEO -->
+  <div class="seo-sheet">
+    <h3>Ficha Técnica SEO</h3>
+    <div class="seo-row"><span class="seo-label">Palavra-chave principal:</span> <span class="seo-value">alimentos anti-inflamatórios</span></div>
+    <div class="seo-row"><span class="seo-label">Palavras-chave secundárias:</span> <span class="seo-value">anti-inflamatório natural, inflamação crônica, água alcalina ionizada, cúrcuma, gengibre, ômega 3, frutas vermelhas, azeite, vegetais verde-escuros</span></div>
+    <div class="seo-row"><span class="seo-label">URL sugerida:</span> <span class="seo-value">/7-alimentos-anti-inflamatorios/</span></div>
+    <div class="seo-row"><span class="seo-label">Meta title:</span> <span class="seo-value">7 Alimentos Anti-inflamatórios Que Você Deveria Consumir Todos os Dias | Acqualive</span></div>
+    <div class="seo-row"><span class="seo-label">Meta description:</span> <span class="seo-value">Descubra os 7 alimentos anti-inflamatórios mais poderosos, incluindo água alcalina ionizada. Combata a inflamação crônica com alimentação inteligente.</span></div>
+    <div class="seo-row"><span class="seo-label">Categoria:</span> <span class="seo-value">Nutrição e Saúde</span></div>
+    <div class="seo-row"><span class="seo-label">Autor:</span> <span class="seo-value">Equipe Acqualive</span></div>
+  </div>
+
+  <!-- REFERÊNCIAS -->
+  <div class="references">
+    <h3>Referências</h3>
+    <ol>
+      <li>Aggarwal BB, Harikumar KB. "Potential therapeutic effects of curcumin." <em>International Journal of Biochemistry & Cell Biology</em>. 2009.</li>
+      <li>Grzanna R, Lindmark L, Frondoza CG. "Ginger: an herbal medicinal product with broad anti-inflammatory actions." <em>Journal of Medicinal Food</em>. 2005.</li>
+      <li>Joseph SV, Edirisinghe I, Burton-Freeman BM. "Berries: anti-inflammatory effects in humans." <em>Journal of Agricultural and Food Chemistry</em>. 2014.</li>
+      <li>Calder PC. "Omega-3 fatty acids and inflammatory processes." <em>Nutrients</em>. 2010.</li>
+      <li>Lucas L, Russell A, Keast R. "Molecular mechanisms of inflammation: anti-inflammatory benefits of virgin olive oil." <em>Current Pharmaceutical Design</em>. 2011.</li>
+      <li>Estudo clínico com água alcalina ionizada Acqualive. Revista médica americana classificação A1. Disponível no <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed</a>.</li>
+      <li>Furman D et al. "Chronic inflammation in the etiology of disease across the life span." <em>Nature Medicine</em>. 2019.</li>
+    </ol>
+  </div>
+
+</main>
+
+<footer class="footer-article">
+  <p>Acqualive. Tecnologia em água alcalina ionizada desde 1996.</p>
+</footer>
+
+</body>
+</html>`,
+  },
 ];
 
 const BlogTemplates = () => {
