@@ -921,7 +921,7 @@ const PricingSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.12 }}
-                className={`relative rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-2 bg-white/[0.03] backdrop-blur-sm border border-white/10 ${
+                className={`relative rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-2 bg-white/[0.03] backdrop-blur-sm border border-white/10 flex flex-col ${
                   p.highlight ? "ring-2 ring-[hsl(21,89%,55%)]" : ""
                 }`}
               >
@@ -957,10 +957,10 @@ const PricingSection = () => {
                 <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
                 {/* Content */}
-                <div className="relative p-8 pt-6">
+                <div className="relative p-8 pt-6 flex flex-col flex-grow">
                   <h3 className="text-2xl font-bold text-white mb-1">{p.name}</h3>
                   <p className="text-[hsl(21,89%,55%)] text-sm font-medium mb-4">{p.tagline}</p>
-                  <p className="text-white/60 text-sm leading-relaxed mb-6">{p.description}</p>
+                  <p className="text-white/60 text-sm leading-relaxed mb-6 flex-grow">{p.description}</p>
 
                   <div className="border-t border-white/10 pt-6 mb-6">
                     <div className="flex items-baseline gap-1">
