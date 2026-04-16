@@ -262,7 +262,7 @@ const StatsBar = () => (
           </a>
         </div>
         <p className="text-white text-sm md:text-base">
-          <span className="font-bold">100.000+</span> famílias já transformaram a qualidade da sua água{" "}
+          <span className="font-bold">100 mil+</span> famílias já transformaram a qualidade da sua água{" "}
           <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-[hsl(21,89%,55%)] font-semibold hover:underline">
             ( Comece agora )
           </a>
@@ -280,10 +280,10 @@ const CounterSection = () => (
     <div className="container">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {[
-          { value: "100K+", label: "Famílias por todo o Brasil" },
-          { value: "99,9%", label: "Pureza comprovada em testes" },
+          { value: "100 mil+", label: "Famílias por todo o Brasil" },
+          { value: "99,9%", label: "de remoção do cloro" },
           { value: "4.9★", label: "Nota média dos clientes" },
-          { value: "15+", label: "Anos de tecnologia aplicada" },
+          { value: "25+", label: "Anos de pesquisa e ciência" },
         ].map((s, i) => (
           <motion.div
             key={i}
@@ -346,22 +346,18 @@ const AboutSection = () => (
           </h2>
 
           <p className="text-[hsl(215,30%,35%)] leading-relaxed mb-6">
-            Enquanto filtros convencionais retêm apenas partículas maiores, a Acqualive utiliza tecnologia de purificação em múltiplas etapas que elimina cloro, bactérias, metais pesados e compostos químicos invisíveis. Mas vai além: transforma a água em alcalina e ionizada, rica em magnésio biodisponível.
-          </p>
-
-          <p className="text-[hsl(215,30%,35%)] leading-relaxed mb-8">
-            O resultado é uma água com pH equilibrado, poder antioxidante real e sabor incomparável. Não é mágica. É ciência aplicada ao que há de mais essencial: o que você e sua família bebem todos os dias.
+            Inspirada nas <strong>blue zones</strong> (Sardenha e Okinawa), onde a água é naturalmente alcalina e a longevidade é recorde, a Acqualive replica esse processo com a tecnologia exclusiva <strong>TriWay</strong>. Resultado: água pura, alcalina, ionizada e rica em magnésio.
           </p>
 
           <div className="grid grid-cols-2 gap-4 mb-8">
             {[
-              "Purificação absoluta",
-              "Água alcalina ionizada",
-              "Rica em magnésio",
-              "Sem energia elétrica",
+              "+ Energia, - Cansaço",
+              "Defesa contra doenças",
+              "Hidratação real",
+              "Juventude prolongada",
             ].map((item, i) => (
-              <a key={i} href="#beneficios" className="flex items-center gap-2 text-[hsl(215,65%,19%)] font-medium hover:text-[hsl(21,89%,55%)] transition-colors group">
-                <ArrowRight className="w-4 h-4 text-[hsl(21,89%,55%)] group-hover:translate-x-1 transition-transform" />
+              <a key={i} href="#beneficios" className="flex items-center gap-2 text-[hsl(215,65%,19%)] font-semibold hover:text-[hsl(21,89%,55%)] transition-colors group">
+                <CheckCircle2 className="w-4 h-4 text-[hsl(21,89%,55%)] flex-shrink-0" />
                 {item}
               </a>
             ))}
@@ -415,13 +411,16 @@ const MissionBanner = () => {
       ],
     },
     {
-      title: "MINERALIZAÇÃO",
+      title: "BENEFÍCIOS",
       icon: Sparkles,
-      heading: "Nutrição pela Água:",
+      heading: "O que você ganha bebendo Acqualive todos os dias:",
       points: [
-        "Enriquecida com magnésio, mineral essencial para mais de 300 reações do corpo.",
-        "Biodisponibilidade superior à suplementação convencional.",
-        "Absorção contínua ao longo do dia, copo a copo.",
+        "Mais energia e menos cansaço no dia a dia.",
+        "Hidratação que você realmente sente, copo a copo.",
+        "Defesa contra doenças silenciosas como hipertensão e diabetes.",
+        "Ossos e articulações mais fortes com magnésio biodisponível.",
+        "Pele e cabelos mais bonitos: juventude prolongada.",
+        "Proteção para toda a família, sem contaminantes.",
       ],
     },
   ];
@@ -532,7 +531,6 @@ const ConsultSection = () => (
             {[
               { icon: Users, text: "Atendimento humanizado e sem pressão" },
               { icon: Award, text: "Condição especial exclusiva para indicados" },
-              { icon: Leaf, text: "Orientação completa sobre saúde e hidratação" },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-3 p-3 rounded-lg hover:bg-[hsl(210,20%,97%)] transition-colors">
                 <item.icon className="w-5 h-5 text-[hsl(21,89%,55%)]" />
@@ -551,7 +549,7 @@ const ConsultSection = () => (
         >
           <div className="relative">
             <div className="w-[75%] ml-auto rounded-3xl overflow-hidden shadow-elevated">
-              <img src={consultImg} alt="Família saudável" loading="lazy" className="w-full h-auto" />
+              <img src={familyDinner} alt="Família reunida desfrutando da água Acqualive" loading="lazy" className="w-full h-auto" />
             </div>
             <div className="absolute -bottom-6 -left-6 w-48 h-48 rounded-full overflow-hidden border-[6px] border-white shadow-elevated">
               <img src={aguaPura} alt="Água pura cristalina" loading="lazy" className="w-full h-full object-cover" />
@@ -590,7 +588,7 @@ const FAQSection = () => {
     },
     {
       q: "De quanto em quanto tempo preciso trocar o refil?",
-      a: "A troca é recomendada a cada 12 meses para famílias de até 4 pessoas, ou a cada 2.000 litros filtrados. O refil é de fácil substituição e pode ser adquirido diretamente conosco, com facilidade de pagamento."
+      a: "A troca é recomendada a cada 6 meses ou a cada 1.500 litros filtrados. O refil é de fácil substituição e pode ser adquirido diretamente conosco, com facilidade de pagamento."
     },
     {
       q: "O parcelamento é realmente sem juros?",
@@ -774,19 +772,19 @@ const HowItWorks = () => {
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Carla Mendes",
-      location: "São Paulo, SP",
-      text: "Fui indicada pela minha vizinha e no início achei que era exagero. Mas quando provei a água pela primeira vez, entendi do que ela estava falando. O sabor é completamente diferente. Meus filhos pararam de pedir suco e passaram a beber água o dia inteiro. Hoje sou eu quem indica para todo mundo.",
+      name: "Samuel Dalle Laste",
+      location: "Médico — Porto Alegre / São Paulo",
+      text: "Eu tenho o filtro da Acqualive em Porto Alegre e São Paulo. A Acqualive já hidrata todos os profissionais e pacientes da Clínica Dalle Laste há 8 anos.",
     },
     {
-      name: "Roberto Silveira",
-      location: "Curitiba, PR",
-      text: "Minha esposa pesquisou durante meses antes de aceitar a indicação de um amigo. Quando o Acqualive chegou, a qualidade do produto nos surpreendeu. O acabamento, o design. Mas o que realmente conquistou a gente foi o sabor da água. Nunca mais compramos galão.",
+      name: "Lyoto Machida",
+      location: "Campeão Mundial UFC",
+      text: "Fui apresentado aos Purificadores Acqualive e eu posso dizer que o negócio é bom! Bom não só para minha família, mas também para o nosso dia a dia.",
     },
     {
-      name: "Patrícia Lima",
-      location: "Belo Horizonte, MG",
-      text: "Eu tinha um filtro de barro em casa e achava que era suficiente. Uma amiga insistiu tanto que resolvi experimentar. A primeira coisa que percebi foi o cheiro. A água do filtro de barro tinha um cheiro que eu nem sabia que existia. A Acqualive não tem cheiro, não tem gosto. É pura.",
+      name: "Paloma Tusset",
+      location: "Nutricionista",
+      text: "Eu tenho um grande prazer com essa parceria. Essa água, que passa pelo filtro, tem uma qualidade muito melhor. Nossa parceria com a Acqualive enriquece a vida das pessoas com mais qualidade e sabor.",
     },
   ];
 
@@ -859,20 +857,16 @@ const PricingSection = () => {
   const products = [
     {
       number: "01",
-      name: "V Self 10L",
-      tagline: "O clássico que conquistou o Brasil",
-      description: "Perfeito para famílias de 2 a 4 pessoas. Design transparente que mostra a pureza da água em tempo real.",
-      price: "1.997",
-      installment: "199,70",
-      image: vselfImg,
+      name: "V Self 6L",
+      tagline: "Compacto, prático e poderoso",
+      description: "Ideal para casais e ambientes menores. Toda a tecnologia Acqualive em um formato que cabe em qualquer cozinha.",
+      image: vself6lImg,
     },
     {
       number: "02",
       name: "V Self 10L Premium",
       tagline: "O mais desejado da linha",
-      description: "Acabamento premium com base sofisticada. Para quem quer unir tecnologia e elegância na cozinha.",
-      price: "2.497",
-      installment: "249,70",
+      description: "Acabamento premium com base de madeira e torneira de inox. Para quem une tecnologia e elegância na cozinha.",
       highlight: true,
       image: vpremiumImg,
     },
@@ -881,8 +875,6 @@ const PricingSection = () => {
       name: "Terracota",
       tagline: "Tradição encontra inovação",
       description: "A beleza atemporal da cerâmica artesanal com a tecnologia de purificação mais avançada do mercado.",
-      price: "2.997",
-      installment: "299,70",
       image: terracotaImg,
     },
   ];
@@ -1099,7 +1091,6 @@ const IndicaAcqualive2026 = () => (
     <Header />
     <main>
       <HeroSection />
-      <StatsBar />
       <CounterSection />
       <AboutSection />
       <MissionBanner />
