@@ -957,14 +957,24 @@ const PricingSection = () => {
                   <p className="text-[hsl(21,89%,55%)] text-sm font-medium mb-4">{p.tagline}</p>
                   <p className="text-white/60 text-sm leading-relaxed mb-6 flex-grow">{p.description}</p>
 
-                  <div className="border-t border-white/10 pt-6 mb-6">
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-sm text-white/50">R$</span>
-                      <span className="text-4xl font-bold text-white">{p.price}</span>
+                  {/* Hidden price block with overlay */}
+                  <div className="relative border-t border-white/10 pt-6 mb-6">
+                    <div className="select-none pointer-events-none blur-md opacity-40">
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-sm text-white/50">R$</span>
+                        <span className="text-4xl font-bold text-white">••••</span>
+                      </div>
+                      <p className="text-white/50 text-sm mt-1">
+                        ou <span className="text-white/80 font-semibold">10x sem juros</span>
+                      </p>
                     </div>
-                    <p className="text-white/50 text-sm mt-1">
-                      ou <span className="text-white/80 font-semibold">10x de R$ {p.installment}</span> sem juros
-                    </p>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="bg-[hsl(21,89%,55%)]/15 border border-[hsl(21,89%,55%)]/40 rounded-lg px-4 py-2 backdrop-blur-sm">
+                        <p className="text-white text-xs font-bold tracking-wide text-center">
+                          🔒 CONDIÇÃO ESPECIAL EXCLUSIVA
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
                   <Button
@@ -975,7 +985,7 @@ const PricingSection = () => {
                   >
                     <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                       <WhatsAppIcon className="w-4 h-4" />
-                      Quero este modelo
+                      Descobrir minha condição
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </a>
                   </Button>
