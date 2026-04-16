@@ -24,6 +24,9 @@ import terracotaImg from "@/assets/indica-prod-terracota.png";
 import heroRustic from "@/assets/indica-hero-terracota-rustic.jpg";
 import coupleKitchen from "@/assets/indica-couple-kitchen.jpg";
 import familyDinner from "@/assets/indica-family-dinner.jpg";
+import depoDalleLaste from "@/assets/depo-dalle-laste.png";
+import depoLyoto from "@/assets/depo-lyoto.png";
+import depoPaloma from "@/assets/depo-paloma.png";
 
 const WHATSAPP_LINK = "https://wa.me/555192928468?text=Olá!%20Fui%20indicado%20por%20um%20amigo%20e%20quero%20conhecer%20a%20condição%20especial%20Acqualive.";
 
@@ -52,28 +55,8 @@ const WaveShape = ({ className = "", flip = false }: { className?: string; flip?
   </svg>
 );
 
-const TriangleShape = ({ className = "" }: { className?: string }) => (
-  <motion.svg
-    className={className}
-    width="80" height="80" viewBox="0 0 80 80" fill="none"
-    animate={{ y: [0, -10, 0], rotate: [0, 5, 0] }}
-    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-  >
-    <path d="M40 5L75 70H5L40 5Z" stroke="currentColor" strokeWidth="2" fill="none" />
-  </motion.svg>
-);
 
-const ArrowShape = ({ className = "" }: { className?: string }) => (
-  <motion.svg
-    className={className}
-    width="60" height="60" viewBox="0 0 60 60" fill="none"
-    animate={{ y: [0, 8, 0] }}
-    transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-  >
-    <path d="M10 50L30 10L50 50" stroke="currentColor" strokeWidth="2" fill="none" />
-    <path d="M20 40L30 20L40 40" stroke="currentColor" strokeWidth="1.5" fill="none" opacity="0.5" />
-  </motion.svg>
-);
+
 
 /* ══════════════════════════════════════════════════════════
    TOP BAR (Insuba-style)
@@ -145,9 +128,7 @@ const HeroSection = () => (
     {/* Top accent bar - blue instead of orange */}
     <div className="absolute top-0 left-0 right-0 h-2 bg-[hsl(215,62%,31%)]" />
 
-    {/* Geometric shapes */}
-    <TriangleShape className="absolute top-32 left-[45%] text-[hsl(215,62%,31%)] opacity-40 z-10" />
-    <ArrowShape className="absolute top-20 left-[40%] text-[hsl(215,62%,31%)] opacity-30 z-10" />
+    {/* (Geometric triangle/arrow shapes removed) */}
 
     {/* Hero photo - right side: rustic terracota with brick */}
     <div className="absolute top-0 right-0 w-[55%] h-full hidden lg:block">
@@ -648,26 +629,25 @@ const FAQSection = () => {
             </div>
           </div>
 
-          {/* Image with badges (Insuba-style) */}
+          {/* Image with badges (Insuba-style) - vertically centered */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative hidden lg:block"
+            className="relative hidden lg:flex items-center justify-center self-center"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-elevated">
-              <img src={ambienteImg} alt="Acqualive em ambiente" loading="lazy" className="w-full h-auto" />
-              {/* Badge overlay */}
-              <div className="absolute bottom-4 right-4 bg-[hsl(21,89%,55%)] text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg">
-                # Tecnologia de Ponta
+            <div className="relative w-full">
+              <div className="relative rounded-3xl overflow-hidden shadow-elevated aspect-[4/5]">
+                <img src={coupleKitchen} alt="Casal feliz na cozinha com Acqualive" loading="lazy" className="w-full h-full object-cover" />
+                {/* Badge overlay */}
+                <div className="absolute bottom-4 right-4 bg-[hsl(21,89%,55%)] text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg">
+                  # Tecnologia de Ponta
+                </div>
               </div>
+              {/* Decorative dots */}
+              <DotGrid className="absolute -top-6 -right-6 text-[hsl(215,62%,31%)]" />
+              <DotGrid className="absolute -bottom-6 -left-6 text-[hsl(21,89%,55%)] opacity-60" />
             </div>
-            {/* Decorative dots */}
-            <DotGrid className="absolute -top-6 -right-6 text-[hsl(215,62%,31%)]" />
-            <DotGrid className="absolute -bottom-6 -left-6 text-[hsl(21,89%,55%)] opacity-60" />
-
-            {/* Wave shape underneath */}
-            <div className="absolute -bottom-4 left-4 right-4 h-32 bg-[hsl(215,62%,31%)] rounded-2xl -z-10" />
           </motion.div>
         </div>
 
@@ -775,16 +755,19 @@ const TestimonialsSection = () => {
       name: "Samuel Dalle Laste",
       location: "Médico — Porto Alegre / São Paulo",
       text: "Eu tenho o filtro da Acqualive em Porto Alegre e São Paulo. A Acqualive já hidrata todos os profissionais e pacientes da Clínica Dalle Laste há 8 anos.",
+      photo: depoDalleLaste,
     },
     {
       name: "Lyoto Machida",
       location: "Campeão Mundial UFC",
       text: "Fui apresentado aos Purificadores Acqualive e eu posso dizer que o negócio é bom! Bom não só para minha família, mas também para o nosso dia a dia.",
+      photo: depoLyoto,
     },
     {
       name: "Paloma Tusset",
       location: "Nutricionista",
       text: "Eu tenho um grande prazer com essa parceria. Essa água, que passa pelo filtro, tem uma qualidade muito melhor. Nossa parceria com a Acqualive enriquece a vida das pessoas com mais qualidade e sabor.",
+      photo: depoPaloma,
     },
   ];
 
@@ -804,7 +787,7 @@ const TestimonialsSection = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 items-stretch">
           {testimonials.map((t, i) => (
             <motion.div
               key={i}
@@ -812,7 +795,7 @@ const TestimonialsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="relative bg-[hsl(210,20%,97%)] rounded-2xl p-8 hover:shadow-elevated transition-all duration-300 group"
+              className="relative bg-[hsl(210,20%,97%)] rounded-2xl p-8 hover:shadow-elevated transition-all duration-300 group flex flex-col h-full"
             >
               {/* Large quote mark */}
               <Quote className="w-10 h-10 text-[hsl(21,89%,55%)] opacity-20 mb-4" />
@@ -823,24 +806,16 @@ const TestimonialsSection = () => {
                 ))}
               </div>
 
-              <p className="text-[hsl(215,30%,35%)] leading-relaxed mb-6 text-sm">"{t.text}"</p>
+              <p className="text-[hsl(215,30%,35%)] leading-relaxed mb-6 text-sm flex-grow">"{t.text}"</p>
 
-              <div className="flex items-center gap-3 pt-4 border-t border-border/50">
-                <div className="w-11 h-11 rounded-full bg-[hsl(215,62%,31%)] flex items-center justify-center">
-                  <span className="text-sm font-bold text-white">{t.name.split(" ").map(n => n[0]).join("")}</span>
+              <div className="flex items-center gap-3 pt-4 border-t border-border/50 mt-auto">
+                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[hsl(215,62%,31%)] flex-shrink-0 bg-white">
+                  <img src={t.photo} alt={t.name} loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <p className="font-bold text-[hsl(215,65%,19%)] text-sm">{t.name}</p>
                   <p className="text-xs text-[hsl(215,30%,35%)]">{t.location}</p>
                 </div>
-              </div>
-
-              {/* Decorative arrow shape (Insuba-style, bottom right) */}
-              <div className="absolute bottom-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                  <path d="M10 50L30 10L50 50" stroke="currentColor" strokeWidth="2" className="text-[hsl(215,62%,31%)]" />
-                  <path d="M15 45L30 15L45 45" stroke="currentColor" strokeWidth="1.5" className="text-[hsl(215,62%,31%)]" opacity="0.5" />
-                </svg>
               </div>
             </motion.div>
           ))}
