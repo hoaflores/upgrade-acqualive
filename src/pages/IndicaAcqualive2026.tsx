@@ -921,32 +921,43 @@ const PricingSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.12 }}
-                className={`relative rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-2 ${
+                className={`relative rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-2 bg-white/[0.03] backdrop-blur-sm border border-white/10 ${
                   p.highlight ? "ring-2 ring-[hsl(21,89%,55%)]" : ""
                 }`}
               >
-                {/* Product background image */}
-                <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-                  <img
+                {/* Product image showcase area */}
+                <div className="relative h-72 flex items-center justify-center overflow-hidden">
+                  {/* Radial glow behind product */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-white/[0.06] via-[hsl(21,89%,55%)]/[0.04] to-transparent" />
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full bg-[hsl(21,89%,55%)]/10 blur-[60px] group-hover:bg-[hsl(21,89%,55%)]/20 transition-all duration-500" />
+                  
+                  <motion.img
                     src={p.image}
                     alt={p.name}
-                    className="w-[65%] h-auto object-contain opacity-[0.08] group-hover:opacity-[0.15] transition-opacity duration-500 group-hover:scale-105 transform"
+                    className="relative z-10 h-56 w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)] group-hover:scale-105 transition-transform duration-500"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.15 + 0.2 }}
                   />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[hsl(218,97%,10%)] via-[hsl(218,97%,10%)]/80 to-transparent" />
 
-                <div className="relative p-8">
-                  {/* Large number */}
-                  <span className="text-7xl font-bold text-white/5 absolute top-4 right-6 group-hover:text-white/10 transition-colors">
+                  {/* Number watermark */}
+                  <span className="absolute top-3 right-5 text-6xl font-bold text-white/[0.04] group-hover:text-white/[0.08] transition-colors">
                     {p.number}
                   </span>
 
                   {p.highlight && (
-                    <div className="inline-block px-3 py-1 rounded-full bg-[hsl(21,89%,55%)] text-white text-xs font-bold mb-4">
+                    <div className="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-[hsl(21,89%,55%)] text-white text-xs font-bold shadow-lg">
                       MAIS VENDIDO
                     </div>
                   )}
+                </div>
 
+                {/* Divider line */}
+                <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+                {/* Content */}
+                <div className="relative p-8 pt-6">
                   <h3 className="text-2xl font-bold text-white mb-1">{p.name}</h3>
                   <p className="text-[hsl(21,89%,55%)] text-sm font-medium mb-4">{p.tagline}</p>
                   <p className="text-white/60 text-sm leading-relaxed mb-6">{p.description}</p>
