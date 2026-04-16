@@ -130,10 +130,10 @@ const HeroSection = () => (
 
     {/* (Geometric triangle/arrow shapes removed) */}
 
-    {/* Hero photo - right side: rustic terracota with brick */}
+    {/* Hero photo - right side: rustic terracota with brick (mirrored to highlight filter) */}
     <div className="absolute top-0 right-0 w-[55%] h-full hidden lg:block">
-      <img src={heroRustic} alt="Purificador Acqualive Terracota em ambiente rústico sofisticado" className="w-full h-full object-cover object-center" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215,25%,95%)] via-[hsl(215,25%,95%)]/60 to-transparent w-2/5" />
+      <img src={heroRustic} alt="Purificador Acqualive Terracota em ambiente rústico sofisticado" className="w-full h-full object-cover object-center scale-x-[-1]" />
+      <div className="absolute inset-y-0 left-0 w-2/5 bg-gradient-to-r from-[hsl(215,25%,95%)] via-[hsl(215,25%,95%)]/60 to-transparent" />
     </div>
 
     {/* Ghost large photo behind left text */}
@@ -146,7 +146,7 @@ const HeroSection = () => (
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 0.6, duration: 0.6 }}
-      className="absolute top-[15%] right-[38%] w-40 h-40 rounded-full border-[6px] border-white shadow-elevated overflow-hidden hidden lg:block z-20"
+      className="absolute top-[12%] right-[6%] w-40 h-40 rounded-full border-[6px] border-white shadow-elevated overflow-hidden hidden lg:block z-20"
     >
       <img src={heroFamily} alt="Família saudável" className="w-full h-full object-cover" />
     </motion.div>
@@ -214,7 +214,7 @@ const HeroSection = () => (
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.8, duration: 0.5 }}
-      className="absolute bottom-10 right-[30%] bg-[hsl(215,62%,31%)] text-white px-8 py-4 rounded-xl shadow-elevated hidden lg:block z-20"
+      className="absolute bottom-10 right-[6%] bg-[hsl(215,62%,31%)] text-white px-8 py-4 rounded-xl shadow-elevated hidden lg:block z-20"
       style={{ clipPath: "polygon(10% 0, 100% 0, 90% 100%, 0 100%)" }}
     >
       <p className="text-3xl font-bold">100 mil+</p>
