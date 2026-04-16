@@ -583,7 +583,7 @@ const FAQSection = () => {
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Accordion */}
-          <div>
+          <div className="lg:order-2">
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-white rounded-full shadow-soft mb-4">
               <div className="w-6 h-6 rounded bg-[hsl(21,89%,55%)] flex items-center justify-center">
                 <Zap className="w-3.5 h-3.5 text-white" />
@@ -632,14 +632,14 @@ const FAQSection = () => {
 
           {/* Image with badges (Insuba-style) - vertically centered */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative hidden lg:flex items-center justify-center"
+            className="relative hidden lg:flex items-center justify-center lg:order-1"
           >
             <div className="relative w-full">
               <div className="relative rounded-3xl overflow-hidden shadow-elevated aspect-[4/5]">
-                <img src={aboutImg2} alt="Mulher saudável e bem hidratada" loading="lazy" className="w-full h-full object-cover" />
+                <img src={faqPour} alt="Servindo água pura e cristalina do purificador Acqualive em uma taça" loading="lazy" className="w-full h-full object-cover" />
                 {/* Badge overlay */}
                 <div className="absolute bottom-4 right-4 bg-[hsl(21,89%,55%)] text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg">
                   # Tecnologia de Ponta
