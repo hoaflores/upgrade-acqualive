@@ -301,7 +301,7 @@ const AboutSection = () => (
         >
           <div className="relative">
             <img src={lifestyleImg2} alt="Purificador Acqualive em ambiente" loading="lazy" className="w-[70%] rounded-2xl shadow-elevated" />
-            <img src={lifestyleImg1} alt="Estilo de vida saudável com Acqualive" loading="lazy" className="absolute -bottom-10 right-0 w-[55%] rounded-2xl shadow-elevated border-[6px] border-white" />
+            <img src={coupleKitchen} alt="Casal feliz desfrutando de água Acqualive na cozinha" loading="lazy" className="absolute -bottom-10 right-0 w-[55%] rounded-2xl shadow-elevated border-[6px] border-white object-cover aspect-square" />
           </div>
           {/* Dot grid decoration */}
           <DotGrid className="absolute -top-6 -left-6 text-[hsl(215,62%,31%)]" />
