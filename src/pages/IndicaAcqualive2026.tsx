@@ -21,6 +21,7 @@ import ambienteImg from "@/assets/indica-ambiente.jpg";
 import vselfImg from "@/assets/indica-vself.png";
 import vpremiumImg from "@/assets/indica-vpremium.png";
 import terracotaImg from "@/assets/indica-terracota.png";
+import terracotaAmbiente from "@/assets/indica-terracota-ambiente.jpg";
 
 const WHATSAPP_LINK = "https://wa.me/555192928468?text=Olá!%20Fui%20indicado%20por%20um%20amigo%20e%20quero%20conhecer%20a%20condição%20especial%20Acqualive.";
 
@@ -138,48 +139,48 @@ const Header = () => (
    bleeding to edge, floating circle photo, geometric shapes)
    ══════════════════════════════════════════════════════════ */
 const HeroSection = () => (
-  <section id="inicio" className="relative bg-[hsl(210,20%,96%)] overflow-hidden min-h-[85vh] flex items-center">
-    {/* Diagonal blue accent bar at very top */}
-    <div className="absolute top-0 left-0 right-0 h-2 bg-[hsl(21,89%,55%)]" />
+  <section id="inicio" className="relative bg-[hsl(215,25%,95%)] overflow-hidden min-h-[85vh] flex items-center">
+    {/* Top accent bar - blue instead of orange */}
+    <div className="absolute top-0 left-0 right-0 h-2 bg-[hsl(215,62%,31%)]" />
 
     {/* Geometric shapes */}
     <TriangleShape className="absolute top-32 left-[45%] text-[hsl(215,62%,31%)] opacity-40 z-10" />
     <ArrowShape className="absolute top-20 left-[40%] text-[hsl(215,62%,31%)] opacity-30 z-10" />
 
-    {/* Hero photo - right side, bleeding to edge */}
+    {/* Hero photo - right side: terracota ambiente */}
     <div className="absolute top-0 right-0 w-[55%] h-full hidden lg:block">
-      <img src={heroFamily} alt="Família saudável com água Acqualive" className="w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,20%,96%)] via-transparent to-transparent w-1/3" />
+      <img src={terracotaAmbiente} alt="Purificador Acqualive Terracota em ambiente sofisticado" className="w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215,25%,95%)] via-[hsl(215,25%,95%)]/60 to-transparent w-2/5" />
     </div>
 
-    {/* Ghost large photo behind left text (Insuba-style) */}
-    <div className="absolute left-0 top-0 w-[45%] h-full hidden lg:block opacity-[0.06]">
+    {/* Ghost large photo behind left text */}
+    <div className="absolute left-0 top-0 w-[45%] h-full hidden lg:block opacity-[0.04]">
       <img src={aboutImg1} alt="" className="w-full h-full object-cover" />
     </div>
 
-    {/* Floating circular photo (Insuba-style) */}
+    {/* Floating circular photo - now the family photo */}
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 0.6, duration: 0.6 }}
       className="absolute top-[15%] right-[38%] w-40 h-40 rounded-full border-[6px] border-white shadow-elevated overflow-hidden hidden lg:block z-20"
     >
-      <img src={aboutImg2} alt="Bem-estar" className="w-full h-full object-cover" />
+      <img src={heroFamily} alt="Família saudável" className="w-full h-full object-cover" />
     </motion.div>
 
     <div className="container relative z-10 py-20 lg:py-0">
       <div className="max-w-xl">
-        {/* Tag badge (Insuba-style) */}
+        {/* Tag badge - blue themed */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           className="inline-flex items-center gap-2 px-5 py-2 bg-white rounded-full shadow-soft mb-6"
         >
-          <div className="w-6 h-6 rounded bg-[hsl(21,89%,55%)] flex items-center justify-center">
+          <div className="w-6 h-6 rounded bg-[hsl(215,62%,31%)] flex items-center justify-center">
             <Sparkles className="w-3.5 h-3.5 text-white" />
           </div>
-          <span className="text-sm font-semibold text-[hsl(21,89%,55%)]">Indicação Exclusiva Acqualive</span>
+          <span className="text-sm font-semibold text-[hsl(215,62%,31%)]">Indicação Exclusiva Acqualive</span>
         </motion.div>
 
         <motion.h1
@@ -190,7 +191,7 @@ const HeroSection = () => (
         >
           Alguém que ama você
           indicou a{" "}
-          <span className="text-[hsl(21,89%,55%)]">melhor água do Brasil.</span>
+          <span className="text-[hsl(215,62%,31%)]">melhor água do Brasil.</span>
         </motion.h1>
 
         <motion.p
@@ -217,7 +218,7 @@ const HeroSection = () => (
           </Button>
         </motion.div>
 
-        {/* Slide indicators (Insuba-style) */}
+        {/* Slide indicators */}
         <div className="flex gap-2 mt-10">
           <div className="w-3 h-3 rounded-full bg-[hsl(215,62%,31%)]" />
           <div className="w-3 h-3 rounded-full border-2 border-[hsl(215,62%,31%)]" />
@@ -225,12 +226,12 @@ const HeroSection = () => (
       </div>
     </div>
 
-    {/* Bottom floating badge (Insuba-style "29+ Experience") */}
+    {/* Bottom floating badge - blue themed */}
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.8, duration: 0.5 }}
-      className="absolute bottom-10 right-[30%] bg-[hsl(21,89%,55%)] text-white px-8 py-4 rounded-xl shadow-elevated hidden lg:block z-20"
+      className="absolute bottom-10 right-[30%] bg-[hsl(215,62%,31%)] text-white px-8 py-4 rounded-xl shadow-elevated hidden lg:block z-20"
       style={{ clipPath: "polygon(10% 0, 100% 0, 90% 100%, 0 100%)" }}
     >
       <p className="text-3xl font-bold">100K+</p>
