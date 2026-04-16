@@ -20,6 +20,7 @@ import lifestyleImg2 from "@/assets/indica-lifestyle-2.png";
 import ambienteImg from "@/assets/indica-ambiente.jpg";
 import vselfImg from "@/assets/indica-vself.png";
 import vpremiumImg from "@/assets/indica-vpremium.png";
+import terracotaImg from "@/assets/indica-terracota.png";
 import terracotaAmbiente from "@/assets/indica-terracota-ambiente.jpg";
 
 const WHATSAPP_LINK = "https://wa.me/555192928468?text=Olá!%20Fui%20indicado%20por%20um%20amigo%20e%20quero%20conhecer%20a%20condição%20especial%20Acqualive.";
