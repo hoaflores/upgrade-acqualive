@@ -18,10 +18,12 @@ import consultImg from "@/assets/indica-consult.jpg";
 import lifestyleImg1 from "@/assets/indica-lifestyle-1.png";
 import lifestyleImg2 from "@/assets/indica-lifestyle-2.png";
 import ambienteImg from "@/assets/indica-ambiente.jpg";
-import vselfImg from "@/assets/indica-vself.png";
-import vpremiumImg from "@/assets/indica-vpremium.png";
-import terracotaImg from "@/assets/indica-terracota.png";
-import terracotaAmbiente from "@/assets/indica-terracota-ambiente.jpg";
+import vself6lImg from "@/assets/indica-prod-vself-6l.png";
+import vpremiumImg from "@/assets/indica-prod-vself-10l-premium.png";
+import terracotaImg from "@/assets/indica-prod-terracota.png";
+import heroRustic from "@/assets/indica-hero-terracota-rustic.jpg";
+import coupleKitchen from "@/assets/indica-couple-kitchen.jpg";
+import familyDinner from "@/assets/indica-family-dinner.jpg";
 
 const WHATSAPP_LINK = "https://wa.me/555192928468?text=Olá!%20Fui%20indicado%20por%20um%20amigo%20e%20quero%20conhecer%20a%20condição%20especial%20Acqualive.";
 
@@ -147,9 +149,9 @@ const HeroSection = () => (
     <TriangleShape className="absolute top-32 left-[45%] text-[hsl(215,62%,31%)] opacity-40 z-10" />
     <ArrowShape className="absolute top-20 left-[40%] text-[hsl(215,62%,31%)] opacity-30 z-10" />
 
-    {/* Hero photo - right side: terracota ambiente */}
+    {/* Hero photo - right side: rustic terracota with brick */}
     <div className="absolute top-0 right-0 w-[55%] h-full hidden lg:block">
-      <img src={terracotaAmbiente} alt="Purificador Acqualive Terracota em ambiente sofisticado" className="w-full h-full object-cover" />
+      <img src={heroRustic} alt="Purificador Acqualive Terracota em ambiente rústico sofisticado" className="w-full h-full object-cover object-center" />
       <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215,25%,95%)] via-[hsl(215,25%,95%)]/60 to-transparent w-2/5" />
     </div>
 
@@ -234,7 +236,7 @@ const HeroSection = () => (
       className="absolute bottom-10 right-[30%] bg-[hsl(215,62%,31%)] text-white px-8 py-4 rounded-xl shadow-elevated hidden lg:block z-20"
       style={{ clipPath: "polygon(10% 0, 100% 0, 90% 100%, 0 100%)" }}
     >
-      <p className="text-3xl font-bold">100K+</p>
+      <p className="text-3xl font-bold">100 mil+</p>
       <p className="text-sm opacity-90">Famílias Atendidas</p>
     </motion.div>
   </section>
@@ -260,7 +262,7 @@ const StatsBar = () => (
           </a>
         </div>
         <p className="text-white text-sm md:text-base">
-          <span className="font-bold">100.000+</span> famílias já transformaram a qualidade da sua água{" "}
+          <span className="font-bold">100 mil+</span> famílias já transformaram a qualidade da sua água{" "}
           <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-[hsl(21,89%,55%)] font-semibold hover:underline">
             ( Comece agora )
           </a>
@@ -278,10 +280,10 @@ const CounterSection = () => (
     <div className="container">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {[
-          { value: "100K+", label: "Famílias por todo o Brasil" },
-          { value: "99,9%", label: "Pureza comprovada em testes" },
+          { value: "100 mil+", label: "Famílias por todo o Brasil" },
+          { value: "99,9%", label: "de remoção do cloro" },
           { value: "4.9★", label: "Nota média dos clientes" },
-          { value: "15+", label: "Anos de tecnologia aplicada" },
+          { value: "25+", label: "Anos de pesquisa e ciência" },
         ].map((s, i) => (
           <motion.div
             key={i}
@@ -344,22 +346,18 @@ const AboutSection = () => (
           </h2>
 
           <p className="text-[hsl(215,30%,35%)] leading-relaxed mb-6">
-            Enquanto filtros convencionais retêm apenas partículas maiores, a Acqualive utiliza tecnologia de purificação em múltiplas etapas que elimina cloro, bactérias, metais pesados e compostos químicos invisíveis. Mas vai além: transforma a água em alcalina e ionizada, rica em magnésio biodisponível.
-          </p>
-
-          <p className="text-[hsl(215,30%,35%)] leading-relaxed mb-8">
-            O resultado é uma água com pH equilibrado, poder antioxidante real e sabor incomparável. Não é mágica. É ciência aplicada ao que há de mais essencial: o que você e sua família bebem todos os dias.
+            Inspirada nas <strong>blue zones</strong> (Sardenha e Okinawa), onde a água é naturalmente alcalina e a longevidade é recorde, a Acqualive replica esse processo com a tecnologia exclusiva <strong>TriWay</strong>. Resultado: água pura, alcalina, ionizada e rica em magnésio.
           </p>
 
           <div className="grid grid-cols-2 gap-4 mb-8">
             {[
-              "Purificação absoluta",
-              "Água alcalina ionizada",
-              "Rica em magnésio",
-              "Sem energia elétrica",
+              "+ Energia, - Cansaço",
+              "Defesa contra doenças",
+              "Hidratação real",
+              "Juventude prolongada",
             ].map((item, i) => (
-              <a key={i} href="#beneficios" className="flex items-center gap-2 text-[hsl(215,65%,19%)] font-medium hover:text-[hsl(21,89%,55%)] transition-colors group">
-                <ArrowRight className="w-4 h-4 text-[hsl(21,89%,55%)] group-hover:translate-x-1 transition-transform" />
+              <a key={i} href="#beneficios" className="flex items-center gap-2 text-[hsl(215,65%,19%)] font-semibold hover:text-[hsl(21,89%,55%)] transition-colors group">
+                <CheckCircle2 className="w-4 h-4 text-[hsl(21,89%,55%)] flex-shrink-0" />
                 {item}
               </a>
             ))}
@@ -413,13 +411,16 @@ const MissionBanner = () => {
       ],
     },
     {
-      title: "MINERALIZAÇÃO",
+      title: "BENEFÍCIOS",
       icon: Sparkles,
-      heading: "Nutrição pela Água:",
+      heading: "O que você ganha bebendo Acqualive todos os dias:",
       points: [
-        "Enriquecida com magnésio, mineral essencial para mais de 300 reações do corpo.",
-        "Biodisponibilidade superior à suplementação convencional.",
-        "Absorção contínua ao longo do dia, copo a copo.",
+        "Mais energia e menos cansaço no dia a dia.",
+        "Hidratação que você realmente sente, copo a copo.",
+        "Defesa contra doenças silenciosas como hipertensão e diabetes.",
+        "Ossos e articulações mais fortes com magnésio biodisponível.",
+        "Pele e cabelos mais bonitos: juventude prolongada.",
+        "Proteção para toda a família, sem contaminantes.",
       ],
     },
   ];
@@ -530,7 +531,6 @@ const ConsultSection = () => (
             {[
               { icon: Users, text: "Atendimento humanizado e sem pressão" },
               { icon: Award, text: "Condição especial exclusiva para indicados" },
-              { icon: Leaf, text: "Orientação completa sobre saúde e hidratação" },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-3 p-3 rounded-lg hover:bg-[hsl(210,20%,97%)] transition-colors">
                 <item.icon className="w-5 h-5 text-[hsl(21,89%,55%)]" />
@@ -549,7 +549,7 @@ const ConsultSection = () => (
         >
           <div className="relative">
             <div className="w-[75%] ml-auto rounded-3xl overflow-hidden shadow-elevated">
-              <img src={consultImg} alt="Família saudável" loading="lazy" className="w-full h-auto" />
+              <img src={familyDinner} alt="Família reunida desfrutando da água Acqualive" loading="lazy" className="w-full h-auto" />
             </div>
             <div className="absolute -bottom-6 -left-6 w-48 h-48 rounded-full overflow-hidden border-[6px] border-white shadow-elevated">
               <img src={aguaPura} alt="Água pura cristalina" loading="lazy" className="w-full h-full object-cover" />
@@ -588,7 +588,7 @@ const FAQSection = () => {
     },
     {
       q: "De quanto em quanto tempo preciso trocar o refil?",
-      a: "A troca é recomendada a cada 12 meses para famílias de até 4 pessoas, ou a cada 2.000 litros filtrados. O refil é de fácil substituição e pode ser adquirido diretamente conosco, com facilidade de pagamento."
+      a: "A troca é recomendada a cada 6 meses ou a cada 1.500 litros filtrados. O refil é de fácil substituição e pode ser adquirido diretamente conosco, com facilidade de pagamento."
     },
     {
       q: "O parcelamento é realmente sem juros?",
@@ -772,19 +772,19 @@ const HowItWorks = () => {
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Carla Mendes",
-      location: "São Paulo, SP",
-      text: "Fui indicada pela minha vizinha e no início achei que era exagero. Mas quando provei a água pela primeira vez, entendi do que ela estava falando. O sabor é completamente diferente. Meus filhos pararam de pedir suco e passaram a beber água o dia inteiro. Hoje sou eu quem indica para todo mundo.",
+      name: "Samuel Dalle Laste",
+      location: "Médico — Porto Alegre / São Paulo",
+      text: "Eu tenho o filtro da Acqualive em Porto Alegre e São Paulo. A Acqualive já hidrata todos os profissionais e pacientes da Clínica Dalle Laste há 8 anos.",
     },
     {
-      name: "Roberto Silveira",
-      location: "Curitiba, PR",
-      text: "Minha esposa pesquisou durante meses antes de aceitar a indicação de um amigo. Quando o Acqualive chegou, a qualidade do produto nos surpreendeu. O acabamento, o design. Mas o que realmente conquistou a gente foi o sabor da água. Nunca mais compramos galão.",
+      name: "Lyoto Machida",
+      location: "Campeão Mundial UFC",
+      text: "Fui apresentado aos Purificadores Acqualive e eu posso dizer que o negócio é bom! Bom não só para minha família, mas também para o nosso dia a dia.",
     },
     {
-      name: "Patrícia Lima",
-      location: "Belo Horizonte, MG",
-      text: "Eu tinha um filtro de barro em casa e achava que era suficiente. Uma amiga insistiu tanto que resolvi experimentar. A primeira coisa que percebi foi o cheiro. A água do filtro de barro tinha um cheiro que eu nem sabia que existia. A Acqualive não tem cheiro, não tem gosto. É pura.",
+      name: "Paloma Tusset",
+      location: "Nutricionista",
+      text: "Eu tenho um grande prazer com essa parceria. Essa água, que passa pelo filtro, tem uma qualidade muito melhor. Nossa parceria com a Acqualive enriquece a vida das pessoas com mais qualidade e sabor.",
     },
   ];
 
@@ -857,20 +857,16 @@ const PricingSection = () => {
   const products = [
     {
       number: "01",
-      name: "V Self 10L",
-      tagline: "O clássico que conquistou o Brasil",
-      description: "Perfeito para famílias de 2 a 4 pessoas. Design transparente que mostra a pureza da água em tempo real.",
-      price: "1.997",
-      installment: "199,70",
-      image: vselfImg,
+      name: "V Self 6L",
+      tagline: "Compacto, prático e poderoso",
+      description: "Ideal para casais e ambientes menores. Toda a tecnologia Acqualive em um formato que cabe em qualquer cozinha.",
+      image: vself6lImg,
     },
     {
       number: "02",
       name: "V Self 10L Premium",
       tagline: "O mais desejado da linha",
-      description: "Acabamento premium com base sofisticada. Para quem quer unir tecnologia e elegância na cozinha.",
-      price: "2.497",
-      installment: "249,70",
+      description: "Acabamento premium com base de madeira e torneira de inox. Para quem une tecnologia e elegância na cozinha.",
       highlight: true,
       image: vpremiumImg,
     },
@@ -879,8 +875,6 @@ const PricingSection = () => {
       name: "Terracota",
       tagline: "Tradição encontra inovação",
       description: "A beleza atemporal da cerâmica artesanal com a tecnologia de purificação mais avançada do mercado.",
-      price: "2.997",
-      installment: "299,70",
       image: terracotaImg,
     },
   ];
@@ -963,14 +957,24 @@ const PricingSection = () => {
                   <p className="text-[hsl(21,89%,55%)] text-sm font-medium mb-4">{p.tagline}</p>
                   <p className="text-white/60 text-sm leading-relaxed mb-6 flex-grow">{p.description}</p>
 
-                  <div className="border-t border-white/10 pt-6 mb-6">
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-sm text-white/50">R$</span>
-                      <span className="text-4xl font-bold text-white">{p.price}</span>
+                  {/* Hidden price block with overlay */}
+                  <div className="relative border-t border-white/10 pt-6 mb-6">
+                    <div className="select-none pointer-events-none blur-md opacity-40">
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-sm text-white/50">R$</span>
+                        <span className="text-4xl font-bold text-white">••••</span>
+                      </div>
+                      <p className="text-white/50 text-sm mt-1">
+                        ou <span className="text-white/80 font-semibold">10x sem juros</span>
+                      </p>
                     </div>
-                    <p className="text-white/50 text-sm mt-1">
-                      ou <span className="text-white/80 font-semibold">10x de R$ {p.installment}</span> sem juros
-                    </p>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="bg-[hsl(21,89%,55%)]/15 border border-[hsl(21,89%,55%)]/40 rounded-lg px-4 py-2 backdrop-blur-sm">
+                        <p className="text-white text-xs font-bold tracking-wide text-center">
+                          🔒 CONDIÇÃO ESPECIAL EXCLUSIVA
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
                   <Button
@@ -981,7 +985,7 @@ const PricingSection = () => {
                   >
                     <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                       <WhatsAppIcon className="w-4 h-4" />
-                      Quero este modelo
+                      Descobrir minha condição
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </a>
                   </Button>
@@ -1097,7 +1101,6 @@ const IndicaAcqualive2026 = () => (
     <Header />
     <main>
       <HeroSection />
-      <StatsBar />
       <CounterSection />
       <AboutSection />
       <MissionBanner />
