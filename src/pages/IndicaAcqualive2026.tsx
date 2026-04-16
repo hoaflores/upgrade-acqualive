@@ -15,6 +15,12 @@ import aguaPura from "@/assets/indica-agua-pura.jpg";
 import aboutImg1 from "@/assets/indica-about-1.jpg";
 import aboutImg2 from "@/assets/indica-about-2.jpg";
 import consultImg from "@/assets/indica-consult.jpg";
+import lifestyleImg1 from "@/assets/indica-lifestyle-1.png";
+import lifestyleImg2 from "@/assets/indica-lifestyle-2.png";
+import ambienteImg from "@/assets/indica-ambiente.jpg";
+import vselfImg from "@/assets/indica-vself.png";
+import vpremiumImg from "@/assets/indica-vpremium.png";
+import terracotaImg from "@/assets/indica-terracota.png";
 
 const WHATSAPP_LINK = "https://wa.me/555192928468?text=Olá!%20Fui%20indicado%20por%20um%20amigo%20e%20quero%20conhecer%20a%20condição%20especial%20Acqualive.";
 
@@ -209,12 +215,6 @@ const HeroSection = () => (
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>
-          <a href="#sobre" className="flex items-center gap-2 text-[hsl(215,30%,35%)] hover:text-[hsl(21,89%,55%)] transition-colors group">
-            <div className="w-12 h-12 rounded-full border-2 border-[hsl(215,62%,31%)] flex items-center justify-center group-hover:border-[hsl(21,89%,55%)] transition-colors">
-              <Play className="w-4 h-4 ml-0.5" />
-            </div>
-            <span className="font-semibold text-sm">Saiba mais</span>
-          </a>
         </motion.div>
 
         {/* Slide indicators (Insuba-style) */}
@@ -316,8 +316,8 @@ const AboutSection = () => (
           className="relative"
         >
           <div className="relative">
-            <img src={aboutImg1} alt="Casal com água Acqualive" loading="lazy" className="w-[70%] rounded-2xl shadow-elevated" />
-            <img src={aboutImg2} alt="Estilo de vida saudável" loading="lazy" className="absolute -bottom-10 right-0 w-[55%] rounded-2xl shadow-elevated border-[6px] border-white" />
+            <img src={lifestyleImg2} alt="Purificador Acqualive em ambiente" loading="lazy" className="w-[70%] rounded-2xl shadow-elevated" />
+            <img src={lifestyleImg1} alt="Estilo de vida saudável com Acqualive" loading="lazy" className="absolute -bottom-10 right-0 w-[55%] rounded-2xl shadow-elevated border-[6px] border-white" />
           </div>
           {/* Dot grid decoration */}
           <DotGrid className="absolute -top-6 -left-6 text-[hsl(215,62%,31%)]" />
@@ -655,7 +655,7 @@ const FAQSection = () => {
             className="relative hidden lg:block"
           >
             <div className="relative rounded-3xl overflow-hidden shadow-elevated">
-              <img src={produtosLineup} alt="Linha Acqualive" loading="lazy" className="w-full h-auto" />
+              <img src={ambienteImg} alt="Acqualive em ambiente" loading="lazy" className="w-full h-auto" />
               {/* Badge overlay */}
               <div className="absolute bottom-4 right-4 bg-[hsl(21,89%,55%)] text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg">
                 # Tecnologia de Ponta
@@ -861,6 +861,7 @@ const PricingSection = () => {
       description: "Perfeito para famílias de 2 a 4 pessoas. Design transparente que mostra a pureza da água em tempo real.",
       price: "1.997",
       installment: "199,70",
+      image: vselfImg,
     },
     {
       number: "02",
@@ -870,6 +871,7 @@ const PricingSection = () => {
       price: "2.497",
       installment: "249,70",
       highlight: true,
+      image: vpremiumImg,
     },
     {
       number: "03",
@@ -878,6 +880,7 @@ const PricingSection = () => {
       description: "A beleza atemporal da cerâmica artesanal com a tecnologia de purificação mais avançada do mercado.",
       price: "2.997",
       installment: "299,70",
+      image: terracotaImg,
     },
   ];
 
@@ -922,8 +925,15 @@ const PricingSection = () => {
                   p.highlight ? "ring-2 ring-[hsl(21,89%,55%)]" : ""
                 }`}
               >
-                {/* Background image overlay */}
-                <div className="absolute inset-0 bg-white/5 group-hover:bg-white/10 transition-colors" />
+                {/* Product background image */}
+                <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={p.image}
+                    alt={p.name}
+                    className="w-[65%] h-auto object-contain opacity-[0.08] group-hover:opacity-[0.15] transition-opacity duration-500 group-hover:scale-105 transform"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[hsl(218,97%,10%)] via-[hsl(218,97%,10%)]/80 to-transparent" />
 
                 <div className="relative p-8">
                   {/* Large number */}
