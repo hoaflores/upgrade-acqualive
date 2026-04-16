@@ -52,28 +52,8 @@ const WaveShape = ({ className = "", flip = false }: { className?: string; flip?
   </svg>
 );
 
-const TriangleShape = ({ className = "" }: { className?: string }) => (
-  <motion.svg
-    className={className}
-    width="80" height="80" viewBox="0 0 80 80" fill="none"
-    animate={{ y: [0, -10, 0], rotate: [0, 5, 0] }}
-    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-  >
-    <path d="M40 5L75 70H5L40 5Z" stroke="currentColor" strokeWidth="2" fill="none" />
-  </motion.svg>
-);
 
-const ArrowShape = ({ className = "" }: { className?: string }) => (
-  <motion.svg
-    className={className}
-    width="60" height="60" viewBox="0 0 60 60" fill="none"
-    animate={{ y: [0, 8, 0] }}
-    transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-  >
-    <path d="M10 50L30 10L50 50" stroke="currentColor" strokeWidth="2" fill="none" />
-    <path d="M20 40L30 20L40 40" stroke="currentColor" strokeWidth="1.5" fill="none" opacity="0.5" />
-  </motion.svg>
-);
+
 
 /* ══════════════════════════════════════════════════════════
    TOP BAR (Insuba-style)
@@ -145,9 +125,7 @@ const HeroSection = () => (
     {/* Top accent bar - blue instead of orange */}
     <div className="absolute top-0 left-0 right-0 h-2 bg-[hsl(215,62%,31%)]" />
 
-    {/* Geometric shapes */}
-    <TriangleShape className="absolute top-32 left-[45%] text-[hsl(215,62%,31%)] opacity-40 z-10" />
-    <ArrowShape className="absolute top-20 left-[40%] text-[hsl(215,62%,31%)] opacity-30 z-10" />
+    {/* (Geometric triangle/arrow shapes removed) */}
 
     {/* Hero photo - right side: rustic terracota with brick */}
     <div className="absolute top-0 right-0 w-[55%] h-full hidden lg:block">
