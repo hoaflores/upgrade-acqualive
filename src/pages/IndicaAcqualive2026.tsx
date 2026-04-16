@@ -18,10 +18,12 @@ import consultImg from "@/assets/indica-consult.jpg";
 import lifestyleImg1 from "@/assets/indica-lifestyle-1.png";
 import lifestyleImg2 from "@/assets/indica-lifestyle-2.png";
 import ambienteImg from "@/assets/indica-ambiente.jpg";
-import vselfImg from "@/assets/indica-vself.png";
-import vpremiumImg from "@/assets/indica-vpremium.png";
-import terracotaImg from "@/assets/indica-terracota.png";
-import terracotaAmbiente from "@/assets/indica-terracota-ambiente.jpg";
+import vself6lImg from "@/assets/indica-prod-vself-6l.png";
+import vpremiumImg from "@/assets/indica-prod-vself-10l-premium.png";
+import terracotaImg from "@/assets/indica-prod-terracota.png";
+import heroRustic from "@/assets/indica-hero-terracota-rustic.jpg";
+import coupleKitchen from "@/assets/indica-couple-kitchen.jpg";
+import familyDinner from "@/assets/indica-family-dinner.jpg";
 
 const WHATSAPP_LINK = "https://wa.me/555192928468?text=Olá!%20Fui%20indicado%20por%20um%20amigo%20e%20quero%20conhecer%20a%20condição%20especial%20Acqualive.";
 
@@ -147,9 +149,9 @@ const HeroSection = () => (
     <TriangleShape className="absolute top-32 left-[45%] text-[hsl(215,62%,31%)] opacity-40 z-10" />
     <ArrowShape className="absolute top-20 left-[40%] text-[hsl(215,62%,31%)] opacity-30 z-10" />
 
-    {/* Hero photo - right side: terracota ambiente */}
+    {/* Hero photo - right side: rustic terracota with brick */}
     <div className="absolute top-0 right-0 w-[55%] h-full hidden lg:block">
-      <img src={terracotaAmbiente} alt="Purificador Acqualive Terracota em ambiente sofisticado" className="w-full h-full object-cover" />
+      <img src={heroRustic} alt="Purificador Acqualive Terracota em ambiente rústico sofisticado" className="w-full h-full object-cover object-center" />
       <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215,25%,95%)] via-[hsl(215,25%,95%)]/60 to-transparent w-2/5" />
     </div>
 
@@ -234,7 +236,7 @@ const HeroSection = () => (
       className="absolute bottom-10 right-[30%] bg-[hsl(215,62%,31%)] text-white px-8 py-4 rounded-xl shadow-elevated hidden lg:block z-20"
       style={{ clipPath: "polygon(10% 0, 100% 0, 90% 100%, 0 100%)" }}
     >
-      <p className="text-3xl font-bold">100K+</p>
+      <p className="text-3xl font-bold">100 mil+</p>
       <p className="text-sm opacity-90">Famílias Atendidas</p>
     </motion.div>
   </section>
