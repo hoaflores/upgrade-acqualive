@@ -18,6 +18,7 @@ import IndicaClub from "./pages/IndicaClub";
 import EmailTemplates from "./pages/EmailTemplates";
 import EmailRefilTemplates from "./pages/EmailRefilTemplates";
 import BlogTemplates from "./pages/BlogTemplates";
+import IndicaAcqualive2026 from "./pages/IndicaAcqualive2026";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -44,6 +45,7 @@ const App = () => (
             <Route path="/email-templates" element={<EmailTemplates />} />
             <Route path="/email-refil" element={<EmailRefilTemplates />} />
             <Route path="/blog-templates" element={<BlogTemplates />} />
+            <Route path="/indica-acqualive-2026" element={<IndicaAcqualive2026 />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
