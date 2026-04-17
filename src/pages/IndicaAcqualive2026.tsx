@@ -822,15 +822,15 @@ const TestimonialsSection = () => {
           </h2>
         </div>
 
-        {/* Desktop carousel */}
+        {/* Desktop carousel - loop infinito */}
         <div className="hidden md:block relative">
           <div className="overflow-hidden">
             <motion.div
               className="flex gap-6"
               animate={{ x: `calc(-${currentSlide} * (100% / ${slidesPerView}) - ${currentSlide} * (1.5rem / ${slidesPerView}))` }}
-              transition={{ type: "spring", stiffness: 100, damping: 20 }}
+              transition={{ type: "spring", stiffness: 80, damping: 22 }}
             >
-              {testimonials.map((t, i) => (
+              {loopedTestimonials.map((t, i) => (
                 <div key={i} className="w-[calc(33.333%-1rem)] flex-shrink-0">
                   <div className="relative bg-[hsl(210,20%,97%)] rounded-2xl p-8 hover:shadow-elevated transition-all duration-300 flex flex-col h-full">
                     <Quote className="w-10 h-10 text-[hsl(21,89%,55%)] opacity-20 mb-4" />
@@ -859,14 +859,13 @@ const TestimonialsSection = () => {
           <div className="flex items-center justify-center gap-4 mt-10">
             <button
               onClick={prev}
-              disabled={currentSlide === 0}
               aria-label="Depoimento anterior"
-              className="w-12 h-12 rounded-full bg-[hsl(215,62%,31%)] text-white flex items-center justify-center hover:bg-[hsl(21,89%,55%)] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+              className="w-12 h-12 rounded-full bg-[hsl(215,62%,31%)] text-white flex items-center justify-center hover:bg-[hsl(21,89%,55%)] transition-colors"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <div className="flex gap-2">
-              {Array(maxSlide + 1).fill(0).map((_, i) => (
+              {testimonials.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setCurrentSlide(i)}
@@ -877,9 +876,8 @@ const TestimonialsSection = () => {
             </div>
             <button
               onClick={next}
-              disabled={currentSlide === maxSlide}
               aria-label="Próximo depoimento"
-              className="w-12 h-12 rounded-full bg-[hsl(215,62%,31%)] text-white flex items-center justify-center hover:bg-[hsl(21,89%,55%)] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+              className="w-12 h-12 rounded-full bg-[hsl(215,62%,31%)] text-white flex items-center justify-center hover:bg-[hsl(21,89%,55%)] transition-colors"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
@@ -911,6 +909,11 @@ const TestimonialsSection = () => {
             </div>
           ))}
         </div>
+
+        {/* Asterisco - fonte */}
+        <p className="text-center text-xs text-[hsl(215,30%,35%)]/70 mt-8 italic">
+          *Depoimentos retirados do site Acqualive, seção Terracota.
+        </p>
       </div>
     </section>
   );
