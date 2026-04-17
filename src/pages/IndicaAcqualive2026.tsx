@@ -763,7 +763,32 @@ const TestimonialsSection = () => {
       text: "Eu tenho um grande prazer com essa parceria. Essa água, que passa pelo filtro, tem uma qualidade muito melhor. Nossa parceria com a Acqualive enriquece a vida das pessoas com mais qualidade e sabor.",
       photo: depoPaloma,
     },
+    {
+      name: "Roselene R.",
+      location: "Compradora verificada",
+      text: "Amei o purificador de água Acqualive! Muito lindo, combinou com minha cozinha! Só de saber que vou ter uma água de qualidade em minha casa já é tudo de bom!",
+      photo: null,
+    },
+    {
+      name: "Jeane S.",
+      location: "Compradora verificada",
+      text: "O filtro é lindo! Estou encantada com a qualidade da água e o design do purificador. Recomendo de olhos fechados.",
+      photo: null,
+    },
+    {
+      name: "Dácio Nunes",
+      location: "Cliente Acqualive",
+      text: "Mesmo sem realizar testes laboratoriais, o pH alcalino é simplesmente evidente, devido à coloração mais cristalina da água e ao sabor adocicado. Excelente produto.",
+      photo: null,
+    },
   ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slidesPerView = 3;
+  const maxSlide = Math.max(0, testimonials.length - slidesPerView);
+
+  const next = () => setCurrentSlide((p) => Math.min(p + 1, maxSlide));
+  const prev = () => setCurrentSlide((p) => Math.max(p - 1, 0));
 
   return (
     <section id="depoimentos" className="py-20 md:py-28 bg-white overflow-hidden">
@@ -781,37 +806,101 @@ const TestimonialsSection = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 items-stretch">
-          {testimonials.map((t, i) => (
+        {/* Desktop carousel */}
+        <div className="hidden md:block relative">
+          <div className="overflow-hidden">
             <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="relative bg-[hsl(210,20%,97%)] rounded-2xl p-8 hover:shadow-elevated transition-all duration-300 group flex flex-col h-full"
+              className="flex gap-6"
+              animate={{ x: `calc(-${currentSlide} * (100% / ${slidesPerView}) - ${currentSlide} * (1.5rem / ${slidesPerView}))` }}
+              transition={{ type: "spring", stiffness: 100, damping: 20 }}
             >
-              {/* Large quote mark */}
-              <Quote className="w-10 h-10 text-[hsl(21,89%,55%)] opacity-20 mb-4" />
-
-              <div className="flex gap-1 mb-4">
-                {Array(5).fill(0).map((_, j) => (
-                  <Star key={j} className="w-4 h-4 fill-[hsl(21,89%,55%)] text-[hsl(21,89%,55%)]" />
-                ))}
-              </div>
-
-              <p className="text-[hsl(215,30%,35%)] leading-relaxed mb-6 text-sm flex-grow">"{t.text}"</p>
-
-              <div className="flex items-center gap-3 pt-4 border-t border-border/50 mt-auto">
-                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[hsl(215,62%,31%)] flex-shrink-0 bg-white">
-                  <img src={t.photo} alt={t.name} loading="lazy" className="w-full h-full object-cover" />
+              {testimonials.map((t, i) => (
+                <div key={i} className="w-[calc(33.333%-1rem)] flex-shrink-0">
+                  <div className="relative bg-[hsl(210,20%,97%)] rounded-2xl p-8 hover:shadow-elevated transition-all duration-300 flex flex-col h-full">
+                    <Quote className="w-10 h-10 text-[hsl(21,89%,55%)] opacity-20 mb-4" />
+                    <div className="flex gap-1 mb-4">
+                      {Array(5).fill(0).map((_, j) => (
+                        <Star key={j} className="w-4 h-4 fill-[hsl(21,89%,55%)] text-[hsl(21,89%,55%)]" />
+                      ))}
+                    </div>
+                    <p className="text-[hsl(215,30%,35%)] leading-relaxed mb-6 text-sm flex-grow">"{t.text}"</p>
+                    <div className="flex items-center gap-3 pt-4 border-t border-border/50 mt-auto">
+                      <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[hsl(215,62%,31%)] flex-shrink-0 bg-[hsl(215,62%,31%)] flex items-center justify-center">
+                        {t.photo ? (
+                          <img src={t.photo} alt={t.name} loading="lazy" className="w-full h-full object-cover" />
+                        ) : (
+                          <span className="text-white font-bold text-sm">{t.name.split(' ').map(n => n[0]).slice(0, 2).join('')}</span>
+                        )}
+                      </div>
+                      <div>
+                        <p className="font-bold text-[hsl(215,65%,19%)] text-sm">{t.name}</p>
+                        <p className="text-xs text-[hsl(215,30%,35%)]">{t.location}</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-bold text-[hsl(215,65%,19%)] text-sm">{t.name}</p>
-                  <p className="text-xs text-[hsl(215,30%,35%)]">{t.location}</p>
-                </div>
-              </div>
+              ))}
             </motion.div>
+          </div>
+
+          {/* Carousel controls */}
+          <div className="flex items-center justify-center gap-4 mt-10">
+            <button
+              onClick={prev}
+              disabled={currentSlide === 0}
+              aria-label="Depoimento anterior"
+              className="w-12 h-12 rounded-full bg-[hsl(215,62%,31%)] text-white flex items-center justify-center hover:bg-[hsl(21,89%,55%)] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <div className="flex gap-2">
+              {Array(maxSlide + 1).fill(0).map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentSlide(i)}
+                  aria-label={`Ir para depoimento ${i + 1}`}
+                  className={`h-2 rounded-full transition-all ${currentSlide === i ? "w-8 bg-[hsl(21,89%,55%)]" : "w-2 bg-[hsl(215,62%,31%)]/30"}`}
+                />
+              ))}
+            </div>
+            <button
+              onClick={next}
+              disabled={currentSlide === maxSlide}
+              aria-label="Próximo depoimento"
+              className="w-12 h-12 rounded-full bg-[hsl(215,62%,31%)] text-white flex items-center justify-center hover:bg-[hsl(21,89%,55%)] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile: scroll snap */}
+        <div className="md:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6 scrollbar-hide">
+          {testimonials.map((t, i) => (
+            <div key={i} className="snap-center flex-shrink-0 w-[85%]">
+              <div className="bg-[hsl(210,20%,97%)] rounded-2xl p-6 flex flex-col h-full">
+                <Quote className="w-8 h-8 text-[hsl(21,89%,55%)] opacity-20 mb-3" />
+                <div className="flex gap-1 mb-3">
+                  {Array(5).fill(0).map((_, j) => (
+                    <Star key={j} className="w-4 h-4 fill-[hsl(21,89%,55%)] text-[hsl(21,89%,55%)]" />
+                  ))}
+                </div>
+                <p className="text-[hsl(215,30%,35%)] leading-relaxed mb-5 text-sm">"{t.text}"</p>
+                <div className="flex items-center gap-3 pt-3 border-t border-border/50 mt-auto">
+                  <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-[hsl(215,62%,31%)] flex-shrink-0 bg-[hsl(215,62%,31%)] flex items-center justify-center">
+                    {t.photo ? (
+                      <img src={t.photo} alt={t.name} loading="lazy" className="w-full h-full object-cover" />
+                    ) : (
+                      <span className="text-white font-bold text-xs">{t.name.split(' ').map(n => n[0]).slice(0, 2).join('')}</span>
+                    )}
+                  </div>
+                  <div>
+                    <p className="font-bold text-[hsl(215,65%,19%)] text-sm">{t.name}</p>
+                    <p className="text-xs text-[hsl(215,30%,35%)]">{t.location}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
