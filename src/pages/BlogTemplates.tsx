@@ -2970,6 +2970,47 @@ const ARTICLES = [
   <p style="margin-top:8px">Conteúdo produzido pela Acqualive, baseado no podcast "Terça Positiva" com Dr. Dayan Siebra.</p>
 </footer>
 
+<script>
+(function(){
+  function postHeight(){
+    try {
+      var h = Math.max(
+        document.documentElement.scrollHeight,
+        document.body.scrollHeight
+      );
+      window.parent.postMessage({ type: 'blog-iframe-height', height: h }, '*');
+    } catch(e){}
+  }
+  function scrollParentTo(targetTopInIframe){
+    try {
+      window.parent.postMessage({ type: 'blog-iframe-scroll', top: targetTopInIframe }, '*');
+    } catch(e){}
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href').slice(1);
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    var rect = el.getBoundingClientRect();
+    var topInDoc = rect.top + (window.pageYOffset || document.documentElement.scrollTop);
+    scrollParentTo(topInDoc);
+    if (history && history.replaceState) {
+      history.replaceState(null, '', '#' + id);
+    }
+  }, false);
+  window.addEventListener('load', postHeight);
+  setTimeout(postHeight, 300);
+  setTimeout(postHeight, 1200);
+  setTimeout(postHeight, 2500);
+  if (window.ResizeObserver) {
+    new ResizeObserver(postHeight).observe(document.body);
+  }
+  window.addEventListener('resize', postHeight);
+})();
+</script>
 </body>
 </html>`,
   },
