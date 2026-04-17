@@ -2522,7 +2522,7 @@ const ARTICLES = [
 <!-- BLOCO 2: EMBED DO VÍDEO -->
 <main class="article-body">
 
-  <div class="video-embed">
+  <div class="video-embed" id="video-podcast">
     <iframe src="https://www.youtube.com/embed/0r7bQudJy5U" title="Podcast com Dr. Dayan Siebra" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <p class="video-caption">Assista ao episódio completo com Dr. Dayan Siebra</p>
@@ -2530,20 +2530,29 @@ const ARTICLES = [
   <div class="section-divider"></div>
 
   <!-- TOC -->
-  <nav class="toc" aria-label="Índice do artigo do podcast com Dr. Dayan Siebra">
-    <div class="toc-title">Índice do Artigo</div>
+  <nav class="toc-podcast" aria-label="Índice do artigo do podcast com Dr. Dayan Siebra">
+    <div class="toc-podcast-head">
+      <div class="toc-podcast-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+      </div>
+      <div class="titles">
+        <span class="eyebrow">Navegue pelo Episódio</span>
+        <span class="title">Índice do Artigo</span>
+      </div>
+    </div>
     <ol>
-      <li>Nosso convidado admite: nunca aprendeu sobre água na faculdade de medicina</li>
-      <li>Desidratação crônica: você pode estar desidratado agora mesmo sem saber</li>
-      <li>Sangue grosso, trombose e infarto: a conexão que a medicina convencional ignora</li>
-      <li>Tensão superficial: por que você pode beber água e continuar desidratado</li>
-      <li>pH e acidose metabólica: o terreno biológico que prepara o corpo para a doença</li>
-      <li>Inflamação crônica: a mãe de todas as doenças e o papel silencioso da água</li>
-      <li>Cloro na água: o pesticida que você consome todos os dias sem perceber</li>
-      <li>O estudo que chocou a comunidade médica: 28 pacientes, 4 meses, só água Acqualive</li>
-      <li>Laboratório ao vivo: a transformação da água diante das câmeras</li>
-      <li>Os 5 pilares da água ideal, segundo 30 anos de pesquisa Acqualive</li>
-      <li>O compromisso público do Dr. Dayan Siebra após conhecer a Acqualive</li>
+      <li><a href="#video-podcast"><span class="num">1</span><span>Assista ao podcast completo com Dr. Dayan Siebra</span><span class="arrow">→</span></a></li>
+      <li><a href="#sec-faculdade"><span class="num">2</span><span>Nunca aprendeu sobre água na faculdade de medicina</span><span class="arrow">→</span></a></li>
+      <li><a href="#sec-desidratacao"><span class="num">3</span><span>Desidratação crônica: você pode estar desidratado agora</span><span class="arrow">→</span></a></li>
+      <li><a href="#sec-sangue"><span class="num">4</span><span>Sangue grosso, trombose e infarto: a conexão ignorada</span><span class="arrow">→</span></a></li>
+      <li><a href="#sec-tensao"><span class="num">5</span><span>Tensão superficial: por que beber água pode não bastar</span><span class="arrow">→</span></a></li>
+      <li><a href="#sec-ph"><span class="num">6</span><span>pH e acidose metabólica: o terreno da doença</span><span class="arrow">→</span></a></li>
+      <li><a href="#sec-inflamacao"><span class="num">7</span><span>Inflamação crônica: a mãe de todas as doenças</span><span class="arrow">→</span></a></li>
+      <li><a href="#sec-cloro"><span class="num">8</span><span>Cloro na água: o pesticida do seu dia a dia</span><span class="arrow">→</span></a></li>
+      <li><a href="#sec-estudo"><span class="num">9</span><span>Estudo: 28 pacientes, 4 meses, só água Acqualive</span><span class="arrow">→</span></a></li>
+      <li><a href="#sec-laboratorio"><span class="num">10</span><span>Laboratório ao vivo: a transformação diante das câmeras</span><span class="arrow">→</span></a></li>
+      <li><a href="#sec-pilares"><span class="num">11</span><span>Os 5 pilares da água ideal segundo a Acqualive</span><span class="arrow">→</span></a></li>
+      <li><a href="#sec-compromisso"><span class="num">12</span><span>O compromisso público do Dr. Dayan Siebra</span><span class="arrow">→</span></a></li>
     </ol>
   </nav>
 
