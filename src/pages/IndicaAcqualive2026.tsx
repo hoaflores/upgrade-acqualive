@@ -75,11 +75,16 @@ const TopBar = () => (
           <Mail className="w-4 h-4" /> contato@acqualive.com.br
         </span>
       </div>
-      <div className="flex items-center gap-4">
-        {["facebook", "instagram", "youtube"].map((s) => (
-          <a key={s} href={`https://${s}.com/acqualivedobrasil`} target="_blank" rel="noopener noreferrer"
-            className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-[hsl(21,89%,55%)] transition-colors text-xs uppercase font-bold">
-            {s[0].toUpperCase()}
+      <div className="flex items-center gap-3">
+        {[
+          { Icon: Facebook, href: "https://www.facebook.com/acqualivedobrasil", label: "Facebook" },
+          { Icon: Instagram, href: "https://www.instagram.com/acqualivegroup/", label: "Instagram" },
+          { Icon: Youtube, href: "https://www.youtube.com/channel/UCoxasL5YDgz0AhqN2UgHV2A", label: "YouTube" },
+        ].map(({ Icon, href, label }) => (
+          <a key={label} href={href} target="_blank" rel="noopener noreferrer"
+            aria-label={`Acqualive no ${label}`}
+            className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-[hsl(21,89%,55%)] transition-colors">
+            <Icon className="w-4 h-4 text-white" />
           </a>
         ))}
       </div>
@@ -1129,7 +1134,9 @@ const Footer = () => (
   <footer className="bg-[hsl(218,97%,10%)] text-white/50 py-8">
     <div className="container">
       <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-        <img src={logoAzul} alt="Acqualive" className="h-6 brightness-0 invert opacity-40" />
+        <a href="https://www.acqualive.com.br" target="_blank" rel="noopener noreferrer">
+          <img src={logoAzul} alt="Acqualive" className="h-6 brightness-0 invert opacity-40 hover:opacity-70 transition-opacity" />
+        </a>
         <p className="text-sm text-center">© {new Date().getFullYear()} Acqualive do Brasil. Todos os direitos reservados. CNPJ: 17.918.498/0001-53</p>
         <div className="flex gap-3">
           {[
