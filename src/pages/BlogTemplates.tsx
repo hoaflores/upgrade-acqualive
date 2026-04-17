@@ -3918,9 +3918,34 @@ const BlogTemplates = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [viewMode, setViewMode] = useState<"preview" | "code">("preview");
   const [copied, setCopied] = useState(false);
+  const [iframeHeight, setIframeHeight] = useState<number>(2800);
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  const iframeWrapperRef = useRef<HTMLDivElement | null>(null);
 
   const article = ARTICLES[currentIndex];
   const resolvedHtml = article.html.split("https://upgrade-acqualive.lovable.app").join(window.location.origin);
+
+  useEffect(() => {
+    setIframeHeight(2800);
+  }, [currentIndex, viewMode]);
+
+  useEffect(() => {
+    const handler = (event: MessageEvent) => {
+      const data = event.data;
+      if (!data || typeof data !== "object") return;
+      if (data.type === "blog-iframe-height" && typeof data.height === "number") {
+        setIframeHeight((prev) => (Math.abs(prev - data.height) > 4 ? data.height + 24 : prev));
+      }
+      if (data.type === "blog-iframe-scroll" && typeof data.top === "number") {
+        const wrapper = iframeWrapperRef.current;
+        if (!wrapper) return;
+        const wrapperTop = wrapper.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({ top: wrapperTop + data.top - 16, behavior: "smooth" });
+      }
+    };
+    window.addEventListener("message", handler);
+    return () => window.removeEventListener("message", handler);
+  }, []);
 
   const copyHtml = () => {
     navigator.clipboard.writeText(article.html);
