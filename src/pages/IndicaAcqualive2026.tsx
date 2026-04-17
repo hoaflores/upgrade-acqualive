@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Shield, Droplets, Sparkles, Star, ChevronRight, CheckCircle2,
   ArrowRight, Heart, Award, Phone, Mail, MapPin,
@@ -749,52 +749,62 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       name: "Pablo Lopez",
-      location: "Comprador verificado",
-      text: "Assim que chegou em casa instalamos e medimos o pH da água direto da torneira: 5.5. Após passar pelo filtro, foi para pH 9. A água também tinha sabor de terra e o filtro tirou tudo isso. A água fica incrível! Em casa agora todos estamos consumindo mais água.",
+      location: "Cliente Acqualive",
+      text: "Assim q chegou em casa a gente instalou e mediu o pH da água direto da torneira: 5.5. Depois de passar pelo filtro, foi pra pH 9!! A água tbm tinha um gosto de terra e o filtro tirou tudo. Ficou incrível, agora todo mundo aqui em casa tá bebendo muito mais água.",
     },
     {
       name: "Roselene R.",
-      location: "Compradora verificada",
-      text: "Amei o purificador de água Acqualive! Muito lindo, combinou com minha cozinha! Só de saber que vou ter uma água de qualidade em minha casa já é tudo de bom!",
+      location: "Cliente Acqualive",
+      text: "Ameeei o purificador! Muito lindo, combinou demais com minha cozinha. Só de saber que vou ter uma água de qualidade em casa já é tudo de bom :)",
     },
     {
       name: "Fernando Oliveira",
-      location: "Comprador verificado",
-      text: "pH bem alcalino, água sem cloro foram os testes que pude fazer. Sei que tem outras vantagens, mas esses foram os dois testes que consegui fazer com meus recursos e realmente confirmei essas informações.",
+      location: "Cliente Acqualive",
+      text: "pH bem alcalino e água sem cloro foram os testes q consegui fazer aqui. Sei que tem várias outras vantagens, mas esses dois eu confirmei com meus próprios recursos e funciona msm.",
     },
     {
       name: "Jeane S.",
-      location: "Compradora verificada",
-      text: "O filtro é lindo! Estou encantada com a qualidade da água e o design do purificador. Recomendo de olhos fechados.",
+      location: "Cliente Acqualive",
+      text: "O filtro é lindo demais! Tô encantada com a qualidade da água e com o design. Recomendo de olhos fechados, vale muito a pena.",
     },
     {
       name: "Dácio Nunes",
       location: "Cliente Acqualive",
-      text: "Mesmo sem realizar testes laboratoriais, o pH alcalino é simplesmente evidente, devido à coloração mais cristalina da água e ao sabor adocicado. Excelente produto.",
+      text: "Mesmo sem fazer teste de laboratório, da pra perceber o pH alcalino fácil, fácil. A água fica mais cristalina e tem um sabor levemente adocicado. Excelente produto!",
     },
     {
       name: "Geovane Leandro",
-      location: "Comprador verificado",
-      text: "Produto de ótima aparência, grande capacidade volumétrica e cumpre o que promete. Recomendo para quem busca qualidade real na água do dia a dia.",
+      location: "Cliente Acqualive",
+      text: "Produto de ótima aparência, grande capacidade e cumpre o q promete. Recomendo pra quem busca qualidade de verdade na água do dia a dia.",
     },
     {
       name: "Tarcisio A. Rodrigues",
-      location: "Comprador verificado",
-      text: "Muito bom. A diferença na qualidade da água é perceptível desde o primeiro copo. Vale cada centavo investido.",
+      location: "Cliente Acqualive",
+      text: "Muito bom msm. A diferença na qualidade da água da pra sentir já no primeiro gole. Vale cada centavo investido.",
     },
     {
       name: "Larissa",
-      location: "Compradora verificada",
-      text: "Praticidade incrível, não preciso ficar enchendo o tempo todo. A água sempre fresquinha e disponível para toda a família. Adorei!",
+      location: "Cliente Acqualive",
+      text: "Praticidade absurda, não preciso ficar enchendo o tempo todo. A água sempre fresquinha e disponível pra família toda. Adorei demais!",
     },
   ];
 
-  const [currentSlide, setCurrentSlide] = useState(0);
   const slidesPerView = 3;
-  const maxSlide = Math.max(0, testimonials.length - slidesPerView);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const next = () => setCurrentSlide((p) => Math.min(p + 1, maxSlide));
-  const prev = () => setCurrentSlide((p) => Math.max(p - 1, 0));
+  // Loop infinito: avança automaticamente
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((p) => (p + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
+
+  const next = () => setCurrentSlide((p) => (p + 1) % testimonials.length);
+  const prev = () => setCurrentSlide((p) => (p - 1 + testimonials.length) % testimonials.length);
+
+  // Duplica para criar efeito de loop visual contínuo
+  const loopedTestimonials = [...testimonials, ...testimonials];
 
   return (
     <section id="depoimentos" className="py-20 md:py-28 bg-white overflow-hidden">
@@ -812,15 +822,15 @@ const TestimonialsSection = () => {
           </h2>
         </div>
 
-        {/* Desktop carousel */}
+        {/* Desktop carousel - loop infinito */}
         <div className="hidden md:block relative">
           <div className="overflow-hidden">
             <motion.div
               className="flex gap-6"
               animate={{ x: `calc(-${currentSlide} * (100% / ${slidesPerView}) - ${currentSlide} * (1.5rem / ${slidesPerView}))` }}
-              transition={{ type: "spring", stiffness: 100, damping: 20 }}
+              transition={{ type: "spring", stiffness: 80, damping: 22 }}
             >
-              {testimonials.map((t, i) => (
+              {loopedTestimonials.map((t, i) => (
                 <div key={i} className="w-[calc(33.333%-1rem)] flex-shrink-0">
                   <div className="relative bg-[hsl(210,20%,97%)] rounded-2xl p-8 hover:shadow-elevated transition-all duration-300 flex flex-col h-full">
                     <Quote className="w-10 h-10 text-[hsl(21,89%,55%)] opacity-20 mb-4" />
@@ -849,14 +859,13 @@ const TestimonialsSection = () => {
           <div className="flex items-center justify-center gap-4 mt-10">
             <button
               onClick={prev}
-              disabled={currentSlide === 0}
               aria-label="Depoimento anterior"
-              className="w-12 h-12 rounded-full bg-[hsl(215,62%,31%)] text-white flex items-center justify-center hover:bg-[hsl(21,89%,55%)] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+              className="w-12 h-12 rounded-full bg-[hsl(215,62%,31%)] text-white flex items-center justify-center hover:bg-[hsl(21,89%,55%)] transition-colors"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <div className="flex gap-2">
-              {Array(maxSlide + 1).fill(0).map((_, i) => (
+              {testimonials.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setCurrentSlide(i)}
@@ -867,9 +876,8 @@ const TestimonialsSection = () => {
             </div>
             <button
               onClick={next}
-              disabled={currentSlide === maxSlide}
               aria-label="Próximo depoimento"
-              className="w-12 h-12 rounded-full bg-[hsl(215,62%,31%)] text-white flex items-center justify-center hover:bg-[hsl(21,89%,55%)] transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+              className="w-12 h-12 rounded-full bg-[hsl(215,62%,31%)] text-white flex items-center justify-center hover:bg-[hsl(21,89%,55%)] transition-colors"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
@@ -901,6 +909,11 @@ const TestimonialsSection = () => {
             </div>
           ))}
         </div>
+
+        {/* Asterisco - fonte */}
+        <p className="text-center text-xs text-[hsl(215,30%,35%)]/70 mt-8 italic">
+          *Depoimentos retirados do site Acqualive, seção Terracota.
+        </p>
       </div>
     </section>
   );
