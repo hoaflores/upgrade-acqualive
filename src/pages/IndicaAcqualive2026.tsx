@@ -25,9 +25,6 @@ import terracotaImg from "@/assets/indica-prod-terracota.png";
 import heroRustic from "@/assets/indica-hero-terracota-rustic.jpg";
 import coupleKitchen from "@/assets/indica-couple-kitchen.jpg";
 import familyDinner from "@/assets/indica-family-dinner.jpg";
-import depoDalleLaste from "@/assets/depo-dalle-laste.png";
-import depoLyoto from "@/assets/depo-lyoto.png";
-import depoPaloma from "@/assets/depo-paloma.png";
 import faqPour from "@/assets/indica-faq-pour.png";
 import aboutKitchen from "@/assets/indica-about-kitchen.png";
 
@@ -751,40 +748,44 @@ const HowItWorks = () => {
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Samuel Dalle Laste",
-      location: "Médico — Porto Alegre / São Paulo",
-      text: "Eu tenho o filtro da Acqualive em Porto Alegre e São Paulo. A Acqualive já hidrata todos os profissionais e pacientes da Clínica Dalle Laste há 8 anos.",
-      photo: depoDalleLaste,
-    },
-    {
-      name: "Lyoto Machida",
-      location: "Campeão Mundial UFC",
-      text: "Fui apresentado aos Purificadores Acqualive e eu posso dizer que o negócio é bom! Bom não só para minha família, mas também para o nosso dia a dia.",
-      photo: depoLyoto,
-    },
-    {
-      name: "Paloma Tusset",
-      location: "Nutricionista",
-      text: "Eu tenho um grande prazer com essa parceria. Essa água, que passa pelo filtro, tem uma qualidade muito melhor. Nossa parceria com a Acqualive enriquece a vida das pessoas com mais qualidade e sabor.",
-      photo: depoPaloma,
+      name: "Pablo Lopez",
+      location: "Comprador verificado",
+      text: "Assim que chegou em casa instalamos e medimos o pH da água direto da torneira: 5.5. Após passar pelo filtro, foi para pH 9. A água também tinha sabor de terra e o filtro tirou tudo isso. A água fica incrível! Em casa agora todos estamos consumindo mais água.",
     },
     {
       name: "Roselene R.",
       location: "Compradora verificada",
       text: "Amei o purificador de água Acqualive! Muito lindo, combinou com minha cozinha! Só de saber que vou ter uma água de qualidade em minha casa já é tudo de bom!",
-      photo: null,
+    },
+    {
+      name: "Fernando Oliveira",
+      location: "Comprador verificado",
+      text: "pH bem alcalino, água sem cloro foram os testes que pude fazer. Sei que tem outras vantagens, mas esses foram os dois testes que consegui fazer com meus recursos e realmente confirmei essas informações.",
     },
     {
       name: "Jeane S.",
       location: "Compradora verificada",
       text: "O filtro é lindo! Estou encantada com a qualidade da água e o design do purificador. Recomendo de olhos fechados.",
-      photo: null,
     },
     {
       name: "Dácio Nunes",
       location: "Cliente Acqualive",
       text: "Mesmo sem realizar testes laboratoriais, o pH alcalino é simplesmente evidente, devido à coloração mais cristalina da água e ao sabor adocicado. Excelente produto.",
-      photo: null,
+    },
+    {
+      name: "Geovane Leandro",
+      location: "Comprador verificado",
+      text: "Produto de ótima aparência, grande capacidade volumétrica e cumpre o que promete. Recomendo para quem busca qualidade real na água do dia a dia.",
+    },
+    {
+      name: "Tarcisio A. Rodrigues",
+      location: "Comprador verificado",
+      text: "Muito bom. A diferença na qualidade da água é perceptível desde o primeiro copo. Vale cada centavo investido.",
+    },
+    {
+      name: "Larissa",
+      location: "Compradora verificada",
+      text: "Praticidade incrível, não preciso ficar enchendo o tempo todo. A água sempre fresquinha e disponível para toda a família. Adorei!",
     },
   ];
 
@@ -830,12 +831,8 @@ const TestimonialsSection = () => {
                     </div>
                     <p className="text-[hsl(215,30%,35%)] leading-relaxed mb-6 text-sm flex-grow">"{t.text}"</p>
                     <div className="flex items-center gap-3 pt-4 border-t border-border/50 mt-auto">
-                      <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[hsl(215,62%,31%)] flex-shrink-0 bg-[hsl(215,62%,31%)] flex items-center justify-center">
-                        {t.photo ? (
-                          <img src={t.photo} alt={t.name} loading="lazy" className="w-full h-full object-cover" />
-                        ) : (
-                          <span className="text-white font-bold text-sm">{t.name.split(' ').map(n => n[0]).slice(0, 2).join('')}</span>
-                        )}
+                      <div className="w-12 h-12 rounded-full flex-shrink-0 bg-[hsl(215,62%,31%)] flex items-center justify-center">
+                        <span className="text-white font-bold text-sm">{t.name.split(' ').map(n => n[0]).slice(0, 2).join('')}</span>
                       </div>
                       <div>
                         <p className="font-bold text-[hsl(215,65%,19%)] text-sm">{t.name}</p>
@@ -892,12 +889,8 @@ const TestimonialsSection = () => {
                 </div>
                 <p className="text-[hsl(215,30%,35%)] leading-relaxed mb-5 text-sm">"{t.text}"</p>
                 <div className="flex items-center gap-3 pt-3 border-t border-border/50 mt-auto">
-                  <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-[hsl(215,62%,31%)] flex-shrink-0 bg-[hsl(215,62%,31%)] flex items-center justify-center">
-                    {t.photo ? (
-                      <img src={t.photo} alt={t.name} loading="lazy" className="w-full h-full object-cover" />
-                    ) : (
-                      <span className="text-white font-bold text-xs">{t.name.split(' ').map(n => n[0]).slice(0, 2).join('')}</span>
-                    )}
+                  <div className="w-10 h-10 rounded-full flex-shrink-0 bg-[hsl(215,62%,31%)] flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">{t.name.split(' ').map(n => n[0]).slice(0, 2).join('')}</span>
                   </div>
                   <div>
                     <p className="font-bold text-[hsl(215,65%,19%)] text-sm">{t.name}</p>
