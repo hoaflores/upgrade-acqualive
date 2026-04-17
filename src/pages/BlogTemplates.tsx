@@ -2492,6 +2492,75 @@ const ARTICLES = [
     .seo-row { flex-direction: column; gap: 4px; }
     h2 { padding-left: 16px; }
   }
+
+  /* === BLINDAGEM CONTRA TEMAS WORDPRESS / ELEMENTOR ===
+     Garante que cores não sejam sobrescritas pelo tema.
+     Usa especificidade alta + !important em todos os blocos visíveis. */
+  body, body p, body li, body span, body strong, body em, body h1, body h2, body h3, body h4, body h5, body h6, body a {
+    -webkit-font-smoothing: antialiased;
+  }
+  .article-body, .article-body p, .article-body li, .article-body span:not(.num):not(.arrow):not(.eyebrow):not(.title):not(.quote-author):not(.stat-number):not(.stat-label) {
+    color: #3f3f46 !important;
+  }
+  .article-body h1, .article-body h2, .article-body h3, .article-body h4 { color: #09090b !important; }
+  .article-body h2 { color: #09090b !important; }
+  .article-body h3 { color: #18181b !important; }
+  .article-body strong { color: #18181b !important; }
+  .article-body .lead { color: #52525b !important; }
+  .article-body a { color: #2563eb !important; text-decoration: underline; }
+  .article-body a:hover { color: #1d4ed8 !important; }
+
+  /* Blocos com fundo escuro: força texto claro */
+  .toc-podcast, .toc-podcast * { color: #e2e8f0 !important; }
+  .toc-podcast .eyebrow { color: #60a5fa !important; }
+  .toc-podcast .title { color: #f8fafc !important; }
+  .toc-podcast a { color: #e2e8f0 !important; text-decoration: none !important; }
+  .toc-podcast a:hover { color: #ffffff !important; }
+  .toc-podcast .num { color: #60a5fa !important; }
+  .toc-podcast a:hover .num { color: #ffffff !important; }
+
+  .podcast-hero, .podcast-hero * { color: #e2e8f0 !important; }
+  .podcast-hero .hero-eyebrow { color: #60a5fa !important; }
+  .podcast-hero h1 { color: #ffffff !important; }
+  .podcast-hero .guest-name { color: #ffffff !important; }
+  .podcast-hero .guest-role { color: #94a3b8 !important; }
+
+  .podcast-quote p { color: #e2e8f0 !important; }
+  .podcast-quote .quote-author { color: #60a5fa !important; }
+
+  .cta-section, .cta-section * { color: #94a3b8 !important; }
+  .cta-section h2 { color: #ffffff !important; }
+  .cta-section h2 span { color: #60a5fa !important; }
+  .cta-section p { color: #94a3b8 !important; }
+  .cta-button, .cta-button:hover, .cta-button:visited { color: #ffffff !important; text-decoration: none !important; }
+
+  .stat-card { color: #94a3b8 !important; }
+  .stat-card .stat-label { color: #94a3b8 !important; }
+  .comparison-table thead th { color: #fafafa !important; }
+  .comparison-table tbody td { color: #52525b !important; }
+  .comparison-table tbody td:first-child { color: #18181b !important; }
+
+  .insight-box h4 { color: #2563eb !important; }
+  .insight-box p { color: #475569 !important; }
+  .danger-box h4 { color: #dc2626 !important; }
+  .danger-box p { color: #7f1d1d !important; }
+  .science-box h4 { color: #16a34a !important; }
+  .science-box p { color: #14532d !important; }
+  .science-box a { color: #15803d !important; }
+
+  .pillar-list li { color: #3f3f46 !important; }
+  .pillar-list li strong { color: #1e40af !important; }
+  ul.check-list li { color: #3f3f46 !important; }
+
+  .mid-cta p { color: #1e40af !important; }
+  .mid-cta a, .mid-cta a:hover, .mid-cta a:visited { color: #ffffff !important; text-decoration: none !important; }
+
+  .references h3 { color: #94a3b8 !important; }
+  .references li { color: #71717a !important; }
+  .references a { color: #3b82f6 !important; }
+
+  .footer-article p { color: #a1a1aa !important; }
+  .img-caption, .video-caption { color: #a1a1aa !important; }
 </style>
 </head>
 <body>
