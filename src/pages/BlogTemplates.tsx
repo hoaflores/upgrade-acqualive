@@ -3500,27 +3500,89 @@ const ARTICLES = [
   }
 
   .toc {
-    background: #ffffff;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
     border: 1px solid #e5e7eb;
-    border-radius: 16px;
-    padding: 28px 32px;
-    margin-bottom: 48px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    border-radius: 20px;
+    padding: 32px 36px;
+    margin-bottom: 56px;
+    box-shadow: 0 4px 24px rgba(15,23,42,0.06);
+    position: relative;
+    overflow: hidden;
+  }
+  .toc::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #16a34a 0%, #06b6d4 100%);
   }
   .toc-title {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
     color: #16a34a;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
-  .toc ol { padding-left: 20px; }
+  .toc-title::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background: #16a34a;
+  }
+  .toc ol {
+    padding-left: 0;
+    list-style: none;
+    counter-reset: toc-counter;
+    display: grid;
+    gap: 4px;
+  }
   .toc li {
-    font-size: 14px;
-    color: #16a34a;
-    padding: 5px 0;
+    counter-increment: toc-counter;
     line-height: 1.5;
+  }
+  .toc li a {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #334155;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+  .toc li a::before {
+    content: counter(toc-counter, decimal-leading-zero);
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 800;
+    color: #16a34a;
+    background: #ecfdf5;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 3px 8px;
+    line-height: 1.3;
+    min-width: 32px;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+  .toc li a:hover {
+    background: #f0fdf4;
+    color: #15803d;
+    border-color: #bbf7d0;
+    transform: translateX(4px);
+  }
+  .toc li a:hover::before {
+    background: #16a34a;
+    color: #ffffff;
+    border-color: #16a34a;
   }
 
   .section-divider {
@@ -3696,15 +3758,6 @@ const ARTICLES = [
 
   html { scroll-behavior: smooth; }
   h2[id], h3[id], .food-card[id] { scroll-margin-top: 24px; }
-  .toc a {
-    color: #16a34a;
-    text-decoration: none;
-    transition: color 0.2s, text-decoration 0.2s;
-  }
-  .toc a:hover {
-    color: #15803d;
-    text-decoration: underline;
-  }
 </style>
 </head>
 <body>
@@ -3987,6 +4040,35 @@ const ARTICLES = [
 <footer class="footer-article">
   <p>Acqualive. Tecnologia em água alcalina ionizada desde 1996.</p>
 </footer>
+
+<script>
+(function(){
+  function postHeight(){
+    try {
+      var h = document.documentElement.scrollHeight;
+      parent.postMessage({ type: 'blog-iframe-height', height: h }, '*');
+    } catch(e) {}
+  }
+  window.addEventListener('load', postHeight);
+  window.addEventListener('resize', postHeight);
+  setTimeout(postHeight, 300);
+  setTimeout(postHeight, 1200);
+
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href').slice(1);
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    var top = el.getBoundingClientRect().top + window.pageYOffset;
+    try {
+      parent.postMessage({ type: 'blog-iframe-scroll', top: top }, '*');
+    } catch(err) {}
+  });
+})();
+</script>
 
 </body>
 </html>`,
