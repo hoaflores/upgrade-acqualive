@@ -46,6 +46,7 @@ const App = () => (
             <Route path="/email-refil" element={<EmailRefilTemplates />} />
             <Route path="/blog-templates" element={<BlogTemplates />} />
             <Route path="/indica-acqualive-2026" element={<IndicaAcqualive2026 />} />
+            <Route path="/indicado-acqualive" element={<IndicaAcqualive2026 />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
