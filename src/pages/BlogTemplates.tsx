@@ -2564,7 +2564,7 @@ const ARTICLES = [
 
   <p>Enquanto os cursos de medicina dedicam centenas de horas a decorar listas de doenças e protocolos farmacológicos, o elemento que constitui 70% do corpo humano permanece ignorado. "A gente se detém a estudar, decorar inúmeras listas de doenças e de remédio. E aí a gente vê no final da vida dos pacientes, eles carregando prescrições com dez, 15 remédios e não tem uma orientação sobre a água que tem que tomar", afirmou o Dr. Dayan durante a gravação.</p>
 
-  <p>Essa lacuna na formação médica não é exclusividade brasileira. O próprio <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener">Dr. Lair Ribeiro já declarou</a> que teve apenas 6 horas de nutrição em toda a faculdade. Se a nutrição já é negligenciada, a água, que é o veículo principal de tudo o que acontece no organismo, simplesmente não existe no currículo.</p>
+  <p>Essa lacuna na formação médica não é exclusividade brasileira. O próprio <a href="https://www.acqualive.com.br" target="_blank" rel="noopener">Dr. Lair Ribeiro já declarou</a> que teve apenas 6 horas de nutrição em toda a faculdade. Se a nutrição já é negligenciada, a água, que é o veículo principal de tudo o que acontece no organismo, simplesmente não existe no currículo.</p>
 
   <div class="insight-box">
     <h4>Dado Relevante</h4>
@@ -2620,7 +2620,7 @@ const ARTICLES = [
 
   <div class="mid-cta">
     <p>Descubra como a tecnologia Acqualive transforma a água que você bebe</p>
-    <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener" style="display:inline-block;background:#2563eb;color:#ffffff;font-size:13px;font-weight:700;padding:12px 28px;border-radius:10px;text-decoration:none;">Conhecer a Tecnologia Acqualive</a>
+    <a href="https://www.acqualive.com.br" target="_blank" rel="noopener" style="display:inline-block;background:#2563eb;color:#ffffff;font-size:13px;font-weight:700;padding:12px 28px;border-radius:10px;text-decoration:none;">Conhecer a Tecnologia Acqualive</a>
   </div>
 
   <div class="section-divider"></div>
@@ -2729,7 +2729,7 @@ const ARTICLES = [
 
   <div class="danger-box">
     <h4>Alerta para gestantes</h4>
-    <p>O fígado do bebê em gestação ainda não produz as enzimas necessárias para metabolizar trihalometanos. Segundo dados apresentados no podcast, um banho de 15 minutos a 35 graus com 2 ppm de cloro equivale à exposição de um cigarro. Gestantes devem considerar seriamente a filtragem da água, inclusive a do chuveiro. <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener" style="color:#dc2626;font-weight:700;">A Acqualive tem solução para chuveiro.</a></p>
+    <p>O fígado do bebê em gestação ainda não produz as enzimas necessárias para metabolizar trihalometanos. Segundo dados apresentados no podcast, um banho de 15 minutos a 35 graus com 2 ppm de cloro equivale à exposição de um cigarro. Gestantes devem considerar seriamente a filtragem da água, inclusive a do chuveiro. <a href="https://www.acqualive.com.br" target="_blank" rel="noopener" style="color:#dc2626;font-weight:700;">A Acqualive tem solução para chuveiro.</a></p>
   </div>
 
   <h3>O que verificar no seu filtro de água</h3>
@@ -2744,7 +2744,7 @@ const ARTICLES = [
 
   <div class="mid-cta">
     <p>A Acqualive é a única empresa brasileira com estudo clínico publicado sobre os efeitos da sua água na saúde</p>
-    <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener" style="display:inline-block;background:#2563eb;color:#ffffff;font-size:13px;font-weight:700;padding:12px 28px;border-radius:10px;text-decoration:none;">Conhecer a Acqualive</a>
+    <a href="https://www.acqualive.com.br" target="_blank" rel="noopener" style="display:inline-block;background:#2563eb;color:#ffffff;font-size:13px;font-weight:700;padding:12px 28px;border-radius:10px;text-decoration:none;">Conhecer a Acqualive</a>
   </div>
 
   <div class="section-divider"></div>
@@ -2784,7 +2784,7 @@ const ARTICLES = [
 
   <div class="science-box">
     <h4>Evidência Científica</h4>
-    <p>A pesquisa demonstrou que a água alcalina ionizada Acqualive foi capaz de ativar microRNAs relacionados à supressão tumoral e controle inflamatório, algo que fármacos anti-inflamatórios convencionais nem sempre conseguem. É o primeiro estudo brasileiro desse tipo e um dos poucos no mundo com esse nível de rigor. <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener">Saiba mais sobre a tecnologia por trás da pesquisa.</a></p>
+    <p>A pesquisa demonstrou que a água alcalina ionizada Acqualive foi capaz de ativar microRNAs relacionados à supressão tumoral e controle inflamatório, algo que fármacos anti-inflamatórios convencionais nem sempre conseguem. É o primeiro estudo brasileiro desse tipo e um dos poucos no mundo com esse nível de rigor. <a href="https://www.acqualive.com.br" target="_blank" rel="noopener">Saiba mais sobre a tecnologia por trás da pesquisa.</a></p>
   </div>
 
   <div class="section-divider"></div>
@@ -2905,7 +2905,7 @@ const ARTICLES = [
   <div class="cta-section">
     <h2>Transforme a água da sua casa com a <span>tecnologia Acqualive</span></h2>
     <p>A mesma tecnologia validada em estudo clínico publicado internacionalmente, agora acessível para a sua família. Água alcalina, antioxidante e purificada por menos de R$ 0,02 o litro.</p>
-    <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener" class="cta-button" style="display:inline-block;background:linear-gradient(135deg,#3b82f6,#2563eb);color:#ffffff;font-size:15px;font-weight:700;padding:18px 40px;border-radius:14px;text-decoration:none;box-shadow:0 4px 28px rgba(37,99,235,0.4);">Quero Conhecer a Acqualive</a>
+    <a href="https://www.acqualive.com.br" target="_blank" rel="noopener" class="cta-button" style="display:inline-block;background:linear-gradient(135deg,#3b82f6,#2563eb);color:#ffffff;font-size:15px;font-weight:700;padding:18px 40px;border-radius:14px;text-decoration:none;box-shadow:0 4px 28px rgba(37,99,235,0.4);">Quero Conhecer a Acqualive</a>
   </div>
 
 <!-- BLOCO 15: REFERÊNCIAS -->
@@ -2920,7 +2920,7 @@ const ARTICLES = [
       <li>Nature Medicine. <a href="https://www.nature.com/articles/s41591-019-0675-0" target="_blank" rel="noopener">Chronic low-grade inflammation and disease</a>.</li>
       <li>Robbins, Tratado de Patologia. Sobre agentes etiológicos múltiplos.</li>
       <li>Otto Warburg, Prêmio Nobel de Medicina, sobre terreno biológico ácido e desenvolvimento de cânceres.</li>
-      <li><a href="https://lp.acqualive.com.br" target="_blank" rel="noopener">Acqualive, Tecnologia de Água Alcalina Ionizada</a>.</li>
+      <li><a href="https://www.acqualive.com.br" target="_blank" rel="noopener">Acqualive, Tecnologia de Água Alcalina Ionizada</a>.</li>
     </ol>
   </div>
 
@@ -3677,7 +3677,7 @@ const ARTICLES = [
 
   <div class="mid-cta">
     <p>Quer potencializar os efeitos dos alimentos anti-inflamatórios? Descubra como a água que você bebe faz toda a diferença</p>
-    <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener" style="display:inline-block;background:#16a34a;color:#ffffff;font-size:13px;font-weight:700;padding:12px 28px;border-radius:10px;text-decoration:none;">Conhecer a Acqualive</a>
+    <a href="https://www.acqualive.com.br" target="_blank" rel="noopener" style="display:inline-block;background:#16a34a;color:#ffffff;font-size:13px;font-weight:700;padding:12px 28px;border-radius:10px;text-decoration:none;">Conhecer a Acqualive</a>
   </div>
 
   <!-- ALIMENTO 3: FRUTAS VERMELHAS -->
@@ -3792,7 +3792,7 @@ const ARTICLES = [
 
   <div class="science-box">
     <h4>Evidência Científica</h4>
-    <p>A pesquisa demonstrou que a água alcalina ionizada ativou microRNAs relacionados à supressão tumoral e controle inflamatório, algo que anti-inflamatórios farmacêuticos convencionais nem sempre conseguem. O estudo foi apresentado em congressos internacionais em Praga e Nova York. <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener">Conheça a tecnologia Acqualive.</a></p>
+    <p>A pesquisa demonstrou que a água alcalina ionizada ativou microRNAs relacionados à supressão tumoral e controle inflamatório, algo que anti-inflamatórios farmacêuticos convencionais nem sempre conseguem. O estudo foi apresentado em congressos internacionais em Praga e Nova York. <a href="https://www.acqualive.com.br" target="_blank" rel="noopener">Conheça a tecnologia Acqualive.</a></p>
   </div>
 
   <h3>Por que a água comum pode estar inflamando seu corpo</h3>
@@ -3833,7 +3833,7 @@ const ARTICLES = [
   <div class="cta-section">
     <h2>Sua água é <span>anti-inflamatória</span>?</h2>
     <p>Descubra como a tecnologia Acqualive transforma a água da sua torneira em uma aliada poderosa contra a inflamação crônica.</p>
-    <a href="https://lp.acqualive.com.br" target="_blank" rel="noopener" class="cta-button" style="display:inline-block;background:linear-gradient(135deg,#16a34a,#15803d);color:#ffffff;font-size:15px;font-weight:700;padding:18px 40px;border-radius:14px;text-decoration:none;box-shadow:0 4px 28px rgba(22,163,74,0.4);">Conhecer a Tecnologia Acqualive</a>
+    <a href="https://www.acqualive.com.br" target="_blank" rel="noopener" class="cta-button" style="display:inline-block;background:linear-gradient(135deg,#16a34a,#15803d);color:#ffffff;font-size:15px;font-weight:700;padding:18px 40px;border-radius:14px;text-decoration:none;box-shadow:0 4px 28px rgba(22,163,74,0.4);">Conhecer a Tecnologia Acqualive</a>
   </div>
 
   <!-- FICHA TÉCNICA SEO -->
