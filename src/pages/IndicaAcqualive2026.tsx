@@ -93,7 +93,7 @@ const TopBar = () => (
 const Header = () => (
   <header className="sticky top-0 z-50 bg-white shadow-md">
     <div className="container flex items-center justify-between h-20">
-      <a href="/">
+      <a href="https://www.acqualive.com.br" target="_blank" rel="noopener noreferrer">
         <img src={logoAzul} alt="Acqualive" className="h-8 md:h-10 w-auto" />
       </a>
       <nav className="hidden lg:flex items-center gap-8">
@@ -303,7 +303,7 @@ const AboutSection = () => (
           className="relative"
         >
           <div className="relative">
-            <img src={lifestyleImg2} alt="Purificador Acqualive em ambiente" loading="lazy" className="w-[70%] rounded-2xl shadow-elevated" />
+            <img src={aboutKitchen} alt="Purificador Acqualive Terracota em ambiente sofisticado" loading="lazy" className="w-[70%] rounded-2xl shadow-elevated" />
             <img src={coupleKitchen} alt="Casal feliz desfrutando de água Acqualive na cozinha" loading="lazy" className="absolute -bottom-10 right-0 w-[55%] rounded-2xl shadow-elevated border-[6px] border-white object-cover aspect-square" />
           </div>
           {/* Dot grid decoration */}
@@ -347,16 +347,7 @@ const AboutSection = () => (
             ))}
           </div>
 
-          {/* Founder-style badge (Insuba pattern) */}
-          <div className="flex items-center gap-4 p-4 bg-[hsl(210,20%,97%)] rounded-xl">
-            <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-[hsl(21,89%,55%)]">
-              <img src={consultImg} alt="Consultor Acqualive" className="w-full h-full object-cover" />
-            </div>
-            <div>
-              <p className="font-bold text-[hsl(215,65%,19%)]">Consultoria Personalizada</p>
-              <p className="text-sm text-[hsl(215,30%,35%)]">Seu consultor exclusivo te acompanha do primeiro contato à instalação</p>
-            </div>
-          </div>
+          {/* Consultoria Personalizada removida conforme solicitado */}
 
           <a href="#beneficios" className="inline-flex items-center gap-2 mt-6 text-[hsl(215,62%,31%)] font-semibold hover:text-[hsl(21,89%,55%)] transition-colors">
             Conheça todos os benefícios <ArrowRight className="w-4 h-4" />
