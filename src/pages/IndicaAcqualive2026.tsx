@@ -749,52 +749,62 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       name: "Pablo Lopez",
-      location: "Comprador verificado",
-      text: "Assim que chegou em casa instalamos e medimos o pH da água direto da torneira: 5.5. Após passar pelo filtro, foi para pH 9. A água também tinha sabor de terra e o filtro tirou tudo isso. A água fica incrível! Em casa agora todos estamos consumindo mais água.",
+      location: "Cliente Acqualive",
+      text: "Assim q chegou em casa a gente instalou e mediu o pH da água direto da torneira: 5.5. Depois de passar pelo filtro, foi pra pH 9!! A água tbm tinha um gosto de terra e o filtro tirou tudo. Ficou incrível, agora todo mundo aqui em casa tá bebendo muito mais água.",
     },
     {
       name: "Roselene R.",
-      location: "Compradora verificada",
-      text: "Amei o purificador de água Acqualive! Muito lindo, combinou com minha cozinha! Só de saber que vou ter uma água de qualidade em minha casa já é tudo de bom!",
+      location: "Cliente Acqualive",
+      text: "Ameeei o purificador! Muito lindo, combinou demais com minha cozinha. Só de saber que vou ter uma água de qualidade em casa já é tudo de bom :)",
     },
     {
       name: "Fernando Oliveira",
-      location: "Comprador verificado",
-      text: "pH bem alcalino, água sem cloro foram os testes que pude fazer. Sei que tem outras vantagens, mas esses foram os dois testes que consegui fazer com meus recursos e realmente confirmei essas informações.",
+      location: "Cliente Acqualive",
+      text: "pH bem alcalino e água sem cloro foram os testes q consegui fazer aqui. Sei que tem várias outras vantagens, mas esses dois eu confirmei com meus próprios recursos e funciona msm.",
     },
     {
       name: "Jeane S.",
-      location: "Compradora verificada",
-      text: "O filtro é lindo! Estou encantada com a qualidade da água e o design do purificador. Recomendo de olhos fechados.",
+      location: "Cliente Acqualive",
+      text: "O filtro é lindo demais! Tô encantada com a qualidade da água e com o design. Recomendo de olhos fechados, vale muito a pena.",
     },
     {
       name: "Dácio Nunes",
       location: "Cliente Acqualive",
-      text: "Mesmo sem realizar testes laboratoriais, o pH alcalino é simplesmente evidente, devido à coloração mais cristalina da água e ao sabor adocicado. Excelente produto.",
+      text: "Mesmo sem fazer teste de laboratório, da pra perceber o pH alcalino fácil, fácil. A água fica mais cristalina e tem um sabor levemente adocicado. Excelente produto!",
     },
     {
       name: "Geovane Leandro",
-      location: "Comprador verificado",
-      text: "Produto de ótima aparência, grande capacidade volumétrica e cumpre o que promete. Recomendo para quem busca qualidade real na água do dia a dia.",
+      location: "Cliente Acqualive",
+      text: "Produto de ótima aparência, grande capacidade e cumpre o q promete. Recomendo pra quem busca qualidade de verdade na água do dia a dia.",
     },
     {
       name: "Tarcisio A. Rodrigues",
-      location: "Comprador verificado",
-      text: "Muito bom. A diferença na qualidade da água é perceptível desde o primeiro copo. Vale cada centavo investido.",
+      location: "Cliente Acqualive",
+      text: "Muito bom msm. A diferença na qualidade da água da pra sentir já no primeiro gole. Vale cada centavo investido.",
     },
     {
       name: "Larissa",
-      location: "Compradora verificada",
-      text: "Praticidade incrível, não preciso ficar enchendo o tempo todo. A água sempre fresquinha e disponível para toda a família. Adorei!",
+      location: "Cliente Acqualive",
+      text: "Praticidade absurda, não preciso ficar enchendo o tempo todo. A água sempre fresquinha e disponível pra família toda. Adorei demais!",
     },
   ];
 
-  const [currentSlide, setCurrentSlide] = useState(0);
   const slidesPerView = 3;
-  const maxSlide = Math.max(0, testimonials.length - slidesPerView);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const next = () => setCurrentSlide((p) => Math.min(p + 1, maxSlide));
-  const prev = () => setCurrentSlide((p) => Math.max(p - 1, 0));
+  // Loop infinito: avança automaticamente
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((p) => (p + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
+
+  const next = () => setCurrentSlide((p) => (p + 1) % testimonials.length);
+  const prev = () => setCurrentSlide((p) => (p - 1 + testimonials.length) % testimonials.length);
+
+  // Duplica para criar efeito de loop visual contínuo
+  const loopedTestimonials = [...testimonials, ...testimonials];
 
   return (
     <section id="depoimentos" className="py-20 md:py-28 bg-white overflow-hidden">
