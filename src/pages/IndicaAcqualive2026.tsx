@@ -25,9 +25,6 @@ import terracotaImg from "@/assets/indica-prod-terracota.png";
 import heroRustic from "@/assets/indica-hero-terracota-rustic.jpg";
 import coupleKitchen from "@/assets/indica-couple-kitchen.jpg";
 import familyDinner from "@/assets/indica-family-dinner.jpg";
-import depoDalleLaste from "@/assets/depo-dalle-laste.png";
-import depoLyoto from "@/assets/depo-lyoto.png";
-import depoPaloma from "@/assets/depo-paloma.png";
 import faqPour from "@/assets/indica-faq-pour.png";
 import aboutKitchen from "@/assets/indica-about-kitchen.png";
 
