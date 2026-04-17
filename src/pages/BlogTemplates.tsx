@@ -2399,6 +2399,24 @@ const ARTICLES = [
 
   <div class="section-divider"></div>
 
+  <!-- TOC -->
+  <nav class="toc" aria-label="Índice do artigo do podcast com Dr. Dayan Siebra">
+    <div class="toc-title">Índice do Artigo</div>
+    <ol>
+      <li>Nosso convidado admite: nunca aprendeu sobre água na faculdade de medicina</li>
+      <li>Desidratação crônica: você pode estar desidratado agora mesmo sem saber</li>
+      <li>Sangue grosso, trombose e infarto: a conexão que a medicina convencional ignora</li>
+      <li>Tensão superficial: por que você pode beber água e continuar desidratado</li>
+      <li>pH e acidose metabólica: o terreno biológico que prepara o corpo para a doença</li>
+      <li>Inflamação crônica: a mãe de todas as doenças e o papel silencioso da água</li>
+      <li>Cloro na água: o pesticida que você consome todos os dias sem perceber</li>
+      <li>O estudo que chocou a comunidade médica: 28 pacientes, 4 meses, só água Acqualive</li>
+      <li>Laboratório ao vivo: a transformação da água diante das câmeras</li>
+      <li>Os 5 pilares da água ideal, segundo 30 anos de pesquisa Acqualive</li>
+      <li>O compromisso público do Dr. Dayan Siebra após conhecer a Acqualive</li>
+    </ol>
+  </nav>
+
 <!-- BLOCO 3: INTRODUÇÃO E CONTEXTO -->
 
   <h2>Nosso convidado admite: nunca aprendeu sobre água na faculdade de medicina</h2>
