@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Shield, Droplets, Sparkles, Star, ChevronRight, CheckCircle2,
   ArrowRight, Heart, Award, Phone, Mail, MapPin,
