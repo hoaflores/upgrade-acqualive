@@ -4020,12 +4020,13 @@ const BlogTemplates = () => {
       {/* Content */}
       <div className="max-w-5xl mx-auto px-4 pb-12">
         {viewMode === "preview" ? (
-          <div className="rounded-lg overflow-hidden bg-white">
+          <div ref={iframeWrapperRef} className="rounded-lg overflow-hidden bg-white">
             <iframe
+              ref={iframeRef}
               srcDoc={resolvedHtml}
               title={`Blog ${currentIndex + 1}`}
-              className="w-full border-0"
-              style={{ minHeight: "2800px" }}
+              className="w-full border-0 block"
+              style={{ height: `${iframeHeight}px` }}
             />
           </div>
         ) : (
