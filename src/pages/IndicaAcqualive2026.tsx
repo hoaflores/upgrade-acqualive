@@ -4,7 +4,8 @@ import { useState } from "react";
 import {
   Shield, Droplets, Sparkles, Star, ChevronRight, CheckCircle2,
   ArrowRight, Heart, Award, Phone, Mail, MapPin,
-  ChevronDown, Quote, Beaker, Leaf, Zap, Users
+  ChevronDown, Quote, Beaker, Leaf, Zap, Users,
+  Facebook, Instagram, Youtube, ChevronLeft
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
@@ -28,6 +29,7 @@ import depoDalleLaste from "@/assets/depo-dalle-laste.png";
 import depoLyoto from "@/assets/depo-lyoto.png";
 import depoPaloma from "@/assets/depo-paloma.png";
 import faqPour from "@/assets/indica-faq-pour.png";
+import aboutKitchen from "@/assets/indica-about-kitchen.png";
 
 const WHATSAPP_LINK = "https://wa.me/555192928468?text=Olá!%20Fui%20indicado%20por%20um%20amigo%20e%20quero%20conhecer%20a%20condição%20especial%20Acqualive.";
 
