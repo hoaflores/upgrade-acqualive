@@ -1132,10 +1132,21 @@ const Footer = () => (
         <img src={logoAzul} alt="Acqualive" className="h-6 brightness-0 invert opacity-40" />
         <p className="text-sm text-center">© {new Date().getFullYear()} Acqualive do Brasil. Todos os direitos reservados. CNPJ: 17.918.498/0001-53</p>
         <div className="flex gap-3">
-          {["F", "I", "Y"].map((letter, i) => (
-            <div key={i} className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-xs font-bold hover:bg-[hsl(21,89%,55%)] transition-colors cursor-pointer">
-              {letter}
-            </div>
+          {[
+            { Icon: Facebook, href: "https://www.facebook.com/acqualivedobrasil", label: "Facebook" },
+            { Icon: Instagram, href: "https://www.instagram.com/acqualivegroup/", label: "Instagram" },
+            { Icon: Youtube, href: "https://www.youtube.com/channel/UCoxasL5YDgz0AhqN2UgHV2A", label: "YouTube" },
+          ].map(({ Icon, href, label }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Acqualive no ${label}`}
+              className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[hsl(21,89%,55%)] transition-colors"
+            >
+              <Icon className="w-4 h-4 text-white" />
+            </a>
           ))}
         </div>
       </div>
