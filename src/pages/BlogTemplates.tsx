@@ -1745,13 +1745,143 @@ const ARTICLES = [
   @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
   
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  
+  html { scroll-behavior: smooth; }
+
   body {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     background-color: #fafbfc;
     color: #18181b;
     line-height: 1.8;
     -webkit-font-smoothing: antialiased;
+  }
+
+  .article-body h2[id],
+  .video-embed[id] { scroll-margin-top: 24px; }
+
+  /* TOC Podcast — premium dark navigation */
+  .toc-podcast {
+    background: linear-gradient(160deg, #0b1220 0%, #0f172a 60%, #111b32 100%);
+    border: 1px solid rgba(96,165,250,0.18);
+    border-radius: 22px;
+    padding: 36px 32px;
+    margin: 40px 0 56px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 18px 50px -20px rgba(2,6,23,0.55);
+  }
+  .toc-podcast::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 320px; height: 320px;
+    background: radial-gradient(circle, rgba(59,130,246,0.22), transparent 65%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .toc-podcast::after {
+    content: '';
+    position: absolute;
+    bottom: -140px; left: -100px;
+    width: 320px; height: 320px;
+    background: radial-gradient(circle, rgba(249,115,22,0.12), transparent 65%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .toc-podcast-head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(148,163,184,0.15);
+  }
+  .toc-podcast-icon {
+    width: 44px; height: 44px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px -8px rgba(37,99,235,0.7);
+  }
+  .toc-podcast-icon svg { width: 22px; height: 22px; color: #fff; }
+  .toc-podcast-head .titles { display: flex; flex-direction: column; }
+  .toc-podcast-head .eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #60a5fa;
+  }
+  .toc-podcast-head .title {
+    font-size: 19px;
+    font-weight: 800;
+    color: #f8fafc;
+    letter-spacing: -0.01em;
+  }
+  .toc-podcast ol {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 18px;
+  }
+  .toc-podcast li { list-style: none; }
+  .toc-podcast a {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: rgba(148,163,184,0.05);
+    border: 1px solid rgba(148,163,184,0.08);
+    color: #e2e8f0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.45;
+    transition: background .2s ease, border-color .2s ease, transform .2s ease, color .2s ease;
+  }
+  .toc-podcast a:hover {
+    background: rgba(59,130,246,0.12);
+    border-color: rgba(96,165,250,0.45);
+    color: #ffffff;
+    transform: translateX(2px);
+  }
+  .toc-podcast a:hover .num {
+    background: linear-gradient(135deg, #f97316, #ef4444);
+    color: #fff;
+    border-color: transparent;
+  }
+  .toc-podcast .num {
+    flex-shrink: 0;
+    width: 28px; height: 28px;
+    border-radius: 8px;
+    background: rgba(15,23,42,0.6);
+    border: 1px solid rgba(96,165,250,0.35);
+    color: #60a5fa;
+    font-size: 12px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease;
+  }
+  .toc-podcast .arrow {
+    margin-left: auto;
+    color: rgba(148,163,184,0.5);
+    flex-shrink: 0;
+    transition: transform .2s ease, color .2s ease;
+  }
+  .toc-podcast a:hover .arrow { color: #60a5fa; transform: translateX(3px); }
+  @media (max-width: 720px) {
+    .toc-podcast { padding: 28px 20px; border-radius: 18px; }
+    .toc-podcast ol { grid-template-columns: 1fr; gap: 8px; }
+    .toc-podcast a { font-size: 13.5px; padding: 11px 12px; }
   }
 
   .podcast-hero {
