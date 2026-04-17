@@ -831,12 +831,8 @@ const TestimonialsSection = () => {
                     </div>
                     <p className="text-[hsl(215,30%,35%)] leading-relaxed mb-6 text-sm flex-grow">"{t.text}"</p>
                     <div className="flex items-center gap-3 pt-4 border-t border-border/50 mt-auto">
-                      <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[hsl(215,62%,31%)] flex-shrink-0 bg-[hsl(215,62%,31%)] flex items-center justify-center">
-                        {t.photo ? (
-                          <img src={t.photo} alt={t.name} loading="lazy" className="w-full h-full object-cover" />
-                        ) : (
-                          <span className="text-white font-bold text-sm">{t.name.split(' ').map(n => n[0]).slice(0, 2).join('')}</span>
-                        )}
+                      <div className="w-12 h-12 rounded-full flex-shrink-0 bg-[hsl(215,62%,31%)] flex items-center justify-center">
+                        <span className="text-white font-bold text-sm">{t.name.split(' ').map(n => n[0]).slice(0, 2).join('')}</span>
                       </div>
                       <div>
                         <p className="font-bold text-[hsl(215,65%,19%)] text-sm">{t.name}</p>
@@ -893,12 +889,8 @@ const TestimonialsSection = () => {
                 </div>
                 <p className="text-[hsl(215,30%,35%)] leading-relaxed mb-5 text-sm">"{t.text}"</p>
                 <div className="flex items-center gap-3 pt-3 border-t border-border/50 mt-auto">
-                  <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-[hsl(215,62%,31%)] flex-shrink-0 bg-[hsl(215,62%,31%)] flex items-center justify-center">
-                    {t.photo ? (
-                      <img src={t.photo} alt={t.name} loading="lazy" className="w-full h-full object-cover" />
-                    ) : (
-                      <span className="text-white font-bold text-xs">{t.name.split(' ').map(n => n[0]).slice(0, 2).join('')}</span>
-                    )}
+                  <div className="w-10 h-10 rounded-full flex-shrink-0 bg-[hsl(215,62%,31%)] flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">{t.name.split(' ').map(n => n[0]).slice(0, 2).join('')}</span>
                   </div>
                   <div>
                     <p className="font-bold text-[hsl(215,65%,19%)] text-sm">{t.name}</p>
