@@ -947,14 +947,12 @@ const PricingSection = () => {
 
   return (
     <section id="investimento" className="relative">
-      <WaveShape className="w-full h-16 text-white absolute -top-1 z-10" />
-
-      <div className="bg-gradient-to-br from-[hsl(218,97%,15%)] to-[hsl(218,97%,10%)] pt-24 pb-20 relative overflow-hidden">
-        {/* Decorative light streaks (Insuba-style) */}
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-0 right-[20%] w-px h-full bg-gradient-to-b from-transparent via-white/5 to-transparent" />
-          <div className="absolute top-0 right-[50%] w-px h-full bg-gradient-to-b from-transparent via-white/5 to-transparent" />
-          <div className="absolute top-0 right-[80%] w-px h-full bg-gradient-to-b from-transparent via-white/5 to-transparent" />
+      <div className="bg-white pt-20 pb-20 relative overflow-hidden">
+        {/* Subtle decorative streaks */}
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+          <div className="absolute top-0 right-[20%] w-px h-full bg-gradient-to-b from-transparent via-[hsl(215,62%,31%)]/5 to-transparent" />
+          <div className="absolute top-0 right-[50%] w-px h-full bg-gradient-to-b from-transparent via-[hsl(215,62%,31%)]/5 to-transparent" />
+          <div className="absolute top-0 right-[80%] w-px h-full bg-gradient-to-b from-transparent via-[hsl(215,62%,31%)]/5 to-transparent" />
         </div>
 
         <div className="container relative z-10">
@@ -965,11 +963,11 @@ const PricingSection = () => {
               </div>
               <span className="text-sm font-semibold text-white">Investimento</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[hsl(215,65%,19%)] leading-tight mb-4">
               Escolha o Acqualive ideal para{" "}
               <span className="text-[hsl(21,89%,55%)]">a sua família.</span>
             </h2>
-            <p className="text-white/60 max-w-2xl mx-auto">
+            <p className="text-[hsl(215,30%,35%)] max-w-2xl mx-auto">
               Cada modelo entrega purificação completa, água alcalina ionizada e minerais essenciais. A diferença está no design, na capacidade e no estilo.
             </p>
           </div>
