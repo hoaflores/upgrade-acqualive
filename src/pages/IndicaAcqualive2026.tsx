@@ -204,11 +204,6 @@ const HeroSection = () => (
           </Button>
         </motion.div>
 
-        {/* Slide indicators */}
-        <div className="flex gap-2 mt-10">
-          <div className="w-3 h-3 rounded-full bg-[hsl(215,62%,31%)]" />
-          <div className="w-3 h-3 rounded-full border-2 border-[hsl(215,62%,31%)]" />
-        </div>
       </div>
     </div>
 
