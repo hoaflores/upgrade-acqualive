@@ -108,7 +108,7 @@ const EMAILS = [
 <tr><td style="padding:0 40px 24px;text-align:center;">
 <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
 <tr><td style="background:linear-gradient(135deg,#f97316 0%,#fb923c 100%);border-radius:12px;box-shadow:0 8px 24px rgba(249,115,22,0.4);">
-<a href="https://franquias.acqualive.com.br" target="_blank" style="display:inline-block;padding:20px 38px;font-size:16px;font-weight:800;color:#ffffff;text-decoration:none;letter-spacing:0.5px;text-transform:uppercase;">🎟️ Garantir minha cortesia →</a>
+<a href="https://wa.me/5551999038975?text=Ol%C3%A1%21%20Vi%20o%20e-mail%20da%20Acqualive%20e%20quero%20garantir%20minha%20cortesia%20para%20a%20Feira%20da%20Franquia%20em%20Porto%20Alegre%20%2824%20a%2026%2F4%29.%20Pode%20me%20enviar%20o%20convite%3F" target="_blank" style="display:inline-block;padding:20px 38px;font-size:16px;font-weight:800;color:#ffffff;text-decoration:none;letter-spacing:0.5px;text-transform:uppercase;">🎟️ Garantir minha cortesia →</a>
 </td></tr>
 </table>
 <p style="margin:14px 0 0;font-size:12px;color:#94a3b8;">Clique e garanta sua cortesia antes que acabe.</p>
