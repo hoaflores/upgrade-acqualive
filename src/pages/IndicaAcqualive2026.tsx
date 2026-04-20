@@ -132,10 +132,10 @@ const HeroSection = () => (
 
     {/* (Geometric triangle/arrow shapes removed) */}
 
-    {/* Hero photo - right side: rustic terracota with brick (mirrored to highlight filter) */}
+    {/* Hero photo - right side: rustic terracota with brick */}
     <div className="absolute top-0 right-0 w-[55%] h-full hidden lg:block">
-      <img src={heroRustic} alt="Purificador Acqualive Terracota em ambiente rústico sofisticado" className="w-full h-full object-cover object-center scale-x-[-1]" />
-      <div className="absolute inset-y-0 left-0 w-2/5 bg-gradient-to-r from-[hsl(215,25%,95%)] via-[hsl(215,25%,95%)]/60 to-transparent" />
+      <img src={heroRustic} alt="Purificador Acqualive Terracota em ambiente rústico sofisticado" className="w-full h-full object-cover object-center" />
+      <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-[hsl(215,25%,95%)] via-[hsl(215,25%,95%)]/80 to-transparent" />
     </div>
 
     {/* Ghost large photo behind left text */}
@@ -334,7 +334,7 @@ const AboutSection = () => (
 
           <div className="grid grid-cols-2 gap-4 mb-8">
             {[
-              "+ Energia, - Cansaço",
+              "+ Energia - Cansaço",
               "Defesa contra doenças",
               "Hidratação real",
               "Juventude prolongada",
@@ -1115,10 +1115,7 @@ const FinalCTA = () => (
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-10 text-sm text-white/50">
             <span className="flex items-center gap-2">
-              <Phone className="w-4 h-4" /> (51) 9292-8468
-            </span>
-            <span className="flex items-center gap-2">
-              <Mail className="w-4 h-4" /> contato@acqualive.com.br
+              <Mail className="w-4 h-4" /> sac@acqualive.com.br
             </span>
             <span className="flex items-center gap-2">
               <MapPin className="w-4 h-4" /> Porto Alegre, RS
