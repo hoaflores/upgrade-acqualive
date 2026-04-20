@@ -1025,20 +1025,16 @@ const PricingSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.12 }}
-                className={`relative rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-2 bg-[hsl(210,20%,98%)] border border-[hsl(215,20%,90%)] flex flex-col shadow-sm hover:shadow-xl ${
+                className={`relative rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-2 bg-white border border-[hsl(215,20%,90%)] flex flex-col shadow-sm hover:shadow-xl ${
                   p.highlight ? "ring-2 ring-[hsl(21,89%,55%)]" : ""
                 }`}
               >
-                {/* Product image showcase area */}
-                <div className="relative h-72 flex items-center justify-center overflow-hidden">
-                  {/* Radial glow behind product */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-[hsl(215,62%,31%)]/[0.04] via-[hsl(21,89%,55%)]/[0.03] to-transparent" />
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full bg-[hsl(21,89%,55%)]/10 blur-[60px] group-hover:bg-[hsl(21,89%,55%)]/20 transition-all duration-500" />
-                  
+                {/* Product image showcase area - clean white */}
+                <div className="relative h-72 flex items-center justify-center overflow-hidden bg-white">
                   <motion.img
                     src={p.image}
                     alt={p.name}
-                    className="relative z-10 h-56 w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.18)] group-hover:scale-105 transition-transform duration-500"
+                    className="relative z-10 h-56 w-auto object-contain group-hover:scale-105 transition-transform duration-500"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -1087,10 +1083,13 @@ const PricingSection = () => {
                   </div>
 
                   <Button
-                    variant={p.highlight ? "cta" : "hero"}
                     size="lg"
                     asChild
-                    className="w-full rounded-xl group/btn"
+                    className={`w-full rounded-xl group/btn text-white font-bold tracking-wide shadow-lg transition-all hover:-translate-y-0.5 ${
+                      p.highlight
+                        ? "bg-[hsl(215,62%,31%)] hover:bg-[hsl(218,97%,19%)] shadow-[hsl(215,62%,31%)]/40 ring-2 ring-[hsl(215,62%,31%)]/30"
+                        : "bg-[hsl(215,62%,31%)] hover:bg-[hsl(218,97%,19%)] shadow-[hsl(215,62%,31%)]/30"
+                    }`}
                   >
                     <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                       <WhatsAppIcon className="w-4 h-4" />
@@ -1156,12 +1155,9 @@ const FinalCTA = () => (
             </a>
           </Button>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-10 text-sm text-white/50">
+          <div className="flex items-center justify-center gap-6 mt-10 text-sm text-white/50">
             <span className="flex items-center gap-2">
               <Mail className="w-4 h-4" /> sac@acqualive.com.br
-            </span>
-            <span className="flex items-center gap-2">
-              <MapPin className="w-4 h-4" /> Porto Alegre, RS
             </span>
           </div>
         </motion.div>
