@@ -133,9 +133,10 @@ const HeroSection = () => (
     {/* (Geometric triangle/arrow shapes removed) */}
 
     {/* Hero photo - right side: rustic terracota with brick */}
-    <div className="absolute top-0 right-0 w-[55%] h-full hidden lg:block">
-      <img src={heroRustic} alt="Purificador Acqualive Terracota em ambiente rústico sofisticado" className="w-full h-full object-cover object-center" />
-      <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-[hsl(215,25%,95%)] via-[hsl(215,25%,95%)]/80 to-transparent" />
+    <div className="absolute top-0 right-0 w-[60%] h-full hidden lg:block">
+      <img src={heroRustic} alt="Purificador Acqualive Terracota em ambiente rústico sofisticado" className="w-full h-full object-cover object-right" />
+      {/* Soft fade only on the left edge so the filter stays in full focus */}
+      <div className="absolute inset-y-0 left-0 w-[18%] bg-gradient-to-r from-[hsl(215,25%,95%)] to-transparent" />
     </div>
 
     {/* Ghost large photo behind left text */}
