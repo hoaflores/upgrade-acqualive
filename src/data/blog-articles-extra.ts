@@ -288,7 +288,8 @@ const SHARED_CSS = `
     border-color: #bfdbfe;
   }
   .cta-section {
-    background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+    background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 100%);
+    border: 1px solid #bfdbfe;
     border-radius: 24px;
     padding: 56px 36px;
     text-align: center;
@@ -299,22 +300,21 @@ const SHARED_CSS = `
   .cta-section::before {
     content: '';
     position: absolute;
-    top: -40%; right: -15%;
-    width: 350px; height: 350px;
-    background: radial-gradient(circle, rgba(37,99,235,0.15), transparent 70%);
-    border-radius: 50%;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2563eb 0%, #06b6d4 100%);
   }
   .cta-section h2 {
-    color: #ffffff;
+    color: #0f172a;
     margin: 0 0 14px;
     font-size: 28px;
     position: relative;
     padding-left: 0;
   }
   .cta-section h2::before { display: none; }
-  .cta-section h2 span { color: #60a5fa; }
+  .cta-section h2 span { color: #2563eb; }
   .cta-section p {
-    color: #94a3b8;
+    color: #334155;
     font-size: 16px;
     margin-bottom: 32px;
     position: relative;
