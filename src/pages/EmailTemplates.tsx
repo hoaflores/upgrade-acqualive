@@ -639,7 +639,24 @@ const EMAILS = [
 <tr><td style="background:linear-gradient(135deg,#f47b25,#e8651b);border-radius:10px;">
 <a href="https://paginas.acqualive.com.br/indicado-acqualive" target="_blank" style="display:block;padding:16px 36px;color:#ffffff;text-decoration:none;font-size:15px;font-weight:800;letter-spacing:0.4px;">QUERO INDICAR AGORA</a>
 </td></tr></table>
-<p style="margin:14px 0 0;font-size:13px;color:#7a8aa2;">paginas.acqualive.com.br/indicado-acqualive</p>
+</td></tr>
+
+<!-- COMO ENVIAR (destaque) -->
+<tr><td style="padding:26px 36px 0;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fff8f1;border:2px dashed #f47b25;border-radius:14px;">
+<tr><td style="padding:22px 24px;">
+<p style="margin:0 0 14px;font-size:13px;color:#e8651b;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;text-align:center;">📲 Como enviar em 10 segundos</p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border:1px solid #f0d8c2;border-radius:10px;margin:0 0 14px;">
+<tr><td style="padding:14px 16px;text-align:center;">
+<p style="margin:0 0 4px;font-size:11px;color:#a8896a;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;">Seu link de indicação</p>
+<p style="margin:0;font-size:16px;color:#0e2a52;font-weight:800;font-family:Consolas,monospace;word-break:break-all;">paginas.acqualive.com.br/indicado-acqualive</p>
+</td></tr></table>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+<tr><td style="padding:6px 0;"><p style="margin:0;font-size:14px;line-height:1.6;color:#2c3e60;"><strong style="color:#f47b25;">1.</strong> Toque no botão laranja acima e abra a página.</p></td></tr>
+<tr><td style="padding:6px 0;"><p style="margin:0;font-size:14px;line-height:1.6;color:#2c3e60;"><strong style="color:#f47b25;">2.</strong> Copie o endereço da barra do navegador (ou o link em destaque acima).</p></td></tr>
+<tr><td style="padding:6px 0;"><p style="margin:0;font-size:14px;line-height:1.6;color:#2c3e60;"><strong style="color:#f47b25;">3.</strong> Cole no WhatsApp da família, dos amigos ou no seu story. Pronto!</p></td></tr>
+</table>
+</td></tr></table>
 </td></tr>
 
 <!-- Soft tip -->
@@ -750,7 +767,20 @@ const EMAILS = [
 <tr><td style="background:linear-gradient(135deg,#f47b25,#e8651b);border-radius:10px;">
 <a href="https://paginas.acqualive.com.br/indicado-acqualive" target="_blank" style="display:block;padding:16px 36px;color:#ffffff;text-decoration:none;font-size:15px;font-weight:800;letter-spacing:0.4px;">PEGAR MEU LINK DE INDICAÇÃO</a>
 </td></tr></table>
-<p style="margin:14px 0 0;font-size:13px;color:#7a8aa2;">É só copiar a página e enviar para quem você quer presentear com água de verdade.</p>
+</td></tr>
+
+<!-- COMO ENVIAR (destaque) -->
+<tr><td style="padding:26px 36px 0;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fff8f1;border:2px dashed #f47b25;border-radius:14px;">
+<tr><td style="padding:22px 24px;">
+<p style="margin:0 0 14px;font-size:13px;color:#e8651b;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;text-align:center;">📲 Copie e envie em 10 segundos</p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border:1px solid #f0d8c2;border-radius:10px;margin:0 0 14px;">
+<tr><td style="padding:14px 16px;text-align:center;">
+<p style="margin:0 0 4px;font-size:11px;color:#a8896a;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;">Seu link para compartilhar</p>
+<p style="margin:0;font-size:16px;color:#0e2a52;font-weight:800;font-family:Consolas,monospace;word-break:break-all;">paginas.acqualive.com.br/indicado-acqualive</p>
+</td></tr></table>
+<p style="margin:0;font-size:14px;line-height:1.6;color:#2c3e60;text-align:center;"><strong style="color:#f47b25;">É só copiar este link e colar no WhatsApp</strong> — quem clicar já cai direto na página com toda a explicação e o desconto especial pronto.</p>
+</td></tr></table>
 </td></tr>
 
 <!-- How to send -->
@@ -857,7 +887,24 @@ const EMAILS = [
 <tr><td style="background:linear-gradient(135deg,#f47b25,#e8651b);border-radius:10px;">
 <a href="https://paginas.acqualive.com.br/indicado-acqualive" target="_blank" style="display:block;padding:18px 40px;color:#ffffff;text-decoration:none;font-size:16px;font-weight:800;letter-spacing:0.5px;">ENVIAR PARA QUEM EU AMO</a>
 </td></tr></table>
-<p style="margin:14px 0 0;font-size:13px;color:#7a8aa2;">Copie o link, cole no WhatsApp e veja a mágica acontecer.</p>
+</td></tr>
+
+<!-- COMO ENVIAR (destaque) -->
+<tr><td style="padding:28px 36px 0;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fff8f1;border:2px dashed #f47b25;border-radius:14px;">
+<tr><td style="padding:24px 24px;">
+<p style="margin:0 0 14px;font-size:13px;color:#e8651b;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;text-align:center;">📲 Como mandar agora pelo WhatsApp</p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border:1px solid #f0d8c2;border-radius:10px;margin:0 0 16px;">
+<tr><td style="padding:16px;text-align:center;">
+<p style="margin:0 0 4px;font-size:11px;color:#a8896a;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;">Seu link de indicação</p>
+<p style="margin:0;font-size:16px;color:#0e2a52;font-weight:800;font-family:Consolas,monospace;word-break:break-all;">paginas.acqualive.com.br/indicado-acqualive</p>
+</td></tr></table>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+<tr><td style="padding:6px 0;"><p style="margin:0;font-size:14px;line-height:1.6;color:#2c3e60;"><strong style="color:#f47b25;">1.</strong> Copie o endereço acima (ou abra pelo botão laranja).</p></td></tr>
+<tr><td style="padding:6px 0;"><p style="margin:0;font-size:14px;line-height:1.6;color:#2c3e60;"><strong style="color:#f47b25;">2.</strong> Abra a conversa de quem você quer presentear no WhatsApp.</p></td></tr>
+<tr><td style="padding:6px 0;"><p style="margin:0;font-size:14px;line-height:1.6;color:#2c3e60;"><strong style="color:#f47b25;">3.</strong> Cole o link, mande junto um <em>"precisa conhecer isso"</em> e pronto.</p></td></tr>
+</table>
+</td></tr></table>
 </td></tr>
 
 <!-- Final nudge -->
