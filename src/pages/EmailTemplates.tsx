@@ -613,7 +613,7 @@ const EMAILS = [
 
 <!-- Hero image -->
 <tr><td style="padding:24px 36px 0;">
-<img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/indica-hero-family.jpg" alt="Família saudável bebendo água Acqualive" width="528" style="display:block;width:100%;height:auto;border-radius:12px;">
+<img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/indica-family-dinner.jpg" alt="Família reunida à mesa com água Acqualive" width="528" style="display:block;width:100%;height:auto;border-radius:12px;">
 </td></tr>
 
 <!-- Body -->
