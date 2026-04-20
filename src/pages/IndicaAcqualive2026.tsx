@@ -443,58 +443,57 @@ const MissionBanner = () => {
           <ChevronRight className="w-5 h-5" />
         </button>
 
-        <div className="container relative z-10">
-          <div className="grid lg:grid-cols-[280px_1fr_1fr] gap-8 items-start">
-            {/* Tabs column */}
-            <div className="flex lg:flex-col gap-3">
-              {tabs.map((tab, i) => (
+        <div className="container relative z-10 max-w-5xl">
+          {/* Tabs row - horizontal on top */}
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-12">
+            {tabs.map((tab, i) => {
+              const TabIcon = tab.icon;
+              return (
                 <button
                   key={i}
                   onClick={() => setActiveTab(i)}
-                  className={`px-6 py-4 text-left font-bold text-sm tracking-wider transition-all duration-300 rounded-lg ${
+                  className={`flex items-center gap-2 px-5 md:px-7 py-3 font-bold text-xs md:text-sm tracking-wider transition-all duration-300 rounded-full ${
                     activeTab === i
-                      ? "bg-white text-[hsl(215,62%,31%)] shadow-elevated"
+                      ? "bg-white text-[hsl(215,62%,31%)] shadow-elevated scale-105"
                       : "bg-white/10 text-white border border-white/20 hover:bg-white/20"
                   }`}
                 >
+                  <TabIcon className="w-4 h-4" strokeWidth={2} />
                   {tab.title}
                 </button>
-              ))}
-            </div>
+              );
+            })}
+          </div>
 
-            {/* Icon center */}
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="flex items-center justify-center"
-            >
-              <div className="w-48 h-48 rounded-2xl border-2 border-white/20 flex items-center justify-center bg-white/5 backdrop-blur-sm">
+          {/* Card content */}
+          <motion.div
+            key={`content-${activeTab}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-12"
+          >
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-14 h-14 rounded-xl bg-[hsl(21,89%,55%)] flex items-center justify-center flex-shrink-0">
                 {(() => {
                   const Icon = tabs[activeTab].icon;
-                  return <Icon className="w-20 h-20 text-white" strokeWidth={1} />;
+                  return <Icon className="w-7 h-7 text-white" strokeWidth={2} />;
                 })()}
               </div>
-            </motion.div>
+              <h3 className="text-xl md:text-2xl font-bold text-white">
+                {tabs[activeTab].heading}
+              </h3>
+            </div>
 
-            {/* Content */}
-            <motion.div
-              key={`content-${activeTab}`}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="text-white"
-            >
-              <h3 className="text-2xl font-bold mb-6">{tabs[activeTab].heading}</h3>
-              <ul className="space-y-4">
-                {tabs[activeTab].points.map((point, j) => (
-                  <li key={j} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[hsl(21,89%,55%)] flex-shrink-0 mt-0.5" />
-                    <span className="text-white/90 leading-relaxed">{point}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          </div>
+            <ul className="grid md:grid-cols-2 gap-x-8 gap-y-4">
+              {tabs[activeTab].points.map((point, j) => (
+                <li key={j} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[hsl(21,89%,55%)] flex-shrink-0 mt-0.5" />
+                  <span className="text-white/90 leading-relaxed text-sm md:text-base">{point}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
 
           {/* Progress dots */}
           <div className="flex justify-center gap-2 mt-10">
