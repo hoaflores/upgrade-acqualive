@@ -65,11 +65,8 @@ const TopBar = () => (
   <div className="bg-[hsl(215,62%,31%)] text-white py-2.5 text-sm hidden md:block">
     <div className="container flex items-center justify-between">
       <div className="flex items-center gap-6">
-        <a href="tel:+555192928468" className="flex items-center gap-2 hover:text-[hsl(21,89%,55%)] transition-colors">
-          <Phone className="w-4 h-4" /> (51) 9292-8468
-        </a>
         <span className="flex items-center gap-2">
-          <Mail className="w-4 h-4" /> contato@acqualive.com.br
+          <Mail className="w-4 h-4" /> sac@acqualive.com.br
         </span>
       </div>
       <div className="flex items-center gap-3">
