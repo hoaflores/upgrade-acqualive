@@ -1,9 +1,10 @@
 import { useState, useRef, useEffect } from "react";
-import { Copy, Check, Eye, Code, ChevronLeft, ChevronRight } from "lucide-react";
+import { Copy, Check, Eye, Code, ChevronLeft, ChevronRight, ListChecks, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import { EXTRA_ARTICLES } from "@/data/blog-articles-extra";
 
-const ARTICLES = [
+const BASE_ARTICLES = [
   {
     title: "Qual é o melhor filtro de água?",
     slug: "qual-melhor-filtro-de-agua",
