@@ -22,7 +22,7 @@ import ambienteImg from "@/assets/indica-ambiente.jpg";
 import vself6lImg from "@/assets/indica-prod-vself-6l.png";
 import vpremiumImg from "@/assets/indica-prod-vself-10l-premium.png";
 import terracotaImg from "@/assets/indica-prod-terracota.png";
-import heroRustic from "@/assets/indica-hero-terracota-rustic.jpg";
+import heroRustic from "@/assets/indica-hero-terracota-rustic-v2.jpg";
 import coupleKitchen from "@/assets/indica-couple-kitchen.jpg";
 import familyDinner from "@/assets/indica-family-dinner.jpg";
 import faqPour from "@/assets/indica-faq-pour.png";
@@ -65,11 +65,8 @@ const TopBar = () => (
   <div className="bg-[hsl(215,62%,31%)] text-white py-2.5 text-sm hidden md:block">
     <div className="container flex items-center justify-between">
       <div className="flex items-center gap-6">
-        <a href="tel:+555192928468" className="flex items-center gap-2 hover:text-[hsl(21,89%,55%)] transition-colors">
-          <Phone className="w-4 h-4" /> (51) 9292-8468
-        </a>
         <span className="flex items-center gap-2">
-          <Mail className="w-4 h-4" /> contato@acqualive.com.br
+          <Mail className="w-4 h-4" /> sac@acqualive.com.br
         </span>
       </div>
       <div className="flex items-center gap-3">
@@ -135,10 +132,10 @@ const HeroSection = () => (
 
     {/* (Geometric triangle/arrow shapes removed) */}
 
-    {/* Hero photo - right side: rustic terracota with brick (mirrored to highlight filter) */}
+    {/* Hero photo - right side: rustic terracota with brick */}
     <div className="absolute top-0 right-0 w-[55%] h-full hidden lg:block">
-      <img src={heroRustic} alt="Purificador Acqualive Terracota em ambiente rústico sofisticado" className="w-full h-full object-cover object-center scale-x-[-1]" />
-      <div className="absolute inset-y-0 left-0 w-2/5 bg-gradient-to-r from-[hsl(215,25%,95%)] via-[hsl(215,25%,95%)]/60 to-transparent" />
+      <img src={heroRustic} alt="Purificador Acqualive Terracota em ambiente rústico sofisticado" className="w-full h-full object-cover object-center" />
+      <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-[hsl(215,25%,95%)] via-[hsl(215,25%,95%)]/80 to-transparent" />
     </div>
 
     {/* Ghost large photo behind left text */}
@@ -337,7 +334,7 @@ const AboutSection = () => (
 
           <div className="grid grid-cols-2 gap-4 mb-8">
             {[
-              "+ Energia, - Cansaço",
+              "+ Energia - Cansaço",
               "Defesa contra doenças",
               "Hidratação real",
               "Juventude prolongada",
@@ -366,6 +363,7 @@ const AboutSection = () => (
    ══════════════════════════════════════════════════════════ */
 const MissionBanner = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const tabs = [
     {
       title: "PURIFICAÇÃO",
@@ -402,8 +400,25 @@ const MissionBanner = () => {
     },
   ];
 
+  // Autoplay 10s
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(() => {
+      setActiveTab((prev) => (prev + 1) % tabs.length);
+    }, 10000);
+    return () => clearInterval(interval);
+  }, [isPaused, tabs.length]);
+
+  const nextTab = () => setActiveTab((p) => (p + 1) % tabs.length);
+  const prevTab = () => setActiveTab((p) => (p - 1 + tabs.length) % tabs.length);
+
   return (
-    <section id="beneficios" className="relative">
+    <section
+      id="beneficios"
+      className="relative"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       {/* Wave separator */}
       <WaveShape className="w-full h-16 text-white absolute -top-1 z-10" />
 
@@ -411,6 +426,22 @@ const MissionBanner = () => {
         {/* Decorative blue accent shapes */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-[hsl(21,89%,55%)]/10 translate-x-1/3 -translate-y-1/3" />
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-white/5 -translate-x-1/3 translate-y-1/3" />
+
+        {/* Side arrows */}
+        <button
+          onClick={prevTab}
+          aria-label="Anterior"
+          className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-[hsl(21,89%,55%)] backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transition-all"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+        <button
+          onClick={nextTab}
+          aria-label="Próximo"
+          className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-[hsl(21,89%,55%)] backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transition-all"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
 
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-[280px_1fr_1fr] gap-8 items-start">
@@ -463,6 +494,18 @@ const MissionBanner = () => {
                 ))}
               </ul>
             </motion.div>
+          </div>
+
+          {/* Progress dots */}
+          <div className="flex justify-center gap-2 mt-10">
+            {tabs.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveTab(i)}
+                aria-label={`Ir para slide ${i + 1}`}
+                className={`h-2 rounded-full transition-all ${activeTab === i ? "w-8 bg-[hsl(21,89%,55%)]" : "w-2 bg-white/30"}`}
+              />
+            ))}
           </div>
         </div>
       </div>
@@ -950,14 +993,12 @@ const PricingSection = () => {
 
   return (
     <section id="investimento" className="relative">
-      <WaveShape className="w-full h-16 text-white absolute -top-1 z-10" />
-
-      <div className="bg-gradient-to-br from-[hsl(218,97%,15%)] to-[hsl(218,97%,10%)] pt-24 pb-20 relative overflow-hidden">
-        {/* Decorative light streaks (Insuba-style) */}
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-0 right-[20%] w-px h-full bg-gradient-to-b from-transparent via-white/5 to-transparent" />
-          <div className="absolute top-0 right-[50%] w-px h-full bg-gradient-to-b from-transparent via-white/5 to-transparent" />
-          <div className="absolute top-0 right-[80%] w-px h-full bg-gradient-to-b from-transparent via-white/5 to-transparent" />
+      <div className="bg-white pt-20 pb-20 relative overflow-hidden">
+        {/* Subtle decorative streaks */}
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+          <div className="absolute top-0 right-[20%] w-px h-full bg-gradient-to-b from-transparent via-[hsl(215,62%,31%)]/5 to-transparent" />
+          <div className="absolute top-0 right-[50%] w-px h-full bg-gradient-to-b from-transparent via-[hsl(215,62%,31%)]/5 to-transparent" />
+          <div className="absolute top-0 right-[80%] w-px h-full bg-gradient-to-b from-transparent via-[hsl(215,62%,31%)]/5 to-transparent" />
         </div>
 
         <div className="container relative z-10">
@@ -968,11 +1009,11 @@ const PricingSection = () => {
               </div>
               <span className="text-sm font-semibold text-white">Investimento</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[hsl(215,65%,19%)] leading-tight mb-4">
               Escolha o Acqualive ideal para{" "}
               <span className="text-[hsl(21,89%,55%)]">a sua família.</span>
             </h2>
-            <p className="text-white/60 max-w-2xl mx-auto">
+            <p className="text-[hsl(215,30%,35%)] max-w-2xl mx-auto">
               Cada modelo entrega purificação completa, água alcalina ionizada e minerais essenciais. A diferença está no design, na capacidade e no estilo.
             </p>
           </div>
@@ -985,20 +1026,20 @@ const PricingSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.12 }}
-                className={`relative rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-2 bg-white/[0.03] backdrop-blur-sm border border-white/10 flex flex-col ${
+                className={`relative rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-2 bg-[hsl(210,20%,98%)] border border-[hsl(215,20%,90%)] flex flex-col shadow-sm hover:shadow-xl ${
                   p.highlight ? "ring-2 ring-[hsl(21,89%,55%)]" : ""
                 }`}
               >
                 {/* Product image showcase area */}
                 <div className="relative h-72 flex items-center justify-center overflow-hidden">
                   {/* Radial glow behind product */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-white/[0.06] via-[hsl(21,89%,55%)]/[0.04] to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-[hsl(215,62%,31%)]/[0.04] via-[hsl(21,89%,55%)]/[0.03] to-transparent" />
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full bg-[hsl(21,89%,55%)]/10 blur-[60px] group-hover:bg-[hsl(21,89%,55%)]/20 transition-all duration-500" />
                   
                   <motion.img
                     src={p.image}
                     alt={p.name}
-                    className="relative z-10 h-56 w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)] group-hover:scale-105 transition-transform duration-500"
+                    className="relative z-10 h-56 w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.18)] group-hover:scale-105 transition-transform duration-500"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -1006,7 +1047,7 @@ const PricingSection = () => {
                   />
 
                   {/* Number watermark */}
-                  <span className="absolute top-3 right-5 text-6xl font-bold text-white/[0.04] group-hover:text-white/[0.08] transition-colors">
+                  <span className="absolute top-3 right-5 text-6xl font-bold text-[hsl(215,62%,31%)]/[0.06] group-hover:text-[hsl(215,62%,31%)]/[0.12] transition-colors">
                     {p.number}
                   </span>
 
@@ -1018,28 +1059,28 @@ const PricingSection = () => {
                 </div>
 
                 {/* Divider line */}
-                <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                <div className="h-px bg-gradient-to-r from-transparent via-[hsl(215,20%,85%)] to-transparent" />
 
                 {/* Content */}
-                <div className="relative p-8 pt-6 flex flex-col flex-grow">
-                  <h3 className="text-2xl font-bold text-white mb-1">{p.name}</h3>
+                <div className="relative p-8 pt-6 flex flex-col flex-grow bg-white">
+                  <h3 className="text-2xl font-bold text-[hsl(215,65%,19%)] mb-1">{p.name}</h3>
                   <p className="text-[hsl(21,89%,55%)] text-sm font-medium mb-4">{p.tagline}</p>
-                  <p className="text-white/60 text-sm leading-relaxed mb-6 flex-grow">{p.description}</p>
+                  <p className="text-[hsl(215,30%,35%)] text-sm leading-relaxed mb-6 flex-grow">{p.description}</p>
 
                   {/* Hidden price block with overlay */}
-                  <div className="relative border-t border-white/10 pt-6 mb-6">
+                  <div className="relative border-t border-[hsl(215,20%,90%)] pt-6 mb-6">
                     <div className="select-none pointer-events-none blur-md opacity-40">
                       <div className="flex items-baseline gap-1">
-                        <span className="text-sm text-white/50">R$</span>
-                        <span className="text-4xl font-bold text-white">••••</span>
+                        <span className="text-sm text-[hsl(215,30%,35%)]">R$</span>
+                        <span className="text-4xl font-bold text-[hsl(215,65%,19%)]">••••</span>
                       </div>
-                      <p className="text-white/50 text-sm mt-1">
-                        ou <span className="text-white/80 font-semibold">10x sem juros</span>
+                      <p className="text-[hsl(215,30%,35%)] text-sm mt-1">
+                        ou <span className="text-[hsl(215,65%,19%)] font-semibold">10x sem juros</span>
                       </p>
                     </div>
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="bg-[hsl(21,89%,55%)]/15 border border-[hsl(21,89%,55%)]/40 rounded-lg px-4 py-2 backdrop-blur-sm">
-                        <p className="text-white text-xs font-bold tracking-wide text-center">
+                      <div className="bg-[hsl(21,89%,55%)]/10 border border-[hsl(21,89%,55%)]/40 rounded-lg px-4 py-2 backdrop-blur-sm">
+                        <p className="text-[hsl(215,65%,19%)] text-xs font-bold tracking-wide text-center">
                           🔒 CONDIÇÃO ESPECIAL EXCLUSIVA
                         </p>
                       </div>
@@ -1063,7 +1104,7 @@ const PricingSection = () => {
             ))}
           </div>
 
-          <p className="text-center text-xs text-white/40 mt-8">
+          <p className="text-center text-xs text-[hsl(215,30%,35%)]/70 mt-8">
             *Frete grátis: consulte regiões disponíveis. Parcelamento no cartão de crédito. 5% de desconto no PIX.
           </p>
         </div>
@@ -1118,10 +1159,7 @@ const FinalCTA = () => (
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-10 text-sm text-white/50">
             <span className="flex items-center gap-2">
-              <Phone className="w-4 h-4" /> (51) 9292-8468
-            </span>
-            <span className="flex items-center gap-2">
-              <Mail className="w-4 h-4" /> contato@acqualive.com.br
+              <Mail className="w-4 h-4" /> sac@acqualive.com.br
             </span>
             <span className="flex items-center gap-2">
               <MapPin className="w-4 h-4" /> Porto Alegre, RS
