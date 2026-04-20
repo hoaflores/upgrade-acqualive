@@ -1,5 +1,5 @@
 // Artigos 6-10 do blog Acqualive
-// Imagens públicas em /images/blog/ servidas via origin do site
+// Imagens públicas em https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/ servidas via origin do site
 
 const SHARED_CSS = `
   @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
@@ -432,9 +432,9 @@ const article6 = {
 <meta property="og:description" content="Cientistas encontraram o equivalente a uma colher de plástico no cérebro humano. Entenda de onde vem e o que fazer.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="https://blog.acqualive.com.br/images/blog/acqualive-torneira-detalhe.jpg">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-torneira-detalhe.jpg">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Microplásticos no Cérebro: O Que Ninguém Te Contou Sobre a Água Que Você Bebe","description":"Estudo da Nature 2025 revelou níveis alarmantes de microplásticos em cérebros humanos. Descubra a relação com a água que bebemos e como reduzir a exposição.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive","logo":{"@type":"ImageObject","url":"https://blog.acqualive.com.br/images/logo.png"}},"datePublished":"2026-04-20","dateModified":"2026-04-20","mainEntityOfPage":{"@type":"WebPage"},"image":"https://blog.acqualive.com.br/images/blog/acqualive-torneira-detalhe.jpg"}
+{"@context":"https://schema.org","@type":"Article","headline":"Microplásticos no Cérebro: O Que Ninguém Te Contou Sobre a Água Que Você Bebe","description":"Estudo da Nature 2025 revelou níveis alarmantes de microplásticos em cérebros humanos. Descubra a relação com a água que bebemos e como reduzir a exposição.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive","logo":{"@type":"ImageObject","url":"https://blog.acqualive.com.br/images/logo.png"}},"datePublished":"2026-04-20","dateModified":"2026-04-20","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-torneira-detalhe.jpg"}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -454,7 +454,7 @@ const article6 = {
     </div>
   </div>
   <div class="hero-img-wrap">
-    <img src="https://upgrade-acqualive.lovable.app/images/blog/acqualive-torneira-detalhe.jpg" alt="Detalhe da torneira de um purificador Acqualive servindo água pura, livre de microplásticos" width="860" height="500" loading="eager">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-torneira-detalhe.jpg" alt="Detalhe da torneira de um purificador Acqualive servindo água pura, livre de microplásticos" width="860" height="500" loading="eager">
   </div>
 </header>
 
@@ -495,7 +495,7 @@ const article6 = {
 
   <p>Pesquisadores da <a href="https://www.em.com.br/emfoco/2026/02/02/estudo-revela-240-mil-fragmentos-de-plastico-por-litro-em-garrafa-de-agua-e-o-que-isso-pode-causar-no-seu-corpo-assusta/" target="_blank" rel="noopener">Universidade de Columbia detectaram cerca de 240 mil fragmentos de plástico por litro</a> em uma garrafa de água mineral comum. A maioria invisível a olho nu, do tamanho de nanopartículas, capazes de atravessar a barreira hematoencefálica e se alojar no cérebro.</p>
 
-  <img src="https://upgrade-acqualive.lovable.app/images/blog/acqualive-cozinha-natureza.jpg" alt="Purificador Acqualive em cozinha moderna com plantas, alternativa segura à água engarrafada" class="article-img" loading="lazy" width="1200" height="800">
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-cozinha-natureza.jpg" alt="Purificador Acqualive em cozinha moderna com plantas, alternativa segura à água engarrafada" class="article-img" loading="lazy" width="1200" height="800">
   <em>Trocar a garrafa plástica por um purificador na cozinha é a primeira mudança real.</em>
 
   <div class="danger-box">
@@ -538,7 +538,7 @@ const article6 = {
 
   <p>O <strong>Purificador Acqualive</strong> trabalha com múltiplas etapas de filtragem, retém partículas microscópicas, remove cloro e ainda alcaliniza naturalmente a água com magnésio. É a evolução do filtro de barro, sem perder a essência do que torna a água verdadeiramente fresca.</p>
 
-  <img src="https://upgrade-acqualive.lovable.app/images/blog/acqualive-cozinha-moderna.png" alt="Purificador Acqualive transparente em cozinha contemporânea, oferecendo água pura sem microplásticos" class="article-img" loading="lazy" width="1080" height="1350">
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-cozinha-moderna.png" alt="Purificador Acqualive transparente em cozinha contemporânea, oferecendo água pura sem microplásticos" class="article-img" loading="lazy" width="1080" height="1350">
 
   <div class="info-box">
     <h4>Por que escolher Acqualive</h4>
@@ -573,9 +573,9 @@ const article7 = {
 <meta property="og:description" content="Os dados oficiais que mostram a verdade sobre a água que sai da sua torneira e o que fazer agora.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="https://blog.acqualive.com.br/images/blog/terracota-agua-comum-ou-alcalina.png">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/terracota-agua-comum-ou-alcalina.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Água da torneira no Brasil é segura? O que dizem os dados oficiais","description":"Análise dos dados oficiais sobre a qualidade da água da torneira no Brasil, contaminantes mais comuns e como se proteger.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-04-20","dateModified":"2026-04-20","mainEntityOfPage":{"@type":"WebPage"},"image":"https://blog.acqualive.com.br/images/blog/terracota-agua-comum-ou-alcalina.png"}
+{"@context":"https://schema.org","@type":"Article","headline":"Água da torneira no Brasil é segura? O que dizem os dados oficiais","description":"Análise dos dados oficiais sobre a qualidade da água da torneira no Brasil, contaminantes mais comuns e como se proteger.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-04-20","dateModified":"2026-04-20","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/terracota-agua-comum-ou-alcalina.png"}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -595,7 +595,7 @@ const article7 = {
     </div>
   </div>
   <div class="hero-img-wrap">
-    <img src="https://upgrade-acqualive.lovable.app/images/blog/terracota-agua-comum-ou-alcalina.png" alt="Cozinha moderna com torneira de inox e Purificador Acqualive Terracota ao lado, escolha entre água comum ou água alcalina" width="860" height="1080" loading="eager">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/terracota-agua-comum-ou-alcalina.png" alt="Cozinha moderna com torneira de inox e Purificador Acqualive Terracota ao lado, escolha entre água comum ou água alcalina" width="860" height="1080" loading="eager">
   </div>
 </header>
 
@@ -669,7 +669,7 @@ const article7 = {
   <h2 id="solucao">O que fazer hoje</h2>
   <p>A solução não é entrar em pânico. É instalar uma camada extra de proteção dentro de casa. Um <strong>purificador de água de qualidade</strong> resolve o que a estação de tratamento e as tubulações não conseguem.</p>
 
-  <img src="https://upgrade-acqualive.lovable.app/images/blog/terracota-cozinha-classica.png" alt="Purificador Acqualive Terracota em cozinha clássica, evolução do filtro de barro com água alcalina" class="article-img" loading="lazy" width="1080" height="1350">
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/terracota-cozinha-classica.png" alt="Purificador Acqualive Terracota em cozinha clássica, evolução do filtro de barro com água alcalina" class="article-img" loading="lazy" width="1080" height="1350">
 
   <p>O <strong>Purificador Acqualive</strong> retém cloro, trihalometanos, sedimentos, agrotóxicos e partículas microscópicas. Ainda alcaliniza a água com magnésio natural, deixando o pH próximo de 9, ideal para o organismo. Sem eletricidade, sem químicos, sem garrafas plásticas.</p>
 
@@ -706,9 +706,9 @@ const article8 = {
 <meta property="og:description" content="O cloro da torneira faz muito mais estrago do que você imagina.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="https://blog.acqualive.com.br/images/blog/acqualive-cozinha-natureza.jpg">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-cozinha-natureza.jpg">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Por que sua pele e seu cabelo estão ressecados? A culpa pode ser do cloro","description":"Como o cloro da água da torneira afeta pele, cabelo e microbiota intestinal. Ciência, sintomas e soluções práticas.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-04-20","dateModified":"2026-04-20","mainEntityOfPage":{"@type":"WebPage"},"image":"https://blog.acqualive.com.br/images/blog/acqualive-cozinha-natureza.jpg"}
+{"@context":"https://schema.org","@type":"Article","headline":"Por que sua pele e seu cabelo estão ressecados? A culpa pode ser do cloro","description":"Como o cloro da água da torneira afeta pele, cabelo e microbiota intestinal. Ciência, sintomas e soluções práticas.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-04-20","dateModified":"2026-04-20","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-cozinha-natureza.jpg"}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -728,7 +728,7 @@ const article8 = {
     </div>
   </div>
   <div class="hero-img-wrap">
-    <img src="https://upgrade-acqualive.lovable.app/images/blog/acqualive-cozinha-natureza.jpg" alt="Purificador Acqualive em cozinha moderna com parede verde de plantas, alternativa para água sem cloro" width="860" height="600" loading="eager">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-cozinha-natureza.jpg" alt="Purificador Acqualive em cozinha moderna com parede verde de plantas, alternativa para água sem cloro" width="860" height="600" loading="eager">
   </div>
 </header>
 
@@ -772,7 +772,7 @@ const article8 = {
     <li>Acne e inflamações em peles sensíveis.</li>
   </ul>
 
-  <img src="https://upgrade-acqualive.lovable.app/images/blog/terracota-cozinha-industrial.png" alt="Purificador Acqualive Terracota em cozinha industrial, oferecendo água alcalina sem cloro para uso diário" class="article-img" loading="lazy" width="1080" height="1350">
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/terracota-cozinha-industrial.png" alt="Purificador Acqualive Terracota em cozinha industrial, oferecendo água alcalina sem cloro para uso diário" class="article-img" loading="lazy" width="1080" height="1350">
 
   <div class="danger-box">
     <h4>O que pouca gente sabe</h4>
@@ -807,7 +807,7 @@ const article8 = {
 
   <p>O <strong>Purificador Acqualive</strong> remove o cloro e os trihalometanos da água que você bebe. E vai além: alcaliniza com magnésio natural, deixando uma água com pH próximo de 9 — que <a href="https://blog.acqualive.com.br/agua-alcalina-anti-inflamatoria/" target="_blank">tem ação anti-inflamatória</a> e ajuda na hidratação profunda da pele de dentro para fora.</p>
 
-  <img src="https://upgrade-acqualive.lovable.app/images/blog/terracota-grafite-arte.png" alt="Purificador Acqualive Terracota em versão grafite, design contemporâneo para água alcalina sem cloro" class="article-img" loading="lazy" width="1080" height="1350">
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/terracota-grafite-arte.png" alt="Purificador Acqualive Terracota em versão grafite, design contemporâneo para água alcalina sem cloro" class="article-img" loading="lazy" width="1080" height="1350">
 
   <div class="info-box">
     <h4>Pele saudável começa por dentro</h4>
@@ -842,9 +842,9 @@ const article9 = {
 <meta property="og:description" content="Quem está passando dos 40 sabe: o corpo é outro. E a água que ele precisa também.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="https://blog.acqualive.com.br/images/blog/terracota-cozinha-classica.png">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/terracota-cozinha-classica.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Hidratação após os 40 e a água certa para a menopausa","description":"Como a qualidade da água impacta sintomas da menopausa, hidratação madura e envelhecimento saudável.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-04-20","dateModified":"2026-04-20","mainEntityOfPage":{"@type":"WebPage"},"image":"https://blog.acqualive.com.br/images/blog/terracota-cozinha-classica.png"}
+{"@context":"https://schema.org","@type":"Article","headline":"Hidratação após os 40 e a água certa para a menopausa","description":"Como a qualidade da água impacta sintomas da menopausa, hidratação madura e envelhecimento saudável.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-04-20","dateModified":"2026-04-20","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/terracota-cozinha-classica.png"}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -864,7 +864,7 @@ const article9 = {
     </div>
   </div>
   <div class="hero-img-wrap">
-    <img src="https://upgrade-acqualive.lovable.app/images/blog/terracota-cozinha-classica.png" alt="Purificador Acqualive Terracota em cozinha clássica de madeira, água alcalina rica em magnésio para mulheres maduras" width="860" height="1080" loading="eager">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/terracota-cozinha-classica.png" alt="Purificador Acqualive Terracota em cozinha clássica de madeira, água alcalina rica em magnésio para mulheres maduras" width="860" height="1080" loading="eager">
   </div>
 </header>
 
@@ -901,7 +901,7 @@ const article9 = {
 
   <p>Beber mais água ajuda. Beber a água certa transforma.</p>
 
-  <img src="https://upgrade-acqualive.lovable.app/images/blog/acqualive-cozinha-natureza.jpg" alt="Cozinha contemporânea com Purificador Acqualive, ambiente acolhedor para hidratação de qualidade" class="article-img" loading="lazy" width="1200" height="800">
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-cozinha-natureza.jpg" alt="Cozinha contemporânea com Purificador Acqualive, ambiente acolhedor para hidratação de qualidade" class="article-img" loading="lazy" width="1200" height="800">
 
   <h2 id="magnesio">O papel do magnésio nessa fase</h2>
   <p>O magnésio é o mineral mais negligenciado da menopausa. Ele participa de mais de 300 reações no corpo, ajuda no sono, no humor, no metabolismo da glicose e — fundamental — na <strong>fixação do cálcio nos ossos</strong>.</p>
@@ -936,7 +936,7 @@ const article9 = {
     <li>Com PRAL negativo, o que comprova cientificamente seu poder alcalinizante real.</li>
   </ul>
 
-  <img src="https://upgrade-acqualive.lovable.app/images/blog/terracota-grafite-arte.png" alt="Purificador Acqualive Terracota em versão grafite com arte contemporânea ao fundo, design para mulheres maduras" class="article-img" loading="lazy" width="1080" height="1350">
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/terracota-grafite-arte.png" alt="Purificador Acqualive Terracota em versão grafite com arte contemporânea ao fundo, design para mulheres maduras" class="article-img" loading="lazy" width="1080" height="1350">
 
   <div class="cta-section">
     <h2>Sua segunda metade <span>merece o melhor</span></h2>
@@ -966,9 +966,9 @@ const article10 = {
 <meta property="og:description" content="98% do seu café é água. Sua origem importa mais do que o grão.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="https://blog.acqualive.com.br/images/blog/acqualive-cozinha-moderna.png">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-cozinha-moderna.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"O café perfeito começa na água","description":"Como a água filtrada e mineralizada transforma o sabor do café em casa, segundo baristas e estudos sensoriais.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-04-20","dateModified":"2026-04-20","mainEntityOfPage":{"@type":"WebPage"},"image":"https://blog.acqualive.com.br/images/blog/acqualive-cozinha-moderna.png"}
+{"@context":"https://schema.org","@type":"Article","headline":"O café perfeito começa na água","description":"Como a água filtrada e mineralizada transforma o sabor do café em casa, segundo baristas e estudos sensoriais.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-04-20","dateModified":"2026-04-20","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-cozinha-moderna.png"}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -988,7 +988,7 @@ const article10 = {
     </div>
   </div>
   <div class="hero-img-wrap">
-    <img src="https://upgrade-acqualive.lovable.app/images/blog/acqualive-cozinha-moderna.png" alt="Purificador Acqualive transparente em cozinha moderna com luz dourada, água ideal para café especial" width="860" height="1080" loading="eager">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-cozinha-moderna.png" alt="Purificador Acqualive transparente em cozinha moderna com luz dourada, água ideal para café especial" width="860" height="1080" loading="eager">
   </div>
 </header>
 
@@ -1023,7 +1023,7 @@ const article10 = {
   <h2 id="cloro">O cloro é inimigo do café</h2>
   <p>O cloro tem cheiro. O cloro tem gosto. Em pequenas concentrações, ele já é capaz de mascarar os aromas mais delicados de um café especial — aromas florais, notas de frutas vermelhas, doçura caramelizada. Pior: o cloro reage com compostos fenólicos do café e pode produzir gosto metálico ou medicinal.</p>
 
-  <img src="https://upgrade-acqualive.lovable.app/images/blog/acqualive-torneira-detalhe.jpg" alt="Detalhe da torneira do Purificador Acqualive servindo água sem cloro, ideal para preparar café especial" class="article-img" loading="lazy" width="800" height="1200">
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-torneira-detalhe.jpg" alt="Detalhe da torneira do Purificador Acqualive servindo água sem cloro, ideal para preparar café especial" class="article-img" loading="lazy" width="800" height="1200">
 
   <p>Filtrar a água antes de usar no café é o passo zero. Sem isso, qualquer outro esforço fica comprometido.</p>
 
@@ -1061,7 +1061,7 @@ const article10 = {
     <li>Sem precisar de eletricidade, garrafão ou cartucho elétrico.</li>
   </ul>
 
-  <img src="https://upgrade-acqualive.lovable.app/images/blog/terracota-cozinha-classica.png" alt="Purificador Acqualive Terracota em cozinha clássica de madeira, ideal para café e gastronomia" class="article-img" loading="lazy" width="1080" height="1350">
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/terracota-cozinha-classica.png" alt="Purificador Acqualive Terracota em cozinha clássica de madeira, ideal para café e gastronomia" class="article-img" loading="lazy" width="1080" height="1350">
 
   <p>Mude a água. Você vai sentir na primeira xícara.</p>
 
