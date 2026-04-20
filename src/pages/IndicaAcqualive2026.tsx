@@ -363,6 +363,7 @@ const AboutSection = () => (
    ══════════════════════════════════════════════════════════ */
 const MissionBanner = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const tabs = [
     {
       title: "PURIFICAÇÃO",
@@ -399,8 +400,25 @@ const MissionBanner = () => {
     },
   ];
 
+  // Autoplay 10s
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(() => {
+      setActiveTab((prev) => (prev + 1) % tabs.length);
+    }, 10000);
+    return () => clearInterval(interval);
+  }, [isPaused, tabs.length]);
+
+  const nextTab = () => setActiveTab((p) => (p + 1) % tabs.length);
+  const prevTab = () => setActiveTab((p) => (p - 1 + tabs.length) % tabs.length);
+
   return (
-    <section id="beneficios" className="relative">
+    <section
+      id="beneficios"
+      className="relative"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       {/* Wave separator */}
       <WaveShape className="w-full h-16 text-white absolute -top-1 z-10" />
 
@@ -408,6 +426,22 @@ const MissionBanner = () => {
         {/* Decorative blue accent shapes */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-[hsl(21,89%,55%)]/10 translate-x-1/3 -translate-y-1/3" />
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-white/5 -translate-x-1/3 translate-y-1/3" />
+
+        {/* Side arrows */}
+        <button
+          onClick={prevTab}
+          aria-label="Anterior"
+          className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-[hsl(21,89%,55%)] backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transition-all"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+        <button
+          onClick={nextTab}
+          aria-label="Próximo"
+          className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-[hsl(21,89%,55%)] backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transition-all"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
 
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-[280px_1fr_1fr] gap-8 items-start">
@@ -460,6 +494,18 @@ const MissionBanner = () => {
                 ))}
               </ul>
             </motion.div>
+          </div>
+
+          {/* Progress dots */}
+          <div className="flex justify-center gap-2 mt-10">
+            {tabs.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveTab(i)}
+                aria-label={`Ir para slide ${i + 1}`}
+                className={`h-2 rounded-full transition-all ${activeTab === i ? "w-8 bg-[hsl(21,89%,55%)]" : "w-2 bg-white/30"}`}
+              />
+            ))}
           </div>
         </div>
       </div>
