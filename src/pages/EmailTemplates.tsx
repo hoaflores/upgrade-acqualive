@@ -571,6 +571,317 @@ const EMAILS = [
 </body>
 </html>`,
   },
+  // ════════════════════════════════════════════════════════════
+  // EMAIL 5 — Programa de Indicação (Identidade /indicado-acqualive)
+  // ════════════════════════════════════════════════════════════
+  {
+    day: "Indicação 1 — A descoberta",
+    subject: "Você descobriu algo bom demais para guardar só para você",
+    html: `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acqualive — Programa de Indicação</title>
+</head>
+<body style="margin:0;padding:0;background-color:#f1f4f8;font-family:Arial,Helvetica,sans-serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f1f4f8;">
+<tr><td align="center" style="padding:24px 12px;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#ffffff;border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(13,42,90,0.08);">
+
+<!-- Top accent bar -->
+<tr><td style="height:6px;background:linear-gradient(90deg,#103a73 0%,#1f63b3 50%,#f47b25 100%);"></td></tr>
+
+<!-- Header -->
+<tr><td style="background:#ffffff;padding:28px 36px 8px;text-align:left;">
+<img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/logo-acqualive-azul.png" alt="Acqualive" width="150" style="display:block;">
+</td></tr>
+
+<!-- Eyebrow -->
+<tr><td style="padding:18px 36px 0;">
+<table role="presentation" cellpadding="0" cellspacing="0"><tr>
+<td style="background:#eaf2fb;border-radius:999px;padding:8px 16px;">
+<span style="font-size:12px;font-weight:700;color:#103a73;letter-spacing:1px;text-transform:uppercase;">Programa de Indicação</span>
+</td></tr></table>
+</td></tr>
+
+<!-- Headline -->
+<tr><td style="padding:18px 36px 6px;">
+<h1 style="margin:0;font-size:30px;line-height:1.2;color:#0e2a52;font-weight:800;">A melhor água do Brasil <span style="color:#f47b25;">já está na sua casa.</span></h1>
+<p style="margin:14px 0 0;font-size:16px;color:#345a8a;line-height:1.6;">Imagina o quanto a vida de quem você ama pode mudar quando eles experimentarem o mesmo.</p>
+</td></tr>
+
+<!-- Hero image -->
+<tr><td style="padding:24px 36px 0;">
+<img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/indica-hero-family.jpg" alt="Família saudável bebendo água Acqualive" width="528" style="display:block;width:100%;height:auto;border-radius:12px;">
+</td></tr>
+
+<!-- Body -->
+<tr><td style="padding:28px 36px 0;">
+<p style="margin:0 0 16px;font-size:16px;line-height:1.75;color:#2c3e60;">Olá!</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.75;color:#2c3e60;">Você já sente todos os dias o que a Acqualive faz por dentro: mais disposição, hidratação de verdade e uma água que tem <strong style="color:#0e2a52;">sabor de cuidado</strong>.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.75;color:#2c3e60;">Agora pensa nas pessoas que estão na sua mesa de domingo, no grupo da família, na corrente de mensagens do trabalho. Quantas delas ainda bebem água de garrafão, da torneira, ou de filtro comum?</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.75;color:#2c3e60;">Criamos uma página especial para que você possa, em um clique, mostrar a elas <strong style="color:#0e2a52;">a mesma transformação que você já vive</strong>.</p>
+</td></tr>
+
+<!-- Highlight box -->
+<tr><td style="padding:8px 36px 0;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f7faff;border:1px solid #d9e6f5;border-left:4px solid #f47b25;border-radius:10px;">
+<tr><td style="padding:20px 22px;">
+<p style="margin:0 0 6px;font-size:13px;color:#f47b25;font-weight:800;letter-spacing:1px;text-transform:uppercase;">Como funciona</p>
+<p style="margin:0;font-size:16px;line-height:1.65;color:#0e2a52;">A cada amigo, familiar ou colega que adquirir um Acqualive através da sua indicação, <strong>você ganha 1 Kit de Refis completo</strong>. Indique 2 compradores por ano e <strong>nunca mais pague pela troca dos seus refis</strong>.</p>
+</td></tr></table>
+</td></tr>
+
+<!-- CTA -->
+<tr><td style="padding:30px 36px 6px;text-align:center;">
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+<tr><td style="background:linear-gradient(135deg,#f47b25,#e8651b);border-radius:10px;">
+<a href="https://paginas.acqualive.com.br/indicado-acqualive" target="_blank" style="display:block;padding:16px 36px;color:#ffffff;text-decoration:none;font-size:15px;font-weight:800;letter-spacing:0.4px;">QUERO INDICAR AGORA</a>
+</td></tr></table>
+<p style="margin:14px 0 0;font-size:13px;color:#7a8aa2;">paginas.acqualive.com.br/indicado-acqualive</p>
+</td></tr>
+
+<!-- Soft tip -->
+<tr><td style="padding:24px 36px 32px;">
+<p style="margin:0;font-size:14px;line-height:1.7;color:#5a6f8f;text-align:center;font-style:italic;">Dica: comece pelo grupo da família. É lá que estão as pessoas que mais merecem essa água.</p>
+</td></tr>
+
+<!-- Signature -->
+<tr><td style="padding:0 36px 36px;">
+<p style="margin:0;font-size:15px;line-height:1.7;color:#2c3e60;">Com carinho,<br><strong style="color:#0e2a52;">Equipe Acqualive</strong></p>
+</td></tr>
+
+<!-- Footer -->
+<tr><td style="padding:22px 36px;background:#f7faff;text-align:center;border-top:1px solid #e2ecf7;">
+<p style="margin:0;font-size:12px;color:#7a8aa2;">© 2026 Acqualive. Todos os direitos reservados.</p>
+<p style="margin:6px 0 0;font-size:11px;color:#9aa9c0;">Você recebeu este email porque é cliente Acqualive.</p>
+</td></tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>`,
+  },
+  // ════════════════════════════════════════════════════════════
+  // EMAIL 6 — A conta que faz sentido (foco no benefício refis grátis)
+  // ════════════════════════════════════════════════════════════
+  {
+    day: "Indicação 2 — A conta",
+    subject: "2 indicações por ano = refis grátis para sempre. A conta fecha.",
+    html: `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acqualive — Refis grátis para sempre</title>
+</head>
+<body style="margin:0;padding:0;background-color:#f1f4f8;font-family:Arial,Helvetica,sans-serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f1f4f8;">
+<tr><td align="center" style="padding:24px 12px;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#ffffff;border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(13,42,90,0.08);">
+
+<tr><td style="height:6px;background:linear-gradient(90deg,#103a73 0%,#1f63b3 50%,#f47b25 100%);"></td></tr>
+
+<!-- Header -->
+<tr><td style="background:#ffffff;padding:28px 36px 8px;text-align:left;">
+<img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/logo-acqualive-azul.png" alt="Acqualive" width="150" style="display:block;">
+</td></tr>
+
+<!-- Eyebrow -->
+<tr><td style="padding:18px 36px 0;">
+<table role="presentation" cellpadding="0" cellspacing="0"><tr>
+<td style="background:#fff1e6;border-radius:999px;padding:8px 16px;">
+<span style="font-size:12px;font-weight:700;color:#c95a14;letter-spacing:1px;text-transform:uppercase;">Refis grátis para sempre</span>
+</td></tr></table>
+</td></tr>
+
+<!-- Headline -->
+<tr><td style="padding:18px 36px 0;">
+<h1 style="margin:0;font-size:30px;line-height:1.2;color:#0e2a52;font-weight:800;">A conta mais bonita que você vai fazer este ano.</h1>
+<p style="margin:14px 0 0;font-size:16px;color:#345a8a;line-height:1.6;">Duas pessoas. Um ano. Refis grátis para sempre. Pode parecer um exagero, mas é exatamente assim que funciona.</p>
+</td></tr>
+
+<!-- Math card -->
+<tr><td style="padding:28px 36px 0;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#0e2a52,#1f63b3);border-radius:14px;">
+<tr><td style="padding:30px 26px;text-align:center;">
+<p style="margin:0;font-size:13px;color:#a9c8ee;font-weight:700;letter-spacing:2px;text-transform:uppercase;">Sua matemática</p>
+<p style="margin:14px 0 6px;font-size:46px;color:#ffffff;font-weight:800;line-height:1;">2 indicações</p>
+<p style="margin:0;font-size:18px;color:#ffd6b3;">no ano</p>
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin:20px auto;"><tr><td style="width:60px;height:2px;background:#f47b25;"></td></tr></table>
+<p style="margin:0;font-size:22px;color:#ffffff;font-weight:700;line-height:1.4;">= refis grátis<br><span style="color:#ffd6b3;">para sempre</span></p>
+</td></tr></table>
+</td></tr>
+
+<!-- Comparison table -->
+<tr><td style="padding:28px 36px 0;">
+<h2 style="margin:0 0 16px;font-size:20px;color:#0e2a52;font-weight:700;">O que você economiza</h2>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #e2ecf7;border-radius:10px;overflow:hidden;">
+<tr style="background:#f7faff;">
+<td style="padding:14px 18px;font-size:13px;color:#5a6f8f;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;">Item</td>
+<td style="padding:14px 18px;font-size:13px;color:#5a6f8f;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;text-align:right;">Antes</td>
+<td style="padding:14px 18px;font-size:13px;color:#5a6f8f;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;text-align:right;">Com indicação</td>
+</tr>
+<tr><td style="padding:16px 18px;font-size:14px;color:#2c3e60;border-top:1px solid #e2ecf7;">Kit de refis (anual)</td>
+<td style="padding:16px 18px;font-size:14px;color:#2c3e60;border-top:1px solid #e2ecf7;text-align:right;">Custo padrão</td>
+<td style="padding:16px 18px;font-size:14px;color:#0e2a52;font-weight:800;border-top:1px solid #e2ecf7;text-align:right;">R$ 0,00</td>
+</tr>
+<tr><td style="padding:16px 18px;font-size:14px;color:#2c3e60;border-top:1px solid #e2ecf7;">Manutenção da água pura</td>
+<td style="padding:16px 18px;font-size:14px;color:#2c3e60;border-top:1px solid #e2ecf7;text-align:right;">Mensal</td>
+<td style="padding:16px 18px;font-size:14px;color:#0e2a52;font-weight:800;border-top:1px solid #e2ecf7;text-align:right;">Garantida</td>
+</tr>
+<tr><td style="padding:16px 18px;font-size:14px;color:#2c3e60;border-top:1px solid #e2ecf7;">Pessoas que você cuida</td>
+<td style="padding:16px 18px;font-size:14px;color:#2c3e60;border-top:1px solid #e2ecf7;text-align:right;">A sua família</td>
+<td style="padding:16px 18px;font-size:14px;color:#0e2a52;font-weight:800;border-top:1px solid #e2ecf7;text-align:right;">+ 2 famílias</td>
+</tr>
+</table>
+</td></tr>
+
+<!-- Honest line -->
+<tr><td style="padding:24px 36px 0;">
+<p style="margin:0;font-size:16px;line-height:1.75;color:#2c3e60;">Não é sorteio. Não é promoção temporária. Não tem letrinha miúda. <strong style="color:#0e2a52;">É um agradecimento permanente</strong> de quem cuida de você há tanto tempo.</p>
+</td></tr>
+
+<!-- CTA -->
+<tr><td style="padding:30px 36px 6px;text-align:center;">
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+<tr><td style="background:linear-gradient(135deg,#f47b25,#e8651b);border-radius:10px;">
+<a href="https://paginas.acqualive.com.br/indicado-acqualive" target="_blank" style="display:block;padding:16px 36px;color:#ffffff;text-decoration:none;font-size:15px;font-weight:800;letter-spacing:0.4px;">PEGAR MEU LINK DE INDICAÇÃO</a>
+</td></tr></table>
+<p style="margin:14px 0 0;font-size:13px;color:#7a8aa2;">É só copiar a página e enviar para quem você quer presentear com água de verdade.</p>
+</td></tr>
+
+<!-- How to send -->
+<tr><td style="padding:30px 36px 0;">
+<h2 style="margin:0 0 14px;font-size:18px;color:#0e2a52;font-weight:700;">3 jeitos simples de indicar hoje</h2>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+<tr><td style="padding:12px 0;border-bottom:1px solid #eaf0f8;">
+<p style="margin:0;font-size:15px;color:#2c3e60;"><strong style="color:#f47b25;">1.</strong> Mande no grupo da família com a frase: <em>"Olha o que mudou aqui em casa"</em>.</p>
+</td></tr>
+<tr><td style="padding:12px 0;border-bottom:1px solid #eaf0f8;">
+<p style="margin:0;font-size:15px;color:#2c3e60;"><strong style="color:#f47b25;">2.</strong> Envie para aquele amigo que vive falando de saúde.</p>
+</td></tr>
+<tr><td style="padding:12px 0;">
+<p style="margin:0;font-size:15px;color:#2c3e60;"><strong style="color:#f47b25;">3.</strong> Compartilhe no story. Quem se interessar vai te chamar.</p>
+</td></tr>
+</table>
+</td></tr>
+
+<!-- Signature -->
+<tr><td style="padding:32px 36px 36px;">
+<p style="margin:0;font-size:15px;line-height:1.7;color:#2c3e60;">Um abraço,<br><strong style="color:#0e2a52;">Equipe Acqualive</strong></p>
+</td></tr>
+
+<!-- Footer -->
+<tr><td style="padding:22px 36px;background:#f7faff;text-align:center;border-top:1px solid #e2ecf7;">
+<p style="margin:0;font-size:12px;color:#7a8aa2;">© 2026 Acqualive. Todos os direitos reservados.</p>
+<p style="margin:6px 0 0;font-size:11px;color:#9aa9c0;">Você recebeu este email porque é cliente Acqualive.</p>
+</td></tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>`,
+  },
+  // ════════════════════════════════════════════════════════════
+  // EMAIL 7 — Convite emocional / urgência leve
+  // ════════════════════════════════════════════════════════════
+  {
+    day: "Indicação 3 — O convite",
+    subject: "Quem você indicaria primeiro? (a água deles agradece)",
+    html: `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acqualive — Indique alguém que você ama</title>
+</head>
+<body style="margin:0;padding:0;background-color:#f1f4f8;font-family:Arial,Helvetica,sans-serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f1f4f8;">
+<tr><td align="center" style="padding:24px 12px;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#ffffff;border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(13,42,90,0.08);">
+
+<tr><td style="height:6px;background:linear-gradient(90deg,#103a73 0%,#1f63b3 50%,#f47b25 100%);"></td></tr>
+
+<!-- Header -->
+<tr><td style="background:#ffffff;padding:28px 36px 8px;text-align:left;">
+<img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/logo-acqualive-azul.png" alt="Acqualive" width="150" style="display:block;">
+</td></tr>
+
+<!-- Hero image -->
+<tr><td style="padding:18px 36px 0;">
+<img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/indica-family-dinner.jpg" alt="Família reunida em volta da mesa" width="528" style="display:block;width:100%;height:auto;border-radius:12px;">
+</td></tr>
+
+<!-- Headline -->
+<tr><td style="padding:28px 36px 0;">
+<h1 style="margin:0;font-size:30px;line-height:1.25;color:#0e2a52;font-weight:800;">Pense em uma pessoa.<br><span style="color:#f47b25;">Só uma.</span></h1>
+<p style="margin:14px 0 0;font-size:16px;color:#345a8a;line-height:1.65;">Aquela que você sabe que merece beber a melhor água do Brasil. Agora imagine o rosto dela ao receber o seu link.</p>
+</td></tr>
+
+<!-- Story body -->
+<tr><td style="padding:24px 36px 0;">
+<p style="margin:0 0 16px;font-size:16px;line-height:1.75;color:#2c3e60;">Pode ser sua mãe, que ainda hidrata o ferro do almoço com água de torneira. Pode ser seu irmão, que gasta uma fortuna em garrafão e nem se dá conta do quanto isso pesa, dentro e fora do bolso. Pode ser aquela amiga que vive postando sobre saúde, mas ainda não conhece a Acqualive.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.75;color:#2c3e60;">Indicar não é vender. <strong style="color:#0e2a52;">Indicar é cuidar.</strong> É colocar na mesa de quem você ama o mesmo padrão de água que já entrou na sua.</p>
+</td></tr>
+
+<!-- Quote -->
+<tr><td style="padding:24px 36px 0;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td style="width:4px;background:#f47b25;border-radius:2px;"></td>
+<td style="padding:14px 22px;">
+<p style="margin:0;font-size:18px;line-height:1.55;color:#0e2a52;font-style:italic;">"Indiquei minha irmã sem pensar duas vezes. Hoje as duas casas têm Acqualive — e meus refis chegam de graça todo ano."</p>
+<p style="margin:10px 0 0;font-size:13px;color:#7a8aa2;">Cliente Acqualive — Programa de Indicação</p>
+</td>
+</tr>
+</table>
+</td></tr>
+
+<!-- Recap box -->
+<tr><td style="padding:28px 36px 0;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#eaf2fb;border-radius:12px;">
+<tr><td style="padding:22px 24px;">
+<p style="margin:0 0 10px;font-size:13px;color:#103a73;font-weight:800;letter-spacing:1px;text-transform:uppercase;">Lembrete rápido</p>
+<p style="margin:0;font-size:15px;line-height:1.7;color:#2c3e60;">Cada indicação que adquirir um Acqualive = <strong style="color:#0e2a52;">1 Kit de Refis grátis</strong> para você. Indicou 2 no ano? <strong style="color:#0e2a52;">Nunca mais paga refil.</strong> Sem limite, sem letrinha miúda, sem prazo de validade.</p>
+</td></tr></table>
+</td></tr>
+
+<!-- Big CTA -->
+<tr><td style="padding:32px 36px 6px;text-align:center;">
+<p style="margin:0 0 18px;font-size:17px;color:#0e2a52;font-weight:700;">Pronto para presentear quem você ama?</p>
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+<tr><td style="background:linear-gradient(135deg,#f47b25,#e8651b);border-radius:10px;">
+<a href="https://paginas.acqualive.com.br/indicado-acqualive" target="_blank" style="display:block;padding:18px 40px;color:#ffffff;text-decoration:none;font-size:16px;font-weight:800;letter-spacing:0.5px;">ENVIAR PARA QUEM EU AMO</a>
+</td></tr></table>
+<p style="margin:14px 0 0;font-size:13px;color:#7a8aa2;">Copie o link, cole no WhatsApp e veja a mágica acontecer.</p>
+</td></tr>
+
+<!-- Final nudge -->
+<tr><td style="padding:30px 36px 36px;">
+<p style="margin:0;font-size:15px;line-height:1.7;color:#5a6f8f;text-align:center;font-style:italic;">A melhor água do Brasil já é sua. Agora é hora de espalhar.</p>
+</td></tr>
+
+<!-- Signature -->
+<tr><td style="padding:0 36px 36px;">
+<p style="margin:0;font-size:15px;line-height:1.7;color:#2c3e60;">Com gratidão,<br><strong style="color:#0e2a52;">Equipe Acqualive</strong></p>
+</td></tr>
+
+<!-- Footer -->
+<tr><td style="padding:22px 36px;background:#f7faff;text-align:center;border-top:1px solid #e2ecf7;">
+<p style="margin:0;font-size:12px;color:#7a8aa2;">© 2026 Acqualive. Todos os direitos reservados.</p>
+<p style="margin:6px 0 0;font-size:11px;color:#9aa9c0;">Você recebeu este email porque é cliente Acqualive.</p>
+</td></tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>`,
+  },
 ];
 
 const EmailTemplates = () => {
