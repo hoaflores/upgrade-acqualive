@@ -550,15 +550,6 @@ const article6 = {
     <p>Tire as garrafas plásticas da sua casa. Tenha água pura, alcalina e segura, direto na sua cozinha, todos os dias.</p>
     <a href="https://acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Conhecer o Acqualive →</a>
   </div>
-
-  <div class="related-links">
-    <h4>Continue lendo</h4>
-    <ul>
-      <li><a href="https://blog.acqualive.com.br/agua-com-microplasticos/">A água que você bebe tem microplásticos?</a></li>
-      <li><a href="https://blog.acqualive.com.br/qual-o-melhor-filtro-de-agua/">Qual é o melhor filtro de água?</a></li>
-      <li><a href="https://blog.acqualive.com.br/agua-alcalina-anti-inflamatoria/">Água alcalina é anti-inflamatória?</a></li>
-    </ul>
-  </div>
 </main>`
   )
 };
@@ -647,7 +638,6 @@ const article7 = {
   <h3>3. Metais pesados</h3>
   <p>Chumbo, ferro e outros metais aparecem por causa de tubulações antigas. Mesmo em casas novas, o caminho entre a rua e a sua torneira pode ser longo.</p>
 
-  <img src="https://upgrade-acqualive.lovable.app/images/blog/acqualive-vitrine-gramado.jpg" alt="Purificador Acqualive em ambiente de loja em Gramado, demonstrando solução para água segura em diferentes contextos" class="article-img" loading="lazy" width="1200" height="600">
 
   <h3>4. Sedimentos e ferrugem</h3>
   <p>A água escurecida que apareceu nas torneiras paulistanas em 2025 é o sintoma visível de um problema que existe sempre, em menor escala.</p>
@@ -692,15 +682,6 @@ const article7 = {
     <h2>Tenha controle <span>do que entra</span> em casa</h2>
     <p>Não dá para esperar a rede pública resolver. Comece pela sua cozinha, hoje, com um purificador que faz o trabalho que a estação de tratamento não faz.</p>
     <a href="https://acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Conhecer o Acqualive →</a>
-  </div>
-
-  <div class="related-links">
-    <h4>Continue lendo</h4>
-    <ul>
-      <li><a href="https://blog.acqualive.com.br/microplasticos-no-cerebro/">Microplásticos no cérebro: o que ninguém te contou</a></li>
-      <li><a href="https://blog.acqualive.com.br/cloro-pele-cabelo/">Por que sua pele e seu cabelo estão ressecados?</a></li>
-      <li><a href="https://blog.acqualive.com.br/qual-o-melhor-filtro-de-agua/">Qual é o melhor filtro de água?</a></li>
-    </ul>
   </div>
 </main>`
   )
@@ -838,15 +819,6 @@ const article8 = {
     <p>Pare de gastar com tratamento e cuide do que toca seu corpo o dia inteiro. Água sem cloro, com minerais, todos os dias.</p>
     <a href="https://acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Conhecer o Acqualive →</a>
   </div>
-
-  <div class="related-links">
-    <h4>Continue lendo</h4>
-    <ul>
-      <li><a href="https://blog.acqualive.com.br/agua-alcalina-anti-inflamatoria/">Água alcalina é anti-inflamatória?</a></li>
-      <li><a href="https://blog.acqualive.com.br/agua-da-torneira-segura-brasil/">Água da torneira no Brasil é segura?</a></li>
-      <li><a href="https://blog.acqualive.com.br/qual-o-melhor-filtro-de-agua/">Qual é o melhor filtro de água?</a></li>
-    </ul>
-  </div>
 </main>`
   )
 };
@@ -970,15 +942,6 @@ const article9 = {
     <h2>Sua segunda metade <span>merece o melhor</span></h2>
     <p>Hidratação inteligente, magnésio diário, pH equilibrado. Tudo isso na água que já está na sua casa.</p>
     <a href="https://acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Conhecer o Acqualive →</a>
-  </div>
-
-  <div class="related-links">
-    <h4>Continue lendo</h4>
-    <ul>
-      <li><a href="https://blog.acqualive.com.br/agua-alcalina-anti-inflamatoria/">Água alcalina é anti-inflamatória?</a></li>
-      <li><a href="https://blog.acqualive.com.br/7-alimentos-anti-inflamatorios/">7 alimentos anti-inflamatórios para o dia a dia</a></li>
-      <li><a href="https://blog.acqualive.com.br/cloro-pele-cabelo/">Por que sua pele e cabelo estão ressecados?</a></li>
-    </ul>
   </div>
 </main>`
   )
@@ -1106,15 +1069,6 @@ const article10 = {
     <h2>O ingrediente secreto <span>do seu café</span></h2>
     <p>Comece sua manhã com a água que faz justiça ao grão. Filtrada, mineralizada, sem cloro, alcalina.</p>
     <a href="https://acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Conhecer o Acqualive →</a>
-  </div>
-
-  <div class="related-links">
-    <h4>Continue lendo</h4>
-    <ul>
-      <li><a href="https://blog.acqualive.com.br/agua-alcalina-anti-inflamatoria/">Água alcalina é anti-inflamatória?</a></li>
-      <li><a href="https://blog.acqualive.com.br/cloro-pele-cabelo/">Por que sua pele e cabelo estão ressecados?</a></li>
-      <li><a href="https://blog.acqualive.com.br/qual-o-melhor-filtro-de-agua/">Qual é o melhor filtro de água?</a></li>
-    </ul>
   </div>
 </main>`
   )
