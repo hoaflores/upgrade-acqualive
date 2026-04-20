@@ -4076,9 +4076,21 @@ const BASE_ARTICLES = [
   },
 ];
 
+const ARTICLES = [...BASE_ARTICLES, ...EXTRA_ARTICLES];
+
+const extractMeta = (html: string) => {
+  const get = (re: RegExp) => { const m = html.match(re); return m ? m[1] : ""; };
+  return {
+    metaTitle: get(/<title>([^<]+)<\/title>/),
+    metaDescription: get(/<meta name="description" content="([^"]+)"/),
+    keywords: get(/<meta name="keywords" content="([^"]+)"/),
+    canonical: get(/<link rel="canonical" href="([^"]+)"/),
+  };
+};
+
 const BlogTemplates = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [viewMode, setViewMode] = useState<"preview" | "code">("preview");
+  const [viewMode, setViewMode] = useState<"preview" | "code" | "meta">("preview");
   const [copied, setCopied] = useState(false);
   const [iframeHeight, setIframeHeight] = useState<number>(2800);
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
