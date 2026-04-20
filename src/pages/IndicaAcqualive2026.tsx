@@ -22,7 +22,7 @@ import ambienteImg from "@/assets/indica-ambiente.jpg";
 import vself6lImg from "@/assets/indica-prod-vself-6l.png";
 import vpremiumImg from "@/assets/indica-prod-vself-10l-premium.png";
 import terracotaImg from "@/assets/indica-prod-terracota.png";
-import heroRustic from "@/assets/indica-hero-terracota-rustic.jpg";
+import heroRustic from "@/assets/indica-hero-terracota-rustic-v2.jpg";
 import coupleKitchen from "@/assets/indica-couple-kitchen.jpg";
 import familyDinner from "@/assets/indica-family-dinner.jpg";
 import faqPour from "@/assets/indica-faq-pour.png";
