@@ -1156,12 +1156,9 @@ const FinalCTA = () => (
             </a>
           </Button>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-10 text-sm text-white/50">
+          <div className="flex items-center justify-center gap-6 mt-10 text-sm text-white/50">
             <span className="flex items-center gap-2">
               <Mail className="w-4 h-4" /> sac@acqualive.com.br
-            </span>
-            <span className="flex items-center gap-2">
-              <MapPin className="w-4 h-4" /> Porto Alegre, RS
             </span>
           </div>
         </motion.div>
