@@ -432,9 +432,9 @@ const article6 = {
 <meta property="og:description" content="Cientistas encontraram o equivalente a uma colher de plástico no cérebro humano. Entenda de onde vem e o que fazer.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-torneira-detalhe.jpg">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/cerebro-microplasticos.jpg">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Microplásticos no Cérebro: O Que Ninguém Te Contou Sobre a Água Que Você Bebe","description":"Estudo da Nature 2025 revelou níveis alarmantes de microplásticos em cérebros humanos. Descubra a relação com a água que bebemos e como reduzir a exposição.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive","logo":{"@type":"ImageObject","url":"https://blog.acqualive.com.br/images/logo.png"}},"datePublished":"2026-04-20","dateModified":"2026-04-20","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-torneira-detalhe.jpg"}
+{"@context":"https://schema.org","@type":"Article","headline":"Microplásticos no Cérebro: O Que Ninguém Te Contou Sobre a Água Que Você Bebe","description":"Estudo da Nature 2025 revelou níveis alarmantes de microplásticos em cérebros humanos. Descubra a relação com a água que bebemos e como reduzir a exposição.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive","logo":{"@type":"ImageObject","url":"https://blog.acqualive.com.br/images/logo.png"}},"datePublished":"2026-04-20","dateModified":"2026-04-20","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/cerebro-microplasticos.jpg"}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -454,7 +454,7 @@ const article6 = {
     </div>
   </div>
   <div class="hero-img-wrap">
-    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-torneira-detalhe.jpg" alt="Detalhe da torneira de um purificador Acqualive servindo água pura, livre de microplásticos" width="860" height="500" loading="eager">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/cerebro-microplasticos.jpg" alt="Cérebro humano translúcido com fragmentos de microplásticos coloridos visíveis em seu interior, representando a contaminação descoberta pelo estudo Nature 2025" width="860" height="500" loading="eager">
   </div>
 </header>
 
