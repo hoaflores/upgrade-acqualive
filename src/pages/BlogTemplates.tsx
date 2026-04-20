@@ -1,9 +1,10 @@
 import { useState, useRef, useEffect } from "react";
-import { Copy, Check, Eye, Code, ChevronLeft, ChevronRight } from "lucide-react";
+import { Copy, Check, Eye, Code, ChevronLeft, ChevronRight, ListChecks, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import { EXTRA_ARTICLES } from "@/data/blog-articles-extra";
 
-const ARTICLES = [
+const BASE_ARTICLES = [
   {
     title: "Qual é o melhor filtro de água?",
     slug: "qual-melhor-filtro-de-agua",
@@ -4075,9 +4076,21 @@ const ARTICLES = [
   },
 ];
 
+const ARTICLES = [...BASE_ARTICLES, ...EXTRA_ARTICLES];
+
+const extractMeta = (html: string) => {
+  const get = (re: RegExp) => { const m = html.match(re); return m ? m[1] : ""; };
+  return {
+    metaTitle: get(/<title>([^<]+)<\/title>/),
+    metaDescription: get(/<meta name="description" content="([^"]+)"/),
+    keywords: get(/<meta name="keywords" content="([^"]+)"/),
+    canonical: get(/<link rel="canonical" href="([^"]+)"/),
+  };
+};
+
 const BlogTemplates = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [viewMode, setViewMode] = useState<"preview" | "code">("preview");
+  const [viewMode, setViewMode] = useState<"preview" | "code" | "meta">("preview");
   const [copied, setCopied] = useState(false);
   const [iframeHeight, setIframeHeight] = useState<number>(2800);
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
@@ -4183,6 +4196,14 @@ const BlogTemplates = () => {
             >
               <Code className="h-4 w-4 mr-1" /> HTML
             </Button>
+            <Button
+              size="sm"
+              variant={viewMode === "meta" ? "default" : "outline"}
+              onClick={() => setViewMode("meta")}
+              className={viewMode === "meta" ? "bg-[#3b82f6] hover:bg-[#2563eb]" : "border-[#1c2333] bg-transparent text-gray-300 hover:bg-[#1c2333]"}
+            >
+              <ListChecks className="h-4 w-4 mr-1" /> Metadados
+            </Button>
 
             <div className="w-px h-6 bg-[#1c2333] mx-1" />
 
@@ -4215,14 +4236,72 @@ const BlogTemplates = () => {
               style={{ height: `${iframeHeight}px` }}
             />
           </div>
-        ) : (
+        ) : viewMode === "code" ? (
           <pre className="bg-[#161b26] rounded-lg p-6 overflow-x-auto text-xs text-gray-300 border border-[#1c2333]" style={{ maxHeight: "80vh" }}>
             {article.html}
           </pre>
+        ) : (
+          <div className="bg-[#161b26] rounded-lg p-6 border border-[#1c2333]">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-lg font-bold text-white">Metadados SEO — Todos os artigos</h2>
+              <span className="text-xs text-gray-400">{ARTICLES.length} artigos</span>
+            </div>
+            <div className="space-y-4">
+              {ARTICLES.map((a, i) => {
+                const meta = extractMeta(a.html);
+                const copyAll = () => {
+                  navigator.clipboard.writeText(
+                    `Título: ${a.title}\nSlug: ${a.slug}\nMeta title: ${meta.metaTitle}\nMeta description: ${meta.metaDescription}\nKeywords: ${meta.keywords}\nCanonical: ${meta.canonical}`
+                  );
+                  toast.success(`Metadados do artigo ${i + 1} copiados!`);
+                };
+                return (
+                  <div key={i} className="bg-[#0d1117] rounded-lg p-5 border border-[#1c2333]">
+                    <div className="flex items-start justify-between gap-3 mb-3">
+                      <div className="flex items-start gap-3 flex-1 min-w-0">
+                        <span className="shrink-0 w-7 h-7 rounded-md bg-[#3b82f6] text-white text-xs font-bold flex items-center justify-center">{i + 1}</span>
+                        <div className="min-w-0 flex-1">
+                          <h3 className="text-sm font-bold text-white mb-1 truncate">{a.title}</h3>
+                          <p className="text-xs text-gray-500">/{a.slug}</p>
+                        </div>
+                      </div>
+                      <div className="flex gap-2 shrink-0">
+                        <button onClick={() => { setCurrentIndex(i); setViewMode("preview"); }} className="text-xs text-[#3b82f6] hover:underline whitespace-nowrap">Ver artigo</button>
+                        <button onClick={copyAll} className="text-xs text-gray-400 hover:text-white whitespace-nowrap">Copiar tudo</button>
+                      </div>
+                    </div>
+                    <div className="grid gap-2 text-xs">
+                      <div className="grid grid-cols-[110px_1fr] gap-3 items-start">
+                        <span className="text-gray-500 font-semibold uppercase tracking-wider">Meta title</span>
+                        <span className="text-gray-200 break-words">{meta.metaTitle || "—"}</span>
+                      </div>
+                      <div className="grid grid-cols-[110px_1fr] gap-3 items-start">
+                        <span className="text-gray-500 font-semibold uppercase tracking-wider">Meta desc.</span>
+                        <span className="text-gray-300 break-words">{meta.metaDescription || "—"}</span>
+                      </div>
+                      <div className="grid grid-cols-[110px_1fr] gap-3 items-start">
+                        <span className="text-gray-500 font-semibold uppercase tracking-wider">Keywords</span>
+                        <span className="text-gray-400 break-words">{meta.keywords || "—"}</span>
+                      </div>
+                      <div className="grid grid-cols-[110px_1fr] gap-3 items-start">
+                        <span className="text-gray-500 font-semibold uppercase tracking-wider">Canonical</span>
+                        {meta.canonical ? (
+                          <a href={meta.canonical} target="_blank" rel="noopener noreferrer" className="text-[#3b82f6] hover:underline break-all inline-flex items-center gap-1">
+                            {meta.canonical} <ExternalLink className="h-3 w-3 shrink-0" />
+                          </a>
+                        ) : <span className="text-gray-500">—</span>}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         )}
       </div>
     </div>
   );
 };
+
 
 export default BlogTemplates;
