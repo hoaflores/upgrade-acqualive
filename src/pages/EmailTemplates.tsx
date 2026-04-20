@@ -659,7 +659,22 @@ const EMAILS = [
 </td></tr></table>
 </td></tr>
 
-<!-- Soft tip -->
+<!-- MODELO DE MENSAGEM PRONTA -->
+<tr><td style="padding:18px 36px 0;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#e8f5ec;border:2px solid #25D366;border-radius:14px;">
+<tr><td style="padding:22px 24px;">
+<p style="margin:0 0 6px;font-size:13px;color:#128C4A;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;text-align:center;">💬 Mensagem pronta para o WhatsApp</p>
+<p style="margin:0 0 14px;font-size:13px;color:#2c5e3f;text-align:center;">Copie, troque [SEU NOME] pelo seu nome e envie:</p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border:1px solid #c8e6d0;border-radius:10px;">
+<tr><td style="padding:18px 18px;">
+<p style="margin:0 0 10px;font-size:15px;line-height:1.7;color:#0e2a52;">Oi! 👋</p>
+<p style="margin:0 0 10px;font-size:15px;line-height:1.7;color:#0e2a52;">Aqui em casa a gente trocou a água comum por uma água alcalina que filtra de verdade — sem garrafão, sem peso, sem aquele gosto estranho. Diferença absurda na qualidade do dia a dia.</p>
+<p style="margin:0 0 10px;font-size:15px;line-height:1.7;color:#0e2a52;">É o Acqualive. Achei que você ia gostar de conhecer:</p>
+<p style="margin:0 0 10px;font-size:15px;line-height:1.7;color:#0e2a52;font-weight:700;">👉 paginas.acqualive.com.br/indicado-acqualive</p>
+<p style="margin:0;font-size:15px;line-height:1.7;color:#0e2a52;">Qualquer dúvida pode me chamar. Abraço,<br>[SEU NOME]</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr>
 <tr><td style="padding:24px 36px 32px;">
 <p style="margin:0;font-size:14px;line-height:1.7;color:#5a6f8f;text-align:center;font-style:italic;">Dica: comece pelo grupo da família. É lá que estão as pessoas que mais merecem essa água.</p>
 </td></tr>
@@ -783,7 +798,23 @@ const EMAILS = [
 </td></tr></table>
 </td></tr>
 
-<!-- How to send -->
+<!-- MODELO DE MENSAGEM PRONTA -->
+<tr><td style="padding:18px 36px 0;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#e8f5ec;border:2px solid #25D366;border-radius:14px;">
+<tr><td style="padding:22px 24px;">
+<p style="margin:0 0 6px;font-size:13px;color:#128C4A;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;text-align:center;">💬 Mensagem pronta para o WhatsApp</p>
+<p style="margin:0 0 14px;font-size:13px;color:#2c5e3f;text-align:center;">Copie, troque [SEU NOME] pelo seu nome e envie:</p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border:1px solid #c8e6d0;border-radius:10px;">
+<tr><td style="padding:18px 18px;">
+<p style="margin:0 0 10px;font-size:15px;line-height:1.7;color:#0e2a52;">Oi! 😊</p>
+<p style="margin:0 0 10px;font-size:15px;line-height:1.7;color:#0e2a52;">Vou te contar uma coisa boa: a Acqualive tem um programa onde, a cada amigo que eu indico e que adquire o filtro, eu ganho um kit de refis grátis. Indicando 2 pessoas no ano, <strong>nunca mais pago refil</strong>.</p>
+<p style="margin:0 0 10px;font-size:15px;line-height:1.7;color:#0e2a52;">E o melhor: você ainda recebe uma condição especial. Sai ganhando dos dois lados.</p>
+<p style="margin:0 0 10px;font-size:15px;line-height:1.7;color:#0e2a52;">Lembrei de você na hora. Dá uma olhada:</p>
+<p style="margin:0 0 10px;font-size:15px;line-height:1.7;color:#0e2a52;font-weight:700;">👉 paginas.acqualive.com.br/indicado-acqualive</p>
+<p style="margin:0;font-size:15px;line-height:1.7;color:#0e2a52;">Se quiser conversar antes, me chama por aqui.<br>[SEU NOME]</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr>
 <tr><td style="padding:30px 36px 0;">
 <h2 style="margin:0 0 14px;font-size:18px;color:#0e2a52;font-weight:700;">3 jeitos simples de indicar hoje</h2>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
@@ -907,7 +938,22 @@ const EMAILS = [
 </td></tr></table>
 </td></tr>
 
-<!-- Final nudge -->
+<!-- MODELO DE MENSAGEM PRONTA -->
+<tr><td style="padding:18px 36px 0;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#e8f5ec;border:2px solid #25D366;border-radius:14px;">
+<tr><td style="padding:22px 24px;">
+<p style="margin:0 0 6px;font-size:13px;color:#128C4A;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;text-align:center;">💬 Mensagem pronta para o WhatsApp</p>
+<p style="margin:0 0 14px;font-size:13px;color:#2c5e3f;text-align:center;">Copie, troque [SEU NOME] pelo seu nome e envie para quem você ama:</p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border:1px solid #c8e6d0;border-radius:10px;">
+<tr><td style="padding:18px 18px;">
+<p style="margin:0 0 10px;font-size:15px;line-height:1.7;color:#0e2a52;">Oi, tudo bem? ❤️</p>
+<p style="margin:0 0 10px;font-size:15px;line-height:1.7;color:#0e2a52;">Você sabe que eu não fico mandando link de qualquer coisa. Mas esse aqui é diferente — é sobre a água que entra na sua casa todos os dias.</p>
+<p style="margin:0 0 10px;font-size:15px;line-height:1.7;color:#0e2a52;">A gente usa o filtro Acqualive aqui em casa e mudou completamente o sabor, a leveza e a confiança no que a família bebe. Queria muito que você experimentasse também.</p>
+<p style="margin:0 0 10px;font-size:15px;line-height:1.7;color:#0e2a52;font-weight:700;">👉 paginas.acqualive.com.br/indicado-acqualive</p>
+<p style="margin:0;font-size:15px;line-height:1.7;color:#0e2a52;">Dá uma olhada com calma. E se quiser conversar, é só me chamar.<br>Com carinho,<br>[SEU NOME]</p>
+</td></tr></table>
+</td></tr></table>
+</td></tr>
 <tr><td style="padding:30px 36px 36px;">
 <p style="margin:0;font-size:15px;line-height:1.7;color:#5a6f8f;text-align:center;font-style:italic;">A melhor água do Brasil já é sua. Agora é hora de espalhar.</p>
 </td></tr>
