@@ -4196,6 +4196,14 @@ const BlogTemplates = () => {
             >
               <Code className="h-4 w-4 mr-1" /> HTML
             </Button>
+            <Button
+              size="sm"
+              variant={viewMode === "meta" ? "default" : "outline"}
+              onClick={() => setViewMode("meta")}
+              className={viewMode === "meta" ? "bg-[#3b82f6] hover:bg-[#2563eb]" : "border-[#1c2333] bg-transparent text-gray-300 hover:bg-[#1c2333]"}
+            >
+              <ListChecks className="h-4 w-4 mr-1" /> Metadados
+            </Button>
 
             <div className="w-px h-6 bg-[#1c2333] mx-1" />
 
