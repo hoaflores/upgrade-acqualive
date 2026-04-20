@@ -980,20 +980,20 @@ const PricingSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.12 }}
-                className={`relative rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-2 bg-white/[0.03] backdrop-blur-sm border border-white/10 flex flex-col ${
+                className={`relative rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-2 bg-[hsl(210,20%,98%)] border border-[hsl(215,20%,90%)] flex flex-col shadow-sm hover:shadow-xl ${
                   p.highlight ? "ring-2 ring-[hsl(21,89%,55%)]" : ""
                 }`}
               >
                 {/* Product image showcase area */}
                 <div className="relative h-72 flex items-center justify-center overflow-hidden">
                   {/* Radial glow behind product */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-white/[0.06] via-[hsl(21,89%,55%)]/[0.04] to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-[hsl(215,62%,31%)]/[0.04] via-[hsl(21,89%,55%)]/[0.03] to-transparent" />
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full bg-[hsl(21,89%,55%)]/10 blur-[60px] group-hover:bg-[hsl(21,89%,55%)]/20 transition-all duration-500" />
                   
                   <motion.img
                     src={p.image}
                     alt={p.name}
-                    className="relative z-10 h-56 w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)] group-hover:scale-105 transition-transform duration-500"
+                    className="relative z-10 h-56 w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.18)] group-hover:scale-105 transition-transform duration-500"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -1001,7 +1001,7 @@ const PricingSection = () => {
                   />
 
                   {/* Number watermark */}
-                  <span className="absolute top-3 right-5 text-6xl font-bold text-white/[0.04] group-hover:text-white/[0.08] transition-colors">
+                  <span className="absolute top-3 right-5 text-6xl font-bold text-[hsl(215,62%,31%)]/[0.06] group-hover:text-[hsl(215,62%,31%)]/[0.12] transition-colors">
                     {p.number}
                   </span>
 
@@ -1013,28 +1013,28 @@ const PricingSection = () => {
                 </div>
 
                 {/* Divider line */}
-                <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                <div className="h-px bg-gradient-to-r from-transparent via-[hsl(215,20%,85%)] to-transparent" />
 
                 {/* Content */}
-                <div className="relative p-8 pt-6 flex flex-col flex-grow">
-                  <h3 className="text-2xl font-bold text-white mb-1">{p.name}</h3>
+                <div className="relative p-8 pt-6 flex flex-col flex-grow bg-white">
+                  <h3 className="text-2xl font-bold text-[hsl(215,65%,19%)] mb-1">{p.name}</h3>
                   <p className="text-[hsl(21,89%,55%)] text-sm font-medium mb-4">{p.tagline}</p>
-                  <p className="text-white/60 text-sm leading-relaxed mb-6 flex-grow">{p.description}</p>
+                  <p className="text-[hsl(215,30%,35%)] text-sm leading-relaxed mb-6 flex-grow">{p.description}</p>
 
                   {/* Hidden price block with overlay */}
-                  <div className="relative border-t border-white/10 pt-6 mb-6">
+                  <div className="relative border-t border-[hsl(215,20%,90%)] pt-6 mb-6">
                     <div className="select-none pointer-events-none blur-md opacity-40">
                       <div className="flex items-baseline gap-1">
-                        <span className="text-sm text-white/50">R$</span>
-                        <span className="text-4xl font-bold text-white">••••</span>
+                        <span className="text-sm text-[hsl(215,30%,35%)]">R$</span>
+                        <span className="text-4xl font-bold text-[hsl(215,65%,19%)]">••••</span>
                       </div>
-                      <p className="text-white/50 text-sm mt-1">
-                        ou <span className="text-white/80 font-semibold">10x sem juros</span>
+                      <p className="text-[hsl(215,30%,35%)] text-sm mt-1">
+                        ou <span className="text-[hsl(215,65%,19%)] font-semibold">10x sem juros</span>
                       </p>
                     </div>
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="bg-[hsl(21,89%,55%)]/15 border border-[hsl(21,89%,55%)]/40 rounded-lg px-4 py-2 backdrop-blur-sm">
-                        <p className="text-white text-xs font-bold tracking-wide text-center">
+                      <div className="bg-[hsl(21,89%,55%)]/10 border border-[hsl(21,89%,55%)]/40 rounded-lg px-4 py-2 backdrop-blur-sm">
+                        <p className="text-[hsl(215,65%,19%)] text-xs font-bold tracking-wide text-center">
                           🔒 CONDIÇÃO ESPECIAL EXCLUSIVA
                         </p>
                       </div>
@@ -1058,7 +1058,7 @@ const PricingSection = () => {
             ))}
           </div>
 
-          <p className="text-center text-xs text-white/40 mt-8">
+          <p className="text-center text-xs text-[hsl(215,30%,35%)]/70 mt-8">
             *Frete grátis: consulte regiões disponíveis. Parcelamento no cartão de crédito. 5% de desconto no PIX.
           </p>
         </div>
