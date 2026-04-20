@@ -921,7 +921,7 @@ const EmailTemplates = () => {
       <div className="sticky top-0 z-50 bg-[#161b26] border-b border-[#1c2333] px-4 py-3">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-3">
           <div className="flex items-center gap-2 flex-1">
-            <h1 className="text-sm font-bold text-[#f97316]">Email {currentIndex + 1}/4</h1>
+            <h1 className="text-sm font-bold text-[#f97316]">Email {currentIndex + 1}/{EMAILS.length}</h1>
             <span className="text-sm text-gray-400">{email.day}</span>
           </div>
 
@@ -953,8 +953,8 @@ const EmailTemplates = () => {
             <Button
               size="sm"
               variant="outline"
-              onClick={() => setCurrentIndex(Math.min(3, currentIndex + 1))}
-              disabled={currentIndex === 3}
+              onClick={() => setCurrentIndex(Math.min(EMAILS.length - 1, currentIndex + 1))}
+              disabled={currentIndex === EMAILS.length - 1}
               className="border-[#1c2333] bg-transparent text-gray-300 hover:bg-[#1c2333]"
             >
               <ChevronRight className="h-4 w-4" />
