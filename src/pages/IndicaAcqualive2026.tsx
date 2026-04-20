@@ -1083,10 +1083,13 @@ const PricingSection = () => {
                   </div>
 
                   <Button
-                    variant={p.highlight ? "cta" : "hero"}
                     size="lg"
                     asChild
-                    className="w-full rounded-xl group/btn"
+                    className={`w-full rounded-xl group/btn text-white font-bold tracking-wide shadow-lg transition-all hover:-translate-y-0.5 ${
+                      p.highlight
+                        ? "bg-[hsl(215,62%,31%)] hover:bg-[hsl(218,97%,19%)] shadow-[hsl(215,62%,31%)]/40 ring-2 ring-[hsl(215,62%,31%)]/30"
+                        : "bg-[hsl(215,62%,31%)] hover:bg-[hsl(218,97%,19%)] shadow-[hsl(215,62%,31%)]/30"
+                    }`}
                   >
                     <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                       <WhatsAppIcon className="w-4 h-4" />
