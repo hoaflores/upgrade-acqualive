@@ -6,6 +6,7 @@ import DayanVideos from "@/components/dayan/DayanVideos";
 import DayanProblem from "@/components/dayan/DayanProblem";
 import DayanFilterFails from "@/components/dayan/DayanFilterFails";
 import DayanSolution from "@/components/dayan/DayanSolution";
+import DayanBenefits from "@/components/dayan/DayanBenefits";
 import DayanProof from "@/components/dayan/DayanProof";
 import DayanTestimonials from "@/components/dayan/DayanTestimonials";
 import DayanOffer from "@/components/dayan/DayanOffer";
@@ -38,6 +39,7 @@ const DayanSiebra = () => {
         <DayanProblem />
         <DayanFilterFails />
         <DayanSolution />
+        <DayanBenefits />
         <DayanProof />
         <DayanTestimonials />
         <DayanOffer />

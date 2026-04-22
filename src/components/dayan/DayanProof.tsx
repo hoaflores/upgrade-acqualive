@@ -25,39 +25,39 @@ const DayanProof = () => {
               <span className="dayan-num text-2xl text-[hsl(var(--ds-accent))] not-italic">
                 06
               </span>
-              Ciência, não opinião
+              Ciência, em palavras simples
             </span>
             <h2 className="ds-display mt-5 text-4xl lg:text-6xl text-white leading-tight">
-              Quando a Universidade
+              Trocaram a água da torneira
               <br />
-              Federal mediu o efeito
+              por água alcalina.
               <br />
               <span className="ds-italic font-medium text-[hsl(var(--ds-accent))]">
-                em pacientes com gastrite.
+                O estômago melhorou.
               </span>
             </h2>
           </div>
           <div className="lg:col-span-5 dayan-reveal dayan-reveal-delay-1">
             <p className="text-base lg:text-lg text-white/75 leading-relaxed">
-              Estudo conduzido em Belém com 28 pacientes portadores de gastrite,
-              acompanhados por endoscopia digestiva alta antes e depois de
-              substituírem a água ácida do dia a dia por água alcalina ionizada
-              durante 4 meses.
+              A Universidade Federal pegou 28 pessoas com gastrite. Olhou o
+              estômago de cada uma com câmera (endoscopia). Pediu pra elas só
+              mudarem a água que bebiam todo dia. Nada mais.
             </p>
             <p className="mt-4 text-base lg:text-lg text-white/75 leading-relaxed">
-              O resultado foi publicado em revista indexada no PubMed e
-              apresentado em congresso mundial em Praga.
+              Quatro meses depois, olharam o estômago de novo. A maioria estava
+              melhor. Algumas, completamente curadas. Sem remédio novo, sem
+              dieta nova. Só água.
             </p>
           </div>
         </div>
 
-        {/* Stats grid: foco no efeito gástrico e antiinflamatório */}
+        {/* Stats grid: linguagem simples */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 mb-20">
           {[
-            { n: "p=0,024", l: "melhora endoscópica significativa da gastrite" },
-            { n: "43%", l: "dos pacientes apresentaram melhora clínica" },
-            { n: "7%", l: "remissão completa do quadro" },
-            { n: "↓ TNF-α", l: "ação antiinflamatória na mucosa gástrica" },
+            { n: "28", l: "pessoas com gastrite participaram do estudo" },
+            { n: "4 meses", l: "bebendo água alcalina, sem mudar mais nada" },
+            { n: "43%", l: "melhoraram a gastrite, comprovado por câmera" },
+            { n: "7%", l: "ficaram completamente curadas só com a água" },
           ].map((s, i) => (
             <div
               key={s.n}
@@ -73,21 +73,20 @@ const DayanProof = () => {
           ))}
         </div>
 
-        {/* Bloco interpretação */}
+        {/* Bloco interpretação simples */}
         <div className="dayan-reveal grid lg:grid-cols-12 gap-10 mb-20 border-t border-white/10 pt-12">
           <div className="lg:col-span-5">
-            <span className="ds-eyebrow text-white/50">O que isso significa</span>
+            <span className="ds-eyebrow text-white/50">Traduzindo</span>
           </div>
           <div className="lg:col-span-7">
             <p className="ds-italic text-2xl lg:text-3xl text-white leading-snug">
-              "A simples troca do pH da água ingerida foi capaz de melhorar
-              clinicamente a gastrite e reduzir marcadores de inflamação
-              gástrica. Não é placebo. É endoscopia."
+              "Mudar só a água que entra na sua casa pode melhorar o seu
+              estômago e diminuir a inflamação do seu corpo. Isso não é achismo.
+              Foi medido com câmera dentro do estômago de gente de verdade."
             </p>
             <p className="mt-4 text-sm text-white/50">
-              Dissertação sobre efeitos do consumo de água alcalina em
-              pacientes com gastrite, com correlação a marcadores epigenéticos
-              relacionados à inflamação.
+              Estudo da Universidade Federal sobre o consumo diário de água
+              alcalina em pacientes com gastrite.
             </p>
           </div>
         </div>
@@ -99,7 +98,7 @@ const DayanProof = () => {
               Certificações e laudos oficiais
             </span>
             <h3 className="ds-display mt-3 text-2xl lg:text-3xl text-white">
-              Comprovações que sustentam o produto
+              Selos que acompanham o produto
             </h3>
           </div>
 
