@@ -39,6 +39,7 @@ const DayanSiebra = () => {
         <DayanProblem />
         <DayanFilterFails />
         <DayanSolution />
+        <DayanBenefits />
         <DayanProof />
         <DayanTestimonials />
         <DayanOffer />
