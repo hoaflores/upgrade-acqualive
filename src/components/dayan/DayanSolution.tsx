@@ -21,7 +21,7 @@ const DayanSolution = () => {
               <span className="dayan-num text-2xl not-italic mr-2">05</span>
               A escolha que fiz para a minha família
             </span>
-            <h2 className="ds-display mt-5 text-5xl lg:text-[5.5rem] text-[hsl(var(--ds-ink))]">
+            <h2 className="ds-display mt-5 text-4xl lg:text-6xl text-[hsl(var(--ds-ink))] leading-tight">
               Quando entendi o problema,
               <br />
               parei de procurar.
@@ -32,9 +32,9 @@ const DayanSolution = () => {
             </h2>
           </div>
           <div className="lg:col-span-5 dayan-reveal dayan-reveal-delay-1">
-            <p className="text-lg text-[hsl(var(--ds-ink-soft))] leading-relaxed">
-              Pesquisei por anos. Testei dezenas de filtros, ionizadores,
-              osmoses. Quando conheci o Acqualive, vi algo raro: 26 anos de
+            <p className="text-base lg:text-lg text-[hsl(var(--ds-ink-soft))] leading-relaxed">
+              Pesquisei por anos. Testei dezenas de filtros, ionizadores e
+              osmoses. Quando conheci o Acqualive, vi algo raro. Anos de
               estudo, tecnologia <em className="ds-italic">TriWay</em>{" "}
               proprietária e o único filtro que entrega os 6 pilares da água
               ideal num único equipamento.
@@ -76,7 +76,7 @@ const DayanSolution = () => {
           <span className="ds-eyebrow text-[hsl(var(--ds-muted))]">
             Os 6 pilares da água ideal
           </span>
-          <h3 className="ds-display mt-3 text-4xl lg:text-5xl text-[hsl(var(--ds-ink))]">
+          <h3 className="ds-display mt-3 text-3xl lg:text-4xl text-[hsl(var(--ds-ink))] leading-tight">
             O que o seu corpo
             <span className="ds-italic font-medium"> de fato </span>
             precisa beber.

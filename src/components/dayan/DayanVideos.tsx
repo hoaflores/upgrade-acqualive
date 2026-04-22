@@ -31,7 +31,7 @@ const DayanVideos = () => {
               </span>
               Em vídeo
             </span>
-            <h2 className="ds-display mt-5 text-5xl lg:text-7xl text-[hsl(var(--ds-ink))]">
+            <h2 className="ds-display mt-5 text-4xl lg:text-6xl text-[hsl(var(--ds-ink))] leading-tight">
               Antes de me ler,
               <br />
               <span className="ds-italic font-medium text-[hsl(var(--ds-blue-deep))]">

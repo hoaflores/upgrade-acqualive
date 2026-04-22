@@ -67,7 +67,7 @@ const DayanFilterFails = () => {
               <span className="dayan-num text-2xl not-italic mr-2">04</span>
               Por que o seu filtro não resolve
             </span>
-            <h2 className="ds-display mt-5 text-5xl lg:text-7xl text-[hsl(var(--ds-ink))]">
+            <h2 className="ds-display mt-5 text-4xl lg:text-6xl text-[hsl(var(--ds-ink))] leading-tight">
               A maioria dos filtros
               <br />
               só te dá uma{" "}
