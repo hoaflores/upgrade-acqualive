@@ -20,6 +20,7 @@ import EmailRefilTemplates from "./pages/EmailRefilTemplates";
 import BlogTemplates from "./pages/BlogTemplates";
 import EmailsFranquias from "./pages/EmailsFranquias";
 import IndicaAcqualive2026 from "./pages/IndicaAcqualive2026";
+import DayanSiebra from "./pages/DayanSiebra";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -49,6 +50,7 @@ const App = () => (
             <Route path="/emails-franquias" element={<EmailsFranquias />} />
             <Route path="/indica-acqualive-2026" element={<IndicaAcqualive2026 />} />
             <Route path="/indicado-acqualive" element={<IndicaAcqualive2026 />} />
+            <Route path="/dayan-siebra" element={<DayanSiebra />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
