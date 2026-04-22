@@ -12,15 +12,15 @@ const ITEMS = [
   },
   {
     q: "Por que pagar por um filtro se a água da torneira já é potável?",
-    a: "Potável significa 'não te mata hoje'. Não significa 'te mantém saudável amanhã'. Saneamento e saúde celular são conversas diferentes. O Acqualive resolve a segunda.",
+    a: "Potável significa que não te mata hoje. Não significa que te mantém saudável amanhã. Saneamento e saúde celular são conversas diferentes. O Acqualive resolve a segunda.",
   },
   {
     q: "Quanto tempo dura o equipamento e os refis?",
-    a: "O equipamento dura cerca de 10 anos com manutenção. Os refis são trocados em cadência inteligente — você recebe lembretes e nunca fica sem.",
+    a: "O equipamento dura cerca de 10 anos com manutenção. Os refis são trocados em cadência inteligente, você recebe lembretes e nunca fica sem.",
   },
   {
-    q: "Tem garantia? E se eu não me adaptar?",
-    a: "Sim, garantia de fábrica + suporte vitalício do time Acqualive. A imensa maioria dos clientes percebe diferença na primeira semana. Caso algo não esteja ok, o suporte resolve sem burocracia.",
+    q: "Tem garantia, e se eu não me adaptar?",
+    a: "Sim, garantia de fábrica e suporte vitalício do time Acqualive. A imensa maioria dos clientes percebe diferença na primeira semana. Caso algo não esteja ok, o suporte resolve sem burocracia.",
   },
   {
     q: "Como funciona a instalação?",
@@ -42,7 +42,7 @@ const DayanFAQ = () => {
               <span className="dayan-num text-2xl not-italic mr-2">09</span>
               Perguntas honestas
             </span>
-            <h2 className="ds-display mt-5 text-4xl lg:text-6xl text-[hsl(var(--ds-ink))]">
+            <h2 className="ds-display mt-5 text-3xl lg:text-5xl text-[hsl(var(--ds-ink))] leading-tight">
               O que meus pacientes
               <br />
               <span className="ds-italic font-medium">

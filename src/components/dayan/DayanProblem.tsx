@@ -39,7 +39,7 @@ const DayanProblem = () => {
               O diagnóstico
             </span>
 
-            <h2 className="ds-display mt-6 text-5xl lg:text-[5.5rem] xl:text-[6.5rem] text-white">
+            <h2 className="ds-display mt-6 text-4xl lg:text-6xl text-white leading-tight">
               Existe água que
               <br />
               <span className="ds-italic font-medium text-[hsl(var(--ds-accent))]">
@@ -52,14 +52,14 @@ const DayanProblem = () => {
           </div>
 
           <div className="lg:col-span-5 lg:pt-12 dayan-reveal dayan-reveal-delay-1">
-            <p className="text-lg lg:text-xl text-white/75 leading-relaxed">
+            <p className="text-base lg:text-lg text-white/75 leading-relaxed">
               Quando comecei a estudar a fundo o que sai das torneiras
-              brasileiras, me dei conta de uma coisa simples: o saneamento
+              brasileiras, me dei conta de uma coisa simples. O saneamento
               público foi feito para você não morrer de cólera{" "}
-              <em className="ds-italic text-white">hoje</em>. Não para você
+              <em className="ds-italic text-white">hoje</em>, não para você
               chegar saudável aos 80.
             </p>
-            <p className="mt-6 text-lg text-white/75 leading-relaxed">
+            <p className="mt-6 text-base lg:text-lg text-white/75 leading-relaxed">
               A conta vem em forma de inflamação crônica, intestino inflamado,
               tireoide desregulada e cansaço que ninguém explica.
             </p>
@@ -112,12 +112,12 @@ const DayanProblem = () => {
 
         {/* Quote */}
         <blockquote className="dayan-reveal mt-24 max-w-4xl">
-          <span className="ds-italic text-3xl lg:text-5xl text-white leading-tight">
-            "Tem gente que toma 8 remédios por dia e nunca olhou pra água que
-            engole junto."
+          <span className="ds-italic text-2xl lg:text-4xl text-white leading-tight">
+            "Tem gente que toma 8 remédios por dia e nunca olhou para a água
+            que engole junto."
           </span>
           <footer className="mt-6 ds-eyebrow text-white/60">
-            — Dr. Dayan Siebra
+            Dr. Dayan Siebra
           </footer>
         </blockquote>
       </div>

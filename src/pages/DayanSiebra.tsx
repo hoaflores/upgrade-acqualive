@@ -18,7 +18,7 @@ const DayanSiebra = () => {
   return (
     <>
       <Helmet>
-        <title>Dr. Dayan Siebra: a água que cura, a água que adoece — Acqualive</title>
+        <title>Dr. Dayan Siebra, a água que cura e a água que adoece. Acqualive</title>
         <meta
           name="description"
           content="Carta aberta do Dr. Dayan Siebra sobre a água que você bebe. Os 4 venenos invisíveis, os 6 pilares da água ideal e por que ele recomenda o Acqualive."
