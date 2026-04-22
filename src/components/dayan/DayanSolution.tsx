@@ -34,9 +34,9 @@ const DayanSolution = () => {
           <div className="lg:col-span-5 dayan-reveal dayan-reveal-delay-1">
             <p className="text-base lg:text-lg text-[hsl(var(--ds-ink-soft))] leading-relaxed">
               Pesquisei por anos. Testei dezenas de filtros, ionizadores e
-              osmoses. Quando conheci o Acqualive, vi algo raro. Anos de
+              osmoses. Quando conheci a Acqualive, vi algo raro. Anos de
               estudo, tecnologia <em className="ds-italic">TriWay</em>{" "}
-              proprietária e o único filtro que entrega os 6 pilares da água
+              exclusiva e o único filtro que entrega os 6 pilares da água
               ideal num único equipamento.
             </p>
           </div>

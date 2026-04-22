@@ -25,7 +25,7 @@ const ROWS = [
   },
   {
     item: "Acqualive (TriWay)",
-    chlorine: "98%",
+    chlorine: "-99,9%",
     metals: "Sim",
     microbio: "Sim",
     ph: "Alcaliniza",

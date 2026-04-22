@@ -5,11 +5,11 @@ const DayanFooter = () => {
         <div className="grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-6">
             <div className="text-2xl lg:text-3xl text-white font-semibold tracking-tight">
-              Dr. Dayan Siebra <span className="text-white/60">×</span> Acqualive
+              Dr. Dayan Siebra <span className="text-white/60">&</span> Acqualive
             </div>
             <p className="mt-4 text-white/60 max-w-md text-sm lg:text-base">
               Cirurgia cardiovascular e saúde hídrica. Famílias que decidiram
-              parar de adoecer aos poucos.
+              mudar de vida a partir da água.
             </p>
           </div>
           <div className="lg:col-span-6 grid sm:grid-cols-2 gap-8 text-sm text-white/70">
@@ -26,9 +26,9 @@ const DayanFooter = () => {
               <span className="ds-eyebrow text-white/40">A marca</span>
               <ul className="mt-3 space-y-2">
                 <li>acqualive.com.br</li>
-                <li>Garantia de fábrica</li>
-                <li>Suporte vitalício</li>
-                <li>Refis com cadência inteligente</li>
+                <li>Garantia</li>
+                <li>Suporte</li>
+                <li>Refis inteligentes</li>
               </ul>
             </div>
           </div>
