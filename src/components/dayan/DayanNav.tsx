@@ -28,11 +28,8 @@ const DayanNav = () => {
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
         <a href="#top" className="flex items-baseline gap-2">
-          <span className="ds-display text-xl text-[hsl(var(--ds-blue-deep))]">
-            Dr. Dayan
-          </span>
-          <span className="ds-italic text-base text-[hsl(var(--ds-accent))]">
-            Siebra
+          <span className="text-lg font-semibold tracking-tight text-[hsl(var(--ds-ink))]">
+            Dr. Dayan Siebra
           </span>
         </a>
 
