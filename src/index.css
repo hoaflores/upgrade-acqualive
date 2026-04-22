@@ -10,6 +10,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&display=swap');
+
 @layer base {
   :root {
     --background: 210 20% 97%;
@@ -258,4 +260,150 @@
   .animation-delay-600 {
     animation-delay: 600ms;
   }
+}
+
+/* ============================================
+   /dayan-siebra — Editorial scoped design system
+   ============================================ */
+.dayan-page {
+  --ds-bg: 0 0% 100%;
+  --ds-surface: 210 30% 98%;
+  --ds-ink: 218 97% 12%;
+  --ds-ink-soft: 218 40% 28%;
+  --ds-muted: 215 15% 45%;
+  --ds-line: 215 20% 88%;
+  --ds-blue: 215 62% 31%;
+  --ds-blue-deep: 218 97% 19%;
+  --ds-blue-bright: 210 90% 50%;
+  --ds-accent: 21 89% 55%;
+
+  background: hsl(var(--ds-bg));
+  color: hsl(var(--ds-ink));
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-feature-settings: 'ss01', 'cv01';
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.011em;
+}
+
+.dayan-page .ds-display {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+}
+
+.dayan-page .ds-italic {
+  font-family: 'Fraunces', 'Libre Caslon Text', serif;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.dayan-page .ds-eyebrow {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+}
+
+.dayan-page .ds-mono {
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: -0.02em;
+}
+
+/* Section dark variant */
+.dayan-page .ds-dark {
+  background: hsl(var(--ds-blue-deep));
+  color: hsl(var(--ds-bg));
+}
+.dayan-page .ds-dark .ds-eyebrow,
+.dayan-page .ds-dark .ds-muted {
+  color: hsl(0 0% 100% / 0.6);
+}
+
+/* Marquee */
+@keyframes ds-marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.dayan-page .ds-marquee {
+  display: flex;
+  width: max-content;
+  animation: ds-marquee 40s linear infinite;
+}
+
+/* Scroll-driven reveal */
+.dayan-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.dayan-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.dayan-reveal-delay-1 { transition-delay: 0.12s; }
+.dayan-reveal-delay-2 { transition-delay: 0.24s; }
+.dayan-reveal-delay-3 { transition-delay: 0.36s; }
+
+/* Word-by-word reveal */
+.dayan-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.6em);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.is-visible .dayan-word {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Magnetic hover line */
+.dayan-link {
+  position: relative;
+  display: inline-block;
+}
+.dayan-link::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -2px;
+  height: 1px; width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.dayan-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Editorial number tabs */
+.dayan-num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-feature-settings: 'lnum';
+}
+
+/* Big counter */
+@keyframes ds-float-slow {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+.dayan-float { animation: ds-float-slow 8s ease-in-out infinite; }
+
+/* Subtle grain on dark sections */
+.dayan-grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(hsl(0 0% 100% / 0.05) 1px, transparent 1px);
+  background-size: 3px 3px;
+  pointer-events: none;
+  opacity: 0.4;
 }
