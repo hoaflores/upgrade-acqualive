@@ -119,9 +119,9 @@ const DayanHero = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--ds-blue-deep))]/60 via-transparent to-transparent" />
 
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <div className="ds-eyebrow opacity-80">Dr. Dayan Siebra</div>
+                  <div className="ds-eyebrow opacity-80">{" "}</div>
                   <div className="ds-italic text-xl mt-1">
-                    Cirurgião cardiovascular.
+                    {" "}
                   </div>
                 </div>
               </div>

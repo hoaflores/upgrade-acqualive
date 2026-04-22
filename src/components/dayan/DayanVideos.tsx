@@ -41,7 +41,7 @@ const DayanVideos = () => {
           </div>
           <div className="lg:col-span-6 lg:col-start-7 dayan-reveal dayan-reveal-delay-1">
             <p className="text-lg text-[hsl(var(--ds-ink-soft))] leading-relaxed">
-              Selecionei três conversas em que mostro, com calma e sem
+              Selecionei três vídeos em que mostro, com calma e sem
               alarmismo, o que a indústria da água engarrafada e o saneamento
               brasileiro preferem que você não saiba. Comece pelo primeiro.
             </p>

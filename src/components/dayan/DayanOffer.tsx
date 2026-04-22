@@ -62,14 +62,14 @@ const DayanOffer = () => {
                 decisão de saúde
               </span>
               <br />
-              que dura 10 anos.
+              para toda a vida!
             </h2>
           </div>
           <div className="lg:col-span-4 lg:pt-12 dayan-reveal dayan-reveal-delay-1">
             <p className="text-base lg:text-lg text-[hsl(var(--ds-ink-soft))] leading-relaxed">
               Em até <strong>10x sem juros</strong>, frete grátis (consulte
-              regiões disponíveis), refis com cadência inteligente e suporte
-              vitalício. Escolha o seu modelo abaixo.
+              regiões disponíveis), refis com cadência inteligente e suporte.
+              Escolha o seu modelo abaixo.
             </p>
           </div>
         </div>
