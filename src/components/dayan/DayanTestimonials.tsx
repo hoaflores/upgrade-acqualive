@@ -1,43 +1,46 @@
-import depoLyoto from "@/assets/depo-lyoto.png";
-import depoPaloma from "@/assets/depo-paloma.png";
-import depoDalle from "@/assets/depo-dalle-laste.png";
+import depoCleodete from "@/assets/dayan/depo-cleodete.png";
+import depoIlane from "@/assets/dayan/depo-ilane.webp";
+import depoMartin from "@/assets/dayan/depo-martin.png";
+import depoFabio from "@/assets/dayan/depo-fabio.webp";
+import depoVirginia from "@/assets/dayan/depo-virginia.png";
+import depoAngelina from "@/assets/dayan/depo-angelina.png";
 
 const TESTIMONIALS = [
   {
     name: "Maria Cleodete",
     city: "São Paulo / SP",
-    text: "Em três semanas meu intestino desinflamou. Acordo sem aquela boca seca pesada. É outra água, outro corpo.",
-    img: null,
+    text: "A instalação é prática e a água realmente fica sem o gosto horrível da água da torneira e senti a minha sede melhor saciada do que tomando a água mineral comprada.",
+    img: depoCleodete,
   },
   {
-    name: "Lyoto Machida",
-    city: "Atleta UFC",
-    text: "Hidratação para mim é performance. O Acqualive entrou na minha rotina e não saiu mais.",
-    img: depoLyoto,
+    name: "Ilane da Silva Venturim",
+    city: "Rio de Janeiro / RJ",
+    text: "Sou carioca e a água que chega em minha casa é de baixa qualidade. Fiz um investimento em saúde, investi em um Acqualive e estou muito satisfeita com a minha escolha.",
+    img: depoIlane,
   },
   {
-    name: "Mártin S.",
-    city: "Porto Alegre / RS",
-    text: "Tinha pedra no rim recorrente. Trocamos a água em casa. Dois anos sem crise. Não é coincidência.",
-    img: null,
+    name: "Mártin Lavies",
+    city: "Rio Grande do Sul / RS",
+    text: "Uma das minhas maiores preocupações era a troca do refil. Me surpreendi: é simples, rápida e só acontece a cada vários meses. Não virou um problema, virou rotina.",
+    img: depoMartin,
   },
   {
-    name: "Paloma Bernardi",
-    city: "Atriz",
-    text: "A pele responde em poucos dias. A água certa é o cosmético mais barato e mais poderoso que existe.",
-    img: depoPaloma,
+    name: "Fábio Renato Rodrigues",
+    city: "Espírito Santo / ES",
+    text: "No início eu estava um pouco resistente de comprar um Purificador Acqualive, mas como minha família vivia resfriada decidi tentar. Para minha surpresa nunca mais ficamos doentes. Parece brincadeira, mas não é.",
+    img: depoFabio,
   },
   {
-    name: "Fábio L.",
-    city: "Vitória / ES",
-    text: "Comprei pra mim. Em um mês minha mãe queria um. Hoje tem nas casas de toda a família.",
-    img: null,
+    name: "Virginia Dornelles",
+    city: "Bahia / BA",
+    text: "Estou muito satisfeita com o meu purificador. O design é lindo, o manejo muito fácil e a água realmente fica muito melhor. Super recomendo.",
+    img: depoVirginia,
   },
   {
-    name: "Délle Lasté",
-    city: "Empresária",
-    text: "Investi em tudo: suplemento, dieta, treino. A virada veio quando arrumei a água. Simples assim.",
-    img: depoDalle,
+    name: "Angelina Sabino",
+    city: "São Paulo / SP",
+    text: "Quando vi o valor, achei alto. Depois que fiz as contas do quanto gastava com água mineral por mês, percebi que o filtro se paga sozinho. Hoje tenho água de qualidade todos os dias e ainda economizo.",
+    img: depoAngelina,
   },
 ];
 
@@ -49,13 +52,13 @@ const DayanTestimonials = () => {
           <div className="lg:col-span-7 dayan-reveal">
             <span className="ds-eyebrow text-[hsl(var(--ds-accent))]">
               <span className="dayan-num text-2xl not-italic mr-2">07</span>
-              150 mil famílias
+              Avaliação de quem já trocou
             </span>
-            <h2 className="ds-display mt-5 text-5xl lg:text-7xl text-[hsl(var(--ds-ink))]">
-              Quem já trocou
+            <h2 className="ds-display mt-5 text-4xl lg:text-6xl text-[hsl(var(--ds-ink))] leading-tight">
+              Quem entendeu a diferença,
               <br />
               <span className="ds-italic font-medium text-[hsl(var(--ds-blue-deep))]">
-                não volta.
+                não volta atrás.
               </span>
             </h2>
           </div>
@@ -67,24 +70,21 @@ const DayanTestimonials = () => {
               key={t.name}
               className={`dayan-reveal dayan-reveal-delay-${(i % 3) + 1} bg-white p-8 lg:p-10 flex flex-col`}
             >
-              <blockquote className="ds-italic text-xl text-[hsl(var(--ds-ink))] leading-snug flex-1">
+              <div className="flex items-center gap-1 text-[hsl(var(--ds-accent))] mb-5 text-sm">
+                {"★★★★★"}
+              </div>
+              <blockquote className="ds-italic text-lg text-[hsl(var(--ds-ink))] leading-snug flex-1">
                 "{t.text}"
               </blockquote>
               <figcaption className="mt-8 flex items-center gap-4 pt-6 border-t border-[hsl(var(--ds-line))]">
-                {t.img ? (
-                  <img
-                    src={t.img}
-                    alt={t.name}
-                    loading="lazy"
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
-                ) : (
-                  <div className="w-12 h-12 rounded-full bg-[hsl(var(--ds-blue-deep))] text-white flex items-center justify-center font-semibold">
-                    {t.name[0]}
-                  </div>
-                )}
+                <img
+                  src={t.img}
+                  alt={t.name}
+                  loading="lazy"
+                  className="w-12 h-12 rounded-full object-cover bg-[hsl(var(--ds-surface))]"
+                />
                 <div>
-                  <div className="font-semibold text-[hsl(var(--ds-ink))]">
+                  <div className="font-semibold text-sm text-[hsl(var(--ds-ink))]">
                     {t.name}
                   </div>
                   <div className="text-xs text-[hsl(var(--ds-muted))] ds-eyebrow mt-0.5">

@@ -1,7 +1,7 @@
-import vSelf from "@/assets/v-self.png";
-import vSelfEss from "@/assets/v-self-essencial.png";
-import terracota from "@/assets/terracota-front.png";
-import premium from "@/assets/premium-6l.png";
+import vSelf6L from "@/assets/dayan-vself-6l.png";
+import vSelfPremium from "@/assets/dayan-vself-premium-10l.png";
+import terracota from "@/assets/dayan-terracota.png";
+import shower from "@/assets/dayan-shower-care.png";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 const WHATSAPP =
@@ -9,37 +9,37 @@ const WHATSAPP =
 
 const PRODUCTS = [
   {
-    name: "Acqualive V-Self Essencial",
-    img: vSelfEss,
-    line: "Entrada premium",
-    price: "R$ 2.490",
-    inst: "10x de R$ 249 sem juros",
-    badge: "Mais acessível",
+    name: "Acqualive V-Self 6L",
+    img: vSelf6L,
+    line: "Compacto",
+    price: "R$ XXX",
+    inst: "10x sem juros",
+    badge: "Compacto",
   },
   {
-    name: "Acqualive V-Self",
-    img: vSelf,
-    line: "O mais escolhido",
-    price: "R$ 3.290",
-    inst: "10x de R$ 329 sem juros",
+    name: "Acqualive V-Self Premium 10L",
+    img: vSelfPremium,
+    line: "O mais vendido",
+    price: "R$ XXX",
+    inst: "10x sem juros",
     badge: "Best-seller",
     highlight: true,
   },
   {
     name: "Acqualive Terracota",
     img: terracota,
-    line: "Filtro de barro evoluído",
-    price: "R$ 2.890",
-    inst: "10x de R$ 289 sem juros",
+    line: "A evolução do filtro de barro",
+    price: "R$ XXX",
+    inst: "10x sem juros",
     badge: "Design",
   },
   {
-    name: "Acqualive Premium 6L",
-    img: premium,
-    line: "Para famílias grandes",
-    price: "R$ 3.890",
-    inst: "10x de R$ 389 sem juros",
-    badge: "Volume",
+    name: "Acqualive Shower Care",
+    img: shower,
+    line: "Filtro removedor de cloro do chuveiro",
+    price: "R$ XXX",
+    inst: "10x sem juros",
+    badge: "Pele e cabelo",
   },
 ];
 
@@ -54,7 +54,7 @@ const DayanOffer = () => {
               <span className="dayan-num text-2xl not-italic mr-2">08</span>
               A oferta
             </span>
-            <h2 className="ds-display mt-5 text-5xl lg:text-[6rem] text-[hsl(var(--ds-ink))]">
+            <h2 className="ds-display mt-5 text-4xl lg:text-6xl text-[hsl(var(--ds-ink))] leading-tight">
               Não é um filtro.
               <br />
               É uma{" "}
@@ -66,7 +66,7 @@ const DayanOffer = () => {
             </h2>
           </div>
           <div className="lg:col-span-4 lg:pt-12 dayan-reveal dayan-reveal-delay-1">
-            <p className="text-lg text-[hsl(var(--ds-ink-soft))] leading-relaxed">
+            <p className="text-base lg:text-lg text-[hsl(var(--ds-ink-soft))] leading-relaxed">
               Em até <strong>10x sem juros</strong>, frete grátis (consulte
               regiões disponíveis), refis com cadência inteligente e suporte
               vitalício. Escolha o seu modelo abaixo.
@@ -74,7 +74,7 @@ const DayanOffer = () => {
           </div>
         </div>
 
-        {/* Produtos */}
+        {/* Produtos: ordem oficial */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[hsl(var(--ds-line))] border border-[hsl(var(--ds-line))] mb-16">
           {PRODUCTS.map((p, i) => (
             <article
@@ -85,7 +85,7 @@ const DayanOffer = () => {
             >
               {p.badge && (
                 <span
-                  className={`absolute top-4 left-4 z-10 ds-eyebrow px-3 py-1.5 rounded-full ${
+                  className={`absolute top-4 left-4 z-10 ds-eyebrow px-3 py-1.5 rounded-full text-[10px] ${
                     p.highlight
                       ? "bg-[hsl(var(--ds-accent))] text-white"
                       : "bg-[hsl(var(--ds-surface))] text-[hsl(var(--ds-ink-soft))]"
@@ -102,18 +102,18 @@ const DayanOffer = () => {
                   className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
-              <div className="p-6 lg:p-8 flex flex-col flex-1">
-                <span className="ds-eyebrow text-[hsl(var(--ds-muted))]">
+              <div className="p-6 lg:p-7 flex flex-col flex-1">
+                <span className="ds-eyebrow text-[hsl(var(--ds-muted))] text-[10px]">
                   {p.line}
                 </span>
-                <h3 className="ds-display text-2xl mt-2 text-[hsl(var(--ds-ink))]">
+                <h3 className="ds-display text-lg lg:text-xl mt-2 text-[hsl(var(--ds-ink))] leading-tight">
                   {p.name}
                 </h3>
                 <div className="mt-4">
                   <div className="text-xs text-[hsl(var(--ds-muted))]">
                     a partir de
                   </div>
-                  <div className="ds-display text-3xl text-[hsl(var(--ds-blue-deep))]">
+                  <div className="ds-display text-2xl text-[hsl(var(--ds-blue-deep))]">
                     {p.price}
                   </div>
                   <div className="text-xs text-[hsl(var(--ds-muted))] mt-1">
@@ -144,7 +144,7 @@ const DayanOffer = () => {
               <span className="ds-eyebrow text-white/60">
                 Última palavra do Dr. Dayan
               </span>
-              <p className="ds-italic text-3xl lg:text-5xl text-white mt-4 leading-tight">
+              <p className="ds-italic text-2xl lg:text-4xl text-white mt-4 leading-tight">
                 "Você vai gastar com remédio depois. Ou com água certa agora.
                 A escolha é sua."
               </p>
