@@ -48,7 +48,7 @@ const DayanSolution = () => {
             <div className="relative aspect-[16/10] overflow-hidden rounded-sm bg-[hsl(var(--ds-surface))]">
               <img
                 src={waterPouring}
-                alt="Dr. Dayan servindo água filtrada e estruturada"
+                alt="Dr. Dayan Siebra em seu consultório"
                 loading="lazy"
                 width={1600}
                 height={1000}
