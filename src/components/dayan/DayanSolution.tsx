@@ -1,5 +1,5 @@
 import waterPouring from "@/assets/dayan-water-pouring.jpg";
-import portraitSide from "@/assets/dayan-portrait-side.jpg";
+import portraitSide from "@/assets/dayan-with-filter.png";
 
 const PILARES = [
   { n: "01", t: "Pura", d: "Sem cloro, sem metais, sem trialometanos." },
