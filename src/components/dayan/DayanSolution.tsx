@@ -1,4 +1,4 @@
-import waterPouring from "@/assets/dayan-water-pouring.jpg";
+import waterPouring from "@/assets/dayan-office.jpg";
 import portraitSide from "@/assets/dayan-with-filter.png";
 
 const PILARES = [
