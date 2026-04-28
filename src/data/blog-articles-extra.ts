@@ -1075,64 +1075,64 @@ const article10 = {
 };
 
 // ============================================================
-// ARTIGO 11 — Alimentos anti-inflamatórios
+// ARTIGO 11 — Água anti-inflamatória
 // ============================================================
 const article11 = {
-  title: "Alimentos anti-inflamatórios: o cardápio simples que desliga a inflamação silenciosa do seu corpo",
-  slug: "alimentos-anti-inflamatorios",
+  title: "Água anti-inflamatória: o copo que desliga a inflamação silenciosa do seu corpo",
+  slug: "agua-anti-inflamatoria",
   html: wrap(
     `<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alimentos Anti-Inflamatórios: Guia Simples Para Sua Família | Acqualive</title>
-<meta name="description" content="Descubra de forma simples quais alimentos combatem a inflamação crônica do corpo, por que ela é perigosa e como a água alcalina ionizada da Acqualive potencializa esse efeito anti-inflamatório.">
-<meta name="keywords" content="alimentos anti-inflamatórios, dieta anti-inflamatória, inflamação crônica, água alcalina anti-inflamatória, alimentação saudável, Acqualive, água ionizada, gastrite alimentação, PRAL alimentos">
+<title>Água Anti-Inflamatória: O Estudo Que Mudou Tudo | Acqualive</title>
+<meta name="description" content="Entenda de forma simples como a água que você bebe pode estar inflamando ou desinflamando o seu corpo, e o estudo brasileiro que comprovou o efeito anti-inflamatório da água alcalina ionizada da Acqualive.">
+<meta name="keywords" content="água anti-inflamatória, água alcalina, água ionizada, inflamação crônica, gastrite, Acqualive, Dra Juliana Chaves, PRAL, pH da água, saúde">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Acqualive">
-<link rel="canonical" href="https://blog.acqualive.com.br/alimentos-anti-inflamatorios/">
-<meta property="og:title" content="Alimentos Anti-Inflamatórios: O Cardápio Que Desliga a Inflamação">
-<meta property="og:description" content="Lista simples e científica dos alimentos que combatem a inflamação silenciosa, e como a água certa multiplica o efeito.">
+<link rel="canonical" href="https://blog.acqualive.com.br/agua-anti-inflamatoria/">
+<meta property="og:title" content="Água Anti-Inflamatória: O Copo Que Desliga a Inflamação Silenciosa">
+<meta property="og:description" content="Estudo brasileiro mostra como a água alcalina ionizada da Acqualive reduz a inflamação no corpo. Entenda em linguagem simples.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/alimentos-anti-inflamatorios.jpg">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/agua-anti-inflamatoria.jpg">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Alimentos anti-inflamatórios: o cardápio simples que desliga a inflamação silenciosa do seu corpo","description":"Guia para leigos sobre alimentos anti-inflamatórios e como a água alcalina ionizada potencializa o combate à inflamação crônica.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-04-28","dateModified":"2026-04-28","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/alimentos-anti-inflamatorios.jpg"}
+{"@context":"https://schema.org","@type":"Article","headline":"Água anti-inflamatória: o copo que desliga a inflamação silenciosa do seu corpo","description":"Guia para leigos sobre como a água alcalina ionizada combate a inflamação crônica, com base em estudo brasileiro liderado pela Dra. Juliana Chaves.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-04-28","dateModified":"2026-04-28","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/agua-anti-inflamatoria.jpg"}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"O que é inflamação crônica e por que ela é perigosa?","acceptedAnswer":{"@type":"Answer","text":"A inflamação crônica é uma resposta do sistema imune que não desliga, como um fogo baixo aceso dentro do corpo. Ela é silenciosa, muitas vezes não dá sintomas claros, mas está por trás de doenças como gastrite, diabetes, hipertensão, obesidade, doenças do coração, artrite, envelhecimento precoce e até alguns tipos de câncer."}},
-{"@type":"Question","name":"Quais são os principais alimentos anti-inflamatórios?","acceptedAnswer":{"@type":"Answer","text":"Os mais estudados são: peixes ricos em ômega 3 (sardinha, salmão), folhas verdes escuras (espinafre, couve, agrião), frutas vermelhas (mirtilo, morango, amora), azeite de oliva extravirgem, oleaginosas (castanhas, nozes), açafrão (cúrcuma), gengibre, abacate e brócolis. Beber água alcalina ionizada complementa esse efeito ajudando a reduzir a carga ácida do organismo."}},
-{"@type":"Question","name":"A água pode ser anti-inflamatória?","acceptedAnswer":{"@type":"Answer","text":"Sim. Um estudo brasileiro liderado pela Dra. Juliana Chaves analisou pacientes com gastrite que passaram a beber água alcalina ionizada da Acqualive por 4 meses. Os exames de endoscopia mostraram melhora significativa da inflamação na mucosa do estômago, comprovando o efeito anti-inflamatório dessa água."}},
-{"@type":"Question","name":"Qual a relação entre PRAL, alimentos e inflamação?","acceptedAnswer":{"@type":"Answer","text":"PRAL é a Carga Ácida Potencial Renal. Cada alimento gera um efeito ácido ou alcalino no corpo. Alimentos ultraprocessados, refrigerantes, embutidos e excesso de carne tendem a ser muito ácidos e favorecem a inflamação. Vegetais, frutas e água alcalina ionizada têm PRAL negativo, equilibrando o organismo e reduzindo o ambiente inflamatório."}}
+{"@type":"Question","name":"A água pode ser anti-inflamatória?","acceptedAnswer":{"@type":"Answer","text":"Sim. Um estudo brasileiro liderado pela Dra. Juliana Chaves analisou 28 pacientes com gastrite que passaram a beber água alcalina ionizada da Acqualive por 4 meses. Os exames de endoscopia mostraram melhora significativa da inflamação na mucosa do estômago (p=0,024), comprovando o efeito anti-inflamatório dessa água."}},
+{"@type":"Question","name":"Qual a diferença entre água comum, água mineral e água alcalina ionizada?","acceptedAnswer":{"@type":"Answer","text":"A água da torneira costuma ter pH levemente ácido e cloro. A água mineral em garrafa tem composição variável e gera plástico. A água alcalina ionizada da Acqualive sai filtrada, com pH próximo de 9, rica em hidrogênio molecular e magnésio, com efeito antioxidante e anti-inflamatório comprovado em estudo brasileiro."}},
+{"@type":"Question","name":"Qual a relação entre PRAL, água e inflamação?","acceptedAnswer":{"@type":"Answer","text":"PRAL é a Carga Ácida Potencial Renal. Cada bebida ou alimento gera um efeito ácido ou alcalino no corpo. Refrigerantes e água ácida favorecem a inflamação. A água alcalina ionizada tem PRAL negativo, equilibrando o organismo e reduzindo o ambiente inflamatório."}}
 ]}
 </script>`,
     `<header class="article-header">
   <div class="header-inner">
-    <span class="badge">SAÚDE • NUTRIÇÃO</span>
-    <h1>Alimentos <span>anti-inflamatórios</span>: o cardápio simples que desliga a inflamação silenciosa</h1>
-    <p class="header-desc">Existe um fogo baixo aceso dentro de muita gente. Veja, em linguagem simples, o que comer e o que beber para apagar.</p>
+    <span class="badge">SAÚDE • HIDRATAÇÃO</span>
+    <h1>Água <span>anti-inflamatória</span>: o copo que desliga a inflamação silenciosa</h1>
+    <p class="header-desc">Existe um fogo baixo aceso dentro de muita gente. E a água certa, todos os dias, pode ser um dos extintores mais simples e poderosos que existem.</p>
     <div class="header-meta">
       <span>Acqualive</span><span>•</span><span>28 abr 2026</span><span>•</span><span>9 min de leitura</span>
     </div>
   </div>
   <div class="hero-img-wrap">
-    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/alimentos-anti-inflamatorios.jpg" alt="Mesa com alimentos anti-inflamatórios: mirtilos, abacate, espinafre, gengibre, açafrão, salmão, nozes, brócolis, azeite e copo de água com limão" width="860" height="495" loading="eager">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/agua-anti-inflamatoria.jpg" alt="Copo alto de água alcalina ionizada cristalina sobre bancada de mármore com limão, hortelã e gengibre, simbolizando água anti-inflamatória" width="860" height="495" loading="eager">
   </div>
 </header>
 
 <main class="article-body">
-  <p>Você sabia que existe um tipo de doença que pode estar acontecendo dentro do seu corpo agora, sem dor, sem sintoma claro, e ainda assim envelhecendo seus órgãos todo dia? Os médicos chamam de <strong>inflamação crônica</strong>. Os cientistas chamam de "fogo baixo". E a boa notícia é: dá pra controlar com escolhas simples, na cozinha e no copo.</p>
+  <p>Você sabia que existe um tipo de doença que pode estar acontecendo dentro do seu corpo agora, sem dor, sem sintoma claro, e ainda assim envelhecendo seus órgãos todo dia? Os médicos chamam de <strong>inflamação crônica</strong>. Os cientistas chamam de "fogo baixo". E uma das formas mais simples de combater esse fogo está em uma coisa que você já faz várias vezes por dia: <strong>beber água</strong>. A questão é: qual água?</p>
 
-  <div class="quote">"Mudar a comida e mudar a água é o tratamento mais barato, mais acessível e, muitas vezes, mais poderoso que existe contra a inflamação." — adaptado de pesquisas publicadas em periódicos internacionais</div>
+  <div class="quote">"Mudar a água que entra no corpo todo dia é, talvez, a intervenção mais barata, mais constante e mais subestimada contra a inflamação crônica." — adaptado de pesquisas publicadas em periódicos internacionais</div>
 
   <nav class="toc">
     <div class="toc-title">Neste artigo</div>
     <ol>
       <li><a href="#fogo">O que é inflamação, explicado para criança</a></li>
-      <li><a href="#vilaes">Os alimentos que jogam gasolina no fogo</a></li>
-      <li><a href="#herois">Os alimentos que apagam o fogo</a></li>
-      <li><a href="#cardapio">Cardápio anti-inflamatório de um dia</a></li>
-      <li><a href="#agua">A água também é anti-inflamatória? Sim, e tem estudo</a></li>
+      <li><a href="#agua-comum">Por que a água comum pode estar inflamando você</a></li>
+      <li><a href="#estudo">O estudo brasileiro que comprovou: água pode ser anti-inflamatória</a></li>
+      <li><a href="#como-age">Como a água alcalina ionizada age no corpo</a></li>
       <li><a href="#pral">PRAL: o segredo do equilíbrio ácido-alcalino</a></li>
+      <li><a href="#rotina">Como usar a água como remédio diário</a></li>
       <li><a href="#solucao">Como começar hoje na sua casa</a></li>
     </ol>
   </nav>
@@ -1147,53 +1147,19 @@ const article11 = {
     <p>A ciência hoje entende que essa inflamação silenciosa está por trás de gastrite, diabetes, pressão alta, obesidade, dores nas articulações, problemas no coração, envelhecimento precoce e até alguns tipos de câncer. É como uma fagulha que vira incêndio com o tempo.</p>
   </div>
 
-  <h2 id="vilaes">Os alimentos que jogam gasolina no fogo</h2>
-  <p>Antes de falar do que comer, é importante saber o que diminui na sua mesa. Esses são os principais "lenhadores" da inflamação:</p>
+  <h2 id="agua-comum">Por que a água comum pode estar inflamando você</h2>
+  <p>A maior parte das pessoas no Brasil bebe um destes três tipos de água. Veja o que cada um realmente entrega para o seu corpo:</p>
 
   <ul class="check-list">
-    <li><strong>Refrigerantes e sucos de caixinha:</strong> muito açúcar e ácidos artificiais.</li>
-    <li><strong>Frituras e óleos refinados:</strong> mudam o equilíbrio das suas células.</li>
-    <li><strong>Embutidos:</strong> presunto, salsicha, mortadela, salame.</li>
-    <li><strong>Doces industrializados e biscoitos recheados.</strong></li>
-    <li><strong>Excesso de carne vermelha</strong> e de farinhas brancas.</li>
-    <li><strong>Bebidas alcoólicas em excesso.</strong></li>
+    <li><strong>Água da torneira:</strong> costuma ser ácida, levar cloro e trihalometanos (subprodutos do cloro), e às vezes microplásticos. O cloro irrita a mucosa do estômago e do intestino.</li>
+    <li><strong>Água mineral em garrafa:</strong> composição muito variável, quase sempre ácida ou neutra, e ainda traz microplásticos vindos do PET. Cada garrafa pode liberar centenas de milhares de partículas.</li>
+    <li><strong>Refrigerantes e sucos de caixinha:</strong> muito açúcar, ácidos artificiais, pH baixo. Tudo que o corpo inflamado não precisa.</li>
   </ul>
 
-  <p>Não precisa cortar tudo, nem virar santo da nutrição. Só precisa diminuir. Cada vez que você troca um desses por um alimento de verdade, o fogo abaixa um pouquinho.</p>
+  <p>Quando o corpo recebe líquidos ácidos o tempo todo, ele precisa "trabalhar dobrado" para neutralizar, tirando minerais dos ossos, sobrecarregando rins e mantendo o ambiente interno levemente ácido. Esse ambiente é o terreno favorito da inflamação crônica.</p>
 
-  <h2 id="herois">Os alimentos que apagam o fogo</h2>
-  <p>Agora os heróis. São alimentos comuns, comprados em qualquer feira ou supermercado, e cientificamente reconhecidos por reduzir a inflamação:</p>
-
-  <div class="benefit-grid">
-    <div class="benefit-card"><div class="benefit-icon">1</div><h4>Frutas vermelhas</h4><p>Mirtilo, morango, amora, açaí. Cheias de antioxidantes.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">2</div><h4>Folhas verdes</h4><p>Espinafre, couve, agrião, rúcula. Magnésio e clorofila.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">3</div><h4>Peixes ômega 3</h4><p>Sardinha, salmão, atum. Reduzem citocinas inflamatórias.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">4</div><h4>Azeite extravirgem</h4><p>Substitui óleos refinados. Anti-inflamatório natural.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">5</div><h4>Cúrcuma e gengibre</h4><p>Tempero amarelo e raiz: dois clássicos da medicina natural.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">6</div><h4>Abacate</h4><p>Gordura boa, fibras e potássio.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">7</div><h4>Castanhas e nozes</h4><p>Um punhado por dia já faz diferença.</p></div>
-    <div class="benefit-card"><div class="benefit-icon">8</div><h4>Brócolis e couve-flor</h4><p>Compostos que protegem o estômago e o intestino.</p></div>
-  </div>
-
-  <h2 id="cardapio">Cardápio anti-inflamatório de um dia</h2>
-  <p>Para deixar bem prático, segue um exemplo de um dia inteiro de comida amiga do seu corpo:</p>
-
-  <ul class="check-list">
-    <li><strong>Café da manhã:</strong> mamão com aveia, semente de chia e mirtilo. Um copo de água alcalina antes.</li>
-    <li><strong>Lanche da manhã:</strong> punhado de castanhas e uma fruta.</li>
-    <li><strong>Almoço:</strong> arroz integral, feijão, salada verde com abacate, peixe assado ou frango grelhado, brócolis no vapor com azeite.</li>
-    <li><strong>Lanche da tarde:</strong> chá de gengibre com cúrcuma e uma fatia de pão integral com pasta de grão de bico.</li>
-    <li><strong>Jantar:</strong> sopa de legumes com frango desfiado e uma porção de salada.</li>
-    <li><strong>Ao longo do dia:</strong> 2 a 2,5 litros de água alcalina ionizada.</li>
-  </ul>
-
-  <div class="mid-cta">
-    <p>Cardápio bom, água certa. A combinação que muda o corpo de dentro pra fora.</p>
-    <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Purificador Acqualive →</a>
-  </div>
-
-  <h2 id="agua">A água também é anti-inflamatória? Sim, e tem estudo</h2>
-  <p>Aqui está o ponto que pouca gente sabe: a <strong>água que você bebe também entra nessa conta</strong>. E não é achismo.</p>
+  <h2 id="estudo">O estudo brasileiro que comprovou: água pode ser anti-inflamatória</h2>
+  <p>Aqui está o ponto que pouca gente sabe: a <strong>água que você bebe também desinflama</strong>. E não é achismo.</p>
 
   <p>A médica pesquisadora <strong>Dra. Juliana Chaves</strong>, junto com pesquisadores da Universidade Federal do Pará e da Marinha do Brasil, conduziu um estudo com 28 pacientes com gastrite. O grupo passou a beber <strong>água alcalina ionizada da Acqualive</strong> durante cerca de 4 meses, sem mudar mais nada na rotina. Antes e depois, todos passaram por endoscopia.</p>
 
@@ -1207,6 +1173,18 @@ const article11 = {
 
   <div class="quote">Em outras palavras: a água certa, todos os dias, pode funcionar como um "extintor natural" do fogo silencioso que envelhece o corpo.</div>
 
+  <h2 id="como-age">Como a água alcalina ionizada age no corpo</h2>
+  <p>A água alcalina ionizada da Acqualive não é apenas água com pH alto. Ela combina três efeitos que trabalham juntos:</p>
+
+  <div class="benefit-grid">
+    <div class="benefit-card"><div class="benefit-icon">1</div><h4>pH próximo de 9</h4><p>Ajuda a neutralizar a acidez gerada pela alimentação moderna e pelo estresse.</p></div>
+    <div class="benefit-card"><div class="benefit-icon">2</div><h4>Hidrogênio molecular</h4><p>Antioxidante natural, varre os radicais livres mais agressivos para as células.</p></div>
+    <div class="benefit-card"><div class="benefit-icon">3</div><h4>Magnésio biodisponível</h4><p>Mineral essencial para mais de 300 reações no corpo, incluindo o controle da inflamação.</p></div>
+    <div class="benefit-card"><div class="benefit-icon">4</div><h4>Microagrupamento</h4><p>Moléculas em clusters menores, que hidratam a célula com mais facilidade.</p></div>
+    <div class="benefit-card"><div class="benefit-icon">5</div><h4>Sem cloro e sem trihalometanos</h4><p>Filtragem multinível elimina os irritantes mais comuns da água tratada.</p></div>
+    <div class="benefit-card"><div class="benefit-icon">6</div><h4>Sem microplásticos</h4><p>Você sai do PET descartável e ganha água pura, direto da torneira.</p></div>
+  </div>
+
   <h2 id="pral">PRAL: o segredo do equilíbrio ácido-alcalino</h2>
   <p>PRAL parece nome difícil, mas a ideia é fácil. Cada alimento ou bebida que entra na sua boca deixa um "rastro" no corpo: ou ácido, ou alcalino. Quanto mais ácido o seu dia a dia, mais o corpo precisa trabalhar para equilibrar e mais ele inflama.</p>
 
@@ -1216,20 +1194,39 @@ const article11 = {
     <li>Água alcalina ionizada da Acqualive: rastro alcalino e antioxidante. Ótimo.</li>
   </ul>
 
-  <p>Beber água alcalina ionizada é como colocar um <strong>contrapeso diário</strong> contra os excessos da alimentação moderna. Não substitui boa comida, mas multiplica o efeito dela.</p>
+  <p>Beber água alcalina ionizada é como colocar um <strong>contrapeso diário</strong> contra os excessos da vida moderna. Não substitui boa comida, mas multiplica o efeito dela.</p>
 
-  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-cozinha-natureza.jpg" alt="Purificador Acqualive em cozinha clara, fonte de água alcalina ionizada complementar à dieta anti-inflamatória" class="article-img" loading="lazy" width="1200" height="800">
+  <div class="mid-cta">
+    <p>Comida boa, água certa. A combinação que muda o corpo de dentro pra fora.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Purificador Acqualive →</a>
+  </div>
+
+  <h2 id="rotina">Como usar a água como remédio diário</h2>
+  <p>Para a água anti-inflamatória trabalhar a seu favor, ela precisa ser uma rotina, não um evento. Sugestão prática:</p>
+
+  <ul class="check-list">
+    <li><strong>Ao acordar:</strong> 1 a 2 copos de água alcalina ionizada em jejum, antes do café.</li>
+    <li><strong>Meio da manhã:</strong> mais 1 copo, junto de uma fruta.</li>
+    <li><strong>Antes do almoço:</strong> 1 copo, 15 minutos antes de comer.</li>
+    <li><strong>Tarde:</strong> 2 a 3 copos espaçados, no lugar de refrigerante ou suco industrializado.</li>
+    <li><strong>Antes do jantar:</strong> mais 1 copo.</li>
+    <li><strong>Ao longo do dia:</strong> meta de 2 a 2,5 litros de água alcalina ionizada.</li>
+  </ul>
+
+  <p>É a mesma água para o chá, o café, a sopa, o suco natural, a mamadeira, o copo do seu filho. Tudo que entra em casa passa a ter um pH amigo do corpo.</p>
+
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-cozinha-natureza.jpg" alt="Purificador Acqualive em cozinha clara, fonte de água alcalina ionizada anti-inflamatória para a família" class="article-img" loading="lazy" width="1200" height="800">
 
   <h2 id="solucao">Como começar hoje na sua casa</h2>
   <p>Você não precisa virar a sua vida do avesso. Comece com 3 movimentos simples:</p>
 
   <ul class="check-list">
-    <li><strong>Diminua um vilão por semana:</strong> tire um refrigerante, troque a fritura por assado, reduza o embutido.</li>
-    <li><strong>Inclua um herói por dia:</strong> uma fruta vermelha no café, uma folha verde no almoço, uma colher de azeite na salada.</li>
-    <li><strong>Troque a água da sua casa</strong> por água alcalina ionizada de verdade. Essa mudança entra em 100% das suas refeições, do seu chá, do seu café, da água do seu filho.</li>
+    <li><strong>Tire um vilão líquido por semana:</strong> um refrigerante a menos, uma garrafa PET a menos.</li>
+    <li><strong>Coloque a água certa em todos os copos da casa:</strong> seu, do seu parceiro, do seu filho, dos seus pais.</li>
+    <li><strong>Troque a fonte de água da sua casa</strong> por água alcalina ionizada de verdade. Essa mudança entra em 100% das suas refeições, do seu chá, do seu café, da água do seu filho.</li>
   </ul>
 
-  <p>É a coisa mais simples do mundo: comer melhor e beber melhor. O corpo agradece e os exames também.</p>
+  <p>É a coisa mais simples do mundo: beber melhor. O corpo agradece e os exames também.</p>
 
   <div class="cta-section">
     <h2>Apague o fogo silencioso <span>com a água certa</span></h2>
@@ -1441,7 +1438,7 @@ const article12 = {
   <div class="related-links">
     <h4>Continue lendo</h4>
     <ul>
-      <li><a href="https://blog.acqualive.com.br/alimentos-anti-inflamatorios/" target="_blank">Alimentos anti-inflamatórios: o cardápio simples para a família</a></li>
+      <li><a href="https://blog.acqualive.com.br/agua-anti-inflamatoria/" target="_blank">Água anti-inflamatória: o copo que desliga a inflamação silenciosa</a></li>
       <li><a href="https://blog.acqualive.com.br/microplasticos-no-cerebro/" target="_blank">Microplásticos no cérebro: o que ninguém te contou</a></li>
       <li><a href="https://blog.acqualive.com.br/qual-o-melhor-filtro-de-agua/" target="_blank">Qual o melhor filtro de água para a sua casa</a></li>
     </ul>
