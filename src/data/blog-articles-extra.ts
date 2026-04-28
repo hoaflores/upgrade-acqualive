@@ -1438,7 +1438,7 @@ const article12 = {
   <div class="related-links">
     <h4>Continue lendo</h4>
     <ul>
-      <li><a href="https://blog.acqualive.com.br/alimentos-anti-inflamatorios/" target="_blank">Alimentos anti-inflamatórios: o cardápio simples para a família</a></li>
+      <li><a href="https://blog.acqualive.com.br/agua-anti-inflamatoria/" target="_blank">Água anti-inflamatória: o copo que desliga a inflamação silenciosa</a></li>
       <li><a href="https://blog.acqualive.com.br/microplasticos-no-cerebro/" target="_blank">Microplásticos no cérebro: o que ninguém te contou</a></li>
       <li><a href="https://blog.acqualive.com.br/qual-o-melhor-filtro-de-agua/" target="_blank">Qual o melhor filtro de água para a sua casa</a></li>
     </ul>
