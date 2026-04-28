@@ -1074,4 +1074,380 @@ const article10 = {
   )
 };
 
-export const EXTRA_ARTICLES = [article6, article7, article8, article9, article10];
+// ============================================================
+// ARTIGO 11 — Alimentos anti-inflamatórios
+// ============================================================
+const article11 = {
+  title: "Alimentos anti-inflamatórios: o cardápio simples que desliga a inflamação silenciosa do seu corpo",
+  slug: "alimentos-anti-inflamatorios",
+  html: wrap(
+    `<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alimentos Anti-Inflamatórios: Guia Simples Para Sua Família | Acqualive</title>
+<meta name="description" content="Descubra de forma simples quais alimentos combatem a inflamação crônica do corpo, por que ela é perigosa e como a água alcalina ionizada da Acqualive potencializa esse efeito anti-inflamatório.">
+<meta name="keywords" content="alimentos anti-inflamatórios, dieta anti-inflamatória, inflamação crônica, água alcalina anti-inflamatória, alimentação saudável, Acqualive, água ionizada, gastrite alimentação, PRAL alimentos">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Acqualive">
+<link rel="canonical" href="https://blog.acqualive.com.br/alimentos-anti-inflamatorios/">
+<meta property="og:title" content="Alimentos Anti-Inflamatórios: O Cardápio Que Desliga a Inflamação">
+<meta property="og:description" content="Lista simples e científica dos alimentos que combatem a inflamação silenciosa, e como a água certa multiplica o efeito.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/alimentos-anti-inflamatorios.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Alimentos anti-inflamatórios: o cardápio simples que desliga a inflamação silenciosa do seu corpo","description":"Guia para leigos sobre alimentos anti-inflamatórios e como a água alcalina ionizada potencializa o combate à inflamação crônica.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-04-28","dateModified":"2026-04-28","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/alimentos-anti-inflamatorios.jpg"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"O que é inflamação crônica e por que ela é perigosa?","acceptedAnswer":{"@type":"Answer","text":"A inflamação crônica é uma resposta do sistema imune que não desliga, como um fogo baixo aceso dentro do corpo. Ela é silenciosa, muitas vezes não dá sintomas claros, mas está por trás de doenças como gastrite, diabetes, hipertensão, obesidade, doenças do coração, artrite, envelhecimento precoce e até alguns tipos de câncer."}},
+{"@type":"Question","name":"Quais são os principais alimentos anti-inflamatórios?","acceptedAnswer":{"@type":"Answer","text":"Os mais estudados são: peixes ricos em ômega 3 (sardinha, salmão), folhas verdes escuras (espinafre, couve, agrião), frutas vermelhas (mirtilo, morango, amora), azeite de oliva extravirgem, oleaginosas (castanhas, nozes), açafrão (cúrcuma), gengibre, abacate e brócolis. Beber água alcalina ionizada complementa esse efeito ajudando a reduzir a carga ácida do organismo."}},
+{"@type":"Question","name":"A água pode ser anti-inflamatória?","acceptedAnswer":{"@type":"Answer","text":"Sim. Um estudo brasileiro liderado pela Dra. Juliana Chaves analisou pacientes com gastrite que passaram a beber água alcalina ionizada da Acqualive por 4 meses. Os exames de endoscopia mostraram melhora significativa da inflamação na mucosa do estômago, comprovando o efeito anti-inflamatório dessa água."}},
+{"@type":"Question","name":"Qual a relação entre PRAL, alimentos e inflamação?","acceptedAnswer":{"@type":"Answer","text":"PRAL é a Carga Ácida Potencial Renal. Cada alimento gera um efeito ácido ou alcalino no corpo. Alimentos ultraprocessados, refrigerantes, embutidos e excesso de carne tendem a ser muito ácidos e favorecem a inflamação. Vegetais, frutas e água alcalina ionizada têm PRAL negativo, equilibrando o organismo e reduzindo o ambiente inflamatório."}}
+]}
+</script>`,
+    `<header class="article-header">
+  <div class="header-inner">
+    <span class="badge">SAÚDE • NUTRIÇÃO</span>
+    <h1>Alimentos <span>anti-inflamatórios</span>: o cardápio simples que desliga a inflamação silenciosa</h1>
+    <p class="header-desc">Existe um fogo baixo aceso dentro de muita gente. Veja, em linguagem simples, o que comer e o que beber para apagar.</p>
+    <div class="header-meta">
+      <span>Acqualive</span><span>•</span><span>28 abr 2026</span><span>•</span><span>9 min de leitura</span>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/alimentos-anti-inflamatorios.jpg" alt="Mesa com alimentos anti-inflamatórios: mirtilos, abacate, espinafre, gengibre, açafrão, salmão, nozes, brócolis, azeite e copo de água com limão" width="860" height="495" loading="eager">
+  </div>
+</header>
+
+<main class="article-body">
+  <p>Você sabia que existe um tipo de doença que pode estar acontecendo dentro do seu corpo agora, sem dor, sem sintoma claro, e ainda assim envelhecendo seus órgãos todo dia? Os médicos chamam de <strong>inflamação crônica</strong>. Os cientistas chamam de "fogo baixo". E a boa notícia é: dá pra controlar com escolhas simples, na cozinha e no copo.</p>
+
+  <div class="quote">"Mudar a comida e mudar a água é o tratamento mais barato, mais acessível e, muitas vezes, mais poderoso que existe contra a inflamação." — adaptado de pesquisas publicadas em periódicos internacionais</div>
+
+  <nav class="toc">
+    <div class="toc-title">Neste artigo</div>
+    <ol>
+      <li><a href="#fogo">O que é inflamação, explicado para criança</a></li>
+      <li><a href="#vilaes">Os alimentos que jogam gasolina no fogo</a></li>
+      <li><a href="#herois">Os alimentos que apagam o fogo</a></li>
+      <li><a href="#cardapio">Cardápio anti-inflamatório de um dia</a></li>
+      <li><a href="#agua">A água também é anti-inflamatória? Sim, e tem estudo</a></li>
+      <li><a href="#pral">PRAL: o segredo do equilíbrio ácido-alcalino</a></li>
+      <li><a href="#solucao">Como começar hoje na sua casa</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="fogo">O que é inflamação, explicado para criança</h2>
+  <p>Imagine que você bate o joelho. Em poucos minutos, o lugar fica vermelho, quente e dolorido. Isso é o seu corpo trabalhando para curar. É a <strong>inflamação aguda</strong>. Ela é boa, é necessária, e logo passa.</p>
+
+  <p>Agora imagine que esse "vermelhinho" não desliga nunca. Fica baixinho, sem dor, escondido dentro do corpo, todos os dias, durante anos. É a <strong>inflamação crônica</strong>. Ela não dá sintoma na hora, mas vai estragando órgão por órgão, devagarinho.</p>
+
+  <div class="info-box">
+    <h4>Por que se preocupar</h4>
+    <p>A ciência hoje entende que essa inflamação silenciosa está por trás de gastrite, diabetes, pressão alta, obesidade, dores nas articulações, problemas no coração, envelhecimento precoce e até alguns tipos de câncer. É como uma fagulha que vira incêndio com o tempo.</p>
+  </div>
+
+  <h2 id="vilaes">Os alimentos que jogam gasolina no fogo</h2>
+  <p>Antes de falar do que comer, é importante saber o que diminui na sua mesa. Esses são os principais "lenhadores" da inflamação:</p>
+
+  <ul class="check-list">
+    <li><strong>Refrigerantes e sucos de caixinha:</strong> muito açúcar e ácidos artificiais.</li>
+    <li><strong>Frituras e óleos refinados:</strong> mudam o equilíbrio das suas células.</li>
+    <li><strong>Embutidos:</strong> presunto, salsicha, mortadela, salame.</li>
+    <li><strong>Doces industrializados e biscoitos recheados.</strong></li>
+    <li><strong>Excesso de carne vermelha</strong> e de farinhas brancas.</li>
+    <li><strong>Bebidas alcoólicas em excesso.</strong></li>
+  </ul>
+
+  <p>Não precisa cortar tudo, nem virar santo da nutrição. Só precisa diminuir. Cada vez que você troca um desses por um alimento de verdade, o fogo abaixa um pouquinho.</p>
+
+  <h2 id="herois">Os alimentos que apagam o fogo</h2>
+  <p>Agora os heróis. São alimentos comuns, comprados em qualquer feira ou supermercado, e cientificamente reconhecidos por reduzir a inflamação:</p>
+
+  <div class="benefit-grid">
+    <div class="benefit-card"><div class="benefit-icon">1</div><h4>Frutas vermelhas</h4><p>Mirtilo, morango, amora, açaí. Cheias de antioxidantes.</p></div>
+    <div class="benefit-card"><div class="benefit-icon">2</div><h4>Folhas verdes</h4><p>Espinafre, couve, agrião, rúcula. Magnésio e clorofila.</p></div>
+    <div class="benefit-card"><div class="benefit-icon">3</div><h4>Peixes ômega 3</h4><p>Sardinha, salmão, atum. Reduzem citocinas inflamatórias.</p></div>
+    <div class="benefit-card"><div class="benefit-icon">4</div><h4>Azeite extravirgem</h4><p>Substitui óleos refinados. Anti-inflamatório natural.</p></div>
+    <div class="benefit-card"><div class="benefit-icon">5</div><h4>Cúrcuma e gengibre</h4><p>Tempero amarelo e raiz: dois clássicos da medicina natural.</p></div>
+    <div class="benefit-card"><div class="benefit-icon">6</div><h4>Abacate</h4><p>Gordura boa, fibras e potássio.</p></div>
+    <div class="benefit-card"><div class="benefit-icon">7</div><h4>Castanhas e nozes</h4><p>Um punhado por dia já faz diferença.</p></div>
+    <div class="benefit-card"><div class="benefit-icon">8</div><h4>Brócolis e couve-flor</h4><p>Compostos que protegem o estômago e o intestino.</p></div>
+  </div>
+
+  <h2 id="cardapio">Cardápio anti-inflamatório de um dia</h2>
+  <p>Para deixar bem prático, segue um exemplo de um dia inteiro de comida amiga do seu corpo:</p>
+
+  <ul class="check-list">
+    <li><strong>Café da manhã:</strong> mamão com aveia, semente de chia e mirtilo. Um copo de água alcalina antes.</li>
+    <li><strong>Lanche da manhã:</strong> punhado de castanhas e uma fruta.</li>
+    <li><strong>Almoço:</strong> arroz integral, feijão, salada verde com abacate, peixe assado ou frango grelhado, brócolis no vapor com azeite.</li>
+    <li><strong>Lanche da tarde:</strong> chá de gengibre com cúrcuma e uma fatia de pão integral com pasta de grão de bico.</li>
+    <li><strong>Jantar:</strong> sopa de legumes com frango desfiado e uma porção de salada.</li>
+    <li><strong>Ao longo do dia:</strong> 2 a 2,5 litros de água alcalina ionizada.</li>
+  </ul>
+
+  <div class="mid-cta">
+    <p>Cardápio bom, água certa. A combinação que muda o corpo de dentro pra fora.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Purificador Acqualive →</a>
+  </div>
+
+  <h2 id="agua">A água também é anti-inflamatória? Sim, e tem estudo</h2>
+  <p>Aqui está o ponto que pouca gente sabe: a <strong>água que você bebe também entra nessa conta</strong>. E não é achismo.</p>
+
+  <p>A médica pesquisadora <strong>Dra. Juliana Chaves</strong>, junto com pesquisadores da Universidade Federal do Pará e da Marinha do Brasil, conduziu um estudo com 28 pacientes com gastrite. O grupo passou a beber <strong>água alcalina ionizada da Acqualive</strong> durante cerca de 4 meses, sem mudar mais nada na rotina. Antes e depois, todos passaram por endoscopia.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-number">28</div><div class="stat-label">pacientes com gastrite acompanhados pelo estudo</div></div>
+    <div class="stat-card"><div class="stat-number">4 meses</div><div class="stat-label">bebendo água alcalina ionizada da Acqualive</div></div>
+    <div class="stat-card"><div class="stat-number">p=0,024</div><div class="stat-label">melhora estatisticamente significativa da inflamação na mucosa</div></div>
+  </div>
+
+  <p>Resultado: a inflamação na mucosa do estômago diminuiu de forma significativa. E os pesquisadores foram além: viram sinais de que esse efeito anti-inflamatório passa do estômago e ajuda o corpo inteiro a equilibrar marcadores ligados à inflamação crônica.</p>
+
+  <div class="quote">Em outras palavras: a água certa, todos os dias, pode funcionar como um "extintor natural" do fogo silencioso que envelhece o corpo.</div>
+
+  <h2 id="pral">PRAL: o segredo do equilíbrio ácido-alcalino</h2>
+  <p>PRAL parece nome difícil, mas a ideia é fácil. Cada alimento ou bebida que entra na sua boca deixa um "rastro" no corpo: ou ácido, ou alcalino. Quanto mais ácido o seu dia a dia, mais o corpo precisa trabalhar para equilibrar e mais ele inflama.</p>
+
+  <ul class="check-list">
+    <li>Refrigerante, fast food, embutidos: rastro muito ácido. Ruim.</li>
+    <li>Vegetais, frutas, leguminosas: rastro alcalino. Bom.</li>
+    <li>Água alcalina ionizada da Acqualive: rastro alcalino e antioxidante. Ótimo.</li>
+  </ul>
+
+  <p>Beber água alcalina ionizada é como colocar um <strong>contrapeso diário</strong> contra os excessos da alimentação moderna. Não substitui boa comida, mas multiplica o efeito dela.</p>
+
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-cozinha-natureza.jpg" alt="Purificador Acqualive em cozinha clara, fonte de água alcalina ionizada complementar à dieta anti-inflamatória" class="article-img" loading="lazy" width="1200" height="800">
+
+  <h2 id="solucao">Como começar hoje na sua casa</h2>
+  <p>Você não precisa virar a sua vida do avesso. Comece com 3 movimentos simples:</p>
+
+  <ul class="check-list">
+    <li><strong>Diminua um vilão por semana:</strong> tire um refrigerante, troque a fritura por assado, reduza o embutido.</li>
+    <li><strong>Inclua um herói por dia:</strong> uma fruta vermelha no café, uma folha verde no almoço, uma colher de azeite na salada.</li>
+    <li><strong>Troque a água da sua casa</strong> por água alcalina ionizada de verdade. Essa mudança entra em 100% das suas refeições, do seu chá, do seu café, da água do seu filho.</li>
+  </ul>
+
+  <p>É a coisa mais simples do mundo: comer melhor e beber melhor. O corpo agradece e os exames também.</p>
+
+  <div class="cta-section">
+    <h2>Apague o fogo silencioso <span>com a água certa</span></h2>
+    <p>O mesmo Purificador Acqualive usado no estudo da Dra. Juliana Chaves pode estar na sua cozinha, entregando água alcalina ionizada todos os dias para a sua família.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Quero água anti-inflamatória em casa →</a>
+  </div>
+
+  <div class="related-links">
+    <h4>Continue lendo</h4>
+    <ul>
+      <li><a href="https://blog.acqualive.com.br/agua-alcalina-anti-inflamatoria/" target="_blank">Água alcalina anti-inflamatória: o estudo completo da Dra. Juliana Chaves</a></li>
+      <li><a href="https://blog.acqualive.com.br/qual-o-melhor-filtro-de-agua/" target="_blank">Qual o melhor filtro de água para a sua casa</a></li>
+      <li><a href="https://blog.acqualive.com.br/microplasticos-no-cerebro/" target="_blank">Microplásticos no cérebro: o que ninguém te contou</a></li>
+    </ul>
+  </div>
+</main>`
+  )
+};
+
+// ============================================================
+// ARTIGO 12 — Hidratação materna (Dia das Mães)
+// ============================================================
+const article12 = {
+  title: "Hidratação materna: o guia completo de água para mães e filhos (Dia das Mães 2026)",
+  slug: "hidratacao-materna-maes-e-filhos",
+  html: wrap(
+    `<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hidratação Materna: Guia Completo de Água Para Mães e Filhos | Acqualive</title>
+<meta name="description" content="No Dia das Mães, o presente que mais importa: saúde. Veja o guia completo de hidratação para gestantes, mães que amamentam, crianças e a rotina de toda a família.">
+<meta name="keywords" content="hidratação materna, água para gestante, água para criança, hidratação infantil, dia das mães, água alcalina amamentação, quanto de água beber, Acqualive">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Acqualive">
+<link rel="canonical" href="https://blog.acqualive.com.br/hidratacao-materna-maes-e-filhos/">
+<meta property="og:title" content="Hidratação Materna: Guia Completo Para Mães e Filhos">
+<meta property="og:description" content="O presente mais importante deste Dia das Mães: a água certa para a saúde de toda a família.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/hidratacao-maternal.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Hidratação materna: o guia completo de água para mães e filhos","description":"Guia prático de hidratação para gestantes, mães que amamentam e crianças, com foco na qualidade da água consumida pela família.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-04-28","dateModified":"2026-04-28","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/hidratacao-maternal.jpg"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Quanta água uma gestante deve beber por dia?","acceptedAnswer":{"@type":"Answer","text":"Recomenda-se entre 2,5 e 3 litros de água por dia durante a gestação, distribuídos ao longo do dia. A demanda aumenta porque o corpo está produzindo líquido amniótico, expandindo o volume sanguíneo e formando o bebê. Beber em pequenos goles e priorizar água filtrada de qualidade é o ideal."}},
+{"@type":"Question","name":"E durante a amamentação, quanto líquido a mãe precisa?","acceptedAnswer":{"@type":"Answer","text":"Mães que amamentam precisam de aproximadamente 3 a 3,5 litros de água por dia, já que o leite materno é cerca de 87% água. Uma boa dica é beber um copo de água sempre antes e depois de amamentar."}},
+{"@type":"Question","name":"Quanta água uma criança deve beber?","acceptedAnswer":{"@type":"Answer","text":"Crianças de 1 a 3 anos: cerca de 1,3 litro/dia. De 4 a 8 anos: cerca de 1,7 litro/dia. De 9 a 13 anos: 2,1 a 2,4 litros/dia. Esses valores incluem a água presente em frutas, sopas e outras fontes. A qualidade da água oferecida é tão importante quanto a quantidade."}},
+{"@type":"Question","name":"Posso oferecer água alcalina ionizada para meu filho?","acceptedAnswer":{"@type":"Answer","text":"Sim. A água alcalina ionizada da Acqualive é segura para toda a família, incluindo crianças. Ela é simplesmente água filtrada, com pH levemente alcalino e mineralizada com magnésio, exatamente como acontece em fontes naturais do mundo."}}
+]}
+</script>`,
+    `<header class="article-header">
+  <div class="header-inner">
+    <span class="badge">DIA DAS MÃES • SAÚDE FAMILIAR</span>
+    <h1>Hidratação <span>materna</span>: o guia completo de água para mães e filhos</h1>
+    <p class="header-desc">No mês das mães, o presente que ninguém embrulha mas todo mundo sente: a água certa, todos os dias, para a família toda.</p>
+    <div class="header-meta">
+      <span>Acqualive</span><span>•</span><span>28 abr 2026</span><span>•</span><span>10 min de leitura</span>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/hidratacao-maternal.jpg" alt="Mãe e filho sorrindo em uma cozinha clara, brindando com copos de água, representando o cuidado familiar com a hidratação" width="860" height="495" loading="eager">
+  </div>
+</header>
+
+<main class="article-body">
+  <p>Tem uma cena que se repete em quase toda casa: a mãe lembra de oferecer água para o filho, oferece para o marido, oferece para o cachorro, e esquece de beber a dela. O Dia das Mães é uma boa data para inverter essa lógica. <strong>A saúde da família começa pela hidratação dela.</strong></p>
+
+  <p>Este guia foi escrito pensando na mãe gestante, na mãe que amamenta, na mãe de bebê, na mãe de criança e na mãe que cuida de todo mundo ao mesmo tempo. Em linguagem simples, com números reais e dicas práticas para colocar em prática hoje.</p>
+
+  <div class="quote">"A primeira regra de uma família saudável é uma só: água boa, sempre disponível, para todo mundo." — pediatras citados pela Sociedade Brasileira de Pediatria</div>
+
+  <nav class="toc">
+    <div class="toc-title">Neste guia</div>
+    <ol>
+      <li><a href="#porque">Por que a hidratação da mãe importa tanto</a></li>
+      <li><a href="#gestante">Na gestação: água para dois</a></li>
+      <li><a href="#amamentacao">Amamentando: 87% de leite materno é água</a></li>
+      <li><a href="#bebe">Hidratação do bebê: o que oferecer e quando</a></li>
+      <li><a href="#crianca">Crianças e adolescentes: quanto, quando e como</a></li>
+      <li><a href="#qualidade">Qualidade da água: o detalhe que muda tudo</a></li>
+      <li><a href="#rotina">Rotina prática para a família toda</a></li>
+      <li><a href="#presente">O presente de Dia das Mães que dura para sempre</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="porque">Por que a hidratação da mãe importa tanto</h2>
+  <p>O corpo humano é, em média, 60% água. No bebê recém-nascido, esse número chega a 75%. Toda função importante do corpo (digestão, circulação, regulação da temperatura, produção de leite, produção de líquido amniótico) depende de água em quantidade e qualidade adequadas.</p>
+
+  <p>Quando a mãe se hidrata mal, todo mundo sente: cai a energia, vem dor de cabeça, a pele resseca, o intestino fica preso, o leite materno reduz, e o cuidado com os filhos fica mais pesado. Quando ela bebe bem, ela rende mais, dorme melhor, sente menos cansaço e ainda passa esse hábito para os filhos.</p>
+
+  <div class="info-box">
+    <h4>O cuidado começa em quem cuida</h4>
+    <p>Cuidar da mãe não é luxo. É a base. A criança aprende observando: se vê a mãe bebendo água várias vezes ao dia, ela própria vai pedir.</p>
+  </div>
+
+  <h2 id="gestante">Na gestação: água para dois</h2>
+  <p>Durante os 9 meses, o corpo da mulher trabalha 24 horas por dia para criar uma vida nova. Esse trabalho consome muita água:</p>
+
+  <ul class="check-list">
+    <li>Formação do <strong>líquido amniótico</strong> que protege o bebê.</li>
+    <li>Aumento de quase 50% no volume de <strong>sangue circulante</strong>.</li>
+    <li>Crescimento da placenta e dos tecidos do bebê.</li>
+    <li>Eliminação de toxinas pelos rins, agora trabalhando por dois.</li>
+  </ul>
+
+  <p>Recomendação geral: <strong>2,5 a 3 litros de água por dia</strong> durante a gestação, distribuídos ao longo do dia em pequenos goles. Uma boa hidratação reduz inchaço, cãibra, prisão de ventre, infecção urinária e até o risco de parto prematuro.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-number">2,5 a 3L</div><div class="stat-label">de água por dia recomendados na gestação</div></div>
+    <div class="stat-card"><div class="stat-number">+50%</div><div class="stat-label">é o aumento do volume de sangue da gestante</div></div>
+    <div class="stat-card"><div class="stat-number">87%</div><div class="stat-label">do leite materno é água</div></div>
+  </div>
+
+  <h2 id="amamentacao">Amamentando: 87% de leite materno é água</h2>
+  <p>Sabe aquele leite materno que alimenta, hidrata e protege o bebê? Cerca de <strong>87% dele é água</strong>. Por isso, a mãe que amamenta precisa repor todo dia.</p>
+
+  <p>Recomendação prática:</p>
+  <ul class="check-list">
+    <li><strong>3 a 3,5 litros de água por dia</strong> durante a amamentação.</li>
+    <li>Um copo de água sempre <strong>antes</strong> e outro <strong>depois</strong> de amamentar.</li>
+    <li>Manter sempre uma garrafa por perto: na cama, na cadeira de amamentação, no carro.</li>
+    <li>Evitar refrigerantes e excesso de cafeína, que desidratam.</li>
+  </ul>
+
+  <div class="mid-cta">
+    <p>Mãe bem hidratada, leite mais abundante. A diferença começa no copo.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Purificador Acqualive →</a>
+  </div>
+
+  <h2 id="bebe">Hidratação do bebê: o que oferecer e quando</h2>
+  <p>Importante: bebês com menos de 6 meses, em aleitamento materno exclusivo, <strong>não precisam de água extra</strong>. O leite materno é alimento e hidratação ao mesmo tempo. Em climas muito quentes ou doenças com febre, o pediatra orienta caso a caso.</p>
+
+  <p>A partir dos 6 meses, com a introdução alimentar, a água entra de vez na rotina. Comece oferecendo em copo de transição, sempre filtrada de qualidade, em pequenas quantidades várias vezes ao dia. Nada de suco industrializado.</p>
+
+  <h2 id="crianca">Crianças e adolescentes: quanto, quando e como</h2>
+  <p>Crianças não pedem água com a mesma frequência que precisam. Muitas só percebem que estão com sede quando já começaram a desidratar. Cabe ao adulto oferecer, lembrar, deixar disponível.</p>
+
+  <table style="width:100%; border-collapse:collapse; margin:24px 0; font-size:15px;">
+    <thead>
+      <tr style="background:#eff6ff;">
+        <th style="padding:12px; text-align:left; color:#1e3a8a; border-bottom:2px solid #bfdbfe;">Faixa etária</th>
+        <th style="padding:12px; text-align:left; color:#1e3a8a; border-bottom:2px solid #bfdbfe;">Água por dia (referência)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;">1 a 3 anos</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">cerca de 1,3 litro</td></tr>
+      <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;">4 a 8 anos</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">cerca de 1,7 litro</td></tr>
+      <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;">9 a 13 anos</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">2,1 a 2,4 litros</td></tr>
+      <tr><td style="padding:10px;">14 a 18 anos</td><td style="padding:10px;">2,3 a 3,3 litros</td></tr>
+    </tbody>
+  </table>
+
+  <p>Esses valores incluem a água presente nas frutas, sopas e demais alimentos. Mas a base segue sendo o copo d'água puro, várias vezes ao dia.</p>
+
+  <p>Dicas para fazer a criança beber mais água:</p>
+  <ul class="check-list">
+    <li>Garrafinha personalizada que ela escolhe e leva para a escola.</li>
+    <li>Copo sempre cheio na mesa durante as refeições.</li>
+    <li>Frutas com alto teor de água: melancia, melão, laranja, pepino.</li>
+    <li>Lembretes lúdicos: "vamos beber juntos?" funciona melhor que ordem.</li>
+    <li>Ter um <strong>purificador acessível na altura dela</strong>, com torneira fácil de usar.</li>
+  </ul>
+
+  <h2 id="qualidade">Qualidade da água: o detalhe que muda tudo</h2>
+  <p>De nada adianta lembrar de beber, se a água oferecida não é boa. E essa é a parte que muita mãe ignora porque parece detalhe técnico, mas é onde mora o cuidado de verdade.</p>
+
+  <p>A água da torneira, mesmo tratada, costuma carregar <strong>cloro, trihalometanos, sedimentos das tubulações</strong> e, em algumas cidades, agrotóxicos. A água engarrafada pode chegar com <a href="https://blog.acqualive.com.br/microplasticos-no-cerebro/" target="_blank">centenas de milhares de partículas de microplástico por litro</a>, segundo estudo da Universidade de Columbia.</p>
+
+  <div class="danger-box">
+    <h4>O que toda mãe precisa saber</h4>
+    <p>O corpo do bebê e da criança é mais sensível a contaminantes do que o do adulto. Cloro em excesso, microplásticos e metais pesados afetam mais quem está em fase de crescimento. Filtrar de verdade é proteção real.</p>
+  </div>
+
+  <p>Por isso, a recomendação é simples: <strong>tire o galão e a torneira pura da rotina e instale um purificador de qualidade na sua cozinha</strong>. A água ideal para a família é:</p>
+
+  <ul class="check-list">
+    <li>Sem cloro, sem trihalometanos, sem agrotóxicos.</li>
+    <li>Sem microplásticos.</li>
+    <li>Mineralizada com magnésio e outros minerais essenciais.</li>
+    <li>Levemente alcalina, equilibrando a acidez da alimentação moderna.</li>
+    <li>Disponível 24 horas por dia, na altura certa para todo mundo.</li>
+  </ul>
+
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-cozinha-natureza.jpg" alt="Purificador Acqualive em uma cozinha luminosa, fonte de água segura para toda a família" class="article-img" loading="lazy" width="1200" height="800">
+
+  <h2 id="rotina">Rotina prática para a família toda</h2>
+  <p>Uma rotina de hidratação familiar simples e que funciona:</p>
+
+  <ul class="check-list">
+    <li><strong>Ao acordar:</strong> todo mundo bebe um copo de água antes de qualquer coisa. Inclusive a mãe.</li>
+    <li><strong>Antes das refeições:</strong> meio copo de água, para preparar o corpo.</li>
+    <li><strong>Durante o dia:</strong> garrafa por perto, sempre. Para mãe, pai e crianças.</li>
+    <li><strong>Antes do banho do bebê:</strong> oferecer água, especialmente em dia quente.</li>
+    <li><strong>Antes e depois de amamentar:</strong> mãe sempre bebe.</li>
+    <li><strong>Antes de dormir:</strong> um último copo, sem exagero, para a noite toda.</li>
+  </ul>
+
+  <h2 id="presente">O presente de Dia das Mães que dura para sempre</h2>
+  <p>Flores murcham. Bombons acabam. Roupas envelhecem. <strong>Saúde, não.</strong> Um purificador na cozinha é, hoje, um dos presentes mais inteligentes que existem para uma mãe. Porque ela cuida da família, mas também é cuidada todo dia, em cada copo de água que ela bebe, em cada xícara de chá, em cada mamadeira preparada para o bebê e em cada garrafinha que vai para a escola junto com a criança.</p>
+
+  <p>É um presente que <strong>volta para você como pai, como filho, como marido, como avô</strong>. Porque uma mãe bem hidratada cuida melhor, sorri mais, dorme melhor e vive mais.</p>
+
+  <div class="cta-section">
+    <h2>Este Dia das Mães, presenteie <span>com saúde</span></h2>
+    <p>Leve para a cozinha da sua mãe (ou da sua família) o Purificador Acqualive. Água alcalina ionizada, sem cloro, sem microplásticos, com magnésio. Para a mãe, para o filho, para todo dia.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Conhecer o Acqualive →</a>
+  </div>
+
+  <div class="related-links">
+    <h4>Continue lendo</h4>
+    <ul>
+      <li><a href="https://blog.acqualive.com.br/alimentos-anti-inflamatorios/" target="_blank">Alimentos anti-inflamatórios: o cardápio simples para a família</a></li>
+      <li><a href="https://blog.acqualive.com.br/microplasticos-no-cerebro/" target="_blank">Microplásticos no cérebro: o que ninguém te contou</a></li>
+      <li><a href="https://blog.acqualive.com.br/qual-o-melhor-filtro-de-agua/" target="_blank">Qual o melhor filtro de água para a sua casa</a></li>
+    </ul>
+  </div>
+</main>`
+  )
+};
+
+export const EXTRA_ARTICLES = [article6, article7, article8, article9, article10, article11, article12];
