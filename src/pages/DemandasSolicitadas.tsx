@@ -10,7 +10,9 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { toast } from "@/hooks/use-toast";
-import { Loader2, Search, Clock, AlertCircle, CheckCircle2, TrendingUp, ListChecks, Paperclip, MessageSquare, ExternalLink, Eye, EyeOff, LayoutGrid, Table as TableIcon, User } from "lucide-react";
+import { Loader2, Search, Clock, AlertCircle, CheckCircle2, TrendingUp, ListChecks, Paperclip, MessageSquare, ExternalLink, Eye, EyeOff, LayoutGrid, Table as TableIcon, User, Activity, Wifi, WifiOff } from "lucide-react";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Switch } from "@/components/ui/switch";
 
 const ADMIN_USER = "marketing";
 const ADMIN_PASSWORD = "AcqualiveTerracota123!";
@@ -127,12 +129,65 @@ export default function DemandasSolicitadas() {
       setRespMode("preset");
       setRespOutroValue("");
     }
-    const [c, a] = await Promise.all([
+    const [c, a, ats] = await Promise.all([
       supabase.from("demanda_comentarios").select("*").eq("demanda_id", d.id).order("created_at"),
       supabase.from("demanda_anexos").select("*").eq("demanda_id", d.id),
+      supabase.from("demanda_atividades").select("*").eq("demanda_id", d.id).order("created_at", { ascending: false }),
     ]);
     setComentarios(c.data || []);
     setAnexos(a.data || []);
+    setAtividades(ats.data || []);
+  };
+
+  // Realtime: sincroniza demandas para todo o time
+  useEffect(() => {
+    if (!auth) return;
+    const ch = supabase
+      .channel("demandas-realtime")
+      .on("postgres_changes", { event: "*", schema: "public", table: "demandas" }, (payload) => {
+        setRealtimeOn(true);
+        if (payload.eventType === "INSERT") {
+          setDemandas((prev) => (prev.find((x) => x.id === (payload.new as any).id) ? prev : [payload.new as any, ...prev]));
+        } else if (payload.eventType === "UPDATE") {
+          setDemandas((prev) => prev.map((d) => (d.id === (payload.new as any).id ? { ...d, ...(payload.new as any) } : d)));
+          setSelected((cur: any) => (cur && cur.id === (payload.new as any).id ? { ...cur, ...(payload.new as any) } : cur));
+        } else if (payload.eventType === "DELETE") {
+          setDemandas((prev) => prev.filter((d) => d.id !== (payload.old as any).id));
+        }
+      })
+      .on("postgres_changes", { event: "INSERT", schema: "public", table: "demanda_comentarios" }, (payload) => {
+        setSelected((cur: any) => {
+          if (cur && (payload.new as any).demanda_id === cur.id) {
+            setComentarios((prev) => (prev.find((c) => c.id === (payload.new as any).id) ? prev : [...prev, payload.new as any]));
+          }
+          return cur;
+        });
+      })
+      .on("postgres_changes", { event: "INSERT", schema: "public", table: "demanda_atividades" }, (payload) => {
+        setSelected((cur: any) => {
+          if (cur && (payload.new as any).demanda_id === cur.id) {
+            setAtividades((prev) => (prev.find((a) => a.id === (payload.new as any).id) ? prev : [payload.new as any, ...prev]));
+          }
+          return cur;
+        });
+      })
+      .subscribe((status) => {
+        if (status === "SUBSCRIBED") setRealtimeOn(true);
+        if (status === "CHANNEL_ERROR" || status === "CLOSED") setRealtimeOn(false);
+      });
+    return () => { supabase.removeChannel(ch); };
+  }, [auth]);
+
+  const logAtividade = async (demanda_id: string, tipo: string, campo: string | null, valor_anterior: any, valor_novo: any, detalhes?: string) => {
+    await supabase.from("demanda_atividades").insert({
+      demanda_id,
+      tipo,
+      campo,
+      valor_anterior: valor_anterior == null ? null : String(valor_anterior),
+      valor_novo: valor_novo == null ? null : String(valor_novo),
+      autor: "marketing",
+      detalhes: detalhes || null,
+    });
   };
 
   const updateField = async (field: string, value: any, targetId?: string, observacao?: string) => {
