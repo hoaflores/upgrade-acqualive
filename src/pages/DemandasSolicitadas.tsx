@@ -132,9 +132,11 @@ export default function DemandasSolicitadas() {
     setAnexos(a.data || []);
   };
 
-  const updateField = async (field: string, value: any, targetId?: string) => {
+  const updateField = async (field: string, value: any, targetId?: string, observacao?: string) => {
     const id = targetId || selected?.id;
     if (!id) return;
+    const current = demandas.find((d) => d.id === id);
+    const statusAnterior = current?.status;
     const update: any = { [field]: value };
     if (field === "status" && value === "concluida") update.concluida_em = new Date().toISOString();
     if (field === "status" && value !== "concluida") update.concluida_em = null;
@@ -145,6 +147,24 @@ export default function DemandasSolicitadas() {
     }
     if (selected && selected.id === id) setSelected({ ...selected, ...update });
     setDemandas((prev) => prev.map((d) => (d.id === id ? { ...d, ...update } : d)));
+
+    // Notificar solicitante quando status muda
+    if (field === "status" && statusAnterior !== value) {
+      try {
+        await supabase.functions.invoke("notificar-status-demanda", {
+          body: {
+            demanda_id: id,
+            status_novo: value,
+            status_anterior: statusAnterior || null,
+            alterado_por: "marketing",
+            observacao: observacao || null,
+          },
+        });
+        toast({ title: "Solicitante notificado", description: "Email de atualização enviado." });
+      } catch (e: any) {
+        console.error("notificar-status-demanda failed", e);
+      }
+    }
   };
 
   const handleRespPresetChange = (value: string) => {
