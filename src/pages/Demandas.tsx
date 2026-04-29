@@ -53,6 +53,11 @@ export default function Demandas() {
   const [trackResult, setTrackResult] = useState<any | null>(null);
   const [trackError, setTrackError] = useState<string>("");
   const [trackHistory, setTrackHistory] = useState<any[]>([]);
+  const [trackComentarios, setTrackComentarios] = useState<any[]>([]);
+  const [novoCmt, setNovoCmt] = useState("");
+  const [enviandoCmt, setEnviandoCmt] = useState(false);
+  const cmtFileRef = useRef<HTMLInputElement>(null);
+  const [cmtFiles, setCmtFiles] = useState<File[]>([]);
 
   const STATUS_INFO: Record<string, { label: string; color: string; desc: string }> = {
     nova: { label: "Na fila", color: "bg-blue-100 text-blue-800 border-blue-200", desc: "Sua demanda está na fila e será iniciada em breve." },
