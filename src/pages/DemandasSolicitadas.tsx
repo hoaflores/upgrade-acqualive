@@ -380,6 +380,12 @@ export default function DemandasSolicitadas() {
                       <div><span className="text-slate-500">Solicitante:</span> <strong>{selected.solicitante}</strong></div>
                       <div><span className="text-slate-500">Email:</span> {selected.solicitante_email}</div>
                       <div><span className="text-slate-500">Tipo:</span> {TIPO_LABEL[selected.tipo]}</div>
+                      <div>
+                        <span className="text-slate-500">Frequência:</span>{" "}
+                        <Badge className={(selected.frequencia || "individual") === "recorrente" ? "bg-purple-100 text-purple-800" : "bg-slate-100 text-slate-700"}>
+                          {(selected.frequencia || "individual") === "recorrente" ? "Recorrente" : "Individual"}
+                        </Badge>
+                      </div>
                       <div><span className="text-slate-500">Prazo esperado:</span> {new Date(selected.prazo_esperado + "T00:00:00").toLocaleDateString("pt-BR")}</div>
                       <div><span className="text-slate-500">Estimativa interna:</span> {selected.prazo_estimado_dias} dias</div>
                       <div><span className="text-slate-500">Criada em:</span> {new Date(selected.created_at).toLocaleString("pt-BR")}</div>
