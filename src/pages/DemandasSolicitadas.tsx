@@ -383,6 +383,10 @@ export default function DemandasSolicitadas() {
                 <h1 className="text-xl font-bold text-slate-900">Painel de Demandas</h1>
               </div>
               <div className="flex gap-2 items-center">
+                <div className={`flex items-center gap-1.5 text-xs px-2 py-1 rounded-full border ${realtimeOn ? "bg-emerald-50 text-emerald-700 border-emerald-200" : "bg-slate-50 text-slate-500 border-slate-200"}`} title={realtimeOn ? "Atualizações em tempo real ativas" : "Sem conexão realtime"}>
+                  {realtimeOn ? <Wifi className="w-3 h-3" /> : <WifiOff className="w-3 h-3" />}
+                  <span className="font-medium">{realtimeOn ? "Ao vivo" : "Offline"}</span>
+                </div>
                 <div className="flex rounded-lg border bg-white p-1">
                   <button
                     onClick={() => setView("kanban")}
