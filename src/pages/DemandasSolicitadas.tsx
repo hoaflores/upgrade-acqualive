@@ -627,102 +627,114 @@ export default function DemandasSolicitadas() {
                     </DialogTitle>
                   </DialogHeader>
 
-                  <div className="space-y-5">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                      <div>
-                        <Label className="text-xs">Status</Label>
-                        <Select value={selected.status} onValueChange={(v) => updateField("status", v)}>
-                          <SelectTrigger><SelectValue /></SelectTrigger>
-                          <SelectContent>
-                            {STATUS_OPTIONS.map((s) => <SelectItem key={s.value} value={s.value}>{s.label}</SelectItem>)}
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div>
-                        <Label className="text-xs">Prioridade</Label>
-                        <Select value={selected.prioridade} onValueChange={(v) => updateField("prioridade", v)}>
-                          <SelectTrigger><SelectValue /></SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="baixa">Baixa</SelectItem>
-                            <SelectItem value="media">Média</SelectItem>
-                            <SelectItem value="alta">Alta</SelectItem>
-                            <SelectItem value="urgente">Urgente</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div>
-                        <Label className="text-xs">Atribuir a</Label>
-                        <Select
-                          value={respMode === "outro" ? "Outro" : (selected.responsavel || "")}
-                          onValueChange={handleRespPresetChange}
-                        >
-                          <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
-                          <SelectContent>
-                            {RESPONSAVEL_OPTIONS.map((r) => <SelectItem key={r} value={r}>{r}</SelectItem>)}
-                          </SelectContent>
-                        </Select>
-                        {respMode === "outro" && (
-                          <Input
-                            className="mt-2"
-                            value={respOutroValue}
-                            onChange={(e) => setRespOutroValue(e.target.value)}
-                            onBlur={(e) => {
-                              const v = e.target.value.trim();
-                              if (v) updateField("responsavel", v);
-                            }}
-                            placeholder="Nome do responsável"
-                          />
-                        )}
-                      </div>
-                    </div>
+                  <Tabs defaultValue="detalhes" className="w-full">
+                    <TabsList className="grid grid-cols-3 w-full">
+                      <TabsTrigger value="detalhes">Detalhes</TabsTrigger>
+                      <TabsTrigger value="comentarios">Comentários ({comentarios.length})</TabsTrigger>
+                      <TabsTrigger value="historico">Histórico ({atividades.length})</TabsTrigger>
+                    </TabsList>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
-                      <div><span className="text-slate-500">Solicitante:</span> <strong>{selected.solicitante}</strong></div>
-                      <div><span className="text-slate-500">Email:</span> {selected.solicitante_email}</div>
-                      <div><span className="text-slate-500">Tipo:</span> {TIPO_LABEL[selected.tipo]}</div>
-                      <div>
-                        <span className="text-slate-500">Frequência:</span>{" "}
-                        <Badge className={(selected.frequencia || "individual") === "recorrente" ? "bg-purple-100 text-purple-800" : "bg-slate-100 text-slate-700"}>
-                          {(selected.frequencia || "individual") === "recorrente" ? "Recorrente" : "Individual"}
-                        </Badge>
-                      </div>
-                      <div><span className="text-slate-500">Prazo esperado:</span> {new Date(selected.prazo_esperado + "T00:00:00").toLocaleDateString("pt-BR")}</div>
-                      <div><span className="text-slate-500">Estimativa interna:</span> {selected.prazo_estimado_dias} dias</div>
-                      <div><span className="text-slate-500">Criada em:</span> {new Date(selected.created_at).toLocaleString("pt-BR")}</div>
-                    </div>
-
-                    <div>
-                      <Label className="text-xs">Briefing</Label>
-                      <div className="bg-slate-50 rounded p-3 text-sm whitespace-pre-wrap">{selected.briefing}</div>
-                    </div>
-
-                    {selected.links_referencia && (
-                      <div>
-                        <Label className="text-xs">Links de referência</Label>
-                        <div className="bg-slate-50 rounded p-3 text-sm whitespace-pre-wrap">{selected.links_referencia}</div>
-                      </div>
-                    )}
-
-                    {anexos.length > 0 && (
-                      <div>
-                        <Label className="text-xs flex items-center gap-1"><Paperclip className="w-3 h-3" /> Anexos ({anexos.length})</Label>
-                        <div className="space-y-1 mt-2">
-                          {anexos.map((a) => {
-                            const url = supabase.storage.from("demandas-anexos").getPublicUrl(a.storage_path).data.publicUrl;
-                            return (
-                              <a key={a.id} href={url} target="_blank" rel="noopener" className="flex items-center gap-2 text-sm text-blue-600 hover:underline">
-                                <ExternalLink className="w-3 h-3" /> {a.nome_arquivo}
-                              </a>
-                            );
-                          })}
+                    <TabsContent value="detalhes" className="space-y-5 pt-4">
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                        <div>
+                          <Label className="text-xs">Status</Label>
+                          <Select value={selected.status} onValueChange={(v) => updateField("status", v)}>
+                            <SelectTrigger><SelectValue /></SelectTrigger>
+                            <SelectContent>
+                              {STATUS_OPTIONS.map((s) => <SelectItem key={s.value} value={s.value}>{s.label}</SelectItem>)}
+                            </SelectContent>
+                          </Select>
+                        </div>
+                        <div>
+                          <Label className="text-xs">Prioridade</Label>
+                          <Select value={selected.prioridade} onValueChange={(v) => updateField("prioridade", v)}>
+                            <SelectTrigger><SelectValue /></SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="baixa">Baixa</SelectItem>
+                              <SelectItem value="media">Média</SelectItem>
+                              <SelectItem value="alta">Alta</SelectItem>
+                              <SelectItem value="urgente">Urgente</SelectItem>
+                            </SelectContent>
+                          </Select>
+                        </div>
+                        <div>
+                          <Label className="text-xs">Atribuir a</Label>
+                          <Select
+                            value={respMode === "outro" ? "Outro" : (selected.responsavel || "")}
+                            onValueChange={handleRespPresetChange}
+                          >
+                            <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
+                            <SelectContent>
+                              {RESPONSAVEL_OPTIONS.map((r) => <SelectItem key={r} value={r}>{r}</SelectItem>)}
+                            </SelectContent>
+                          </Select>
+                          {respMode === "outro" && (
+                            <Input
+                              className="mt-2"
+                              value={respOutroValue}
+                              onChange={(e) => setRespOutroValue(e.target.value)}
+                              onBlur={(e) => {
+                                const v = e.target.value.trim();
+                                if (v) updateField("responsavel", v);
+                              }}
+                              placeholder="Nome do responsável"
+                            />
+                          )}
                         </div>
                       </div>
-                    )}
 
-                    <div>
-                      <Label className="text-xs flex items-center gap-1"><MessageSquare className="w-3 h-3" /> Comentários ({comentarios.length})</Label>
-                      <div className="space-y-2 mt-2 max-h-48 overflow-y-auto">
-                        {comentarios.map((c) => (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <div><span className="text-slate-500">Solicitante:</span> <strong>{selected.solicitante}</strong></div>
+                        <div><span className="text-slate-500">Email:</span> {selected.solicitante_email}</div>
+                        <div><span className="text-slate-500">Tipo:</span> {TIPO_LABEL[selected.tipo]}</div>
+                        <div>
+                          <span className="text-slate-500">Frequência:</span>{" "}
+                          <Badge className={(selected.frequencia || "individual") === "recorrente" ? "bg-purple-100 text-purple-800" : "bg-slate-100 text-slate-700"}>
+                            {(selected.frequencia || "individual") === "recorrente" ? "Recorrente" : "Individual"}
+                          </Badge>
+                        </div>
+                        <div className={isAtrasada(selected) ? "text-red-600 font-semibold" : ""}>
+                          <span className="text-slate-500 font-normal">Prazo esperado:</span> {new Date(selected.prazo_esperado + "T00:00:00").toLocaleDateString("pt-BR")}
+                          {isAtrasada(selected) && <Badge className="ml-2 bg-red-100 text-red-700 border-red-200">Atrasada</Badge>}
+                        </div>
+                        <div><span className="text-slate-500">Estimativa interna:</span> {selected.prazo_estimado_dias} dias</div>
+                        <div><span className="text-slate-500">Criada em:</span> {new Date(selected.created_at).toLocaleString("pt-BR")}</div>
+                      </div>
+
+                      <div>
+                        <Label className="text-xs">Briefing</Label>
+                        <div className="bg-slate-50 rounded p-3 text-sm whitespace-pre-wrap">{selected.briefing}</div>
+                      </div>
+
+                      {selected.links_referencia && (
+                        <div>
+                          <Label className="text-xs">Links de referência</Label>
+                          <div className="bg-slate-50 rounded p-3 text-sm whitespace-pre-wrap">{selected.links_referencia}</div>
+                        </div>
+                      )}
+
+                      {anexos.length > 0 && (
+                        <div>
+                          <Label className="text-xs flex items-center gap-1"><Paperclip className="w-3 h-3" /> Anexos ({anexos.length})</Label>
+                          <div className="space-y-1 mt-2">
+                            {anexos.map((a) => {
+                              const url = supabase.storage.from("demandas-anexos").getPublicUrl(a.storage_path).data.publicUrl;
+                              return (
+                                <a key={a.id} href={url} target="_blank" rel="noopener" className="flex items-center gap-2 text-sm text-blue-600 hover:underline">
+                                  <ExternalLink className="w-3 h-3" /> {a.nome_arquivo}
+                                </a>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
+                    </TabsContent>
+
+                    <TabsContent value="comentarios" className="pt-4">
+                      <div className="space-y-2 max-h-72 overflow-y-auto">
+                        {comentarios.length === 0 ? (
+                          <p className="text-sm text-slate-500 italic text-center py-6">Sem comentários ainda.</p>
+                        ) : comentarios.map((c) => (
                           <div key={c.id} className="bg-slate-50 rounded p-3 text-sm">
                             <div className="flex justify-between text-xs text-slate-500 mb-1">
                               <strong>{c.autor}</strong>
@@ -732,13 +744,54 @@ export default function DemandasSolicitadas() {
                           </div>
                         ))}
                       </div>
-                      <div className="mt-3 space-y-2">
+                      <div className="mt-4 space-y-2 border-t pt-4">
                         <Input placeholder="Seu nome" value={autorComentario} onChange={(e) => setAutorComentario(e.target.value)} />
-                        <Textarea placeholder="Adicionar comentário..." value={novoComentario} onChange={(e) => setNovoComentario(e.target.value)} rows={2} />
-                        <Button size="sm" onClick={addComentario} disabled={!novoComentario.trim() || !autorComentario.trim()}>Adicionar</Button>
+                        <Textarea placeholder="Adicionar comentário..." value={novoComentario} onChange={(e) => setNovoComentario(e.target.value)} rows={3} />
+                        <div className="flex items-center justify-between">
+                          <label className="flex items-center gap-2 text-xs text-slate-600">
+                            <Switch checked={notificarComentario} onCheckedChange={setNotificarComentario} />
+                            Notificar solicitante por email
+                          </label>
+                          <Button size="sm" onClick={addComentario} disabled={!novoComentario.trim() || !autorComentario.trim()}>
+                            Enviar comentário
+                          </Button>
+                        </div>
                       </div>
-                    </div>
-                  </div>
+                    </TabsContent>
+
+                    <TabsContent value="historico" className="pt-4">
+                      <div className="flex items-center gap-2 text-xs text-slate-500 mb-3">
+                        <Activity className="w-3 h-3" /> Todas as alterações registradas
+                      </div>
+                      {atividades.length === 0 ? (
+                        <p className="text-sm text-slate-500 italic text-center py-6">Sem atividades registradas.</p>
+                      ) : (
+                        <ol className="relative border-l-2 border-slate-200 ml-2 space-y-3">
+                          {atividades.map((a) => (
+                            <li key={a.id} className="ml-4">
+                              <span className="absolute -left-[7px] w-3 h-3 rounded-full bg-slate-400 border-2 border-white" />
+                              <div className="text-xs text-slate-500">{new Date(a.created_at).toLocaleString("pt-BR")} · <strong>{a.autor || "—"}</strong></div>
+                              <div className="text-sm text-slate-800 mt-0.5">
+                                {a.tipo === "comentario_adicionado" ? (
+                                  <>💬 Comentou: <em className="text-slate-600">"{a.detalhes}"</em></>
+                                ) : a.tipo === "campo_alterado" ? (
+                                  <>
+                                    <span className="font-medium capitalize">{a.campo?.replace("_", " ")}</span>{" "}
+                                    {a.valor_anterior ? <><span className="text-slate-400 line-through">{a.valor_anterior}</span> → </> : ""}
+                                    <span className="text-slate-900 font-medium">{a.valor_novo || "—"}</span>
+                                  </>
+                                ) : a.tipo === "comentario_solicitante" ? (
+                                  <>📨 Solicitante comentou: <em className="text-slate-600">"{a.detalhes}"</em></>
+                                ) : (
+                                  <>{a.tipo} {a.detalhes}</>
+                                )}
+                              </div>
+                            </li>
+                          ))}
+                        </ol>
+                      )}
+                    </TabsContent>
+                  </Tabs>
                 </>
               )}
             </DialogContent>
