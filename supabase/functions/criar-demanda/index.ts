@@ -206,6 +206,7 @@ Deno.serve(async (req) => {
         prazo_esperado: body.prazo_esperado,
         prazo_estimado_dias: prazoEstimado,
         prioridade: body.prioridade || "media",
+        frequencia: body.frequencia === "recorrente" ? "recorrente" : "individual",
       })
       .select()
       .single();
@@ -241,6 +242,7 @@ Deno.serve(async (req) => {
       demanda.prazo_esperado,
       demanda.prazo_estimado_dias,
       demanda.prioridade,
+      demanda.frequencia === "recorrente" ? "Recorrente" : "Individual",
       demanda.status,
       anexosUrls.join(" | "),
     ]).catch((e) => console.error("sheet error", e));
