@@ -306,7 +306,14 @@ export default function DemandasSolicitadas() {
                           <td className="px-4 py-3 font-mono text-xs font-bold">{d.protocolo}</td>
                           <td className="px-4 py-3 font-medium max-w-xs truncate">{d.titulo}</td>
                           <td className="px-4 py-3 text-slate-600">{d.solicitante}</td>
-                          <td className="px-4 py-3"><Badge variant="outline">{TIPO_LABEL[d.tipo] || d.tipo}</Badge></td>
+                          <td className="px-4 py-3">
+                            <Badge variant="outline" className="gap-1">
+                              {TIPO_LABEL[d.tipo] || d.tipo}
+                              {(d.frequencia || "individual") === "recorrente" && (
+                                <span className="ml-1 text-[10px] uppercase tracking-wide text-purple-700">↻ rec.</span>
+                              )}
+                            </Badge>
+                          </td>
                           <td className="px-4 py-3"><Badge className={PRIORIDADE_COLOR[d.prioridade]}>{d.prioridade}</Badge></td>
                           <td className={`px-4 py-3 ${isAtrasada(d) ? "text-red-600 font-semibold" : ""}`}>
                             {new Date(d.prazo_esperado + "T00:00:00").toLocaleDateString("pt-BR")}
