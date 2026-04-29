@@ -207,7 +207,6 @@ export default function Demandas() {
               </div>
 
               <div>
-              <div>
                 <Label>Esta solicitação é *</Label>
                 <div className="grid grid-cols-2 gap-2 mt-2">
                   {[
