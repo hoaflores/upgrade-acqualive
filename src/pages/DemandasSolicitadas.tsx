@@ -194,7 +194,8 @@ export default function DemandasSolicitadas() {
     const id = targetId || selected?.id;
     if (!id) return;
     const current = demandas.find((d) => d.id === id);
-    const statusAnterior = current?.status;
+    const valorAnterior = current ? current[field] : null;
+    if (valorAnterior === value) return;
     const update: any = { [field]: value };
     if (field === "status" && value === "concluida") update.concluida_em = new Date().toISOString();
     if (field === "status" && value !== "concluida") update.concluida_em = null;
@@ -206,14 +207,17 @@ export default function DemandasSolicitadas() {
     if (selected && selected.id === id) setSelected({ ...selected, ...update });
     setDemandas((prev) => prev.map((d) => (d.id === id ? { ...d, ...update } : d)));
 
+    // Histórico geral de atividades
+    await logAtividade(id, "campo_alterado", field, valorAnterior, value, observacao);
+
     // Notificar solicitante quando status muda
-    if (field === "status" && statusAnterior !== value) {
+    if (field === "status") {
       try {
         await supabase.functions.invoke("notificar-status-demanda", {
           body: {
             demanda_id: id,
             status_novo: value,
-            status_anterior: statusAnterior || null,
+            status_anterior: valorAnterior || null,
             alterado_por: "marketing",
             observacao: observacao || null,
           },
@@ -229,7 +233,6 @@ export default function DemandasSolicitadas() {
     if (value === "Outro") {
       setRespMode("outro");
       setRespOutroValue("");
-      // não atualiza ainda — espera digitar
     } else {
       setRespMode("preset");
       setRespOutroValue("");
@@ -248,8 +251,20 @@ export default function DemandasSolicitadas() {
       toast({ title: "Erro", variant: "destructive" });
       return;
     }
-    setComentarios([...comentarios, data]);
+    setComentarios((prev) => (prev.find((c) => c.id === data.id) ? prev : [...prev, data]));
+    await logAtividade(selected.id, "comentario_adicionado", null, null, autorComentario.trim(), novoComentario.trim().slice(0, 200));
     setNovoComentario("");
+
+    if (notificarComentario) {
+      try {
+        await supabase.functions.invoke("notificar-comentario", {
+          body: { demanda_id: selected.id, autor: autorComentario.trim(), texto: novoComentario.trim() },
+        });
+        toast({ title: "Solicitante notificado", description: "Email de novo comentário enviado." });
+      } catch (e) {
+        console.error("notificar-comentario failed", e);
+      }
+    }
   };
 
   const filtered = useMemo(() => {
