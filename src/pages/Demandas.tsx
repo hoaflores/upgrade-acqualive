@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card } from "@/components/ui/card";
 import { toast } from "@/hooks/use-toast";
-import { Loader2, Upload, X, CheckCircle2, FileText, Image as ImageIcon, Video, Layout, Sparkles } from "lucide-react";
+import { Loader2, Upload, X, CheckCircle2, FileText, Image as ImageIcon, Video, Layout, Sparkles, Eye, EyeOff } from "lucide-react";
 
 const SOLICITANTE_PASSWORD = "Acqualive!@#";
 
@@ -24,6 +24,7 @@ export default function Demandas() {
   const [auth, setAuth] = useState(false);
   const [loginUser, setLoginUser] = useState("");
   const [loginPass, setLoginPass] = useState("");
+  const [showPass, setShowPass] = useState(false);
   const [submitted, setSubmitted] = useState<{ protocolo: string } | null>(null);
   const [loading, setLoading] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
