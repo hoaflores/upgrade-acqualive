@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card } from "@/components/ui/card";
 import { toast } from "@/hooks/use-toast";
-import { Loader2, Upload, X, CheckCircle2, FileText, Image as ImageIcon, Video, Layout, Sparkles, Eye, EyeOff, Search, Clock, AlertCircle, MessageSquare } from "lucide-react";
+import { Loader2, Upload, X, CheckCircle2, FileText, Image as ImageIcon, Video, Layout, Sparkles, Eye, EyeOff, Search, Clock, AlertCircle, MessageSquare, Send, Paperclip, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const SOLICITANTE_PASSWORD = "Acqualive!@#";
@@ -53,6 +53,11 @@ export default function Demandas() {
   const [trackResult, setTrackResult] = useState<any | null>(null);
   const [trackError, setTrackError] = useState<string>("");
   const [trackHistory, setTrackHistory] = useState<any[]>([]);
+  const [trackComentarios, setTrackComentarios] = useState<any[]>([]);
+  const [novoCmt, setNovoCmt] = useState("");
+  const [enviandoCmt, setEnviandoCmt] = useState(false);
+  const cmtFileRef = useRef<HTMLInputElement>(null);
+  const [cmtFiles, setCmtFiles] = useState<File[]>([]);
 
   const STATUS_INFO: Record<string, { label: string; color: string; desc: string }> = {
     nova: { label: "Na fila", color: "bg-blue-100 text-blue-800 border-blue-200", desc: "Sua demanda está na fila e será iniciada em breve." },
@@ -90,16 +95,80 @@ export default function Demandas() {
         return;
       }
       setTrackResult(data);
-      const { data: hist } = await supabase
-        .from("demanda_status_log")
-        .select("*")
-        .eq("demanda_id", data.id)
-        .order("created_at", { ascending: false });
+      const [{ data: hist }, { data: cmts }] = await Promise.all([
+        supabase.from("demanda_status_log").select("*").eq("demanda_id", data.id).order("created_at", { ascending: false }),
+        supabase.from("demanda_comentarios").select("*").eq("demanda_id", data.id).order("created_at"),
+      ]);
       setTrackHistory(hist || []);
+      setTrackComentarios(cmts || []);
     } catch (err: any) {
       setTrackError(err.message || "Erro ao consultar.");
     } finally {
       setTrackLoading(false);
+    }
+  };
+
+  // Realtime: atualiza status, histórico e comentários para o solicitante
+  useEffect(() => {
+    if (!trackResult?.id) return;
+    const id = trackResult.id;
+    const ch = supabase
+      .channel(`track-${id}`)
+      .on("postgres_changes", { event: "UPDATE", schema: "public", table: "demandas", filter: `id=eq.${id}` },
+        (p) => setTrackResult((cur: any) => (cur ? { ...cur, ...(p.new as any) } : cur)))
+      .on("postgres_changes", { event: "INSERT", schema: "public", table: "demanda_status_log", filter: `demanda_id=eq.${id}` },
+        (p) => setTrackHistory((prev) => (prev.find((h) => h.id === (p.new as any).id) ? prev : [p.new as any, ...prev])))
+      .on("postgres_changes", { event: "INSERT", schema: "public", table: "demanda_comentarios", filter: `demanda_id=eq.${id}` },
+        (p) => setTrackComentarios((prev) => (prev.find((c) => c.id === (p.new as any).id) ? prev : [...prev, p.new as any])))
+      .subscribe();
+    return () => { supabase.removeChannel(ch); };
+  }, [trackResult?.id]);
+
+  const enviarComentarioSolicitante = async () => {
+    if (!trackResult || (!novoCmt.trim() && cmtFiles.length === 0)) return;
+    setEnviandoCmt(true);
+    try {
+      // Upload anexos
+      for (const f of cmtFiles) {
+        const path = `${Date.now()}-${Math.random().toString(36).slice(2)}-${f.name.replace(/[^\w.-]/g, "_")}`;
+        const { error: upErr } = await supabase.storage.from("demandas-anexos").upload(path, f);
+        if (upErr) throw upErr;
+        await supabase.from("demanda_anexos").insert({
+          demanda_id: trackResult.id,
+          storage_path: path,
+          nome_arquivo: f.name,
+          tipo_mime: f.type,
+          tamanho_bytes: f.size,
+        });
+      }
+      const texto = novoCmt.trim();
+      if (texto) {
+        await supabase.from("demanda_comentarios").insert({
+          demanda_id: trackResult.id,
+          autor: trackResult.solicitante,
+          texto,
+        });
+        await supabase.from("demanda_atividades").insert({
+          demanda_id: trackResult.id,
+          tipo: "comentario_solicitante",
+          autor: trackResult.solicitante,
+          detalhes: texto.slice(0, 200),
+        });
+      } else if (cmtFiles.length > 0) {
+        await supabase.from("demanda_atividades").insert({
+          demanda_id: trackResult.id,
+          tipo: "anexo_solicitante",
+          autor: trackResult.solicitante,
+          detalhes: `${cmtFiles.length} arquivo(s) adicionado(s)`,
+        });
+      }
+      setNovoCmt("");
+      setCmtFiles([]);
+      toast({ title: "Enviado", description: "O time recebeu sua atualização." });
+    } catch (err: any) {
+      toast({ title: "Erro", description: err.message, variant: "destructive" });
+    } finally {
+      setEnviandoCmt(false);
     }
   };
 
@@ -220,7 +289,7 @@ export default function Demandas() {
             <form onSubmit={consultarProtocolo} className="grid sm:grid-cols-[1fr_1fr_auto] gap-3 items-end">
               <div>
                 <Label className="text-xs">Protocolo</Label>
-                <Input value={trackProtocolo} onChange={(e) => setTrackProtocolo(e.target.value)} placeholder="DEM-2026-001" />
+                <Input value={trackProtocolo} onChange={(e) => setTrackProtocolo(e.target.value)} placeholder="DEM-2026-XXXXXXXX" />
               </div>
               <div>
                 <Label className="text-xs">Email do solicitante</Label>
@@ -288,6 +357,65 @@ export default function Demandas() {
                       ))}
                     </ol>
                   )}
+                </div>
+
+                {/* Comentários (conversa com o time) */}
+                <div className="border-t pt-4">
+                  <div className="text-xs uppercase tracking-wide text-slate-500 mb-2 flex items-center gap-1">
+                    <MessageSquare className="w-3 h-3" /> Conversa com o time ({trackComentarios.length})
+                  </div>
+                  <div className="space-y-2 max-h-64 overflow-y-auto mb-3">
+                    {trackComentarios.length === 0 ? (
+                      <p className="text-sm text-slate-500 italic">Nenhum comentário ainda. Use o campo abaixo para enviar uma mensagem ao time.</p>
+                    ) : trackComentarios.map((c) => {
+                      const meu = c.autor === trackResult.solicitante;
+                      return (
+                        <div key={c.id} className={`rounded p-3 text-sm border ${meu ? "bg-blue-50 border-blue-200 ml-8" : "bg-slate-50 border-slate-200 mr-8"}`}>
+                          <div className="flex justify-between text-xs text-slate-500 mb-1">
+                            <strong>{meu ? "Você" : c.autor}</strong>
+                            <span>{new Date(c.created_at).toLocaleString("pt-BR")}</span>
+                          </div>
+                          <div className="whitespace-pre-wrap text-slate-800">{c.texto}</div>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Textarea
+                      placeholder="Escreva uma mensagem para o time..."
+                      value={novoCmt}
+                      onChange={(e) => setNovoCmt(e.target.value)}
+                      rows={3}
+                    />
+                    <input ref={cmtFileRef} type="file" multiple onChange={(e) => setCmtFiles((p) => [...p, ...Array.from(e.target.files || [])].slice(0, 5))} className="hidden" />
+                    {cmtFiles.length > 0 && (
+                      <div className="space-y-1">
+                        {cmtFiles.map((f, i) => (
+                          <div key={i} className="flex items-center justify-between bg-slate-50 rounded p-2 text-xs">
+                            <span className="truncate flex items-center gap-1"><Paperclip className="w-3 h-3" /> {f.name}</span>
+                            <button type="button" onClick={() => setCmtFiles((p) => p.filter((_, idx) => idx !== i))} className="text-slate-500 hover:text-red-500">
+                              <X className="w-3 h-3" />
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    <div className="flex gap-2">
+                      <Button type="button" variant="outline" size="sm" onClick={() => cmtFileRef.current?.click()} className="gap-1">
+                        <Paperclip className="w-3 h-3" /> Anexar
+                      </Button>
+                      <Button
+                        type="button"
+                        size="sm"
+                        onClick={enviarComentarioSolicitante}
+                        disabled={enviandoCmt || (!novoCmt.trim() && cmtFiles.length === 0)}
+                        className="gap-1 flex-1"
+                      >
+                        {enviandoCmt ? <Loader2 className="w-3 h-3 animate-spin" /> : <Send className="w-3 h-3" />} Enviar
+                      </Button>
+                    </div>
+                  </div>
                 </div>
               </div>
             )}

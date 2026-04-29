@@ -10,7 +10,9 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { toast } from "@/hooks/use-toast";
-import { Loader2, Search, Clock, AlertCircle, CheckCircle2, TrendingUp, ListChecks, Paperclip, MessageSquare, ExternalLink, Eye, EyeOff, LayoutGrid, Table as TableIcon, User } from "lucide-react";
+import { Loader2, Search, Clock, AlertCircle, CheckCircle2, TrendingUp, ListChecks, Paperclip, MessageSquare, ExternalLink, Eye, EyeOff, LayoutGrid, Table as TableIcon, User, Activity, Wifi, WifiOff } from "lucide-react";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Switch } from "@/components/ui/switch";
 
 const ADMIN_USER = "marketing";
 const ADMIN_PASSWORD = "AcqualiveTerracota123!";
@@ -87,12 +89,15 @@ export default function DemandasSolicitadas() {
   const [selected, setSelected] = useState<any | null>(null);
   const [comentarios, setComentarios] = useState<any[]>([]);
   const [anexos, setAnexos] = useState<any[]>([]);
+  const [atividades, setAtividades] = useState<any[]>([]);
   const [novoComentario, setNovoComentario] = useState("");
   const [autorComentario, setAutorComentario] = useState("");
+  const [notificarComentario, setNotificarComentario] = useState(true);
   const [respMode, setRespMode] = useState<"preset" | "outro">("preset");
   const [respOutroValue, setRespOutroValue] = useState("");
   const [draggingId, setDraggingId] = useState<string | null>(null);
   const [dragOverCol, setDragOverCol] = useState<string | null>(null);
+  const [realtimeOn, setRealtimeOn] = useState(false);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -124,19 +129,73 @@ export default function DemandasSolicitadas() {
       setRespMode("preset");
       setRespOutroValue("");
     }
-    const [c, a] = await Promise.all([
+    const [c, a, ats] = await Promise.all([
       supabase.from("demanda_comentarios").select("*").eq("demanda_id", d.id).order("created_at"),
       supabase.from("demanda_anexos").select("*").eq("demanda_id", d.id),
+      supabase.from("demanda_atividades").select("*").eq("demanda_id", d.id).order("created_at", { ascending: false }),
     ]);
     setComentarios(c.data || []);
     setAnexos(a.data || []);
+    setAtividades(ats.data || []);
+  };
+
+  // Realtime: sincroniza demandas para todo o time
+  useEffect(() => {
+    if (!auth) return;
+    const ch = supabase
+      .channel("demandas-realtime")
+      .on("postgres_changes", { event: "*", schema: "public", table: "demandas" }, (payload) => {
+        setRealtimeOn(true);
+        if (payload.eventType === "INSERT") {
+          setDemandas((prev) => (prev.find((x) => x.id === (payload.new as any).id) ? prev : [payload.new as any, ...prev]));
+        } else if (payload.eventType === "UPDATE") {
+          setDemandas((prev) => prev.map((d) => (d.id === (payload.new as any).id ? { ...d, ...(payload.new as any) } : d)));
+          setSelected((cur: any) => (cur && cur.id === (payload.new as any).id ? { ...cur, ...(payload.new as any) } : cur));
+        } else if (payload.eventType === "DELETE") {
+          setDemandas((prev) => prev.filter((d) => d.id !== (payload.old as any).id));
+        }
+      })
+      .on("postgres_changes", { event: "INSERT", schema: "public", table: "demanda_comentarios" }, (payload) => {
+        setSelected((cur: any) => {
+          if (cur && (payload.new as any).demanda_id === cur.id) {
+            setComentarios((prev) => (prev.find((c) => c.id === (payload.new as any).id) ? prev : [...prev, payload.new as any]));
+          }
+          return cur;
+        });
+      })
+      .on("postgres_changes", { event: "INSERT", schema: "public", table: "demanda_atividades" }, (payload) => {
+        setSelected((cur: any) => {
+          if (cur && (payload.new as any).demanda_id === cur.id) {
+            setAtividades((prev) => (prev.find((a) => a.id === (payload.new as any).id) ? prev : [payload.new as any, ...prev]));
+          }
+          return cur;
+        });
+      })
+      .subscribe((status) => {
+        if (status === "SUBSCRIBED") setRealtimeOn(true);
+        if (status === "CHANNEL_ERROR" || status === "CLOSED") setRealtimeOn(false);
+      });
+    return () => { supabase.removeChannel(ch); };
+  }, [auth]);
+
+  const logAtividade = async (demanda_id: string, tipo: string, campo: string | null, valor_anterior: any, valor_novo: any, detalhes?: string) => {
+    await supabase.from("demanda_atividades").insert({
+      demanda_id,
+      tipo,
+      campo,
+      valor_anterior: valor_anterior == null ? null : String(valor_anterior),
+      valor_novo: valor_novo == null ? null : String(valor_novo),
+      autor: "marketing",
+      detalhes: detalhes || null,
+    });
   };
 
   const updateField = async (field: string, value: any, targetId?: string, observacao?: string) => {
     const id = targetId || selected?.id;
     if (!id) return;
     const current = demandas.find((d) => d.id === id);
-    const statusAnterior = current?.status;
+    const valorAnterior = current ? current[field] : null;
+    if (valorAnterior === value) return;
     const update: any = { [field]: value };
     if (field === "status" && value === "concluida") update.concluida_em = new Date().toISOString();
     if (field === "status" && value !== "concluida") update.concluida_em = null;
@@ -148,14 +207,17 @@ export default function DemandasSolicitadas() {
     if (selected && selected.id === id) setSelected({ ...selected, ...update });
     setDemandas((prev) => prev.map((d) => (d.id === id ? { ...d, ...update } : d)));
 
+    // Histórico geral de atividades
+    await logAtividade(id, "campo_alterado", field, valorAnterior, value, observacao);
+
     // Notificar solicitante quando status muda
-    if (field === "status" && statusAnterior !== value) {
+    if (field === "status") {
       try {
         await supabase.functions.invoke("notificar-status-demanda", {
           body: {
             demanda_id: id,
             status_novo: value,
-            status_anterior: statusAnterior || null,
+            status_anterior: valorAnterior || null,
             alterado_por: "marketing",
             observacao: observacao || null,
           },
@@ -171,7 +233,6 @@ export default function DemandasSolicitadas() {
     if (value === "Outro") {
       setRespMode("outro");
       setRespOutroValue("");
-      // não atualiza ainda — espera digitar
     } else {
       setRespMode("preset");
       setRespOutroValue("");
@@ -190,8 +251,20 @@ export default function DemandasSolicitadas() {
       toast({ title: "Erro", variant: "destructive" });
       return;
     }
-    setComentarios([...comentarios, data]);
+    setComentarios((prev) => (prev.find((c) => c.id === data.id) ? prev : [...prev, data]));
+    await logAtividade(selected.id, "comentario_adicionado", null, null, autorComentario.trim(), novoComentario.trim().slice(0, 200));
     setNovoComentario("");
+
+    if (notificarComentario) {
+      try {
+        await supabase.functions.invoke("notificar-comentario", {
+          body: { demanda_id: selected.id, autor: autorComentario.trim(), texto: novoComentario.trim() },
+        });
+        toast({ title: "Solicitante notificado", description: "Email de novo comentário enviado." });
+      } catch (e) {
+        console.error("notificar-comentario failed", e);
+      }
+    }
   };
 
   const filtered = useMemo(() => {
@@ -310,6 +383,10 @@ export default function DemandasSolicitadas() {
                 <h1 className="text-xl font-bold text-slate-900">Painel de Demandas</h1>
               </div>
               <div className="flex gap-2 items-center">
+                <div className={`flex items-center gap-1.5 text-xs px-2 py-1 rounded-full border ${realtimeOn ? "bg-emerald-50 text-emerald-700 border-emerald-200" : "bg-slate-50 text-slate-500 border-slate-200"}`} title={realtimeOn ? "Atualizações em tempo real ativas" : "Sem conexão realtime"}>
+                  {realtimeOn ? <Wifi className="w-3 h-3" /> : <WifiOff className="w-3 h-3" />}
+                  <span className="font-medium">{realtimeOn ? "Ao vivo" : "Offline"}</span>
+                </div>
                 <div className="flex rounded-lg border bg-white p-1">
                   <button
                     onClick={() => setView("kanban")}
@@ -449,7 +526,7 @@ export default function DemandasSolicitadas() {
                                 onDragStart={(e) => onDragStart(e, d.id)}
                                 onDragEnd={() => { setDraggingId(null); setDragOverCol(null); }}
                                 onClick={() => openDetail(d)}
-                                className={`bg-white rounded-lg shadow-sm hover:shadow-md cursor-pointer p-3 border-l-4 ${PRIORIDADE_BORDER[d.prioridade]} transition ${draggingId === d.id ? "opacity-40" : ""}`}
+                                className={`bg-white rounded-lg shadow-sm hover:shadow-md cursor-pointer p-3 border-l-4 ${PRIORIDADE_BORDER[d.prioridade]} transition ${draggingId === d.id ? "opacity-40" : ""} ${atrasada ? "ring-2 ring-red-400 bg-red-50/40" : ""}`}
                               >
                                 <div className="flex items-start justify-between gap-2 mb-1.5">
                                   <span className="font-mono text-[10px] font-bold text-slate-500">{d.protocolo}</span>
@@ -550,102 +627,114 @@ export default function DemandasSolicitadas() {
                     </DialogTitle>
                   </DialogHeader>
 
-                  <div className="space-y-5">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                      <div>
-                        <Label className="text-xs">Status</Label>
-                        <Select value={selected.status} onValueChange={(v) => updateField("status", v)}>
-                          <SelectTrigger><SelectValue /></SelectTrigger>
-                          <SelectContent>
-                            {STATUS_OPTIONS.map((s) => <SelectItem key={s.value} value={s.value}>{s.label}</SelectItem>)}
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div>
-                        <Label className="text-xs">Prioridade</Label>
-                        <Select value={selected.prioridade} onValueChange={(v) => updateField("prioridade", v)}>
-                          <SelectTrigger><SelectValue /></SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="baixa">Baixa</SelectItem>
-                            <SelectItem value="media">Média</SelectItem>
-                            <SelectItem value="alta">Alta</SelectItem>
-                            <SelectItem value="urgente">Urgente</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div>
-                        <Label className="text-xs">Atribuir a</Label>
-                        <Select
-                          value={respMode === "outro" ? "Outro" : (selected.responsavel || "")}
-                          onValueChange={handleRespPresetChange}
-                        >
-                          <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
-                          <SelectContent>
-                            {RESPONSAVEL_OPTIONS.map((r) => <SelectItem key={r} value={r}>{r}</SelectItem>)}
-                          </SelectContent>
-                        </Select>
-                        {respMode === "outro" && (
-                          <Input
-                            className="mt-2"
-                            value={respOutroValue}
-                            onChange={(e) => setRespOutroValue(e.target.value)}
-                            onBlur={(e) => {
-                              const v = e.target.value.trim();
-                              if (v) updateField("responsavel", v);
-                            }}
-                            placeholder="Nome do responsável"
-                          />
-                        )}
-                      </div>
-                    </div>
+                  <Tabs defaultValue="detalhes" className="w-full">
+                    <TabsList className="grid grid-cols-3 w-full">
+                      <TabsTrigger value="detalhes">Detalhes</TabsTrigger>
+                      <TabsTrigger value="comentarios">Comentários ({comentarios.length})</TabsTrigger>
+                      <TabsTrigger value="historico">Histórico ({atividades.length})</TabsTrigger>
+                    </TabsList>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
-                      <div><span className="text-slate-500">Solicitante:</span> <strong>{selected.solicitante}</strong></div>
-                      <div><span className="text-slate-500">Email:</span> {selected.solicitante_email}</div>
-                      <div><span className="text-slate-500">Tipo:</span> {TIPO_LABEL[selected.tipo]}</div>
-                      <div>
-                        <span className="text-slate-500">Frequência:</span>{" "}
-                        <Badge className={(selected.frequencia || "individual") === "recorrente" ? "bg-purple-100 text-purple-800" : "bg-slate-100 text-slate-700"}>
-                          {(selected.frequencia || "individual") === "recorrente" ? "Recorrente" : "Individual"}
-                        </Badge>
-                      </div>
-                      <div><span className="text-slate-500">Prazo esperado:</span> {new Date(selected.prazo_esperado + "T00:00:00").toLocaleDateString("pt-BR")}</div>
-                      <div><span className="text-slate-500">Estimativa interna:</span> {selected.prazo_estimado_dias} dias</div>
-                      <div><span className="text-slate-500">Criada em:</span> {new Date(selected.created_at).toLocaleString("pt-BR")}</div>
-                    </div>
-
-                    <div>
-                      <Label className="text-xs">Briefing</Label>
-                      <div className="bg-slate-50 rounded p-3 text-sm whitespace-pre-wrap">{selected.briefing}</div>
-                    </div>
-
-                    {selected.links_referencia && (
-                      <div>
-                        <Label className="text-xs">Links de referência</Label>
-                        <div className="bg-slate-50 rounded p-3 text-sm whitespace-pre-wrap">{selected.links_referencia}</div>
-                      </div>
-                    )}
-
-                    {anexos.length > 0 && (
-                      <div>
-                        <Label className="text-xs flex items-center gap-1"><Paperclip className="w-3 h-3" /> Anexos ({anexos.length})</Label>
-                        <div className="space-y-1 mt-2">
-                          {anexos.map((a) => {
-                            const url = supabase.storage.from("demandas-anexos").getPublicUrl(a.storage_path).data.publicUrl;
-                            return (
-                              <a key={a.id} href={url} target="_blank" rel="noopener" className="flex items-center gap-2 text-sm text-blue-600 hover:underline">
-                                <ExternalLink className="w-3 h-3" /> {a.nome_arquivo}
-                              </a>
-                            );
-                          })}
+                    <TabsContent value="detalhes" className="space-y-5 pt-4">
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                        <div>
+                          <Label className="text-xs">Status</Label>
+                          <Select value={selected.status} onValueChange={(v) => updateField("status", v)}>
+                            <SelectTrigger><SelectValue /></SelectTrigger>
+                            <SelectContent>
+                              {STATUS_OPTIONS.map((s) => <SelectItem key={s.value} value={s.value}>{s.label}</SelectItem>)}
+                            </SelectContent>
+                          </Select>
+                        </div>
+                        <div>
+                          <Label className="text-xs">Prioridade</Label>
+                          <Select value={selected.prioridade} onValueChange={(v) => updateField("prioridade", v)}>
+                            <SelectTrigger><SelectValue /></SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="baixa">Baixa</SelectItem>
+                              <SelectItem value="media">Média</SelectItem>
+                              <SelectItem value="alta">Alta</SelectItem>
+                              <SelectItem value="urgente">Urgente</SelectItem>
+                            </SelectContent>
+                          </Select>
+                        </div>
+                        <div>
+                          <Label className="text-xs">Atribuir a</Label>
+                          <Select
+                            value={respMode === "outro" ? "Outro" : (selected.responsavel || "")}
+                            onValueChange={handleRespPresetChange}
+                          >
+                            <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
+                            <SelectContent>
+                              {RESPONSAVEL_OPTIONS.map((r) => <SelectItem key={r} value={r}>{r}</SelectItem>)}
+                            </SelectContent>
+                          </Select>
+                          {respMode === "outro" && (
+                            <Input
+                              className="mt-2"
+                              value={respOutroValue}
+                              onChange={(e) => setRespOutroValue(e.target.value)}
+                              onBlur={(e) => {
+                                const v = e.target.value.trim();
+                                if (v) updateField("responsavel", v);
+                              }}
+                              placeholder="Nome do responsável"
+                            />
+                          )}
                         </div>
                       </div>
-                    )}
 
-                    <div>
-                      <Label className="text-xs flex items-center gap-1"><MessageSquare className="w-3 h-3" /> Comentários ({comentarios.length})</Label>
-                      <div className="space-y-2 mt-2 max-h-48 overflow-y-auto">
-                        {comentarios.map((c) => (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <div><span className="text-slate-500">Solicitante:</span> <strong>{selected.solicitante}</strong></div>
+                        <div><span className="text-slate-500">Email:</span> {selected.solicitante_email}</div>
+                        <div><span className="text-slate-500">Tipo:</span> {TIPO_LABEL[selected.tipo]}</div>
+                        <div>
+                          <span className="text-slate-500">Frequência:</span>{" "}
+                          <Badge className={(selected.frequencia || "individual") === "recorrente" ? "bg-purple-100 text-purple-800" : "bg-slate-100 text-slate-700"}>
+                            {(selected.frequencia || "individual") === "recorrente" ? "Recorrente" : "Individual"}
+                          </Badge>
+                        </div>
+                        <div className={isAtrasada(selected) ? "text-red-600 font-semibold" : ""}>
+                          <span className="text-slate-500 font-normal">Prazo esperado:</span> {new Date(selected.prazo_esperado + "T00:00:00").toLocaleDateString("pt-BR")}
+                          {isAtrasada(selected) && <Badge className="ml-2 bg-red-100 text-red-700 border-red-200">Atrasada</Badge>}
+                        </div>
+                        <div><span className="text-slate-500">Estimativa interna:</span> {selected.prazo_estimado_dias} dias</div>
+                        <div><span className="text-slate-500">Criada em:</span> {new Date(selected.created_at).toLocaleString("pt-BR")}</div>
+                      </div>
+
+                      <div>
+                        <Label className="text-xs">Briefing</Label>
+                        <div className="bg-slate-50 rounded p-3 text-sm whitespace-pre-wrap">{selected.briefing}</div>
+                      </div>
+
+                      {selected.links_referencia && (
+                        <div>
+                          <Label className="text-xs">Links de referência</Label>
+                          <div className="bg-slate-50 rounded p-3 text-sm whitespace-pre-wrap">{selected.links_referencia}</div>
+                        </div>
+                      )}
+
+                      {anexos.length > 0 && (
+                        <div>
+                          <Label className="text-xs flex items-center gap-1"><Paperclip className="w-3 h-3" /> Anexos ({anexos.length})</Label>
+                          <div className="space-y-1 mt-2">
+                            {anexos.map((a) => {
+                              const url = supabase.storage.from("demandas-anexos").getPublicUrl(a.storage_path).data.publicUrl;
+                              return (
+                                <a key={a.id} href={url} target="_blank" rel="noopener" className="flex items-center gap-2 text-sm text-blue-600 hover:underline">
+                                  <ExternalLink className="w-3 h-3" /> {a.nome_arquivo}
+                                </a>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
+                    </TabsContent>
+
+                    <TabsContent value="comentarios" className="pt-4">
+                      <div className="space-y-2 max-h-72 overflow-y-auto">
+                        {comentarios.length === 0 ? (
+                          <p className="text-sm text-slate-500 italic text-center py-6">Sem comentários ainda.</p>
+                        ) : comentarios.map((c) => (
                           <div key={c.id} className="bg-slate-50 rounded p-3 text-sm">
                             <div className="flex justify-between text-xs text-slate-500 mb-1">
                               <strong>{c.autor}</strong>
@@ -655,13 +744,54 @@ export default function DemandasSolicitadas() {
                           </div>
                         ))}
                       </div>
-                      <div className="mt-3 space-y-2">
+                      <div className="mt-4 space-y-2 border-t pt-4">
                         <Input placeholder="Seu nome" value={autorComentario} onChange={(e) => setAutorComentario(e.target.value)} />
-                        <Textarea placeholder="Adicionar comentário..." value={novoComentario} onChange={(e) => setNovoComentario(e.target.value)} rows={2} />
-                        <Button size="sm" onClick={addComentario} disabled={!novoComentario.trim() || !autorComentario.trim()}>Adicionar</Button>
+                        <Textarea placeholder="Adicionar comentário..." value={novoComentario} onChange={(e) => setNovoComentario(e.target.value)} rows={3} />
+                        <div className="flex items-center justify-between">
+                          <label className="flex items-center gap-2 text-xs text-slate-600">
+                            <Switch checked={notificarComentario} onCheckedChange={setNotificarComentario} />
+                            Notificar solicitante por email
+                          </label>
+                          <Button size="sm" onClick={addComentario} disabled={!novoComentario.trim() || !autorComentario.trim()}>
+                            Enviar comentário
+                          </Button>
+                        </div>
                       </div>
-                    </div>
-                  </div>
+                    </TabsContent>
+
+                    <TabsContent value="historico" className="pt-4">
+                      <div className="flex items-center gap-2 text-xs text-slate-500 mb-3">
+                        <Activity className="w-3 h-3" /> Todas as alterações registradas
+                      </div>
+                      {atividades.length === 0 ? (
+                        <p className="text-sm text-slate-500 italic text-center py-6">Sem atividades registradas.</p>
+                      ) : (
+                        <ol className="relative border-l-2 border-slate-200 ml-2 space-y-3">
+                          {atividades.map((a) => (
+                            <li key={a.id} className="ml-4">
+                              <span className="absolute -left-[7px] w-3 h-3 rounded-full bg-slate-400 border-2 border-white" />
+                              <div className="text-xs text-slate-500">{new Date(a.created_at).toLocaleString("pt-BR")} · <strong>{a.autor || "—"}</strong></div>
+                              <div className="text-sm text-slate-800 mt-0.5">
+                                {a.tipo === "comentario_adicionado" ? (
+                                  <>💬 Comentou: <em className="text-slate-600">"{a.detalhes}"</em></>
+                                ) : a.tipo === "campo_alterado" ? (
+                                  <>
+                                    <span className="font-medium capitalize">{a.campo?.replace("_", " ")}</span>{" "}
+                                    {a.valor_anterior ? <><span className="text-slate-400 line-through">{a.valor_anterior}</span> → </> : ""}
+                                    <span className="text-slate-900 font-medium">{a.valor_novo || "—"}</span>
+                                  </>
+                                ) : a.tipo === "comentario_solicitante" ? (
+                                  <>📨 Solicitante comentou: <em className="text-slate-600">"{a.detalhes}"</em></>
+                                ) : (
+                                  <>{a.tipo} {a.detalhes}</>
+                                )}
+                              </div>
+                            </li>
+                          ))}
+                        </ol>
+                      )}
+                    </TabsContent>
+                  </Tabs>
                 </>
               )}
             </DialogContent>
