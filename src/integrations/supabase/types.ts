@@ -14,13 +14,142 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      demanda_anexos: {
+        Row: {
+          created_at: string
+          demanda_id: string
+          id: string
+          nome_arquivo: string
+          storage_path: string
+          tamanho_bytes: number | null
+          tipo_mime: string | null
+        }
+        Insert: {
+          created_at?: string
+          demanda_id: string
+          id?: string
+          nome_arquivo: string
+          storage_path: string
+          tamanho_bytes?: number | null
+          tipo_mime?: string | null
+        }
+        Update: {
+          created_at?: string
+          demanda_id?: string
+          id?: string
+          nome_arquivo?: string
+          storage_path?: string
+          tamanho_bytes?: number | null
+          tipo_mime?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "demanda_anexos_demanda_id_fkey"
+            columns: ["demanda_id"]
+            isOneToOne: false
+            referencedRelation: "demandas"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      demanda_comentarios: {
+        Row: {
+          autor: string
+          created_at: string
+          demanda_id: string
+          id: string
+          texto: string
+        }
+        Insert: {
+          autor: string
+          created_at?: string
+          demanda_id: string
+          id?: string
+          texto: string
+        }
+        Update: {
+          autor?: string
+          created_at?: string
+          demanda_id?: string
+          id?: string
+          texto?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "demanda_comentarios_demanda_id_fkey"
+            columns: ["demanda_id"]
+            isOneToOne: false
+            referencedRelation: "demandas"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      demandas: {
+        Row: {
+          briefing: string
+          concluida_em: string | null
+          created_at: string
+          emails_extras: string[] | null
+          id: string
+          links_referencia: string | null
+          prazo_esperado: string
+          prazo_estimado_dias: number | null
+          prioridade: string
+          protocolo: string
+          responsavel: string | null
+          solicitante: string
+          solicitante_email: string
+          status: string
+          tipo: string
+          titulo: string
+          updated_at: string
+        }
+        Insert: {
+          briefing: string
+          concluida_em?: string | null
+          created_at?: string
+          emails_extras?: string[] | null
+          id?: string
+          links_referencia?: string | null
+          prazo_esperado: string
+          prazo_estimado_dias?: number | null
+          prioridade?: string
+          protocolo?: string
+          responsavel?: string | null
+          solicitante: string
+          solicitante_email: string
+          status?: string
+          tipo: string
+          titulo: string
+          updated_at?: string
+        }
+        Update: {
+          briefing?: string
+          concluida_em?: string | null
+          created_at?: string
+          emails_extras?: string[] | null
+          id?: string
+          links_referencia?: string | null
+          prazo_esperado?: string
+          prazo_estimado_dias?: number | null
+          prioridade?: string
+          protocolo?: string
+          responsavel?: string | null
+          solicitante?: string
+          solicitante_email?: string
+          status?: string
+          tipo?: string
+          titulo?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      gerar_protocolo_demanda: { Args: never; Returns: string }
     }
     Enums: {
       [_ in never]: never
