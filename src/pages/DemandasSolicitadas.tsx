@@ -16,10 +16,10 @@ const ADMIN_USER = "marketing";
 const ADMIN_PASSWORD = "AcqualiveTerracota123!";
 
 const STATUS_OPTIONS = [
-  { value: "nova", label: "Nova", color: "bg-blue-100 text-blue-800 border-blue-200", dot: "bg-blue-500" },
+  { value: "nova", label: "Na fila", color: "bg-blue-100 text-blue-800 border-blue-200", dot: "bg-blue-500" },
   { value: "em_andamento", label: "Em andamento", color: "bg-amber-100 text-amber-800 border-amber-200", dot: "bg-amber-500" },
   { value: "em_revisao", label: "Em revisão", color: "bg-purple-100 text-purple-800 border-purple-200", dot: "bg-purple-500" },
-  { value: "concluida", label: "Concluída", color: "bg-green-100 text-green-800 border-green-200", dot: "bg-green-500" },
+  { value: "concluida", label: "Entregue", color: "bg-green-100 text-green-800 border-green-200", dot: "bg-green-500" },
   { value: "cancelada", label: "Cancelada", color: "bg-slate-100 text-slate-600 border-slate-200", dot: "bg-slate-400" },
 ];
 
