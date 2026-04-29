@@ -95,16 +95,80 @@ export default function Demandas() {
         return;
       }
       setTrackResult(data);
-      const { data: hist } = await supabase
-        .from("demanda_status_log")
-        .select("*")
-        .eq("demanda_id", data.id)
-        .order("created_at", { ascending: false });
+      const [{ data: hist }, { data: cmts }] = await Promise.all([
+        supabase.from("demanda_status_log").select("*").eq("demanda_id", data.id).order("created_at", { ascending: false }),
+        supabase.from("demanda_comentarios").select("*").eq("demanda_id", data.id).order("created_at"),
+      ]);
       setTrackHistory(hist || []);
+      setTrackComentarios(cmts || []);
     } catch (err: any) {
       setTrackError(err.message || "Erro ao consultar.");
     } finally {
       setTrackLoading(false);
+    }
+  };
+
+  // Realtime: atualiza status, histórico e comentários para o solicitante
+  useEffect(() => {
+    if (!trackResult?.id) return;
+    const id = trackResult.id;
+    const ch = supabase
+      .channel(`track-${id}`)
+      .on("postgres_changes", { event: "UPDATE", schema: "public", table: "demandas", filter: `id=eq.${id}` },
+        (p) => setTrackResult((cur: any) => (cur ? { ...cur, ...(p.new as any) } : cur)))
+      .on("postgres_changes", { event: "INSERT", schema: "public", table: "demanda_status_log", filter: `demanda_id=eq.${id}` },
+        (p) => setTrackHistory((prev) => (prev.find((h) => h.id === (p.new as any).id) ? prev : [p.new as any, ...prev])))
+      .on("postgres_changes", { event: "INSERT", schema: "public", table: "demanda_comentarios", filter: `demanda_id=eq.${id}` },
+        (p) => setTrackComentarios((prev) => (prev.find((c) => c.id === (p.new as any).id) ? prev : [...prev, p.new as any])))
+      .subscribe();
+    return () => { supabase.removeChannel(ch); };
+  }, [trackResult?.id]);
+
+  const enviarComentarioSolicitante = async () => {
+    if (!trackResult || (!novoCmt.trim() && cmtFiles.length === 0)) return;
+    setEnviandoCmt(true);
+    try {
+      // Upload anexos
+      for (const f of cmtFiles) {
+        const path = `${Date.now()}-${Math.random().toString(36).slice(2)}-${f.name.replace(/[^\w.-]/g, "_")}`;
+        const { error: upErr } = await supabase.storage.from("demandas-anexos").upload(path, f);
+        if (upErr) throw upErr;
+        await supabase.from("demanda_anexos").insert({
+          demanda_id: trackResult.id,
+          storage_path: path,
+          nome_arquivo: f.name,
+          tipo_mime: f.type,
+          tamanho_bytes: f.size,
+        });
+      }
+      const texto = novoCmt.trim();
+      if (texto) {
+        await supabase.from("demanda_comentarios").insert({
+          demanda_id: trackResult.id,
+          autor: trackResult.solicitante,
+          texto,
+        });
+        await supabase.from("demanda_atividades").insert({
+          demanda_id: trackResult.id,
+          tipo: "comentario_solicitante",
+          autor: trackResult.solicitante,
+          detalhes: texto.slice(0, 200),
+        });
+      } else if (cmtFiles.length > 0) {
+        await supabase.from("demanda_atividades").insert({
+          demanda_id: trackResult.id,
+          tipo: "anexo_solicitante",
+          autor: trackResult.solicitante,
+          detalhes: `${cmtFiles.length} arquivo(s) adicionado(s)`,
+        });
+      }
+      setNovoCmt("");
+      setCmtFiles([]);
+      toast({ title: "Enviado", description: "O time recebeu sua atualização." });
+    } catch (err: any) {
+      toast({ title: "Erro", description: err.message, variant: "destructive" });
+    } finally {
+      setEnviandoCmt(false);
     }
   };
 
