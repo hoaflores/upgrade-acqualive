@@ -294,7 +294,7 @@ export default function Demandas() {
           </Card>
         )}
 
-
+        {!auth ? (
           <Card className="p-8 max-w-md mx-auto shadow-xl border-0">
             <h2 className="text-2xl font-bold text-slate-900 mb-2">Acesso restrito</h2>
             <p className="text-slate-600 mb-6">Informe o usuário e a senha compartilhada da equipe.</p>
