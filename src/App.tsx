@@ -21,6 +21,8 @@ import BlogTemplates from "./pages/BlogTemplates";
 import EmailsFranquias from "./pages/EmailsFranquias";
 import IndicaAcqualive2026 from "./pages/IndicaAcqualive2026";
 import DayanSiebra from "./pages/DayanSiebra";
+import Demandas from "./pages/Demandas";
+import DemandasSolicitadas from "./pages/DemandasSolicitadas";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -51,6 +53,8 @@ const App = () => (
             <Route path="/indica-acqualive-2026" element={<IndicaAcqualive2026 />} />
             <Route path="/indicado-acqualive" element={<IndicaAcqualive2026 />} />
             <Route path="/dayan-siebra" element={<DayanSiebra />} />
+            <Route path="/demandas" element={<Demandas />} />
+            <Route path="/demandas-solicitadas" element={<DemandasSolicitadas />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
