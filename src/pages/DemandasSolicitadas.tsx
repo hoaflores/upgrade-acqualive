@@ -87,12 +87,15 @@ export default function DemandasSolicitadas() {
   const [selected, setSelected] = useState<any | null>(null);
   const [comentarios, setComentarios] = useState<any[]>([]);
   const [anexos, setAnexos] = useState<any[]>([]);
+  const [atividades, setAtividades] = useState<any[]>([]);
   const [novoComentario, setNovoComentario] = useState("");
   const [autorComentario, setAutorComentario] = useState("");
+  const [notificarComentario, setNotificarComentario] = useState(true);
   const [respMode, setRespMode] = useState<"preset" | "outro">("preset");
   const [respOutroValue, setRespOutroValue] = useState("");
   const [draggingId, setDraggingId] = useState<string | null>(null);
   const [dragOverCol, setDragOverCol] = useState<string | null>(null);
+  const [realtimeOn, setRealtimeOn] = useState(false);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
