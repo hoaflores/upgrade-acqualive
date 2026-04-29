@@ -1,1 +1,4 @@
 project_id = "kvlkcavrxxwxxvijwqhd"
+
+[functions.criar-demanda]
+verify_jwt = false
