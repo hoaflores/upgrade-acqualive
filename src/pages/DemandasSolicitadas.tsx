@@ -526,7 +526,7 @@ export default function DemandasSolicitadas() {
                                 onDragStart={(e) => onDragStart(e, d.id)}
                                 onDragEnd={() => { setDraggingId(null); setDragOverCol(null); }}
                                 onClick={() => openDetail(d)}
-                                className={`bg-white rounded-lg shadow-sm hover:shadow-md cursor-pointer p-3 border-l-4 ${PRIORIDADE_BORDER[d.prioridade]} transition ${draggingId === d.id ? "opacity-40" : ""}`}
+                                className={`bg-white rounded-lg shadow-sm hover:shadow-md cursor-pointer p-3 border-l-4 ${PRIORIDADE_BORDER[d.prioridade]} transition ${draggingId === d.id ? "opacity-40" : ""} ${atrasada ? "ring-2 ring-red-400 bg-red-50/40" : ""}`}
                               >
                                 <div className="flex items-start justify-between gap-2 mb-1.5">
                                   <span className="font-mono text-[10px] font-bold text-slate-500">{d.protocolo}</span>
