@@ -40,6 +40,7 @@ export default function Demandas() {
     links_referencia: "",
     prazo_esperado: "",
     prioridade: "media",
+    frequencia: "individual",
   });
   const [files, setFiles] = useState<File[]>([]);
 
@@ -106,6 +107,7 @@ export default function Demandas() {
         links_referencia: "",
         prazo_esperado: "",
         prioridade: "media",
+        frequencia: "individual",
       });
       setFiles([]);
     } catch (err: any) {
