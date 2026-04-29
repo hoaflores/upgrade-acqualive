@@ -250,14 +250,14 @@ Deno.serve(async (req) => {
     sendGmail(
       destinatarios,
       `[${demanda.protocolo}] Nova demanda: ${demanda.titulo}`,
-      emailHtml(demanda, anexosUrls),
+      emailHtml({ ...demanda, tipo_label: tipoLabel }, anexosUrls),
     ).catch((e) => console.error("gmail mkt error", e));
 
     // Confirmação para solicitante
     sendGmail(
       [demanda.solicitante_email],
       `Demanda recebida: ${demanda.protocolo}`,
-      confirmEmailHtml(demanda),
+      confirmEmailHtml({ ...demanda, tipo_label: tipoLabel }),
     ).catch((e) => console.error("gmail confirm error", e));
 
     return new Response(
