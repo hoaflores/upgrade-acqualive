@@ -55,6 +55,7 @@ export default function DemandasSolicitadas() {
   const [search, setSearch] = useState("");
   const [filterStatus, setFilterStatus] = useState("todos");
   const [filterTipo, setFilterTipo] = useState("todos");
+  const [filterFreq, setFilterFreq] = useState("todos");
   const [selected, setSelected] = useState<any | null>(null);
   const [comentarios, setComentarios] = useState<any[]>([]);
   const [anexos, setAnexos] = useState<any[]>([]);
@@ -125,13 +126,14 @@ export default function DemandasSolicitadas() {
     return demandas.filter((d) => {
       if (filterStatus !== "todos" && d.status !== filterStatus) return false;
       if (filterTipo !== "todos" && d.tipo !== filterTipo) return false;
+      if (filterFreq !== "todos" && (d.frequencia || "individual") !== filterFreq) return false;
       if (search) {
         const q = search.toLowerCase();
         if (!d.protocolo.toLowerCase().includes(q) && !d.titulo.toLowerCase().includes(q) && !d.solicitante.toLowerCase().includes(q)) return false;
       }
       return true;
     });
-  }, [demandas, search, filterStatus, filterTipo]);
+  }, [demandas, search, filterStatus, filterTipo, filterFreq]);
 
   const metrics = useMemo(() => {
     const hoje = new Date();
