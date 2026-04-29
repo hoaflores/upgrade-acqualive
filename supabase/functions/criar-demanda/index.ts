@@ -121,7 +121,7 @@ function emailHtml(d: any, anexosUrls: string[]) {
         <div style="font-size:24px;font-weight:700">${d.protocolo}</div>
       </div>
       <h2 style="margin:0 0 8px;color:#0a3d62">${d.titulo}</h2>
-      <p style="color:#555;margin:0 0 16px"><strong>Tipo:</strong> ${TIPO_LABEL[d.tipo] || d.tipo} • <strong>Prioridade:</strong> ${d.prioridade.toUpperCase()}</p>
+      <p style="color:#555;margin:0 0 16px"><strong>Tipo:</strong> ${d.tipo_label || TIPO_LABEL[d.tipo] || d.tipo} • <strong>Prioridade:</strong> ${d.prioridade.toUpperCase()}</p>
       <table style="width:100%;border-collapse:collapse;margin:12px 0">
         <tr><td style="padding:8px;background:#f9fafb;border:1px solid #e5e7eb;width:40%"><strong>Solicitante</strong></td><td style="padding:8px;border:1px solid #e5e7eb">${d.solicitante}</td></tr>
         <tr><td style="padding:8px;background:#f9fafb;border:1px solid #e5e7eb"><strong>Email</strong></td><td style="padding:8px;border:1px solid #e5e7eb">${d.solicitante_email}</td></tr>
@@ -147,7 +147,7 @@ function confirmEmailHtml(d: any) {
       </div>
       <p style="color:#333">Olá ${d.solicitante.split(" ")[0]}, recebemos sua solicitação. O time de marketing já foi notificado.</p>
       <h3 style="color:#0a3d62;margin:20px 0 8px">${d.titulo}</h3>
-      <p style="color:#555;margin:0 0 12px"><strong>Tipo:</strong> ${TIPO_LABEL[d.tipo] || d.tipo}</p>
+      <p style="color:#555;margin:0 0 12px"><strong>Tipo:</strong> ${d.tipo_label || TIPO_LABEL[d.tipo] || d.tipo}</p>
       <p style="color:#555;margin:0 0 12px"><strong>Estimativa interna:</strong> ${d.prazo_estimado_dias} dias úteis</p>
       <p style="color:#555;margin:0 0 12px"><strong>Prazo esperado por você:</strong> ${d.prazo_esperado}</p>
       <p style="margin-top:24px;color:#666;font-size:13px">Guarde este protocolo para acompanhamento: <strong>${d.protocolo}</strong></p>
@@ -185,6 +185,13 @@ Deno.serve(async (req) => {
     const emailsExtras: string[] = Array.isArray(body.emails_extras)
       ? body.emails_extras.filter((e: string) => e && e.includes("@"))
       : [];
+
+    const tipoOutroDesc = body.tipo === "outro" && body.tipo_outro
+      ? String(body.tipo_outro).trim()
+      : "";
+    const tipoLabel = tipoOutroDesc
+      ? `Outro: ${tipoOutroDesc}`
+      : (TIPO_LABEL[body.tipo] || body.tipo);
 
     const { data: demanda, error } = await supabase
       .from("demandas")
@@ -227,7 +234,7 @@ Deno.serve(async (req) => {
       new Date(demanda.created_at).toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" }),
       demanda.solicitante,
       demanda.solicitante_email,
-      TIPO_LABEL[demanda.tipo] || demanda.tipo,
+      tipoLabel,
       demanda.titulo,
       demanda.briefing,
       demanda.links_referencia || "",
