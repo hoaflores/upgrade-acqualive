@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card } from "@/components/ui/card";
 import { toast } from "@/hooks/use-toast";
-import { Loader2, Upload, X, CheckCircle2, FileText, Image as ImageIcon, Video, Layout, Sparkles, Eye, EyeOff, Search, Clock, AlertCircle, MessageSquare } from "lucide-react";
+import { Loader2, Upload, X, CheckCircle2, FileText, Image as ImageIcon, Video, Layout, Sparkles, Eye, EyeOff, Search, Clock, AlertCircle, MessageSquare, Send, Paperclip, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const SOLICITANTE_PASSWORD = "Acqualive!@#";
