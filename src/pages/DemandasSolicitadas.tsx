@@ -10,7 +10,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { toast } from "@/hooks/use-toast";
-import { Loader2, Search, Clock, AlertCircle, CheckCircle2, TrendingUp, ListChecks, Paperclip, MessageSquare, ExternalLink } from "lucide-react";
+import { Loader2, Search, Clock, AlertCircle, CheckCircle2, TrendingUp, ListChecks, Paperclip, MessageSquare, ExternalLink, Eye, EyeOff } from "lucide-react";
 
 const ADMIN_USER = "marketing";
 const ADMIN_PASSWORD = "AcqualiveTerracota123!";
@@ -49,6 +49,7 @@ export default function DemandasSolicitadas() {
   const [auth, setAuth] = useState(false);
   const [loginUser, setLoginUser] = useState("");
   const [loginPass, setLoginPass] = useState("");
+  const [showPass, setShowPass] = useState(false);
   const [demandas, setDemandas] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
