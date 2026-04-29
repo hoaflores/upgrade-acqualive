@@ -207,6 +207,33 @@ export default function Demandas() {
               </div>
 
               <div>
+              <div>
+                <Label>Esta solicitação é *</Label>
+                <div className="grid grid-cols-2 gap-2 mt-2">
+                  {[
+                    { v: "individual", t: "Demanda individual", d: "Entrega única, sem repetição" },
+                    { v: "recorrente", t: "Solicitação recorrente", d: "Se repete (semanal, mensal, etc.)" },
+                  ].map((opt) => {
+                    const selected = form.frequencia === opt.v;
+                    return (
+                      <button
+                        type="button"
+                        key={opt.v}
+                        onClick={() => setForm({ ...form, frequencia: opt.v })}
+                        className={`p-3 rounded-lg border-2 transition-all text-left ${selected ? "border-slate-900 bg-slate-900 text-white" : "border-slate-200 bg-white hover:border-slate-400"}`}
+                      >
+                        <div className="text-sm font-semibold">{opt.t}</div>
+                        <div className={`text-xs mt-0.5 ${selected ? "text-slate-300" : "text-slate-500"}`}>{opt.d}</div>
+                      </button>
+                    );
+                  })}
+                </div>
+                {form.frequencia === "recorrente" && (
+                  <p className="text-xs text-slate-600 mt-2">Detalhe a cadência (ex.: toda segunda, mensal no dia 1) dentro do briefing.</p>
+                )}
+              </div>
+
+              <div>
                 <Label>Tipo de solicitação *</Label>
                 <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 mt-2">
                   {TIPOS.map((t) => {
