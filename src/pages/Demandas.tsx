@@ -33,6 +33,7 @@ export default function Demandas() {
     solicitante_email: "",
     emails_extras: "",
     tipo: "",
+    tipo_outro: "",
     titulo: "",
     briefing: "",
     links_referencia: "",
@@ -98,6 +99,7 @@ export default function Demandas() {
         solicitante_email: "",
         emails_extras: "",
         tipo: "",
+        tipo_outro: "",
         titulo: "",
         briefing: "",
         links_referencia: "",
@@ -206,6 +208,17 @@ export default function Demandas() {
                 </div>
                 {tipoSel && (
                   <p className="text-xs text-slate-600 mt-2">Estimativa interna para este tipo: <strong>{tipoSel.prazo} dias úteis</strong>.</p>
+                )}
+                {form.tipo === "outro" && (
+                  <div className="mt-3">
+                    <Label>Especifique o tipo *</Label>
+                    <Input
+                      required
+                      value={form.tipo_outro}
+                      onChange={(e) => setForm({ ...form, tipo_outro: e.target.value })}
+                      placeholder="Ex.: roteiro de podcast, e-book, apresentação..."
+                    />
+                  </div>
                 )}
               </div>
 
