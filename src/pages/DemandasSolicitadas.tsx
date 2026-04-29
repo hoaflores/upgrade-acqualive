@@ -268,6 +268,14 @@ export default function DemandasSolicitadas() {
                     {Object.entries(TIPO_LABEL).map(([v, l]) => <SelectItem key={v} value={v}>{l}</SelectItem>)}
                   </SelectContent>
                 </Select>
+                <Select value={filterFreq} onValueChange={setFilterFreq}>
+                  <SelectTrigger className="w-44"><SelectValue /></SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="todos">Individual + Recorrente</SelectItem>
+                    <SelectItem value="individual">Apenas individuais</SelectItem>
+                    <SelectItem value="recorrente">Apenas recorrentes</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
             </Card>
 
