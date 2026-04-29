@@ -184,19 +184,117 @@ export default function Demandas() {
       </Helmet>
 
       <header className="border-b bg-white/80 backdrop-blur sticky top-0 z-10">
-        <div className="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between gap-3">
           <div>
             <div className="text-xs uppercase tracking-widest text-slate-500">Acqualive</div>
             <h1 className="text-lg font-semibold text-slate-900">Central de Demandas</h1>
           </div>
-          {auth && (
-            <Button variant="ghost" size="sm" onClick={() => setAuth(false)}>Sair</Button>
-          )}
+          <div className="flex items-center gap-2">
+            <Button
+              variant={showTracker ? "default" : "outline"}
+              size="sm"
+              onClick={() => setShowTracker((s) => !s)}
+              className="gap-1"
+            >
+              <Search className="w-4 h-4" /> Acompanhar demanda
+            </Button>
+            {auth && (
+              <Button variant="ghost" size="sm" onClick={() => setAuth(false)}>Sair</Button>
+            )}
+          </div>
         </div>
       </header>
 
-      <main className="max-w-3xl mx-auto px-6 py-10">
-        {!auth ? (
+      <main className="max-w-3xl mx-auto px-6 py-10 space-y-6">
+        {showTracker && (
+          <Card className="p-6 shadow-xl border-0">
+            <div className="flex items-start justify-between mb-3">
+              <div>
+                <h2 className="text-xl font-bold text-slate-900">Acompanhar minha demanda</h2>
+                <p className="text-sm text-slate-600">Informe o protocolo recebido por email e o email do solicitante.</p>
+              </div>
+              <Button variant="ghost" size="sm" onClick={() => { setShowTracker(false); setTrackResult(null); setTrackError(""); }}>
+                <X className="w-4 h-4" />
+              </Button>
+            </div>
+            <form onSubmit={consultarProtocolo} className="grid sm:grid-cols-[1fr_1fr_auto] gap-3 items-end">
+              <div>
+                <Label className="text-xs">Protocolo</Label>
+                <Input value={trackProtocolo} onChange={(e) => setTrackProtocolo(e.target.value)} placeholder="DEM-2026-001" />
+              </div>
+              <div>
+                <Label className="text-xs">Email do solicitante</Label>
+                <Input type="email" value={trackEmail} onChange={(e) => setTrackEmail(e.target.value)} placeholder="voce@acqualive.com.br" />
+              </div>
+              <Button type="submit" disabled={trackLoading}>
+                {trackLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : "Consultar"}
+              </Button>
+            </form>
+
+            {trackError && (
+              <div className="mt-4 p-3 rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm flex items-start gap-2">
+                <AlertCircle className="w-4 h-4 mt-0.5 shrink-0" /> {trackError}
+              </div>
+            )}
+
+            {trackResult && (
+              <div className="mt-5 border-t pt-5 space-y-4">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="font-mono text-xs font-bold bg-slate-900 text-white px-2 py-1 rounded">{trackResult.protocolo}</span>
+                  <h3 className="font-semibold text-slate-900">{trackResult.titulo}</h3>
+                </div>
+
+                <div className="bg-slate-50 rounded-xl p-4 border">
+                  <div className="text-xs uppercase tracking-wide text-slate-500 mb-2">Status atual</div>
+                  <Badge className={`${STATUS_INFO[trackResult.status]?.color || ""} text-sm px-3 py-1`}>
+                    {STATUS_INFO[trackResult.status]?.label || trackResult.status}
+                  </Badge>
+                  <p className="text-sm text-slate-600 mt-2">{STATUS_INFO[trackResult.status]?.desc}</p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3 text-sm">
+                  <div><span className="text-slate-500">Prazo esperado:</span> <strong>{new Date(trackResult.prazo_esperado + "T00:00:00").toLocaleDateString("pt-BR")}</strong></div>
+                  <div><span className="text-slate-500">Responsável:</span> <strong>{trackResult.responsavel || "A definir"}</strong></div>
+                  <div><span className="text-slate-500">Aberta em:</span> {new Date(trackResult.created_at).toLocaleDateString("pt-BR")}</div>
+                  {trackResult.concluida_em && (
+                    <div><span className="text-slate-500">Entregue em:</span> {new Date(trackResult.concluida_em).toLocaleDateString("pt-BR")}</div>
+                  )}
+                </div>
+
+                <div>
+                  <div className="text-xs uppercase tracking-wide text-slate-500 mb-2 flex items-center gap-1">
+                    <Clock className="w-3 h-3" /> Histórico de status
+                  </div>
+                  {trackHistory.length === 0 ? (
+                    <p className="text-sm text-slate-500 italic">Sem alterações registradas ainda.</p>
+                  ) : (
+                    <ol className="relative border-l-2 border-slate-200 ml-2 space-y-3">
+                      {trackHistory.map((h) => (
+                        <li key={h.id} className="ml-4">
+                          <span className="absolute -left-[7px] w-3 h-3 rounded-full bg-slate-400 border-2 border-white" />
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <Badge className={STATUS_INFO[h.status_novo]?.color || ""}>
+                              {STATUS_INFO[h.status_novo]?.label || h.status_novo}
+                            </Badge>
+                            <span className="text-xs text-slate-500">{new Date(h.created_at).toLocaleString("pt-BR")}</span>
+                          </div>
+                          {h.observacao && (
+                            <div className="mt-1 text-sm text-slate-700 bg-amber-50 border border-amber-200 rounded px-2 py-1 flex gap-1 items-start">
+                              <MessageSquare className="w-3 h-3 mt-1 shrink-0 text-amber-600" />
+                              <span className="whitespace-pre-wrap">{h.observacao}</span>
+                            </div>
+                          )}
+                        </li>
+                      ))}
+                    </ol>
+                  )}
+                </div>
+              </div>
+            )}
+          </Card>
+        )}
+
+
           <Card className="p-8 max-w-md mx-auto shadow-xl border-0">
             <h2 className="text-2xl font-bold text-slate-900 mb-2">Acesso restrito</h2>
             <p className="text-slate-600 mb-6">Informe o usuário e a senha compartilhada da equipe.</p>
