@@ -99,6 +99,7 @@ export default function Demandas() {
         solicitante_email: "",
         emails_extras: "",
         tipo: "",
+        tipo_outro: "",
         titulo: "",
         briefing: "",
         links_referencia: "",
