@@ -55,6 +55,7 @@ export default function DemandasSolicitadas() {
   const [search, setSearch] = useState("");
   const [filterStatus, setFilterStatus] = useState("todos");
   const [filterTipo, setFilterTipo] = useState("todos");
+  const [filterFreq, setFilterFreq] = useState("todos");
   const [selected, setSelected] = useState<any | null>(null);
   const [comentarios, setComentarios] = useState<any[]>([]);
   const [anexos, setAnexos] = useState<any[]>([]);
@@ -125,13 +126,14 @@ export default function DemandasSolicitadas() {
     return demandas.filter((d) => {
       if (filterStatus !== "todos" && d.status !== filterStatus) return false;
       if (filterTipo !== "todos" && d.tipo !== filterTipo) return false;
+      if (filterFreq !== "todos" && (d.frequencia || "individual") !== filterFreq) return false;
       if (search) {
         const q = search.toLowerCase();
         if (!d.protocolo.toLowerCase().includes(q) && !d.titulo.toLowerCase().includes(q) && !d.solicitante.toLowerCase().includes(q)) return false;
       }
       return true;
     });
-  }, [demandas, search, filterStatus, filterTipo]);
+  }, [demandas, search, filterStatus, filterTipo, filterFreq]);
 
   const metrics = useMemo(() => {
     const hoje = new Date();
@@ -266,6 +268,14 @@ export default function DemandasSolicitadas() {
                     {Object.entries(TIPO_LABEL).map(([v, l]) => <SelectItem key={v} value={v}>{l}</SelectItem>)}
                   </SelectContent>
                 </Select>
+                <Select value={filterFreq} onValueChange={setFilterFreq}>
+                  <SelectTrigger className="w-44"><SelectValue /></SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="todos">Individual + Recorrente</SelectItem>
+                    <SelectItem value="individual">Apenas individuais</SelectItem>
+                    <SelectItem value="recorrente">Apenas recorrentes</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
             </Card>
 
@@ -296,7 +306,14 @@ export default function DemandasSolicitadas() {
                           <td className="px-4 py-3 font-mono text-xs font-bold">{d.protocolo}</td>
                           <td className="px-4 py-3 font-medium max-w-xs truncate">{d.titulo}</td>
                           <td className="px-4 py-3 text-slate-600">{d.solicitante}</td>
-                          <td className="px-4 py-3"><Badge variant="outline">{TIPO_LABEL[d.tipo] || d.tipo}</Badge></td>
+                          <td className="px-4 py-3">
+                            <Badge variant="outline" className="gap-1">
+                              {TIPO_LABEL[d.tipo] || d.tipo}
+                              {(d.frequencia || "individual") === "recorrente" && (
+                                <span className="ml-1 text-[10px] uppercase tracking-wide text-purple-700">↻ rec.</span>
+                              )}
+                            </Badge>
+                          </td>
                           <td className="px-4 py-3"><Badge className={PRIORIDADE_COLOR[d.prioridade]}>{d.prioridade}</Badge></td>
                           <td className={`px-4 py-3 ${isAtrasada(d) ? "text-red-600 font-semibold" : ""}`}>
                             {new Date(d.prazo_esperado + "T00:00:00").toLocaleDateString("pt-BR")}
@@ -363,6 +380,12 @@ export default function DemandasSolicitadas() {
                       <div><span className="text-slate-500">Solicitante:</span> <strong>{selected.solicitante}</strong></div>
                       <div><span className="text-slate-500">Email:</span> {selected.solicitante_email}</div>
                       <div><span className="text-slate-500">Tipo:</span> {TIPO_LABEL[selected.tipo]}</div>
+                      <div>
+                        <span className="text-slate-500">Frequência:</span>{" "}
+                        <Badge className={(selected.frequencia || "individual") === "recorrente" ? "bg-purple-100 text-purple-800" : "bg-slate-100 text-slate-700"}>
+                          {(selected.frequencia || "individual") === "recorrente" ? "Recorrente" : "Individual"}
+                        </Badge>
+                      </div>
                       <div><span className="text-slate-500">Prazo esperado:</span> {new Date(selected.prazo_esperado + "T00:00:00").toLocaleDateString("pt-BR")}</div>
                       <div><span className="text-slate-500">Estimativa interna:</span> {selected.prazo_estimado_dias} dias</div>
                       <div><span className="text-slate-500">Criada em:</span> {new Date(selected.created_at).toLocaleString("pt-BR")}</div>

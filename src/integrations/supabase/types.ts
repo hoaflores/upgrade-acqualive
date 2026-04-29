@@ -90,6 +90,7 @@ export type Database = {
           concluida_em: string | null
           created_at: string
           emails_extras: string[] | null
+          frequencia: string
           id: string
           links_referencia: string | null
           prazo_esperado: string
@@ -109,6 +110,7 @@ export type Database = {
           concluida_em?: string | null
           created_at?: string
           emails_extras?: string[] | null
+          frequencia?: string
           id?: string
           links_referencia?: string | null
           prazo_esperado: string
@@ -128,6 +130,7 @@ export type Database = {
           concluida_em?: string | null
           created_at?: string
           emails_extras?: string[] | null
+          frequencia?: string
           id?: string
           links_referencia?: string | null
           prazo_esperado?: string
