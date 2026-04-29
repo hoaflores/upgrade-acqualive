@@ -16,10 +16,10 @@ const ADMIN_USER = "marketing";
 const ADMIN_PASSWORD = "AcqualiveTerracota123!";
 
 const STATUS_OPTIONS = [
-  { value: "nova", label: "Nova", color: "bg-blue-100 text-blue-800 border-blue-200", dot: "bg-blue-500" },
+  { value: "nova", label: "Na fila", color: "bg-blue-100 text-blue-800 border-blue-200", dot: "bg-blue-500" },
   { value: "em_andamento", label: "Em andamento", color: "bg-amber-100 text-amber-800 border-amber-200", dot: "bg-amber-500" },
   { value: "em_revisao", label: "Em revisão", color: "bg-purple-100 text-purple-800 border-purple-200", dot: "bg-purple-500" },
-  { value: "concluida", label: "Concluída", color: "bg-green-100 text-green-800 border-green-200", dot: "bg-green-500" },
+  { value: "concluida", label: "Entregue", color: "bg-green-100 text-green-800 border-green-200", dot: "bg-green-500" },
   { value: "cancelada", label: "Cancelada", color: "bg-slate-100 text-slate-600 border-slate-200", dot: "bg-slate-400" },
 ];
 
@@ -132,9 +132,11 @@ export default function DemandasSolicitadas() {
     setAnexos(a.data || []);
   };
 
-  const updateField = async (field: string, value: any, targetId?: string) => {
+  const updateField = async (field: string, value: any, targetId?: string, observacao?: string) => {
     const id = targetId || selected?.id;
     if (!id) return;
+    const current = demandas.find((d) => d.id === id);
+    const statusAnterior = current?.status;
     const update: any = { [field]: value };
     if (field === "status" && value === "concluida") update.concluida_em = new Date().toISOString();
     if (field === "status" && value !== "concluida") update.concluida_em = null;
@@ -145,6 +147,24 @@ export default function DemandasSolicitadas() {
     }
     if (selected && selected.id === id) setSelected({ ...selected, ...update });
     setDemandas((prev) => prev.map((d) => (d.id === id ? { ...d, ...update } : d)));
+
+    // Notificar solicitante quando status muda
+    if (field === "status" && statusAnterior !== value) {
+      try {
+        await supabase.functions.invoke("notificar-status-demanda", {
+          body: {
+            demanda_id: id,
+            status_novo: value,
+            status_anterior: statusAnterior || null,
+            alterado_por: "marketing",
+            observacao: observacao || null,
+          },
+        });
+        toast({ title: "Solicitante notificado", description: "Email de atualização enviado." });
+      } catch (e: any) {
+        console.error("notificar-status-demanda failed", e);
+      }
+    }
   };
 
   const handleRespPresetChange = (value: string) => {
@@ -335,7 +355,7 @@ export default function DemandasSolicitadas() {
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-green-100 text-green-600 flex items-center justify-center"><CheckCircle2 className="w-5 h-5" /></div>
                   <div>
-                    <div className="text-xs text-slate-500 uppercase">Concluídas no mês</div>
+                    <div className="text-xs text-slate-500 uppercase">Entregues no mês</div>
                     <div className="text-2xl font-bold">{metrics.concluidasMes}</div>
                   </div>
                 </div>

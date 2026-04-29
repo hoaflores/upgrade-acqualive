@@ -84,6 +84,36 @@ export type Database = {
           },
         ]
       }
+      demanda_status_log: {
+        Row: {
+          alterado_por: string | null
+          created_at: string
+          demanda_id: string
+          id: string
+          observacao: string | null
+          status_anterior: string | null
+          status_novo: string
+        }
+        Insert: {
+          alterado_por?: string | null
+          created_at?: string
+          demanda_id: string
+          id?: string
+          observacao?: string | null
+          status_anterior?: string | null
+          status_novo: string
+        }
+        Update: {
+          alterado_por?: string | null
+          created_at?: string
+          demanda_id?: string
+          id?: string
+          observacao?: string | null
+          status_anterior?: string | null
+          status_novo?: string
+        }
+        Relationships: []
+      }
       demandas: {
         Row: {
           briefing: string
