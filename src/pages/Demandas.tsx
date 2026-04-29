@@ -45,6 +45,64 @@ export default function Demandas() {
   });
   const [files, setFiles] = useState<File[]>([]);
 
+  // Acompanhamento por protocolo
+  const [showTracker, setShowTracker] = useState(false);
+  const [trackProtocolo, setTrackProtocolo] = useState("");
+  const [trackEmail, setTrackEmail] = useState("");
+  const [trackLoading, setTrackLoading] = useState(false);
+  const [trackResult, setTrackResult] = useState<any | null>(null);
+  const [trackError, setTrackError] = useState<string>("");
+  const [trackHistory, setTrackHistory] = useState<any[]>([]);
+
+  const STATUS_INFO: Record<string, { label: string; color: string; desc: string }> = {
+    nova: { label: "Na fila", color: "bg-blue-100 text-blue-800 border-blue-200", desc: "Sua demanda está na fila e será iniciada em breve." },
+    em_andamento: { label: "Em andamento", color: "bg-amber-100 text-amber-800 border-amber-200", desc: "O time está produzindo sua demanda agora." },
+    em_revisao: { label: "Em revisão", color: "bg-purple-100 text-purple-800 border-purple-200", desc: "Em revisão final antes da entrega." },
+    concluida: { label: "Entregue", color: "bg-green-100 text-green-800 border-green-200", desc: "Sua demanda foi entregue." },
+    cancelada: { label: "Cancelada", color: "bg-slate-100 text-slate-700 border-slate-200", desc: "Esta demanda foi cancelada." },
+  };
+
+  const consultarProtocolo = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setTrackLoading(true);
+    setTrackError("");
+    setTrackResult(null);
+    setTrackHistory([]);
+    try {
+      const proto = trackProtocolo.trim().toUpperCase();
+      const emailQ = trackEmail.trim().toLowerCase();
+      if (!proto || !emailQ) {
+        setTrackError("Informe protocolo e email.");
+        return;
+      }
+      const { data, error } = await supabase
+        .from("demandas")
+        .select("id, protocolo, titulo, tipo, status, prioridade, prazo_esperado, responsavel, created_at, concluida_em, solicitante, solicitante_email, frequencia")
+        .eq("protocolo", proto)
+        .maybeSingle();
+      if (error) throw error;
+      if (!data) {
+        setTrackError("Protocolo não encontrado.");
+        return;
+      }
+      if (data.solicitante_email?.toLowerCase() !== emailQ) {
+        setTrackError("Email não confere com o cadastrado nesta demanda.");
+        return;
+      }
+      setTrackResult(data);
+      const { data: hist } = await supabase
+        .from("demanda_status_log")
+        .select("*")
+        .eq("demanda_id", data.id)
+        .order("created_at", { ascending: false });
+      setTrackHistory(hist || []);
+    } catch (err: any) {
+      setTrackError(err.message || "Erro ao consultar.");
+    } finally {
+      setTrackLoading(false);
+    }
+  };
+
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     if (loginUser.trim().toLowerCase() === "solicitante" && loginPass === SOLICITANTE_PASSWORD) {
