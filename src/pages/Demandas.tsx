@@ -289,7 +289,7 @@ export default function Demandas() {
             <form onSubmit={consultarProtocolo} className="grid sm:grid-cols-[1fr_1fr_auto] gap-3 items-end">
               <div>
                 <Label className="text-xs">Protocolo</Label>
-                <Input value={trackProtocolo} onChange={(e) => setTrackProtocolo(e.target.value)} placeholder="DEM-2026-001" />
+                <Input value={trackProtocolo} onChange={(e) => setTrackProtocolo(e.target.value)} placeholder="DEM-2026-XXXXXXXX" />
               </div>
               <div>
                 <Label className="text-xs">Email do solicitante</Label>
