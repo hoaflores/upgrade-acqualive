@@ -52,6 +52,42 @@ export type Database = {
           },
         ]
       }
+      demanda_atividades: {
+        Row: {
+          autor: string | null
+          campo: string | null
+          created_at: string
+          demanda_id: string
+          detalhes: string | null
+          id: string
+          tipo: string
+          valor_anterior: string | null
+          valor_novo: string | null
+        }
+        Insert: {
+          autor?: string | null
+          campo?: string | null
+          created_at?: string
+          demanda_id: string
+          detalhes?: string | null
+          id?: string
+          tipo: string
+          valor_anterior?: string | null
+          valor_novo?: string | null
+        }
+        Update: {
+          autor?: string | null
+          campo?: string | null
+          created_at?: string
+          demanda_id?: string
+          detalhes?: string | null
+          id?: string
+          tipo?: string
+          valor_anterior?: string | null
+          valor_novo?: string | null
+        }
+        Relationships: []
+      }
       demanda_comentarios: {
         Row: {
           autor: string
