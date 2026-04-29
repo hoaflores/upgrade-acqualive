@@ -10,7 +10,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { toast } from "@/hooks/use-toast";
-import { Loader2, Search, Clock, AlertCircle, CheckCircle2, TrendingUp, ListChecks, Paperclip, MessageSquare, ExternalLink } from "lucide-react";
+import { Loader2, Search, Clock, AlertCircle, CheckCircle2, TrendingUp, ListChecks, Paperclip, MessageSquare, ExternalLink, Eye, EyeOff } from "lucide-react";
 
 const ADMIN_USER = "marketing";
 const ADMIN_PASSWORD = "AcqualiveTerracota123!";
@@ -49,6 +49,7 @@ export default function DemandasSolicitadas() {
   const [auth, setAuth] = useState(false);
   const [loginUser, setLoginUser] = useState("");
   const [loginPass, setLoginPass] = useState("");
+  const [showPass, setShowPass] = useState(false);
   const [demandas, setDemandas] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
@@ -162,11 +163,27 @@ export default function DemandasSolicitadas() {
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
                 <Label>Usuário</Label>
-                <Input value={loginUser} onChange={(e) => setLoginUser(e.target.value)} placeholder="marketing" autoFocus />
+                <Input value={loginUser} onChange={(e) => setLoginUser(e.target.value)} placeholder="Digite seu usuário" autoFocus />
               </div>
               <div>
                 <Label>Senha</Label>
-                <Input type="password" value={loginPass} onChange={(e) => setLoginPass(e.target.value)} />
+                <div className="relative">
+                  <Input
+                    type={showPass ? "text" : "password"}
+                    value={loginPass}
+                    onChange={(e) => setLoginPass(e.target.value)}
+                    placeholder="Digite sua senha"
+                    className="pr-10"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPass((s) => !s)}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 p-1 text-slate-500 hover:text-slate-900"
+                    aria-label={showPass ? "Ocultar senha" : "Mostrar senha"}
+                  >
+                    {showPass ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                  </button>
+                </div>
               </div>
               <Button type="submit" className="w-full">Entrar</Button>
             </form>
