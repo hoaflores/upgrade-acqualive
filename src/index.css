@@ -397,6 +397,20 @@
 }
 .dayan-float { animation: ds-float-slow 8s ease-in-out infinite; }
 
+/* Placeholders mais esmaecidos em todos os campos de formulario */
+@layer base {
+  input::placeholder,
+  textarea::placeholder {
+    color: hsl(215 15% 65%) !important;
+    opacity: 0.6 !important;
+  }
+  .dark input::placeholder,
+  .dark textarea::placeholder {
+    color: hsl(0 0% 100% / 0.35) !important;
+    opacity: 1 !important;
+  }
+}
+
 /* Subtle grain on dark sections */
 .dayan-grain::before {
   content: '';
