@@ -477,6 +477,13 @@ export default function DemandasSolicitadas() {
                   >
                     <TableIcon className="w-3.5 h-3.5" /> Tabela
                   </button>
+                  <button
+                    onClick={() => setView("prioridades")}
+                    className={`px-3 py-1.5 rounded text-xs font-medium flex items-center gap-1.5 transition ${view === "prioridades" ? "bg-slate-900 text-white" : "text-slate-600 hover:bg-slate-100"}`}
+                    title="Board do gestor: prioridades, velocidade e datas internas (não notificadas ao solicitante)"
+                  >
+                    <Flag className="w-3.5 h-3.5" /> Prioridades
+                  </button>
                 </div>
                 <Button variant="outline" size="sm" onClick={load}>Atualizar</Button>
                 <Button variant="ghost" size="sm" onClick={() => setAuth(false)}>Sair</Button>
