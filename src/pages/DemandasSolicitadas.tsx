@@ -622,7 +622,12 @@ export default function DemandasSolicitadas() {
                                 className={`bg-white rounded-lg shadow-sm hover:shadow-md cursor-pointer p-3 border-l-4 ${PRIORIDADE_BORDER[d.prioridade]} transition ${draggingId === d.id ? "opacity-40" : ""} ${atrasada ? "ring-2 ring-red-400 bg-red-50/40" : ""}`}
                               >
                                 <div className="flex items-start justify-between gap-2 mb-1.5">
-                                  <span className="font-mono text-[10px] font-bold text-slate-500">{d.protocolo}</span>
+                                  <div className="flex items-center gap-1.5">
+                                    {col.value === "nova" && d.ordem_prioridade && (
+                                      <span className="text-[10px] font-bold bg-slate-900 text-white rounded px-1.5 py-0.5" title="Posição na fila do gestor">#{d.ordem_prioridade}</span>
+                                    )}
+                                    <span className="font-mono text-[10px] font-bold text-slate-500">{d.protocolo}</span>
+                                  </div>
                                   {(d.frequencia || "individual") === "recorrente" && (
                                     <span className="text-[9px] font-bold uppercase tracking-wide text-purple-700 bg-purple-100 rounded px-1.5 py-0.5">↻ rec</span>
                                   )}
@@ -631,6 +636,11 @@ export default function DemandasSolicitadas() {
                                 <div className="flex flex-wrap gap-1 mb-2">
                                   <Badge variant="outline" className="text-[10px] px-1.5 py-0 h-4">{TIPO_LABEL[d.tipo] || d.tipo}</Badge>
                                   <Badge className={`${PRIORIDADE_COLOR[d.prioridade]} text-[10px] px-1.5 py-0 h-4`}>{d.prioridade}</Badge>
+                                  {d.velocidade && d.velocidade !== "normal" && (
+                                    <Badge className={`${velocidadeMeta(d.velocidade).color} text-[10px] px-1.5 py-0 h-4 border`} title="Velocidade interna definida pelo gestor">
+                                      {velocidadeMeta(d.velocidade).icon} {velocidadeMeta(d.velocidade).label}
+                                    </Badge>
+                                  )}
                                 </div>
                                 <div className="flex items-center justify-between text-[11px]">
                                   <div className={`flex items-center gap-1 px-1.5 py-0.5 rounded border ${respColor(d.responsavel)}`}>
