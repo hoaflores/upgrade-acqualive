@@ -62,6 +62,17 @@ const RESP_COLORS: Record<string, string> = {
   Guilherme: "bg-amber-100 text-amber-700 border-amber-200",
 };
 
+const VELOCIDADE_OPTIONS = [
+  { value: "sem_pressa", label: "Sem pressa", icon: "🐢", color: "bg-slate-100 text-slate-700 border-slate-300" },
+  { value: "normal", label: "Normal", icon: "🚶", color: "bg-blue-100 text-blue-700 border-blue-300" },
+  { value: "rapida", label: "Rápida", icon: "🐇", color: "bg-orange-100 text-orange-700 border-orange-300" },
+  { value: "expressa", label: "Expressa", icon: "⚡", color: "bg-red-100 text-red-700 border-red-300" },
+];
+
+function velocidadeMeta(v?: string | null) {
+  return VELOCIDADE_OPTIONS.find((o) => o.value === v) || VELOCIDADE_OPTIONS[1];
+}
+
 function respColor(name?: string | null) {
   if (!name) return "bg-slate-100 text-slate-500 border-slate-200";
   return RESP_COLORS[name] || "bg-violet-100 text-violet-700 border-violet-200";
