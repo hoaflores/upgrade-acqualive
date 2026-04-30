@@ -992,8 +992,77 @@ export default function DemandasSolicitadas() {
                         <div><span className="text-slate-500">Criada em:</span> {new Date(selected.created_at).toLocaleString("pt-BR")}</div>
                       </div>
 
-                      <div>
-                        <Label className="text-xs">Briefing</Label>
+                      {/* Controles internos do gestor (não notificam o solicitante) */}
+                      <div className="rounded-lg border-2 border-dashed border-amber-200 bg-amber-50/40 p-4">
+                        <div className="flex items-center gap-2 mb-3">
+                          <Lock className="w-3.5 h-3.5 text-amber-700" />
+                          <h4 className="text-xs font-bold uppercase tracking-wider text-amber-800">Controle interno do gestor</h4>
+                          <span className="text-[10px] text-slate-500">não enviado ao solicitante</span>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                          <div>
+                            <Label className="text-xs">Velocidade</Label>
+                            <Select value={selected.velocidade || "normal"} onValueChange={(v) => updateField("velocidade", v)}>
+                              <SelectTrigger><SelectValue /></SelectTrigger>
+                              <SelectContent>
+                                {VELOCIDADE_OPTIONS.map((v) => (
+                                  <SelectItem key={v.value} value={v.value}>{v.icon} {v.label}</SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                          </div>
+                          <div>
+                            <Label className="text-xs">Início previsto</Label>
+                            <Popover>
+                              <PopoverTrigger asChild>
+                                <Button variant="outline" className="w-full justify-start font-normal h-10">
+                                  <CalendarIcon className="w-3.5 h-3.5" />
+                                  {selected.data_inicio_prevista
+                                    ? format(new Date(selected.data_inicio_prevista + "T00:00:00"), "PPP", { locale: ptBR })
+                                    : "Sem data"}
+                                </Button>
+                              </PopoverTrigger>
+                              <PopoverContent className="w-auto p-0" align="start">
+                                <Calendar
+                                  mode="single"
+                                  selected={selected.data_inicio_prevista ? new Date(selected.data_inicio_prevista + "T00:00:00") : undefined}
+                                  onSelect={(date) => updateField("data_inicio_prevista", date ? format(date, "yyyy-MM-dd") : null)}
+                                  locale={ptBR}
+                                  className={cn("p-3 pointer-events-auto")}
+                                />
+                              </PopoverContent>
+                            </Popover>
+                          </div>
+                          <div>
+                            <Label className="text-xs">Meta de entrega interna</Label>
+                            <Popover>
+                              <PopoverTrigger asChild>
+                                <Button variant="outline" className="w-full justify-start font-normal h-10">
+                                  <CalendarIcon className="w-3.5 h-3.5" />
+                                  {selected.data_entrega_interna
+                                    ? format(new Date(selected.data_entrega_interna + "T00:00:00"), "PPP", { locale: ptBR })
+                                    : "Sem data"}
+                                </Button>
+                              </PopoverTrigger>
+                              <PopoverContent className="w-auto p-0" align="start">
+                                <Calendar
+                                  mode="single"
+                                  selected={selected.data_entrega_interna ? new Date(selected.data_entrega_interna + "T00:00:00") : undefined}
+                                  onSelect={(date) => updateField("data_entrega_interna", date ? format(date, "yyyy-MM-dd") : null)}
+                                  locale={ptBR}
+                                  className={cn("p-3 pointer-events-auto")}
+                                />
+                              </PopoverContent>
+                            </Popover>
+                          </div>
+                        </div>
+                        {selected.ordem_prioridade && (
+                          <div className="text-xs text-slate-600 mt-3">
+                            Posição atual na fila do gestor: <strong className="text-slate-900">#{selected.ordem_prioridade}</strong>
+                          </div>
+                        )}
+                      </div>
+
                         <div className="bg-slate-50 rounded p-3 text-sm whitespace-pre-wrap">{selected.briefing}</div>
                       </div>
 
