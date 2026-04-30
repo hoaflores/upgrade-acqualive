@@ -662,7 +662,7 @@ export default function DemandasSolicitadas() {
                   );
                 })}
               </div>
-            ) : (
+            ) : view === "tabela" ? (
               /* TABELA */
               <Card className="border-0 shadow-sm overflow-hidden">
                 {filtered.length === 0 ? (
@@ -715,6 +715,194 @@ export default function DemandasSolicitadas() {
                   </div>
                 )}
               </Card>
+            ) : (
+              /* PRIORIDADES (Board do Gestor) */
+              <div className="space-y-4">
+                <Card className="p-4 border-0 shadow-sm bg-gradient-to-r from-slate-900 to-slate-800 text-white">
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-300 flex items-center justify-center shrink-0">
+                      <Flag className="w-5 h-5" />
+                    </div>
+                    <div className="flex-1">
+                      <h2 className="font-bold text-lg flex items-center gap-2">
+                        Board do Gestor
+                        <span className="inline-flex items-center gap-1 text-[10px] uppercase tracking-wider bg-white/10 rounded px-2 py-0.5"><Lock className="w-2.5 h-2.5" /> Interno</span>
+                      </h2>
+                      <p className="text-sm text-slate-300 mt-0.5">
+                        Arraste para reordenar a fila. Defina velocidade e datas internas. Estas informações <strong className="text-white">não são notificadas ao solicitante</strong> e servem para o time saber por onde começar.
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-3 border-0 shadow-sm">
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <Label className="text-xs uppercase text-slate-500">Filtrar por velocidade:</Label>
+                    <div className="flex gap-1">
+                      <button
+                        onClick={() => setFilterVelocidade("todos")}
+                        className={`text-xs px-3 py-1 rounded-full border transition ${filterVelocidade === "todos" ? "bg-slate-900 text-white border-slate-900" : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50"}`}
+                      >
+                        Todas
+                      </button>
+                      {VELOCIDADE_OPTIONS.map((v) => (
+                        <button
+                          key={v.value}
+                          onClick={() => setFilterVelocidade(v.value)}
+                          className={`text-xs px-3 py-1 rounded-full border transition ${filterVelocidade === v.value ? "bg-slate-900 text-white border-slate-900" : `${v.color} hover:opacity-80`}`}
+                        >
+                          {v.icon} {v.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </Card>
+
+                {ativasOrdenadas.length === 0 ? (
+                  <Card className="p-12 text-center border-0 shadow-sm text-slate-500">
+                    Nenhuma demanda ativa para priorizar.
+                  </Card>
+                ) : (
+                  <div className="space-y-2">
+                    {ativasOrdenadas.map((d, idx) => {
+                      const vel = velocidadeMeta(d.velocidade);
+                      const atrasada = isAtrasada(d);
+                      const isDragging = priorityDragId === d.id;
+                      const isOver = priorityOverId === d.id && priorityDragId && priorityDragId !== d.id;
+                      return (
+                        <div
+                          key={d.id}
+                          draggable
+                          onDragStart={(e) => { setPriorityDragId(d.id); e.dataTransfer.effectAllowed = "move"; }}
+                          onDragOver={(e) => { e.preventDefault(); if (priorityOverId !== d.id) setPriorityOverId(d.id); }}
+                          onDragLeave={() => setPriorityOverId((c) => (c === d.id ? null : c))}
+                          onDrop={(e) => {
+                            e.preventDefault();
+                            if (priorityDragId && priorityDragId !== d.id) reorderPrioridade(priorityDragId, d.id);
+                            setPriorityDragId(null);
+                            setPriorityOverId(null);
+                          }}
+                          onDragEnd={() => { setPriorityDragId(null); setPriorityOverId(null); }}
+                          className={cn(
+                            "bg-white rounded-xl shadow-sm border border-slate-200 p-3 flex items-center gap-3 transition",
+                            isDragging && "opacity-40",
+                            isOver && "ring-2 ring-amber-400 border-amber-300",
+                            atrasada && "border-l-4 border-l-red-500",
+                          )}
+                        >
+                          <div className="flex flex-col items-center gap-0.5 shrink-0">
+                            <button
+                              onClick={() => moverOrdem(d.id, -1)}
+                              disabled={idx === 0}
+                              className="text-slate-400 hover:text-slate-900 disabled:opacity-20"
+                              title="Subir"
+                            >
+                              <ArrowUp className="w-3.5 h-3.5" />
+                            </button>
+                            <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-sm">
+                              {idx + 1}
+                            </div>
+                            <button
+                              onClick={() => moverOrdem(d.id, 1)}
+                              disabled={idx === ativasOrdenadas.length - 1}
+                              className="text-slate-400 hover:text-slate-900 disabled:opacity-20"
+                              title="Descer"
+                            >
+                              <ArrowDown className="w-3.5 h-3.5" />
+                            </button>
+                          </div>
+
+                          <GripVertical className="w-4 h-4 text-slate-300 cursor-grab shrink-0" />
+
+                          <div className="flex-1 min-w-0 cursor-pointer" onClick={() => openDetail(d)}>
+                            <div className="flex items-center gap-2 flex-wrap">
+                              <span className="font-mono text-[10px] font-bold text-slate-500">{d.protocolo}</span>
+                              <Badge className={`${statusColor(d.status)} text-[10px] px-1.5 py-0 h-4`}>{statusLabel(d.status)}</Badge>
+                              <Badge className={`${PRIORIDADE_COLOR[d.prioridade]} text-[10px] px-1.5 py-0 h-4`}>{d.prioridade}</Badge>
+                              {(d.frequencia || "individual") === "recorrente" && (
+                                <span className="text-[9px] font-bold uppercase text-purple-700 bg-purple-100 rounded px-1.5 py-0.5">↻ rec</span>
+                              )}
+                            </div>
+                            <div className="font-medium text-sm text-slate-900 truncate mt-1">{d.titulo}</div>
+                            <div className="text-[11px] text-slate-500 mt-0.5 flex items-center gap-3 flex-wrap">
+                              <span>{d.solicitante}</span>
+                              <span className={atrasada ? "text-red-600 font-semibold" : ""}>
+                                Prazo: {new Date(d.prazo_esperado + "T00:00:00").toLocaleDateString("pt-BR")}
+                              </span>
+                              <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded border ${respColor(d.responsavel)}`}>
+                                <User className="w-2.5 h-2.5" /> {d.responsavel || "Sem dono"}
+                              </span>
+                            </div>
+                          </div>
+
+                          {/* Velocidade */}
+                          <div className="shrink-0">
+                            <Select value={d.velocidade || "normal"} onValueChange={(v) => updateField("velocidade", v, d.id)}>
+                              <SelectTrigger className={cn("w-[150px] h-9 border", vel.color)}>
+                                <SelectValue>
+                                  <span className="flex items-center gap-1.5 text-xs font-medium">
+                                    <Gauge className="w-3 h-3" />
+                                    {vel.icon} {vel.label}
+                                  </span>
+                                </SelectValue>
+                              </SelectTrigger>
+                              <SelectContent>
+                                {VELOCIDADE_OPTIONS.map((v) => (
+                                  <SelectItem key={v.value} value={v.value}>
+                                    {v.icon} {v.label}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                          </div>
+
+                          {/* Datas internas */}
+                          <div className="shrink-0 flex gap-2">
+                            <Popover>
+                              <PopoverTrigger asChild>
+                                <Button variant="outline" size="sm" className="h-9 text-xs font-normal">
+                                  <CalendarIcon className="w-3 h-3" />
+                                  {d.data_inicio_prevista
+                                    ? format(new Date(d.data_inicio_prevista + "T00:00:00"), "dd/MM", { locale: ptBR })
+                                    : "Início"}
+                                </Button>
+                              </PopoverTrigger>
+                              <PopoverContent className="w-auto p-0" align="end">
+                                <Calendar
+                                  mode="single"
+                                  selected={d.data_inicio_prevista ? new Date(d.data_inicio_prevista + "T00:00:00") : undefined}
+                                  onSelect={(date) => updateField("data_inicio_prevista", date ? format(date, "yyyy-MM-dd") : null, d.id)}
+                                  locale={ptBR}
+                                  className={cn("p-3 pointer-events-auto")}
+                                />
+                              </PopoverContent>
+                            </Popover>
+                            <Popover>
+                              <PopoverTrigger asChild>
+                                <Button variant="outline" size="sm" className="h-9 text-xs font-normal">
+                                  <CalendarIcon className="w-3 h-3" />
+                                  {d.data_entrega_interna
+                                    ? format(new Date(d.data_entrega_interna + "T00:00:00"), "dd/MM", { locale: ptBR })
+                                    : "Meta"}
+                                </Button>
+                              </PopoverTrigger>
+                              <PopoverContent className="w-auto p-0" align="end">
+                                <Calendar
+                                  mode="single"
+                                  selected={d.data_entrega_interna ? new Date(d.data_entrega_interna + "T00:00:00") : undefined}
+                                  onSelect={(date) => updateField("data_entrega_interna", date ? format(date, "yyyy-MM-dd") : null, d.id)}
+                                  locale={ptBR}
+                                  className={cn("p-3 pointer-events-auto")}
+                                />
+                              </PopoverContent>
+                            </Popover>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
             )}
           </main>
 
