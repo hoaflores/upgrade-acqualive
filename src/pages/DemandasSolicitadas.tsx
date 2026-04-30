@@ -101,7 +101,7 @@ export default function DemandasSolicitadas() {
   const [filterTipo, setFilterTipo] = useState("todos");
   const [filterFreq, setFilterFreq] = useState("todos");
   const [filterResp, setFilterResp] = useState("todos");
-  const [view, setView] = useState<"kanban" | "tabela">("kanban");
+  const [view, setView] = useState<"kanban" | "tabela" | "prioridades">("kanban");
   const [selected, setSelected] = useState<any | null>(null);
   const [comentarios, setComentarios] = useState<any[]>([]);
   const [anexos, setAnexos] = useState<any[]>([]);
@@ -114,6 +114,9 @@ export default function DemandasSolicitadas() {
   const [draggingId, setDraggingId] = useState<string | null>(null);
   const [dragOverCol, setDragOverCol] = useState<string | null>(null);
   const [realtimeOn, setRealtimeOn] = useState(false);
+  const [priorityDragId, setPriorityDragId] = useState<string | null>(null);
+  const [priorityOverId, setPriorityOverId] = useState<string | null>(null);
+  const [filterVelocidade, setFilterVelocidade] = useState("todos");
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
