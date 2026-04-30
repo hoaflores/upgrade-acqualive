@@ -1063,6 +1063,8 @@ export default function DemandasSolicitadas() {
                         )}
                       </div>
 
+                      <div>
+                        <Label className="text-xs">Briefing</Label>
                         <div className="bg-slate-50 rounded p-3 text-sm whitespace-pre-wrap">{selected.briefing}</div>
                       </div>
 
