@@ -352,6 +352,64 @@ export default function DemandasSolicitadas() {
     setDragOverCol(null);
   };
 
+  // ===== Board de Prioridades (Gestor) =====
+  const ativasOrdenadas = useMemo(() => {
+    const ativas = demandas.filter((d) => !["concluida", "cancelada"].includes(d.status));
+    const filtradas = ativas.filter((d) => {
+      if (filterVelocidade !== "todos" && (d.velocidade || "normal") !== filterVelocidade) return false;
+      if (filterResp !== "todos") {
+        if (filterResp === "__sem__" && d.responsavel) return false;
+        if (filterResp === "__outro__" && (isFixedResp(d.responsavel) || !d.responsavel)) return false;
+        if (filterResp !== "__sem__" && filterResp !== "__outro__" && d.responsavel !== filterResp) return false;
+      }
+      if (search) {
+        const q = search.toLowerCase();
+        if (!d.protocolo.toLowerCase().includes(q) && !d.titulo.toLowerCase().includes(q) && !d.solicitante.toLowerCase().includes(q)) return false;
+      }
+      return true;
+    });
+    return [...filtradas].sort((a, b) => {
+      const ao = a.ordem_prioridade ?? Number.MAX_SAFE_INTEGER;
+      const bo = b.ordem_prioridade ?? Number.MAX_SAFE_INTEGER;
+      if (ao !== bo) return ao - bo;
+      return new Date(a.created_at).getTime() - new Date(b.created_at).getTime();
+    });
+  }, [demandas, filterVelocidade, filterResp, search]);
+
+  const persistOrdem = async (lista: any[]) => {
+    const updates = lista.map((d, i) => ({ id: d.id, ordem: i + 1 }));
+    setDemandas((prev) => prev.map((d) => {
+      const u = updates.find((x) => x.id === d.id);
+      return u ? { ...d, ordem_prioridade: u.ordem } : d;
+    }));
+    await Promise.all(
+      updates.map((u) => supabase.from("demandas").update({ ordem_prioridade: u.ordem }).eq("id", u.id)),
+    );
+  };
+
+  const reorderPrioridade = async (sourceId: string, targetId: string) => {
+    if (sourceId === targetId) return;
+    const lista = [...ativasOrdenadas];
+    const fromIdx = lista.findIndex((d) => d.id === sourceId);
+    const toIdx = lista.findIndex((d) => d.id === targetId);
+    if (fromIdx < 0 || toIdx < 0) return;
+    const [moved] = lista.splice(fromIdx, 1);
+    lista.splice(toIdx, 0, moved);
+    await persistOrdem(lista);
+    await logAtividade(sourceId, "campo_alterado", "ordem_prioridade", String(fromIdx + 1), String(toIdx + 1));
+  };
+
+  const moverOrdem = async (id: string, dir: -1 | 1) => {
+    const lista = [...ativasOrdenadas];
+    const idx = lista.findIndex((d) => d.id === id);
+    if (idx < 0) return;
+    const novoIdx = idx + dir;
+    if (novoIdx < 0 || novoIdx >= lista.length) return;
+    [lista[idx], lista[novoIdx]] = [lista[novoIdx], lista[idx]];
+    await persistOrdem(lista);
+    await logAtividade(id, "campo_alterado", "ordem_prioridade", String(idx + 1), String(novoIdx + 1));
+  };
+
   return (
     <div className="min-h-screen bg-slate-50">
       <Helmet>
