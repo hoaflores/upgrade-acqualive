@@ -581,7 +581,16 @@ export default function DemandasSolicitadas() {
               /* KANBAN */
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
                 {STATUS_OPTIONS.map((col) => {
-                  const items = groupedByStatus[col.value] || [];
+                  const raw = groupedByStatus[col.value] || [];
+                  // Coluna "Na fila" respeita a ordem definida pelo gestor
+                  const items = col.value === "nova"
+                    ? [...raw].sort((a, b) => {
+                        const ao = a.ordem_prioridade ?? Number.MAX_SAFE_INTEGER;
+                        const bo = b.ordem_prioridade ?? Number.MAX_SAFE_INTEGER;
+                        if (ao !== bo) return ao - bo;
+                        return new Date(a.created_at).getTime() - new Date(b.created_at).getTime();
+                      })
+                    : raw;
                   return (
                     <div
                       key={col.value}
