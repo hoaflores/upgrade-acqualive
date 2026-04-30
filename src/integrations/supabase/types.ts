@@ -155,10 +155,13 @@ export type Database = {
           briefing: string
           concluida_em: string | null
           created_at: string
+          data_entrega_interna: string | null
+          data_inicio_prevista: string | null
           emails_extras: string[] | null
           frequencia: string
           id: string
           links_referencia: string | null
+          ordem_prioridade: number | null
           prazo_esperado: string
           prazo_estimado_dias: number | null
           prioridade: string
@@ -170,15 +173,19 @@ export type Database = {
           tipo: string
           titulo: string
           updated_at: string
+          velocidade: string
         }
         Insert: {
           briefing: string
           concluida_em?: string | null
           created_at?: string
+          data_entrega_interna?: string | null
+          data_inicio_prevista?: string | null
           emails_extras?: string[] | null
           frequencia?: string
           id?: string
           links_referencia?: string | null
+          ordem_prioridade?: number | null
           prazo_esperado: string
           prazo_estimado_dias?: number | null
           prioridade?: string
@@ -190,15 +197,19 @@ export type Database = {
           tipo: string
           titulo: string
           updated_at?: string
+          velocidade?: string
         }
         Update: {
           briefing?: string
           concluida_em?: string | null
           created_at?: string
+          data_entrega_interna?: string | null
+          data_inicio_prevista?: string | null
           emails_extras?: string[] | null
           frequencia?: string
           id?: string
           links_referencia?: string | null
+          ordem_prioridade?: number | null
           prazo_esperado?: string
           prazo_estimado_dias?: number | null
           prioridade?: string
@@ -210,6 +221,7 @@ export type Database = {
           tipo?: string
           titulo?: string
           updated_at?: string
+          velocidade?: string
         }
         Relationships: []
       }
