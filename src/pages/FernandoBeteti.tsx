@@ -1,12 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
 import { useDayanReveal } from "@/hooks/useDayanReveal";
-import betetiCapa from "@/assets/beteti-capa.jpg";
-import betetiCamera from "@/assets/beteti-camera.png";
-import betetiLivro from "@/assets/beteti-livro.png";
-import betetiEstudio from "@/assets/beteti-estudio.webp";
-import betetiPerfil from "@/assets/beteti-perfil.png";
-import betetiFoto2 from "@/assets/beteti-foto2.webp";
+import betetiCapa from "@/assets/beteti-novo-3.png";
+import betetiCamera from "@/assets/beteti-novo-2.png";
+import betetiEstudio from "@/assets/beteti-terracota.png";
+import betetiPerfil from "@/assets/beteti-novo-4.png";
+import betetiRetrato from "@/assets/beteti-novo-1.png";
 
 const WHATSAPP =
   "https://wa.me/555192928468?text=Ol%C3%A1!%20Vim%20pela%20reportagem%20do%20Fernando%20Beteti.%20Quero%20um%20Acqualive.";
@@ -506,24 +505,24 @@ const BetetiVideos = () => {
           </article>
 
           {/* Painel lateral azul-marinho */}
-          <aside className="dayan-reveal dayan-reveal-delay-2 lg:col-span-4 bt-video-feature p-7 lg:p-9 flex flex-col">
-            <span className="bt-meta text-white/60">Curadoria editorial</span>
-            <h3 className="bt-display text-2xl lg:text-3xl text-white mt-3 leading-tight">
+          <aside className="dayan-reveal dayan-reveal-delay-2 lg:col-span-4 bg-white border border-[hsl(var(--bt-line))] p-7 lg:p-9 flex flex-col">
+            <span className="bt-meta text-[hsl(var(--bt-blue-deep))]">Curadoria editorial</span>
+            <h3 className="bt-display text-2xl lg:text-3xl text-[hsl(var(--bt-ink))] mt-3 leading-tight">
               Quatro reportagens. Uma única conclusão.
             </h3>
-            <p className="text-sm text-white/75 bt-body mt-4">
+            <p className="text-base text-[hsl(var(--bt-ink-soft))] bt-body mt-4 leading-relaxed">
               Selecionei os vídeos que mais geraram debate no canal. Assista
               em ordem, se conseguir. A história fica mais densa a cada
               episódio.
             </p>
             <div className="mt-auto pt-8">
-              <div className="flex items-baseline gap-3 border-t border-white/15 pt-5">
-                <span className="bt-display text-4xl text-white">04</span>
-                <span className="bt-meta text-white/60">reportagens nesta sala</span>
+              <div className="flex items-baseline gap-3 border-t border-[hsl(var(--bt-line))] pt-5">
+                <span className="bt-display text-4xl text-[hsl(var(--bt-ink))]">04</span>
+                <span className="bt-meta text-[hsl(var(--bt-muted))]">reportagens nesta sala</span>
               </div>
               <a
                 href="#oferta"
-                className="mt-5 inline-flex items-center gap-2 text-white text-xs font-bold uppercase tracking-wider bt-link"
+                className="mt-5 inline-flex items-center gap-2 text-[hsl(var(--bt-ink))] text-xs font-bold uppercase tracking-wider bt-link"
               >
                 Ver a oferta editorial →
               </a>
@@ -948,7 +947,7 @@ const BetetiOferta = () => (
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="group w-full inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[hsl(var(--bt-accent))] to-[hsl(var(--bt-red))] text-white px-7 py-5 font-bold uppercase tracking-wider text-sm shadow-2xl animate-pulse-soft hover:opacity-95 transition-opacity"
+              className="group w-full inline-flex items-center justify-center gap-3 bg-[hsl(var(--bt-ink))] text-white px-7 py-5 font-bold uppercase tracking-wider text-sm hover:bg-[hsl(var(--bt-blue-deep))] transition-colors"
             >
               Quero meu Acqualive →
             </a>
