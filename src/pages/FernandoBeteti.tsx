@@ -408,115 +408,170 @@ const BetetiReportagem = () => (
 ============================================================ */
 const VIDEOS = [
   {
+    id: "G74XNiv7MUY",
+    cat: "Investigação",
+    title: "Os 2 segredos da água Acqualive",
+    desc: "O que faz desse filtro o único que eu recomendo no canal, em detalhe técnico.",
+    duration: "12 min",
+  },
+  {
     id: "hUOj1BbSr3k",
     cat: "Entrevista",
     title: "A médica que curou a azia trocando a água",
     desc: "Sidney Rodrigues conta o caso clínico que mudou a forma dele de enxergar a água.",
-  },
-  {
-    id: "G74XNiv7MUY",
-    cat: "Investigação",
-    title: "Os 2 segredos da água Acqualive",
-    desc: "O que faz desse filtro o único que eu recomendo no canal — em detalhe técnico.",
-  },
-  {
-    id: "nd6zhHTWR5s",
-    cat: "Alerta",
-    title: "Algo na sua caixa d'água pode estar te adoecendo",
-    desc: "O que vive escondido na caixa que ninguém limpa — e o que isso faz com você.",
+    duration: "8 min",
   },
   {
     id: "x1SgUYcT6Ak",
     cat: "Especialista",
     title: "Dr. Dayan Siebra: como escolher a água ideal",
     desc: "Cirurgião cardiovascular explica por que a água que cura é diferente da que vende.",
-  },
-  {
-    id: "pkwYtusmIo4",
-    cat: "Reportagem",
-    title: "Esta água inflama seu corpo e você nem sabe",
-    desc: "PRAL, pH e oxidação: o que os exames mostram quando você troca a água.",
-  },
-  {
-    id: "9MN4PxggKu4",
-    cat: "Polêmica",
-    title: "A água que bebemos tem hormônios e restos de remédio",
-    desc: "Reportagem com Sidney Rodrigues sobre o que o tratamento convencional não retira.",
+    duration: "10 min",
   },
   {
     id: "5VipdvlZHHM",
     cat: "Cortes",
     title: "O cemitério que o cloro deixa na água",
-    desc: "Trihalometanos: o subproduto do cloro que poucos jornalistas se atrevem a citar.",
+    desc: "Trihalometanos, o subproduto do cloro que poucos jornalistas se atrevem a citar.",
+    duration: "6 min",
   },
 ];
 
-const BetetiVideos = () => (
-  <section
-    id="videos"
-    className="relative py-20 lg:py-28 bg-[hsl(var(--bt-paper))] border-y border-[hsl(var(--bt-line))]"
-  >
-    <div className="max-w-[1300px] mx-auto px-5 lg:px-8">
-      <div className="dayan-reveal flex items-end justify-between gap-6 mb-6">
-        <div>
-          <span className="bt-meta text-[hsl(var(--bt-red))]">02 · Vídeo</span>
-          <h2 className="bt-display text-3xl lg:text-5xl mt-2 text-[hsl(var(--bt-ink))]">
-            Reportagens em vídeo
-          </h2>
-        </div>
-        <a
-          href="https://www.youtube.com/@FernandoBeteti"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:inline bt-meta text-[hsl(var(--bt-ink))] bt-link"
-        >
-          Canal completo no YouTube →
-        </a>
-      </div>
-      <div className="bt-rule-double mb-10" />
-
-      <p className="dayan-reveal max-w-2xl text-base text-[hsl(var(--bt-ink-soft))] bt-body mb-10">
-        Sou jornalista de vídeo. É na frente da câmera que eu apuro,
-        confronto e mostro a fonte. Selecionei sete reportagens, algumas com
-        o Dr. Dayan Siebra e o pesquisador Sidney Rodrigues, que explicam por
-        que a água do Brasil é uma emergência silenciosa e por que existe uma
-        saída.
-      </p>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {VIDEOS.map((v, i) => (
-          <article
-            key={v.id}
-            className={`dayan-reveal dayan-reveal-delay-${(i % 3) + 1} bt-card-hover`}
+const BetetiVideos = () => {
+  const [feature, ...rest] = VIDEOS;
+  return (
+    <section
+      id="videos"
+      className="relative py-20 lg:py-28 bg-[hsl(var(--bt-paper))] border-y border-[hsl(var(--bt-line))]"
+    >
+      <div className="max-w-[1300px] mx-auto px-5 lg:px-8">
+        <div className="dayan-reveal flex items-end justify-between gap-6 mb-6">
+          <div>
+            <span className="bt-meta text-[hsl(var(--bt-blue-deep))]">02 · Vídeo</span>
+            <h2 className="bt-display text-3xl lg:text-5xl mt-2 text-[hsl(var(--bt-ink))]">
+              Reportagens em vídeo
+            </h2>
+          </div>
+          <a
+            href="https://www.youtube.com/@FernandoBeteti"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline bt-meta text-[hsl(var(--bt-ink))] bt-link"
           >
-            <div className="relative aspect-video overflow-hidden bg-[hsl(var(--bt-ink))]">
+            Canal completo no YouTube →
+          </a>
+        </div>
+        <div className="bt-rule-double mb-10" />
+
+        <p className="dayan-reveal max-w-2xl text-base text-[hsl(var(--bt-ink-soft))] bt-body mb-12">
+          Sou jornalista de vídeo. É na frente da câmera que eu apuro,
+          confronto e mostro a fonte. Quatro reportagens, com o Dr. Dayan
+          Siebra e o pesquisador Sidney Rodrigues, que explicam por que a
+          água do Brasil é uma emergência silenciosa, e por que existe uma
+          saída.
+        </p>
+
+        {/* Layout: vídeo em destaque + grid 3 colunas */}
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 mb-10">
+          {/* Destaque */}
+          <article className="dayan-reveal lg:col-span-8">
+            <div className="bt-video-frame aspect-video">
               <iframe
-                src={`https://www.youtube.com/embed/${v.id}?rel=0&modestbranding=1`}
-                title={v.title}
+                src={`https://www.youtube.com/embed/${feature.id}?rel=0&modestbranding=1`}
+                title={feature.title}
                 loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 className="absolute inset-0 w-full h-full"
               />
+              <span className="absolute top-4 left-4 bt-tag bt-tag-red z-[3]">
+                Em destaque
+              </span>
+              <span className="bt-play-badge">
+                <span className="bt-play-tri" /> {feature.duration}
+              </span>
             </div>
-            <div className="mt-4">
-              <span className="bt-tag">{v.cat}</span>
-              <h3 className="bt-display text-xl text-[hsl(var(--bt-ink))] mt-3 leading-tight">
-                {v.title}
-              </h3>
-              <p className="text-sm text-[hsl(var(--bt-ink-soft))] mt-2 bt-body leading-relaxed">
-                {v.desc}
-              </p>
-              <div className="mt-3 bt-meta text-[hsl(var(--bt-muted))]">
-                Por Fernando Beteti
+            <div className="mt-5 flex items-start gap-5">
+              <span className="bt-counter shrink-0">01</span>
+              <div>
+                <span className="bt-tag">{feature.cat}</span>
+                <h3 className="bt-display text-2xl lg:text-3xl text-[hsl(var(--bt-ink))] mt-3 leading-tight">
+                  {feature.title}
+                </h3>
+                <p className="text-base text-[hsl(var(--bt-ink-soft))] bt-body mt-3 max-w-2xl">
+                  {feature.desc}
+                </p>
               </div>
             </div>
           </article>
-        ))}
+
+          {/* Painel lateral azul-marinho */}
+          <aside className="dayan-reveal dayan-reveal-delay-2 lg:col-span-4 bt-video-feature p-7 lg:p-9 flex flex-col">
+            <span className="bt-meta text-white/60">Curadoria editorial</span>
+            <h3 className="bt-display text-2xl lg:text-3xl text-white mt-3 leading-tight">
+              Quatro reportagens. Uma única conclusão.
+            </h3>
+            <p className="text-sm text-white/75 bt-body mt-4">
+              Selecionei os vídeos que mais geraram debate no canal. Assista
+              em ordem, se conseguir. A história fica mais densa a cada
+              episódio.
+            </p>
+            <div className="mt-auto pt-8">
+              <div className="flex items-baseline gap-3 border-t border-white/15 pt-5">
+                <span className="bt-display text-4xl text-white">04</span>
+                <span className="bt-meta text-white/60">reportagens nesta sala</span>
+              </div>
+              <a
+                href="#oferta"
+                className="mt-5 inline-flex items-center gap-2 text-white text-xs font-bold uppercase tracking-wider bt-link"
+              >
+                Ver a oferta editorial →
+              </a>
+            </div>
+          </aside>
+        </div>
+
+        {/* Grid secundário */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {rest.map((v, i) => (
+            <article
+              key={v.id}
+              className={`dayan-reveal dayan-reveal-delay-${(i % 3) + 1} bt-card-hover`}
+            >
+              <div className="bt-video-frame aspect-video">
+                <iframe
+                  src={`https://www.youtube.com/embed/${v.id}?rel=0&modestbranding=1`}
+                  title={v.title}
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+                <span className="bt-play-badge">
+                  <span className="bt-play-tri" /> {v.duration}
+                </span>
+              </div>
+              <div className="mt-4 flex items-start gap-4">
+                <span className="bt-counter text-[2.5rem] shrink-0">
+                  0{i + 2}
+                </span>
+                <div>
+                  <span className="bt-tag">{v.cat}</span>
+                  <h3 className="bt-display text-xl text-[hsl(var(--bt-ink))] mt-3 leading-tight">
+                    {v.title}
+                  </h3>
+                  <p className="text-sm text-[hsl(var(--bt-ink-soft))] mt-2 bt-body leading-relaxed">
+                    {v.desc}
+                  </p>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 /* ============================================================
    DOR — sintomas (estilo lista de matéria de saúde)
