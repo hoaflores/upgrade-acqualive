@@ -839,8 +839,8 @@ const BetetiBio = () => (
       <div className="grid lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-5 dayan-reveal">
           <img
-            src={betetiLivro}
-            alt="Fernando Beteti com seu livro"
+            src={betetiPerfil}
+            alt="Fernando Beteti, Repórter Saúde"
             className="w-full h-auto object-contain max-w-md mx-auto"
           />
         </div>
