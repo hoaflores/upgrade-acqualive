@@ -428,12 +428,13 @@
    /fernando-beteti — Newsroom scoped overrides
    ============================================ */
 .beteti-page {
-  --bt-bg: 40 30% 97%;
-  --bt-paper: 40 35% 94%;
-  --bt-ink: 218 60% 10%;
-  --bt-ink-soft: 218 30% 22%;
-  --bt-muted: 215 15% 42%;
-  --bt-line: 215 15% 80%;
+  --bt-bg: 0 0% 100%;
+  --bt-paper: 0 0% 98%;
+  --bt-ink: 0 0% 8%;
+  --bt-ink-soft: 0 0% 22%;
+  --bt-muted: 0 0% 42%;
+  --bt-line: 0 0% 88%;
+  --bt-line-strong: 0 0% 15%;
   --bt-blue: 215 62% 31%;
   --bt-blue-deep: 218 97% 14%;
   --bt-red: 0 78% 48%;
@@ -441,38 +442,84 @@
 
   background: hsl(var(--bt-bg));
   color: hsl(var(--bt-ink));
-  font-family: 'Archivo', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: -0.011em;
+  letter-spacing: 0;
 }
 
+/* Headlines: serif estilo portal de notícias (Playfair/Merriweather) */
 .beteti-page .bt-display {
-  font-family: 'Fraunces', 'Libre Caslon Text', serif;
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  line-height: 1;
-}
-.beteti-page .bt-sans-display {
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Playfair Display', 'Merriweather', Georgia, serif;
   font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 0.95;
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+  color: hsl(var(--bt-ink));
+  font-style: normal;
 }
 .beteti-page .bt-italic {
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-weight: 500;
+  /* mantido para compatibilidade — agora apenas destaque, NÃO itálico cursivo */
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  font-weight: 900;
+  color: hsl(var(--bt-red));
 }
-.beteti-page .bt-eyebrow {
-  font-family: 'Archivo', sans-serif;
+
+/* Body & lead */
+.beteti-page .bt-body {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* Tag / categoria — chip preto estilo portal */
+.beteti-page .bt-tag {
+  display: inline-flex;
+  align-items: center;
+  background: hsl(var(--bt-ink));
+  color: #fff;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  font-size: 0.68rem;
+  padding: 0.35rem 0.7rem;
+  line-height: 1;
 }
+.beteti-page .bt-tag-red {
+  background: hsl(var(--bt-red));
+  color: #fff;
+}
+
+.beteti-page .bt-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  color: hsl(var(--bt-muted));
+}
+
+.beteti-page .bt-meta {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.72rem;
+  color: hsl(var(--bt-muted));
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
 .beteti-page .bt-mono {
   font-family: 'Roboto Mono', monospace;
   letter-spacing: -0.02em;
+}
+
+/* Hairline rules estilo jornal */
+.beteti-page .bt-rule {
+  border-top: 1px solid hsl(var(--bt-line-strong));
+}
+.beteti-page .bt-rule-double {
+  border-top: 3px double hsl(var(--bt-line-strong));
+  border-bottom: 1px solid hsl(var(--bt-line-strong));
 }
 
 /* Breaking news ticker */
@@ -483,7 +530,7 @@
 .beteti-page .bt-ticker {
   display: flex;
   width: max-content;
-  animation: bt-ticker 45s linear infinite;
+  animation: bt-ticker 50s linear infinite;
 }
 
 /* Live pulse dot */
@@ -499,18 +546,18 @@
   animation: bt-pulse-dot 1.4s ease-in-out infinite;
 }
 
-/* Newspaper drop cap */
+/* Newspaper drop cap (preto, sóbrio) */
 .beteti-page .bt-dropcap::first-letter {
-  font-family: 'Fraunces', serif;
-  font-weight: 700;
-  font-size: 4.6em;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 4.4em;
   line-height: 0.85;
   float: left;
-  padding: 0.08em 0.12em 0 0;
-  color: hsl(var(--bt-red));
+  padding: 0.05em 0.12em 0 0;
+  color: hsl(var(--bt-ink));
 }
 
-/* Underline on hover (link) */
+/* Underline link */
 .beteti-page .bt-link {
   position: relative; display: inline-block;
 }
@@ -525,31 +572,12 @@
   transform: scaleX(1); transform-origin: left;
 }
 
-/* Editorial paper texture */
-.beteti-page .bt-paper {
-  background-color: hsl(var(--bt-paper));
-  background-image:
-    radial-gradient(hsl(var(--bt-ink) / 0.025) 1px, transparent 1px);
-  background-size: 4px 4px;
+/* Card hover sutil */
+.beteti-page .bt-card-hover {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-
-/* Marquee headline (vertical scroll-style on hover) */
-.beteti-page .bt-headline-hover {
-  display: inline-block;
-  overflow: hidden;
-  position: relative;
-}
-.beteti-page .bt-headline-hover .bt-h-line {
-  display: block;
-  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.beteti-page .bt-headline-hover:hover .bt-h-line {
-  transform: translateY(-100%);
-}
-.beteti-page .bt-headline-hover .bt-h-line::after {
-  content: attr(data-text);
-  display: block;
-  color: hsl(var(--bt-red));
+.beteti-page .bt-card-hover:hover {
+  transform: translateY(-4px);
 }
 
 /* Stamp / selo */
@@ -557,17 +585,20 @@
   border: 2px solid hsl(var(--bt-red));
   color: hsl(var(--bt-red));
   padding: 0.25rem 0.6rem;
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   display: inline-block;
-  transform: rotate(-3deg);
 }
 
 /* Dark section variant */
 .beteti-page .bt-dark {
-  background: hsl(var(--bt-blue-deep));
-  color: hsl(var(--bt-bg));
+  background: hsl(var(--bt-ink));
+  color: #fff;
 }
+.beteti-page .bt-dark .bt-display { color: #fff; }
+.beteti-page .bt-dark .bt-eyebrow,
+.beteti-page .bt-dark .bt-meta { color: hsl(0 0% 70%); }
+
