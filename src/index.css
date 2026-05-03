@@ -489,7 +489,11 @@
   line-height: 1;
 }
 .beteti-page .bt-tag-red {
-  background: hsl(var(--bt-red));
+  background: hsl(var(--bt-blue-deep));
+  color: #fff;
+}
+.beteti-page .bt-tag-alert {
+  background: hsl(var(--bt-alert));
   color: #fff;
 }
 
