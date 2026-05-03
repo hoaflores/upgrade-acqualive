@@ -947,7 +947,7 @@ const BetetiOferta = () => (
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="group w-full inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[hsl(var(--bt-accent))] to-[hsl(var(--bt-red))] text-white px-7 py-5 font-bold uppercase tracking-wider text-sm shadow-2xl animate-pulse-soft hover:opacity-95 transition-opacity"
+              className="group w-full inline-flex items-center justify-center gap-3 bg-[hsl(var(--bt-ink))] text-white px-7 py-5 font-bold uppercase tracking-wider text-sm hover:bg-[hsl(var(--bt-blue-deep))] transition-colors"
             >
               Quero meu Acqualive →
             </a>
