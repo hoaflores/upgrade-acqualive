@@ -437,7 +437,10 @@
   --bt-line-strong: 0 0% 15%;
   --bt-blue: 215 62% 31%;
   --bt-blue-deep: 218 97% 14%;
-  --bt-red: 0 78% 48%;
+  /* "bt-red" agora é o azul-marca: a página deve ter mais azul que vermelho.
+     O vermelho real ficou restrito ao ticker e ao dot de "ao vivo". */
+  --bt-red: 215 62% 31%;
+  --bt-alert: 0 78% 48%;
   --bt-accent: 21 89% 55%;
 
   background: hsl(var(--bt-bg));
