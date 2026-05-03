@@ -1,12 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
 import { useDayanReveal } from "@/hooks/useDayanReveal";
-import betetiCapa from "@/assets/beteti-capa.jpg";
-import betetiCamera from "@/assets/beteti-camera.png";
-import betetiLivro from "@/assets/beteti-livro.png";
-import betetiEstudio from "@/assets/beteti-estudio.webp";
-import betetiPerfil from "@/assets/beteti-perfil.png";
-import betetiFoto2 from "@/assets/beteti-foto2.webp";
+import betetiCapa from "@/assets/beteti-novo-3.png";
+import betetiCamera from "@/assets/beteti-novo-2.png";
+import betetiEstudio from "@/assets/beteti-terracota.png";
+import betetiPerfil from "@/assets/beteti-novo-4.png";
+import betetiRetrato from "@/assets/beteti-novo-1.png";
 
 const WHATSAPP =
   "https://wa.me/555192928468?text=Ol%C3%A1!%20Vim%20pela%20reportagem%20do%20Fernando%20Beteti.%20Quero%20um%20Acqualive.";
