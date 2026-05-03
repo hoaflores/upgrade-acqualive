@@ -5,6 +5,8 @@ import betetiCapa from "@/assets/beteti-capa.jpg";
 import betetiCamera from "@/assets/beteti-camera.png";
 import betetiLivro from "@/assets/beteti-livro.png";
 import betetiEstudio from "@/assets/beteti-estudio.webp";
+import betetiPerfil from "@/assets/beteti-perfil.png";
+import betetiFoto2 from "@/assets/beteti-foto2.webp";
 
 const WHATSAPP =
   "https://wa.me/555192928468?text=Ol%C3%A1!%20Vim%20pela%20reportagem%20do%20Fernando%20Beteti.%20Quero%20um%20Acqualive.";
