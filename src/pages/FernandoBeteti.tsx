@@ -267,29 +267,28 @@ const BetetiHero = () => (
 ============================================================ */
 const HEADLINES = [
   {
+    id: "nd6zhHTWR5s",
     tag: "Fique de olho",
-    title:
-      "O perigo escondido dentro da sua caixa d'água que você nem imagina",
+    title: "Algo na sua caixa d'água pode estar te adoecendo",
     excerpt:
-      "Sedimentos, biofilme e contaminação por microrganismos: o que vive escondido na caixa que ninguém limpa.",
-    img: betetiEstudio,
+      "Sedimentos, biofilme e contaminação por microrganismos. O que vive escondido na caixa que ninguém limpa.",
     cat: "Investigação",
   },
   {
-    tag: "Pesquisa",
-    title: "Por que o filtro de barro brasileiro é considerado o melhor do mundo",
-    excerpt:
-      "O livro 'The Drinking Water Book', de Colin Ingram, evidencia o que o brasileiro sempre soube de forma intuitiva.",
-    img: betetiCamera,
-    cat: "Pesquisa",
-  },
-  {
+    id: "9MN4PxggKu4",
     tag: "Polêmica",
     title: "A água que bebemos tem hormônios e restos de remédio",
     excerpt:
       "Reportagem com Sidney Rodrigues sobre o que o tratamento convencional não retira da torneira.",
-    img: betetiLivro,
     cat: "Polêmica",
+  },
+  {
+    id: "pkwYtusmIo4",
+    tag: "Pesquisa",
+    title: "Esta água inflama seu corpo, e você nem sabe",
+    excerpt:
+      "PRAL, pH e oxidação. O que os exames mostram quando você troca a água que bebe.",
+    cat: "Pesquisa",
   },
 ];
 
@@ -298,8 +297,8 @@ const BetetiHeadlines = () => (
     <div className="max-w-[1300px] mx-auto px-5 lg:px-8">
       <div className="dayan-reveal flex items-center justify-between mb-6">
         <h2 className="bt-display text-2xl lg:text-3xl">Mais lidas da semana</h2>
-        <a href="#videos" className="bt-meta text-[hsl(var(--bt-red))] bt-link">
-          Ver tudo →
+        <a href="#videos" className="bt-meta text-[hsl(var(--bt-blue-deep))] bt-link">
+          Ver todos os vídeos →
         </a>
       </div>
       <div className="bt-rule mb-8" />
@@ -307,19 +306,22 @@ const BetetiHeadlines = () => (
       <div className="grid md:grid-cols-3 gap-8">
         {HEADLINES.map((h, i) => (
           <article
-            key={i}
+            key={h.id}
             className={`dayan-reveal dayan-reveal-delay-${(i % 3) + 1} bt-card-hover group`}
           >
-            <div className="relative aspect-[4/3] overflow-hidden bg-[hsl(var(--bt-ink))] mb-4">
-              <img
-                src={h.img}
-                alt={h.title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            <div className="bt-video-frame aspect-video mb-4">
+              <iframe
+                src={`https://www.youtube.com/embed/${h.id}?rel=0&modestbranding=1`}
+                title={h.title}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
               />
-              <span className="absolute top-3 left-3 bt-tag">{h.tag}</span>
+              <span className="absolute top-3 left-3 bt-tag z-[3]">{h.tag}</span>
             </div>
-            <span className="bt-meta text-[hsl(var(--bt-red))]">{h.cat}</span>
-            <h3 className="bt-display text-xl lg:text-2xl text-[hsl(var(--bt-ink))] mt-2 leading-tight group-hover:text-[hsl(var(--bt-red))] transition-colors">
+            <span className="bt-meta text-[hsl(var(--bt-blue-deep))]">{h.cat}</span>
+            <h3 className="bt-display text-xl lg:text-2xl text-[hsl(var(--bt-ink))] mt-2 leading-tight group-hover:text-[hsl(var(--bt-blue-deep))] transition-colors">
               {h.title}
             </h3>
             <p className="text-sm text-[hsl(var(--bt-ink-soft))] bt-body mt-3">
