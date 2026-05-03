@@ -130,7 +130,7 @@ const BetetiNav = () => {
       </div>
 
       {/* Breaking news ticker */}
-      <div className="bg-[hsl(var(--bt-red))] text-white py-1.5 overflow-hidden">
+      <div className="bg-[hsl(var(--bt-alert))] text-white py-1.5 overflow-hidden">
         <div className="bt-ticker">
           {Array.from({ length: 2 }).map((_, k) => (
             <div key={k} className="flex items-center gap-10 pr-10 shrink-0">
