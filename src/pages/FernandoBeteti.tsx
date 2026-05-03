@@ -505,24 +505,24 @@ const BetetiVideos = () => {
           </article>
 
           {/* Painel lateral azul-marinho */}
-          <aside className="dayan-reveal dayan-reveal-delay-2 lg:col-span-4 bt-video-feature p-7 lg:p-9 flex flex-col">
-            <span className="bt-meta text-white/60">Curadoria editorial</span>
-            <h3 className="bt-display text-2xl lg:text-3xl text-white mt-3 leading-tight">
+          <aside className="dayan-reveal dayan-reveal-delay-2 lg:col-span-4 bg-white border border-[hsl(var(--bt-line))] p-7 lg:p-9 flex flex-col">
+            <span className="bt-meta text-[hsl(var(--bt-blue-deep))]">Curadoria editorial</span>
+            <h3 className="bt-display text-2xl lg:text-3xl text-[hsl(var(--bt-ink))] mt-3 leading-tight">
               Quatro reportagens. Uma única conclusão.
             </h3>
-            <p className="text-sm text-white/75 bt-body mt-4">
+            <p className="text-base text-[hsl(var(--bt-ink-soft))] bt-body mt-4 leading-relaxed">
               Selecionei os vídeos que mais geraram debate no canal. Assista
               em ordem, se conseguir. A história fica mais densa a cada
               episódio.
             </p>
             <div className="mt-auto pt-8">
-              <div className="flex items-baseline gap-3 border-t border-white/15 pt-5">
-                <span className="bt-display text-4xl text-white">04</span>
-                <span className="bt-meta text-white/60">reportagens nesta sala</span>
+              <div className="flex items-baseline gap-3 border-t border-[hsl(var(--bt-line))] pt-5">
+                <span className="bt-display text-4xl text-[hsl(var(--bt-ink))]">04</span>
+                <span className="bt-meta text-[hsl(var(--bt-muted))]">reportagens nesta sala</span>
               </div>
               <a
                 href="#oferta"
-                className="mt-5 inline-flex items-center gap-2 text-white text-xs font-bold uppercase tracking-wider bt-link"
+                className="mt-5 inline-flex items-center gap-2 text-[hsl(var(--bt-ink))] text-xs font-bold uppercase tracking-wider bt-link"
               >
                 Ver a oferta editorial →
               </a>
