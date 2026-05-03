@@ -44,7 +44,7 @@ const BetetiNav = () => {
       <div className="bg-[hsl(var(--bt-ink))] text-white/80 text-[11px]">
         <div className="max-w-[1300px] mx-auto px-5 lg:px-8 h-9 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <span className="bt-tag bt-tag-red text-[9px] py-1 px-2">
+            <span className="bt-tag bt-tag-alert text-[9px] py-1 px-2">
               <span className="bt-live-dot mr-1.5" /> ao vivo
             </span>
             <span className="hidden sm:inline bt-meta text-white/70">
