@@ -437,7 +437,10 @@
   --bt-line-strong: 0 0% 15%;
   --bt-blue: 215 62% 31%;
   --bt-blue-deep: 218 97% 14%;
-  --bt-red: 0 78% 48%;
+  /* "bt-red" agora é o azul-marca: a página deve ter mais azul que vermelho.
+     O vermelho real ficou restrito ao ticker e ao dot de "ao vivo". */
+  --bt-red: 215 62% 31%;
+  --bt-alert: 0 78% 48%;
   --bt-accent: 21 89% 55%;
 
   background: hsl(var(--bt-bg));
@@ -486,7 +489,11 @@
   line-height: 1;
 }
 .beteti-page .bt-tag-red {
-  background: hsl(var(--bt-red));
+  background: hsl(var(--bt-blue-deep));
+  color: #fff;
+}
+.beteti-page .bt-tag-alert {
+  background: hsl(var(--bt-alert));
   color: #fff;
 }
 
@@ -542,8 +549,60 @@
   display: inline-block;
   width: 0.5rem; height: 0.5rem;
   border-radius: 9999px;
-  background: hsl(var(--bt-red));
+  background: hsl(var(--bt-alert));
   animation: bt-pulse-dot 1.4s ease-in-out infinite;
+}
+
+/* ---- Galeria de vídeos (estilo "newsroom TV") ---- */
+.beteti-page .bt-video-frame {
+  position: relative;
+  overflow: hidden;
+  background: hsl(var(--bt-ink));
+  border: 1px solid hsl(var(--bt-line));
+}
+.beteti-page .bt-video-frame::before {
+  content: '';
+  position: absolute; inset: 0;
+  border: 1px solid rgba(255,255,255,0.06);
+  pointer-events: none; z-index: 2;
+}
+.beteti-page .bt-play-badge {
+  position: absolute; left: 1rem; bottom: 1rem; z-index: 3;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: rgba(255,255,255,0.95);
+  color: hsl(var(--bt-ink));
+  font-family: 'Inter', sans-serif;
+  font-weight: 700; font-size: 0.62rem;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 0.45rem 0.7rem;
+  pointer-events: none;
+}
+.beteti-page .bt-play-badge .bt-play-tri {
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 8px;
+  border-color: transparent transparent transparent hsl(var(--bt-blue-deep));
+}
+.beteti-page .bt-video-feature {
+  position: relative;
+  background: hsl(var(--bt-blue-deep));
+  color: #fff;
+  overflow: hidden;
+}
+.beteti-page .bt-video-feature::after {
+  content: '';
+  position: absolute;
+  width: 320px; height: 320px; right: -80px; top: -80px;
+  background: radial-gradient(circle, hsl(var(--bt-accent) / 0.35), transparent 70%);
+  pointer-events: none;
+}
+.beteti-page .bt-counter {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 4.5rem;
+  line-height: 0.9;
+  color: hsl(var(--bt-line-strong));
+  opacity: 0.18;
 }
 
 /* Newspaper drop cap (preto, sóbrio) */
