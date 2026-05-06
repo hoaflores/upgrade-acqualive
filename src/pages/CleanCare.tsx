@@ -352,52 +352,69 @@ const ingredients = [
   },
 ];
 
-const Ingredients = () => (
-  <section className="relative overflow-hidden bg-gradient-to-b from-[#f7f4ef] to-white py-28 md:py-40">
-    <div className="container mx-auto px-6 lg:px-12">
-      <div className="grid gap-16 md:grid-cols-2 md:items-center">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
+const Ingredients = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, 90]);
+
+  return (
+    <section ref={ref} className="relative overflow-hidden bg-gradient-to-b from-[#f7f4ef] via-[#efeae0] to-white py-28 md:py-40">
+      {/* organic decorative blobs */}
+      <motion.div
+        style={{ rotate }}
+        className="pointer-events-none absolute -right-40 top-20 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-[#1d4380]/15 to-transparent blur-3xl"
+      />
+      <motion.div
+        style={{ rotate: useTransform(scrollYProgress, [0, 1], [0, -60]) }}
+        className="pointer-events-none absolute -left-40 bottom-10 h-[400px] w-[400px] rounded-full bg-gradient-to-br from-[#9cc8ff]/30 to-transparent blur-3xl"
+      />
+
+      <div className="container relative mx-auto px-6 lg:px-12">
+        <div className="mx-auto mb-20 max-w-3xl text-center">
           <span className="mb-5 inline-block text-[11px] font-semibold uppercase tracking-[0.3em] text-[#1d4380]">
             Composição mineral
           </span>
           <h2 className="font-display text-4xl font-light leading-tight text-[#0a1628] md:text-6xl">
             A fórmula é a <em className="font-serif italic">terra.</em>
           </h2>
-          <p className="mt-6 max-w-md text-[#0a1628]/70">
+          <p className="mx-auto mt-6 max-w-xl text-[#0a1628]/70">
             Não inventamos a Clean &amp; Care em laboratório. A natureza levou
             milhões de anos filtrando essa água através das rochas do Aquífero Guarani.
-            O que chega no frasco é mineral puro, sem nenhuma intervenção química.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        {/* editorial mineral list - asymmetric, large numbers */}
+        <div className="mx-auto max-w-5xl">
           {ingredients.map((i, idx) => (
             <motion.div
               key={i.name}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="rounded-2xl border border-[#0a1628]/10 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.7, delay: idx * 0.05 }}
+              className={`group grid grid-cols-12 items-center gap-4 border-b border-[#0a1628]/10 py-10 transition-all hover:bg-white/60 md:gap-8 md:py-14`}
             >
-              <i.icon className="mb-4 h-7 w-7 text-[#1d4380]" />
-              <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#1d4380]/60">
-                {i.tag}
+              <div className="col-span-2 font-display text-3xl font-light text-[#1d4380]/40 md:text-5xl">
+                {String(idx + 1).padStart(2, "0")}
               </div>
-              <h3 className="mt-1 font-display text-2xl font-light text-[#0a1628]">{i.name}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-[#0a1628]/65">{i.desc}</p>
+              <div className="col-span-10 md:col-span-5">
+                <div className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#1d4380]/70">
+                  {i.tag}
+                </div>
+                <h3 className="mt-2 font-display text-3xl font-light text-[#0a1628] md:text-5xl">
+                  {i.name}
+                </h3>
+              </div>
+              <div className="col-span-12 md:col-span-5">
+                <p className="text-base leading-relaxed text-[#0a1628]/70 md:text-lg">{i.desc}</p>
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 /* ---------------- ORIGIN STORY ---------------- */
 const Origin = () => {
