@@ -37,9 +37,19 @@ const Hero = () => {
   const y = useTransform(scrollYProgress, [0, 1], [0, 120]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const [cursor, setCursor] = useState({ x: -100, y: -100, active: false });
 
   return (
-    <section ref={ref} className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-[#0a1628]">
+    <section
+      ref={ref}
+      onMouseMove={(e) => {
+        const r = ref.current?.getBoundingClientRect();
+        if (!r) return;
+        setCursor({ x: e.clientX - r.left, y: e.clientY - r.top, active: true });
+      }}
+      onMouseLeave={() => setCursor((c) => ({ ...c, active: false }))}
+      className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-[#0a1628] md:cursor-none"
+    >
       <motion.div style={{ scale, y }} className="absolute inset-0">
         <img
           src={modelBlue1}
