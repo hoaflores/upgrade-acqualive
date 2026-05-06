@@ -8,3 +8,6 @@ verify_jwt = false
 
 [functions.notificar-comentario]
 verify_jwt = false
+
+[functions.salvar-calculadora-hidratacao]
+verify_jwt = false
