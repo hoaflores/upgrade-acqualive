@@ -285,7 +285,7 @@ const benefits = [
 const HoverBenefits = () => (
   <section id="ritual" className="bg-[#0a1628] py-28 text-white md:py-40">
     <div className="container mx-auto px-6 lg:px-12">
-      <div className="mx-auto mb-20 max-w-3xl text-center">
+      <div className="mx-auto mb-16 max-w-3xl text-center">
         <span className="mb-5 inline-block text-[11px] font-semibold uppercase tracking-[0.3em] text-[#9cc8ff]">
           O ritual Acqualive
         </span>
@@ -296,34 +296,30 @@ const HoverBenefits = () => (
           Passe o cursor para descobrir como o Clean &amp; Care entra na sua rotina.
         </p>
       </div>
+    </div>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {benefits.map((b) => (
-          <motion.div
-            key={b.title}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="group relative h-[420px] overflow-hidden rounded-3xl bg-[#0f2240]"
-          >
-            <img
-              src={b.img}
-              alt={b.title}
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/30 to-transparent transition-opacity duration-500 group-hover:from-[#0a1628]/95 group-hover:via-[#0a1628]/70" />
-
-            <div className="absolute inset-x-0 bottom-0 p-7">
-              <b.icon className="mb-3 h-6 w-6 text-[#9cc8ff] opacity-0 transition-all duration-500 group-hover:opacity-100" />
-              <h3 className="font-display text-2xl font-light">{b.title}</h3>
-              <p className="mt-2 max-h-0 overflow-hidden text-sm text-white/75 transition-all duration-500 group-hover:max-h-32 group-hover:pt-2">
-                {b.desc}
-              </p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+    {/* full-bleed mosaic, no gaps */}
+    <div className="grid w-full grid-cols-2 md:grid-cols-3">
+      {benefits.map((b) => (
+        <div
+          key={b.title}
+          className="group relative h-[280px] overflow-hidden md:h-[420px]"
+        >
+          <img
+            src={b.img}
+            alt={b.title}
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/95 via-[#0a1628]/30 to-transparent transition-opacity duration-500 group-hover:from-[#0a1628]/95 group-hover:via-[#0a1628]/60" />
+          <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
+            <b.icon className="mb-3 h-6 w-6 text-[#9cc8ff] opacity-80 transition-all duration-500 group-hover:opacity-100" />
+            <h3 className="font-display text-xl font-light md:text-2xl">{b.title}</h3>
+            <p className="mt-2 max-h-0 overflow-hidden text-sm text-white/80 transition-all duration-500 group-hover:max-h-32 group-hover:pt-2">
+              {b.desc}
+            </p>
+          </div>
+        </div>
+      ))}
     </div>
   </section>
 );
