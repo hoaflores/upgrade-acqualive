@@ -21,7 +21,7 @@ function buildCTA(label: string) {
 export default function CalculadoraAcqualiveResultados() {
   const [params] = useSearchParams();
   const ml = parseInt(params.get("ml") || "0");
-  const litros = (ml / 1000).toFixed(2).replace(".", ",");
+  const litros = (ml / 1000).toFixed(1).replace(".", ",");
   const copos = Math.round(ml / 250);
   const nome = params.get("nome") || "";
   const primeiroNome = useMemo(() => nome.split(" ")[0] || "", [nome]);
@@ -63,7 +63,7 @@ export default function CalculadoraAcqualiveResultados() {
     window.open(url, "_blank", "noopener");
   }
 
-  const litrosCounter = (counter / 1000).toFixed(2).replace(".", ",");
+  const litrosCounter = (counter / 1000).toFixed(1).replace(".", ",");
 
   return (
     <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_hsl(var(--primary)/0.1),_transparent_60%),linear-gradient(to_bottom,_#f0f9ff,_#ffffff)]">
