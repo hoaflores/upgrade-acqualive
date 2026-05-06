@@ -100,32 +100,6 @@ const BetetiNav = () => {
           </a>
         </div>
 
-        {/* Categories bar (estilo portal) */}
-        <div className="bg-[hsl(var(--bt-paper))] border-t border-[hsl(var(--bt-line))]">
-          <div className="max-w-[1300px] mx-auto px-5 lg:px-8 h-10 flex items-center gap-6 overflow-x-auto">
-            {[
-              { label: "Atualidades", href: "#reportagem" },
-              { label: "Investigação", href: "#dor" },
-              { label: "Pesquisa", href: "#solucao" },
-              { label: "Polêmica", href: "#reportagem" },
-              { label: "Vídeo", href: "#videos" },
-              { label: "Entrevista", href: "#videos" },
-              { label: "Acqualive", href: "http://www.acqualive.com.br/n2026" },
-            ].map((c, i) => (
-              <a
-                key={c.label}
-                href={c.href}
-                className={`text-[11px] font-bold uppercase tracking-wider whitespace-nowrap transition-colors ${
-                  i === 1
-                    ? "text-[hsl(var(--bt-blue-deep))]"
-                    : "text-[hsl(var(--bt-ink-soft))] hover:text-[hsl(var(--bt-blue-deep))]"
-                }`}
-              >
-                {c.label}
-              </a>
-            ))}
-          </div>
-        </div>
       </div>
 
       {/* Breaking news ticker */}
