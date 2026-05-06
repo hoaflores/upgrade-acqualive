@@ -37,9 +37,19 @@ const Hero = () => {
   const y = useTransform(scrollYProgress, [0, 1], [0, 120]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const [cursor, setCursor] = useState({ x: -100, y: -100, active: false });
 
   return (
-    <section ref={ref} className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-[#0a1628]">
+    <section
+      ref={ref}
+      onMouseMove={(e) => {
+        const r = ref.current?.getBoundingClientRect();
+        if (!r) return;
+        setCursor({ x: e.clientX - r.left, y: e.clientY - r.top, active: true });
+      }}
+      onMouseLeave={() => setCursor((c) => ({ ...c, active: false }))}
+      className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-[#0a1628] md:cursor-none"
+    >
       <motion.div style={{ scale, y }} className="absolute inset-0">
         <img
           src={modelBlue1}
@@ -116,7 +126,7 @@ const Hero = () => {
             ].map((s) => (
               <div key={s.v}>
                 <div className="font-display text-2xl font-light text-white">{s.v}</div>
-                <div className="mt-1 text-[11px] uppercase tracking-wider text-white/55">{s.l}</div>
+                <div className="mt-1 text-[11px] uppercase tracking-wider text-white/75">{s.l}</div>
               </div>
             ))}
           </div>
@@ -130,6 +140,22 @@ const Hero = () => {
       >
         role para descobrir ↓
       </motion.div>
+
+      {/* Custom water-drop cursor (desktop) */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute z-20 hidden h-10 w-10 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm md:block"
+        style={{
+          left: cursor.x,
+          top: cursor.y,
+          opacity: cursor.active ? 1 : 0,
+          transform: `translate(-50%, -50%) scale(${cursor.active ? 1 : 0.6})`,
+          transition: "opacity 200ms ease-out",
+        }}
+      >
+        <span className="absolute inset-2 rounded-full bg-white/40 blur-[2px]" />
+        <Droplets className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 text-white" />
+      </div>
     </section>
   );
 };
@@ -242,6 +268,69 @@ const Story = () => (
   </section>
 );
 
+/* ---------------- BEFORE / AFTER SLIDER ---------------- */
+const BeforeAfter = () => {
+  const [pos, setPos] = useState(50);
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const dragging = useRef(false);
+
+  const move = (clientX: number) => {
+    const el = wrapRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const p = ((clientX - rect.left) / rect.width) * 100;
+    setPos(Math.max(2, Math.min(98, p)));
+  };
+
+  return (
+    <section className="bg-[#f7f4ef] py-24 md:py-36">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="mx-auto mb-14 max-w-3xl text-center">
+          <span className="mb-5 inline-block text-[11px] font-semibold uppercase tracking-[0.3em] text-[#1d4380]">
+            Resultado visível
+          </span>
+          <h2 className="font-display text-4xl font-light leading-tight text-[#0a1628] md:text-5xl">
+            Arraste e veja a <em className="font-serif italic">diferença.</em>
+          </h2>
+          <p className="mt-6 text-[#0a1628]/70">
+            Pele real, antes e depois de duas semanas de Clean &amp; Care.
+          </p>
+        </div>
+
+        <div
+          ref={wrapRef}
+          onMouseDown={(e) => { dragging.current = true; move(e.clientX); }}
+          onMouseMove={(e) => dragging.current && move(e.clientX)}
+          onMouseUp={() => (dragging.current = false)}
+          onMouseLeave={() => (dragging.current = false)}
+          onTouchStart={(e) => move(e.touches[0].clientX)}
+          onTouchMove={(e) => move(e.touches[0].clientX)}
+          className="relative mx-auto aspect-[16/10] w-full max-w-5xl select-none overflow-hidden rounded-[2rem] shadow-2xl"
+          style={{ cursor: "ew-resize" }}
+        >
+          {/* AFTER (base) */}
+          <img src={modelEyes4} alt="Pele depois de Clean & Care" className="absolute inset-0 h-full w-full object-cover" />
+          <div className="absolute right-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#0a1628]">Depois</div>
+
+          {/* BEFORE (clipped) */}
+          <div className="absolute inset-0 overflow-hidden" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
+            <img src={modelSpray3} alt="Pele antes de Clean & Care" className="absolute inset-0 h-full w-full object-cover" style={{ filter: "grayscale(35%) brightness(0.92) contrast(1.05)" }} />
+            <div className="absolute left-4 top-4 rounded-full bg-[#0a1628]/85 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">Antes</div>
+          </div>
+
+          {/* Handle */}
+          <div className="absolute top-0 h-full w-[2px] bg-white shadow-[0_0_20px_rgba(255,255,255,0.6)]" style={{ left: `${pos}%` }}>
+            <div className="absolute left-1/2 top-1/2 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-xl">
+              <ArrowRight className="h-4 w-4 -rotate-180 text-[#0a1628]" />
+              <ArrowRight className="h-4 w-4 text-[#0a1628]" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 /* ---------------- HOVER BENEFITS GRID ---------------- */
 const benefits = [
   {
@@ -282,47 +371,57 @@ const benefits = [
   },
 ];
 
-const HoverBenefits = () => (
-  <section id="ritual" className="bg-[#0a1628] py-28 text-white md:py-40">
-    <div className="container mx-auto px-6 lg:px-12">
-      <div className="mx-auto mb-16 max-w-3xl text-center">
-        <span className="mb-5 inline-block text-[11px] font-semibold uppercase tracking-[0.3em] text-[#9cc8ff]">
-          O ritual Acqualive
-        </span>
-        <h2 className="font-display text-4xl font-light leading-tight md:text-6xl">
-          Um spray. <em className="font-serif italic text-[#9cc8ff]">Seis momentos.</em>
-        </h2>
-        <p className="mt-6 text-white/70">
-          Passe o cursor para descobrir como o Clean &amp; Care entra na sua rotina.
-        </p>
-      </div>
-    </div>
-
-    {/* full-bleed mosaic, no gaps */}
-    <div className="grid w-full grid-cols-2 md:grid-cols-3">
-      {benefits.map((b) => (
-        <div
-          key={b.title}
-          className="group relative h-[280px] overflow-hidden md:h-[420px]"
-        >
-          <img
-            src={b.img}
-            alt={b.title}
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/95 via-[#0a1628]/30 to-transparent transition-opacity duration-500 group-hover:from-[#0a1628]/95 group-hover:via-[#0a1628]/60" />
-          <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-            <b.icon className="mb-3 h-6 w-6 text-[#9cc8ff] opacity-80 transition-all duration-500 group-hover:opacity-100" />
-            <h3 className="font-display text-xl font-light md:text-2xl">{b.title}</h3>
-            <p className="mt-2 max-h-0 overflow-hidden text-sm text-white/80 transition-all duration-500 group-hover:max-h-32 group-hover:pt-2">
-              {b.desc}
-            </p>
-          </div>
+const HoverBenefits = () => {
+  const [active, setActive] = useState<number | null>(null);
+  return (
+    <section id="ritual" className="bg-[#0a1628] py-28 text-white md:py-40">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="mx-auto mb-16 max-w-3xl text-center">
+          <span className="mb-5 inline-block text-[11px] font-semibold uppercase tracking-[0.3em] text-[#9cc8ff]">
+            O ritual Acqualive
+          </span>
+          <h2 className="font-display text-4xl font-light leading-tight md:text-6xl">
+            Um spray. <em className="font-serif italic text-[#9cc8ff]">Seis momentos.</em>
+          </h2>
+          <p className="mt-6 text-white/75">
+            <span className="hidden md:inline">Passe o cursor</span>
+            <span className="md:hidden">Toque</span> para descobrir como o Clean &amp; Care entra na sua rotina.
+          </p>
         </div>
-      ))}
-    </div>
-  </section>
-);
+      </div>
+
+      {/* full-bleed mosaic, no gaps */}
+      <div className="grid w-full grid-cols-2 md:grid-cols-3">
+        {benefits.map((b, idx) => {
+          const open = active === idx;
+          return (
+            <button
+              type="button"
+              key={b.title}
+              onClick={() => setActive(open ? null : idx)}
+              aria-expanded={open}
+              className="group relative h-[280px] overflow-hidden text-left md:h-[420px]"
+            >
+              <img
+                src={b.img}
+                alt={b.title}
+                className={`absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105 ${open ? "scale-105" : ""}`}
+              />
+              <div className={`absolute inset-0 bg-gradient-to-t from-[#0a1628]/95 via-[#0a1628]/30 to-transparent transition-opacity duration-500 group-hover:via-[#0a1628]/60 ${open ? "via-[#0a1628]/60" : ""}`} />
+              <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
+                <b.icon className={`mb-3 h-6 w-6 text-[#9cc8ff] transition-all duration-500 ${open ? "opacity-100" : "opacity-80"} group-hover:opacity-100`} />
+                <h3 className="font-display text-xl font-light md:text-2xl">{b.title}</h3>
+                <p className={`mt-2 overflow-hidden text-sm text-white/85 transition-all duration-500 group-hover:max-h-32 group-hover:pt-2 ${open ? "max-h-32 pt-2" : "max-h-0"}`}>
+                  {b.desc}
+                </p>
+              </div>
+            </button>
+          );
+        })}
+      </div>
+    </section>
+  );
+};
 
 /* ---------------- INGREDIENTS ---------------- */
 const ingredients = [
@@ -471,7 +570,7 @@ const Origin = () => {
               ].map((s) => (
                 <div key={s.v}>
                   <div className="font-display text-xl font-light">{s.v}</div>
-                  <div className="mt-1 text-[10px] uppercase tracking-wider text-white/55">{s.l}</div>
+                  <div className="mt-1 text-[10px] uppercase tracking-wider text-white/75">{s.l}</div>
                 </div>
               ))}
             </div>
@@ -709,7 +808,7 @@ const FinalCTA = () => (
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </a>
 
-        <div className="mt-8 text-xs text-white/50">
+        <div className="mt-8 text-xs text-white/70">
           10x sem juros · Frete grátis (consulte regiões disponíveis)
         </div>
       </motion.div>
@@ -721,6 +820,9 @@ const FinalCTA = () => (
 const CleanCare = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    const prev = document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = "smooth";
+    return () => { document.documentElement.style.scrollBehavior = prev; };
   }, []);
 
   return (
@@ -738,6 +840,7 @@ const CleanCare = () => {
         <Hero />
         <Manifesto />
         <Story />
+        <BeforeAfter />
         <HoverBenefits />
         <Ingredients />
         <Origin />
