@@ -21,7 +21,7 @@ function buildCTA(label: string) {
 export default function CalculadoraAcqualiveResultados() {
   const [params] = useSearchParams();
   const ml = parseInt(params.get("ml") || "0");
-  const litros = (ml / 1000).toFixed(2).replace(".", ",");
+  const litros = (ml / 1000).toFixed(1).replace(".", ",");
   const copos = Math.round(ml / 250);
   const nome = params.get("nome") || "";
   const primeiroNome = useMemo(() => nome.split(" ")[0] || "", [nome]);
