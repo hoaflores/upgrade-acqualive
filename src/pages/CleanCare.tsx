@@ -311,12 +311,12 @@ const BeforeAfter = () => {
           style={{ cursor: "ew-resize" }}
         >
           {/* COM produto (base) */}
-          <img src={semProduto} alt="Pele com Clean & Care" className="absolute inset-0 h-full w-full object-cover" />
-          <div className="absolute right-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#0a1628]">Com produto</div>
+          <img src={semProduto} alt="Pele sem Clean & Care" className="absolute inset-0 h-full w-full object-cover" />
+          <div className="absolute right-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#0a1628]">Sem produto</div>
 
-          {/* SEM produto (clipped) */}
+          {/* COM produto (clipped) */}
           <div className="absolute inset-0 overflow-hidden" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
-            <img src={comProduto} alt="Pele sem Clean & Care" className="absolute inset-0 h-full w-full object-cover" />
+            <img src={comProduto} alt="Pele com Clean & Care" className="absolute inset-0 h-full w-full object-cover" />
             <div className="absolute left-4 top-4 rounded-full bg-[#0a1628]/85 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">Sem produto</div>
           </div>
 
