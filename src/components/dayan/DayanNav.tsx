@@ -4,7 +4,7 @@ const NAV = [
   { label: "A verdade", href: "#verdade" },
   { label: "Vídeos", href: "#videos" },
   { label: "Solução", href: "#solucao" },
-  { label: "Prova", href: "#prova" },
+  { label: "Ciência", href: "#prova" },
   { label: "Oferta", href: "#oferta" },
 ];
 
