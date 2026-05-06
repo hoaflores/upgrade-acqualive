@@ -9,10 +9,10 @@ const WHATSAPP =
 
 const PRODUCTS = [
   {
-    name: "Acqualive V-Self 6L",
+    name: "Acqualive V Self Premium 10L",
     img: vSelf6L,
     line: "Compacto",
-    price: "R$ XXX",
+    price: "R$ 199,70",
     inst: "10x sem juros",
     badge: "Compacto",
   },
@@ -20,7 +20,7 @@ const PRODUCTS = [
     name: "Acqualive V-Self Premium 10L",
     img: vSelfPremium,
     line: "O mais vendido",
-    price: "R$ XXX",
+    price: "R$ 199,70",
     inst: "10x sem juros",
     badge: "Best-seller",
     highlight: true,
@@ -29,7 +29,7 @@ const PRODUCTS = [
     name: "Acqualive Terracota",
     img: terracota,
     line: "A evolução do filtro de barro",
-    price: "R$ XXX",
+    price: "R$ 199,70",
     inst: "10x sem juros",
     badge: "Design",
   },
@@ -37,7 +37,7 @@ const PRODUCTS = [
     name: "Acqualive Shower Care",
     img: shower,
     line: "Filtro removedor de cloro do chuveiro",
-    price: "R$ XXX",
+    price: "R$ 199,70",
     inst: "10x sem juros",
     badge: "Pele e cabelo",
   },
@@ -130,7 +130,7 @@ const DayanOffer = () => {
                       : "bg-[hsl(var(--ds-surface))] text-[hsl(var(--ds-ink))] hover:bg-[hsl(var(--ds-line))]"
                   }`}
                 >
-                  Quero esse →
+                  Clique aqui para aplicar seu cupom →
                 </a>
               </div>
             </article>
