@@ -167,7 +167,9 @@ const DayanHero = () => {
 
             <div className="dayan-reveal dayan-reveal-delay-3 mt-10 flex flex-col sm:flex-row gap-4">
               <a
-                href="#oferta"
+                href="http://www.acqualive.com.br/VIDALIMPA"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-3 bg-[hsl(var(--ds-ink))] text-white px-8 py-5 rounded-full font-semibold hover:bg-[hsl(var(--ds-blue-deep))] transition-all"
               >
                 Quero a água que o Dr. Dayan recomenda
