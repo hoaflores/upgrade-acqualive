@@ -282,47 +282,57 @@ const benefits = [
   },
 ];
 
-const HoverBenefits = () => (
-  <section id="ritual" className="bg-[#0a1628] py-28 text-white md:py-40">
-    <div className="container mx-auto px-6 lg:px-12">
-      <div className="mx-auto mb-16 max-w-3xl text-center">
-        <span className="mb-5 inline-block text-[11px] font-semibold uppercase tracking-[0.3em] text-[#9cc8ff]">
-          O ritual Acqualive
-        </span>
-        <h2 className="font-display text-4xl font-light leading-tight md:text-6xl">
-          Um spray. <em className="font-serif italic text-[#9cc8ff]">Seis momentos.</em>
-        </h2>
-        <p className="mt-6 text-white/70">
-          Passe o cursor para descobrir como o Clean &amp; Care entra na sua rotina.
-        </p>
-      </div>
-    </div>
-
-    {/* full-bleed mosaic, no gaps */}
-    <div className="grid w-full grid-cols-2 md:grid-cols-3">
-      {benefits.map((b) => (
-        <div
-          key={b.title}
-          className="group relative h-[280px] overflow-hidden md:h-[420px]"
-        >
-          <img
-            src={b.img}
-            alt={b.title}
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/95 via-[#0a1628]/30 to-transparent transition-opacity duration-500 group-hover:from-[#0a1628]/95 group-hover:via-[#0a1628]/60" />
-          <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-            <b.icon className="mb-3 h-6 w-6 text-[#9cc8ff] opacity-80 transition-all duration-500 group-hover:opacity-100" />
-            <h3 className="font-display text-xl font-light md:text-2xl">{b.title}</h3>
-            <p className="mt-2 max-h-0 overflow-hidden text-sm text-white/80 transition-all duration-500 group-hover:max-h-32 group-hover:pt-2">
-              {b.desc}
-            </p>
-          </div>
+const HoverBenefits = () => {
+  const [active, setActive] = useState<number | null>(null);
+  return (
+    <section id="ritual" className="bg-[#0a1628] py-28 text-white md:py-40">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="mx-auto mb-16 max-w-3xl text-center">
+          <span className="mb-5 inline-block text-[11px] font-semibold uppercase tracking-[0.3em] text-[#9cc8ff]">
+            O ritual Acqualive
+          </span>
+          <h2 className="font-display text-4xl font-light leading-tight md:text-6xl">
+            Um spray. <em className="font-serif italic text-[#9cc8ff]">Seis momentos.</em>
+          </h2>
+          <p className="mt-6 text-white/75">
+            <span className="hidden md:inline">Passe o cursor</span>
+            <span className="md:hidden">Toque</span> para descobrir como o Clean &amp; Care entra na sua rotina.
+          </p>
         </div>
-      ))}
-    </div>
-  </section>
-);
+      </div>
+
+      {/* full-bleed mosaic, no gaps */}
+      <div className="grid w-full grid-cols-2 md:grid-cols-3">
+        {benefits.map((b, idx) => {
+          const open = active === idx;
+          return (
+            <button
+              type="button"
+              key={b.title}
+              onClick={() => setActive(open ? null : idx)}
+              aria-expanded={open}
+              className="group relative h-[280px] overflow-hidden text-left md:h-[420px]"
+            >
+              <img
+                src={b.img}
+                alt={b.title}
+                className={`absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105 ${open ? "scale-105" : ""}`}
+              />
+              <div className={`absolute inset-0 bg-gradient-to-t from-[#0a1628]/95 via-[#0a1628]/30 to-transparent transition-opacity duration-500 group-hover:via-[#0a1628]/60 ${open ? "via-[#0a1628]/60" : ""}`} />
+              <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
+                <b.icon className={`mb-3 h-6 w-6 text-[#9cc8ff] transition-all duration-500 ${open ? "opacity-100" : "opacity-80"} group-hover:opacity-100`} />
+                <h3 className="font-display text-xl font-light md:text-2xl">{b.title}</h3>
+                <p className={`mt-2 overflow-hidden text-sm text-white/85 transition-all duration-500 group-hover:max-h-32 group-hover:pt-2 ${open ? "max-h-32 pt-2" : "max-h-0"}`}>
+                  {b.desc}
+                </p>
+              </div>
+            </button>
+          );
+        })}
+      </div>
+    </section>
+  );
+};
 
 /* ---------------- INGREDIENTS ---------------- */
 const ingredients = [
