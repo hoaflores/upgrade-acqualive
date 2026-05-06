@@ -22,6 +22,7 @@ import EmailsFranquias from "./pages/EmailsFranquias";
 import IndicaAcqualive2026 from "./pages/IndicaAcqualive2026";
 import DayanSiebra from "./pages/DayanSiebra";
 import FernandoBeteti from "./pages/FernandoBeteti";
+import ShowerCare from "./pages/ShowerCare";
 import Demandas from "./pages/Demandas";
 import DemandasSolicitadas from "./pages/DemandasSolicitadas";
 import NotFound from "./pages/NotFound";
@@ -55,6 +56,8 @@ const App = () => (
             <Route path="/indicado-acqualive" element={<IndicaAcqualive2026 />} />
             <Route path="/dayan-siebra" element={<DayanSiebra />} />
             <Route path="/fernando-beteti" element={<FernandoBeteti />} />
+            <Route path="/shower-care" element={<ShowerCare />} />
+            <Route path="/acqualive-shower" element={<ShowerCare />} />
             <Route path="/demandas" element={<Demandas />} />
             <Route path="/demandas-solicitadas" element={<DemandasSolicitadas />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
