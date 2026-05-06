@@ -79,7 +79,7 @@ export default function CalculadoraAcqualive() {
   async function enviar() {
     setLoading(true);
     const ml = calcularAgua(f);
-    const litros = (ml / 1000).toFixed(2);
+    const litros = (ml / 1000).toFixed(1);
     try {
       await fetch(`https://${import.meta.env.VITE_SUPABASE_PROJECT_ID}.supabase.co/functions/v1/salvar-calculadora-hidratacao`, {
         method: "POST",
