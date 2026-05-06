@@ -116,7 +116,7 @@ const Hero = () => {
             ].map((s) => (
               <div key={s.v}>
                 <div className="font-display text-2xl font-light text-white">{s.v}</div>
-                <div className="mt-1 text-[11px] uppercase tracking-wider text-white/55">{s.l}</div>
+                <div className="mt-1 text-[11px] uppercase tracking-wider text-white/75">{s.l}</div>
               </div>
             ))}
           </div>
@@ -481,7 +481,7 @@ const Origin = () => {
               ].map((s) => (
                 <div key={s.v}>
                   <div className="font-display text-xl font-light">{s.v}</div>
-                  <div className="mt-1 text-[10px] uppercase tracking-wider text-white/55">{s.l}</div>
+                  <div className="mt-1 text-[10px] uppercase tracking-wider text-white/75">{s.l}</div>
                 </div>
               ))}
             </div>
@@ -719,7 +719,7 @@ const FinalCTA = () => (
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </a>
 
-        <div className="mt-8 text-xs text-white/50">
+        <div className="mt-8 text-xs text-white/70">
           10x sem juros · Frete grátis (consulte regiões disponíveis)
         </div>
       </motion.div>
