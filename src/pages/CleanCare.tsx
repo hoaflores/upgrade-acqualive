@@ -425,8 +425,8 @@ const Origin = () => {
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.15, 1.05, 1.15]);
 
   return (
-    <section ref={ref} className="relative min-h-[160vh] overflow-hidden bg-[#0a1628]">
-      {/* Sticky parallax background — image stays in view and slides as user scrolls */}
+    <section ref={ref} className="relative overflow-hidden bg-[#0a1628]">
+      {/* Sticky parallax background */}
       <div className="sticky top-0 h-screen w-full overflow-hidden">
         <motion.div style={{ y, scale }} className="absolute inset-0 will-change-transform">
           <img
@@ -439,8 +439,8 @@ const Origin = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/90 via-transparent to-[#0a1628]/40" />
       </div>
 
-      {/* Content layer — scrolls over the sticky image */}
-      <div className="absolute inset-0">
+      {/* Content overlays the sticky bg */}
+      <div className="relative -mt-[100vh] min-h-[160vh]">
         <div className="container mx-auto flex min-h-[160vh] items-center px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
