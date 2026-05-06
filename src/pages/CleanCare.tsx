@@ -140,6 +140,22 @@ const Hero = () => {
       >
         role para descobrir ↓
       </motion.div>
+
+      {/* Custom water-drop cursor (desktop) */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute z-20 hidden h-10 w-10 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm md:block"
+        style={{
+          left: cursor.x,
+          top: cursor.y,
+          opacity: cursor.active ? 1 : 0,
+          transform: `translate(-50%, -50%) scale(${cursor.active ? 1 : 0.6})`,
+          transition: "opacity 200ms ease-out",
+        }}
+      >
+        <span className="absolute inset-2 rounded-full bg-white/40 blur-[2px]" />
+        <Droplets className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 text-white" />
+      </div>
     </section>
   );
 };
