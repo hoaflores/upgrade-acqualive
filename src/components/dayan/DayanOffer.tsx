@@ -4,8 +4,7 @@ import terracota from "@/assets/dayan-terracota.png";
 import shower from "@/assets/dayan-shower-care.png";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
-const WHATSAPP =
-  "https://wa.me/555192928468?text=Ol%C3%A1!%20Vim%20da%20p%C3%A1gina%20do%20Dr.%20Dayan%20Siebra%20e%20quero%20um%20Acqualive.";
+const WHATSAPP = "http://www.acqualive.com.br/VIDALIMPA";
 
 const PRODUCTS = [
   {
