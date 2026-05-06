@@ -42,7 +42,9 @@ const DayanNav = () => {
         </nav>
 
         <a
-          href="#oferta"
+          href="http://www.acqualive.com.br/VIDALIMPA"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden md:inline-flex items-center gap-2 bg-[hsl(var(--ds-ink))] text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-[hsl(var(--ds-blue-deep))] transition-colors"
         >
           Quero um Acqualive
@@ -50,7 +52,9 @@ const DayanNav = () => {
         </a>
 
         <a
-          href="#oferta"
+          href="http://www.acqualive.com.br/VIDALIMPA"
+          target="_blank"
+          rel="noopener noreferrer"
           className="md:hidden bg-[hsl(var(--ds-ink))] text-white px-4 py-2 rounded-full text-xs font-semibold"
         >
           Quero
