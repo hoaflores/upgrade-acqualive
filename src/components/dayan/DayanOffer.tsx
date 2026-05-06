@@ -139,7 +139,7 @@ const DayanOffer = () => {
         {/* Faixa final */}
         <div className="dayan-reveal relative ds-dark p-10 lg:p-16 rounded-sm overflow-hidden dayan-grain">
           <div className="relative grid lg:grid-cols-12 gap-10 items-center">
-            <div className="lg:col-span-8">
+            <div className="lg:col-span-12">
               <span className="ds-eyebrow text-white/60">
                 Última palavra do Dr. Dayan
               </span>
@@ -147,25 +147,6 @@ const DayanOffer = () => {
                 "Você vai gastar com remédio depois. Ou com água certa agora.
                 A escolha é sua."
               </p>
-            </div>
-            <div className="lg:col-span-4 flex flex-col gap-3">
-              <a
-                href={WHATSAPP}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 bg-[hsl(var(--ds-accent))] text-white px-8 py-5 rounded-full font-semibold hover:bg-[hsl(21_89%_48%)] transition-colors"
-              >
-                <WhatsAppIcon className="w-5 h-5" />
-                Falar com um especialista
-              </a>
-              <a
-                href={WHATSAPP}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 border border-white/30 text-white px-8 py-5 rounded-full font-semibold hover:bg-white/10 transition-colors"
-              >
-                Receber orçamento por WhatsApp
-              </a>
             </div>
           </div>
         </div>
