@@ -811,6 +811,7 @@ const CleanCare = () => {
         <Hero />
         <Manifesto />
         <Story />
+        <BeforeAfter />
         <HoverBenefits />
         <Ingredients />
         <Origin />
