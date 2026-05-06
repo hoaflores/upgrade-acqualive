@@ -8,7 +8,7 @@ import betetiPerfil from "@/assets/beteti-novo-4.png";
 import betetiRetrato from "@/assets/beteti-novo-1.png";
 
 const WHATSAPP =
-  "https://wa.me/555192928468?text=Ol%C3%A1!%20Vim%20pela%20reportagem%20do%20Fernando%20Beteti.%20Quero%20um%20Acqualive.";
+  "http://www.acqualive.com.br/n2026";
 
 const TODAY_PT = new Date().toLocaleDateString("pt-BR", {
   weekday: "long",
@@ -34,7 +34,7 @@ const BetetiNav = () => {
     { label: "Vídeos", href: "#videos" },
     { label: "Investigação", href: "#dor" },
     { label: "A solução", href: "#solucao" },
-    { label: "Acqualive", href: "#oferta" },
+    { label: "Acqualive", href: "http://www.acqualive.com.br/n2026" },
   ];
 
   return (
@@ -52,7 +52,7 @@ const BetetiNav = () => {
           </div>
           <div className="hidden md:flex items-center gap-5 bt-meta text-white/70">
             <span>Brasil · Saúde Pública</span>
-            <a href="#oferta" className="hover:text-white transition-colors">
+            <a href="http://www.acqualive.com.br/n2026" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
               Apoie a reportagem
             </a>
           </div>
@@ -86,14 +86,14 @@ const BetetiNav = () => {
           </nav>
 
           <a
-            href="#oferta"
+            href="http://www.acqualive.com.br/n2026" target="_blank" rel="noopener noreferrer"
             className="hidden md:inline-flex items-center gap-2 bg-[hsl(var(--bt-red))] text-white px-4 py-2.5 text-xs font-bold uppercase tracking-wider hover:bg-[hsl(var(--bt-ink))] transition-colors"
           >
             Quero um Acqualive
           </a>
 
           <a
-            href="#oferta"
+            href="http://www.acqualive.com.br/n2026" target="_blank" rel="noopener noreferrer"
             className="md:hidden bg-[hsl(var(--bt-red))] text-white px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider"
           >
             Quero
@@ -110,7 +110,7 @@ const BetetiNav = () => {
               { label: "Polêmica", href: "#reportagem" },
               { label: "Vídeo", href: "#videos" },
               { label: "Entrevista", href: "#videos" },
-              { label: "Acqualive", href: "#oferta" },
+              { label: "Acqualive", href: "http://www.acqualive.com.br/n2026" },
             ].map((c, i) => (
               <a
                 key={c.label}
@@ -202,7 +202,7 @@ const BetetiHero = () => (
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <a
-              href="#oferta"
+              href="http://www.acqualive.com.br/n2026" target="_blank" rel="noopener noreferrer"
               className="group inline-flex items-center justify-center gap-3 bg-[hsl(var(--bt-ink))] text-white px-6 py-3.5 font-bold uppercase tracking-wider text-xs hover:bg-[hsl(var(--bt-red))] transition-colors"
             >
               Quero a água que o Beteti recomenda →
@@ -521,7 +521,7 @@ const BetetiVideos = () => {
                 <span className="bt-meta text-[hsl(var(--bt-muted))]">reportagens nesta sala</span>
               </div>
               <a
-                href="#oferta"
+                href="http://www.acqualive.com.br/n2026" target="_blank" rel="noopener noreferrer"
                 className="mt-5 inline-flex items-center gap-2 text-[hsl(var(--bt-ink))] text-xs font-bold uppercase tracking-wider bt-link"
               >
                 Ver a oferta editorial →
@@ -817,7 +817,7 @@ const BetetiAcqualive = () => (
 
           <div className="dayan-reveal mt-8">
             <a
-              href="#oferta"
+              href="http://www.acqualive.com.br/n2026" target="_blank" rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 bg-[hsl(var(--bt-ink))] text-white px-7 py-4 font-bold uppercase tracking-wider text-xs hover:bg-[hsl(var(--bt-red))] transition-colors"
             >
               Ver a oferta para leitores do Beteti →
