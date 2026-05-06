@@ -26,6 +26,7 @@ import bottleMarble from "@/assets/cleancare/bottle-marble.png";
 import bottleNature from "@/assets/cleancare/bottle-nature.png";
 import bottleFlat from "@/assets/cleancare/bottle-flat.png";
 import bottlePool from "@/assets/cleancare/bottle-pool.png";
+import babiesKids from "@/assets/cleancare/babies-kids.png";
 
 const SHOP_URL = "https://www.acqualive.com.br/agua-termal-acqualive-clean-care/p";
 
