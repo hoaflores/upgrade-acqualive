@@ -24,6 +24,7 @@ import DayanSiebra from "./pages/DayanSiebra";
 import FernandoBeteti from "./pages/FernandoBeteti";
 import ShowerCare from "./pages/ShowerCare";
 import CalculadoraAcqualive from "./pages/CalculadoraAcqualive";
+import CleanCare from "./pages/CleanCare";
 import CalculadoraAcqualiveResultados from "./pages/CalculadoraAcqualiveResultados";
 import Demandas from "./pages/Demandas";
 import DemandasSolicitadas from "./pages/DemandasSolicitadas";
@@ -59,6 +60,7 @@ const App = () => (
             <Route path="/dayan-siebra" element={<DayanSiebra />} />
             <Route path="/fernando-beteti" element={<FernandoBeteti />} />
             <Route path="/acqualive-shower" element={<ShowerCare />} />
+            <Route path="/clean-care" element={<CleanCare />} />
             <Route path="/calculadora-acqualive" element={<CalculadoraAcqualive />} />
             <Route path="/calculadora-acqualive-resultados" element={<CalculadoraAcqualiveResultados />} />
             <Route path="/demandas" element={<Demandas />} />
