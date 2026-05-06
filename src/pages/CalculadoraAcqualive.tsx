@@ -18,50 +18,44 @@ const VIDEO_URL = "https://www.youtube.com/embed/KKgYextCoAI";
 
 export function calcularAgua(f: FormState): number {
   const peso = parseFloat(f.peso) || 0;
-  const idade = parseInt(f.idade) || 30;
   if (peso <= 0) return 0;
 
-  // Base saudável: 35 ml/kg
+  // Base: 35 ml/kg
   let ml = peso * 35;
 
-  // Ajustes percentuais leves
-  let mult = 1;
+  // Sexo biológico
+  const mSexo: Record<string, number> = { feminino: 0.95, masculino: 1.05 };
+  ml *= mSexo[f.sexo] ?? 1;
 
-  // Sexo: homens com mais massa magra precisam levemente mais
-  if (f.sexo === "masculino") mult += 0.04;
+  // Exercícios por semana (minutos)
+  const mAtividade: Record<string, number> = {
+    "0": 0.95,    // Sedentário
+    "90": 1.00,   // Até 90min
+    "180": 1.05,  // 90 a 180min
+    "300": 1.10,  // 180 a 300min
+    "450": 1.15,  // 300 a 450min
+    "600": 1.25,  // Mais de 450min
+  };
+  ml *= mAtividade[f.atividadeMin] ?? 1;
 
-  // Idade
-  if (idade < 30) mult += 0.04;
-  else if (idade >= 55 && idade < 65) mult -= 0.03;
-  else if (idade >= 65) mult -= 0.06;
-
-  // Exercício: combinação de volume + intensidade
-  const minSemana = parseInt(f.atividadeMin) || 0;
-  const horasSemana = minSemana / 60;
-  let porHora = 60; // leve
-  if (f.intensidade === "moderada") porHora = 90;
-  if (f.intensidade === "intensa") porHora = 130;
-  ml += horasSemana * porHora; // adicional fixo por hora/semana (média diária diluída)
+  // Intensidade
+  const mIntensidade: Record<string, number> = { leve: 0.95, moderada: 1.00, intensa: 1.10 };
+  ml *= mIntensidade[f.intensidade] ?? 1;
 
   // Clima
-  if (f.clima === "quente") mult += 0.06;
-  if (f.clima === "muito_quente") mult += 0.12;
+  const mClima: Record<string, number> = { ameno: 1.00, quente: 1.08, muito_quente: 1.15 };
+  ml *= mClima[f.clima] ?? 1;
 
-  // Gestante / lactante
-  if (f.gestanteLactante === "gestante") mult += 0.08;
-  if (f.gestanteLactante === "lactante") mult += 0.18;
+  // Café e álcool
+  const mCafe: Record<string, number> = { baixo: 1.00, moderado: 1.05, alto: 1.10 };
+  ml *= mCafe[f.cafeAlcool] ?? 1;
 
-  // Café / álcool (efeito diurético)
-  if (f.cafeAlcool === "moderado") mult += 0.03;
-  if (f.cafeAlcool === "alto") mult += 0.06;
+  // Limites
+  if (ml < 2000) ml = 2000;
+  if (ml > 3500) ml = 3500;
 
-  ml = ml * mult;
-
-  // Limites de segurança
-  if (ml < peso * 30) ml = peso * 30;
-  if (ml > peso * 50) ml = peso * 50;
-
-  return Math.round(ml / 50) * 50;
+  // Arredondar para múltiplos de 100
+  return Math.round(ml / 100) * 100;
 }
 
 export default function CalculadoraAcqualive() {
