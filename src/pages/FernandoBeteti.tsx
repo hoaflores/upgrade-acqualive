@@ -919,7 +919,7 @@ const BetetiOferta = () => (
                 "Parcelamento em até 10x sem juros",
                 "Frete grátis para todo o Brasil. Consulte regiões disponíveis",
                 "Garantia de saúde e bem-estar",
-                "Atendimento humano por WhatsApp com a equipe Acqualive",
+                "Atendimento humano com a equipe Acqualive",
               ].map((t) => (
                 <li
                   key={t}
@@ -940,7 +940,7 @@ const BetetiOferta = () => (
                 Próximo passo
               </span>
               <p className="bt-display text-2xl lg:text-3xl text-[hsl(var(--bt-ink))] mt-2 leading-tight">
-                Fale com a equipe Acqualive agora pelo WhatsApp.
+                Conheça a oferta editorial Acqualive agora.
               </p>
             </div>
             <a
@@ -952,7 +952,7 @@ const BetetiOferta = () => (
               Quero meu Acqualive →
             </a>
             <span className="bt-meta text-[hsl(var(--bt-muted))]">
-              Ao clicar, você abre uma conversa direta no WhatsApp.
+              Ao clicar, você acessa a página oficial da Acqualive.
             </span>
           </div>
         </div>
@@ -979,7 +979,7 @@ const FAQS = [
   },
   {
     q: "E o pós-venda?",
-    a: "Atendimento humano por WhatsApp, manutenção com refis disponíveis e suporte para qualquer dúvida. Não é venda e desaparece, é um equipamento para a vida.",
+    a: "Atendimento humano, manutenção com refis disponíveis e suporte para qualquer dúvida. Não é venda e desaparece, é um equipamento para a vida.",
   },
 ];
 
@@ -1062,7 +1062,7 @@ const BetetiFooter = () => (
             rel="noopener noreferrer"
             className="mt-3 inline-flex w-full items-center justify-center gap-2 bg-white text-[hsl(var(--bt-ink))] px-5 py-3 font-bold uppercase tracking-wider text-xs hover:bg-[hsl(var(--bt-accent))] hover:text-white transition-colors"
           >
-            Falar no WhatsApp →
+            Quero meu Acqualive →
           </a>
           <p className="bt-meta text-white/50 mt-5">
             © {new Date().getFullYear()} Repórter Saúde · Todos os direitos
