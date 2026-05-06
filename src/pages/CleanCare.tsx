@@ -292,7 +292,7 @@ const BeforeAfter = () => {
             Sinta a diferença
           </span>
           <h2 className="font-display text-4xl font-light leading-tight text-[#0a1628] md:text-5xl">
-            Com produto. <em className="font-serif italic">Sem produto.</em>
+            Depois de começar, não dá mais para <em className="font-serif italic">viver sem!</em>
           </h2>
           <p className="mt-6 text-[#0a1628]/70">
             Arraste para comparar como a pele responde quando recebe Clean &amp; Care.
@@ -312,12 +312,16 @@ const BeforeAfter = () => {
         >
           {/* COM produto (base) */}
           <img src={semProduto} alt="Pele sem Clean & Care" className="absolute inset-0 h-full w-full object-cover" />
-          <div className="absolute right-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#0a1628]">Sem produto</div>
+          <div className="absolute right-4 top-4 rounded-full bg-white/90 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#0a1628] text-right">
+            SEM PRODUTO<br />SEM O CLEAN & CARE
+          </div>
 
           {/* COM produto (clipped) */}
           <div className="absolute inset-0 overflow-hidden" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
             <img src={comProduto} alt="Pele com Clean & Care" className="absolute inset-0 h-full w-full object-cover" />
-            <div className="absolute left-4 top-4 rounded-full bg-[#0a1628]/85 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">Com produto</div>
+            <div className="absolute left-4 top-4 rounded-full bg-[#0a1628]/85 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">
+              COM O CLEAN & CARE
+            </div>
           </div>
 
           {/* Handle */}
