@@ -130,7 +130,7 @@ const DayanOffer = () => {
                       : "bg-[hsl(var(--ds-surface))] text-[hsl(var(--ds-ink))] hover:bg-[hsl(var(--ds-line))]"
                   }`}
                 >
-                  Quero esse →
+                  Clique aqui para aplicar seu cupom →
                 </a>
               </div>
             </article>
