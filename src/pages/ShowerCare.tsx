@@ -322,7 +322,7 @@ const ShowerCare = () => {
               em um cuidado diário com sua saúde e bem-estar.
             </p>
             <div className="flex justify-center pt-2"><CTA>Quero meu Shower Care agora</CTA></div>
-            <p className="text-xs text-white/60 pt-4">10x sem juros • Frete grátis. Consulte regiões disponíveis.</p>
+            <p className="text-xs text-white/60 pt-4">6x sem juros • Frete grátis. Consulte regiões disponíveis.</p>
           </div>
         </section>
 
