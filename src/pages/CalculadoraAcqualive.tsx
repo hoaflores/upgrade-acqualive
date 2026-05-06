@@ -132,8 +132,8 @@ export default function CalculadoraAcqualive() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs md:text-sm font-semibold mb-5 uppercase tracking-wider">
             <Sparkles className="w-4 h-4" /> Calculadora da Hidratação Saudável
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-5 tracking-tight leading-[1.05]">
-            Quanta água o <span className="bg-gradient-to-r from-primary to-sky-500 bg-clip-text text-transparent">seu corpo</span> realmente pede?
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-5 tracking-tight leading-[1.05] uppercase">
+            Saiba o quanto de água <span className="bg-gradient-to-r from-primary to-sky-500 bg-clip-text text-transparent">você precisa beber</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             A recomendação genérica de "2 litros" ignora seu peso, sua rotina e o clima onde você vive. Em menos de 1 minuto, descubra o número exato para a sua realidade.
