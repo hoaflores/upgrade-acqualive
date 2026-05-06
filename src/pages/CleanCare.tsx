@@ -313,7 +313,7 @@ const BeforeAfter = () => {
           {/* COM produto (base) */}
           <img src={semProduto} alt="Pele sem Clean & Care" className="absolute inset-0 h-full w-full object-cover" />
           <div className="absolute right-4 top-4 rounded-full bg-white/90 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#0a1628] text-right">
-            SEM PRODUTO<br />SEM O CLEAN & CARE
+            SEM O CLEAN & CARE
           </div>
 
           {/* COM produto (clipped) */}
