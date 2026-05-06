@@ -8,10 +8,10 @@ const WHATSAPP = "http://www.acqualive.com.br/VIDALIMPA";
 
 const PRODUCTS = [
   {
-    name: "Acqualive V Self Premium 10L",
+    name: "Acqualive V Self Essencial 6L",
     img: vSelf6L,
     line: "Compacto",
-    price: "R$ 199,70",
+    price: "R$ 189,72",
     inst: "10x sem juros",
     badge: "Compacto",
   },
@@ -19,7 +19,7 @@ const PRODUCTS = [
     name: "Acqualive V-Self Premium 10L",
     img: vSelfPremium,
     line: "O mais vendido",
-    price: "R$ 199,70",
+    price: "R$ 256,22",
     inst: "10x sem juros",
     badge: "Best-seller",
     highlight: true,
@@ -28,7 +28,7 @@ const PRODUCTS = [
     name: "Acqualive Terracota",
     img: terracota,
     line: "A evolução do filtro de barro",
-    price: "R$ 199,70",
+    price: "R$ 298,97",
     inst: "10x sem juros",
     badge: "Design",
   },
@@ -36,8 +36,8 @@ const PRODUCTS = [
     name: "Acqualive Shower Care",
     img: shower,
     line: "Filtro removedor de cloro do chuveiro",
-    price: "R$ 199,70",
-    inst: "10x sem juros",
+    price: "R$ 108,46",
+    inst: "6x sem juros",
     badge: "Pele e cabelo",
   },
 ];
