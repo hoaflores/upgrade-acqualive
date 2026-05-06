@@ -9,10 +9,10 @@ const WHATSAPP =
 
 const PRODUCTS = [
   {
-    name: "Acqualive V-Self 6L",
+    name: "Acqualive V Self Premium 10L",
     img: vSelf6L,
     line: "Compacto",
-    price: "R$ XXX",
+    price: "R$ 199,70",
     inst: "10x sem juros",
     badge: "Compacto",
   },
