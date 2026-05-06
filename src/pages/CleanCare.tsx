@@ -275,7 +275,7 @@ const benefits = [
     icon: HeartPulse,
   },
   {
-    img: bottleMarble,
+    img: babiesKids,
     title: "Bebês e crianças",
     desc: "Higiene segura, sem álcool, conservantes ou perfume.",
     icon: Baby,
