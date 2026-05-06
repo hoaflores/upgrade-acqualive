@@ -11,6 +11,8 @@ import showerMode2 from "@/assets/shower-mode2.png";
 import showerRefil from "@/assets/shower-refil.png";
 import showerCromadoBox from "@/assets/shower-cromado-box.png";
 import showerGoldBox from "@/assets/shower-gold-box.png";
+import showerBlackBox from "@/assets/shower-black-box.jpg";
+import showerWhiteBox from "@/assets/shower-white-box.jpg";
 
 const PRODUCT_URL = "https://www.acqualive.com.br/products/acqualive-shower-care";
 
@@ -191,7 +193,7 @@ const ShowerCare = () => {
               {[
                 { img: showerMode1, t: "Modelo Cromado", d: "Acabamento espelhado que combina com qualquer banheiro." },
                 { img: showerMode2, t: "Instalação simples", d: "Encaixa diretamente no braço do seu chuveiro existente." },
-                { img: showerRefil, t: "Refil substituível", d: "Mídia filtrante de longa duração, troca rápida e prática." },
+                { img: showerRefil, t: "Refil substituível", d: "Elemento filtrante de longa duração, troca rápida e prática." },
               ].map((p, i) => (
                 <div key={i} className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1">
                   <div className="aspect-square flex items-center justify-center bg-[#f7f4ef] rounded-2xl mb-6 p-6">
@@ -211,17 +213,26 @@ const ShowerCare = () => {
             <div className="space-y-6">
               <span className="text-accent uppercase tracking-[0.3em] text-xs">Edições</span>
               <h2 className="font-[Fraunces] text-4xl md:text-5xl text-[hsl(var(--secondary))] font-light leading-tight">
-                Disponível em acabamento cromado e edição especial dourada.
+                Quatro acabamentos para combinar com o seu banheiro.
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Mesma tecnologia, dois caminhos para combinar com o seu banheiro.
-                Embalagem pensada para presentear quem você ama, ou para se presentear.
+                Disponível nas cores branca, cromada, dourada e preta.
+                Mesma tecnologia, embalagem pensada para presentear quem você ama, ou para se presentear.
               </p>
               <div className="pt-2"><CTA /></div>
             </div>
             <div className="grid grid-cols-2 gap-5">
-              <img src={showerCromadoBox} alt="Shower Care cromado com embalagem" className="rounded-2xl shadow-xl w-full object-cover h-full" loading="lazy" />
-              <img src={showerGoldBox} alt="Shower Care dourado com embalagem" className="rounded-2xl shadow-xl w-full object-cover h-full" loading="lazy" />
+              {[
+                { img: showerWhiteBox, t: "Branca" },
+                { img: showerCromadoBox, t: "Cromada" },
+                { img: showerGoldBox, t: "Dourada" },
+                { img: showerBlackBox, t: "Preta" },
+              ].map((c) => (
+                <div key={c.t} className="space-y-2">
+                  <img src={c.img} alt={`Shower Care ${c.t}`} className="rounded-2xl shadow-xl w-full object-cover aspect-square" loading="lazy" />
+                  <p className="text-center text-sm text-[hsl(var(--secondary))] font-medium">{c.t}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
