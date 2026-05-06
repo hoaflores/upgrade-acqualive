@@ -5,7 +5,7 @@ import { Droplets, Sparkles, ShieldCheck, Leaf, CheckCircle2, ArrowRight, AlertT
 import { Button } from "@/components/ui/button";
 import logoAzul from "@/assets/logo-acqualive-azul.png";
 
-const VIDEO_URL = ""; // YouTube embed do Dr. Júlio Bergmann (em breve)
+const VIDEO_URL = "https://www.youtube.com/embed/ynWzKoHwYpg";
 const SITE_URL = "https://www.acqualive.com.br";
 
 function buildCTA(label: string) {

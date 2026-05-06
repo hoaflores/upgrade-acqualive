@@ -14,7 +14,7 @@ type FormState = {
   clima: string; gestanteLactante: string; cafeAlcool: string;
 };
 
-const VIDEO_URL = ""; // YouTube embed (em breve)
+const VIDEO_URL = "https://www.youtube.com/embed/KKgYextCoAI";
 
 export function calcularAgua(f: FormState): number {
   const peso = parseFloat(f.peso) || 0;
