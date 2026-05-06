@@ -806,7 +806,7 @@ const FinalCTA = () => (
         </a>
 
         <div className="mt-8 text-xs text-white/70">
-          10x sem juros · Frete grátis (consulte regiões disponíveis)
+          &#8203;
         </div>
       </motion.div>
     </div>
