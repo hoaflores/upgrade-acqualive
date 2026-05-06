@@ -5,7 +5,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-const SPREADSHEET_ID = "1JiyAMPxqyD-9JdV-SKG_a3itZ54QA2xp8X_XBAzeJIk";
+const SPREADSHEET_ID = "1FjuUAHc7PbaSJ97YRUH6Ah30ttxDfV0Y-GlzCrKA61A";
 const GATEWAY_URL = "https://connector-gateway.lovable.dev/google_sheets/v4";
 
 const rateLimit = new Map<string, { count: number; resetAt: number }>();
