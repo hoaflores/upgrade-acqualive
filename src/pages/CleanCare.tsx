@@ -794,6 +794,9 @@ const FinalCTA = () => (
 const CleanCare = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    const prev = document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = "smooth";
+    return () => { document.documentElement.style.scrollBehavior = prev; };
   }, []);
 
   return (
