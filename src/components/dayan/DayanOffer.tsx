@@ -20,7 +20,7 @@ const PRODUCTS = [
     name: "Acqualive V-Self Premium 10L",
     img: vSelfPremium,
     line: "O mais vendido",
-    price: "R$ XXX",
+    price: "R$ 199,70",
     inst: "10x sem juros",
     badge: "Best-seller",
     highlight: true,
