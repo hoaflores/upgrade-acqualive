@@ -23,6 +23,8 @@ import IndicaAcqualive2026 from "./pages/IndicaAcqualive2026";
 import DayanSiebra from "./pages/DayanSiebra";
 import FernandoBeteti from "./pages/FernandoBeteti";
 import ShowerCare from "./pages/ShowerCare";
+import CalculadoraAcqualive from "./pages/CalculadoraAcqualive";
+import CalculadoraAcqualiveResultados from "./pages/CalculadoraAcqualiveResultados";
 import Demandas from "./pages/Demandas";
 import DemandasSolicitadas from "./pages/DemandasSolicitadas";
 import NotFound from "./pages/NotFound";
