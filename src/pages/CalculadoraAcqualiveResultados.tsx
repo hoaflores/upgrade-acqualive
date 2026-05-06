@@ -63,7 +63,7 @@ export default function CalculadoraAcqualiveResultados() {
     window.open(url, "_blank", "noopener");
   }
 
-  const litrosCounter = (counter / 1000).toFixed(2).replace(".", ",");
+  const litrosCounter = (counter / 1000).toFixed(1).replace(".", ",");
 
   return (
     <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_hsl(var(--primary)/0.1),_transparent_60%),linear-gradient(to_bottom,_#f0f9ff,_#ffffff)]">
