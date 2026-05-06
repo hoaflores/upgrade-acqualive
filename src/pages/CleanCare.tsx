@@ -317,7 +317,7 @@ const BeforeAfter = () => {
           {/* COM produto (clipped) */}
           <div className="absolute inset-0 overflow-hidden" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
             <img src={comProduto} alt="Pele com Clean & Care" className="absolute inset-0 h-full w-full object-cover" />
-            <div className="absolute left-4 top-4 rounded-full bg-[#0a1628]/85 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">Sem produto</div>
+            <div className="absolute left-4 top-4 rounded-full bg-[#0a1628]/85 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">Com produto</div>
           </div>
 
           {/* Handle */}
