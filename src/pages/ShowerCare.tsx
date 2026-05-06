@@ -5,14 +5,11 @@ import { Droplets, Leaf, Sparkles, Heart, ShieldCheck, Wind, Flower2, Sun } from
 import heroBg from "@/assets/shower-spa-bg.jpg";
 import waterfall from "@/assets/shower-waterfall.jpg";
 import skinHair from "@/assets/shower-skin-hair.jpg";
-import showerHero from "@/assets/shower-hero.png";
-import showerMode1 from "@/assets/shower-mode1.png";
-import showerMode2 from "@/assets/shower-mode2.png";
+import showerHero from "@/assets/shower-marble.png";
+import showerMode1 from "@/assets/shower-running-water.png";
+import showerMode2 from "@/assets/shower-install-hands.png";
 import showerRefil from "@/assets/shower-refil.png";
-import showerCromadoBox from "@/assets/shower-cromado-box.png";
-import showerGoldBox from "@/assets/shower-gold-box.png";
-import showerBlackBox from "@/assets/shower-black-box.jpg";
-import showerWhiteBox from "@/assets/shower-white-box.jpg";
+import showerColorsLineup from "@/assets/shower-colors-lineup.png";
 
 const PRODUCT_URL = "https://www.acqualive.com.br/products/acqualive-shower-care";
 
@@ -221,18 +218,19 @@ const ShowerCare = () => {
               </p>
               <div className="pt-2"><CTA /></div>
             </div>
-            <div className="grid grid-cols-2 gap-5">
-              {[
-                { img: showerWhiteBox, t: "Branca" },
-                { img: showerCromadoBox, t: "Cromada" },
-                { img: showerGoldBox, t: "Dourada" },
-                { img: showerBlackBox, t: "Preta" },
-              ].map((c) => (
-                <div key={c.t} className="space-y-2">
-                  <img src={c.img} alt={`Shower Care ${c.t}`} className="rounded-2xl shadow-xl w-full object-cover aspect-square" loading="lazy" />
-                  <p className="text-center text-sm text-[hsl(var(--secondary))] font-medium">{c.t}</p>
-                </div>
-              ))}
+            <div className="space-y-4">
+              <img
+                src={showerColorsLineup}
+                alt="Acqualive Shower Care nas cores branca, preta, cromada e dourada"
+                className="rounded-3xl shadow-2xl w-full object-cover"
+                loading="lazy"
+              />
+              <div className="grid grid-cols-4 gap-2 text-center text-sm text-[hsl(var(--secondary))] font-medium">
+                <span>Branca</span>
+                <span>Preta</span>
+                <span>Cromada</span>
+                <span>Dourada</span>
+              </div>
             </div>
           </div>
         </section>
