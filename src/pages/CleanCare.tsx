@@ -292,7 +292,7 @@ const BeforeAfter = () => {
             Sinta a diferença
           </span>
           <h2 className="font-display text-4xl font-light leading-tight text-[#0a1628] md:text-5xl">
-            Com produto. <em className="font-serif italic">Sem produto.</em>
+            Depois de começar, não dá mais para <em className="font-serif italic">viver sem!</em>
           </h2>
           <p className="mt-6 text-[#0a1628]/70">
             Arraste para comparar como a pele responde quando recebe Clean &amp; Care.
