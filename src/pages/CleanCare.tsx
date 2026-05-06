@@ -26,6 +26,7 @@ import bottleMarble from "@/assets/cleancare/bottle-marble.png";
 import bottleNature from "@/assets/cleancare/bottle-nature.png";
 import bottleFlat from "@/assets/cleancare/bottle-flat.png";
 import bottlePool from "@/assets/cleancare/bottle-pool.png";
+import babiesKids from "@/assets/cleancare/babies-kids.png";
 
 const SHOP_URL = "https://www.acqualive.com.br/agua-termal-acqualive-clean-care/p";
 
@@ -274,7 +275,7 @@ const benefits = [
     icon: HeartPulse,
   },
   {
-    img: bottleMarble,
+    img: babiesKids,
     title: "Bebês e crianças",
     desc: "Higiene segura, sem álcool, conservantes ou perfume.",
     icon: Baby,
@@ -284,7 +285,7 @@ const benefits = [
 const HoverBenefits = () => (
   <section id="ritual" className="bg-[#0a1628] py-28 text-white md:py-40">
     <div className="container mx-auto px-6 lg:px-12">
-      <div className="mx-auto mb-20 max-w-3xl text-center">
+      <div className="mx-auto mb-16 max-w-3xl text-center">
         <span className="mb-5 inline-block text-[11px] font-semibold uppercase tracking-[0.3em] text-[#9cc8ff]">
           O ritual Acqualive
         </span>
@@ -295,34 +296,30 @@ const HoverBenefits = () => (
           Passe o cursor para descobrir como o Clean &amp; Care entra na sua rotina.
         </p>
       </div>
+    </div>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {benefits.map((b) => (
-          <motion.div
-            key={b.title}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="group relative h-[420px] overflow-hidden rounded-3xl bg-[#0f2240]"
-          >
-            <img
-              src={b.img}
-              alt={b.title}
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/30 to-transparent transition-opacity duration-500 group-hover:from-[#0a1628]/95 group-hover:via-[#0a1628]/70" />
-
-            <div className="absolute inset-x-0 bottom-0 p-7">
-              <b.icon className="mb-3 h-6 w-6 text-[#9cc8ff] opacity-0 transition-all duration-500 group-hover:opacity-100" />
-              <h3 className="font-display text-2xl font-light">{b.title}</h3>
-              <p className="mt-2 max-h-0 overflow-hidden text-sm text-white/75 transition-all duration-500 group-hover:max-h-32 group-hover:pt-2">
-                {b.desc}
-              </p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+    {/* full-bleed mosaic, no gaps */}
+    <div className="grid w-full grid-cols-2 md:grid-cols-3">
+      {benefits.map((b) => (
+        <div
+          key={b.title}
+          className="group relative h-[280px] overflow-hidden md:h-[420px]"
+        >
+          <img
+            src={b.img}
+            alt={b.title}
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/95 via-[#0a1628]/30 to-transparent transition-opacity duration-500 group-hover:from-[#0a1628]/95 group-hover:via-[#0a1628]/60" />
+          <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
+            <b.icon className="mb-3 h-6 w-6 text-[#9cc8ff] opacity-80 transition-all duration-500 group-hover:opacity-100" />
+            <h3 className="font-display text-xl font-light md:text-2xl">{b.title}</h3>
+            <p className="mt-2 max-h-0 overflow-hidden text-sm text-white/80 transition-all duration-500 group-hover:max-h-32 group-hover:pt-2">
+              {b.desc}
+            </p>
+          </div>
+        </div>
+      ))}
     </div>
   </section>
 );
@@ -355,105 +352,131 @@ const ingredients = [
   },
 ];
 
-const Ingredients = () => (
-  <section className="relative overflow-hidden bg-gradient-to-b from-[#f7f4ef] to-white py-28 md:py-40">
-    <div className="container mx-auto px-6 lg:px-12">
-      <div className="grid gap-16 md:grid-cols-2 md:items-center">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
+const Ingredients = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, 90]);
+
+  return (
+    <section ref={ref} className="relative overflow-hidden bg-gradient-to-b from-[#f7f4ef] via-[#efeae0] to-white py-28 md:py-40">
+      {/* organic decorative blobs */}
+      <motion.div
+        style={{ rotate }}
+        className="pointer-events-none absolute -right-40 top-20 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-[#1d4380]/15 to-transparent blur-3xl"
+      />
+      <motion.div
+        style={{ rotate: useTransform(scrollYProgress, [0, 1], [0, -60]) }}
+        className="pointer-events-none absolute -left-40 bottom-10 h-[400px] w-[400px] rounded-full bg-gradient-to-br from-[#9cc8ff]/30 to-transparent blur-3xl"
+      />
+
+      <div className="container relative mx-auto px-6 lg:px-12">
+        <div className="mx-auto mb-20 max-w-3xl text-center">
           <span className="mb-5 inline-block text-[11px] font-semibold uppercase tracking-[0.3em] text-[#1d4380]">
             Composição mineral
           </span>
           <h2 className="font-display text-4xl font-light leading-tight text-[#0a1628] md:text-6xl">
             A fórmula é a <em className="font-serif italic">terra.</em>
           </h2>
-          <p className="mt-6 max-w-md text-[#0a1628]/70">
+          <p className="mx-auto mt-6 max-w-xl text-[#0a1628]/70">
             Não inventamos a Clean &amp; Care em laboratório. A natureza levou
             milhões de anos filtrando essa água através das rochas do Aquífero Guarani.
-            O que chega no frasco é mineral puro, sem nenhuma intervenção química.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        {/* editorial mineral list - asymmetric, large numbers */}
+        <div className="mx-auto max-w-5xl">
           {ingredients.map((i, idx) => (
             <motion.div
               key={i.name}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="rounded-2xl border border-[#0a1628]/10 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.7, delay: idx * 0.05 }}
+              className={`group grid grid-cols-12 items-center gap-4 border-b border-[#0a1628]/10 py-10 transition-all hover:bg-white/60 md:gap-8 md:py-14`}
             >
-              <i.icon className="mb-4 h-7 w-7 text-[#1d4380]" />
-              <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#1d4380]/60">
-                {i.tag}
+              <div className="col-span-2 font-display text-3xl font-light text-[#1d4380]/40 md:text-5xl">
+                {String(idx + 1).padStart(2, "0")}
               </div>
-              <h3 className="mt-1 font-display text-2xl font-light text-[#0a1628]">{i.name}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-[#0a1628]/65">{i.desc}</p>
+              <div className="col-span-10 md:col-span-5">
+                <div className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#1d4380]/70">
+                  {i.tag}
+                </div>
+                <h3 className="mt-2 font-display text-3xl font-light text-[#0a1628] md:text-5xl">
+                  {i.name}
+                </h3>
+              </div>
+              <div className="col-span-12 md:col-span-5">
+                <p className="text-base leading-relaxed text-[#0a1628]/70 md:text-lg">{i.desc}</p>
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 /* ---------------- ORIGIN STORY ---------------- */
 const Origin = () => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
+  // strong vertical movement so image clearly slides with the page
+  const y = useTransform(scrollYProgress, [0, 1], ["-25%", "25%"]);
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.15, 1.05, 1.15]);
 
   return (
-    <section ref={ref} className="relative h-[100vh] min-h-[600px] overflow-hidden bg-[#0a1628]">
-      <motion.div style={{ y }} className="absolute inset-0">
-        <img
-          src={bottleNature}
-          alt="Origem natural"
-          className="h-[130%] w-full object-cover opacity-50"
-        />
-      </motion.div>
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] via-[#0a1628]/70 to-transparent" />
-
-      <div className="container relative z-10 mx-auto flex h-full items-center px-6 lg:px-12">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.9 }}
-          className="max-w-xl text-white"
-        >
-          <Mountain className="mb-6 h-8 w-8 text-[#9cc8ff]" />
-          <span className="mb-5 inline-block text-[11px] font-semibold uppercase tracking-[0.3em] text-[#9cc8ff]">
-            Origem
-          </span>
-          <h2 className="font-display text-4xl font-light leading-tight md:text-6xl">
-            Assim como nos vinhos, o terroir <em className="font-serif italic">muda tudo.</em>
-          </h2>
-          <p className="mt-6 text-white/75">
-            A Clean &amp; Care é extraída a mais de 250 metros de profundidade do Aquífero
-            Guarani, a segunda maior reserva de água subterrânea do mundo. Cada gota é
-            filtrada por rochas há milhões de anos, ganhando minerais que nenhum
-            cosmético consegue replicar em laboratório.
-          </p>
-
-          <div className="mt-10 grid grid-cols-3 gap-6 border-t border-white/15 pt-8">
-            {[
-              { v: "250m", l: "Profundidade" },
-              { v: "1.2M km²", l: "Aquífero Guarani" },
-              { v: "Milhões", l: "De anos filtrando" },
-            ].map((s) => (
-              <div key={s.v}>
-                <div className="font-display text-xl font-light">{s.v}</div>
-                <div className="mt-1 text-[10px] uppercase tracking-wider text-white/55">{s.l}</div>
-              </div>
-            ))}
-          </div>
+    <section ref={ref} className="relative overflow-hidden bg-[#0a1628]">
+      {/* Sticky parallax background */}
+      <div className="sticky top-0 h-screen w-full overflow-hidden">
+        <motion.div style={{ y, scale }} className="absolute inset-0 will-change-transform">
+          <img
+            src={bottleNature}
+            alt="Origem natural — Aquífero Guarani"
+            className="h-full w-full object-cover opacity-60"
+          />
         </motion.div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] via-[#0a1628]/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/90 via-transparent to-[#0a1628]/40" />
+      </div>
+
+      {/* Content overlays the sticky bg */}
+      <div className="relative -mt-[100vh] min-h-[160vh]">
+        <div className="container mx-auto flex min-h-[160vh] items-center px-6 lg:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9 }}
+            className="max-w-xl text-white"
+          >
+            <Mountain className="mb-6 h-8 w-8 text-[#9cc8ff]" />
+            <span className="mb-5 inline-block text-[11px] font-semibold uppercase tracking-[0.3em] text-[#9cc8ff]">
+              Origem
+            </span>
+            <h2 className="font-display text-4xl font-light leading-tight md:text-6xl">
+              Assim como nos vinhos, o terroir <em className="font-serif italic">muda tudo.</em>
+            </h2>
+            <p className="mt-6 text-white/80">
+              A Clean &amp; Care é extraída a mais de 250 metros de profundidade do Aquífero
+              Guarani, a segunda maior reserva de água subterrânea do mundo. Cada gota é
+              filtrada por rochas há milhões de anos, ganhando minerais que nenhum
+              cosmético consegue replicar em laboratório.
+            </p>
+
+            <div className="mt-10 grid grid-cols-3 gap-6 border-t border-white/15 pt-8">
+              {[
+                { v: "250m", l: "Profundidade" },
+                { v: "1.2M km²", l: "Aquífero Guarani" },
+                { v: "Milhões", l: "De anos filtrando" },
+              ].map((s) => (
+                <div key={s.v}>
+                  <div className="font-display text-xl font-light">{s.v}</div>
+                  <div className="mt-1 text-[10px] uppercase tracking-wider text-white/55">{s.l}</div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
