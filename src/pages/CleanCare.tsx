@@ -289,13 +289,13 @@ const BeforeAfter = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="mx-auto mb-14 max-w-3xl text-center">
           <span className="mb-5 inline-block text-[11px] font-semibold uppercase tracking-[0.3em] text-[#1d4380]">
-            Resultado visível
+            Sinta a diferença
           </span>
           <h2 className="font-display text-4xl font-light leading-tight text-[#0a1628] md:text-5xl">
-            Arraste e veja a <em className="font-serif italic">diferença.</em>
+            Com produto. <em className="font-serif italic">Sem produto.</em>
           </h2>
           <p className="mt-6 text-[#0a1628]/70">
-            Pele real, antes e depois de duas semanas de Clean &amp; Care.
+            Arraste para comparar como a pele responde quando recebe Clean &amp; Care.
           </p>
         </div>
 
@@ -310,14 +310,14 @@ const BeforeAfter = () => {
           className="relative mx-auto aspect-[16/10] w-full max-w-5xl select-none overflow-hidden rounded-[2rem] shadow-2xl"
           style={{ cursor: "ew-resize" }}
         >
-          {/* AFTER (base) */}
-          <img src={modelEyes4} alt="Pele depois de Clean & Care" className="absolute inset-0 h-full w-full object-cover" />
-          <div className="absolute right-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#0a1628]">Depois</div>
+          {/* COM produto (base) */}
+          <img src={comProduto} alt="Pele com Clean & Care" className="absolute inset-0 h-full w-full object-cover" />
+          <div className="absolute right-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#0a1628]">Com produto</div>
 
-          {/* BEFORE (clipped) */}
+          {/* SEM produto (clipped) */}
           <div className="absolute inset-0 overflow-hidden" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
-            <img src={modelSpray3} alt="Pele antes de Clean & Care" className="absolute inset-0 h-full w-full object-cover" style={{ filter: "grayscale(35%) brightness(0.92) contrast(1.05)" }} />
-            <div className="absolute left-4 top-4 rounded-full bg-[#0a1628]/85 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">Antes</div>
+            <img src={semProduto} alt="Pele sem Clean & Care" className="absolute inset-0 h-full w-full object-cover" />
+            <div className="absolute left-4 top-4 rounded-full bg-[#0a1628]/85 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">Sem produto</div>
           </div>
 
           {/* Handle */}
