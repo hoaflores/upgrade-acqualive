@@ -52,7 +52,9 @@ E beber de menos te deixa cansada, com dor de cabeça e pele opaca.
 
 Existe um número certo pra cada corpo.
 
-→ Descobre o seu agora (é grátis e leva 1 min).`,
+→ Descobre o seu agora (é grátis e leva 1 min).
+
+E ainda ganha um livro digital de presente com dicas para beber mais água no dia a dia.`,
     cta: "Quero saber minha quantidade",
   },
   {
