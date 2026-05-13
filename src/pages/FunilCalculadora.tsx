@@ -173,7 +173,7 @@ Lista:
 
 E não foram 2 litros aleatórios. Foi a quantidade calculada pro meu corpo.
 
-CTA: Calcula a sua no link da bio. É grátis.`,
+CTA: Calcula a sua no link da bio. É grátis e ainda vem um livro digital de presente com receitas que me ajudaram.`,
   },
   {
     titulo: "Reel 4 — Erros comuns",
