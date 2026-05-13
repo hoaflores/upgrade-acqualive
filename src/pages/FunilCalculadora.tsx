@@ -183,7 +183,7 @@ CTA: Calcula a sua no link da bio. É grátis e ainda vem um livro digital de pr
 2. Beber tudo de uma vez no fim do dia (o corpo elimina, não absorve).
 3. Não saber a quantidade certa pro SEU corpo.
 
-CTA: Resolve o erro 3 agora. Calculadora gratuita no link da bio.`,
+CTA: Resolve o erro 3 agora. Calculadora gratuita no link da bio (e você ainda ganha um livro digital com dicas de hidratação).`,
   },
   {
     titulo: "Reel 5 — Para quem treina",
