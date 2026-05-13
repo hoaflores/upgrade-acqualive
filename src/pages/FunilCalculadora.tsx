@@ -465,6 +465,7 @@ export default function FunilCalculadora() {
 
           <TabsContent value="stories" className="space-y-4">
             <div className="text-sm text-muted-foreground mb-2">5 stories para enviar tráfego à landing page.</div>
+            <CopyAllButton text={allStories} />
             {stories.map((s, i) => (
               <Card key={i}>
                 <CardHeader>
