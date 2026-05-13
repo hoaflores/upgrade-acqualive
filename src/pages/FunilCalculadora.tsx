@@ -30,6 +30,29 @@ function CopyBlock({ text, label }: { text: string; label?: string }) {
   );
 }
 
+function CopyAllButton({ text }: { text: string }) {
+  const [copied, setCopied] = useState(false);
+  return (
+    <Button
+      size="sm"
+      variant="outline"
+      className="mb-4"
+      onClick={() => {
+        navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1800);
+      }}
+    >
+      {copied ? <Check className="w-4 h-4 mr-2" /> : <Copy className="w-4 h-4 mr-2" />}
+      {copied ? "Copiado!" : "Copiar tudo desta aba"}
+    </Button>
+  );
+}
+
+function joinBlocks(blocks: { titulo?: string; texto: string }[]) {
+  return blocks.map((b) => (b.titulo ? `=== ${b.titulo} ===\n\n${b.texto}` : b.texto)).join("\n\n\n");
+}
+
 const stories = [
   {
     titulo: "Story 1 — Pergunta direta",
@@ -386,6 +409,30 @@ A melhor água, na quantidade certa, todos os dias na sua casa.
 
 Bora? 💙`;
 
+const allStories = joinBlocks(stories.map((s) => ({ titulo: `${s.titulo} | CTA: ${s.cta}`, texto: s.texto })));
+const allCards = joinBlocks(cards);
+const allReels = joinBlocks(reels);
+const allManychat = joinBlocks([
+  { titulo: "Gatilho", texto: manychatFlow.gatilho },
+  { titulo: "Mensagem 1 — Boas-vindas", texto: manychatFlow.msg1 },
+  { titulo: "Botões da Mensagem 1", texto: manychatFlow.botoes1 },
+  { titulo: "Mensagem 2 — Entrega do link", texto: manychatFlow.msg2 },
+  { titulo: 'Mensagem 2B — "Me conta mais"', texto: manychatFlow.msg2b },
+  { titulo: "Follow-up 24h", texto: manychatFlow.followup },
+]);
+const allD0 = joinBlocks([
+  { titulo: `E-mail | Assunto: ${emailD0.assunto}`, texto: emailD0.corpo },
+  { titulo: "Versão WhatsApp", texto: whatsappD0 },
+]);
+const allD1 = joinBlocks([
+  { titulo: `E-mail | Assunto: ${emailD1.assunto}`, texto: emailD1.corpo },
+  { titulo: "Versão WhatsApp", texto: whatsappD1 },
+]);
+const allD2 = joinBlocks([
+  { titulo: `E-mail | Assunto: ${emailD2.assunto}`, texto: emailD2.corpo },
+  { titulo: "Versão WhatsApp", texto: whatsappD2 },
+]);
+
 export default function FunilCalculadora() {
   return (
     <div className="min-h-screen bg-background">
@@ -418,6 +465,7 @@ export default function FunilCalculadora() {
 
           <TabsContent value="stories" className="space-y-4">
             <div className="text-sm text-muted-foreground mb-2">5 stories para enviar tráfego à landing page.</div>
+            <CopyAllButton text={allStories} />
             {stories.map((s, i) => (
               <Card key={i}>
                 <CardHeader>
@@ -433,6 +481,7 @@ export default function FunilCalculadora() {
 
           <TabsContent value="cards" className="space-y-4">
             <div className="text-sm text-muted-foreground mb-2">3 cards de campanha (feed, anúncio ou criativo).</div>
+            <CopyAllButton text={allCards} />
             {cards.map((c, i) => (
               <Card key={i}>
                 <CardHeader>
@@ -447,6 +496,7 @@ export default function FunilCalculadora() {
 
           <TabsContent value="reels" className="space-y-4">
             <div className="text-sm text-muted-foreground mb-2">5 roteiros de reels (texto direto).</div>
+            <CopyAllButton text={allReels} />
             {reels.map((r, i) => (
               <Card key={i}>
                 <CardHeader>
@@ -461,6 +511,7 @@ export default function FunilCalculadora() {
 
           <TabsContent value="manychat" className="space-y-4">
             <div className="text-sm text-muted-foreground mb-2">Automação para quem comentar/dm com a palavra "calculadora".</div>
+            <CopyAllButton text={allManychat} />
             <Card>
               <CardHeader><CardTitle className="text-lg">Gatilho</CardTitle></CardHeader>
               <CardContent><CopyBlock text={manychatFlow.gatilho} /></CardContent>
@@ -488,6 +539,7 @@ export default function FunilCalculadora() {
 
           <TabsContent value="d0" className="space-y-4">
             <div className="text-sm text-muted-foreground mb-2">Disparado logo após o uso da calculadora. Não mostra o resultado.</div>
+            <CopyAllButton text={allD0} />
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">E-mail</CardTitle>
@@ -503,6 +555,7 @@ export default function FunilCalculadora() {
 
           <TabsContent value="d1" className="space-y-4">
             <div className="text-sm text-muted-foreground mb-2">Riscos da água comum + apresentação da Acqualive.</div>
+            <CopyAllButton text={allD1} />
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">E-mail</CardTitle>
@@ -518,6 +571,7 @@ export default function FunilCalculadora() {
 
           <TabsContent value="d2" className="space-y-4">
             <div className="text-sm text-muted-foreground mb-2">Cupom de R$100 + opção de falar com especialista.</div>
+            <CopyAllButton text={allD2} />
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">E-mail</CardTitle>
