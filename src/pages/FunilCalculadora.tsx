@@ -130,7 +130,7 @@ Beber a quantidade certa de água melhora pele, digestão, disposição e até o
 
 Descubra a sua quantidade ideal agora.
 
-(É grátis e leva 1 minuto)`,
+(É grátis, leva 1 minuto e você ainda ganha um livro digital com dicas e receitas de hidratação)`,
   },
 ];
 
