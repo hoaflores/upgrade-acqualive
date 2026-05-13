@@ -78,7 +78,9 @@ De presente, você recebe um livro digital com receitas e truques para se hidrat
 
 E o melhor: leva menos de 1 minuto.
 
-Bora descobrir a sua? →`,
+Bora descobrir a sua? →
+
+Quem calcula recebe ainda um livro digital gratuito com dicas e receitas de hidratação.`,
     cta: "Calcular agora",
   },
   {
