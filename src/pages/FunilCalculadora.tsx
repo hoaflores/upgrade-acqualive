@@ -39,7 +39,9 @@ A maioria das pessoas chuta "2 litros" e erra feio.
 
 A quantidade ideal depende do seu peso, do clima e da sua rotina.
 
-→ Arrasta pra cima e descobre a sua em 1 minuto.`,
+→ Arrasta pra cima e descobre a sua em 1 minuto.
+
+BÔNUS: ao calcular, você ganha um livro digital gratuito com dicas e receitas para beber mais água sem sofrer.`,
     cta: "Calcular minha água ideal",
   },
   {
