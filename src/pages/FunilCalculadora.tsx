@@ -409,6 +409,30 @@ A melhor água, na quantidade certa, todos os dias na sua casa.
 
 Bora? 💙`;
 
+const allStories = joinBlocks(stories.map((s) => ({ titulo: `${s.titulo} | CTA: ${s.cta}`, texto: s.texto })));
+const allCards = joinBlocks(cards);
+const allReels = joinBlocks(reels);
+const allManychat = joinBlocks([
+  { titulo: "Gatilho", texto: manychatFlow.gatilho },
+  { titulo: "Mensagem 1 — Boas-vindas", texto: manychatFlow.msg1 },
+  { titulo: "Botões da Mensagem 1", texto: manychatFlow.botoes1 },
+  { titulo: "Mensagem 2 — Entrega do link", texto: manychatFlow.msg2 },
+  { titulo: 'Mensagem 2B — "Me conta mais"', texto: manychatFlow.msg2b },
+  { titulo: "Follow-up 24h", texto: manychatFlow.followup },
+]);
+const allD0 = joinBlocks([
+  { titulo: `E-mail | Assunto: ${emailD0.assunto}`, texto: emailD0.corpo },
+  { titulo: "Versão WhatsApp", texto: whatsappD0 },
+]);
+const allD1 = joinBlocks([
+  { titulo: `E-mail | Assunto: ${emailD1.assunto}`, texto: emailD1.corpo },
+  { titulo: "Versão WhatsApp", texto: whatsappD1 },
+]);
+const allD2 = joinBlocks([
+  { titulo: `E-mail | Assunto: ${emailD2.assunto}`, texto: emailD2.corpo },
+  { titulo: "Versão WhatsApp", texto: whatsappD2 },
+]);
+
 export default function FunilCalculadora() {
   return (
     <div className="min-h-screen bg-background">
