@@ -29,6 +29,7 @@ import CalculadoraAcqualiveResultados from "./pages/CalculadoraAcqualiveResultad
 import Demandas from "./pages/Demandas";
 import FunilCalculadora from "./pages/FunilCalculadora";
 import DemandasSolicitadas from "./pages/DemandasSolicitadas";
+import EbookQuantidadeAgua from "./pages/EbookQuantidadeAgua";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
