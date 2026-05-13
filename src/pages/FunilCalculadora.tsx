@@ -481,6 +481,7 @@ export default function FunilCalculadora() {
 
           <TabsContent value="cards" className="space-y-4">
             <div className="text-sm text-muted-foreground mb-2">3 cards de campanha (feed, anúncio ou criativo).</div>
+            <CopyAllButton text={allCards} />
             {cards.map((c, i) => (
               <Card key={i}>
                 <CardHeader>
