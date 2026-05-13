@@ -143,7 +143,7 @@ Desenvolvimento: A recomendação dos 2 litros é uma média genérica. Uma pess
 
 A fórmula correta considera: peso, sexo, idade, atividade física, clima e até consumo de café.
 
-CTA: Coloquei uma calculadora gratuita no link da bio. Em 1 minuto você descobre a SUA quantidade ideal.`,
+CTA: Coloquei uma calculadora gratuita no link da bio. Em 1 minuto você descobre a SUA quantidade ideal e ainda ganha um livro digital de presente com dicas para beber mais água.`,
   },
   {
     titulo: "Reel 2 — Sintomas de desidratação",
