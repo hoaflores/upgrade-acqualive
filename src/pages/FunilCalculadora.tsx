@@ -511,6 +511,7 @@ export default function FunilCalculadora() {
 
           <TabsContent value="manychat" className="space-y-4">
             <div className="text-sm text-muted-foreground mb-2">Automação para quem comentar/dm com a palavra "calculadora".</div>
+            <CopyAllButton text={allManychat} />
             <Card>
               <CardHeader><CardTitle className="text-lg">Gatilho</CardTitle></CardHeader>
               <CardContent><CopyBlock text={manychatFlow.gatilho} /></CardContent>
