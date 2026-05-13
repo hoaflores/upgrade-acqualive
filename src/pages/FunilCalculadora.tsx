@@ -496,6 +496,7 @@ export default function FunilCalculadora() {
 
           <TabsContent value="reels" className="space-y-4">
             <div className="text-sm text-muted-foreground mb-2">5 roteiros de reels (texto direto).</div>
+            <CopyAllButton text={allReels} />
             {reels.map((r, i) => (
               <Card key={i}>
                 <CardHeader>
