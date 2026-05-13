@@ -27,6 +27,7 @@ import CalculadoraAcqualive from "./pages/CalculadoraAcqualive";
 import CleanCare from "./pages/CleanCare";
 import CalculadoraAcqualiveResultados from "./pages/CalculadoraAcqualiveResultados";
 import Demandas from "./pages/Demandas";
+import FunilCalculadora from "./pages/FunilCalculadora";
 import DemandasSolicitadas from "./pages/DemandasSolicitadas";
 import NotFound from "./pages/NotFound";
 
