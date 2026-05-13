@@ -29,6 +29,7 @@ import CalculadoraAcqualiveResultados from "./pages/CalculadoraAcqualiveResultad
 import Demandas from "./pages/Demandas";
 import FunilCalculadora from "./pages/FunilCalculadora";
 import DemandasSolicitadas from "./pages/DemandasSolicitadas";
+import EbookQuantidadeAgua from "./pages/EbookQuantidadeAgua";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -67,6 +68,7 @@ const App = () => (
             <Route path="/demandas" element={<Demandas />} />
             <Route path="/funil-calculadora" element={<FunilCalculadora />} />
             <Route path="/demandas-solicitadas" element={<DemandasSolicitadas />} />
+            <Route path="/ebook-quantidade-agua" element={<EbookQuantidadeAgua />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
