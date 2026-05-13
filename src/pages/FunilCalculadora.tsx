@@ -203,7 +203,9 @@ const manychatFlow = {
 
 A maioria das pessoas chuta "2 litros" e erra. A quantidade ideal depende do SEU peso, rotina e clima.
 
-Posso te mandar o link da calculadora gratuita? (leva 1 minuto)`,
+E tem um BÔNUS: quem usa a calculadora ganha um livro digital gratuito com receitas e dicas para beber mais água sem sofrer.
+
+Posso te mandar o link? (leva 1 minuto)`,
   botoes1: `[Sim, quero o link] → vai para Mensagem 2
 [Me conta mais antes] → vai para Mensagem 2B`,
   msg2: `Perfeito! Aqui está 👇
