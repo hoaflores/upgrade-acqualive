@@ -214,6 +214,8 @@ Posso te mandar o link? (leva 1 minuto)`,
 
 É só preencher os dados (peso, idade, rotina) e em 1 minuto você recebe a quantidade ideal de água pra você.
 
+Ah, e fica de olho no e-mail: vou te mandar também um livro digital gratuito com dicas e receitas pra beber mais água sem sofrer.
+
 Me conta depois quanto deu? Fico curiosa 💙`,
   msg2b: `Claro!
 
