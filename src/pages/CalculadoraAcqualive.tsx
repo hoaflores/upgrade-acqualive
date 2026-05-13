@@ -132,6 +132,17 @@ export default function CalculadoraAcqualive() {
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             A recomendação genérica de "2 litros" ignora seu peso, sua rotina e o clima onde você vive. Em menos de 1 minuto, descubra o número exato para a sua realidade.
           </p>
+          <div className="mt-6 max-w-2xl mx-auto bg-gradient-to-r from-primary/10 to-sky-100 border-2 border-primary/20 rounded-2xl p-4 md:p-5 flex items-center gap-4 text-left">
+            <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-primary text-primary-foreground flex items-center justify-center text-2xl font-bold shrink-0">
+              📘
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-wider text-primary font-bold mb-0.5">Bônus gratuito</p>
+              <p className="text-sm md:text-base font-semibold text-foreground leading-snug">
+                Ao calcular, você recebe um livro digital de presente com receitas e dicas para beber mais água no dia a dia.
+              </p>
+            </div>
+          </div>
           <div className="flex flex-wrap justify-center gap-4 mt-6 text-xs text-muted-foreground">
             <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-primary" /> Baseado em referências clínicas</span>
             <span className="flex items-center gap-1.5"><Droplets className="w-4 h-4 text-primary" /> Personalizado para você</span>

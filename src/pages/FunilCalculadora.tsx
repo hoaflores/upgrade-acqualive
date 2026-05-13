@@ -39,7 +39,9 @@ A maioria das pessoas chuta "2 litros" e erra feio.
 
 A quantidade ideal depende do seu peso, do clima e da sua rotina.
 
-→ Arrasta pra cima e descobre a sua em 1 minuto.`,
+→ Arrasta pra cima e descobre a sua em 1 minuto.
+
+BÔNUS: ao calcular, você ganha um livro digital gratuito com dicas e receitas para beber mais água sem sofrer.`,
     cta: "Calcular minha água ideal",
   },
   {
@@ -50,7 +52,9 @@ E beber de menos te deixa cansada, com dor de cabeça e pele opaca.
 
 Existe um número certo pra cada corpo.
 
-→ Descobre o seu agora (é grátis e leva 1 min).`,
+→ Descobre o seu agora (é grátis e leva 1 min).
+
+E ainda ganha um livro digital de presente com dicas para beber mais água no dia a dia.`,
     cta: "Quero saber minha quantidade",
   },
   {
@@ -63,7 +67,9 @@ Existe um número certo pra cada corpo.
 • Constipação
 • Dificuldade de concentração
 
-Se você marcou 2+, faz a calculadora →`,
+Se você marcou 2+, faz a calculadora →
+
+De presente, você recebe um livro digital com receitas e truques para se hidratar melhor.`,
     cta: "Ver minha meta de hidratação",
   },
   {
@@ -72,7 +78,9 @@ Se você marcou 2+, faz a calculadora →`,
 
 E o melhor: leva menos de 1 minuto.
 
-Bora descobrir a sua? →`,
+Bora descobrir a sua? →
+
+Quem calcula recebe ainda um livro digital gratuito com dicas e receitas de hidratação.`,
     cta: "Calcular agora",
   },
   {
@@ -81,7 +89,7 @@ Bora descobrir a sua? →`,
 
 Para de chutar quanto você "deveria" beber e descobre o número exato pra você.
 
-Calculadora gratuita, leva 1 minuto.
+Calculadora gratuita, leva 1 minuto. E ainda vem um livro digital de presente.
 
 → Arrasta pra cima.`,
     cta: "Acessar calculadora",
@@ -98,6 +106,7 @@ Descubra em 1 minuto a quantidade ideal de água para o SEU corpo, considerando 
 ✓ Gratuito
 ✓ Leva 1 minuto
 ✓ Resultado personalizado
+✓ BÔNUS: livro digital gratuito de hidratação
 
 Toque para calcular →`,
   },
@@ -109,6 +118,8 @@ A quantidade ideal de água é diferente para cada pessoa.
 
 Nossa calculadora considera seu peso, idade, atividade física e clima para te dar o número exato.
 
+E ainda te enviamos um livro digital gratuito com receitas e dicas para chegar nessa meta sem sofrer.
+
 Calcule a sua →`,
   },
   {
@@ -119,7 +130,7 @@ Beber a quantidade certa de água melhora pele, digestão, disposição e até o
 
 Descubra a sua quantidade ideal agora.
 
-(É grátis e leva 1 minuto)`,
+(É grátis, leva 1 minuto e você ainda ganha um livro digital com dicas e receitas de hidratação)`,
   },
 ];
 
@@ -132,7 +143,7 @@ Desenvolvimento: A recomendação dos 2 litros é uma média genérica. Uma pess
 
 A fórmula correta considera: peso, sexo, idade, atividade física, clima e até consumo de café.
 
-CTA: Coloquei uma calculadora gratuita no link da bio. Em 1 minuto você descobre a SUA quantidade ideal.`,
+CTA: Coloquei uma calculadora gratuita no link da bio. Em 1 minuto você descobre a SUA quantidade ideal e ainda ganha um livro digital de presente com dicas para beber mais água.`,
   },
   {
     titulo: "Reel 2 — Sintomas de desidratação",
@@ -147,7 +158,7 @@ Lista (com cortes rápidos):
 
 A maioria das pessoas anda desidratada e não sabe.
 
-CTA: Faz a calculadora no link da bio e descobre quanto VOCÊ precisa beber.`,
+CTA: Faz a calculadora no link da bio e descobre quanto VOCÊ precisa beber. De brinde, vai um livro digital com dicas de hidratação.`,
   },
   {
     titulo: "Reel 3 — Antes e depois",
@@ -162,7 +173,7 @@ Lista:
 
 E não foram 2 litros aleatórios. Foi a quantidade calculada pro meu corpo.
 
-CTA: Calcula a sua no link da bio. É grátis.`,
+CTA: Calcula a sua no link da bio. É grátis e ainda vem um livro digital de presente com receitas que me ajudaram.`,
   },
   {
     titulo: "Reel 4 — Erros comuns",
@@ -172,7 +183,7 @@ CTA: Calcula a sua no link da bio. É grátis.`,
 2. Beber tudo de uma vez no fim do dia (o corpo elimina, não absorve).
 3. Não saber a quantidade certa pro SEU corpo.
 
-CTA: Resolve o erro 3 agora. Calculadora gratuita no link da bio.`,
+CTA: Resolve o erro 3 agora. Calculadora gratuita no link da bio (e você ainda ganha um livro digital com dicas de hidratação).`,
   },
   {
     titulo: "Reel 5 — Para quem treina",
@@ -182,7 +193,7 @@ Quem se exercita perde mais água por suor e respiração. A necessidade pode su
 
 Não tomar a quantidade certa = menos performance, mais cansaço, mais risco de lesão.
 
-CTA: Calculadora gratuita no link da bio. Considera seu treino e te dá o número exato.`,
+CTA: Calculadora gratuita no link da bio. Considera seu treino, te dá o número exato e ainda manda um livro digital de presente com dicas de hidratação.`,
   },
 ];
 
@@ -192,7 +203,9 @@ const manychatFlow = {
 
 A maioria das pessoas chuta "2 litros" e erra. A quantidade ideal depende do SEU peso, rotina e clima.
 
-Posso te mandar o link da calculadora gratuita? (leva 1 minuto)`,
+E tem um BÔNUS: quem usa a calculadora ganha um livro digital gratuito com receitas e dicas para beber mais água sem sofrer.
+
+Posso te mandar o link? (leva 1 minuto)`,
   botoes1: `[Sim, quero o link] → vai para Mensagem 2
 [Me conta mais antes] → vai para Mensagem 2B`,
   msg2: `Perfeito! Aqui está 👇
@@ -200,6 +213,8 @@ Posso te mandar o link da calculadora gratuita? (leva 1 minuto)`,
 🔗 ${LP_URL}
 
 É só preencher os dados (peso, idade, rotina) e em 1 minuto você recebe a quantidade ideal de água pra você.
+
+Ah, e fica de olho no e-mail: vou te mandar também um livro digital gratuito com dicas e receitas pra beber mais água sem sofrer.
 
 Me conta depois quanto deu? Fico curiosa 💙`,
   msg2b: `Claro!
