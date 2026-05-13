@@ -118,6 +118,8 @@ A quantidade ideal de água é diferente para cada pessoa.
 
 Nossa calculadora considera seu peso, idade, atividade física e clima para te dar o número exato.
 
+E ainda te enviamos um livro digital gratuito com receitas e dicas para chegar nessa meta sem sofrer.
+
 Calcule a sua →`,
   },
   {
