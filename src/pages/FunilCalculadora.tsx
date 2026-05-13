@@ -89,7 +89,7 @@ Quem calcula recebe ainda um livro digital gratuito com dicas e receitas de hidr
 
 Para de chutar quanto você "deveria" beber e descobre o número exato pra você.
 
-Calculadora gratuita, leva 1 minuto.
+Calculadora gratuita, leva 1 minuto. E ainda vem um livro digital de presente.
 
 → Arrasta pra cima.`,
     cta: "Acessar calculadora",
