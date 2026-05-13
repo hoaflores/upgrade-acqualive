@@ -571,6 +571,7 @@ export default function FunilCalculadora() {
 
           <TabsContent value="d2" className="space-y-4">
             <div className="text-sm text-muted-foreground mb-2">Cupom de R$100 + opção de falar com especialista.</div>
+            <CopyAllButton text={allD2} />
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">E-mail</CardTitle>
