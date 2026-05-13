@@ -30,6 +30,29 @@ function CopyBlock({ text, label }: { text: string; label?: string }) {
   );
 }
 
+function CopyAllButton({ text }: { text: string }) {
+  const [copied, setCopied] = useState(false);
+  return (
+    <Button
+      size="sm"
+      variant="outline"
+      className="mb-4"
+      onClick={() => {
+        navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1800);
+      }}
+    >
+      {copied ? <Check className="w-4 h-4 mr-2" /> : <Copy className="w-4 h-4 mr-2" />}
+      {copied ? "Copiado!" : "Copiar tudo desta aba"}
+    </Button>
+  );
+}
+
+function joinBlocks(blocks: { titulo?: string; texto: string }[]) {
+  return blocks.map((b) => (b.titulo ? `=== ${b.titulo} ===\n\n${b.texto}` : b.texto)).join("\n\n\n");
+}
+
 const stories = [
   {
     titulo: "Story 1 — Pergunta direta",
