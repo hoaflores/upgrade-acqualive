@@ -193,7 +193,7 @@ Quem se exercita perde mais água por suor e respiração. A necessidade pode su
 
 Não tomar a quantidade certa = menos performance, mais cansaço, mais risco de lesão.
 
-CTA: Calculadora gratuita no link da bio. Considera seu treino e te dá o número exato.`,
+CTA: Calculadora gratuita no link da bio. Considera seu treino, te dá o número exato e ainda manda um livro digital de presente com dicas de hidratação.`,
   },
 ];
 
