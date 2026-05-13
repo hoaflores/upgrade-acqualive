@@ -101,9 +101,21 @@ export default function CalculadoraAcqualiveResultados() {
             </div>
           </div>
 
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
             Esse é o volume estimado para o seu perfil. Distribua ao longo do dia, comece pela manhã e mantenha uma garrafa por perto.
           </p>
+
+          <div className="max-w-2xl mx-auto mb-8 bg-gradient-to-r from-primary/10 to-sky-100 border-2 border-primary/30 rounded-2xl p-5 md:p-6 flex items-center gap-4 text-left shadow-lg">
+            <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-primary text-primary-foreground flex items-center justify-center text-3xl font-bold shrink-0">
+              📘
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-wider text-primary font-bold mb-1">Seu presente está a caminho</p>
+              <p className="text-sm md:text-base font-semibold text-foreground leading-snug">
+                Enviamos para o seu e-mail um livro digital gratuito com receitas e dicas para você alcançar essa meta de hidratação sem sofrer. Fique de olho na caixa de entrada.
+              </p>
+            </div>
+          </div>
 
           <Button
             size="lg"
