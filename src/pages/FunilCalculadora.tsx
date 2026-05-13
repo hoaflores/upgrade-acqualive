@@ -555,6 +555,7 @@ export default function FunilCalculadora() {
 
           <TabsContent value="d1" className="space-y-4">
             <div className="text-sm text-muted-foreground mb-2">Riscos da água comum + apresentação da Acqualive.</div>
+            <CopyAllButton text={allD1} />
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">E-mail</CardTitle>
