@@ -106,6 +106,7 @@ Descubra em 1 minuto a quantidade ideal de água para o SEU corpo, considerando 
 ✓ Gratuito
 ✓ Leva 1 minuto
 ✓ Resultado personalizado
+✓ BÔNUS: livro digital gratuito de hidratação
 
 Toque para calcular →`,
   },
