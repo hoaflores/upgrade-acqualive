@@ -158,7 +158,7 @@ Lista (com cortes rápidos):
 
 A maioria das pessoas anda desidratada e não sabe.
 
-CTA: Faz a calculadora no link da bio e descobre quanto VOCÊ precisa beber.`,
+CTA: Faz a calculadora no link da bio e descobre quanto VOCÊ precisa beber. De brinde, vai um livro digital com dicas de hidratação.`,
   },
   {
     titulo: "Reel 3 — Antes e depois",
