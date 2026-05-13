@@ -67,7 +67,9 @@ E ainda ganha um livro digital de presente com dicas para beber mais água no di
 • Constipação
 • Dificuldade de concentração
 
-Se você marcou 2+, faz a calculadora →`,
+Se você marcou 2+, faz a calculadora →
+
+De presente, você recebe um livro digital com receitas e truques para se hidratar melhor.`,
     cta: "Ver minha meta de hidratação",
   },
   {
