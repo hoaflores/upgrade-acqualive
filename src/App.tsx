@@ -65,6 +65,7 @@ const App = () => (
             <Route path="/calculadora-acqualive" element={<CalculadoraAcqualive />} />
             <Route path="/calculadora-acqualive-resultados" element={<CalculadoraAcqualiveResultados />} />
             <Route path="/demandas" element={<Demandas />} />
+            <Route path="/funil-calculadora" element={<FunilCalculadora />} />
             <Route path="/demandas-solicitadas" element={<DemandasSolicitadas />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
