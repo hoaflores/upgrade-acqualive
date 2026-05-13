@@ -539,6 +539,7 @@ export default function FunilCalculadora() {
 
           <TabsContent value="d0" className="space-y-4">
             <div className="text-sm text-muted-foreground mb-2">Disparado logo após o uso da calculadora. Não mostra o resultado.</div>
+            <CopyAllButton text={allD0} />
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">E-mail</CardTitle>
