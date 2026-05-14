@@ -175,8 +175,8 @@ const HeroSection = () => (
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-[hsl(215,65%,19%)] leading-[1.1] mb-6"
         >
-          Alguém que ama você
-          indicou a{" "}
+          Alguém indicou você para ter a
+          <span className="block md:inline"> </span>
           <span className="text-[hsl(215,62%,31%)]">melhor água do Brasil.</span>
         </motion.h1>
 
