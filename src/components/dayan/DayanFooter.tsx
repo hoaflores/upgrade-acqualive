@@ -8,7 +8,7 @@ const DayanFooter = () => {
               Dr. Dayan Siebra <span className="text-white/60">&</span> Acqualive
             </div>
             <p className="mt-4 text-white/60 max-w-md text-sm lg:text-base">
-              Cirurgia cardiovascular e saúde hídrica. Famílias que decidiram
+              Cirurgia vascular e saúde hídrica. Famílias que decidiram
               mudar de vida a partir da água.
             </p>
           </div>
