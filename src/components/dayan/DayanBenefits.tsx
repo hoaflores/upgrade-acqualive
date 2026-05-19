@@ -93,7 +93,7 @@ const DayanBenefits = () => {
             responde."
           </p>
           <p className="mt-4 text-sm text-[hsl(var(--ds-ink-soft))]">
-            Dr. Dayan Siebra, Cirurgião Cardiovascular.
+            Dr. Dayan Siebra, Cirurgião Vascular.
           </p>
         </div>
       </div>

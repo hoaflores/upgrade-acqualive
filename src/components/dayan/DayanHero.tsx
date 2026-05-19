@@ -36,7 +36,7 @@ const DayanHero = () => {
         <div className="dayan-reveal">
           <span className="ds-eyebrow text-[hsl(var(--ds-accent))] inline-flex items-center gap-2 text-[10px]">
             <span className="w-6 h-px bg-[hsl(var(--ds-accent))]" />
-            Carta aberta de um cirurgião cardiovascular
+            Carta aberta de um cirurgião vascular
           </span>
         </div>
 
@@ -53,7 +53,7 @@ const DayanHero = () => {
 
             <img
               src={dayanHero}
-              alt="Dr. Dayan Siebra, cirurgião cardiovascular"
+              alt="Dr. Dayan Siebra, cirurgião vascular"
               className="absolute inset-0 w-full h-full object-cover object-top"
               width={900}
               height={1125}
@@ -82,14 +82,17 @@ const DayanHero = () => {
                 Especialidade
               </span>
               <span className="ds-italic text-xs text-[hsl(var(--ds-ink))]">
-                Cirurgia Cardiovascular
+                Cirurgia Vascular
               </span>
             </div>
           </div>
         </div>
 
         <p className="dayan-reveal dayan-reveal-delay-2 mt-6 text-base text-[hsl(var(--ds-ink-soft))] leading-relaxed">
-          Sou o Dr. Dayan Siebra, cirurgião cardiovascular. Estudei medicina
+          O Dr. Dayan resolveu falar sobre a água porque descobriu que 99% das pessoas não sabem o que realmente estão bebendo — e essa informação mudou a vida dele e de milhares de pacientes.
+        </p>
+        <p className="dayan-reveal dayan-reveal-delay-2 mt-4 text-base text-[hsl(var(--ds-ink-soft))] leading-relaxed">
+          Sou o Dr. Dayan Siebra, cirurgião vascular. Estudei medicina
           por 11 anos e não tive{" "}
           <em className="ds-italic">uma única hora de aula</em> sobre o líquido
           que ocupa 70% do meu corpo. O que descobri depois mudou minha forma
@@ -143,7 +146,7 @@ const DayanHero = () => {
             <div className="dayan-reveal">
               <span className="ds-eyebrow text-[hsl(var(--ds-accent))] inline-flex items-center gap-3">
                 <span className="w-8 h-px bg-[hsl(var(--ds-accent))]" />
-                Carta aberta de um cirurgião cardiovascular
+                Carta aberta de um cirurgião vascular
               </span>
             </div>
 
@@ -159,7 +162,10 @@ const DayanHero = () => {
             </h1>
 
             <p className="dayan-reveal dayan-reveal-delay-2 mt-8 text-base lg:text-lg text-[hsl(var(--ds-ink-soft))] max-w-xl leading-relaxed">
-              Sou o Dr. Dayan Siebra, cirurgião cardiovascular. Estudei medicina por 11 anos e não tive{" "}
+              O Dr. Dayan resolveu falar sobre a água porque descobriu que 99% das pessoas não sabem o que realmente estão bebendo — e essa informação mudou a vida dele e de milhares de pacientes.
+            </p>
+            <p className="dayan-reveal dayan-reveal-delay-2 mt-4 text-base lg:text-lg text-[hsl(var(--ds-ink-soft))] max-w-xl leading-relaxed">
+              Sou o Dr. Dayan Siebra, cirurgião vascular. Estudei medicina por 11 anos e não tive{" "}
               <em className="ds-italic">uma única hora de aula</em> sobre o
               líquido que ocupa 70% do meu corpo. O que descobri depois mudou
               minha forma de cuidar dos meus pacientes e da minha família.
@@ -217,7 +223,7 @@ const DayanHero = () => {
               <div className="relative aspect-[3/4] overflow-hidden bg-gradient-to-br from-[hsl(var(--ds-blue-deep))] via-[hsl(var(--ds-blue-deep))]/90 to-[hsl(var(--ds-ink))] rounded-sm">
                 <img
                   src={dayanHero}
-                  alt="Dr. Dayan Siebra, cirurgião cardiovascular"
+                  alt="Dr. Dayan Siebra, cirurgião vascular"
                   className="absolute inset-0 w-full h-full object-cover object-top"
                   width={1080}
                   height={1440}
@@ -230,7 +236,7 @@ const DayanHero = () => {
                   Especialidade
                 </span>
                 <span className="ds-italic text-lg text-[hsl(var(--ds-ink))]">
-                  Cirurgia Cardiovascular
+                  Cirurgia Vascular
                 </span>
               </div>
             </div>

@@ -47,7 +47,7 @@ const DayanNav = () => {
           rel="noopener noreferrer"
           className="hidden md:inline-flex items-center gap-2 bg-[hsl(var(--ds-ink))] text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-[hsl(var(--ds-blue-deep))] transition-colors"
         >
-          Quero um Acqualive
+          Quero água pura
           <span className="inline-block">→</span>
         </a>
 
