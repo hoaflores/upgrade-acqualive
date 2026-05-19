@@ -36,7 +36,7 @@ const DayanHero = () => {
         <div className="dayan-reveal">
           <span className="ds-eyebrow text-[hsl(var(--ds-accent))] inline-flex items-center gap-2 text-[10px]">
             <span className="w-6 h-px bg-[hsl(var(--ds-accent))]" />
-            Carta aberta de um cirurgião cardiovascular
+            Carta aberta de um cirurgião vascular
           </span>
         </div>
 
