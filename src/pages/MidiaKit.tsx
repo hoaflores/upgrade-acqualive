@@ -509,22 +509,22 @@ const MidiaKit = () => {
             <div className="flex items-end justify-between mb-12 flex-wrap gap-6">
               <div>
                 <span className="text-xs tracking-[0.3em] font-medium text-[#f26923]">Sumário</span>
-                <h2 className="font-light text-3xl md:text-4xl mt-3 tracking-tight">Neste documento.</h2>
+                <h2 className="font-light text-3xl md:text-4xl mt-3 tracking-tight text-[#02265f]">Neste documento.</h2>
               </div>
-              <span className="text-xs tracking-[0.3em] uppercase text-white/40">14 seções · 16 anos de marca</span>
+              <span className="text-xs tracking-[0.3em] uppercase text-[#02265f]/40">14 seções · 16 anos de marca</span>
             </div>
           </Reveal>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-white/5">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-[#02265f]/10">
             {SUMMARY.map((s, i) => (
               <motion.a
                 key={s.num} href={`#sec-${s.num}`}
                 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.03 }}
-                className="group bg-[#0a0e17] px-6 py-5 flex items-baseline gap-4 hover:bg-[#0e1422] transition-colors"
+                className="group bg-white px-6 py-5 flex items-baseline gap-4 hover:bg-[#f5f7fa] transition-colors"
               >
                 <span className="text-xs tracking-[0.2em] text-[#f26923]">({s.num})</span>
-                <span className="text-sm text-white/80 group-hover:text-white transition-colors flex-1">{s.label}</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-white/30 group-hover:text-[#f26923] group-hover:rotate-45 transition-all" />
+                <span className="text-sm text-[#02265f]/80 group-hover:text-[#02265f] transition-colors flex-1">{s.label}</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#02265f]/30 group-hover:text-[#f26923] group-hover:rotate-45 transition-all" />
               </motion.a>
             ))}
           </div>
