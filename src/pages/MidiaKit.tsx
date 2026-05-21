@@ -509,7 +509,7 @@ const MidiaKit = () => {
       {/* (01) HERO */}
       <section ref={heroRef} className="relative min-h-screen w-full overflow-hidden">
         <motion.div style={{ y: heroParallax, scale: 1.05 }} className="absolute inset-1">
-          <img src={heroImg} alt="Acqualive" className="w-full h-full object-cover scale-x-[-1]" width={1920} height={1080} />
+          <img src={heroImg} alt="Acqualive" className="w-full h-full object-cover" width={1920} height={1080} />
           {slug === "savioli" ? (
             <>
               <div className="absolute inset-0 bg-gradient-to-r from-[#02265f]/85 via-[#02265f]/55 to-[#02265f]/30" />
@@ -1652,7 +1652,7 @@ const MidiaKit = () => {
       {/* (15) CTA / CONTATO */}
       <section id="sec-15" className="relative py-32 md:py-40 px-6 md:px-12 lg:px-20 overflow-hidden text-white">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="" className="w-full h-full object-cover scale-x-[-1]" loading="lazy" />
+          <img src={heroImg} alt="" className="w-full h-full object-cover" loading="lazy" />
           {slug === "savioli" ? (
             <>
               <div className="absolute inset-0 bg-gradient-to-r from-[#02265f]/90 via-[#02265f]/70 to-[#02265f]/50" />
