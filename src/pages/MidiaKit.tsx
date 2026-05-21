@@ -280,6 +280,7 @@ const PartnerContentSection = () => {
             return (
               <motion.a
                 key={item.id + i}
+                data-card
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -333,14 +334,10 @@ const PartnerContentSection = () => {
                     {item.title}
                   </div>
                 </div>
-              <motion.a
-                key={item.id + i}
-                data-card
-                {...{}}
-              />
+              </motion.a>
             );
           })}
-          <div className="shrink-0 w-6" />
+        <div className="shrink-0 w-6" />
       </div>
 
       {/* controls */}
