@@ -704,30 +704,30 @@ const MidiaKit = () => {
             </div>
           </section>
 
-          {/* P05 — Por que isso conversa com o Dr. Roque + Perfis */}
-          <section id="p05" className="relative bg-[#eef1f7] text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+          {/* P05 — Por que isso conversa com o Dr. Roque */}
+          <section id="p05" className="relative bg-[#eef1f7] text-[#02265f] py-20 md:py-24 px-6 md:px-12 lg:px-20">
             <div className="max-w-7xl mx-auto">
               <Eyebrow num="05" label="Por que Dr. Roque" light />
               <Reveal>
                 <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-5xl mb-6">
-                  Por que isso conversa <span className="text-[#1d4380]">diretamente com o Dr. Roque.</span>
+                  O encaixe é <span className="text-[#1d4380]">institucional, científico e humano.</span>
                 </h2>
-                <p className="text-[#02265f]/70 text-lg font-light max-w-3xl mb-16">
-                  O encaixe é institucional, científico e humano.
+                <p className="text-[#02265f]/70 text-lg font-light max-w-3xl mb-10">
+                  Cardiologia preventiva, nutrição funcional e hidratação consciente formam um território comum — sem necessidade de forçar a narrativa.
                 </p>
               </Reveal>
 
-              <div className="grid md:grid-cols-3 gap-px bg-[#02265f]/10 rounded-2xl overflow-hidden mb-16">
+              <div className="grid md:grid-cols-3 gap-6">
                 {[
-                  { tag: "Dr. Roque", items: ["InCor desde 1977", "Cardiogeriatria", "15 livros publicados", "Autoridade em prevenção e longevidade", "Comunicação humanizada"] },
-                  { tag: "Acqualive", items: ["Hidratação", "Saúde preventiva", "Pesquisa clínica", "Qualidade de vida", "Ciência aplicada"] },
-                  { tag: "Conexão", items: ["Coração", "Envelhecimento saudável", "Hábitos", "Rotina", "Prevenção"] },
+                  { tag: "Dr. Roque", items: ["InCor desde 1977", "Cardiogeriatria", "Autoridade em prevenção e longevidade", "Comunicação humanizada"] },
+                  { tag: "Acqualive", items: ["Hidratação alcalina mineralizada", "Pesquisa clínica publicada", "Prevenção e qualidade de vida", "Ciência aplicada"] },
+                  { tag: "Conexão", items: ["Coração e envelhecimento saudável", "Rotina de cuidado integral", "Hábitos preventivos", "Narrativa de longevidade"] },
                 ].map((col, i) => (
                   <motion.div
                     key={col.tag}
                     initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
                     viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.08 }}
-                    className="bg-white p-10"
+                    className="bg-white rounded-2xl p-8 md:p-10 border border-[#02265f]/10"
                   >
                     <div className="text-xs tracking-[0.25em] uppercase text-[#f26923] mb-6">{col.tag}</div>
                     <ul className="space-y-3">
@@ -738,41 +738,6 @@ const MidiaKit = () => {
                   </motion.div>
                 ))}
               </div>
-
-              {/* Perfis Roque + Gisela */}
-              <div className="grid md:grid-cols-2 gap-6 mb-10">
-                {SAVIOLI_PROFILES.map((p, i) => (
-                  <motion.div
-                    key={p.name}
-                    initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.1 }}
-                    className="bg-white border border-[#02265f]/10 rounded-2xl p-8 md:p-10"
-                  >
-                    <HeartPulse className="w-6 h-6 text-[#f26923] mb-6" strokeWidth={1.4} />
-                    <h3 className="text-2xl font-light tracking-tight mb-2 text-[#02265f]">{p.name}</h3>
-                    <div className="text-xs tracking-[0.2em] uppercase text-[#1d4380] mb-2">{p.role}</div>
-                    <div className="text-[11px] tracking-[0.2em] uppercase text-[#02265f]/50 mb-6">{p.credentials}</div>
-                    <p className="text-[#02265f]/75 text-sm leading-relaxed font-light">{p.bio}</p>
-                  </motion.div>
-                ))}
-              </div>
-
-              <Reveal delay={0.1}>
-                <div className="rounded-2xl bg-[#02265f] text-white p-10 md:p-14 grid lg:grid-cols-3 gap-10 items-center">
-                  <div className="lg:col-span-2">
-                    <div className="text-xs tracking-[0.3em] uppercase text-[#f26923] mb-4">Operação clínica</div>
-                    <h3 className="text-3xl md:text-4xl font-light tracking-tight mb-4">{SAVIOLI_CLINIC.name} · {SAVIOLI_CLINIC.years}</h3>
-                    <p className="text-white/75 font-light leading-relaxed">{SAVIOLI_CLINIC.text}</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-[#f26923] flex-shrink-0 mt-1" />
-                    <div>
-                      <div className="text-xs tracking-[0.2em] uppercase text-white/50 mb-1">Endereço</div>
-                      <div className="text-sm font-light">{SAVIOLI_CLINIC.location}</div>
-                    </div>
-                  </div>
-                </div>
-              </Reveal>
             </div>
           </section>
 
