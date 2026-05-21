@@ -899,7 +899,7 @@ const MidiaKit = () => {
       {/* (11) AUDIÊNCIA */}
       <section id="sec-11" className="relative bg-white py-24 md:py-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
-          <Eyebrow num="11" label="Audiência Acqualive" />
+          <Eyebrow num="11" label="Audiência Acqualive" light />
           <Reveal>
             <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-20">
               Quem escolhe <span className="text-[#4a90e2]">Acqualive.</span>
