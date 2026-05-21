@@ -538,7 +538,7 @@ const MidiaKit = () => {
             </motion.div>
 
             {slug === "savioli" ? (
-              <h1 className="font-light text-[clamp(2.5rem,7vw,6rem)] leading-[1] tracking-[-0.02em] uppercase">
+              <h1 className="font-light text-[clamp(2.5rem,7vw,6rem)] leading-[1] tracking-[-0.02em] uppercase text-white">
                 {["TRANSFORMAR", "O", "CUIDADO"].map((word, i) => (
                   <motion.span key={word} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.4 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
@@ -546,19 +546,19 @@ const MidiaKit = () => {
                 ))}
                 <br />
                 <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.85 }}
-                  className="inline-block" style={{ color: "#4a90e2" }}>COMEÇA</motion.span>{" "}
+                  className="inline-block text-[#f26923]">COMEÇA</motion.span>{" "}
                 <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}
                   className="inline-block">NA ROTINA.</motion.span>
               </h1>
             ) : (
-              <h1 className="font-light text-[clamp(2.5rem,7vw,6rem)] leading-[1] tracking-[-0.02em] uppercase">
+              <h1 className="font-light text-[clamp(2.5rem,7vw,6rem)] leading-[1] tracking-[-0.02em] uppercase text-white">
                 {["SAÚDE", "COMEÇA", "PELA"].map((word, i) => (
                   <motion.span key={word} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.4 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
                     className="inline-block mr-4">{word}</motion.span>
                 ))}
                 <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.85 }}
-                  className="inline-block" style={{ color: "#4a90e2" }}>ÁGUA</motion.span><br />
+                  className="inline-block text-[#f26923]">ÁGUA</motion.span><br />
                 <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}
                   className="inline-block">CERTA.</motion.span>
               </h1>
