@@ -891,6 +891,44 @@ const MidiaKit = () => {
                   <div className="text-sm tracking-[0.2em] uppercase text-[#02265f]/60">de construção da marca</div>
                 </div>
               </Reveal>
+
+              {/* P06B — Depoimentos de especialistas */}
+              <section id="p06b" className="relative bg-[#eef1f7] -mx-6 md:-mx-12 lg:-mx-20 mt-24 py-24 md:py-32 px-6 md:px-12 lg:px-20">
+                <div className="max-w-7xl mx-auto">
+                  <Eyebrow num="06B" label="Depoimentos" light />
+                  <Reveal>
+                    <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-20">
+                      Confiada por milhares, <span className="text-[#f26923]">recomendada por especialistas.</span>
+                    </h2>
+                  </Reveal>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {TESTIMONIALS.map((t, i) => (
+                      <motion.div
+                        key={t.name}
+                        initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.08 }}
+                        className="bg-white border border-[#02265f]/10 rounded-2xl p-8 md:p-10 hover:border-[#f26923]/40 shadow-[0_4px_20px_-10px_rgba(2,38,95,0.15)] transition-all"
+                      >
+                        <Quote className="w-6 h-6 text-[#f26923] mb-6" strokeWidth={1.3} />
+                        <p className="text-[#02265f]/85 leading-relaxed font-light mb-8 text-base md:text-lg">"{t.text}"</p>
+                        <div className="flex items-center gap-4 pt-6 border-t border-[#02265f]/10">
+                          <img src={t.img} alt={t.name} className="w-12 h-12 rounded-full object-cover" loading="lazy" />
+                          <div>
+                            <div className="font-medium tracking-tight text-[#02265f]">{t.name}</div>
+                            <div className="text-xs tracking-[0.15em] uppercase text-[#02265f]/60 mt-1">{t.role}</div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </section>
+
+              {/* P06C — Conteúdo de parceiros */}
+              <div className="-mx-6 md:-mx-12 lg:-mx-20 mt-0">
+                <PartnerContentSection />
+              </div>
             </div>
           </section>
 
@@ -911,41 +949,7 @@ const MidiaKit = () => {
             </div>
           </section>
 
-          {/* P07B — Depoimentos de especialistas */}
-          <section id="p07b" className="relative bg-[#eef1f7] py-24 md:py-32 px-6 md:px-12 lg:px-20">
-            <div className="max-w-7xl mx-auto">
-              <Eyebrow num="07B" label="Depoimentos" light />
-              <Reveal>
-                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-20">
-                  Confiada por milhares, <span className="text-[#f26923]">recomendada por especialistas.</span>
-                </h2>
-              </Reveal>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                {TESTIMONIALS.map((t, i) => (
-                  <motion.div
-                    key={t.name}
-                    initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.08 }}
-                    className="bg-white border border-[#02265f]/10 rounded-2xl p-8 md:p-10 hover:border-[#f26923]/40 shadow-[0_4px_20px_-10px_rgba(2,38,95,0.15)] transition-all"
-                  >
-                    <Quote className="w-6 h-6 text-[#f26923] mb-6" strokeWidth={1.3} />
-                    <p className="text-[#02265f]/85 leading-relaxed font-light mb-8 text-base md:text-lg">"{t.text}"</p>
-                    <div className="flex items-center gap-4 pt-6 border-t border-[#02265f]/10">
-                      <img src={t.img} alt={t.name} className="w-12 h-12 rounded-full object-cover" loading="lazy" />
-                      <div>
-                        <div className="font-medium tracking-tight text-[#02265f]">{t.name}</div>
-                        <div className="text-xs tracking-[0.15em] uppercase text-[#02265f]/60 mt-1">{t.role}</div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* P07C — Conteúdo de parceiros */}
-          <PartnerContentSection />
 
 
           {/* P10 — Quote 2 */}
