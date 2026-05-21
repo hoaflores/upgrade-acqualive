@@ -527,8 +527,9 @@ const MidiaKit = () => {
               </div>
             </Reveal>
 
-            <Reveal delay={0.2}>
-              <div className="lg:col-span-5 bg-[#02265f] text-white rounded-2xl p-8 md:p-12 h-full flex flex-col">
+            <Reveal delay={0.2} className="lg:col-span-5">
+              <div className="bg-[#02265f] text-white rounded-2xl p-8 md:p-12 h-full flex flex-col">
+
                 <div className="flex items-center gap-3 text-xs tracking-[0.2em] uppercase text-[#f26923] font-medium mb-6">
                   <Microscope className="w-4 h-4" />
                   Validação Unicamp
