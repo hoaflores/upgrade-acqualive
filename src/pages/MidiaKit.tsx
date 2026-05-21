@@ -441,10 +441,10 @@ const MidiaKit = () => {
 
       {/* (01) HERO */}
       <section ref={heroRef} className="relative min-h-screen w-full overflow-hidden">
-        <motion.div style={{ y: heroParallax, scale: 1.05 }} className="absolute inset-0">
+        <motion.div style={{ y: heroParallax, scale: 1.05 }} className="absolute inset-1">
           <img src={heroImg} alt="Acqualive" className="w-full h-full object-cover" width={1920} height={1080} />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0e17]/85 via-[#0a0e17]/40 to-[#0a0e17]/70" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0e17]/60 via-transparent to-[#0a0e17]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#02265f]/75 via-[#02265f]/30 to-[#02265f]/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#02265f]/50 via-transparent to-[#f5f7fa]" />
         </motion.div>
 
         <motion.div style={{ opacity: heroFade }} className="relative z-10 min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-32 pb-20">
