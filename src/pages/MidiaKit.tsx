@@ -509,24 +509,9 @@ const MidiaKit = () => {
       {/* (01) HERO */}
       <section ref={heroRef} className="relative min-h-screen w-full overflow-hidden">
         <motion.div style={{ y: heroParallax, scale: 1.05 }} className="absolute inset-1">
-          <img
-            src={slug === "savioli" ? savioliHeroBg : heroImg}
-            alt="Acqualive"
-            className={`w-full h-full object-cover ${slug === "savioli" ? "object-[75%_center] md:object-[70%_center]" : ""}`}
-            width={1920}
-            height={1080}
-          />
-          {slug === "savioli" ? (
-            <>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#02265f]/90 via-[#02265f]/70 to-[#02265f]/10" />
-              <div className="absolute inset-0 bg-gradient-to-b from-[#02265f]/60 via-transparent to-[#02265f]/40" />
-            </>
-          ) : (
-            <>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#02265f]/75 via-[#02265f]/30 to-[#02265f]/60" />
-              <div className="absolute inset-0 bg-gradient-to-b from-[#02265f]/50 via-transparent to-[#f5f7fa]" />
-            </>
-          )}
+          <img src={heroImg} alt="Acqualive" className="w-full h-full object-cover" width={1920} height={1080} />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#02265f]/75 via-[#02265f]/30 to-[#02265f]/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#02265f]/50 via-transparent to-[#f5f7fa]" />
         </motion.div>
 
         <motion.div style={{ opacity: heroFade }} className="relative z-10 min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-32 pb-20">
@@ -553,7 +538,7 @@ const MidiaKit = () => {
             </motion.div>
 
             {slug === "savioli" ? (
-              <h1 className="font-light text-[clamp(2.5rem,7vw,6rem)] leading-[1] tracking-[-0.02em] uppercase">
+              <h1 className="font-light text-[clamp(2.5rem,7vw,6rem)] leading-[1] tracking-[-0.02em] uppercase text-white">
                 {["TRANSFORMAR", "O", "CUIDADO"].map((word, i) => (
                   <motion.span key={word} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.4 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
@@ -561,19 +546,19 @@ const MidiaKit = () => {
                 ))}
                 <br />
                 <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.85 }}
-                  className="inline-block" style={{ color: "#4a90e2" }}>COMEÇA</motion.span>{" "}
+                  className="inline-block text-[#f26923]">COMEÇA</motion.span>{" "}
                 <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}
                   className="inline-block">NA ROTINA.</motion.span>
               </h1>
             ) : (
-              <h1 className="font-light text-[clamp(2.5rem,7vw,6rem)] leading-[1] tracking-[-0.02em] uppercase">
+              <h1 className="font-light text-[clamp(2.5rem,7vw,6rem)] leading-[1] tracking-[-0.02em] uppercase text-white">
                 {["SAÚDE", "COMEÇA", "PELA"].map((word, i) => (
                   <motion.span key={word} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.4 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
                     className="inline-block mr-4">{word}</motion.span>
                 ))}
                 <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.85 }}
-                  className="inline-block" style={{ color: "#4a90e2" }}>ÁGUA</motion.span><br />
+                  className="inline-block text-[#f26923]">ÁGUA</motion.span><br />
                 <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}
                   className="inline-block">CERTA.</motion.span>
               </h1>
