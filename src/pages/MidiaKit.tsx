@@ -245,7 +245,7 @@ const PartnerContentSection = () => {
   };
 
   return (
-    <section id="sec-13b" className="relative bg-[#02265f] text-white py-24 md:py-32 overflow-hidden">
+    <section id="sec-13b" className="relative bg-[#f5f7fa] text-[#02265f] py-24 md:py-32 overflow-hidden">
       <div className="px-6 md:px-12 lg:px-20 max-w-7xl mx-auto w-full">
         <Eyebrow num="13" label="Conteúdo de parceiros" />
         <Reveal>
