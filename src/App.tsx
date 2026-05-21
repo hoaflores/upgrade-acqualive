@@ -30,6 +30,7 @@ import Demandas from "./pages/Demandas";
 import FunilCalculadora from "./pages/FunilCalculadora";
 import DemandasSolicitadas from "./pages/DemandasSolicitadas";
 import EbookQuantidadeAgua from "./pages/EbookQuantidadeAgua";
+import MidiaKit from "./pages/MidiaKit";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
