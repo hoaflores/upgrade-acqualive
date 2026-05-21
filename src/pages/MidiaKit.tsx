@@ -157,6 +157,16 @@ const PARTNERSHIPS = [
   { tag: "03", title: "Afiliado e comissionamento", subtitle: "Receita recorrente sobre indicações", text: "Modelo de comissionamento para parceiros com audiência qualificada em longevidade, performance e bem-estar. Material de apoio e dashboard de performance." },
 ];
 
+const PARTNER_CONTENT = [
+  { type: "youtube", id: "pofP0CoaJtE", title: "Conversa sobre água alcalina", author: "Parceiro Acqualive" },
+  { type: "youtube", id: "d6eF3ZdgV84", title: "Ciência da hidratação", author: "Parceiro Acqualive" },
+  { type: "youtube", id: "j_Yz7C0FlLw", title: "Rotina de saúde preventiva", author: "Parceiro Acqualive" },
+  { type: "youtube", id: "DDgaYDxQxjk", title: "Tecnologia TRIWAY explicada", author: "Parceiro Acqualive" },
+  { type: "instagram", id: "DXXjGajR666", title: "Reel: bem-estar e água", author: "Parceiro Acqualive" },
+  { type: "instagram", id: "DW6oOYVkWG8", title: "Reel: rotina fresquinha", author: "Parceiro Acqualive" },
+  { type: "instagram", id: "DYXSAYBxkLF", title: "Reel: saúde no dia a dia", author: "Parceiro Acqualive" },
+] as const;
+
 /* ---------- HELPERS ---------- */
 
 const Eyebrow = ({ num, label, light = false }: { num: string; label: string; light?: boolean }) => (
@@ -169,6 +179,129 @@ const Eyebrow = ({ num, label, light = false }: { num: string; label: string; li
     </span>
   </div>
 );
+
+/* ---------- PARTNER CONTENT CAROUSEL ---------- */
+
+const PartnerContentSection = () => {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end end"],
+  });
+
+  // horizontal translate driven by vertical scroll
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-72%"]);
+  const smoothX = useSpring(x, { stiffness: 80, damping: 22, mass: 0.5 });
+
+  return (
+    <section
+      id="sec-13b"
+      ref={sectionRef}
+      className="relative bg-[#02265f] text-white"
+      style={{ height: "260vh" }}
+    >
+      <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
+        <div className="px-6 md:px-12 lg:px-20 max-w-7xl mx-auto w-full">
+          <Eyebrow num="13" label="Conteúdo de parceiros" />
+          <Reveal>
+            <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-4">
+              Vozes que <span className="text-[#f26923]">amplificam</span> a marca.
+            </h2>
+            <p className="text-white/70 text-lg font-light max-w-2xl mb-12">
+              Parceiros, médicos e criadores que co-criam conteúdo conosco. Role para navegar pelos episódios.
+            </p>
+          </Reveal>
+        </div>
+
+        <motion.div
+          ref={trackRef}
+          style={{ x: smoothX }}
+          className="flex gap-6 md:gap-8 pl-6 md:pl-12 lg:pl-20 will-change-transform"
+        >
+          {PARTNER_CONTENT.map((item, i) => {
+            const isYT = item.type === "youtube";
+            const thumb = isYT
+              ? `https://img.youtube.com/vi/${item.id}/hqdefault.jpg`
+              : null;
+            const href = isYT
+              ? `https://youtu.be/${item.id}`
+              : `https://www.instagram.com/reel/${item.id}/`;
+
+            return (
+              <motion.a
+                key={item.id + i}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.05 }}
+                whileHover={{ y: -8 }}
+                className="group relative shrink-0 w-[280px] md:w-[360px] lg:w-[420px] aspect-[9/14] rounded-2xl overflow-hidden bg-gradient-to-br from-[#1d4380] to-[#02265f] border border-white/10"
+              >
+                {isYT && thumb ? (
+                  <img
+                    src={thumb}
+                    alt={item.title}
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(242,105,35,0.35),transparent_60%),radial-gradient(circle_at_70%_80%,rgba(29,67,128,0.6),transparent_70%)]" />
+                )}
+
+                {/* gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+
+                {/* play button */}
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/95 backdrop-blur flex items-center justify-center shadow-2xl"
+                >
+                  <Play className="w-6 h-6 md:w-7 md:h-7 text-[#02265f] ml-1" fill="currentColor" />
+                </motion.div>
+
+                {/* platform badge */}
+                <div className="absolute top-5 left-5 flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/50 backdrop-blur border border-white/15">
+                  {isYT ? (
+                    <Youtube className="w-3.5 h-3.5 text-[#f26923]" />
+                  ) : (
+                    <Instagram className="w-3.5 h-3.5 text-[#f26923]" />
+                  )}
+                  <span className="text-[10px] tracking-[0.25em] uppercase font-medium">
+                    {isYT ? "YouTube" : "Reel"}
+                  </span>
+                </div>
+
+                {/* footer */}
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="text-xs tracking-[0.25em] uppercase text-[#f26923] mb-2">
+                    {String(i + 1).padStart(2, "0")} · {item.author}
+                  </div>
+                  <div className="text-lg md:text-xl font-light leading-tight">
+                    {item.title}
+                  </div>
+                </div>
+              </motion.a>
+            );
+          })}
+
+          {/* spacer */}
+          <div className="shrink-0 w-12" />
+        </motion.div>
+
+        {/* hint */}
+        <div className="px-6 md:px-12 lg:px-20 max-w-7xl mx-auto w-full mt-10 flex items-center justify-between text-xs tracking-[0.3em] uppercase text-white/50">
+          <span>Role para avançar</span>
+          <span>{PARTNER_CONTENT.length} episódios</span>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const Reveal = ({ children, delay = 0, className }: { children: React.ReactNode; delay?: number; className?: string }) => (
   <motion.div
@@ -781,6 +914,9 @@ const MidiaKit = () => {
           </div>
         </div>
       </section>
+
+      {/* (13.5) CONTEÚDO DE PARCEIROS */}
+      <PartnerContentSection />
 
       {/* (14) PARCERIAS */}
       <section id="sec-14" className="relative bg-[#f5f3ee] text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
