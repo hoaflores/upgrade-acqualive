@@ -167,6 +167,62 @@ const PARTNER_CONTENT = [
   { type: "instagram", id: "DYXSAYBxkLF", title: "Reel: saúde no dia a dia", author: "Parceiro Acqualive" },
 ] as const;
 
+/* ---------- SAVIOLI (proposta exclusiva) ---------- */
+
+const SAVIOLI_PROFILES = [
+  {
+    name: "Dr. Roque Marcos Savioli",
+    role: "Cardiologista · Cardiogeriatra",
+    credentials: "CREMESP 22338 · RQE 46468",
+    bio: "Doutor em Cardiologia pela FMUSP. Médico Assistente da Unidade de Cardiogeriatria do InCor (HCFMUSP) desde 2009. Corpo clínico de Sírio-Libanês, Albert Einstein, Oswaldo Cruz, BP Mirante e Vila Nova Star. Autor de 15 livros publicados no Brasil, Espanha, França e Itália. Membro vitalício da Academia Cristã de Letras.",
+  },
+  {
+    name: "Dra. Gisela Savioli",
+    role: "Nutricionista Clínica Funcional · Fitoterapeuta",
+    credentials: "MTB 73054 SP · Idealizadora do Programa Desinflama",
+    bio: "Nutricionista responsável pela visita do Papa Bento XVI ao Brasil (2007). Online Health Advocate da Janssen (J&J) nas conferências Health Voices (2014–2016). Pós-graduada em Nutrição Clínica Funcional, Fitoterapia e Saúde da Mulher no Climatério (FSPUSP). Criadora do Programa Desinflama, com mais de 10 mil alunas.",
+  },
+];
+
+const SAVIOLI_PILLARS = [
+  {
+    tag: "01",
+    title: "Autoridade em saúde",
+    text: "Mais de cinco décadas de prática clínica, doutorado FMUSP, presença ativa no InCor e nos principais hospitais do país. Credibilidade médica real em um território onde reputação importa mais do que alcance bruto.",
+  },
+  {
+    tag: "02",
+    title: "Conexão de narrativa",
+    text: "O conceito Transformar o cuidado começa na rotina conecta diretamente cardiologia preventiva, nutrição funcional e hidratação consciente. A água deixa de ser consumo e vira gesto diário de cuidado.",
+  },
+  {
+    tag: "03",
+    title: "Aderência de público",
+    text: "Audiência madura (35–65+), majoritariamente feminina, atenta à longevidade, prevenção e bem-estar integral. Mesmo perfil que escolhe Acqualive como base do protocolo preventivo da família.",
+  },
+];
+
+const SAVIOLI_AUDIENCE = [
+  { handle: "@drsavioli", platform: "Instagram · Dr. Roque", followers: "+1,6M", views: "+24M visualizações", split: "83,3% feminino · 35–65+" },
+  { handle: "Dr. Roque Savioli", platform: "YouTube · Dr. Roque", followers: "+410K inscritos", views: "+52M visualizações", split: "60,3% feminino · 35–65+" },
+  { handle: "@drsavioli_oficial", platform: "TikTok · Dr. Roque", followers: "+240K", views: "+7M visualizações", split: "63% feminino · 25–55" },
+  { handle: "DrSaviolioficial", platform: "Facebook · Dr. Roque", followers: "+89K", views: "+18M visualizações", split: "71,2% feminino · 45–65+" },
+];
+
+const SAVIOLI_DELIVERABLES = [
+  { tag: "01", title: "1 conteúdo-âncora", text: "Entrevista, conversa guiada, vídeo especial ou episódio temático conectando cardiologia, nutrição funcional e hidratação como rotina de cuidado." },
+  { tag: "02", title: "Cortes para redes", text: "Recortes verticais do conteúdo-âncora distribuídos em Reels, Shorts e TikTok, no canal do Dr. Roque, da Dra. Gisela e nos canais Acqualive." },
+  { tag: "03", title: "Stories de apoio", text: "Sequência de stories educativos integrando a Calculadora Acqualive de Hidratação ao cotidiano clínico e à narrativa do casal." },
+  { tag: "04", title: "Evolução futura: LP + jornada", text: "Caso a parceria evolua, ativação de landing page exclusiva com CTA, benefício específico e jornada de conteúdo de longo prazo." },
+];
+
+const SAVIOLI_CLINIC = {
+  name: "Clínica Savioli",
+  years: "20 anos",
+  location: "Rua Artur de Azevedo 1217 · Pinheiros · São Paulo",
+  text: "Operação clínica com visão integrativa do ser humano: check-up personalizado, foco em longevidade e qualidade de vida. Atendimento integral à saúde do paciente — corpo, mente e espírito.",
+};
+
 /* ---------- HELPERS ---------- */
 
 const Eyebrow = ({ num, label, light = false }: { num: string; label: string; light?: boolean }) => (
