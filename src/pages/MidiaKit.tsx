@@ -831,7 +831,7 @@ const MidiaKit = () => {
             <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-6">
               Do dia a dia ao topo de gama, <span className="text-[#4a90e2]">um Acqualive para cada casa.</span>
             </h2>
-            <p className="text-white/65 text-lg font-light max-w-2xl mb-20">
+            <p className="text-[#02265f]/65 text-lg font-light max-w-2xl mb-20">
               Toda a linha em 10x sem juros, com frete grátis (consulte regiões disponíveis).
             </p>
           </Reveal>
@@ -843,21 +843,21 @@ const MidiaKit = () => {
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.08 }}
                 whileHover={{ y: -6 }}
-                className="group bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden hover:border-[#f26923]/40 transition-all"
+                className="group bg-white border border-[#02265f]/10 rounded-2xl overflow-hidden hover:border-[#f26923]/40 shadow-[0_4px_20px_-10px_rgba(2,38,95,0.15)] transition-all"
               >
-                <div className="relative aspect-[4/3] bg-gradient-to-br from-white/[0.04] to-transparent overflow-hidden">
+                <div className="relative aspect-[4/3] bg-gradient-to-br from-[#f5f7fa] to-transparent overflow-hidden">
                   <img src={p.img} alt={p.name} className="absolute inset-0 w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-700" loading="lazy"
                     onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }} />
-                  <span className="absolute top-5 left-5 text-[10px] tracking-[0.3em] uppercase text-white/60 font-medium">{p.code}</span>
+                  <span className="absolute top-5 left-5 text-[10px] tracking-[0.3em] uppercase text-[#02265f]/60 font-medium">{p.code}</span>
                 </div>
                 <div className="p-7">
-                  <h3 className="text-xl font-light tracking-tight mb-2">{p.name}</h3>
+                  <h3 className="text-xl font-light tracking-tight mb-2 text-[#02265f]">{p.name}</h3>
                   <div className="text-sm text-[#f26923] tracking-wide mb-6">{p.price}</div>
-                  <div className="grid grid-cols-3 gap-3 pt-5 border-t border-white/10">
+                  <div className="grid grid-cols-3 gap-3 pt-5 border-t border-[#02265f]/10">
                     {p.specs.map((s) => (
                       <div key={s.l}>
                         <div className="text-lg font-light tracking-tight text-[#4a90e2]">{s.v}</div>
-                        <div className="text-[9px] tracking-[0.18em] uppercase text-white/50 mt-1">{s.l}</div>
+                        <div className="text-[9px] tracking-[0.18em] uppercase text-[#02265f]/50 mt-1">{s.l}</div>
                       </div>
                     ))}
                   </div>
