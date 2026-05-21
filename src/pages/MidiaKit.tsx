@@ -1333,11 +1333,17 @@ const MidiaKit = () => {
             <Eyebrow num="15" label="Vamos conversar" />
 
             <h2 className="font-light text-[clamp(2.5rem,6vw,5.5rem)] leading-[1] tracking-[-0.02em] uppercase max-w-5xl mb-10">
-              Pronto para construir <span className="text-[#f26923]">algo memorável?</span>
+              {slug === "savioli" ? (
+                <>Vamos construir essa <span className="text-[#f26923]">parceria juntos?</span></>
+              ) : (
+                <>Pronto para construir <span className="text-[#f26923]">algo memorável?</span></>
+              )}
             </h2>
 
             <p className="text-white/75 text-lg max-w-2xl font-light mb-14 leading-relaxed">
-              Conte com nossa equipe para desenhar a melhor proposta de parceria entre você e Acqualive. Resposta em até 48h úteis.
+              {slug === "savioli"
+                ? "Próximo passo: alinhar conceito, formato e calendário com o time do Dr. Roque e da Dra. Gisela. Nossa equipe está pronta para evoluir esta conversa."
+                : "Conte com nossa equipe para desenhar a melhor proposta de parceria entre você e Acqualive. Resposta em até 48h úteis."}
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-14 max-w-4xl">
