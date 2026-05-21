@@ -503,7 +503,7 @@ const MidiaKit = () => {
       </section>
 
       {/* SUMÁRIO / ÍNDICE */}
-      <section id="sumario" className="relative bg-[#0a0e17] border-t border-white/5 py-20 px-6 md:px-12 lg:px-20">
+      <section id="sumario" className="relative bg-[#f5f7fa] border-t border-[#02265f]/5 py-20 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <div className="flex items-end justify-between mb-12 flex-wrap gap-6">
@@ -574,7 +574,7 @@ const MidiaKit = () => {
       </section>
 
       {/* (03) FUNDADORES */}
-      <section id="sec-03" className="relative bg-[#0a0e17] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+      <section id="sec-03" className="relative bg-white py-24 md:py-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
           <Eyebrow num="03" label="Fundadores" />
           <div className="grid lg:grid-cols-12 gap-16 items-center">
@@ -647,7 +647,7 @@ const MidiaKit = () => {
       </section>
 
       {/* (05) PILARES */}
-      <section id="sec-05" className="relative bg-[#0a0e17] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+      <section id="sec-05" className="relative bg-[#eef1f7] py-24 md:py-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
           <Eyebrow num="05" label="Pilares da marca" />
           <Reveal>
@@ -764,7 +764,7 @@ const MidiaKit = () => {
       </section>
 
       {/* (07) TRIWAY */}
-      <section id="sec-07" className="relative bg-[#0a0e17] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+      <section id="sec-07" className="relative bg-white py-24 md:py-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
           <Eyebrow num="07" label="Tecnologia TRIWAY" />
           <Reveal>
@@ -824,7 +824,7 @@ const MidiaKit = () => {
       </section>
 
       {/* (09) PRODUTOS */}
-      <section id="sec-09" className="relative bg-[#0a0e17] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+      <section id="sec-09" className="relative bg-[#f5f7fa] py-24 md:py-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
           <Eyebrow num="09" label="Linha de produtos" />
           <Reveal>
@@ -897,7 +897,7 @@ const MidiaKit = () => {
       </section>
 
       {/* (11) AUDIÊNCIA */}
-      <section id="sec-11" className="relative bg-[#0a0e17] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+      <section id="sec-11" className="relative bg-white py-24 md:py-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
           <Eyebrow num="11" label="Audiência Acqualive" />
           <Reveal>
@@ -956,7 +956,7 @@ const MidiaKit = () => {
       </section>
 
       {/* (13) DEPOIMENTOS */}
-      <section id="sec-13" className="relative bg-[#0a0e17] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+      <section id="sec-13" className="relative bg-[#eef1f7] py-24 md:py-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
           <Eyebrow num="13" label="Depoimentos" />
           <Reveal>
@@ -1084,7 +1084,7 @@ const MidiaKit = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[#0a0e17] border-t border-white/10 py-12 px-6 md:px-12 lg:px-20">
+      <footer className="bg-white border-t border-[#02265f]/10 py-12 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-6 text-xs tracking-[0.2em] uppercase text-white/50">
           <a href="#top" className="text-white font-bold tracking-[0.2em]">ACQUALIVE<span className="text-[#f26923]">.</span></a>
           <span>Mídia Kit Oficial · 2026</span>
