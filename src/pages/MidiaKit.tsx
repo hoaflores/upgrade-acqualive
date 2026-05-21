@@ -586,98 +586,167 @@ const MidiaKit = () => {
         </motion.div>
       </section>
 
-      {/* PROPOSTA SAVIOLI (slug exclusivo) */}
+      {/* PROPOSTA SAVIOLI — segue rigorosamente o PPT (slides 2 a 16) */}
       {slug === "savioli" && (
         <>
-          {/* Conceito */}
-          <section id="proposta-savioli" className="relative bg-white text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20 border-t border-[#02265f]/5">
+          {/* P02 — A Acqualive não nasceu para vender filtros */}
+          <section id="p02" className="relative bg-white text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20 border-t border-[#02265f]/5">
             <div className="max-w-7xl mx-auto">
-              <div className="flex items-center justify-between mb-10">
-                <span className="text-xs tracking-[0.3em] font-medium text-[#f26923]">
-                  (S1) <span className="ml-2 uppercase text-[#02265f]/70">Conceito da parceria</span>
-                </span>
-                <span className="text-xs tracking-[0.3em] font-medium uppercase text-[#02265f]/40">Savioli × Acqualive</span>
-              </div>
-              <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-                <Reveal>
-                  <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase">
-                    Transformar o cuidado <span className="text-[#1d4380]">começa na rotina.</span>
-                  </h2>
-                </Reveal>
-                <Reveal delay={0.15}>
-                  <p className="text-lg text-[#02265f]/80 leading-relaxed font-light mb-6">
-                    A proposta não é uma publi avulsa. É <strong className="font-medium">abrir uma conversa de parceria</strong> com valor de conteúdo, credibilidade e construção de posicionamento para os dois lados.
-                  </p>
-                  <p className="text-base text-[#02265f]/70 leading-relaxed font-light mb-6">
-                    O cuidado com a saúde não aparece como algo distante ou extraordinário, mas como prática cotidiana. Nesse raciocínio, a água deixa de ser apenas consumo e passa a ser parte de uma rotina de cuidado mais consciente.
-                  </p>
-                  <div className="mt-8 rounded-xl border-l-2 border-[#f26923] bg-[#f5f7fa] p-6">
-                    <div className="text-xs tracking-[0.25em] uppercase text-[#f26923] mb-3">Gatilho da narrativa</div>
-                    <p className="text-[#02265f]/85 font-light leading-relaxed">
-                      Aqui entra a <strong className="font-medium">Calculadora Acqualive de Hidratação</strong> como ponte natural entre o discurso clínico do Dr. Roque, a abordagem funcional da Dra. Gisela e a tecnologia Acqualive.
-                    </p>
-                  </div>
-                </Reveal>
-              </div>
-            </div>
-          </section>
-
-          {/* Por que Savioli */}
-          <section className="relative bg-[#f5f3ee] text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
-            <div className="max-w-7xl mx-auto">
-              <div className="flex items-center justify-between mb-10">
-                <span className="text-xs tracking-[0.3em] font-medium text-[#f26923]">
-                  (S2) <span className="ml-2 uppercase text-[#02265f]/70">Por que Savioli</span>
-                </span>
-                <span className="text-xs tracking-[0.3em] font-medium uppercase text-[#02265f]/40">Pilares estratégicos</span>
-              </div>
+              <Eyebrow num="02" label="Posicionamento" light />
               <Reveal>
-                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-20">
-                  Um parceiro híbrido <span className="text-[#1d4380]">raro.</span>
+                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-5xl mb-6">
+                  A Acqualive não nasceu para <span className="text-[#1d4380]">vender filtros.</span>
                 </h2>
+                <p className="text-[#02265f]/70 text-lg font-light max-w-3xl mb-16">
+                  A marca está construindo um território de ciência, saúde preventiva e longevidade.
+                </p>
               </Reveal>
-              <div className="grid md:grid-cols-3 gap-6">
-                {SAVIOLI_PILLARS.map((p, i) => (
+              <div className="grid md:grid-cols-3 gap-px bg-[#02265f]/10 rounded-2xl overflow-hidden">
+                {[
+                  { tag: "O que o mercado vende", items: ["Purificação", "Preço", "Design", "Tecnologia comum", "Commoditização"], accent: false },
+                  { tag: "O que a Acqualive constrói", items: ["Pesquisa clínica", "Publicações científicas", "Tecnologia proprietária", "Prevenção", "Qualidade de vida"], accent: true },
+                  { tag: "Oportunidade", items: ["Transformar água em tema de saúde", "Criar autoridade médica nacional", "Dominar o território de hidratação preventiva", "Construir movimento de longevidade"], accent: false },
+                ].map((col, i) => (
                   <motion.div
-                    key={p.tag}
+                    key={col.tag}
                     initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.1 }}
-                    whileHover={{ y: -6 }}
-                    className="bg-white rounded-2xl p-8 md:p-10 shadow-[0_20px_60px_-30px_rgba(2,38,95,0.2)] hover:shadow-[0_30px_80px_-30px_rgba(2,38,95,0.3)] transition-all"
+                    className={`p-10 ${col.accent ? "bg-[#02265f] text-white" : "bg-white"}`}
                   >
-                    <div className="flex items-start justify-between mb-10">
-                      <span className="text-5xl font-light text-[#f26923]">{p.tag}</span>
-                      <ArrowUpRight className="w-5 h-5 text-[#02265f]/30" strokeWidth={1.5} />
-                    </div>
-                    <h3 className="text-xl md:text-2xl font-light tracking-tight mb-5">{p.title}</h3>
-                    <p className="text-[#02265f]/75 text-sm leading-relaxed font-light">{p.text}</p>
+                    <div className={`text-xs tracking-[0.25em] uppercase mb-8 ${col.accent ? "text-[#f26923]" : "text-[#f26923]"}`}>{col.tag}</div>
+                    <ul className="space-y-4">
+                      {col.items.map((it) => (
+                        <li key={it} className={`text-base font-light flex gap-3 ${col.accent ? "text-white/85" : "text-[#02265f]/80"}`}>
+                          <span className="text-[#f26923] mt-1">·</span>{it}
+                        </li>
+                      ))}
+                    </ul>
                   </motion.div>
                 ))}
               </div>
             </div>
           </section>
 
-          {/* Perfis Roque e Gisela */}
-          <section className="relative bg-white text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+          {/* P03 — A marca já possui base científica relevante */}
+          <section id="p03" className="relative bg-[#f5f3ee] text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
             <div className="max-w-7xl mx-auto">
-              <div className="flex items-center justify-between mb-10">
-                <span className="text-xs tracking-[0.3em] font-medium text-[#f26923]">
-                  (S3) <span className="ml-2 uppercase text-[#02265f]/70">Quem é a família Savioli</span>
-                </span>
-                <span className="text-xs tracking-[0.3em] font-medium uppercase text-[#02265f]/40">Cardiologia · Nutrição funcional</span>
-              </div>
+              <Eyebrow num="03" label="Ativos científicos" light />
               <Reveal>
-                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-20">
-                  Autoridade clínica + <span className="text-[#4a90e2]">narrativa de cuidado integral.</span>
+                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-5xl mb-6">
+                  A marca já possui base <span className="text-[#1d4380]">científica relevante.</span>
                 </h2>
+                <p className="text-[#02265f]/70 text-lg font-light max-w-3xl mb-16">
+                  Isso diferencia a Acqualive de praticamente todas as marcas do setor.
+                </p>
               </Reveal>
+              <div className="grid md:grid-cols-3 gap-6">
+                {[
+                  { icon: FlaskConical, tag: "Ativos científicos", items: ["30+ anos de estudos e desenvolvimento", "Portal científico próprio", "Tecnologia TRIWAY", "Pesquisa clínica humana", "Estudos sobre água alcalina e PRAL"] },
+                  { icon: Award, tag: "Reconhecimento", items: ["Artigos indexados", "Estudos apresentados internacionalmente", "Conteúdo técnico organizado", "Discussão sobre alcalinidade e mineralização"] },
+                  { icon: HeartPulse, tag: "Posicionamento", items: ["Health & wellness", "Medicina preventiva", "Hidratação inteligente", "Longevidade", "Rotina saudável"] },
+                ].map((col, i) => (
+                  <motion.div
+                    key={col.tag}
+                    initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.1 }}
+                    className="bg-white rounded-2xl p-8 md:p-10 shadow-[0_20px_60px_-30px_rgba(2,38,95,0.2)]"
+                  >
+                    <col.icon className="w-6 h-6 text-[#f26923] mb-6" strokeWidth={1.4} />
+                    <h3 className="text-xl font-light tracking-tight mb-6">{col.tag}</h3>
+                    <ul className="space-y-3">
+                      {col.items.map((it) => (
+                        <li key={it} className="text-sm font-light text-[#02265f]/75 flex gap-2">
+                          <span className="text-[#f26923]">·</span>{it}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* P04 — Estudo da Dra. Juliana */}
+          <section id="p04" className="relative bg-white text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+            <div className="max-w-7xl mx-auto">
+              <Eyebrow num="04" label="Divisor de percepção" light />
+              <Reveal>
+                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-5xl mb-6">
+                  O estudo da Dra. Juliana é um <span className="text-[#1d4380]">divisor de percepção.</span>
+                </h2>
+                <p className="text-[#02265f]/70 text-lg font-light max-w-3xl mb-16">
+                  Esse é o ativo que mais aproxima a Acqualive do território médico-científico.
+                </p>
+              </Reveal>
+              <div className="grid md:grid-cols-2 gap-6">
+                {[
+                  { tag: "O que foi feito", items: ["Pesquisa clínica humana com água alcalina ionizada", "Pacientes reais acompanhados", "Controle de pH 8,8", "Foco em gastrite e saúde gástrica", "Estudo financiado integralmente pela Acqualive"] },
+                  { tag: "O que impressiona", items: ["Artigo indexado internacionalmente", "Apresentação em congresso em Praga", "Discussão científica internacional", "A ÚNICA marca do segmento no Brasil com pesquisa clínica publicada"] },
+                ].map((col, i) => (
+                  <motion.div
+                    key={col.tag}
+                    initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.1 }}
+                    className="bg-[#f5f7fa] border border-[#02265f]/10 rounded-2xl p-10"
+                  >
+                    <Microscope className="w-6 h-6 text-[#f26923] mb-6" strokeWidth={1.4} />
+                    <div className="text-xs tracking-[0.25em] uppercase text-[#f26923] mb-4">{col.tag}</div>
+                    <ul className="space-y-3">
+                      {col.items.map((it) => (
+                        <li key={it} className="text-base font-light text-[#02265f]/80 flex gap-3">
+                          <span className="text-[#f26923] mt-1">·</span>{it}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* P05 — Por que isso conversa com o Dr. Roque + Perfis */}
+          <section id="p05" className="relative bg-[#eef1f7] text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+            <div className="max-w-7xl mx-auto">
+              <Eyebrow num="05" label="Por que Dr. Roque" light />
+              <Reveal>
+                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-5xl mb-6">
+                  Por que isso conversa <span className="text-[#1d4380]">diretamente com o Dr. Roque.</span>
+                </h2>
+                <p className="text-[#02265f]/70 text-lg font-light max-w-3xl mb-16">
+                  O encaixe é institucional, científico e humano.
+                </p>
+              </Reveal>
+
+              <div className="grid md:grid-cols-3 gap-px bg-[#02265f]/10 rounded-2xl overflow-hidden mb-16">
+                {[
+                  { tag: "Dr. Roque", items: ["InCor desde 1977", "Cardiogeriatria", "15 livros publicados", "Autoridade em prevenção e longevidade", "Comunicação humanizada"] },
+                  { tag: "Acqualive", items: ["Hidratação", "Saúde preventiva", "Pesquisa clínica", "Qualidade de vida", "Ciência aplicada"] },
+                  { tag: "Conexão", items: ["Coração", "Envelhecimento saudável", "Hábitos", "Rotina", "Prevenção"] },
+                ].map((col, i) => (
+                  <motion.div
+                    key={col.tag}
+                    initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.08 }}
+                    className="bg-white p-10"
+                  >
+                    <div className="text-xs tracking-[0.25em] uppercase text-[#f26923] mb-6">{col.tag}</div>
+                    <ul className="space-y-3">
+                      {col.items.map((it) => (
+                        <li key={it} className="text-base font-light text-[#02265f]/80">{it}</li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Perfis Roque + Gisela */}
               <div className="grid md:grid-cols-2 gap-6 mb-10">
                 {SAVIOLI_PROFILES.map((p, i) => (
                   <motion.div
                     key={p.name}
                     initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.1 }}
-                    className="bg-[#f5f7fa] border border-[#02265f]/10 rounded-2xl p-8 md:p-10 hover:border-[#f26923]/40 transition-all"
+                    className="bg-white border border-[#02265f]/10 rounded-2xl p-8 md:p-10"
                   >
                     <HeartPulse className="w-6 h-6 text-[#f26923] mb-6" strokeWidth={1.4} />
                     <h3 className="text-2xl font-light tracking-tight mb-2 text-[#02265f]">{p.name}</h3>
@@ -707,24 +776,46 @@ const MidiaKit = () => {
             </div>
           </section>
 
-          {/* Audiência combinada */}
-          <section className="relative bg-[#eef1f7] text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+          {/* P06 — Público compatível + Alcance detalhado */}
+          <section id="p06" className="relative bg-white text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
             <div className="max-w-7xl mx-auto">
-              <div className="flex items-center justify-between mb-10">
-                <span className="text-xs tracking-[0.3em] font-medium text-[#f26923]">
-                  (S4) <span className="ml-2 uppercase text-[#02265f]/70">Alcance combinado</span>
-                </span>
-                <span className="text-xs tracking-[0.3em] font-medium uppercase text-[#02265f]/40">Audiência Dr. Roque</span>
-              </div>
+              <Eyebrow num="06" label="Aderência de público" light />
               <Reveal>
-                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-6">
-                  +2,3 milhões de seguidores. <span className="text-[#1d4380]">+101M de visualizações.</span>
+                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-5xl mb-6">
+                  O público do Dr. é extremamente <span className="text-[#1d4380]">compatível com a marca.</span>
                 </h2>
                 <p className="text-[#02265f]/70 text-lg font-light max-w-3xl mb-16">
-                  Público maduro, majoritariamente feminino, das faixas 35 a 65+. O mesmo perfil que escolhe Acqualive como base do protocolo preventivo da casa.
+                  +2,3 milhões de seguidores · +101M de visualizações.
                 </p>
               </Reveal>
 
+              <div className="grid md:grid-cols-3 gap-6 mb-16">
+                {[
+                  { icon: Instagram, tag: "Instagram", items: ["+1,6 milhão de seguidores", "83% feminino", "Forte presença acima dos 35 anos", "Público orientado a saúde e família"] },
+                  { icon: Youtube, tag: "YouTube", items: ["+52 milhões de visualizações", "Consumo de conteúdo educativo", "Alto nível de confiança", "Excelente retenção"] },
+                  { icon: ArrowUpRight, tag: "Oportunidade", items: ["Posicionamento premium", "Educação preventiva", "Construção de autoridade", "Conversão por confiança"] },
+                ].map((col, i) => (
+                  <motion.div
+                    key={col.tag}
+                    initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.1 }}
+                    className="bg-[#f5f3ee] rounded-2xl p-10 hover:bg-[#eef1f7] transition-colors"
+                  >
+                    <col.icon className="w-6 h-6 text-[#f26923] mb-6" strokeWidth={1.6} />
+                    <h3 className="text-xl font-light tracking-tight mb-6">{col.tag}</h3>
+                    <ul className="space-y-3">
+                      {col.items.map((it) => (
+                        <li key={it} className="text-sm font-light text-[#02265f]/75">{it}</li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Detalhamento dos canais */}
+              <Reveal>
+                <div className="text-xs tracking-[0.3em] uppercase text-[#f26923] mb-6">Alcance consolidado por canal</div>
+              </Reveal>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#02265f]/10 rounded-2xl overflow-hidden">
                 {SAVIOLI_AUDIENCE.map((a, i) => (
                   <motion.div
@@ -741,26 +832,104 @@ const MidiaKit = () => {
                   </motion.div>
                 ))}
               </div>
-
               <p className="text-xs text-[#02265f]/50 mt-6 tracking-[0.15em] uppercase">Dados consolidados · 01/11/2025 a 01/02/2026</p>
             </div>
           </section>
 
-          {/* Entregáveis */}
-          <section className="relative bg-[#f5f3ee] text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
-            <div className="max-w-7xl mx-auto">
-              <div className="flex items-center justify-between mb-10">
-                <span className="text-xs tracking-[0.3em] font-medium text-[#f26923]">
-                  (S5) <span className="ml-2 uppercase text-[#02265f]/70">Entregáveis sugeridos</span>
-                </span>
-                <span className="text-xs tracking-[0.3em] font-medium uppercase text-[#02265f]/40">Formato modular</span>
-              </div>
+          {/* P07 — Quote 1 */}
+          <section id="p07" className="relative bg-[#02265f] text-white py-32 md:py-40 px-6 md:px-12 lg:px-20 overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(242,105,35,0.18),transparent_60%),radial-gradient(circle_at_80%_70%,rgba(74,144,226,0.18),transparent_70%)]" />
+            <div className="relative z-10 max-w-5xl mx-auto">
+              <Eyebrow num="07" label="Convicção" />
               <Reveal>
-                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-20">
-                  Conteúdo educativo <span className="text-[#1d4380]">com autoridade.</span>
-                </h2>
+                <Quote className="w-10 h-10 text-[#f26923] mb-8" strokeWidth={1.2} />
+                <p className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.15] tracking-[-0.02em] mb-10">
+                  "Acreditamos que a água será um dos próximos <span className="text-[#f26923]">grandes temas da medicina preventiva.</span>"
+                </p>
+                <p className="text-white/70 text-lg font-light max-w-3xl">
+                  E acreditamos que o Dr. Roque pode liderar esse movimento no Brasil junto com a Acqualive.
+                </p>
               </Reveal>
+            </div>
+          </section>
 
+          {/* P08 — Bases científicas que fortalecem a narrativa */}
+          <section id="p08" className="relative bg-white text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+            <div className="max-w-7xl mx-auto">
+              <Eyebrow num="08" label="Bases científicas" light />
+              <Reveal>
+                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-5xl mb-6">
+                  Bases científicas que fortalecem <span className="text-[#1d4380]">a narrativa.</span>
+                </h2>
+                <p className="text-[#02265f]/70 text-lg font-light max-w-3xl mb-16">
+                  Foco em hidratação, envelhecimento, saúde cardiovascular e qualidade de vida.
+                </p>
+              </Reveal>
+              <div className="grid md:grid-cols-3 gap-6">
+                {[
+                  { tag: "Hidratação e envelhecimento", items: ["Desidratação em idosos associada a maior mortalidade", "Importância clínica da hidratação adequada", "Impacto funcional e cardiovascular"] },
+                  { tag: "Saúde cardiovascular", items: ["Função vascular e pressão arterial", "Mineralização da água", "Magnésio e saúde cardiovascular", "Rotina preventiva"] },
+                  { tag: "Água alcalina", items: ["Estudos em refluxo", "pH 8,8", "Saúde digestiva", "Bem-estar"] },
+                ].map((col, i) => (
+                  <motion.div
+                    key={col.tag}
+                    initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.1 }}
+                    className="bg-[#f5f3ee] rounded-2xl p-10 border-t-2 border-[#f26923]"
+                  >
+                    <h3 className="text-lg font-medium tracking-tight mb-6 text-[#02265f]">{col.tag}</h3>
+                    <ul className="space-y-3">
+                      {col.items.map((it) => (
+                        <li key={it} className="text-sm font-light text-[#02265f]/80 flex gap-2">
+                          <span className="text-[#f26923]">·</span>{it}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* P09 — O que essa parceria pode representar */}
+          <section id="p09" className="relative bg-[#f5f3ee] text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+            <div className="max-w-7xl mx-auto">
+              <Eyebrow num="09" label="Visão da parceria" light />
+              <Reveal>
+                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-5xl mb-6">
+                  O que essa parceria <span className="text-[#1d4380]">pode representar.</span>
+                </h2>
+                <p className="text-[#02265f]/70 text-lg font-light max-w-3xl mb-16">
+                  Mais do que uma campanha: um posicionamento nacional.
+                </p>
+              </Reveal>
+              <div className="grid md:grid-cols-2 gap-6 mb-16">
+                {[
+                  { tag: "Para o Dr. Roque", items: ["Expandir o debate sobre prevenção", "Associar imagem a uma marca científica", "Construir legado em hidratação e longevidade", "Participar de um movimento nacional"] },
+                  { tag: "Para a Acqualive", items: ["Elevação institucional da marca", "Credibilidade médica", "Autoridade nacional", "Escala de educação e conscientização"] },
+                ].map((col, i) => (
+                  <motion.div
+                    key={col.tag}
+                    initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.1 }}
+                    className="bg-white rounded-2xl p-10 md:p-12 shadow-[0_20px_60px_-30px_rgba(2,38,95,0.2)]"
+                  >
+                    <div className="text-xs tracking-[0.25em] uppercase text-[#f26923] mb-6">{col.tag}</div>
+                    <ul className="space-y-4">
+                      {col.items.map((it) => (
+                        <li key={it} className="text-base font-light text-[#02265f]/80 flex gap-3">
+                          <span className="text-[#f26923] mt-1">·</span>{it}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Entregáveis sugeridos */}
+              <Reveal>
+                <div className="text-xs tracking-[0.3em] uppercase text-[#f26923] mb-6">Entregáveis sugeridos · formato modular</div>
+              </Reveal>
               <div className="grid md:grid-cols-2 gap-6">
                 {SAVIOLI_DELIVERABLES.map((d, i) => (
                   <motion.div
@@ -777,31 +946,180 @@ const MidiaKit = () => {
                   </motion.div>
                 ))}
               </div>
+            </div>
+          </section>
 
-              <Reveal delay={0.2}>
-                <div className="mt-16 rounded-2xl bg-white border border-[#02265f]/10 p-8 md:p-10">
-                  <div className="text-xs tracking-[0.25em] uppercase text-[#f26923] mb-3">Formatos mais promissores</div>
-                  <p className="text-[#02265f]/85 font-light leading-relaxed text-lg">
-                    Série curta sobre <strong className="font-medium">hidratação, longevidade e prevenção</strong> · conversa entre <strong className="font-medium">cardiologia + nutrição funcional</strong> · ativação cruzada com os canais Acqualive.
-                  </p>
+          {/* P10 — Quote 2 */}
+          <section id="p10" className="relative bg-white text-[#02265f] py-32 md:py-40 px-6 md:px-12 lg:px-20 border-y border-[#02265f]/10">
+            <div className="max-w-5xl mx-auto">
+              <Eyebrow num="10" label="Movimento" light />
+              <Reveal>
+                <Quote className="w-10 h-10 text-[#f26923] mb-8" strokeWidth={1.2} />
+                <p className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.15] tracking-[-0.02em] mb-10">
+                  "A Acqualive já construiu a base científica. Mas acreditamos que com o senhor podemos transformar isso em um <span className="text-[#1d4380]">movimento nacional de educação e prevenção.</span>"
+                </p>
+                <div className="text-xs tracking-[0.3em] uppercase text-[#02265f]/50">
+                  Acqualive · Ciência · Hidratação · Longevidade
                 </div>
               </Reveal>
             </div>
           </section>
 
-          {/* Transição para o mídia kit institucional */}
-          <section className="relative bg-white text-[#02265f] py-20 md:py-28 px-6 md:px-12 lg:px-20 border-t border-[#02265f]/5">
-            <div className="max-w-5xl mx-auto text-center">
-              <div className="text-xs tracking-[0.3em] uppercase text-[#f26923] mb-6">A seguir</div>
-              <h2 className="font-light text-[clamp(1.75rem,3.5vw,2.75rem)] leading-tight tracking-[-0.02em] uppercase mb-6">
-                Conheça a Acqualive em profundidade
-              </h2>
-              <p className="text-[#02265f]/70 font-light text-lg leading-relaxed max-w-3xl mx-auto mb-10">
-                Marca, fundadores, ciência, produtos e portfólio de parcerias. Tudo o que sustenta esta proposta.
-              </p>
-              <a href="#sumario" className="inline-flex items-center gap-2 bg-[#1d4380] hover:bg-[#02265f] transition-colors text-white rounded-full px-10 py-4 text-sm tracking-[0.15em] font-medium">
-                Continuar para o mídia kit
-              </a>
+          {/* P11 — Big Numbers */}
+          <section id="p11" className="relative bg-[#eef1f7] text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+            <div className="max-w-7xl mx-auto">
+              <Eyebrow num="11" label="Big numbers" light />
+              <Reveal>
+                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-5xl mb-6">
+                  Indicadores que posicionam a Acqualive <span className="text-[#1d4380]">acima do mercado.</span>
+                </h2>
+                <p className="text-[#02265f]/70 text-lg font-light max-w-3xl mb-16">
+                  A marca já opera em um território de health &amp; wellness científico, não apenas de eletrodomésticos.
+                </p>
+              </Reveal>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-[#02265f]/10 rounded-2xl overflow-hidden">
+                {[
+                  { v: "150 mil+", l: "famílias impactadas" },
+                  { v: "600 mi+", l: "garrafas plásticas evitadas" },
+                  { v: "98%", l: "remoção de cloro" },
+                  { v: "30+ anos", l: "de estudos e desenvolvimento" },
+                  { v: "20+ lojas", l: "presença nacional" },
+                ].map((s, i) => (
+                  <motion.div
+                    key={s.l}
+                    initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.06 }}
+                    className="bg-white p-8 md:p-10"
+                  >
+                    <div className="text-4xl md:text-5xl font-light tracking-tight text-[#1d4380]">{s.v}</div>
+                    <div className="text-[11px] tracking-[0.2em] uppercase text-[#02265f]/60 mt-4">{s.l}</div>
+                  </motion.div>
+                ))}
+              </div>
+              <Reveal delay={0.2}>
+                <div className="mt-10 flex items-baseline gap-6">
+                  <div className="text-5xl md:text-6xl font-light text-[#f26923]">16+ anos</div>
+                  <div className="text-sm tracking-[0.2em] uppercase text-[#02265f]/60">de construção da marca</div>
+                </div>
+              </Reveal>
+            </div>
+          </section>
+
+          {/* P12 — Estudo UNICAMP */}
+          <section id="p12" className="relative bg-white text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+            <div className="max-w-7xl mx-auto">
+              <Eyebrow num="12" label="Estudo Unicamp" light />
+              <Reveal>
+                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-5xl mb-6">
+                  O estudo da UNICAMP fortalece <span className="text-[#1d4380]">legitimidade científica.</span>
+                </h2>
+                <p className="text-[#02265f]/70 text-lg font-light max-w-3xl mb-16">
+                  Um dos ativos mais importantes para credibilidade institucional da marca.
+                </p>
+              </Reveal>
+              <div className="grid md:grid-cols-2 gap-6">
+                {[
+                  { tag: "O que o estudo mostra", items: ["Teste realizado com água ionizada alcalina", "Análise relacionada à remoção de agrotóxicos", "Resultados apontando até 99% de eficácia", "Participação de instituição acadêmica reconhecida", "Fortalecimento técnico da proposta da marca"] },
+                  { tag: "Por que isso impressiona", items: ["Poucas marcas do segmento possuem associação acadêmica relevante", "Aproxima a Acqualive do universo científico", "Reforça diferenciação institucional", "Ajuda a construir narrativa de prevenção e segurança", "Cria um território muito mais sofisticado que filtro de água"] },
+                ].map((col, i) => (
+                  <motion.div
+                    key={col.tag}
+                    initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.1 }}
+                    className="bg-[#f5f7fa] border border-[#02265f]/10 rounded-2xl p-10"
+                  >
+                    <FlaskConical className="w-6 h-6 text-[#f26923] mb-6" strokeWidth={1.4} />
+                    <div className="text-xs tracking-[0.25em] uppercase text-[#f26923] mb-4">{col.tag}</div>
+                    <ul className="space-y-3">
+                      {col.items.map((it) => (
+                        <li key={it} className="text-base font-light text-[#02265f]/80 flex gap-3">
+                          <span className="text-[#f26923] mt-1">·</span>{it}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* P13 — Ecossistema científico */}
+          <section id="p13" className="relative bg-[#f5f3ee] text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+            <div className="max-w-7xl mx-auto">
+              <Eyebrow num="13" label="Ecossistema científico" light />
+              <Reveal>
+                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-5xl mb-6">
+                  A Acqualive já construiu um <span className="text-[#1d4380]">ecossistema científico.</span>
+                </h2>
+                <p className="text-[#02265f]/70 text-lg font-light max-w-3xl mb-16">
+                  O diferencial não é um único estudo. É a soma de iniciativas científicas da marca.
+                </p>
+              </Reveal>
+              <div className="grid md:grid-cols-3 gap-6">
+                {[
+                  { icon: Microscope, tag: "Pesquisa clínica", items: ["Estudo clínico com Dra. Juliana", "Água pH 8,8", "Gastrite e saúde digestiva", "Publicação internacional", "Apresentação em Praga"] },
+                  { icon: FlaskConical, tag: "Pesquisa acadêmica", items: ["UNICAMP", "PRAL negativo", "Mineralização", "Análises laboratoriais", "Discussões sobre alcalinidade"] },
+                  { icon: Building2, tag: "Estrutura da marca", items: ["Portal científico próprio", "Conteúdo técnico organizado", "Tecnologia TRIWAY", "Narrativa de prevenção", "Posicionamento premium"] },
+                ].map((col, i) => (
+                  <motion.div
+                    key={col.tag}
+                    initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.1 }}
+                    className="bg-white rounded-2xl p-10 shadow-[0_20px_60px_-30px_rgba(2,38,95,0.2)]"
+                  >
+                    <col.icon className="w-6 h-6 text-[#f26923] mb-6" strokeWidth={1.4} />
+                    <h3 className="text-xl font-light tracking-tight mb-6">{col.tag}</h3>
+                    <ul className="space-y-3">
+                      {col.items.map((it) => (
+                        <li key={it} className="text-sm font-light text-[#02265f]/75 flex gap-2">
+                          <span className="text-[#f26923]">·</span>{it}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* P14 — Quote 3 */}
+          <section id="p14" className="relative bg-[#02265f] text-white py-32 md:py-40 px-6 md:px-12 lg:px-20 overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(242,105,35,0.18),transparent_60%),radial-gradient(circle_at_20%_80%,rgba(74,144,226,0.18),transparent_70%)]" />
+            <div className="relative z-10 max-w-5xl mx-auto">
+              <Eyebrow num="14" label="Tese central" />
+              <Reveal>
+                <Quote className="w-10 h-10 text-[#f26923] mb-8" strokeWidth={1.2} />
+                <p className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.15] tracking-[-0.02em] mb-10">
+                  "Enquanto a maioria das marcas vende purificação, a Acqualive está construindo <span className="text-[#f26923]">relevância científica.</span>"
+                </p>
+                <p className="text-white/70 text-lg font-light max-w-3xl">
+                  E acreditamos que o Dr. Roque pode ajudar a transformar isso em um dos movimentos mais relevantes de hidratação e prevenção do Brasil.
+                </p>
+              </Reveal>
+            </div>
+          </section>
+
+          {/* P15/16 — Manifesto: única marca com pesquisa clínica publicada */}
+          <section id="p15" className="relative bg-white text-[#02265f] py-32 md:py-40 px-6 md:px-12 lg:px-20 border-t border-[#02265f]/10">
+            <div className="max-w-6xl mx-auto">
+              <Eyebrow num="15" label="Diferencial institucional" light />
+              <Reveal>
+                <h2 className="font-light text-[clamp(2.5rem,6vw,5.5rem)] leading-[1] tracking-[-0.02em] uppercase mb-12">
+                  Somos a <span className="text-[#f26923]">única marca</span> do segmento no Brasil com <span className="text-[#1d4380]">pesquisa clínica publicada.</span>
+                </h2>
+              </Reveal>
+              <div className="grid md:grid-cols-2 gap-10 lg:gap-16">
+                <Reveal delay={0.1}>
+                  <p className="text-lg text-[#02265f]/80 leading-relaxed font-light">
+                    A Acqualive já financiou, desenvolveu e participou de <strong className="font-medium">pesquisa clínica humana com publicação internacional</strong> e apresentação em congresso científico em Praga.
+                  </p>
+                </Reveal>
+                <Reveal delay={0.2}>
+                  <p className="text-lg text-[#02265f]/80 leading-relaxed font-light">
+                    Isso posiciona a marca muito mais próxima de uma operação de <strong className="font-medium">health science e medicina preventiva</strong> do que de uma empresa tradicional de purificadores.
+                  </p>
+                </Reveal>
+              </div>
             </div>
           </section>
         </>
