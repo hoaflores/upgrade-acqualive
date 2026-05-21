@@ -611,14 +611,8 @@ const MidiaKit = () => {
           </div>
 
           {slug === "savioli" ? (
-            <div className="mt-auto pt-24 flex flex-wrap items-end justify-between gap-10">
+            <div className="mt-auto pt-24 flex flex-wrap items-end justify-end gap-10">
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.4 }}
-                className="max-w-xl">
-                <p className="text-base md:text-lg text-white/85 leading-relaxed font-light">
-                  Uma proposta construída sobre autoridade clínica, narrativa de cuidado integral e aderência real de público. Não é uma publi avulsa, é a construção de um território comum entre Acqualive e a família Savioli.
-                </p>
-              </motion.div>
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.6 }}
                 className="flex items-center gap-4 text-white/60">
                 <div className="text-[10px] tracking-[0.3em] uppercase">Role para ler a proposta</div>
                 <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
