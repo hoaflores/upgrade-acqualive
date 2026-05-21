@@ -419,21 +419,21 @@ const MidiaKit = () => {
       {/* HEADER */}
       <motion.header
         initial={{ y: -30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }}
-        className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5 flex items-center justify-between backdrop-blur-md bg-[#0a0e17]/40"
+        className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5 flex items-center justify-between backdrop-blur-md bg-white/60 border-b border-[#02265f]/5"
       >
-        <a href="#top" className="text-xl tracking-[0.2em] font-bold">ACQUALIVE<span className="text-[#f26923]">.</span></a>
+        <a href="#top" className="text-xl tracking-[0.2em] font-bold text-[#02265f]">ACQUALIVE<span className="text-[#f26923]">.</span></a>
         <nav className="hidden lg:flex items-center gap-9 text-xs tracking-[0.18em] font-medium">
           {NAV.map((n) => (
-            <a key={n.href} href={n.href} className="text-white/80 hover:text-white transition-colors">{n.label}</a>
+            <a key={n.href} href={n.href} className="text-[#02265f]/70 hover:text-[#02265f] transition-colors">{n.label}</a>
           ))}
         </nav>
         <div className="flex items-center gap-3">
           <a href="https://wa.me/555192928468?text=Olá,%20vim%20pelo%20mídia%20kit%20Acqualive." target="_blank" rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 bg-[#1d4380] hover:bg-[#02265f] transition-colors rounded-full px-6 py-3 text-xs tracking-[0.18em] font-medium">
+            className="hidden md:inline-flex items-center gap-2 bg-[#1d4380] hover:bg-[#02265f] transition-colors text-white rounded-full px-6 py-3 text-xs tracking-[0.18em] font-medium">
             Fale com a marca
           </a>
           <button onClick={() => window.print()} aria-label="Baixar PDF"
-            className="w-11 h-11 rounded-full bg-white text-[#0a0e17] flex items-center justify-center hover:bg-[#f26923] hover:text-white transition-colors">
+            className="w-11 h-11 rounded-full bg-[#02265f] text-white flex items-center justify-center hover:bg-[#f26923] transition-colors">
             <Send className="w-4 h-4 -rotate-45" />
           </button>
         </div>
