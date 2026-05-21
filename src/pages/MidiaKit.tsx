@@ -1085,10 +1085,10 @@ const MidiaKit = () => {
 
       {/* FOOTER */}
       <footer className="bg-white border-t border-[#02265f]/10 py-12 px-6 md:px-12 lg:px-20">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-6 text-xs tracking-[0.2em] uppercase text-white/50">
-          <a href="#top" className="text-white font-bold tracking-[0.2em]">ACQUALIVE<span className="text-[#f26923]">.</span></a>
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-6 text-xs tracking-[0.2em] uppercase text-[#02265f]/50">
+          <a href="#top" className="text-[#02265f] font-bold tracking-[0.2em]">ACQUALIVE<span className="text-[#f26923]">.</span></a>
           <span>Mídia Kit Oficial · 2026</span>
-          <a href="https://www.acqualive.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+          <a href="https://www.acqualive.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-[#02265f] transition-colors">
             acqualive.com.br
           </a>
         </div>
