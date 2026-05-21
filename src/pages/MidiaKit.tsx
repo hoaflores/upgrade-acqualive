@@ -247,7 +247,7 @@ const PartnerContentSection = () => {
   return (
     <section id="sec-13b" className="relative bg-[#f5f7fa] text-[#02265f] py-24 md:py-32 overflow-hidden">
       <div className="px-6 md:px-12 lg:px-20 max-w-7xl mx-auto w-full">
-        <Eyebrow num="13" label="Conteúdo de parceiros" />
+        <Eyebrow num="13" label="Conteúdo de parceiros" light />
         <Reveal>
           <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-4">
             Vozes que <span className="text-[#f26923]">amplificam</span> a marca.
