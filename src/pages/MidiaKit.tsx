@@ -486,7 +486,7 @@ const MidiaKit = () => {
         className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5 flex items-center justify-between backdrop-blur-md bg-white/60 border-b border-[#02265f]/5"
       >
         <a href="#top" className="flex items-center" aria-label="Acqualive">
-          <img src={logoColor} alt="Acqualive" className="h-7 md:h-8 w-auto object-contain" />
+          <img src={logoColor} alt="Acqualive" className="h-10 md:h-12 w-auto object-contain" />
         </a>
         <nav className="hidden lg:flex items-center gap-9 text-xs tracking-[0.18em] font-medium">
           {NAV.map((n) => (
@@ -1398,7 +1398,7 @@ const MidiaKit = () => {
       <footer className="bg-white border-t border-[#02265f]/10 py-12 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-6 text-xs tracking-[0.2em] uppercase text-[#02265f]/50">
           <a href="#top" aria-label="Acqualive">
-            <img src={logoColor} alt="Acqualive" className="h-7 w-auto object-contain" />
+            <img src={logoColor} alt="Acqualive" className="h-10 w-auto object-contain" />
           </a>
           <span>Mídia Kit Oficial · 2026</span>
           <a href="https://www.acqualive.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-[#02265f] transition-colors">
