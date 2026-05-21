@@ -245,14 +245,14 @@ const PartnerContentSection = () => {
   };
 
   return (
-    <section id="sec-13b" className="relative bg-[#02265f] text-white py-24 md:py-32 overflow-hidden">
+    <section id="sec-13b" className="relative bg-[#f5f7fa] text-[#02265f] py-24 md:py-32 overflow-hidden">
       <div className="px-6 md:px-12 lg:px-20 max-w-7xl mx-auto w-full">
-        <Eyebrow num="13" label="Conteúdo de parceiros" />
+        <Eyebrow num="13" label="Conteúdo de parceiros" light />
         <Reveal>
           <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-4">
             Vozes que <span className="text-[#f26923]">amplificam</span> a marca.
           </h2>
-          <p className="text-white/70 text-lg font-light max-w-2xl mb-12">
+          <p className="text-[#02265f]/70 text-lg font-light max-w-2xl mb-12">
             Parceiros, médicos e criadores que co-criam conteúdo conosco. Arraste, role ou use as setas.
           </p>
         </Reveal>
@@ -342,7 +342,7 @@ const PartnerContentSection = () => {
 
       {/* controls */}
       <div className="px-6 md:px-12 lg:px-20 max-w-7xl mx-auto w-full mt-10 flex items-center justify-between gap-6">
-        <div className="flex-1 h-[2px] bg-white/10 rounded-full overflow-hidden">
+        <div className="flex-1 h-[2px] bg-[#02265f]/10 rounded-full overflow-hidden">
           <div
             className="h-full bg-[#f26923] transition-[width] duration-200"
             style={{ width: `${Math.max(8, progress * 100)}%` }}
@@ -354,7 +354,7 @@ const PartnerContentSection = () => {
             onClick={() => scrollByCards(-1)}
             disabled={!canPrev}
             aria-label="Anterior"
-            className="w-12 h-12 rounded-full border border-white/20 hover:border-[#f26923] hover:bg-[#f26923]/10 disabled:opacity-30 disabled:cursor-not-allowed transition flex items-center justify-center"
+            className="w-12 h-12 rounded-full border border-[#02265f]/20 hover:border-[#f26923] hover:bg-[#f26923]/10 disabled:opacity-30 disabled:cursor-not-allowed transition flex items-center justify-center text-[#02265f]"
           >
             <ArrowLeft className="w-4 h-4" />
           </button>
@@ -363,12 +363,12 @@ const PartnerContentSection = () => {
             onClick={() => scrollByCards(1)}
             disabled={!canNext}
             aria-label="Próximo"
-            className="w-12 h-12 rounded-full border border-white/20 hover:border-[#f26923] hover:bg-[#f26923]/10 disabled:opacity-30 disabled:cursor-not-allowed transition flex items-center justify-center"
+            className="w-12 h-12 rounded-full border border-[#02265f]/20 hover:border-[#f26923] hover:bg-[#f26923]/10 disabled:opacity-30 disabled:cursor-not-allowed transition flex items-center justify-center text-[#02265f]"
           >
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>
-        <span className="text-xs tracking-[0.3em] uppercase text-white/50 hidden md:inline">
+        <span className="text-xs tracking-[0.3em] uppercase text-[#02265f]/50 hidden md:inline">
           {PARTNER_CONTENT.length} episódios
         </span>
       </div>
@@ -407,7 +407,7 @@ const MidiaKit = () => {
     : null;
 
   return (
-    <div id="top" className="min-h-screen bg-[#0a0e17] text-white antialiased overflow-x-hidden" style={{ fontFamily: "'Archivo', sans-serif" }}>
+    <div id="top" className="min-h-screen bg-[#f5f7fa] text-[#02265f] antialiased overflow-x-hidden" style={{ fontFamily: "'Archivo', sans-serif" }}>
       <Helmet>
         <title>Mídia Kit Acqualive | Saúde, ciência e longevidade</title>
         <meta name="description" content="Mídia kit oficial Acqualive: única marca de água alcalina mineralizada do Brasil com estudo clínico internacional publicado. 16 anos, 150 mil famílias, 3 patentes próprias." />
@@ -419,21 +419,21 @@ const MidiaKit = () => {
       {/* HEADER */}
       <motion.header
         initial={{ y: -30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }}
-        className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5 flex items-center justify-between backdrop-blur-md bg-[#0a0e17]/40"
+        className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5 flex items-center justify-between backdrop-blur-md bg-white/60 border-b border-[#02265f]/5"
       >
-        <a href="#top" className="text-xl tracking-[0.2em] font-bold">ACQUALIVE<span className="text-[#f26923]">.</span></a>
+        <a href="#top" className="text-xl tracking-[0.2em] font-bold text-[#02265f]">ACQUALIVE<span className="text-[#f26923]">.</span></a>
         <nav className="hidden lg:flex items-center gap-9 text-xs tracking-[0.18em] font-medium">
           {NAV.map((n) => (
-            <a key={n.href} href={n.href} className="text-white/80 hover:text-white transition-colors">{n.label}</a>
+            <a key={n.href} href={n.href} className="text-[#02265f]/70 hover:text-[#02265f] transition-colors">{n.label}</a>
           ))}
         </nav>
         <div className="flex items-center gap-3">
           <a href="https://wa.me/555192928468?text=Olá,%20vim%20pelo%20mídia%20kit%20Acqualive." target="_blank" rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 bg-[#1d4380] hover:bg-[#02265f] transition-colors rounded-full px-6 py-3 text-xs tracking-[0.18em] font-medium">
+            className="hidden md:inline-flex items-center gap-2 bg-[#1d4380] hover:bg-[#02265f] transition-colors text-white rounded-full px-6 py-3 text-xs tracking-[0.18em] font-medium">
             Fale com a marca
           </a>
           <button onClick={() => window.print()} aria-label="Baixar PDF"
-            className="w-11 h-11 rounded-full bg-white text-[#0a0e17] flex items-center justify-center hover:bg-[#f26923] hover:text-white transition-colors">
+            className="w-11 h-11 rounded-full bg-[#02265f] text-white flex items-center justify-center hover:bg-[#f26923] transition-colors">
             <Send className="w-4 h-4 -rotate-45" />
           </button>
         </div>
@@ -441,10 +441,10 @@ const MidiaKit = () => {
 
       {/* (01) HERO */}
       <section ref={heroRef} className="relative min-h-screen w-full overflow-hidden">
-        <motion.div style={{ y: heroParallax, scale: 1.05 }} className="absolute inset-0">
+        <motion.div style={{ y: heroParallax, scale: 1.05 }} className="absolute inset-1">
           <img src={heroImg} alt="Acqualive" className="w-full h-full object-cover" width={1920} height={1080} />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0e17]/85 via-[#0a0e17]/40 to-[#0a0e17]/70" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0e17]/60 via-transparent to-[#0a0e17]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#02265f]/75 via-[#02265f]/30 to-[#02265f]/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#02265f]/50 via-transparent to-[#f5f7fa]" />
         </motion.div>
 
         <motion.div style={{ opacity: heroFade }} className="relative z-10 min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-32 pb-20">
@@ -503,28 +503,28 @@ const MidiaKit = () => {
       </section>
 
       {/* SUMÁRIO / ÍNDICE */}
-      <section id="sumario" className="relative bg-[#0a0e17] border-t border-white/5 py-20 px-6 md:px-12 lg:px-20">
+      <section id="sumario" className="relative bg-[#f5f7fa] border-t border-[#02265f]/5 py-20 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <div className="flex items-end justify-between mb-12 flex-wrap gap-6">
               <div>
                 <span className="text-xs tracking-[0.3em] font-medium text-[#f26923]">Sumário</span>
-                <h2 className="font-light text-3xl md:text-4xl mt-3 tracking-tight">Neste documento.</h2>
+                <h2 className="font-light text-3xl md:text-4xl mt-3 tracking-tight text-[#02265f]">Neste documento.</h2>
               </div>
-              <span className="text-xs tracking-[0.3em] uppercase text-white/40">14 seções · 16 anos de marca</span>
+              <span className="text-xs tracking-[0.3em] uppercase text-[#02265f]/40">14 seções · 16 anos de marca</span>
             </div>
           </Reveal>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-white/5">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-[#02265f]/10">
             {SUMMARY.map((s, i) => (
               <motion.a
                 key={s.num} href={`#sec-${s.num}`}
                 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.03 }}
-                className="group bg-[#0a0e17] px-6 py-5 flex items-baseline gap-4 hover:bg-[#0e1422] transition-colors"
+                className="group bg-white px-6 py-5 flex items-baseline gap-4 hover:bg-[#f5f7fa] transition-colors"
               >
                 <span className="text-xs tracking-[0.2em] text-[#f26923]">({s.num})</span>
-                <span className="text-sm text-white/80 group-hover:text-white transition-colors flex-1">{s.label}</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-white/30 group-hover:text-[#f26923] group-hover:rotate-45 transition-all" />
+                <span className="text-sm text-[#02265f]/80 group-hover:text-[#02265f] transition-colors flex-1">{s.label}</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#02265f]/30 group-hover:text-[#f26923] group-hover:rotate-45 transition-all" />
               </motion.a>
             ))}
           </div>
@@ -574,9 +574,9 @@ const MidiaKit = () => {
       </section>
 
       {/* (03) FUNDADORES */}
-      <section id="sec-03" className="relative bg-[#0a0e17] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+      <section id="sec-03" className="relative bg-white py-24 md:py-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
-          <Eyebrow num="03" label="Fundadores" />
+          <Eyebrow num="03" label="Fundadores" light />
           <div className="grid lg:grid-cols-12 gap-16 items-center">
             <Reveal>
               <div className="lg:col-span-7 rounded-2xl overflow-hidden">
@@ -591,18 +591,18 @@ const MidiaKit = () => {
               </Reveal>
               <Reveal delay={0.15}>
                 <div className="space-y-8">
-                  <div>
-                    <h3 className="text-xl font-medium tracking-tight mb-2">Mauro Mumbach</h3>
+                   <div>
+                    <h3 className="text-xl font-medium tracking-tight mb-2 text-[#02265f]">Mauro Mumbach</h3>
                     <div className="text-xs tracking-[0.2em] uppercase text-[#f26923] mb-3">Co-fundador</div>
-                    <p className="text-white/70 text-sm leading-relaxed font-light">
+                    <p className="text-[#02265f]/70 text-sm leading-relaxed font-light">
                       Pesquisador e empreendedor. Mais de 30 anos estudando mineralização da água, PRAL e longevidade. O elo entre ciência e produto na Acqualive.
                     </p>
                   </div>
-                  <div className="h-px bg-white/10" />
+                  <div className="h-px bg-[#02265f]/10" />
                   <div>
-                    <h3 className="text-xl font-medium tracking-tight mb-2">Sidney Rodrigues</h3>
+                    <h3 className="text-xl font-medium tracking-tight mb-2 text-[#02265f]">Sidney Rodrigues</h3>
                     <div className="text-xs tracking-[0.2em] uppercase text-[#f26923] mb-3">Co-fundador</div>
-                    <p className="text-white/70 text-sm leading-relaxed font-light">
+                    <p className="text-[#02265f]/70 text-sm leading-relaxed font-light">
                       Estrategista de marca e expansão. Responsável por transformar a tecnologia em uma rede de 20+ lojas e uma marca presente em todo o Brasil.
                     </p>
                   </div>
@@ -647,9 +647,9 @@ const MidiaKit = () => {
       </section>
 
       {/* (05) PILARES */}
-      <section id="sec-05" className="relative bg-[#0a0e17] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+      <section id="sec-05" className="relative bg-[#eef1f7] py-24 md:py-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
-          <Eyebrow num="05" label="Pilares da marca" />
+          <Eyebrow num="05" label="Pilares da marca" light />
           <Reveal>
             <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-20">
               Quatro fundamentos que <span className="text-[#4a90e2]">sustentam tudo.</span>
@@ -670,25 +670,25 @@ const MidiaKit = () => {
                     key={p.title}
                     initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.08 }}
-                    className="border-b border-white/15"
+                    className="border-b border-[#02265f]/15"
                   >
                     <button onClick={() => setOpenPillar(open ? -1 : i)}
                       className="w-full flex items-center justify-between py-6 text-left group">
                       <div className="flex items-center gap-4">
-                        <p.icon className={`w-5 h-5 transition-colors ${open ? "text-[#f26923]" : "text-white/50"}`} strokeWidth={1.4} />
-                        <span className={`text-xl md:text-2xl font-light tracking-tight transition-colors ${open ? "text-[#f26923]" : "text-white group-hover:text-[#f26923]"}`}>
+                        <p.icon className={`w-5 h-5 transition-colors ${open ? "text-[#f26923]" : "text-[#02265f]/50"}`} strokeWidth={1.4} />
+                        <span className={`text-xl md:text-2xl font-light tracking-tight transition-colors ${open ? "text-[#f26923]" : "text-[#02265f] group-hover:text-[#f26923]"}`}>
                           {p.title}
                         </span>
                       </div>
-                      <span className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center flex-shrink-0 ml-4">
-                        {open ? <Minus className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
+                      <span className="w-9 h-9 rounded-full border border-[#02265f]/30 flex items-center justify-center flex-shrink-0 ml-4">
+                        {open ? <Minus className="w-3.5 h-3.5 text-[#02265f]" /> : <Plus className="w-3.5 h-3.5 text-[#02265f]" />}
                       </span>
                     </button>
                     <AnimatePresence initial={false}>
                       {open && (
                         <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }} className="overflow-hidden">
-                          <p className="text-white/65 text-sm leading-relaxed font-light pb-6 pr-10 pl-9">{p.text}</p>
+                          <p className="text-[#02265f]/65 text-sm leading-relaxed font-light pb-6 pr-10 pl-9">{p.text}</p>
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -764,14 +764,14 @@ const MidiaKit = () => {
       </section>
 
       {/* (07) TRIWAY */}
-      <section id="sec-07" className="relative bg-[#0a0e17] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+      <section id="sec-07" className="relative bg-white py-24 md:py-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
-          <Eyebrow num="07" label="Tecnologia TRIWAY" />
+          <Eyebrow num="07" label="Tecnologia TRIWAY" light />
           <Reveal>
             <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-6">
               Três patentes próprias. <span className="text-[#4a90e2]">Uma tecnologia.</span>
             </h2>
-            <p className="text-white/65 text-lg font-light max-w-2xl mb-20">
+            <p className="text-[#02265f]/65 text-lg font-light max-w-2xl mb-20">
               TRIWAY é a arquitetura proprietária da Acqualive. Filtragem, mineralização e alcalinização em um único sistema integrado, validado por décadas de pesquisa.
             </p>
           </Reveal>
@@ -783,11 +783,11 @@ const MidiaKit = () => {
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.1 }}
                 whileHover={{ y: -6 }}
-                className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 hover:bg-white/[0.06] hover:border-[#f26923]/40 transition-all"
+                className="bg-white border border-[#02265f]/10 rounded-2xl p-8 hover:border-[#f26923]/40 shadow-[0_4px_20px_-10px_rgba(2,38,95,0.15)] transition-all"
               >
                 <div className="text-5xl font-light text-[#f26923] mb-12">{t.tag}</div>
-                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4">{t.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed font-light">{t.text}</p>
+                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4 text-[#02265f]">{t.title}</h3>
+                <p className="text-[#02265f]/60 text-sm leading-relaxed font-light">{t.text}</p>
               </motion.div>
             ))}
           </div>
@@ -824,14 +824,14 @@ const MidiaKit = () => {
       </section>
 
       {/* (09) PRODUTOS */}
-      <section id="sec-09" className="relative bg-[#0a0e17] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+      <section id="sec-09" className="relative bg-[#f5f7fa] py-24 md:py-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
-          <Eyebrow num="09" label="Linha de produtos" />
+          <Eyebrow num="09" label="Linha de produtos" light />
           <Reveal>
             <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-6">
               Do dia a dia ao topo de gama, <span className="text-[#4a90e2]">um Acqualive para cada casa.</span>
             </h2>
-            <p className="text-white/65 text-lg font-light max-w-2xl mb-20">
+            <p className="text-[#02265f]/65 text-lg font-light max-w-2xl mb-20">
               Toda a linha em 10x sem juros, com frete grátis (consulte regiões disponíveis).
             </p>
           </Reveal>
@@ -843,21 +843,21 @@ const MidiaKit = () => {
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.08 }}
                 whileHover={{ y: -6 }}
-                className="group bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden hover:border-[#f26923]/40 transition-all"
+                className="group bg-white border border-[#02265f]/10 rounded-2xl overflow-hidden hover:border-[#f26923]/40 shadow-[0_4px_20px_-10px_rgba(2,38,95,0.15)] transition-all"
               >
-                <div className="relative aspect-[4/3] bg-gradient-to-br from-white/[0.04] to-transparent overflow-hidden">
+                <div className="relative aspect-[4/3] bg-gradient-to-br from-[#f5f7fa] to-transparent overflow-hidden">
                   <img src={p.img} alt={p.name} className="absolute inset-0 w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-700" loading="lazy"
                     onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }} />
-                  <span className="absolute top-5 left-5 text-[10px] tracking-[0.3em] uppercase text-white/60 font-medium">{p.code}</span>
+                  <span className="absolute top-5 left-5 text-[10px] tracking-[0.3em] uppercase text-[#02265f]/60 font-medium">{p.code}</span>
                 </div>
                 <div className="p-7">
-                  <h3 className="text-xl font-light tracking-tight mb-2">{p.name}</h3>
+                  <h3 className="text-xl font-light tracking-tight mb-2 text-[#02265f]">{p.name}</h3>
                   <div className="text-sm text-[#f26923] tracking-wide mb-6">{p.price}</div>
-                  <div className="grid grid-cols-3 gap-3 pt-5 border-t border-white/10">
+                  <div className="grid grid-cols-3 gap-3 pt-5 border-t border-[#02265f]/10">
                     {p.specs.map((s) => (
                       <div key={s.l}>
                         <div className="text-lg font-light tracking-tight text-[#4a90e2]">{s.v}</div>
-                        <div className="text-[9px] tracking-[0.18em] uppercase text-white/50 mt-1">{s.l}</div>
+                        <div className="text-[9px] tracking-[0.18em] uppercase text-[#02265f]/50 mt-1">{s.l}</div>
                       </div>
                     ))}
                   </div>
@@ -897,9 +897,9 @@ const MidiaKit = () => {
       </section>
 
       {/* (11) AUDIÊNCIA */}
-      <section id="sec-11" className="relative bg-[#0a0e17] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+      <section id="sec-11" className="relative bg-white py-24 md:py-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
-          <Eyebrow num="11" label="Audiência Acqualive" />
+          <Eyebrow num="11" label="Audiência Acqualive" light />
           <Reveal>
             <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-20">
               Quem escolhe <span className="text-[#4a90e2]">Acqualive.</span>
@@ -912,11 +912,11 @@ const MidiaKit = () => {
                 key={a.title}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.08 }}
-                className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 md:p-10 hover:bg-white/[0.06] hover:border-[#f26923]/40 transition-all group"
+                className="bg-[#f5f7fa] border border-[#02265f]/10 rounded-2xl p-8 md:p-10 hover:border-[#f26923]/40 transition-all group"
               >
                 <a.icon className="w-7 h-7 text-[#f26923] mb-8 group-hover:scale-110 transition-transform" strokeWidth={1.3} />
-                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4">{a.title}</h3>
-                <p className="text-white/65 text-sm leading-relaxed font-light">{a.text}</p>
+                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4 text-[#02265f]">{a.title}</h3>
+                <p className="text-[#02265f]/65 text-sm leading-relaxed font-light">{a.text}</p>
               </motion.div>
             ))}
           </div>
@@ -956,9 +956,9 @@ const MidiaKit = () => {
       </section>
 
       {/* (13) DEPOIMENTOS */}
-      <section id="sec-13" className="relative bg-[#0a0e17] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+      <section id="sec-13" className="relative bg-[#eef1f7] py-24 md:py-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
-          <Eyebrow num="13" label="Depoimentos" />
+          <Eyebrow num="13" label="Depoimentos" light />
           <Reveal>
             <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-20">
               Confiada por milhares, <span className="text-[#4a90e2]">recomendada por especialistas.</span>
@@ -971,15 +971,15 @@ const MidiaKit = () => {
                 key={t.name}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.08 }}
-                className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 md:p-10 hover:border-[#f26923]/40 transition-all"
+                className="bg-white border border-[#02265f]/10 rounded-2xl p-8 md:p-10 hover:border-[#f26923]/40 shadow-[0_4px_20px_-10px_rgba(2,38,95,0.15)] transition-all"
               >
                 <Quote className="w-6 h-6 text-[#f26923] mb-6" strokeWidth={1.3} />
-                <p className="text-white/85 leading-relaxed font-light mb-8 text-base md:text-lg">"{t.text}"</p>
-                <div className="flex items-center gap-4 pt-6 border-t border-white/10">
+                <p className="text-[#02265f]/85 leading-relaxed font-light mb-8 text-base md:text-lg">"{t.text}"</p>
+                <div className="flex items-center gap-4 pt-6 border-t border-[#02265f]/10">
                   <img src={t.img} alt={t.name} className="w-12 h-12 rounded-full object-cover" loading="lazy" />
                   <div>
-                    <div className="font-medium tracking-tight">{t.name}</div>
-                    <div className="text-xs tracking-[0.15em] uppercase text-white/60 mt-1">{t.role}</div>
+                    <div className="font-medium tracking-tight text-[#02265f]">{t.name}</div>
+                    <div className="text-xs tracking-[0.15em] uppercase text-[#02265f]/60 mt-1">{t.role}</div>
                   </div>
                 </div>
               </motion.div>
@@ -1030,7 +1030,7 @@ const MidiaKit = () => {
       <section id="sec-15" className="relative py-32 md:py-40 px-6 md:px-12 lg:px-20 overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroImg} alt="" className="w-full h-full object-cover" loading="lazy" />
-          <div className="absolute inset-0 bg-[#02265f]/90" />
+          <div className="absolute inset-0 bg-[#02265f]/70" />
         </div>
 
         <Reveal>
@@ -1084,11 +1084,11 @@ const MidiaKit = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[#0a0e17] border-t border-white/10 py-12 px-6 md:px-12 lg:px-20">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-6 text-xs tracking-[0.2em] uppercase text-white/50">
-          <a href="#top" className="text-white font-bold tracking-[0.2em]">ACQUALIVE<span className="text-[#f26923]">.</span></a>
+      <footer className="bg-white border-t border-[#02265f]/10 py-12 px-6 md:px-12 lg:px-20">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-6 text-xs tracking-[0.2em] uppercase text-[#02265f]/50">
+          <a href="#top" className="text-[#02265f] font-bold tracking-[0.2em]">ACQUALIVE<span className="text-[#f26923]">.</span></a>
           <span>Mídia Kit Oficial · 2026</span>
-          <a href="https://www.acqualive.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+          <a href="https://www.acqualive.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-[#02265f] transition-colors">
             acqualive.com.br
           </a>
         </div>
