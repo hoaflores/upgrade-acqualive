@@ -495,7 +495,7 @@ const MidiaKit = () => {
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          <a href="https://wa.me/555192928468?text=Olá,%20vim%20pelo%20mídia%20kit%20Acqualive." target="_blank" rel="noopener noreferrer"
+          <a href="https://wa.me/5511940689011?text=Olá,%20vim%20pelo%20mídia%20kit%20Acqualive." target="_blank" rel="noopener noreferrer"
             className="hidden md:inline-flex items-center gap-2 bg-[#1d4380] hover:bg-[#02265f] transition-colors text-white rounded-full px-6 py-3 text-xs tracking-[0.18em] font-medium">
             Fale com a marca
           </a>
@@ -1713,14 +1713,14 @@ const MidiaKit = () => {
                 <Phone className="w-5 h-5 text-[#f26923] flex-shrink-0 mt-1" />
                 <div>
                   <div className="text-xs tracking-[0.2em] uppercase text-white/60 mb-1">WhatsApp</div>
-                  <div className="text-base text-white">+55 51 9292-8468</div>
+                  <div className="text-base text-white">(11) 94068-9011</div>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <Mail className="w-5 h-5 text-[#f26923] flex-shrink-0 mt-1" />
                 <div>
                   <div className="text-xs tracking-[0.2em] uppercase text-white/60 mb-1">E-mail</div>
-                  <div className="text-base text-white">parcerias@acqualive.com.br</div>
+                  <div className="text-base text-white">laura@acqualivesul.com.br</div>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -1733,7 +1733,7 @@ const MidiaKit = () => {
             </div>
 
             <div className="flex flex-wrap items-center gap-4">
-              <a href="https://wa.me/555192928468?text=Olá,%20vim%20pelo%20mídia%20kit%20Acqualive." target="_blank" rel="noopener noreferrer"
+              <a href="https://wa.me/5511940689011?text=Olá,%20vim%20pelo%20mídia%20kit%20Acqualive." target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#f26923] text-white hover:bg-white hover:text-[#02265f] transition-colors rounded-full px-10 py-5 text-sm tracking-[0.15em] font-medium">
                 Falar com a Acqualive
               </a>
