@@ -576,7 +576,7 @@ const MidiaKit = () => {
       {/* (03) FUNDADORES */}
       <section id="sec-03" className="relative bg-white py-24 md:py-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
-          <Eyebrow num="03" label="Fundadores" />
+          <Eyebrow num="03" label="Fundadores" light />
           <div className="grid lg:grid-cols-12 gap-16 items-center">
             <Reveal>
               <div className="lg:col-span-7 rounded-2xl overflow-hidden">
