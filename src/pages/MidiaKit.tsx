@@ -582,11 +582,8 @@ const MidiaKit = () => {
 
           <div className="mt-auto pt-24 flex flex-wrap items-end justify-between gap-10">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.4 }}
-              className="flex items-center gap-5 max-w-md">
-              <button className="w-14 h-14 rounded-full border border-white/30 flex items-center justify-center group hover:bg-white hover:text-[#0a0e17] transition-all flex-shrink-0">
-                <Play className="w-4 h-4 ml-0.5" fill="currentColor" />
-              </button>
-              <p className="text-sm text-white/70 leading-relaxed font-light">
+              className="max-w-md">
+              <p className="text-sm text-white/80 leading-relaxed font-light">
                 {slug === "savioli"
                   ? "Uma proposta de parceria construída sobre autoridade clínica, narrativa de cuidado integral e aderência real de público. Não é uma publi avulsa, é a construção de um território comum entre Acqualive e a família Savioli."
                   : "A única marca de água alcalina mineralizada do Brasil com estudo clínico internacional publicado. 16 anos transformando a água da torneira na base da saúde preventiva."}
