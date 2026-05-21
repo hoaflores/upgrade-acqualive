@@ -958,7 +958,7 @@ const MidiaKit = () => {
       {/* (13) DEPOIMENTOS */}
       <section id="sec-13" className="relative bg-[#eef1f7] py-24 md:py-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
-          <Eyebrow num="13" label="Depoimentos" />
+          <Eyebrow num="13" label="Depoimentos" light />
           <Reveal>
             <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-20">
               Confiada por milhares, <span className="text-[#4a90e2]">recomendada por especialistas.</span>
