@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import {
-  Play, Send, ArrowUpRight, Plus, Minus, Phone, Download,
+  Play, Send, ArrowUpRight, ArrowLeft, ArrowRight, Plus, Minus, Phone, Download,
   Instagram, Youtube, Facebook, Globe, Mail, MapPin,
   FlaskConical, Award, Leaf, HeartPulse, Users, Building2, Microscope, FileText, Quote
 } from "lucide-react";
