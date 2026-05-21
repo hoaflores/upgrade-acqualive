@@ -518,25 +518,40 @@ const MidiaKit = () => {
             {partnerName && (
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-xs tracking-[0.3em] uppercase text-[#f26923] mb-8 font-medium">
-                Mídia Kit · {partnerName}
+                {slug === "savioli" ? "Proposta exclusiva · Dr. Roque & Dra. Gisela Savioli" : `Mídia Kit · ${partnerName}`}
               </motion.div>
             )}
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }}
               className="text-xs tracking-[0.3em] uppercase text-white/50 mb-6">
-              (01) Mídia Kit Oficial · 2026
+              (01) {slug === "savioli" ? "Proposta de parceria · 2026" : "Mídia Kit Oficial · 2026"}
             </motion.div>
 
-            <h1 className="font-light text-[clamp(2.5rem,7vw,6rem)] leading-[1] tracking-[-0.02em] uppercase">
-              {["SAÚDE", "COMEÇA", "PELA"].map((word, i) => (
-                <motion.span key={word} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0.4 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-                  className="inline-block mr-4">{word}</motion.span>
-              ))}
-              <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.85 }}
-                className="inline-block" style={{ color: "#4a90e2" }}>ÁGUA</motion.span><br />
-              <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}
-                className="inline-block">CERTA.</motion.span>
-            </h1>
+            {slug === "savioli" ? (
+              <h1 className="font-light text-[clamp(2.5rem,7vw,6rem)] leading-[1] tracking-[-0.02em] uppercase">
+                {["TRANSFORMAR", "O", "CUIDADO"].map((word, i) => (
+                  <motion.span key={word} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.4 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                    className="inline-block mr-4">{word}</motion.span>
+                ))}
+                <br />
+                <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.85 }}
+                  className="inline-block" style={{ color: "#4a90e2" }}>COMEÇA</motion.span>{" "}
+                <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}
+                  className="inline-block">NA ROTINA.</motion.span>
+              </h1>
+            ) : (
+              <h1 className="font-light text-[clamp(2.5rem,7vw,6rem)] leading-[1] tracking-[-0.02em] uppercase">
+                {["SAÚDE", "COMEÇA", "PELA"].map((word, i) => (
+                  <motion.span key={word} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.4 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                    className="inline-block mr-4">{word}</motion.span>
+                ))}
+                <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.85 }}
+                  className="inline-block" style={{ color: "#4a90e2" }}>ÁGUA</motion.span><br />
+                <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}
+                  className="inline-block">CERTA.</motion.span>
+              </h1>
+            )}
           </div>
 
           <div className="mt-auto pt-24 flex flex-wrap items-end justify-between gap-10">
@@ -546,15 +561,18 @@ const MidiaKit = () => {
                 <Play className="w-4 h-4 ml-0.5" fill="currentColor" />
               </button>
               <p className="text-sm text-white/70 leading-relaxed font-light">
-                A única marca de água alcalina mineralizada do Brasil com estudo clínico internacional publicado. 16 anos transformando a água da torneira na base da saúde preventiva.
+                {slug === "savioli"
+                  ? "Uma proposta de parceria construída sobre autoridade clínica, narrativa de cuidado integral e aderência real de público. Não é uma publi avulsa, é a construção de um território comum entre Acqualive e a família Savioli."
+                  : "A única marca de água alcalina mineralizada do Brasil com estudo clínico internacional publicado. 16 anos transformando a água da torneira na base da saúde preventiva."}
               </p>
             </motion.div>
             <motion.a initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.6 }}
-              href="#sumario"
+              href={slug === "savioli" ? "#proposta-savioli" : "#sumario"}
               className="inline-flex items-center gap-2 bg-[#1d4380] hover:bg-[#02265f] transition-colors rounded-full px-8 py-4 text-sm tracking-[0.15em] font-medium">
-              Explorar mídia kit
+              {slug === "savioli" ? "Ver proposta" : "Explorar mídia kit"}
             </motion.a>
           </div>
+
         </motion.div>
       </section>
 
