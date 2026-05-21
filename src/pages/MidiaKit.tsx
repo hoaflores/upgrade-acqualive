@@ -1125,6 +1125,7 @@ const MidiaKit = () => {
         </>
       )}
 
+      {slug !== "savioli" && (<>
       {/* SUMÁRIO / ÍNDICE */}
       <section id="sumario" className="relative bg-[#f5f7fa] border-t border-[#02265f]/5 py-20 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
