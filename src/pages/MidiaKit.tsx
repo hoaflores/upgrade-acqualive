@@ -510,25 +510,70 @@ const MidiaKit = () => {
       <section ref={heroRef} className="relative min-h-screen w-full overflow-hidden">
         <motion.div style={{ y: heroParallax, scale: 1.05 }} className="absolute inset-1">
           <img src={heroImg} alt="Acqualive" className="w-full h-full object-cover" width={1920} height={1080} />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#02265f]/75 via-[#02265f]/30 to-[#02265f]/60" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#02265f]/50 via-transparent to-[#f5f7fa]" />
+          {slug === "savioli" ? (
+            <>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#02265f]/85 via-[#02265f]/55 to-[#02265f]/30" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#02265f]/40 via-transparent to-[#02265f]/70" />
+              <div className="absolute inset-0 opacity-[0.07]" style={{
+                backgroundImage: "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
+                backgroundSize: "80px 80px",
+              }} />
+            </>
+          ) : (
+            <>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#02265f]/75 via-[#02265f]/30 to-[#02265f]/60" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#02265f]/50 via-transparent to-[#f5f7fa]" />
+            </>
+          )}
         </motion.div>
 
+        {/* Decorative frame — savioli only */}
+        {slug === "savioli" && (
+          <>
+            <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 1.4, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute top-24 left-6 md:left-12 lg:left-20 right-6 md:right-12 lg:right-20 h-px bg-white/15 origin-left z-10" />
+            <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 1.4, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute bottom-12 left-6 md:left-12 lg:left-20 right-6 md:right-12 lg:right-20 h-px bg-white/15 origin-left z-10" />
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1 }}
+              className="absolute left-6 md:left-12 lg:left-20 top-1/2 -translate-y-1/2 hidden lg:block z-10">
+              <div className="text-[10px] tracking-[0.4em] uppercase text-white/40 rotate-180" style={{ writingMode: "vertical-rl" }}>
+                Acqualive × Savioli · 2026
+              </div>
+            </motion.div>
+          </>
+        )}
+
         <motion.div style={{ opacity: heroFade }} className="relative z-10 min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-32 pb-20">
-          <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 1.2 }}
-            className="absolute top-1/2 right-6 md:right-12 lg:right-20 -translate-y-1/2 hidden md:block text-right">
-            <div className="text-4xl md:text-5xl font-light tracking-tight">150K+</div>
-            <div className="text-[10px] tracking-[0.3em] uppercase text-white/60 mt-2">Famílias atendidas</div>
-            <motion.button whileHover={{ scale: 1.1, rotate: 45 }}
-              className="mt-8 ml-auto w-14 h-14 rounded-full bg-white text-[#0a0e17] flex items-center justify-center">
-              <ArrowUpRight className="w-5 h-5" strokeWidth={1.5} />
-            </motion.button>
-          </motion.div>
+          {slug === "savioli" ? (
+            <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 1.2 }}
+              className="absolute top-32 right-6 md:right-12 lg:right-20 hidden md:block text-right space-y-6">
+              <div>
+                <div className="text-4xl md:text-5xl font-light tracking-tight text-white">+2,3M</div>
+                <div className="text-[10px] tracking-[0.3em] uppercase text-white/60 mt-2">Seguidores combinados</div>
+              </div>
+              <div className="w-12 h-px bg-white/20 ml-auto" />
+              <div>
+                <div className="text-4xl md:text-5xl font-light tracking-tight text-white">+101M</div>
+                <div className="text-[10px] tracking-[0.3em] uppercase text-white/60 mt-2">Visualizações no último ano</div>
+              </div>
+            </motion.div>
+          ) : (
+            <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 1.2 }}
+              className="absolute top-1/2 right-6 md:right-12 lg:right-20 -translate-y-1/2 hidden md:block text-right">
+              <div className="text-4xl md:text-5xl font-light tracking-tight">150K+</div>
+              <div className="text-[10px] tracking-[0.3em] uppercase text-white/60 mt-2">Famílias atendidas</div>
+              <motion.button whileHover={{ scale: 1.1, rotate: 45 }}
+                className="mt-8 ml-auto w-14 h-14 rounded-full bg-white text-[#0a0e17] flex items-center justify-center">
+                <ArrowUpRight className="w-5 h-5" strokeWidth={1.5} />
+              </motion.button>
+            </motion.div>
+          )}
 
           <div className="max-w-4xl">
             {partnerName && (
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-xs tracking-[0.3em] uppercase text-[#f26923] mb-8 font-medium">
+                className="flex items-center gap-4 text-xs tracking-[0.3em] uppercase text-[#f26923] mb-8 font-medium">
+                <span className="w-10 h-px bg-[#f26923]" />
                 {slug === "savioli" ? "Proposta exclusiva · Dr. Roque & Dra. Gisela Savioli" : `Mídia Kit · ${partnerName}`}
               </motion.div>
             )}
@@ -565,21 +610,38 @@ const MidiaKit = () => {
             )}
           </div>
 
-          <div className="mt-auto pt-24 flex flex-wrap items-end justify-between gap-10">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.4 }}
-              className="max-w-md">
-              <p className="text-sm text-white/80 leading-relaxed font-light">
-                {slug === "savioli"
-                  ? "Uma proposta de parceria construída sobre autoridade clínica, narrativa de cuidado integral e aderência real de público. Não é uma publi avulsa, é a construção de um território comum entre Acqualive e a família Savioli."
-                  : "A única marca de água alcalina mineralizada do Brasil com estudo clínico internacional publicado. 16 anos transformando a água da torneira na base da saúde preventiva."}
-              </p>
-            </motion.div>
-            <motion.a initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.6 }}
-              href={slug === "savioli" ? "#proposta-savioli" : "#sumario"}
-              className="inline-flex items-center gap-2 bg-[#1d4380] hover:bg-[#02265f] transition-colors rounded-full px-8 py-4 text-sm tracking-[0.15em] font-medium">
-              {slug === "savioli" ? "Ver proposta" : "Explorar mídia kit"}
-            </motion.a>
-          </div>
+          {slug === "savioli" ? (
+            <div className="mt-auto pt-24 flex flex-wrap items-end justify-between gap-10">
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.4 }}
+                className="max-w-xl">
+                <p className="text-base md:text-lg text-white/85 leading-relaxed font-light">
+                  Uma proposta construída sobre autoridade clínica, narrativa de cuidado integral e aderência real de público. Não é uma publi avulsa, é a construção de um território comum entre Acqualive e a família Savioli.
+                </p>
+              </motion.div>
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.6 }}
+                className="flex items-center gap-4 text-white/60">
+                <div className="text-[10px] tracking-[0.3em] uppercase">Role para ler a proposta</div>
+                <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                  className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center">
+                  <ArrowUpRight className="w-4 h-4 rotate-[135deg]" strokeWidth={1.5} />
+                </motion.div>
+              </motion.div>
+            </div>
+          ) : (
+            <div className="mt-auto pt-24 flex flex-wrap items-end justify-between gap-10">
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.4 }}
+                className="max-w-md">
+                <p className="text-sm text-white/80 leading-relaxed font-light">
+                  A única marca de água alcalina mineralizada do Brasil com estudo clínico internacional publicado. 16 anos transformando a água da torneira na base da saúde preventiva.
+                </p>
+              </motion.div>
+              <motion.a initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.6 }}
+                href="#sumario"
+                className="inline-flex items-center gap-2 bg-[#1d4380] hover:bg-[#02265f] transition-colors rounded-full px-8 py-4 text-sm tracking-[0.15em] font-medium text-white">
+                Explorar mídia kit
+              </motion.a>
+            </div>
+          )}
 
         </motion.div>
       </section>
