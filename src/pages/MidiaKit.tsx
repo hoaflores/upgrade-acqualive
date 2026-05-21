@@ -509,24 +509,9 @@ const MidiaKit = () => {
       {/* (01) HERO */}
       <section ref={heroRef} className="relative min-h-screen w-full overflow-hidden">
         <motion.div style={{ y: heroParallax, scale: 1.05 }} className="absolute inset-1">
-          <img
-            src={slug === "savioli" ? savioliHeroBg : heroImg}
-            alt="Acqualive"
-            className={`w-full h-full object-cover ${slug === "savioli" ? "object-[75%_center] md:object-[70%_center]" : ""}`}
-            width={1920}
-            height={1080}
-          />
-          {slug === "savioli" ? (
-            <>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#02265f]/90 via-[#02265f]/70 to-[#02265f]/10" />
-              <div className="absolute inset-0 bg-gradient-to-b from-[#02265f]/60 via-transparent to-[#02265f]/40" />
-            </>
-          ) : (
-            <>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#02265f]/75 via-[#02265f]/30 to-[#02265f]/60" />
-              <div className="absolute inset-0 bg-gradient-to-b from-[#02265f]/50 via-transparent to-[#f5f7fa]" />
-            </>
-          )}
+          <img src={heroImg} alt="Acqualive" className="w-full h-full object-cover" width={1920} height={1080} />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#02265f]/75 via-[#02265f]/30 to-[#02265f]/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#02265f]/50 via-transparent to-[#f5f7fa]" />
         </motion.div>
 
         <motion.div style={{ opacity: heroFade }} className="relative z-10 min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-32 pb-20">
