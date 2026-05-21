@@ -407,7 +407,7 @@ const MidiaKit = () => {
     : null;
 
   return (
-    <div id="top" className="min-h-screen bg-[#0a0e17] text-white antialiased overflow-x-hidden" style={{ fontFamily: "'Archivo', sans-serif" }}>
+    <div id="top" className="min-h-screen bg-[#f5f7fa] text-[#02265f] antialiased overflow-x-hidden" style={{ fontFamily: "'Archivo', sans-serif" }}>
       <Helmet>
         <title>Mídia Kit Acqualive | Saúde, ciência e longevidade</title>
         <meta name="description" content="Mídia kit oficial Acqualive: única marca de água alcalina mineralizada do Brasil com estudo clínico internacional publicado. 16 anos, 150 mil famílias, 3 patentes próprias." />
