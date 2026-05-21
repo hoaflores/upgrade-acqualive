@@ -1030,7 +1030,7 @@ const MidiaKit = () => {
       <section id="sec-15" className="relative py-32 md:py-40 px-6 md:px-12 lg:px-20 overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroImg} alt="" className="w-full h-full object-cover" loading="lazy" />
-          <div className="absolute inset-0 bg-[#02265f]/90" />
+          <div className="absolute inset-0 bg-[#02265f]/70" />
         </div>
 
         <Reveal>
