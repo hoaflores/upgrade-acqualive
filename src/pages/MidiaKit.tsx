@@ -252,7 +252,7 @@ const PartnerContentSection = () => {
           <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-4">
             Vozes que <span className="text-[#f26923]">amplificam</span> a marca.
           </h2>
-          <p className="text-white/70 text-lg font-light max-w-2xl mb-12">
+          <p className="text-[#02265f]/70 text-lg font-light max-w-2xl mb-12">
             Parceiros, médicos e criadores que co-criam conteúdo conosco. Arraste, role ou use as setas.
           </p>
         </Reveal>
