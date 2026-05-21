@@ -912,11 +912,11 @@ const MidiaKit = () => {
                 key={a.title}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.08 }}
-                className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 md:p-10 hover:bg-white/[0.06] hover:border-[#f26923]/40 transition-all group"
+                className="bg-[#f5f7fa] border border-[#02265f]/10 rounded-2xl p-8 md:p-10 hover:border-[#f26923]/40 transition-all group"
               >
                 <a.icon className="w-7 h-7 text-[#f26923] mb-8 group-hover:scale-110 transition-transform" strokeWidth={1.3} />
-                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4">{a.title}</h3>
-                <p className="text-white/65 text-sm leading-relaxed font-light">{a.text}</p>
+                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4 text-[#02265f]">{a.title}</h3>
+                <p className="text-[#02265f]/65 text-sm leading-relaxed font-light">{a.text}</p>
               </motion.div>
             ))}
           </div>
