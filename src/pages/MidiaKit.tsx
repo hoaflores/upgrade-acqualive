@@ -167,6 +167,62 @@ const PARTNER_CONTENT = [
   { type: "instagram", id: "DYXSAYBxkLF", title: "Reel: saúde no dia a dia", author: "Parceiro Acqualive" },
 ] as const;
 
+/* ---------- SAVIOLI (proposta exclusiva) ---------- */
+
+const SAVIOLI_PROFILES = [
+  {
+    name: "Dr. Roque Marcos Savioli",
+    role: "Cardiologista · Cardiogeriatra",
+    credentials: "CREMESP 22338 · RQE 46468",
+    bio: "Doutor em Cardiologia pela FMUSP. Médico Assistente da Unidade de Cardiogeriatria do InCor (HCFMUSP) desde 2009. Corpo clínico de Sírio-Libanês, Albert Einstein, Oswaldo Cruz, BP Mirante e Vila Nova Star. Autor de 15 livros publicados no Brasil, Espanha, França e Itália. Membro vitalício da Academia Cristã de Letras.",
+  },
+  {
+    name: "Dra. Gisela Savioli",
+    role: "Nutricionista Clínica Funcional · Fitoterapeuta",
+    credentials: "MTB 73054 SP · Idealizadora do Programa Desinflama",
+    bio: "Nutricionista responsável pela visita do Papa Bento XVI ao Brasil (2007). Online Health Advocate da Janssen (J&J) nas conferências Health Voices (2014–2016). Pós-graduada em Nutrição Clínica Funcional, Fitoterapia e Saúde da Mulher no Climatério (FSPUSP). Criadora do Programa Desinflama, com mais de 10 mil alunas.",
+  },
+];
+
+const SAVIOLI_PILLARS = [
+  {
+    tag: "01",
+    title: "Autoridade em saúde",
+    text: "Mais de cinco décadas de prática clínica, doutorado FMUSP, presença ativa no InCor e nos principais hospitais do país. Credibilidade médica real em um território onde reputação importa mais do que alcance bruto.",
+  },
+  {
+    tag: "02",
+    title: "Conexão de narrativa",
+    text: "O conceito Transformar o cuidado começa na rotina conecta diretamente cardiologia preventiva, nutrição funcional e hidratação consciente. A água deixa de ser consumo e vira gesto diário de cuidado.",
+  },
+  {
+    tag: "03",
+    title: "Aderência de público",
+    text: "Audiência madura (35–65+), majoritariamente feminina, atenta à longevidade, prevenção e bem-estar integral. Mesmo perfil que escolhe Acqualive como base do protocolo preventivo da família.",
+  },
+];
+
+const SAVIOLI_AUDIENCE = [
+  { handle: "@drsavioli", platform: "Instagram · Dr. Roque", followers: "+1,6M", views: "+24M visualizações", split: "83,3% feminino · 35–65+" },
+  { handle: "Dr. Roque Savioli", platform: "YouTube · Dr. Roque", followers: "+410K inscritos", views: "+52M visualizações", split: "60,3% feminino · 35–65+" },
+  { handle: "@drsavioli_oficial", platform: "TikTok · Dr. Roque", followers: "+240K", views: "+7M visualizações", split: "63% feminino · 25–55" },
+  { handle: "DrSaviolioficial", platform: "Facebook · Dr. Roque", followers: "+89K", views: "+18M visualizações", split: "71,2% feminino · 45–65+" },
+];
+
+const SAVIOLI_DELIVERABLES = [
+  { tag: "01", title: "1 conteúdo-âncora", text: "Entrevista, conversa guiada, vídeo especial ou episódio temático conectando cardiologia, nutrição funcional e hidratação como rotina de cuidado." },
+  { tag: "02", title: "Cortes para redes", text: "Recortes verticais do conteúdo-âncora distribuídos em Reels, Shorts e TikTok, no canal do Dr. Roque, da Dra. Gisela e nos canais Acqualive." },
+  { tag: "03", title: "Stories de apoio", text: "Sequência de stories educativos integrando a Calculadora Acqualive de Hidratação ao cotidiano clínico e à narrativa do casal." },
+  { tag: "04", title: "Evolução futura: LP + jornada", text: "Caso a parceria evolua, ativação de landing page exclusiva com CTA, benefício específico e jornada de conteúdo de longo prazo." },
+];
+
+const SAVIOLI_CLINIC = {
+  name: "Clínica Savioli",
+  years: "20 anos",
+  location: "Rua Artur de Azevedo 1217 · Pinheiros · São Paulo",
+  text: "Operação clínica com visão integrativa do ser humano: check-up personalizado, foco em longevidade e qualidade de vida. Atendimento integral à saúde do paciente — corpo, mente e espírito.",
+};
+
 /* ---------- HELPERS ---------- */
 
 const Eyebrow = ({ num, label, light = false }: { num: string; label: string; light?: boolean }) => (
@@ -409,7 +465,7 @@ const MidiaKit = () => {
   return (
     <div id="top" className="min-h-screen bg-[#f5f7fa] text-[#02265f] antialiased overflow-x-hidden" style={{ fontFamily: "'Archivo', sans-serif" }}>
       <Helmet>
-        <title>Mídia Kit Acqualive | Saúde, ciência e longevidade</title>
+        <title>{slug === "savioli" ? "Acqualive × Savioli | Proposta de parceria" : "Mídia Kit Acqualive | Saúde, ciência e longevidade"}</title>
         <meta name="description" content="Mídia kit oficial Acqualive: única marca de água alcalina mineralizada do Brasil com estudo clínico internacional publicado. 16 anos, 150 mil famílias, 3 patentes próprias." />
         <link rel="canonical" href={`https://paginas.acqualive.com.br/midia-kit${slug ? `/${slug}` : ""}`} />
       </Helmet>
@@ -462,25 +518,40 @@ const MidiaKit = () => {
             {partnerName && (
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-xs tracking-[0.3em] uppercase text-[#f26923] mb-8 font-medium">
-                Mídia Kit · {partnerName}
+                {slug === "savioli" ? "Proposta exclusiva · Dr. Roque & Dra. Gisela Savioli" : `Mídia Kit · ${partnerName}`}
               </motion.div>
             )}
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }}
               className="text-xs tracking-[0.3em] uppercase text-white/50 mb-6">
-              (01) Mídia Kit Oficial · 2026
+              (01) {slug === "savioli" ? "Proposta de parceria · 2026" : "Mídia Kit Oficial · 2026"}
             </motion.div>
 
-            <h1 className="font-light text-[clamp(2.5rem,7vw,6rem)] leading-[1] tracking-[-0.02em] uppercase">
-              {["SAÚDE", "COMEÇA", "PELA"].map((word, i) => (
-                <motion.span key={word} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0.4 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-                  className="inline-block mr-4">{word}</motion.span>
-              ))}
-              <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.85 }}
-                className="inline-block" style={{ color: "#4a90e2" }}>ÁGUA</motion.span><br />
-              <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}
-                className="inline-block">CERTA.</motion.span>
-            </h1>
+            {slug === "savioli" ? (
+              <h1 className="font-light text-[clamp(2.5rem,7vw,6rem)] leading-[1] tracking-[-0.02em] uppercase">
+                {["TRANSFORMAR", "O", "CUIDADO"].map((word, i) => (
+                  <motion.span key={word} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.4 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                    className="inline-block mr-4">{word}</motion.span>
+                ))}
+                <br />
+                <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.85 }}
+                  className="inline-block" style={{ color: "#4a90e2" }}>COMEÇA</motion.span>{" "}
+                <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}
+                  className="inline-block">NA ROTINA.</motion.span>
+              </h1>
+            ) : (
+              <h1 className="font-light text-[clamp(2.5rem,7vw,6rem)] leading-[1] tracking-[-0.02em] uppercase">
+                {["SAÚDE", "COMEÇA", "PELA"].map((word, i) => (
+                  <motion.span key={word} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.4 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                    className="inline-block mr-4">{word}</motion.span>
+                ))}
+                <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.85 }}
+                  className="inline-block" style={{ color: "#4a90e2" }}>ÁGUA</motion.span><br />
+                <motion.span initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}
+                  className="inline-block">CERTA.</motion.span>
+              </h1>
+            )}
           </div>
 
           <div className="mt-auto pt-24 flex flex-wrap items-end justify-between gap-10">
@@ -490,17 +561,241 @@ const MidiaKit = () => {
                 <Play className="w-4 h-4 ml-0.5" fill="currentColor" />
               </button>
               <p className="text-sm text-white/70 leading-relaxed font-light">
-                A única marca de água alcalina mineralizada do Brasil com estudo clínico internacional publicado. 16 anos transformando a água da torneira na base da saúde preventiva.
+                {slug === "savioli"
+                  ? "Uma proposta de parceria construída sobre autoridade clínica, narrativa de cuidado integral e aderência real de público. Não é uma publi avulsa, é a construção de um território comum entre Acqualive e a família Savioli."
+                  : "A única marca de água alcalina mineralizada do Brasil com estudo clínico internacional publicado. 16 anos transformando a água da torneira na base da saúde preventiva."}
               </p>
             </motion.div>
             <motion.a initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.6 }}
-              href="#sumario"
+              href={slug === "savioli" ? "#proposta-savioli" : "#sumario"}
               className="inline-flex items-center gap-2 bg-[#1d4380] hover:bg-[#02265f] transition-colors rounded-full px-8 py-4 text-sm tracking-[0.15em] font-medium">
-              Explorar mídia kit
+              {slug === "savioli" ? "Ver proposta" : "Explorar mídia kit"}
             </motion.a>
           </div>
+
         </motion.div>
       </section>
+
+      {/* PROPOSTA SAVIOLI (slug exclusivo) */}
+      {slug === "savioli" && (
+        <>
+          {/* Conceito */}
+          <section id="proposta-savioli" className="relative bg-white text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20 border-t border-[#02265f]/5">
+            <div className="max-w-7xl mx-auto">
+              <div className="flex items-center justify-between mb-10">
+                <span className="text-xs tracking-[0.3em] font-medium text-[#f26923]">
+                  (S1) <span className="ml-2 uppercase text-[#02265f]/70">Conceito da parceria</span>
+                </span>
+                <span className="text-xs tracking-[0.3em] font-medium uppercase text-[#02265f]/40">Savioli × Acqualive</span>
+              </div>
+              <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+                <Reveal>
+                  <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase">
+                    Transformar o cuidado <span className="text-[#1d4380]">começa na rotina.</span>
+                  </h2>
+                </Reveal>
+                <Reveal delay={0.15}>
+                  <p className="text-lg text-[#02265f]/80 leading-relaxed font-light mb-6">
+                    A proposta não é uma publi avulsa. É <strong className="font-medium">abrir uma conversa de parceria</strong> com valor de conteúdo, credibilidade e construção de posicionamento para os dois lados.
+                  </p>
+                  <p className="text-base text-[#02265f]/70 leading-relaxed font-light mb-6">
+                    O cuidado com a saúde não aparece como algo distante ou extraordinário, mas como prática cotidiana. Nesse raciocínio, a água deixa de ser apenas consumo e passa a ser parte de uma rotina de cuidado mais consciente.
+                  </p>
+                  <div className="mt-8 rounded-xl border-l-2 border-[#f26923] bg-[#f5f7fa] p-6">
+                    <div className="text-xs tracking-[0.25em] uppercase text-[#f26923] mb-3">Gatilho da narrativa</div>
+                    <p className="text-[#02265f]/85 font-light leading-relaxed">
+                      Aqui entra a <strong className="font-medium">Calculadora Acqualive de Hidratação</strong> como ponte natural entre o discurso clínico do Dr. Roque, a abordagem funcional da Dra. Gisela e a tecnologia Acqualive.
+                    </p>
+                  </div>
+                </Reveal>
+              </div>
+            </div>
+          </section>
+
+          {/* Por que Savioli */}
+          <section className="relative bg-[#f5f3ee] text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+            <div className="max-w-7xl mx-auto">
+              <div className="flex items-center justify-between mb-10">
+                <span className="text-xs tracking-[0.3em] font-medium text-[#f26923]">
+                  (S2) <span className="ml-2 uppercase text-[#02265f]/70">Por que Savioli</span>
+                </span>
+                <span className="text-xs tracking-[0.3em] font-medium uppercase text-[#02265f]/40">Pilares estratégicos</span>
+              </div>
+              <Reveal>
+                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-20">
+                  Um parceiro híbrido <span className="text-[#1d4380]">raro.</span>
+                </h2>
+              </Reveal>
+              <div className="grid md:grid-cols-3 gap-6">
+                {SAVIOLI_PILLARS.map((p, i) => (
+                  <motion.div
+                    key={p.tag}
+                    initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.1 }}
+                    whileHover={{ y: -6 }}
+                    className="bg-white rounded-2xl p-8 md:p-10 shadow-[0_20px_60px_-30px_rgba(2,38,95,0.2)] hover:shadow-[0_30px_80px_-30px_rgba(2,38,95,0.3)] transition-all"
+                  >
+                    <div className="flex items-start justify-between mb-10">
+                      <span className="text-5xl font-light text-[#f26923]">{p.tag}</span>
+                      <ArrowUpRight className="w-5 h-5 text-[#02265f]/30" strokeWidth={1.5} />
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-light tracking-tight mb-5">{p.title}</h3>
+                    <p className="text-[#02265f]/75 text-sm leading-relaxed font-light">{p.text}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Perfis Roque e Gisela */}
+          <section className="relative bg-white text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+            <div className="max-w-7xl mx-auto">
+              <div className="flex items-center justify-between mb-10">
+                <span className="text-xs tracking-[0.3em] font-medium text-[#f26923]">
+                  (S3) <span className="ml-2 uppercase text-[#02265f]/70">Quem é a família Savioli</span>
+                </span>
+                <span className="text-xs tracking-[0.3em] font-medium uppercase text-[#02265f]/40">Cardiologia · Nutrição funcional</span>
+              </div>
+              <Reveal>
+                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-20">
+                  Autoridade clínica + <span className="text-[#4a90e2]">narrativa de cuidado integral.</span>
+                </h2>
+              </Reveal>
+              <div className="grid md:grid-cols-2 gap-6 mb-10">
+                {SAVIOLI_PROFILES.map((p, i) => (
+                  <motion.div
+                    key={p.name}
+                    initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.1 }}
+                    className="bg-[#f5f7fa] border border-[#02265f]/10 rounded-2xl p-8 md:p-10 hover:border-[#f26923]/40 transition-all"
+                  >
+                    <HeartPulse className="w-6 h-6 text-[#f26923] mb-6" strokeWidth={1.4} />
+                    <h3 className="text-2xl font-light tracking-tight mb-2 text-[#02265f]">{p.name}</h3>
+                    <div className="text-xs tracking-[0.2em] uppercase text-[#1d4380] mb-2">{p.role}</div>
+                    <div className="text-[11px] tracking-[0.2em] uppercase text-[#02265f]/50 mb-6">{p.credentials}</div>
+                    <p className="text-[#02265f]/75 text-sm leading-relaxed font-light">{p.bio}</p>
+                  </motion.div>
+                ))}
+              </div>
+
+              <Reveal delay={0.1}>
+                <div className="rounded-2xl bg-[#02265f] text-white p-10 md:p-14 grid lg:grid-cols-3 gap-10 items-center">
+                  <div className="lg:col-span-2">
+                    <div className="text-xs tracking-[0.3em] uppercase text-[#f26923] mb-4">Operação clínica</div>
+                    <h3 className="text-3xl md:text-4xl font-light tracking-tight mb-4">{SAVIOLI_CLINIC.name} · {SAVIOLI_CLINIC.years}</h3>
+                    <p className="text-white/75 font-light leading-relaxed">{SAVIOLI_CLINIC.text}</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-5 h-5 text-[#f26923] flex-shrink-0 mt-1" />
+                    <div>
+                      <div className="text-xs tracking-[0.2em] uppercase text-white/50 mb-1">Endereço</div>
+                      <div className="text-sm font-light">{SAVIOLI_CLINIC.location}</div>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+          </section>
+
+          {/* Audiência combinada */}
+          <section className="relative bg-[#eef1f7] text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+            <div className="max-w-7xl mx-auto">
+              <div className="flex items-center justify-between mb-10">
+                <span className="text-xs tracking-[0.3em] font-medium text-[#f26923]">
+                  (S4) <span className="ml-2 uppercase text-[#02265f]/70">Alcance combinado</span>
+                </span>
+                <span className="text-xs tracking-[0.3em] font-medium uppercase text-[#02265f]/40">Audiência Dr. Roque</span>
+              </div>
+              <Reveal>
+                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-6">
+                  +2,3 milhões de seguidores. <span className="text-[#1d4380]">+101M de visualizações.</span>
+                </h2>
+                <p className="text-[#02265f]/70 text-lg font-light max-w-3xl mb-16">
+                  Público maduro, majoritariamente feminino, das faixas 35 a 65+. O mesmo perfil que escolhe Acqualive como base do protocolo preventivo da casa.
+                </p>
+              </Reveal>
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#02265f]/10 rounded-2xl overflow-hidden">
+                {SAVIOLI_AUDIENCE.map((a, i) => (
+                  <motion.div
+                    key={a.handle}
+                    initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: i * 0.05 }}
+                    className="bg-white p-8"
+                  >
+                    <div className="text-xs tracking-[0.2em] uppercase text-[#f26923] mb-3">{a.platform}</div>
+                    <div className="text-base font-medium tracking-tight mb-6 text-[#02265f]">{a.handle}</div>
+                    <div className="text-3xl font-light text-[#1d4380] tracking-tight">{a.followers}</div>
+                    <div className="text-xs text-[#02265f]/60 mt-1 mb-4">{a.views}</div>
+                    <div className="text-[11px] tracking-[0.15em] uppercase text-[#02265f]/55 pt-4 border-t border-[#02265f]/10">{a.split}</div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <p className="text-xs text-[#02265f]/50 mt-6 tracking-[0.15em] uppercase">Dados consolidados · 01/11/2025 a 01/02/2026</p>
+            </div>
+          </section>
+
+          {/* Entregáveis */}
+          <section className="relative bg-[#f5f3ee] text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
+            <div className="max-w-7xl mx-auto">
+              <div className="flex items-center justify-between mb-10">
+                <span className="text-xs tracking-[0.3em] font-medium text-[#f26923]">
+                  (S5) <span className="ml-2 uppercase text-[#02265f]/70">Entregáveis sugeridos</span>
+                </span>
+                <span className="text-xs tracking-[0.3em] font-medium uppercase text-[#02265f]/40">Formato modular</span>
+              </div>
+              <Reveal>
+                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-20">
+                  Conteúdo educativo <span className="text-[#1d4380]">com autoridade.</span>
+                </h2>
+              </Reveal>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                {SAVIOLI_DELIVERABLES.map((d, i) => (
+                  <motion.div
+                    key={d.tag}
+                    initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.08 }}
+                    className="bg-white border border-[#02265f]/10 rounded-2xl p-8 md:p-10 hover:border-[#f26923]/40 transition-all flex gap-6"
+                  >
+                    <span className="text-4xl font-light text-[#f26923] leading-none">{d.tag}</span>
+                    <div>
+                      <h3 className="text-xl font-light tracking-tight mb-3 text-[#02265f]">{d.title}</h3>
+                      <p className="text-[#02265f]/70 text-sm leading-relaxed font-light">{d.text}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <Reveal delay={0.2}>
+                <div className="mt-16 rounded-2xl bg-white border border-[#02265f]/10 p-8 md:p-10">
+                  <div className="text-xs tracking-[0.25em] uppercase text-[#f26923] mb-3">Formatos mais promissores</div>
+                  <p className="text-[#02265f]/85 font-light leading-relaxed text-lg">
+                    Série curta sobre <strong className="font-medium">hidratação, longevidade e prevenção</strong> · conversa entre <strong className="font-medium">cardiologia + nutrição funcional</strong> · ativação cruzada com os canais Acqualive.
+                  </p>
+                </div>
+              </Reveal>
+            </div>
+          </section>
+
+          {/* Transição para o mídia kit institucional */}
+          <section className="relative bg-white text-[#02265f] py-20 md:py-28 px-6 md:px-12 lg:px-20 border-t border-[#02265f]/5">
+            <div className="max-w-5xl mx-auto text-center">
+              <div className="text-xs tracking-[0.3em] uppercase text-[#f26923] mb-6">A seguir</div>
+              <h2 className="font-light text-[clamp(1.75rem,3.5vw,2.75rem)] leading-tight tracking-[-0.02em] uppercase mb-6">
+                Conheça a Acqualive em profundidade
+              </h2>
+              <p className="text-[#02265f]/70 font-light text-lg leading-relaxed max-w-3xl mx-auto mb-10">
+                Marca, fundadores, ciência, produtos e portfólio de parcerias. Tudo o que sustenta esta proposta.
+              </p>
+              <a href="#sumario" className="inline-flex items-center gap-2 bg-[#1d4380] hover:bg-[#02265f] transition-colors text-white rounded-full px-10 py-4 text-sm tracking-[0.15em] font-medium">
+                Continuar para o mídia kit
+              </a>
+            </div>
+          </section>
+        </>
+      )}
 
       {/* SUMÁRIO / ÍNDICE */}
       <section id="sumario" className="relative bg-[#f5f7fa] border-t border-[#02265f]/5 py-20 px-6 md:px-12 lg:px-20">
@@ -1038,11 +1333,17 @@ const MidiaKit = () => {
             <Eyebrow num="15" label="Vamos conversar" />
 
             <h2 className="font-light text-[clamp(2.5rem,6vw,5.5rem)] leading-[1] tracking-[-0.02em] uppercase max-w-5xl mb-10">
-              Pronto para construir <span className="text-[#f26923]">algo memorável?</span>
+              {slug === "savioli" ? (
+                <>Vamos construir essa <span className="text-[#f26923]">parceria juntos?</span></>
+              ) : (
+                <>Pronto para construir <span className="text-[#f26923]">algo memorável?</span></>
+              )}
             </h2>
 
             <p className="text-white/75 text-lg max-w-2xl font-light mb-14 leading-relaxed">
-              Conte com nossa equipe para desenhar a melhor proposta de parceria entre você e Acqualive. Resposta em até 48h úteis.
+              {slug === "savioli"
+                ? "Próximo passo: alinhar conceito, formato e calendário com o time do Dr. Roque e da Dra. Gisela. Nossa equipe está pronta para evoluir esta conversa."
+                : "Conte com nossa equipe para desenhar a melhor proposta de parceria entre você e Acqualive. Resposta em até 48h úteis."}
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-14 max-w-4xl">
