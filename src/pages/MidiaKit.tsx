@@ -8,6 +8,7 @@ import {
   FlaskConical, Award, Leaf, HeartPulse, Users, Building2, Microscope, FileText, Quote
 } from "lucide-react";
 import heroImg from "@/assets/midiakit-hero.jpg";
+import savioliHeroBg from "@/assets/savioli-hero-bg.webp";
 import waterImg from "@/assets/midiakit-water.jpg";
 import scienceImg from "@/assets/midiakit-science.jpg";
 import foundersImg from "@/assets/midiakit-founders.jpg";
@@ -508,9 +509,24 @@ const MidiaKit = () => {
       {/* (01) HERO */}
       <section ref={heroRef} className="relative min-h-screen w-full overflow-hidden">
         <motion.div style={{ y: heroParallax, scale: 1.05 }} className="absolute inset-1">
-          <img src={heroImg} alt="Acqualive" className="w-full h-full object-cover" width={1920} height={1080} />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#02265f]/75 via-[#02265f]/30 to-[#02265f]/60" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#02265f]/50 via-transparent to-[#f5f7fa]" />
+          <img
+            src={slug === "savioli" ? savioliHeroBg : heroImg}
+            alt="Acqualive"
+            className={`w-full h-full object-cover ${slug === "savioli" ? "object-[75%_center] md:object-[70%_center]" : ""}`}
+            width={1920}
+            height={1080}
+          />
+          {slug === "savioli" ? (
+            <>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#02265f]/90 via-[#02265f]/70 to-[#02265f]/10" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#02265f]/60 via-transparent to-[#02265f]/40" />
+            </>
+          ) : (
+            <>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#02265f]/75 via-[#02265f]/30 to-[#02265f]/60" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#02265f]/50 via-transparent to-[#f5f7fa]" />
+            </>
+          )}
         </motion.div>
 
         <motion.div style={{ opacity: heroFade }} className="relative z-10 min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-32 pb-20">
@@ -566,11 +582,8 @@ const MidiaKit = () => {
 
           <div className="mt-auto pt-24 flex flex-wrap items-end justify-between gap-10">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.4 }}
-              className="flex items-center gap-5 max-w-md">
-              <button className="w-14 h-14 rounded-full border border-white/30 flex items-center justify-center group hover:bg-white hover:text-[#0a0e17] transition-all flex-shrink-0">
-                <Play className="w-4 h-4 ml-0.5" fill="currentColor" />
-              </button>
-              <p className="text-sm text-white/70 leading-relaxed font-light">
+              className="max-w-md">
+              <p className="text-sm text-white/80 leading-relaxed font-light">
                 {slug === "savioli"
                   ? "Uma proposta de parceria construída sobre autoridade clínica, narrativa de cuidado integral e aderência real de público. Não é uma publi avulsa, é a construção de um território comum entre Acqualive e a família Savioli."
                   : "A única marca de água alcalina mineralizada do Brasil com estudo clínico internacional publicado. 16 anos transformando a água da torneira na base da saúde preventiva."}
