@@ -465,7 +465,7 @@ const MidiaKit = () => {
   return (
     <div id="top" className="min-h-screen bg-[#f5f7fa] text-[#02265f] antialiased overflow-x-hidden" style={{ fontFamily: "'Archivo', sans-serif" }}>
       <Helmet>
-        <title>Mídia Kit Acqualive | Saúde, ciência e longevidade</title>
+        <title>{slug === "savioli" ? "Acqualive × Savioli | Proposta de parceria" : "Mídia Kit Acqualive | Saúde, ciência e longevidade"}</title>
         <meta name="description" content="Mídia kit oficial Acqualive: única marca de água alcalina mineralizada do Brasil com estudo clínico internacional publicado. 16 anos, 150 mil famílias, 3 patentes próprias." />
         <link rel="canonical" href={`https://paginas.acqualive.com.br/midia-kit${slug ? `/${slug}` : ""}`} />
       </Helmet>
