@@ -12,6 +12,11 @@ import waterImg from "@/assets/midiakit-water.jpg";
 import scienceImg from "@/assets/midiakit-science.jpg";
 import foundersImg from "@/assets/midiakit-founders.jpg";
 import blueZonesImg from "@/assets/midiakit-bluezones.jpg";
+import logoColor from "@/assets/acqualive-logo-color.png";
+import logoWhite from "@/assets/acqualive-logo-white.png";
+import logoGray from "@/assets/acqualive-logo-gray.png";
+import iconColor from "@/assets/acqualive-icon-color.png";
+import iconOrange from "@/assets/acqualive-icon-orange.png";
 
 /* ---------- DATA ---------- */
 
@@ -227,12 +232,15 @@ const SAVIOLI_CLINIC = {
 
 const Eyebrow = ({ num, label, light = false }: { num: string; label: string; light?: boolean }) => (
   <div className="flex items-center justify-between mb-10">
-    <span className="text-xs tracking-[0.3em] font-medium text-[#f26923]">
-      ({num}) <span className={`ml-2 uppercase ${light ? "text-[#02265f]/70" : "text-white/70"}`}>{label}</span>
+    <span className="text-xs tracking-[0.3em] font-medium text-[#f26923] flex items-center gap-2">
+      <img src={iconOrange} alt="" aria-hidden className="w-3 h-3 object-contain" />
+      ({num}) <span className={`ml-1 uppercase ${light ? "text-[#02265f]/70" : "text-white/70"}`}>{label}</span>
     </span>
-    <span className={`text-xs tracking-[0.3em] font-medium uppercase ${light ? "text-[#02265f]/40" : "text-white/40"}`}>
-      Acqualive
-    </span>
+    <img
+      src={light ? logoGray : logoWhite}
+      alt="Acqualive"
+      className={`h-4 w-auto object-contain ${light ? "opacity-60" : "opacity-70"}`}
+    />
   </div>
 );
 
@@ -477,7 +485,9 @@ const MidiaKit = () => {
         initial={{ y: -30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }}
         className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5 flex items-center justify-between backdrop-blur-md bg-white/60 border-b border-[#02265f]/5"
       >
-        <a href="#top" className="text-xl tracking-[0.2em] font-bold text-[#02265f]">ACQUALIVE<span className="text-[#f26923]">.</span></a>
+        <a href="#top" className="flex items-center" aria-label="Acqualive">
+          <img src={logoColor} alt="Acqualive" className="h-7 md:h-8 w-auto object-contain" />
+        </a>
         <nav className="hidden lg:flex items-center gap-9 text-xs tracking-[0.18em] font-medium">
           {NAV.map((n) => (
             <a key={n.href} href={n.href} className="text-[#02265f]/70 hover:text-[#02265f] transition-colors">{n.label}</a>
@@ -1387,7 +1397,9 @@ const MidiaKit = () => {
       {/* FOOTER */}
       <footer className="bg-white border-t border-[#02265f]/10 py-12 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-6 text-xs tracking-[0.2em] uppercase text-[#02265f]/50">
-          <a href="#top" className="text-[#02265f] font-bold tracking-[0.2em]">ACQUALIVE<span className="text-[#f26923]">.</span></a>
+          <a href="#top" aria-label="Acqualive">
+            <img src={logoColor} alt="Acqualive" className="h-7 w-auto object-contain" />
+          </a>
           <span>Mídia Kit Oficial · 2026</span>
           <a href="https://www.acqualive.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-[#02265f] transition-colors">
             acqualive.com.br
