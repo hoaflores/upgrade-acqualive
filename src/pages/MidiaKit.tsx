@@ -649,7 +649,7 @@ const MidiaKit = () => {
       {/* (05) PILARES */}
       <section id="sec-05" className="relative bg-[#eef1f7] py-24 md:py-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
-          <Eyebrow num="05" label="Pilares da marca" />
+          <Eyebrow num="05" label="Pilares da marca" light />
           <Reveal>
             <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-20">
               Quatro fundamentos que <span className="text-[#4a90e2]">sustentam tudo.</span>
