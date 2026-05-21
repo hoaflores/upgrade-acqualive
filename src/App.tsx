@@ -70,6 +70,8 @@ const App = () => (
             <Route path="/funil-calculadora" element={<FunilCalculadora />} />
             <Route path="/demandas-solicitadas" element={<DemandasSolicitadas />} />
             <Route path="/ebook-quantidade-agua" element={<EbookQuantidadeAgua />} />
+            <Route path="/midia-kit" element={<MidiaKit />} />
+            <Route path="/midia-kit/:slug" element={<MidiaKit />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
