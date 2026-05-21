@@ -333,19 +333,47 @@ const PartnerContentSection = () => {
                     {item.title}
                   </div>
                 </div>
-              </motion.a>
+              <motion.a
+                key={item.id + i}
+                data-card
+                {...{}}
+              />
             );
           })}
+          <div className="shrink-0 w-6" />
+      </div>
 
-          {/* spacer */}
-          <div className="shrink-0 w-12" />
-        </motion.div>
-
-        {/* hint */}
-        <div className="px-6 md:px-12 lg:px-20 max-w-7xl mx-auto w-full mt-10 flex items-center justify-between text-xs tracking-[0.3em] uppercase text-white/50">
-          <span>Role para avançar</span>
-          <span>{PARTNER_CONTENT.length} episódios</span>
+      {/* controls */}
+      <div className="px-6 md:px-12 lg:px-20 max-w-7xl mx-auto w-full mt-10 flex items-center justify-between gap-6">
+        <div className="flex-1 h-[2px] bg-white/10 rounded-full overflow-hidden">
+          <div
+            className="h-full bg-[#f26923] transition-[width] duration-200"
+            style={{ width: `${Math.max(8, progress * 100)}%` }}
+          />
         </div>
+        <div className="flex items-center gap-3">
+          <button
+            type="button"
+            onClick={() => scrollByCards(-1)}
+            disabled={!canPrev}
+            aria-label="Anterior"
+            className="w-12 h-12 rounded-full border border-white/20 hover:border-[#f26923] hover:bg-[#f26923]/10 disabled:opacity-30 disabled:cursor-not-allowed transition flex items-center justify-center"
+          >
+            <ArrowLeft className="w-4 h-4" />
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollByCards(1)}
+            disabled={!canNext}
+            aria-label="Próximo"
+            className="w-12 h-12 rounded-full border border-white/20 hover:border-[#f26923] hover:bg-[#f26923]/10 disabled:opacity-30 disabled:cursor-not-allowed transition flex items-center justify-center"
+          >
+            <ArrowRight className="w-4 h-4" />
+          </button>
+        </div>
+        <span className="text-xs tracking-[0.3em] uppercase text-white/50 hidden md:inline">
+          {PARTNER_CONTENT.length} episódios
+        </span>
       </div>
     </section>
   );
