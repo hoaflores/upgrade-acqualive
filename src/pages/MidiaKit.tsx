@@ -591,18 +591,18 @@ const MidiaKit = () => {
               </Reveal>
               <Reveal delay={0.15}>
                 <div className="space-y-8">
-                  <div>
-                    <h3 className="text-xl font-medium tracking-tight mb-2">Mauro Mumbach</h3>
+                   <div>
+                    <h3 className="text-xl font-medium tracking-tight mb-2 text-[#02265f]">Mauro Mumbach</h3>
                     <div className="text-xs tracking-[0.2em] uppercase text-[#f26923] mb-3">Co-fundador</div>
-                    <p className="text-white/70 text-sm leading-relaxed font-light">
+                    <p className="text-[#02265f]/70 text-sm leading-relaxed font-light">
                       Pesquisador e empreendedor. Mais de 30 anos estudando mineralização da água, PRAL e longevidade. O elo entre ciência e produto na Acqualive.
                     </p>
                   </div>
-                  <div className="h-px bg-white/10" />
+                  <div className="h-px bg-[#02265f]/10" />
                   <div>
-                    <h3 className="text-xl font-medium tracking-tight mb-2">Sidney Rodrigues</h3>
+                    <h3 className="text-xl font-medium tracking-tight mb-2 text-[#02265f]">Sidney Rodrigues</h3>
                     <div className="text-xs tracking-[0.2em] uppercase text-[#f26923] mb-3">Co-fundador</div>
-                    <p className="text-white/70 text-sm leading-relaxed font-light">
+                    <p className="text-[#02265f]/70 text-sm leading-relaxed font-light">
                       Estrategista de marca e expansão. Responsável por transformar a tecnologia em uma rede de 20+ lojas e uma marca presente em todo o Brasil.
                     </p>
                   </div>
