@@ -771,7 +771,7 @@ const MidiaKit = () => {
             <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-6">
               Três patentes próprias. <span className="text-[#4a90e2]">Uma tecnologia.</span>
             </h2>
-            <p className="text-white/65 text-lg font-light max-w-2xl mb-20">
+            <p className="text-[#02265f]/65 text-lg font-light max-w-2xl mb-20">
               TRIWAY é a arquitetura proprietária da Acqualive. Filtragem, mineralização e alcalinização em um único sistema integrado, validado por décadas de pesquisa.
             </p>
           </Reveal>
@@ -783,11 +783,11 @@ const MidiaKit = () => {
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.1 }}
                 whileHover={{ y: -6 }}
-                className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 hover:bg-white/[0.06] hover:border-[#f26923]/40 transition-all"
+                className="bg-white border border-[#02265f]/10 rounded-2xl p-8 hover:border-[#f26923]/40 shadow-[0_4px_20px_-10px_rgba(2,38,95,0.15)] transition-all"
               >
                 <div className="text-5xl font-light text-[#f26923] mb-12">{t.tag}</div>
-                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4">{t.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed font-light">{t.text}</p>
+                <h3 className="text-xl md:text-2xl font-light tracking-tight mb-4 text-[#02265f]">{t.title}</h3>
+                <p className="text-[#02265f]/60 text-sm leading-relaxed font-light">{t.text}</p>
               </motion.div>
             ))}
           </div>
