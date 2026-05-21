@@ -8,6 +8,7 @@ import {
   FlaskConical, Award, Leaf, HeartPulse, Users, Building2, Microscope, FileText, Quote
 } from "lucide-react";
 import heroImg from "@/assets/midiakit-hero.jpg";
+import savioliHeroBg from "@/assets/savioli-hero-bg.webp";
 import waterImg from "@/assets/midiakit-water.jpg";
 import scienceImg from "@/assets/midiakit-science.jpg";
 import foundersImg from "@/assets/midiakit-founders.jpg";
