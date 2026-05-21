@@ -792,6 +792,9 @@ const MidiaKit = () => {
         </div>
       </section>
 
+      {/* (13.5) CONTEÚDO DE PARCEIROS */}
+      <PartnerContentSection />
+
       {/* (14) PARCERIAS */}
       <section id="sec-14" className="relative bg-[#f5f3ee] text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
