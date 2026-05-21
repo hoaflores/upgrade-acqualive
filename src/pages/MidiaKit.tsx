@@ -670,25 +670,25 @@ const MidiaKit = () => {
                     key={p.title}
                     initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.08 }}
-                    className="border-b border-white/15"
+                    className="border-b border-[#02265f]/15"
                   >
                     <button onClick={() => setOpenPillar(open ? -1 : i)}
                       className="w-full flex items-center justify-between py-6 text-left group">
                       <div className="flex items-center gap-4">
-                        <p.icon className={`w-5 h-5 transition-colors ${open ? "text-[#f26923]" : "text-white/50"}`} strokeWidth={1.4} />
-                        <span className={`text-xl md:text-2xl font-light tracking-tight transition-colors ${open ? "text-[#f26923]" : "text-white group-hover:text-[#f26923]"}`}>
+                        <p.icon className={`w-5 h-5 transition-colors ${open ? "text-[#f26923]" : "text-[#02265f]/50"}`} strokeWidth={1.4} />
+                        <span className={`text-xl md:text-2xl font-light tracking-tight transition-colors ${open ? "text-[#f26923]" : "text-[#02265f] group-hover:text-[#f26923]"}`}>
                           {p.title}
                         </span>
                       </div>
-                      <span className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center flex-shrink-0 ml-4">
-                        {open ? <Minus className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
+                      <span className="w-9 h-9 rounded-full border border-[#02265f]/30 flex items-center justify-center flex-shrink-0 ml-4">
+                        {open ? <Minus className="w-3.5 h-3.5 text-[#02265f]" /> : <Plus className="w-3.5 h-3.5 text-[#02265f]" />}
                       </span>
                     </button>
                     <AnimatePresence initial={false}>
                       {open && (
                         <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }} className="overflow-hidden">
-                          <p className="text-white/65 text-sm leading-relaxed font-light pb-6 pr-10 pl-9">{p.text}</p>
+                          <p className="text-[#02265f]/65 text-sm leading-relaxed font-light pb-6 pr-10 pl-9">{p.text}</p>
                         </motion.div>
                       )}
                     </AnimatePresence>
