@@ -766,7 +766,7 @@ const MidiaKit = () => {
       {/* (07) TRIWAY */}
       <section id="sec-07" className="relative bg-white py-24 md:py-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
-          <Eyebrow num="07" label="Tecnologia TRIWAY" />
+          <Eyebrow num="07" label="Tecnologia TRIWAY" light />
           <Reveal>
             <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-6">
               Três patentes próprias. <span className="text-[#4a90e2]">Uma tecnologia.</span>
