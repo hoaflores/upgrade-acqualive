@@ -858,6 +858,39 @@ const MidiaKit = () => {
                 ))}
               </div>
               <p className="text-xs text-[#02265f]/50 mt-6 tracking-[0.15em] uppercase">Dados consolidados · 01/11/2025 a 01/02/2026</p>
+
+              {/* Acqualive em números */}
+              <Reveal>
+                <div className="text-xs tracking-[0.3em] uppercase text-[#f26923] mt-20 mb-6">Acqualive em números</div>
+                <h3 className="font-light text-[clamp(1.5rem,3vw,2.4rem)] leading-[1.1] tracking-[-0.02em] uppercase max-w-4xl mb-10">
+                  A marca chega à parceria com <span className="text-[#1d4380]">lastro e escala próprios.</span>
+                </h3>
+              </Reveal>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-[#02265f]/10 rounded-2xl overflow-hidden">
+                {[
+                  { v: "150 mil+", l: "famílias impactadas" },
+                  { v: "600 mi+", l: "garrafas plásticas evitadas" },
+                  { v: "98%", l: "remoção de cloro" },
+                  { v: "30+ anos", l: "de estudos e desenvolvimento" },
+                  { v: "20+ lojas", l: "presença nacional" },
+                ].map((s, i) => (
+                  <motion.div
+                    key={s.l}
+                    initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.06 }}
+                    className="bg-white p-8"
+                  >
+                    <div className="text-3xl md:text-4xl font-light tracking-tight text-[#1d4380]">{s.v}</div>
+                    <div className="text-[11px] tracking-[0.2em] uppercase text-[#02265f]/60 mt-4">{s.l}</div>
+                  </motion.div>
+                ))}
+              </div>
+              <Reveal delay={0.2}>
+                <div className="mt-8 flex items-baseline gap-6">
+                  <div className="text-4xl md:text-5xl font-light text-[#f26923]">16+ anos</div>
+                  <div className="text-sm tracking-[0.2em] uppercase text-[#02265f]/60">de construção da marca</div>
+                </div>
+              </Reveal>
             </div>
           </section>
 
@@ -914,101 +947,6 @@ const MidiaKit = () => {
           {/* P07C — Conteúdo de parceiros */}
           <PartnerContentSection />
 
-          {/* P08 — Bases científicas que fortalecem a narrativa */}
-          <section id="p08" className="relative bg-white text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
-            <div className="max-w-7xl mx-auto">
-              <Eyebrow num="08" label="Bases científicas" light />
-              <Reveal>
-                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-5xl mb-6">
-                  Bases científicas que fortalecem <span className="text-[#1d4380]">a narrativa.</span>
-                </h2>
-                <p className="text-[#02265f]/70 text-lg font-light max-w-3xl mb-16">
-                  Foco em hidratação, envelhecimento, saúde cardiovascular e qualidade de vida.
-                </p>
-              </Reveal>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[
-                  { tag: "Hidratação e envelhecimento", items: ["Desidratação em idosos associada a maior mortalidade", "Importância clínica da hidratação adequada", "Impacto funcional e cardiovascular"] },
-                  { tag: "Saúde cardiovascular", items: ["Função vascular e pressão arterial", "Mineralização da água", "Magnésio e saúde cardiovascular", "Rotina preventiva"] },
-                  { tag: "Água alcalina", items: ["Estudos em refluxo", "pH 8,8", "Saúde digestiva", "Bem-estar"] },
-                ].map((col, i) => (
-                  <motion.div
-                    key={col.tag}
-                    initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.1 }}
-                    className="bg-[#f5f3ee] rounded-2xl p-10 border-t-2 border-[#f26923]"
-                  >
-                    <h3 className="text-lg font-medium tracking-tight mb-6 text-[#02265f]">{col.tag}</h3>
-                    <ul className="space-y-3">
-                      {col.items.map((it) => (
-                        <li key={it} className="text-sm font-light text-[#02265f]/80 flex gap-2">
-                          <span className="text-[#f26923]">·</span>{it}
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* P09 — O que essa parceria pode representar */}
-          <section id="p09" className="relative bg-[#f5f3ee] text-[#02265f] py-24 md:py-32 px-6 md:px-12 lg:px-20">
-            <div className="max-w-7xl mx-auto">
-              <Eyebrow num="09" label="Visão da parceria" light />
-              <Reveal>
-                <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-5xl mb-6">
-                  O que essa parceria <span className="text-[#1d4380]">pode representar.</span>
-                </h2>
-                <p className="text-[#02265f]/70 text-lg font-light max-w-3xl mb-16">
-                  Mais do que uma campanha: um posicionamento nacional.
-                </p>
-              </Reveal>
-              <div className="grid md:grid-cols-2 gap-6 mb-16">
-                {[
-                  { tag: "Para o Dr. Roque", items: ["Expandir o debate sobre prevenção", "Associar imagem a uma marca científica", "Construir legado em hidratação e longevidade", "Participar de um movimento nacional"] },
-                  { tag: "Para a Acqualive", items: ["Elevação institucional da marca", "Credibilidade médica", "Autoridade nacional", "Escala de educação e conscientização"] },
-                ].map((col, i) => (
-                  <motion.div
-                    key={col.tag}
-                    initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.1 }}
-                    className="bg-white rounded-2xl p-10 md:p-12 shadow-[0_20px_60px_-30px_rgba(2,38,95,0.2)]"
-                  >
-                    <div className="text-xs tracking-[0.25em] uppercase text-[#f26923] mb-6">{col.tag}</div>
-                    <ul className="space-y-4">
-                      {col.items.map((it) => (
-                        <li key={it} className="text-base font-light text-[#02265f]/80 flex gap-3">
-                          <span className="text-[#f26923] mt-1">·</span>{it}
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Entregáveis sugeridos */}
-              <Reveal>
-                <div className="text-xs tracking-[0.3em] uppercase text-[#f26923] mb-6">Entregáveis sugeridos · formato modular</div>
-              </Reveal>
-              <div className="grid md:grid-cols-2 gap-6">
-                {SAVIOLI_DELIVERABLES.map((d, i) => (
-                  <motion.div
-                    key={d.tag}
-                    initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.08 }}
-                    className="bg-white border border-[#02265f]/10 rounded-2xl p-8 md:p-10 hover:border-[#f26923]/40 transition-all flex gap-6"
-                  >
-                    <span className="text-4xl font-light text-[#f26923] leading-none">{d.tag}</span>
-                    <div>
-                      <h3 className="text-xl font-light tracking-tight mb-3 text-[#02265f]">{d.title}</h3>
-                      <p className="text-[#02265f]/70 text-sm leading-relaxed font-light">{d.text}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </section>
 
           {/* P10 — Quote 2 */}
           <section id="p10" className="relative bg-white text-[#02265f] py-32 md:py-40 px-6 md:px-12 lg:px-20 border-y border-[#02265f]/10">
