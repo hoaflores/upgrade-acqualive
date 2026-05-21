@@ -170,12 +170,13 @@ const Eyebrow = ({ num, label, light = false }: { num: string; label: string; li
   </div>
 );
 
-const Reveal = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => (
+const Reveal = ({ children, delay = 0, className }: { children: React.ReactNode; delay?: number; className?: string }) => (
   <motion.div
     initial={{ opacity: 0, y: 24 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-80px" }}
     transition={{ duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] }}
+    className={className}
   >
     {children}
   </motion.div>
@@ -504,8 +505,9 @@ const MidiaKit = () => {
           </Reveal>
 
           <div className="grid lg:grid-cols-12 gap-12 mb-16">
-            <Reveal delay={0.1}>
-              <div className="lg:col-span-7 bg-white rounded-2xl p-8 md:p-12 shadow-[0_20px_60px_-30px_rgba(2,38,95,0.2)]">
+            <Reveal delay={0.1} className="lg:col-span-7">
+              <div className="bg-white rounded-2xl p-8 md:p-12 shadow-[0_20px_60px_-30px_rgba(2,38,95,0.2)] h-full">
+
                 <div className="flex items-center gap-3 text-xs tracking-[0.2em] uppercase text-[#f26923] font-medium mb-6">
                   <FileText className="w-4 h-4" />
                   Estudo clínico · 2017
@@ -525,8 +527,9 @@ const MidiaKit = () => {
               </div>
             </Reveal>
 
-            <Reveal delay={0.2}>
-              <div className="lg:col-span-5 bg-[#02265f] text-white rounded-2xl p-8 md:p-12 h-full flex flex-col">
+            <Reveal delay={0.2} className="lg:col-span-5">
+              <div className="bg-[#02265f] text-white rounded-2xl p-8 md:p-12 h-full flex flex-col">
+
                 <div className="flex items-center gap-3 text-xs tracking-[0.2em] uppercase text-[#f26923] font-medium mb-6">
                   <Microscope className="w-4 h-4" />
                   Validação Unicamp
