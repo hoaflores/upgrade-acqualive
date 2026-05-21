@@ -183,44 +183,92 @@ const Eyebrow = ({ num, label, light = false }: { num: string; label: string; li
 /* ---------- PARTNER CONTENT CAROUSEL ---------- */
 
 const PartnerContentSection = () => {
-  const trackRef = useRef<HTMLDivElement>(null);
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const [canPrev, setCanPrev] = useState(false);
+  const [canNext, setCanNext] = useState(true);
+  const [progress, setProgress] = useState(0);
 
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end end"],
-  });
+  const updateState = () => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const max = el.scrollWidth - el.clientWidth;
+    setCanPrev(el.scrollLeft > 4);
+    setCanNext(el.scrollLeft < max - 4);
+    setProgress(max > 0 ? el.scrollLeft / max : 0);
+  };
 
-  // horizontal translate driven by vertical scroll
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-72%"]);
-  const smoothX = useSpring(x, { stiffness: 80, damping: 22, mass: 0.5 });
+  useEffect(() => {
+    updateState();
+    const el = scrollerRef.current;
+    if (!el) return;
+    el.addEventListener("scroll", updateState, { passive: true });
+    window.addEventListener("resize", updateState);
+    return () => {
+      el.removeEventListener("scroll", updateState);
+      window.removeEventListener("resize", updateState);
+    };
+  }, []);
+
+  const scrollByCards = (dir: 1 | -1) => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const card = el.querySelector<HTMLElement>("[data-card]");
+    const step = card ? card.offsetWidth + 32 : el.clientWidth * 0.8;
+    el.scrollBy({ left: dir * step, behavior: "smooth" });
+  };
+
+  // drag-to-scroll
+  const dragState = useRef({ down: false, startX: 0, startLeft: 0, moved: false });
+  const onPointerDown = (e: React.PointerEvent) => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    dragState.current = { down: true, startX: e.clientX, startLeft: el.scrollLeft, moved: false };
+    el.setPointerCapture(e.pointerId);
+  };
+  const onPointerMove = (e: React.PointerEvent) => {
+    const el = scrollerRef.current;
+    if (!el || !dragState.current.down) return;
+    const dx = e.clientX - dragState.current.startX;
+    if (Math.abs(dx) > 4) dragState.current.moved = true;
+    el.scrollLeft = dragState.current.startLeft - dx;
+  };
+  const onPointerUp = (e: React.PointerEvent) => {
+    const el = scrollerRef.current;
+    dragState.current.down = false;
+    if (el) try { el.releasePointerCapture(e.pointerId); } catch {}
+  };
+  const onClickCapture = (e: React.MouseEvent) => {
+    if (dragState.current.moved) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  };
 
   return (
-    <section
-      id="sec-13b"
-      ref={sectionRef}
-      className="relative bg-[#02265f] text-white"
-      style={{ height: "260vh" }}
-    >
-      <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
-        <div className="px-6 md:px-12 lg:px-20 max-w-7xl mx-auto w-full">
-          <Eyebrow num="13" label="Conteúdo de parceiros" />
-          <Reveal>
-            <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-4">
-              Vozes que <span className="text-[#f26923]">amplificam</span> a marca.
-            </h2>
-            <p className="text-white/70 text-lg font-light max-w-2xl mb-12">
-              Parceiros, médicos e criadores que co-criam conteúdo conosco. Role para navegar pelos episódios.
-            </p>
-          </Reveal>
-        </div>
+    <section id="sec-13b" className="relative bg-[#02265f] text-white py-24 md:py-32 overflow-hidden">
+      <div className="px-6 md:px-12 lg:px-20 max-w-7xl mx-auto w-full">
+        <Eyebrow num="13" label="Conteúdo de parceiros" />
+        <Reveal>
+          <h2 className="font-light text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.05] tracking-[-0.02em] uppercase max-w-4xl mb-4">
+            Vozes que <span className="text-[#f26923]">amplificam</span> a marca.
+          </h2>
+          <p className="text-white/70 text-lg font-light max-w-2xl mb-12">
+            Parceiros, médicos e criadores que co-criam conteúdo conosco. Arraste, role ou use as setas.
+          </p>
+        </Reveal>
+      </div>
 
-        <motion.div
-          ref={trackRef}
-          style={{ x: smoothX }}
-          className="flex gap-6 md:gap-8 pl-6 md:pl-12 lg:pl-20 will-change-transform"
-        >
-          {PARTNER_CONTENT.map((item, i) => {
+      <div
+        ref={scrollerRef}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        onPointerCancel={onPointerUp}
+        onClickCapture={onClickCapture}
+        className="flex gap-6 md:gap-8 px-6 md:px-12 lg:px-20 overflow-x-auto snap-x snap-mandatory scroll-smooth cursor-grab active:cursor-grabbing select-none [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        style={{ scrollPaddingLeft: "1.5rem" }}
+      >
+        {PARTNER_CONTENT.map((item, i) => {
             const isYT = item.type === "youtube";
             const thumb = isYT
               ? `https://img.youtube.com/vi/${item.id}/hqdefault.jpg`
