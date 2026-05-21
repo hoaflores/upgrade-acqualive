@@ -157,6 +157,16 @@ const PARTNERSHIPS = [
   { tag: "03", title: "Afiliado e comissionamento", subtitle: "Receita recorrente sobre indicações", text: "Modelo de comissionamento para parceiros com audiência qualificada em longevidade, performance e bem-estar. Material de apoio e dashboard de performance." },
 ];
 
+const PARTNER_CONTENT = [
+  { type: "youtube", id: "pofP0CoaJtE", title: "Conversa sobre água alcalina", author: "Parceiro Acqualive" },
+  { type: "youtube", id: "d6eF3ZdgV84", title: "Ciência da hidratação", author: "Parceiro Acqualive" },
+  { type: "youtube", id: "j_Yz7C0FlLw", title: "Rotina de saúde preventiva", author: "Parceiro Acqualive" },
+  { type: "youtube", id: "DDgaYDxQxjk", title: "Tecnologia TRIWAY explicada", author: "Parceiro Acqualive" },
+  { type: "instagram", id: "DXXjGajR666", title: "Reel: bem-estar e água", author: "Parceiro Acqualive" },
+  { type: "instagram", id: "DW6oOYVkWG8", title: "Reel: rotina fresquinha", author: "Parceiro Acqualive" },
+  { type: "instagram", id: "DYXSAYBxkLF", title: "Reel: saúde no dia a dia", author: "Parceiro Acqualive" },
+] as const;
+
 /* ---------- HELPERS ---------- */
 
 const Eyebrow = ({ num, label, light = false }: { num: string; label: string; light?: boolean }) => (
