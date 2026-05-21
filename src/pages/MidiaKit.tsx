@@ -1678,17 +1678,45 @@ const MidiaKit = () => {
       </>)}
 
       {/* (15) CTA / CONTATO */}
-      <section id="sec-15" className="relative py-32 md:py-40 px-6 md:px-12 lg:px-20 overflow-hidden">
+      <section id="sec-15" className="relative py-32 md:py-40 px-6 md:px-12 lg:px-20 overflow-hidden text-white">
         <div className="absolute inset-0">
           <img src={heroImg} alt="" className="w-full h-full object-cover" loading="lazy" />
-          <div className="absolute inset-0 bg-[#02265f]/70" />
+          {slug === "savioli" ? (
+            <>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#02265f]/90 via-[#02265f]/70 to-[#02265f]/50" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#02265f]/40 via-transparent to-[#02265f]/80" />
+              <div className="absolute inset-0 opacity-[0.07]" style={{
+                backgroundImage: "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
+                backgroundSize: "80px 80px",
+              }} />
+            </>
+          ) : (
+            <div className="absolute inset-0 bg-[#02265f]/70" />
+          )}
         </div>
+
+        {slug === "savioli" && (
+          <>
+            <motion.div initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 1.4, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute top-12 left-6 md:left-12 lg:left-20 right-6 md:right-12 lg:right-20 h-px bg-white/15 origin-left z-10" />
+            <motion.div initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 1.4, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute bottom-12 left-6 md:left-12 lg:left-20 right-6 md:right-12 lg:right-20 h-px bg-white/15 origin-left z-10" />
+            <div className="absolute left-6 md:left-12 lg:left-20 top-1/2 -translate-y-1/2 hidden lg:block z-10">
+              <div className="text-[10px] tracking-[0.4em] uppercase text-white/40 rotate-180" style={{ writingMode: "vertical-rl" }}>
+                Acqualive × Savioli · 2026
+              </div>
+            </div>
+          </>
+        )}
 
         <Reveal>
           <div className="relative z-10 max-w-7xl mx-auto">
-            <Eyebrow num="15" label="Vamos conversar" />
+            <div className="flex items-center gap-4 text-xs tracking-[0.3em] uppercase text-[#f26923] mb-8 font-medium">
+              <span className="w-10 h-px bg-[#f26923]" />
+              (15) Vamos conversar
+            </div>
 
-            <h2 className="font-light text-[clamp(2.5rem,6vw,5.5rem)] leading-[1] tracking-[-0.02em] uppercase max-w-5xl mb-10">
+            <h2 className="font-light text-[clamp(2.5rem,6vw,5.5rem)] leading-[1] tracking-[-0.02em] uppercase max-w-5xl mb-10 text-white">
               {slug === "savioli" ? (
                 <>Vamos construir essa <span className="text-[#f26923]">parceria juntos?</span></>
               ) : (
@@ -1696,7 +1724,7 @@ const MidiaKit = () => {
               )}
             </h2>
 
-            <p className="text-white/75 text-lg max-w-2xl font-light mb-14 leading-relaxed">
+            <p className="text-white/85 text-lg max-w-2xl font-light mb-14 leading-relaxed">
               {slug === "savioli"
                 ? "Próximo passo: alinhar conceito, formato e calendário com o time do Dr. Roque e da Dra. Gisela. Nossa equipe está pronta para evoluir esta conversa."
                 : "Conte com nossa equipe para desenhar a melhor proposta de parceria entre você e Acqualive. Resposta em até 48h úteis."}
@@ -1706,33 +1734,33 @@ const MidiaKit = () => {
               <div className="flex items-start gap-4">
                 <Phone className="w-5 h-5 text-[#f26923] flex-shrink-0 mt-1" />
                 <div>
-                  <div className="text-xs tracking-[0.2em] uppercase text-white/50 mb-1">WhatsApp</div>
-                  <div className="text-base">+55 51 9292-8468</div>
+                  <div className="text-xs tracking-[0.2em] uppercase text-white/60 mb-1">WhatsApp</div>
+                  <div className="text-base text-white">+55 51 9292-8468</div>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <Mail className="w-5 h-5 text-[#f26923] flex-shrink-0 mt-1" />
                 <div>
-                  <div className="text-xs tracking-[0.2em] uppercase text-white/50 mb-1">E-mail</div>
-                  <div className="text-base">parcerias@acqualive.com.br</div>
+                  <div className="text-xs tracking-[0.2em] uppercase text-white/60 mb-1">E-mail</div>
+                  <div className="text-base text-white">parcerias@acqualive.com.br</div>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <Building2 className="w-5 h-5 text-[#f26923] flex-shrink-0 mt-1" />
                 <div>
-                  <div className="text-xs tracking-[0.2em] uppercase text-white/50 mb-1">Sede</div>
-                  <div className="text-base">Rio Grande do Sul · Brasil</div>
+                  <div className="text-xs tracking-[0.2em] uppercase text-white/60 mb-1">Sede</div>
+                  <div className="text-base text-white">Rio Grande do Sul · Brasil</div>
                 </div>
               </div>
             </div>
 
             <div className="flex flex-wrap items-center gap-4">
               <a href="https://wa.me/555192928468?text=Olá,%20vim%20pelo%20mídia%20kit%20Acqualive." target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#f26923] hover:bg-white hover:text-[#02265f] transition-colors rounded-full px-10 py-5 text-sm tracking-[0.15em] font-medium">
+                className="inline-flex items-center gap-2 bg-[#f26923] text-white hover:bg-white hover:text-[#02265f] transition-colors rounded-full px-10 py-5 text-sm tracking-[0.15em] font-medium">
                 Falar com a Acqualive
               </a>
               <button onClick={() => window.print()}
-                className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/30 hover:bg-white hover:text-[#02265f] transition-colors rounded-full px-10 py-5 text-sm tracking-[0.15em] font-medium">
+                className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/30 text-white hover:bg-white hover:text-[#02265f] transition-colors rounded-full px-10 py-5 text-sm tracking-[0.15em] font-medium">
                 <Download className="w-4 h-4" /> Baixar PDF
               </button>
             </div>
