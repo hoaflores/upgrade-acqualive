@@ -1480,4 +1480,740 @@ const article12 = {
   )
 };
 
-export const EXTRA_ARTICLES = [article6, article7, article8, article9, article10, article11, article12];
+// ============================================================
+// ARTIGO 13 — Hidratação no inverno
+// ============================================================
+const article13 = {
+  title: "Hidratação no inverno: por que beber água no frio é tão importante quanto no verão",
+  slug: "hidratacao-no-inverno",
+  html: wrap(
+    `<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hidratação no Inverno: Por Que Beber Água no Frio é Essencial | Acqualive</title>
+<meta name="description" content="No inverno a sede some, mas a desidratação não. Entenda por que o corpo perde mais água no frio, os sinais silenciosos da desidratação e como manter a hidratação com água alcalina mineralizada.">
+<meta name="keywords" content="hidratação no inverno, beber água no frio, desidratação inverno, água alcalina inverno, hidratação pele inverno, ar seco hidratação, Acqualive">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Acqualive">
+<link rel="canonical" href="https://blog.acqualive.com.br/hidratacao-no-inverno/">
+<meta property="og:title" content="Hidratação no Inverno: o cuidado que ninguém comenta">
+<meta property="og:description" content="No frio a sede diminui, mas o corpo continua perdendo água. Saiba como se manter hidratado de verdade no inverno.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/hidratacao-inverno.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Hidratação no inverno: por que beber água no frio é tão importante quanto no verão","description":"Por que o corpo se desidrata mais no inverno e como manter a hidratação com água alcalina ionizada.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-05-31","dateModified":"2026-05-31","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/hidratacao-inverno.jpg"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Por que sentimos menos sede no inverno?","acceptedAnswer":{"@type":"Answer","text":"No frio, o organismo concentra o sangue para preservar a temperatura central e os mecanismos de sede ficam menos sensíveis. Por isso a vontade de beber água diminui, mesmo quando o corpo continua perdendo líquido pela respiração, urina e pele ressecada."}},
+{"@type":"Question","name":"Quanta água beber por dia no inverno?","acceptedAnswer":{"@type":"Answer","text":"A recomendação segue sendo cerca de 35 ml por quilo de peso corporal. Para uma pessoa de 70 kg, isso equivale a aproximadamente 2,5 litros por dia. Sopas, chás sem açúcar e frutas ajudam a complementar."}},
+{"@type":"Question","name":"Água gelada ou morna no inverno?","acceptedAnswer":{"@type":"Answer","text":"Água em temperatura ambiente ou levemente morna é melhor absorvida no inverno e é mais convidativa. O importante é manter a regularidade ao longo do dia, sem esperar pela sede."}}
+]}
+</script>`,
+    `<header class="article-header">
+  <div class="header-inner">
+    <span class="badge">SAÚDE E BEM-ESTAR</span>
+    <h1>Hidratação no <span>inverno</span>: por que beber água no frio é tão importante quanto no verão</h1>
+    <p class="header-desc">No frio a sede some, mas o corpo continua perdendo água o tempo todo. Veja como manter a hidratação sem precisar sentir vontade.</p>
+    <div class="header-meta">
+      <span>Acqualive</span><span>•</span><span>31 mai 2026</span><span>•</span><span>7 min de leitura</span>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/hidratacao-inverno.jpg" alt="Mão segurando um copo de água alcalina ao lado de uma janela em manhã de inverno com xícara de chá" width="1280" height="800" loading="eager">
+  </div>
+</header>
+
+<main class="article-body">
+  <p>Calor pede água gelada. Inverno pede cobertor, chá e sopa. Só que o corpo continua suando, respirando e urinando todos os dias, faça frio ou calor. A diferença é que, no inverno, a <strong>sede vira um mecanismo silencioso</strong>, e a desidratação passa despercebida até bater de frente com a pele, a disposição e a imunidade.</p>
+
+  <div class="quote">"A desidratação leve no inverno é uma das principais causas de queda de energia, dor de cabeça e baixa imunidade nesta época do ano."</div>
+
+  <nav class="toc">
+    <div class="toc-title">Neste artigo</div>
+    <ol>
+      <li><a href="#sede">Por que a sede diminui no inverno</a></li>
+      <li><a href="#perdas">Por onde a água vai embora no frio</a></li>
+      <li><a href="#sinais">Os sinais silenciosos da desidratação</a></li>
+      <li><a href="#quanto">Quanto beber e como facilitar</a></li>
+      <li><a href="#qualidade">A qualidade da água faz diferença</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="sede">Por que a sede diminui no inverno</h2>
+  <p>No frio, o organismo prioriza manter a temperatura central. O sangue se concentra nos órgãos internos e os receptores de sede ficam menos ativos. Resultado: você passa horas sem lembrar de beber água, mesmo perdendo líquido o tempo todo.</p>
+
+  <h2 id="perdas">Por onde a água vai embora no frio</h2>
+  <ul class="check-list">
+    <li><strong>Respiração:</strong> o ar seco do inverno faz você perder mais água a cada vez que respira. Aquela "fumaça" branca ao expirar é água do seu corpo.</li>
+    <li><strong>Pele:</strong> a baixa umidade puxa hidratação da pele, deixando-a áspera, ressecada e mais propensa a coceira.</li>
+    <li><strong>Aquecedores e ar condicionado quente:</strong> reduzem ainda mais a umidade do ambiente.</li>
+    <li><strong>Bebidas diuréticas:</strong> café, chá preto e bebidas alcoólicas aumentam a perda de líquido pela urina.</li>
+  </ul>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-number">2 a 4%</div><div class="stat-label">de desidratação já compromete a memória, o humor e a concentração</div></div>
+    <div class="stat-card"><div class="stat-number">35 ml</div><div class="stat-label">por quilo de peso, é a referência diária para adultos</div></div>
+    <div class="stat-card"><div class="stat-number">3x</div><div class="stat-label">mais perda de água pela respiração em ambientes muito secos</div></div>
+  </div>
+
+  <h2 id="sinais">Os sinais silenciosos da desidratação no inverno</h2>
+  <p>Eles não vêm como sede. Eles vêm como:</p>
+  <ul class="check-list">
+    <li>Pele puxando, lábios rachados, cabelo opaco.</li>
+    <li>Cansaço logo no meio da tarde, mesmo dormindo bem.</li>
+    <li>Dor de cabeça leve e recorrente.</li>
+    <li>Boca seca ao acordar.</li>
+    <li>Urina mais escura e em menor quantidade.</li>
+    <li>Constipação e digestão lenta.</li>
+    <li>Mais resfriados, gripes e crises de sinusite.</li>
+  </ul>
+
+  <div class="info-box">
+    <h4>Imunidade e hidratação</h4>
+    <p>As mucosas da boca, nariz e garganta são a primeira barreira contra vírus respiratórios. Bem hidratadas, elas funcionam. Ressecadas, viram porta de entrada.</p>
+  </div>
+
+  <div class="mid-cta">
+    <p>Hidratação é cuidado contínuo, independente da estação.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Purificador Acqualive →</a>
+  </div>
+
+  <h2 id="quanto">Quanto beber e como facilitar</h2>
+  <p>A referência segue sendo simples: aproximadamente <strong>35 ml de água por quilo de peso corporal</strong>. Para uma pessoa de 70 kg, são cerca de 2,5 litros por dia. No inverno, vale dividir esse volume em pequenas doses ao longo do dia, em formatos que combinam com o frio:</p>
+
+  <ul class="check-list">
+    <li>Garrafa térmica ao lado, com água em temperatura ambiente.</li>
+    <li>Chás sem açúcar (camomila, hortelã, gengibre) contam como hidratação.</li>
+    <li>Sopas, caldos e cremes naturais aumentam a ingestão de líquidos.</li>
+    <li>Frutas com alto teor de água: laranja, mexerica, kiwi, pera, abacaxi.</li>
+    <li>Um copo de água logo ao acordar, antes do café.</li>
+    <li>Um copo de água quinze minutos antes de cada refeição.</li>
+  </ul>
+
+  <h2 id="qualidade">A qualidade da água faz diferença</h2>
+  <p>De pouco adianta beber bastante se a água estiver cheia de cloro, microplásticos e contaminantes. <a href="https://blog.acqualive.com.br/agua-da-torneira-segura-brasil/" target="_blank">A água da torneira no Brasil</a> raramente chega pronta para o consumo ideal, e a água engarrafada carrega o problema dos microplásticos.</p>
+
+  <p>O <strong>Purificador Acqualive</strong> entrega, todos os dias, água alcalina ionizada, mineralizada com magnésio e cálcio, sem cloro, sem microplásticos e fresquinha. É a água que o seu corpo precisa, em qualquer estação do ano, com hidratação celular mais profunda e absorção facilitada.</p>
+
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-cozinha-natureza.jpg" alt="Purificador Acqualive em cozinha aconchegante, fonte constante de água alcalina no inverno" class="article-img" loading="lazy" width="1200" height="800">
+
+  <div class="cta-section">
+    <h2>Hidrate-se de verdade <span>o ano inteiro</span></h2>
+    <p>Tenha água alcalina, mineralizada e segura para você e sua família. Em até 10x sem juros e frete grátis. Consulte regiões disponíveis.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Conhecer o Acqualive →</a>
+  </div>
+
+  <div class="related-links">
+    <h4>Continue lendo</h4>
+    <ul>
+      <li><a href="https://blog.acqualive.com.br/agua-anti-inflamatoria/" target="_blank">Água anti-inflamatória: o copo que desliga a inflamação silenciosa</a></li>
+      <li><a href="https://blog.acqualive.com.br/cloro-pele-cabelo/" target="_blank">Por que sua pele e cabelo estão ressecados</a></li>
+    </ul>
+  </div>
+</main>`
+  )
+};
+
+// ============================================================
+// ARTIGO 14 — Magnésio e benefícios para a saúde
+// ============================================================
+const article14 = {
+  title: "Magnésio: o mineral esquecido que sustenta sua energia, seu sono e o seu coração",
+  slug: "magnesio-beneficios-saude",
+  html: wrap(
+    `<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnésio: Benefícios para Saúde, Sono, Energia e Coração | Acqualive</title>
+<meta name="description" content="Mais de 60% dos brasileiros consome menos magnésio do que precisa. Veja os benefícios reais desse mineral para sono, energia, humor, ossos e coração, e a forma mais simples de repor com água alcalina mineralizada.">
+<meta name="keywords" content="magnésio benefícios, deficiência de magnésio, magnésio sono, magnésio coração, água com magnésio, magnésio na água, água alcalina magnésio, Acqualive">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Acqualive">
+<link rel="canonical" href="https://blog.acqualive.com.br/magnesio-beneficios-saude/">
+<meta property="og:title" content="Magnésio: o mineral esquecido que muda sua saúde">
+<meta property="og:description" content="Benefícios reais do magnésio, sintomas de deficiência e como reverter com hidratação inteligente.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/magnesio-saude.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Magnésio: o mineral esquecido que sustenta energia, sono e coração","description":"Tudo sobre magnésio: funções no corpo, sintomas de deficiência, fontes alimentares e como repor pela água.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-05-31","dateModified":"2026-05-31","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/magnesio-saude.jpg"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Para que serve o magnésio?","acceptedAnswer":{"@type":"Answer","text":"O magnésio participa de mais de 300 reações enzimáticas no corpo. Atua na produção de energia, contração muscular, ritmo cardíaco, equilíbrio do sistema nervoso, sono profundo, fortalecimento ósseo e regulação da pressão arterial."}},
+{"@type":"Question","name":"Quais os sintomas da falta de magnésio?","acceptedAnswer":{"@type":"Answer","text":"Câimbras frequentes, fadiga, insônia, ansiedade, dor de cabeça, palpitações, contrações musculares involuntárias, constipação e pressão alta de difícil controle podem indicar deficiência de magnésio."}},
+{"@type":"Question","name":"Qual a melhor forma de repor magnésio?","acceptedAnswer":{"@type":"Answer","text":"A combinação ideal é alimentação rica em vegetais verde-escuros, oleaginosas, sementes e leguminosas, somada a uma boa hidratação com água que contenha magnésio de forma natural, como a água alcalina ionizada produzida pelo Acqualive."}}
+]}
+</script>`,
+    `<header class="article-header">
+  <div class="header-inner">
+    <span class="badge">SAÚDE E BEM-ESTAR</span>
+    <h1><span>Magnésio</span>: o mineral esquecido que sustenta sua energia, seu sono e o seu coração</h1>
+    <p class="header-desc">Participa de mais de 300 reações no corpo, e ainda assim a maioria das pessoas vive em déficit. Entenda por quê e como reverter.</p>
+    <div class="header-meta">
+      <span>Acqualive</span><span>•</span><span>31 mai 2026</span><span>•</span><span>9 min de leitura</span>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/magnesio-saude.jpg" alt="Tábua de madeira com alimentos ricos em magnésio: folhas verdes, amêndoas, sementes, abacate, banana, cacau e copo de água" width="1280" height="800" loading="eager">
+  </div>
+</header>
+
+<main class="article-body">
+  <p>Você dorme mal, acorda cansada, sente câimbras na panturrilha durante a noite, está mais ansiosa do que de costume e suas pálpebras tremem do nada. É fácil culpar o estresse, o trabalho, a vida moderna. Mas, em muitos desses casos, há um mineral por trás de quase tudo: o <strong>magnésio</strong>.</p>
+
+  <div class="quote">"O magnésio é o coadjuvante mais importante da bioquímica humana. Quando ele falta, tudo desafina."</div>
+
+  <nav class="toc">
+    <div class="toc-title">Neste artigo</div>
+    <ol>
+      <li><a href="#oqueé">O que é e por que ele é tão importante</a></li>
+      <li><a href="#funcoes">As principais funções no corpo</a></li>
+      <li><a href="#deficit">Sinais de deficiência</a></li>
+      <li><a href="#fontes">Onde encontrar magnésio na alimentação</a></li>
+      <li><a href="#agua">Magnésio também vem da água</a></li>
+      <li><a href="#acqualive">Como o Acqualive entra nessa conta</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="oqueé">O que é e por que ele é tão importante</h2>
+  <p>O magnésio é o quarto mineral mais abundante no corpo humano. Está em todas as células, mas em maior concentração nos ossos, músculos, cérebro e coração. Participa de mais de <strong>300 reações enzimáticas</strong>: da produção de energia (ATP) à síntese de proteínas, passando pelo controle do açúcar no sangue, da pressão arterial e da atividade neural.</p>
+
+  <p>O problema é que a alimentação moderna, baseada em ultraprocessados e em solos cada vez mais pobres, entrega muito menos magnésio do que entregava há cinquenta anos.</p>
+
+  <h2 id="funcoes">As principais funções no corpo</h2>
+
+  <ul class="check-list">
+    <li><strong>Energia:</strong> sem magnésio, o corpo não produz ATP. Cansaço crônico tem aí uma das suas raízes.</li>
+    <li><strong>Sono:</strong> regula a melatonina e o GABA, neurotransmissor que acalma o sistema nervoso. Ajuda a dormir profundamente.</li>
+    <li><strong>Coração:</strong> mantém o ritmo cardíaco regular e relaxa os vasos sanguíneos, ajudando a controlar a pressão.</li>
+    <li><strong>Músculos:</strong> previne câimbras, contraturas e tremores involuntários.</li>
+    <li><strong>Ossos:</strong> cerca de 60% do magnésio do corpo está nos ossos. Sem ele, o cálcio também não se fixa direito.</li>
+    <li><strong>Humor e ansiedade:</strong> estudos associam baixos níveis de magnésio à ansiedade, irritabilidade e episódios depressivos.</li>
+    <li><strong>Digestão:</strong> contribui para o trânsito intestinal e ajuda a evitar constipação.</li>
+  </ul>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-number">+300</div><div class="stat-label">reações enzimáticas dependem de magnésio</div></div>
+    <div class="stat-card"><div class="stat-number">60%</div><div class="stat-label">dos brasileiros consomem menos magnésio do que o recomendado</div></div>
+    <div class="stat-card"><div class="stat-number">320 mg</div><div class="stat-label">é a ingestão diária recomendada para mulheres adultas</div></div>
+  </div>
+
+  <h2 id="deficit">Sinais de deficiência</h2>
+  <p>A deficiência de magnésio é silenciosa, mas dá sinais. Os mais comuns:</p>
+  <ul class="check-list">
+    <li>Câimbras à noite, principalmente em panturrilhas e pés.</li>
+    <li>Tremor involuntário das pálpebras.</li>
+    <li>Insônia e sono fragmentado.</li>
+    <li>Cansaço sem motivo aparente.</li>
+    <li>Ansiedade, irritabilidade, sensibilidade ao estresse.</li>
+    <li>Dor de cabeça frequente e enxaquecas.</li>
+    <li>Palpitações e arritmias leves.</li>
+    <li>Constipação e digestão difícil.</li>
+  </ul>
+
+  <div class="danger-box">
+    <h4>Atenção</h4>
+    <p>Câimbras recorrentes e palpitações merecem investigação. Magnésio é parte importante da história, mas o diagnóstico precisa de avaliação médica.</p>
+  </div>
+
+  <h2 id="fontes">Onde encontrar magnésio na alimentação</h2>
+  <p>Boas fontes de magnésio incluem:</p>
+  <ul class="check-list">
+    <li>Folhas verde-escuras: espinafre, couve, rúcula.</li>
+    <li>Sementes de abóbora, girassol e linhaça.</li>
+    <li>Oleaginosas: amêndoas, castanha-do-pará, castanha de caju.</li>
+    <li>Leguminosas: feijão preto, lentilha, grão-de-bico.</li>
+    <li>Abacate e banana.</li>
+    <li>Cacau puro e chocolate amargo acima de 70%.</li>
+    <li>Cereais integrais: aveia, arroz integral, quinoa.</li>
+  </ul>
+
+  <div class="mid-cta">
+    <p>Repor magnésio começa na água que você bebe todos os dias.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Acqualive →</a>
+  </div>
+
+  <h2 id="agua">Magnésio também vem da água</h2>
+  <p>Pouca gente lembra, mas a <strong>água mineralizada é uma das fontes mais consistentes</strong> de magnésio biodisponível no dia a dia. Diferente do suplemento, ela entra naturalmente, em pequenas doses, várias vezes ao dia, do jeito que o corpo melhor absorve.</p>
+
+  <p>O ponto é que a água da torneira praticamente não tem magnésio, e a maioria das águas engarrafadas tem teores baixos. Para realmente repor pela hidratação, é preciso uma água com magnésio na composição.</p>
+
+  <h2 id="acqualive">Como o Acqualive entra nessa conta</h2>
+  <p>O <strong>Purificador Acqualive</strong> usa cartucho ionizador com magnésio natural. A água passa pelo sistema, é filtrada de cloro e contaminantes, alcalinizada, e ganha minerais essenciais, inclusive o magnésio, em quantidade real e biodisponível.</p>
+
+  <p>É hidratação que vira nutrição. Sem cápsula, sem pó, sem suplemento. Só o copo de água que você já bebe todos os dias, agora trabalhando a favor da sua saúde de verdade.</p>
+
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-cozinha-moderna.png" alt="Purificador Acqualive em cozinha moderna, entregando água alcalina mineralizada com magnésio" class="article-img" loading="lazy" width="1080" height="1350">
+
+  <div class="info-box">
+    <h4>Por que combinar comida e água</h4>
+    <p>Magnésio dos alimentos depende de boa digestão para ser absorvido. O magnésio da água alcalina é biodisponível e entra ao longo do dia inteiro, em doses pequenas e constantes.</p>
+  </div>
+
+  <div class="cta-section">
+    <h2>Sua hidratação pode <span>nutrir</span></h2>
+    <p>Tenha o Purificador Acqualive em casa e dê ao seu corpo magnésio biodisponível em cada copo. Em até 10x sem juros e frete grátis. Consulte regiões disponíveis.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Conhecer o Acqualive →</a>
+  </div>
+
+  <div class="related-links">
+    <h4>Continue lendo</h4>
+    <ul>
+      <li><a href="https://blog.acqualive.com.br/agua-anti-inflamatoria/" target="_blank">Água anti-inflamatória: o copo que desliga a inflamação silenciosa</a></li>
+      <li><a href="https://blog.acqualive.com.br/qual-o-melhor-filtro-de-agua/" target="_blank">Qual o melhor filtro de água para a sua casa</a></li>
+    </ul>
+  </div>
+</main>`
+  )
+};
+
+// ============================================================
+// ARTIGO 15 — Blue Zones
+// ============================================================
+const article15 = {
+  title: "Blue Zones: o segredo da água dos lugares onde as pessoas vivem mais de 100 anos",
+  slug: "blue-zones-agua-longevidade",
+  html: wrap(
+    `<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blue Zones: A Água dos Lugares Onde Se Vive Mais de 100 Anos | Acqualive</title>
+<meta name="description" content="Sardenha, Okinawa, Ikaria, Nicoya e Loma Linda concentram os centenários mais saudáveis do planeta. Descubra o que há em comum na água que bebem e como ter essa mesma água em casa com o Purificador Acqualive.">
+<meta name="keywords" content="blue zones, zonas azuis, água longevidade, Okinawa água, Sardenha água, Ikaria centenários, água alcalina longevidade, Acqualive">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Acqualive">
+<link rel="canonical" href="https://blog.acqualive.com.br/blue-zones-agua-longevidade/">
+<meta property="og:title" content="Blue Zones: o segredo da água dos centenários">
+<meta property="og:description" content="O que a água de Okinawa, Sardenha, Ikaria, Nicoya e Loma Linda tem em comum, e como ter algo parecido em casa.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/blue-zones.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Blue Zones: o segredo da água dos lugares onde as pessoas vivem mais de 100 anos","description":"As cinco Blue Zones do mundo, o perfil da água que consomem e como replicar isso em casa.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-05-31","dateModified":"2026-05-31","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/blue-zones.jpg"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"O que são as Blue Zones?","acceptedAnswer":{"@type":"Answer","text":"Blue Zones, ou Zonas Azuis, são cinco regiões do planeta com concentração extraordinária de pessoas que vivem além dos 100 anos com saúde: Sardenha (Itália), Okinawa (Japão), Ikaria (Grécia), Nicoya (Costa Rica) e Loma Linda (Califórnia, EUA). O conceito foi mapeado pelo pesquisador Dan Buettner."}},
+{"@type":"Question","name":"Como é a água das Blue Zones?","acceptedAnswer":{"@type":"Answer","text":"É uma água naturalmente alcalina, rica em minerais como magnésio, cálcio e bicarbonato, vinda de fontes vulcânicas, montanhas ou aquíferos profundos. Tem pH levemente acima do neutro e poder antioxidante natural."}},
+{"@type":"Question","name":"Dá para ter essa mesma água em casa?","acceptedAnswer":{"@type":"Answer","text":"Sim. O Purificador Acqualive utiliza um cartucho ionizador que reproduz o efeito das fontes alcalinas naturais. A água sai filtrada, alcalinizada, mineralizada com magnésio e com características semelhantes às águas consumidas nas Blue Zones."}}
+]}
+</script>`,
+    `<header class="article-header">
+  <div class="header-inner">
+    <span class="badge">LONGEVIDADE</span>
+    <h1><span>Blue Zones</span>: o segredo da água dos lugares onde as pessoas vivem mais de 100 anos</h1>
+    <p class="header-desc">Cinco regiões do mundo concentram os centenários mais saudáveis do planeta. E a água que eles bebem segue um padrão muito claro.</p>
+    <div class="header-meta">
+      <span>Acqualive</span><span>•</span><span>31 mai 2026</span><span>•</span><span>10 min de leitura</span>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/blue-zones.jpg" alt="Casal de idosos caminhando em olival ao pôr do sol perto do mar, paisagem mediterrânea inspirada nas Blue Zones" width="1280" height="800" loading="eager">
+  </div>
+</header>
+
+<main class="article-body">
+  <p>Em algumas regiões do planeta, viver até os 100 anos não é exceção. É padrão. Pessoas trabalham na horta aos 95, sobem morro aos 102 e mantêm clareza mental até o último dia. O pesquisador Dan Buettner mapeou esses lugares e chamou-os de <strong>Blue Zones</strong>, ou Zonas Azuis. São cinco: Sardenha (Itália), Okinawa (Japão), Ikaria (Grécia), Nicoya (Costa Rica) e Loma Linda (Califórnia).</p>
+
+  <p>Muita gente fala dos hábitos: alimentação à base de plantas, vida ativa, comunidade, propósito. Quase ninguém fala do que está dentro do copo deles, todos os dias, várias vezes por dia. <strong>A água.</strong></p>
+
+  <div class="quote">"As Blue Zones têm em comum uma água naturalmente alcalina, rica em minerais e com poder antioxidante. Essa não é uma coincidência geográfica."</div>
+
+  <nav class="toc">
+    <div class="toc-title">Neste artigo</div>
+    <ol>
+      <li><a href="#oqsao">O que são as Blue Zones</a></li>
+      <li><a href="#cinco">As cinco regiões e suas águas</a></li>
+      <li><a href="#padrao">O padrão escondido no copo deles</a></li>
+      <li><a href="#brasil">E a nossa água no Brasil?</a></li>
+      <li><a href="#acqualive">Como ter água de Blue Zone em casa</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="oqsao">O que são as Blue Zones</h2>
+  <p>O conceito nasceu de uma investigação demográfica e ganhou o mundo com a série Blue Zones, da Netflix, e o trabalho da National Geographic. São regiões onde o número de centenários por habitante é desproporcionalmente alto e a qualidade de vida na velhice é notável.</p>
+
+  <h2 id="cinco">As cinco regiões e suas águas</h2>
+
+  <h3>Sardenha, Itália</h3>
+  <p>Pequenos vilarejos nas montanhas, água que desce de fontes calcárias ricas em magnésio e cálcio. Vinho Cannonau e dieta mediterrânea complementam.</p>
+
+  <h3>Okinawa, Japão</h3>
+  <p>Água vinda de aquíferos coralíneos, naturalmente alcalina, rica em minerais e com poder antioxidante. Os okinawanos a chamam de "água que carrega vida".</p>
+
+  <h3>Ikaria, Grécia</h3>
+  <p>Ilha grega famosa pelos termais. A água ali é mineralizada por rochas vulcânicas, alcalina e bebida em abundância ao longo do dia.</p>
+
+  <h3>Nicoya, Costa Rica</h3>
+  <p>Aquíferos profundos atravessam rochas vulcânicas e calcárias, gerando uma água naturalmente alcalina, com cálcio e magnésio em alta concentração.</p>
+
+  <h3>Loma Linda, Califórnia</h3>
+  <p>Comunidade adventista com hábitos de vida muito conscientes. A água consumida é, em grande parte, filtrada e mineralizada, frequentemente alcalinizada de forma natural ou tecnológica.</p>
+
+  <h2 id="padrao">O padrão escondido no copo deles</h2>
+  <p>Apesar de virem de continentes diferentes, as águas das Blue Zones têm assinatura parecida:</p>
+
+  <ul class="check-list">
+    <li><strong>pH levemente alcalino</strong>, geralmente entre 8 e 9.</li>
+    <li><strong>Ricas em magnésio, cálcio e bicarbonatos.</strong></li>
+    <li><strong>Baixo teor de contaminantes</strong>, sem cloro adicionado e sem microplásticos.</li>
+    <li><strong>Poder antioxidante natural</strong>, devido ao tipo de mineralização.</li>
+    <li><strong>Consumo abundante</strong>, em pequenas doses, várias vezes ao dia.</li>
+  </ul>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-number">5</div><div class="stat-label">regiões do mundo classificadas como Blue Zones</div></div>
+    <div class="stat-card"><div class="stat-number">100+</div><div class="stat-label">anos de expectativa em algumas comunidades</div></div>
+    <div class="stat-card"><div class="stat-number">pH 8-9</div><div class="stat-label">média da água naturalmente consumida nessas regiões</div></div>
+  </div>
+
+  <h2 id="brasil">E a nossa água no Brasil?</h2>
+  <p>A água da torneira brasileira é tratada com cloro, costuma ter pH levemente ácido e baixo teor de magnésio. A engarrafada carrega o problema dos <a href="https://blog.acqualive.com.br/microplasticos-no-cerebro/" target="_blank">microplásticos</a>. Estamos longe, em condição natural, do padrão das Blue Zones.</p>
+
+  <p>A boa notícia é que dá para reproduzir esse padrão em casa.</p>
+
+  <div class="mid-cta">
+    <p>A mesma assinatura das águas mais saudáveis do mundo, na torneira da sua cozinha.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Acqualive →</a>
+  </div>
+
+  <h2 id="acqualive">Como ter água de Blue Zone em casa</h2>
+  <p>O <strong>Purificador Acqualive</strong> foi desenvolvido justamente com essa lógica: replicar, em casa, o tipo de água que os povos mais longevos do mundo bebem todos os dias.</p>
+
+  <p>O processo é simples. A água comum entra pelo filtro, passa por etapas que removem cloro, sedimentos e partículas indesejadas, e em seguida atravessa o cartucho ionizador com magnésio. Sai alcalina, mineralizada, com pH próximo a 9 e poder antioxidante real (ORP reduzido). É a evolução do filtro de barro tradicional, sem perder a essência da água fresquinha.</p>
+
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/terracota-cozinha-classica.png" alt="Purificador Acqualive Terracota em cozinha clássica, oferecendo água alcalina inspirada nas Blue Zones" class="article-img" loading="lazy" width="1080" height="1350">
+
+  <div class="info-box">
+    <h4>Hidratação como hábito de longevidade</h4>
+    <p>A diferença das Blue Zones não está em um único ato heroico, mas na soma de pequenos gestos diários. A água é um deles, talvez o mais constante. Mudar a sua água é uma das decisões mais simples para começar a se aproximar desse padrão de vida.</p>
+  </div>
+
+  <div class="cta-section">
+    <h2>Beba a mesma água <span>dos centenários</span></h2>
+    <p>Tenha em casa a versão moderna das águas das Blue Zones, com o Purificador Acqualive. Em até 10x sem juros e frete grátis. Consulte regiões disponíveis.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Conhecer o Acqualive →</a>
+  </div>
+
+  <div class="related-links">
+    <h4>Continue lendo</h4>
+    <ul>
+      <li><a href="https://blog.acqualive.com.br/agua-anti-inflamatoria/" target="_blank">Água anti-inflamatória: o copo que desliga a inflamação silenciosa</a></li>
+      <li><a href="https://blog.acqualive.com.br/magnesio-beneficios-saude/" target="_blank">Magnésio: o mineral esquecido que sustenta sua saúde</a></li>
+    </ul>
+  </div>
+</main>`
+  )
+};
+
+// ============================================================
+// ARTIGO 16 — Hidratação no pé na jaca da Copa do Mundo
+// ============================================================
+const article16 = {
+  title: "Pé na jaca nos jogos do Brasil? Como a hidratação ajuda a equilibrar a Copa do Mundo",
+  slug: "hidratacao-copa-do-mundo-brasil",
+  html: wrap(
+    `<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hidratação Para Equilibrar o Pé na Jaca da Copa do Mundo | Acqualive</title>
+<meta name="description" content="Cerveja, fritura e churrasco nos jogos do Brasil são quase tradição. Veja como a hidratação inteligente com água alcalina ajuda a equilibrar a acidez, a ressaca e a inflamação dos dias de Copa do Mundo.">
+<meta name="keywords" content="hidratação copa do mundo, ressaca cerveja, equilíbrio ácido base, água alcalina ressaca, jogos do Brasil saúde, pé na jaca, Acqualive">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Acqualive">
+<link rel="canonical" href="https://blog.acqualive.com.br/hidratacao-copa-do-mundo-brasil/">
+<meta property="og:title" content="Pé na jaca nos jogos do Brasil? A hidratação salva.">
+<meta property="og:description" content="Como equilibrar a comilança, a cerveja e a fritura dos jogos da Copa com hidratação alcalina inteligente.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/copa-do-mundo-hidratacao.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Pé na jaca nos jogos do Brasil? Como a hidratação ajuda a equilibrar a Copa do Mundo","description":"Estratégias práticas de hidratação para equilibrar a ingestão de álcool, frituras e doces nos dias de jogos do Brasil.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-05-31","dateModified":"2026-05-31","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/copa-do-mundo-hidratacao.jpg"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Por que a cerveja causa tanta ressaca?","acceptedAnswer":{"@type":"Answer","text":"O álcool é diurético, faz o corpo eliminar mais água e minerais do que ingere, e gera subprodutos inflamatórios. O resultado é desidratação, dor de cabeça, cansaço e enjoo no dia seguinte."}},
+{"@type":"Question","name":"Água alcalina ajuda na ressaca?","acceptedAnswer":{"@type":"Answer","text":"Sim. A água alcalina mineralizada ajuda a repor magnésio e outros minerais perdidos com o álcool, neutraliza parte da acidez metabólica gerada pela cerveja, frituras e doces, e acelera a reidratação celular."}},
+{"@type":"Question","name":"Quanto beber antes, durante e depois do jogo?","acceptedAnswer":{"@type":"Answer","text":"O ideal é um copo de água ao acordar, mais um copo antes do jogo, alternar água com cada cerveja ou refrigerante durante o jogo e beber pelo menos dois copos antes de dormir. No dia seguinte, retomar a meta de 35 ml por quilo de peso."}}
+]}
+</script>`,
+    `<header class="article-header">
+  <div class="header-inner">
+    <span class="badge">SAÚDE E BEM-ESTAR</span>
+    <h1>Pé na jaca nos <span>jogos do Brasil</span>? Como a hidratação equilibra a sua Copa do Mundo</h1>
+    <p class="header-desc">Churrasco, cerveja e fritura fazem parte da festa. Mas o corpo cobra a conta. Veja como atravessar a Copa do Mundo com saúde, sem virar o esportista chato do grupo.</p>
+    <div class="header-meta">
+      <span>Acqualive</span><span>•</span><span>31 mai 2026</span><span>•</span><span>8 min de leitura</span>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/copa-do-mundo-hidratacao.jpg" alt="Amigos com camisa da seleção brasileira assistindo jogo, mesa com petiscos, cerveja e uma jarra grande de água com limão" width="1280" height="800" loading="eager">
+  </div>
+</header>
+
+<main class="article-body">
+  <p>Dia de jogo do Brasil na Copa do Mundo tem cara, cheiro e cardápio próprios. Camisa amarela, churrasco no fogo, cerveja gelada, coxinha, batata frita, refrigerante, vinho, doce no fim. Acontece em casa, no bar, no escritório que liberou para assistir. E acontece em série: dia sim, dia não, durante semanas.</p>
+
+  <p>O corpo aguenta um dia. Aguenta dois. Aguenta a Copa inteira? Só se você ajudar. E a ajuda mais barata, mais simples e mais efetiva tem um nome: <strong>água, na hora certa e na qualidade certa</strong>.</p>
+
+  <div class="quote">"A maior parte da ressaca não é o álcool em si. É a desidratação e a perda de minerais que ele provoca."</div>
+
+  <nav class="toc">
+    <div class="toc-title">Neste artigo</div>
+    <ol>
+      <li><a href="#corpo">O que acontece com o corpo no dia de jogo</a></li>
+      <li><a href="#agua-vs">Água x cerveja x refrigerante</a></li>
+      <li><a href="#estrategia">Estratégia de hidratação para o jogo</a></li>
+      <li><a href="#dia-seguinte">Recuperação no dia seguinte</a></li>
+      <li><a href="#acqualive">Onde o Acqualive entra</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="corpo">O que acontece com o corpo no dia de jogo</h2>
+  <p>Cerveja é diurética: faz você urinar mais do que bebe. Fritura é acidificante e inflamatória. Sal em excesso retém líquido e sobrecarrega rins. Açúcar do refrigerante e do doce desestabiliza a glicemia. Soma tudo e o resultado é <strong>desidratação, perda de minerais, inflamação sistêmica</strong> e aquele "dia seguinte" arrasado, sem disposição para nada.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-number">3 a 4x</div><div class="stat-label">mais perda de água pela urina ao beber cerveja em relação à água</div></div>
+    <div class="stat-card"><div class="stat-number">35 ml</div><div class="stat-label">por quilo de peso, a meta diária de hidratação</div></div>
+    <div class="stat-card"><div class="stat-number">1:1</div><div class="stat-label">razão ideal entre copos de cerveja e copos de água no dia do jogo</div></div>
+  </div>
+
+  <h2 id="agua-vs">Água x cerveja x refrigerante</h2>
+  <p>Cerveja, refrigerante e isotônico hidratam menos do que parecem. <strong>Água ainda é a melhor bebida do planeta</strong>, e é onde você ganha ou perde a batalha contra a ressaca. Se a água também repõe magnésio, melhor ainda.</p>
+
+  <h2 id="estrategia">Estratégia de hidratação para o jogo</h2>
+
+  <h3>Antes do jogo</h3>
+  <ul class="check-list">
+    <li>Acorde e beba um copo cheio de água alcalina.</li>
+    <li>Almoce normalmente, com bastante salada e frutas com água (melancia, abacaxi, laranja).</li>
+    <li>Trinta minutos antes da partida, beba mais um copo de água.</li>
+  </ul>
+
+  <h3>Durante o jogo</h3>
+  <ul class="check-list">
+    <li>Para cada cerveja ou refrigerante, beba um copo de água ao lado.</li>
+    <li>Tenha uma jarra de água com fatias de limão e gelo na mesa. Convida o grupo todo a beber.</li>
+    <li>Modere fritura e doce. Eles puxam mais água ainda.</li>
+  </ul>
+
+  <h3>Depois do jogo</h3>
+  <ul class="check-list">
+    <li>Antes de dormir, dois copos cheios de água alcalina, devagar.</li>
+    <li>Evite dormir desidratado. É o que separa um dia seguinte ruim de um dia seguinte funcional.</li>
+  </ul>
+
+  <div class="mid-cta">
+    <p>O segredo do dia seguinte tranquilo está no que você bebe junto com a cerveja.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Acqualive →</a>
+  </div>
+
+  <h2 id="dia-seguinte">Recuperação no dia seguinte</h2>
+  <ul class="check-list">
+    <li>Comece o dia com um copo grande de água alcalina e o suco de meio limão.</li>
+    <li>Café da manhã com fruta, ovo e algo integral. Evite repetir a gordura da noite anterior.</li>
+    <li>Continue bebendo água ao longo da manhã.</li>
+    <li>Caminhada leve de 20 a 30 minutos ajuda a destravar a circulação.</li>
+    <li>Almoço leve, com folhas verdes (magnésio) e proteína magra.</li>
+  </ul>
+
+  <div class="info-box">
+    <h4>Por que a água alcalina ajuda</h4>
+    <p>A acidez gerada por álcool, fritura e açúcar puxa minerais do corpo para ser neutralizada. Uma água levemente alcalina e mineralizada ajuda nesse equilíbrio, devolve magnésio e cálcio perdidos e acelera a reidratação celular.</p>
+  </div>
+
+  <h2 id="acqualive">Onde o Acqualive entra</h2>
+  <p>O <strong>Purificador Acqualive</strong> entrega água alcalina ionizada, com magnésio biodisponível, sem cloro e sem microplásticos. É a água ideal para começar o dia, para abastecer a jarra do dia de jogo e para fechar a noite antes de dormir.</p>
+
+  <p>Você não precisa virar atleta na Copa. Só precisa hidratar direito enquanto torce.</p>
+
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-cozinha-natureza.jpg" alt="Purificador Acqualive em cozinha com plantas, água alcalina para acompanhar os jogos da Copa do Mundo" class="article-img" loading="lazy" width="1200" height="800">
+
+  <div class="cta-section">
+    <h2>Atravesse a Copa <span>sem se entregar</span></h2>
+    <p>Tenha água alcalina mineralizada todos os dias, com o Purificador Acqualive. Em até 10x sem juros e frete grátis. Consulte regiões disponíveis.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Conhecer o Acqualive →</a>
+  </div>
+
+  <div class="related-links">
+    <h4>Continue lendo</h4>
+    <ul>
+      <li><a href="https://blog.acqualive.com.br/agua-anti-inflamatoria/" target="_blank">Água anti-inflamatória: o copo que desliga a inflamação silenciosa</a></li>
+      <li><a href="https://blog.acqualive.com.br/magnesio-beneficios-saude/" target="_blank">Magnésio: o mineral esquecido que sustenta sua saúde</a></li>
+    </ul>
+  </div>
+</main>`
+  )
+};
+
+// ============================================================
+// ARTIGO 17 — Como fazer água alcalina em casa
+// ============================================================
+const article17 = {
+  title: "Como fazer água alcalina em casa em menos de 1 minuto (e qual receita realmente funciona)",
+  slug: "como-fazer-agua-alcalina-em-casa",
+  html: wrap(
+    `<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como Fazer Água Alcalina em Casa em 30 Segundos | Acqualive</title>
+<meta name="description" content="Aprenda 3 formas de fazer água alcalina em casa: com bicarbonato, com limão e com filtro ionizador. Veja as vantagens, limites de cada receita e qual delas entrega a água perfeita de verdade.">
+<meta name="keywords" content="como fazer água alcalina em casa, água alcalina caseira, água com bicarbonato, água com limão, filtro ionizador, água alcalina ionizada, Acqualive, purificador de água alcalina">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Acqualive">
+<link rel="canonical" href="https://blog.acqualive.com.br/como-fazer-agua-alcalina-em-casa/">
+<meta property="og:title" content="Como fazer água alcalina em casa em menos de 1 minuto">
+<meta property="og:description" content="Três receitas de água alcalina caseira: vantagens, limites e qual realmente funciona para o dia a dia.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/agua-alcalina-em-casa.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Como fazer água alcalina em casa em menos de 1 minuto","description":"As três principais formas de fazer água alcalina em casa: bicarbonato, limão e filtro ionizador. Comparativo completo.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-05-31","dateModified":"2026-05-31","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/agua-alcalina-em-casa.jpg"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Dá para fazer água alcalina em casa?","acceptedAnswer":{"@type":"Answer","text":"Sim. As três formas mais comuns são: adicionar bicarbonato de sódio à água, espremer meio limão em um copo de água morna ou utilizar um filtro ionizador. Cada opção tem vantagens e limites diferentes."}},
+{"@type":"Question","name":"Água com bicarbonato pode ser bebida todos os dias?","acceptedAnswer":{"@type":"Answer","text":"Não em grande quantidade. Para alcançar a hidratação diária ideal, seria necessário consumir cerca de 11 g de bicarbonato por dia, muito acima do recomendado. É uma alternativa pontual, não rotina."}},
+{"@type":"Question","name":"Qual a melhor forma de ter água alcalina em casa?","acceptedAnswer":{"@type":"Answer","text":"O filtro ionizador, como o Purificador Acqualive, é a única forma que entrega água alcalina ionizada, filtrada, mineralizada com magnésio e com poder antioxidante real, sem dose extra de sódio e sem depender de limões frescos."}}
+]}
+</script>`,
+    `<header class="article-header">
+  <div class="header-inner">
+    <span class="badge">ÁGUA ALCALINA</span>
+    <h1>Como fazer <span>água alcalina em casa</span> em menos de 1 minuto</h1>
+    <p class="header-desc">Três receitas, vantagens reais, limites honestos. E uma única opção que entrega a água perfeita de verdade, todos os dias.</p>
+    <div class="header-meta">
+      <span>Acqualive</span><span>•</span><span>31 mai 2026</span><span>•</span><span>8 min de leitura</span>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/agua-alcalina-em-casa.jpg" alt="Bancada de cozinha clara com três copos de água: um com bicarbonato, outro com limão e o terceiro saindo do Purificador Acqualive" width="1280" height="800" loading="eager">
+  </div>
+</header>
+
+<main class="article-body">
+  <p>Você já deve ter ouvido que a água alcalina é a melhor versão de água para o seu corpo. E é. O mais incrível é que dá para fazer água alcalina em casa, em menos de um minuto. O ponto é que, das três receitas mais populares, apenas uma realmente entrega o que se espera de uma água perfeita no dia a dia.</p>
+
+  <p>Antes das receitas, vale lembrar o básico que muita gente esquece: <strong>a hidratação correta é a base de tudo</strong>. O corpo humano é cerca de 70% água. Manter esse volume com qualidade é o que sustenta o funcionamento de órgãos, pele, cérebro e energia.</p>
+
+  <div class="quote">"Sede não é sinal de hidratação saudável. É sinal de desidratação avançada. Beba antes de sentir."</div>
+
+  <p>A referência geral é beber <strong>1 litro de água a cada 18 kg de peso corporal</strong>. Para boa parte dos adultos, isso fica entre 3 e 4 litros por dia, somando água, frutas, sopas e chás.</p>
+
+  <nav class="toc">
+    <div class="toc-title">Neste artigo</div>
+    <ol>
+      <li><a href="#importancia">Por que apostar em água alcalina</a></li>
+      <li><a href="#bicarbonato">Receita 1: água com bicarbonato</a></li>
+      <li><a href="#limao">Receita 2: água com limão</a></li>
+      <li><a href="#ionizador">Receita 3: filtros ionizadores</a></li>
+      <li><a href="#comparativo">Comparativo rápido das três opções</a></li>
+      <li><a href="#acqualive">O Purificador Acqualive na prática</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="importancia">Por que apostar em água alcalina</h2>
+  <p>A alimentação moderna é ácida: ultraprocessados, frituras, açúcar, café, álcool, refrigerantes. O corpo gasta energia e minerais para manter o pH sanguíneo em equilíbrio. Uma <strong>água levemente alcalina, mineralizada e com poder antioxidante</strong> ajuda nessa conta, devolve magnésio e cálcio, e melhora a hidratação celular.</p>
+
+  <h2 id="bicarbonato">Receita 1: água com bicarbonato de sódio</h2>
+  <p>A forma mais conhecida. O bicarbonato é um mineral alcalino que sobe o pH da água rapidamente.</p>
+
+  <div class="info-box">
+    <h4>Como fazer</h4>
+    <p>Adicione cerca de 600 mg de bicarbonato de sódio em 200 ml de água, mexa bem e consuma.</p>
+  </div>
+
+  <p>Funciona? Sim. Para uma situação pontual, é prático. Mas há um problema sério: se você for tentar fazer disso sua hidratação diária, vai consumir cerca de <strong>11 g de bicarbonato por dia</strong>. É muito sódio, muito acima do recomendado.</p>
+
+  <p>Outro limite: a água com bicarbonato não recebe magnésio, cálcio nem potássio. Fica apenas alcalinizada por excesso de um único mineral, e não equilibrada.</p>
+
+  <div class="danger-box">
+    <h4>Atenção</h4>
+    <p>Hipertensos, pessoas com restrição de sódio e quem tem doença renal devem evitar a água com bicarbonato como rotina. Use, no máximo, como solução pontual.</p>
+  </div>
+
+  <h2 id="limao">Receita 2: água com limão</h2>
+  <p>O limão é ácido ao toque, mas torna-se alcalino ao ser metabolizado pelo corpo. É rico em minerais saudáveis, ajuda a combater o envelhecimento e é delicioso.</p>
+
+  <div class="info-box">
+    <h4>Como fazer</h4>
+    <p>Aqueça levemente um copo de água, esprema meio limão fresco, misture e beba pela manhã, em jejum. Não use suco pronto e não adoce.</p>
+  </div>
+
+  <p>É uma ótima prática diária e bem mais saudável que o bicarbonato. Mas tem dois limites:</p>
+
+  <ul class="check-list">
+    <li><strong>Depende da água que você usa.</strong> Se a água de base estiver cheia de cloro, contaminantes e for ácida, o limão sozinho não corrige isso por completo.</li>
+    <li><strong>Não é uma solução completa.</strong> Não entrega todos os atributos de uma água verdadeiramente perfeita: pH alcalino estável, poder alcalinizante (PRAL negativo), poder antioxidante (ORP reduzido), riqueza em minerais, pureza e leveza.</li>
+  </ul>
+
+  <p>Então, beba água com limão pela manhã. Mas, para a hidratação do dia inteiro, vá para a receita 3.</p>
+
+  <div class="mid-cta">
+    <p>Receitas caseiras ajudam pontualmente. Para o dia a dia, o filtro ionizador resolve.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Acqualive →</a>
+  </div>
+
+  <h2 id="ionizador">Receita 3: filtros ionizadores</h2>
+  <p>É, de longe, a forma mais completa de ter água alcalina em casa. Os filtros ionizadores fazem três coisas ao mesmo tempo: <strong>retiram o que é ruim</strong> (cloro, sedimentos, metais pesados, contaminantes), <strong>mantêm o que é bom</strong> e <strong>adicionam o que falta</strong> (magnésio, cálcio, potássio).</p>
+
+  <p>O resultado é uma água:</p>
+  <ul class="check-list">
+    <li>Filtrada, sem cloro, sem trihalometanos, sem microplásticos.</li>
+    <li>Alcalina, com pH próximo a 9.</li>
+    <li>Ionizada, com poder antioxidante real (ORP reduzido).</li>
+    <li>Mineralizada com magnésio biodisponível.</li>
+    <li>Pronta para beber, fresquinha, a qualquer hora.</li>
+  </ul>
+
+  <p>É exatamente o tipo de água que se encontra nas <a href="https://blog.acqualive.com.br/blue-zones-agua-longevidade/" target="_blank">Blue Zones</a>, os lugares no mundo onde as pessoas vivem mais de 100 anos com saúde.</p>
+
+  <h2 id="comparativo">Comparativo rápido das três opções</h2>
+
+  <table style="width:100%; border-collapse:collapse; margin:24px 0; font-size:15px;">
+    <thead>
+      <tr style="background:#eff6ff;">
+        <th style="padding:12px; text-align:left; color:#1e3a8a; border-bottom:2px solid #bfdbfe;">Critério</th>
+        <th style="padding:12px; text-align:left; color:#1e3a8a; border-bottom:2px solid #bfdbfe;">Bicarbonato</th>
+        <th style="padding:12px; text-align:left; color:#1e3a8a; border-bottom:2px solid #bfdbfe;">Limão</th>
+        <th style="padding:12px; text-align:left; color:#1e3a8a; border-bottom:2px solid #bfdbfe;">Ionizador</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Alcaliniza</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Sim</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Sim</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Sim</td></tr>
+      <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Filtra contaminantes</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Não</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Não</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Sim</td></tr>
+      <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Adiciona magnésio</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Não</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Pouco</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Sim</td></tr>
+      <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Poder antioxidante</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Não</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Parcial</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Sim</td></tr>
+      <tr><td style="padding:10px;">Indicado para o dia a dia</td><td style="padding:10px;">Não</td><td style="padding:10px;">Como complemento</td><td style="padding:10px;">Sim</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="acqualive">O Purificador Acqualive na prática</h2>
+  <p>O <strong>Purificador Acqualive</strong> é um filtro ionizador por gravidade, simples e prático. Você coloca a água comum, que sai da sua torneira, e em pouquíssimo tempo a ciência acontece: a água com cloro e ácida se transforma na água mais perfeita que você poderia imaginar, com magnésio biodisponível e poder antioxidante real.</p>
+
+  <p>Sem eletricidade. Sem químicos. Sem garrafa plástica. Sem dose extra de sódio. É a evolução natural do filtro de barro, sem perder a essência da água fresquinha.</p>
+
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-cozinha-moderna.png" alt="Purificador Acqualive transparente em cozinha contemporânea, fonte de água alcalina ionizada em casa" class="article-img" loading="lazy" width="1080" height="1350">
+
+  <div class="info-box">
+    <h4>Para quem é</h4>
+    <p>Para quem quer parar de comprar galão, parar de beber cloro, repor magnésio todos os dias e ter, em casa, a mesma assinatura de água que se encontra nas regiões mais longevas do mundo.</p>
+  </div>
+
+  <div class="cta-section">
+    <h2>Tenha água alcalina <span>de verdade</span> todos os dias</h2>
+    <p>Pare de improvisar com bicarbonato e dependa menos do limão. Tenha um Purificador Acqualive em casa. Em até 10x sem juros e frete grátis. Consulte regiões disponíveis.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Conhecer o Acqualive →</a>
+  </div>
+
+  <div class="related-links">
+    <h4>Continue lendo</h4>
+    <ul>
+      <li><a href="https://blog.acqualive.com.br/blue-zones-agua-longevidade/" target="_blank">Blue Zones: a água dos lugares onde se vive mais de 100 anos</a></li>
+      <li><a href="https://blog.acqualive.com.br/magnesio-beneficios-saude/" target="_blank">Magnésio: o mineral esquecido que sustenta sua saúde</a></li>
+      <li><a href="https://blog.acqualive.com.br/qual-o-melhor-filtro-de-agua/" target="_blank">Qual o melhor filtro de água para a sua casa</a></li>
+    </ul>
+  </div>
+</main>`
+  )
+};
+
+export const EXTRA_ARTICLES = [article6, article7, article8, article9, article10, article11, article12, article13, article14, article15, article16, article17];
