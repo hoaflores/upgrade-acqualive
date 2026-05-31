@@ -4137,13 +4137,46 @@ const BlogTemplates = () => {
     <div className="min-h-screen bg-[#0d1117]">
       {/* Top Bar */}
       <div className="sticky top-0 z-50 bg-[#161b26] border-b border-[#1c2333] px-4 py-3">
-        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-3">
-          <div className="flex items-center gap-2 flex-1">
-            <h1 className="text-sm font-bold text-[#3b82f6]">Blog {currentIndex + 1}/{ARTICLES.length}</h1>
-            <span className="text-sm text-gray-400 truncate max-w-[200px]">{article.title}</span>
+        <div className="max-w-5xl mx-auto flex flex-col gap-3">
+          <div className="flex flex-wrap items-center gap-3">
+            <div className="flex items-center gap-2 mr-auto">
+              <h1 className="text-sm font-bold text-[#3b82f6]">Blog {currentIndex + 1}/{ARTICLES.length}</h1>
+              <span className="text-sm text-gray-400 truncate max-w-[260px]">{article.title}</span>
+            </div>
+
+            <div className="flex items-center gap-2 flex-wrap">
+              <Button
+                size="sm"
+                variant={viewMode === "preview" ? "default" : "outline"}
+                onClick={() => setViewMode("preview")}
+                className={viewMode === "preview" ? "bg-[#3b82f6] hover:bg-[#2563eb]" : "border-[#1c2333] bg-transparent text-gray-300 hover:bg-[#1c2333]"}
+              >
+                <Eye className="h-4 w-4 mr-1" /> Preview
+              </Button>
+              <Button
+                size="sm"
+                variant={viewMode === "code" ? "default" : "outline"}
+                onClick={() => setViewMode("code")}
+                className={viewMode === "code" ? "bg-[#3b82f6] hover:bg-[#2563eb]" : "border-[#1c2333] bg-transparent text-gray-300 hover:bg-[#1c2333]"}
+              >
+                <Code className="h-4 w-4 mr-1" /> HTML
+              </Button>
+              <Button
+                size="sm"
+                variant={viewMode === "meta" ? "default" : "outline"}
+                onClick={() => setViewMode("meta")}
+                className={viewMode === "meta" ? "bg-[#3b82f6] hover:bg-[#2563eb]" : "border-[#1c2333] bg-transparent text-gray-300 hover:bg-[#1c2333]"}
+              >
+                <ListChecks className="h-4 w-4 mr-1" /> Metadados
+              </Button>
+              <Button size="sm" onClick={copyHtml} className="bg-[#3b82f6] hover:bg-[#2563eb]">
+                {copied ? <Check className="h-4 w-4 mr-1" /> : <Copy className="h-4 w-4 mr-1" />}
+                {copied ? "Copiado!" : "Copiar HTML"}
+              </Button>
+            </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap justify-center">
             <Button
               size="sm"
               variant="outline"
@@ -4177,42 +4210,9 @@ const BlogTemplates = () => {
             >
               <ChevronRight className="h-4 w-4" />
             </Button>
-
-            <div className="w-px h-6 bg-[#1c2333] mx-1" />
-
-            <Button
-              size="sm"
-              variant={viewMode === "preview" ? "default" : "outline"}
-              onClick={() => setViewMode("preview")}
-              className={viewMode === "preview" ? "bg-[#3b82f6] hover:bg-[#2563eb]" : "border-[#1c2333] bg-transparent text-gray-300 hover:bg-[#1c2333]"}
-            >
-              <Eye className="h-4 w-4 mr-1" /> Preview
-            </Button>
-            <Button
-              size="sm"
-              variant={viewMode === "code" ? "default" : "outline"}
-              onClick={() => setViewMode("code")}
-              className={viewMode === "code" ? "bg-[#3b82f6] hover:bg-[#2563eb]" : "border-[#1c2333] bg-transparent text-gray-300 hover:bg-[#1c2333]"}
-            >
-              <Code className="h-4 w-4 mr-1" /> HTML
-            </Button>
-            <Button
-              size="sm"
-              variant={viewMode === "meta" ? "default" : "outline"}
-              onClick={() => setViewMode("meta")}
-              className={viewMode === "meta" ? "bg-[#3b82f6] hover:bg-[#2563eb]" : "border-[#1c2333] bg-transparent text-gray-300 hover:bg-[#1c2333]"}
-            >
-              <ListChecks className="h-4 w-4 mr-1" /> Metadados
-            </Button>
-
-            <div className="w-px h-6 bg-[#1c2333] mx-1" />
-
-            <Button size="sm" onClick={copyHtml} className="bg-[#3b82f6] hover:bg-[#2563eb]">
-              {copied ? <Check className="h-4 w-4 mr-1" /> : <Copy className="h-4 w-4 mr-1" />}
-              {copied ? "Copiado!" : "Copiar HTML"}
-            </Button>
           </div>
         </div>
+
       </div>
 
       {/* Title line */}
