@@ -31,6 +31,7 @@ import FunilCalculadora from "./pages/FunilCalculadora";
 import DemandasSolicitadas from "./pages/DemandasSolicitadas";
 import EbookQuantidadeAgua from "./pages/EbookQuantidadeAgua";
 import MidiaKit from "./pages/MidiaKit";
+import ParceriasCafe from "./pages/ParceriasCafe";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -72,6 +73,7 @@ const App = () => (
             <Route path="/ebook-quantidade-agua" element={<EbookQuantidadeAgua />} />
             <Route path="/midia-kit" element={<MidiaKit />} />
             <Route path="/midia-kit/:slug" element={<MidiaKit />} />
+            <Route path="/parcerias-cafe" element={<ParceriasCafe />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
