@@ -117,7 +117,7 @@ const Counter = ({ to, suffix = "", duration = 1600 }: { to: number; suffix?: st
 };
 
 const ParceriasCafe = () => {
-  const [videoOpen, setVideoOpen] = useState(false);
+  const [openVideo, setOpenVideo] = useState<CaseVideo | null>(null);
   const [activeSense, setActiveSense] = useState<number | null>(null);
   const [scrollY, setScrollY] = useState(0);
   const [progress, setProgress] = useState(0);
