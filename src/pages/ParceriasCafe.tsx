@@ -608,48 +608,98 @@ const ParceriasCafe = () => {
             </p>
           </div>
 
-          {/* Video card with frame */}
+          {/* Video gallery — 1 featured + 2 shorts */}
           <div className="lg:col-span-7 relative" data-reveal data-reveal-delay="2">
+            {/* Featured horizontal video */}
             <button
               type="button"
-              onClick={() => setVideoOpen(true)}
+              onClick={() => setOpenVideo(VIDEOS[2])}
               className="group relative block w-full overflow-hidden rounded-[1.25rem] ring-1 ring-cafe-gold/20 shadow-[0_40px_80px_-30px_rgba(0,0,0,0.8)]"
-              aria-label="Reproduzir vídeo do case William & Sons"
+              aria-label={`Reproduzir vídeo: ${VIDEOS[2].title}`}
             >
               <img
-                src={caseWilliam}
-                alt="Barista preparando café especial na cafeteria William & Sons"
-                width={1536}
-                height={1024}
+                src={`https://img.youtube.com/vi/${VIDEOS[2].youtubeId}/maxresdefault.jpg`}
+                alt={VIDEOS[2].title}
+                width={1280}
+                height={720}
                 loading="lazy"
-                className="w-full aspect-[16/10] object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = caseWilliam;
+                }}
+                className="w-full aspect-[16/9] object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]"
               />
               <div
                 aria-hidden
                 className="absolute inset-0"
                 style={{
                   background:
-                    "linear-gradient(180deg, rgba(14,8,5,0.0) 40%, rgba(14,8,5,0.85) 100%)",
+                    "linear-gradient(180deg, rgba(14,8,5,0.0) 35%, rgba(14,8,5,0.9) 100%)",
                 }}
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="relative inline-flex h-20 w-20 md:h-24 md:w-24 items-center justify-center rounded-full bg-cafe-cream/95 text-[#1a0f08] shadow-[0_20px_60px_-10px_rgba(201,168,106,0.5)] transition-transform group-hover:scale-110">
+                <span className="relative inline-flex h-20 w-20 md:h-24 md:w-24 items-center justify-center rounded-full bg-cafe-cream text-[#1a0f08] shadow-[0_20px_60px_-10px_rgba(201,168,106,0.5)] transition-transform group-hover:scale-110">
                   <Play className="h-7 w-7 md:h-8 md:w-8 fill-current ml-1" />
                   <span aria-hidden className="absolute inset-0 rounded-full ring-1 ring-cafe-gold/60 ripple" />
                 </span>
               </div>
               <div className="absolute left-6 bottom-6 right-6 flex items-end justify-between">
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-cafe-gold/90">Mini documentário</p>
-                  <p className="font-cafe-display text-2xl md:text-3xl text-cafe-cream italic">
-                    William &amp; Sons × Acqualive
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-cafe-gold">{VIDEOS[2].tag}</p>
+                  <p className="font-cafe-display text-2xl md:text-3xl text-cafe-cream italic mt-1">
+                    {VIDEOS[2].title}
                   </p>
                 </div>
-                <span className="hidden md:inline-block text-xs text-cafe-mute tracking-[0.2em] uppercase">
-                  2:14
+                <span className="hidden md:inline-flex items-center gap-2 text-xs text-cafe-cream/80 tracking-[0.2em] uppercase rounded-full border border-cafe-gold/30 px-3 py-1 bg-black/40 backdrop-blur">
+                  <Play className="h-3 w-3 fill-current" />
+                  {VIDEOS[2].duration}
                 </span>
               </div>
             </button>
+
+            {/* Two vertical shorts */}
+            <div className="mt-6 grid grid-cols-2 gap-4">
+              {[VIDEOS[0], VIDEOS[1]].map((v) => (
+                <button
+                  key={v.id}
+                  type="button"
+                  onClick={() => setOpenVideo(v)}
+                  className="group relative block overflow-hidden rounded-2xl ring-1 ring-cafe-gold/15 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.8)] hover:ring-cafe-gold/50 transition-all text-left"
+                  aria-label={`Reproduzir Short: ${v.title}`}
+                >
+                  <div className="relative aspect-[9/14] overflow-hidden">
+                    <img
+                      src={`https://img.youtube.com/vi/${v.youtubeId}/hqdefault.jpg`}
+                      alt={v.title}
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.4s] group-hover:scale-110"
+                    />
+                    <div
+                      aria-hidden
+                      className="absolute inset-0"
+                      style={{
+                        background:
+                          "linear-gradient(180deg, rgba(14,8,5,0) 30%, rgba(14,8,5,0.92) 100%)",
+                      }}
+                    />
+                    <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur border border-cafe-gold/30 px-2.5 py-1 text-[9px] uppercase tracking-[0.2em] text-cafe-gold">
+                      <span className="h-1.5 w-1.5 rounded-full bg-cafe-gold animate-pulse" />
+                      Short
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-cafe-cream text-[#1a0f08] shadow-[0_10px_30px_-5px_rgba(201,168,106,0.5)] transition-transform group-hover:scale-110">
+                        <Play className="h-5 w-5 fill-current ml-0.5" />
+                      </span>
+                    </div>
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                      <p className="font-cafe-display italic text-cafe-cream text-base md:text-lg leading-tight">
+                        {v.title}
+                      </p>
+                      <p className="text-[10px] text-cafe-mute mt-1.5 line-clamp-2">{v.desc}</p>
+                    </div>
+                  </div>
+                </button>
+              ))}
+            </div>
 
             {/* Tasting badges */}
             <div className="mt-6 grid grid-cols-3 gap-3">
