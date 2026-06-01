@@ -19,8 +19,48 @@ const SENSES: Sense[] = [
   { word: "Acidez", note: "A vivacidade do café, valorizada por uma água sem excessos minerais." },
   { word: "Corpo", note: "A sensação na boca, mais limpa quando a água é livre de cloro." },
   { word: "Aroma", note: "Os voláteis do grão se expressam melhor em água de boa qualidade." },
-  { word: "Equilíbrio", note: "A harmonia entre todas as notas — começa pela base líquida." },
+  { word: "Equilíbrio", note: "A harmonia entre todas as notas, começa pela base líquida." },
   { word: "Extração", note: "A dança entre água e moagem que define a xícara final." },
+];
+
+type CaseVideo = {
+  id: string;
+  youtubeId: string;
+  tag: string;
+  title: string;
+  desc: string;
+  duration: string;
+  ratio: "vertical" | "horizontal";
+};
+
+const VIDEOS: CaseVideo[] = [
+  {
+    id: "v1",
+    youtubeId: "J8ukTmhKWgY",
+    tag: "Bastidores · Short",
+    title: "A água certa para o café certo",
+    desc: "Ramon mostra, em segundos, como a escolha da água muda a percepção do café especial na xícara.",
+    duration: "0:45",
+    ratio: "vertical",
+  },
+  {
+    id: "v2",
+    youtubeId: "NPURY1qXxzE",
+    tag: "Cafeteria · Short",
+    title: "O ritual da extração começa na água",
+    desc: "Por dentro da rotina da William & Sons: o cuidado com cada detalhe que antecede o primeiro gole.",
+    duration: "0:52",
+    ratio: "vertical",
+  },
+  {
+    id: "v3",
+    youtubeId: "LbltSGGQ_vk",
+    tag: "Mini documentário",
+    title: "William & Sons × Acqualive: a parceria",
+    desc: "O case completo: por que uma boutique de cafés especiais escolheu a Acqualive como base da sua receita.",
+    duration: "2:14",
+    ratio: "horizontal",
+  },
 ];
 
 // Scroll reveal hook
