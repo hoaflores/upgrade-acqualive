@@ -364,8 +364,8 @@ const ParceriasCafe = () => {
             <div data-reveal data-reveal-delay="5" className="mt-12 grid grid-cols-3 gap-6 max-w-md">
               {[
                 { n: 90, s: "%", l: "água na xícara" },
-                { n: 100, s: "%", l: "cafés especiais" },
-                { n: 1, s: "ª", l: "parceria do gênero" },
+                { n: 15, s: "+", l: "anos de Acqualive" },
+                { n: 150, s: "k+", l: "pessoas atendidas" },
               ].map((s, i) => (
                 <div key={i} className="border-l border-cafe-gold/20 pl-4">
                   <p className="font-cafe-display text-3xl text-cafe-cream">
