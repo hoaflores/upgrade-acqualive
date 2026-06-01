@@ -1,9 +1,10 @@
 import { Helmet } from "react-helmet-async";
 import { useEffect, useRef, useState } from "react";
-import { Play, ArrowRight, Coffee, Sparkles, Droplet, Quote } from "lucide-react";
+import { Play, ArrowRight, Coffee, Sparkles, Droplet, Quote, X } from "lucide-react";
 import heroPourover from "@/assets/cafe-hero-pourover.jpg";
 import caseWilliam from "@/assets/cafe-case-williamsons.jpg";
 import terracotaAmbiente from "@/assets/cafe-terracota-ambiente.jpg";
+import smartFilterProduct from "@/assets/indica-prod-terracota.png";
 import logoBranca from "@/assets/acqualive-logo-white.png";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
@@ -18,8 +19,48 @@ const SENSES: Sense[] = [
   { word: "Acidez", note: "A vivacidade do café, valorizada por uma água sem excessos minerais." },
   { word: "Corpo", note: "A sensação na boca, mais limpa quando a água é livre de cloro." },
   { word: "Aroma", note: "Os voláteis do grão se expressam melhor em água de boa qualidade." },
-  { word: "Equilíbrio", note: "A harmonia entre todas as notas — começa pela base líquida." },
+  { word: "Equilíbrio", note: "A harmonia entre todas as notas, começa pela base líquida." },
   { word: "Extração", note: "A dança entre água e moagem que define a xícara final." },
+];
+
+type CaseVideo = {
+  id: string;
+  youtubeId: string;
+  tag: string;
+  title: string;
+  desc: string;
+  duration: string;
+  ratio: "vertical" | "horizontal";
+};
+
+const VIDEOS: CaseVideo[] = [
+  {
+    id: "v1",
+    youtubeId: "J8ukTmhKWgY",
+    tag: "Bastidores · Short",
+    title: "A água certa para o café certo",
+    desc: "Ramon mostra, em segundos, como a escolha da água muda a percepção do café especial na xícara.",
+    duration: "0:45",
+    ratio: "vertical",
+  },
+  {
+    id: "v2",
+    youtubeId: "NPURY1qXxzE",
+    tag: "Cafeteria · Short",
+    title: "O ritual da extração começa na água",
+    desc: "Por dentro da rotina da William & Sons: o cuidado com cada detalhe que antecede o primeiro gole.",
+    duration: "0:52",
+    ratio: "vertical",
+  },
+  {
+    id: "v3",
+    youtubeId: "LbltSGGQ_vk",
+    tag: "Mini documentário",
+    title: "William & Sons × Acqualive: a parceria",
+    desc: "O case completo: por que uma boutique de cafés especiais escolheu a Acqualive como base da sua receita.",
+    duration: "2:14",
+    ratio: "horizontal",
+  },
 ];
 
 // Scroll reveal hook
@@ -76,7 +117,7 @@ const Counter = ({ to, suffix = "", duration = 1600 }: { to: number; suffix?: st
 };
 
 const ParceriasCafe = () => {
-  const [videoOpen, setVideoOpen] = useState(false);
+  const [openVideo, setOpenVideo] = useState<CaseVideo | null>(null);
   const [activeSense, setActiveSense] = useState<number | null>(null);
   const [scrollY, setScrollY] = useState(0);
   const [progress, setProgress] = useState(0);
@@ -117,6 +158,9 @@ const ParceriasCafe = () => {
           .text-cafe-gold { color: #c9a86a; }
           .text-cafe-mute { color: #9b8a73; }
           .bg-cafe-base { background-color: #0e0805; }
+          .bg-cafe-cream { background-color: #e8d9c0; }
+          .bg-cafe-cream-hover:hover { background-color: #f4ead8; }
+          .bg-cafe-gold { background-color: #c9a86a; }
 
           /* Reveal */
           [data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1); }
@@ -320,8 +364,8 @@ const ParceriasCafe = () => {
             <div data-reveal data-reveal-delay="5" className="mt-12 grid grid-cols-3 gap-6 max-w-md">
               {[
                 { n: 90, s: "%", l: "água na xícara" },
-                { n: 100, s: "%", l: "cafés especiais" },
-                { n: 1, s: "ª", l: "parceria do gênero" },
+                { n: 15, s: "+", l: "anos de Acqualive" },
+                { n: 150, s: "k+", l: "pessoas atendidas" },
               ].map((s, i) => (
                 <div key={i} className="border-l border-cafe-gold/20 pl-4">
                   <p className="font-cafe-display text-3xl text-cafe-cream">
@@ -564,48 +608,98 @@ const ParceriasCafe = () => {
             </p>
           </div>
 
-          {/* Video card with frame */}
+          {/* Video gallery — 1 featured + 2 shorts */}
           <div className="lg:col-span-7 relative" data-reveal data-reveal-delay="2">
+            {/* Featured horizontal video */}
             <button
               type="button"
-              onClick={() => setVideoOpen(true)}
+              onClick={() => setOpenVideo(VIDEOS[2])}
               className="group relative block w-full overflow-hidden rounded-[1.25rem] ring-1 ring-cafe-gold/20 shadow-[0_40px_80px_-30px_rgba(0,0,0,0.8)]"
-              aria-label="Reproduzir vídeo do case William & Sons"
+              aria-label={`Reproduzir vídeo: ${VIDEOS[2].title}`}
             >
               <img
-                src={caseWilliam}
-                alt="Barista preparando café especial na cafeteria William & Sons"
-                width={1536}
-                height={1024}
+                src={`https://img.youtube.com/vi/${VIDEOS[2].youtubeId}/maxresdefault.jpg`}
+                alt={VIDEOS[2].title}
+                width={1280}
+                height={720}
                 loading="lazy"
-                className="w-full aspect-[16/10] object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = caseWilliam;
+                }}
+                className="w-full aspect-[16/9] object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]"
               />
               <div
                 aria-hidden
                 className="absolute inset-0"
                 style={{
                   background:
-                    "linear-gradient(180deg, rgba(14,8,5,0.0) 40%, rgba(14,8,5,0.85) 100%)",
+                    "linear-gradient(180deg, rgba(14,8,5,0.0) 35%, rgba(14,8,5,0.9) 100%)",
                 }}
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="relative inline-flex h-20 w-20 md:h-24 md:w-24 items-center justify-center rounded-full bg-cafe-cream/95 text-[#1a0f08] shadow-[0_20px_60px_-10px_rgba(201,168,106,0.5)] transition-transform group-hover:scale-110">
+                <span className="relative inline-flex h-20 w-20 md:h-24 md:w-24 items-center justify-center rounded-full bg-cafe-cream text-[#1a0f08] shadow-[0_20px_60px_-10px_rgba(201,168,106,0.5)] transition-transform group-hover:scale-110">
                   <Play className="h-7 w-7 md:h-8 md:w-8 fill-current ml-1" />
                   <span aria-hidden className="absolute inset-0 rounded-full ring-1 ring-cafe-gold/60 ripple" />
                 </span>
               </div>
               <div className="absolute left-6 bottom-6 right-6 flex items-end justify-between">
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-cafe-gold/90">Mini documentário</p>
-                  <p className="font-cafe-display text-2xl md:text-3xl text-cafe-cream italic">
-                    William &amp; Sons × Acqualive
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-cafe-gold">{VIDEOS[2].tag}</p>
+                  <p className="font-cafe-display text-2xl md:text-3xl text-cafe-cream italic mt-1">
+                    {VIDEOS[2].title}
                   </p>
                 </div>
-                <span className="hidden md:inline-block text-xs text-cafe-mute tracking-[0.2em] uppercase">
-                  2:14
+                <span className="hidden md:inline-flex items-center gap-2 text-xs text-cafe-cream/80 tracking-[0.2em] uppercase rounded-full border border-cafe-gold/30 px-3 py-1 bg-black/40 backdrop-blur">
+                  <Play className="h-3 w-3 fill-current" />
+                  {VIDEOS[2].duration}
                 </span>
               </div>
             </button>
+
+            {/* Two vertical shorts */}
+            <div className="mt-6 grid grid-cols-2 gap-4">
+              {[VIDEOS[0], VIDEOS[1]].map((v) => (
+                <button
+                  key={v.id}
+                  type="button"
+                  onClick={() => setOpenVideo(v)}
+                  className="group relative block overflow-hidden rounded-2xl ring-1 ring-cafe-gold/15 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.8)] hover:ring-cafe-gold/50 transition-all text-left"
+                  aria-label={`Reproduzir Short: ${v.title}`}
+                >
+                  <div className="relative aspect-[9/14] overflow-hidden">
+                    <img
+                      src={`https://img.youtube.com/vi/${v.youtubeId}/hqdefault.jpg`}
+                      alt={v.title}
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.4s] group-hover:scale-110"
+                    />
+                    <div
+                      aria-hidden
+                      className="absolute inset-0"
+                      style={{
+                        background:
+                          "linear-gradient(180deg, rgba(14,8,5,0) 30%, rgba(14,8,5,0.92) 100%)",
+                      }}
+                    />
+                    <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur border border-cafe-gold/30 px-2.5 py-1 text-[9px] uppercase tracking-[0.2em] text-cafe-gold">
+                      <span className="h-1.5 w-1.5 rounded-full bg-cafe-gold animate-pulse" />
+                      Short
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-cafe-cream text-[#1a0f08] shadow-[0_10px_30px_-5px_rgba(201,168,106,0.5)] transition-transform group-hover:scale-110">
+                        <Play className="h-5 w-5 fill-current ml-0.5" />
+                      </span>
+                    </div>
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                      <p className="font-cafe-display italic text-cafe-cream text-base md:text-lg leading-tight">
+                        {v.title}
+                      </p>
+                      <p className="text-[10px] text-cafe-mute mt-1.5 line-clamp-2">{v.desc}</p>
+                    </div>
+                  </div>
+                </button>
+              ))}
+            </div>
 
             {/* Tasting badges */}
             <div className="mt-6 grid grid-cols-3 gap-3">
@@ -649,16 +743,29 @@ const ParceriasCafe = () => {
               }}
             />
             <div
-              className="relative overflow-hidden rounded-[1.25rem] ring-1 ring-cafe-gold/15 shadow-[0_40px_80px_-30px_rgba(0,0,0,0.8)]"
-              style={{ transform: `translateY(${Math.min((scrollY - 1200) * 0.04, 24)}px)` }}
+              className="relative rounded-[1.5rem] overflow-hidden"
+              style={{
+                background:
+                  "radial-gradient(closest-side at 50% 40%, rgba(201,168,106,0.18), transparent 70%), linear-gradient(160deg, rgba(60,30,15,0.65), rgba(14,8,5,0.85))",
+                transform: `translateY(${Math.min(Math.max((scrollY - 1200) * 0.04, 0), 24)}px)`,
+              }}
             >
               <img
                 src={terracotaAmbiente}
-                alt="Smart Filter Terracota Acqualive em uma cafeteria premium"
+                alt="Ambiente de cafeteria premium com Smart Filter Acqualive"
                 width={1024}
                 height={1280}
                 loading="lazy"
-                className="relative w-full object-cover transition-transform duration-[2s] hover:scale-105"
+                className="w-full h-full object-cover opacity-40 mix-blend-luminosity"
+              />
+              <img
+                src={smartFilterProduct}
+                alt="Smart Filter Terracota Acqualive"
+                width={800}
+                height={1000}
+                loading="lazy"
+                className="absolute inset-0 m-auto w-[72%] h-auto object-contain drop-shadow-[0_40px_60px_rgba(0,0,0,0.7)] transition-transform duration-[2s] hover:scale-[1.04] float-y"
+                style={{ animationDuration: "8s" }}
               />
             </div>
 
@@ -797,35 +904,33 @@ const ParceriasCafe = () => {
       </footer>
 
       {/* Video modal */}
-      {videoOpen && (
+      {openVideo && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 animate-fade-in"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md p-4 animate-fade-in"
           role="dialog"
           aria-modal="true"
-          onClick={() => setVideoOpen(false)}
+          onClick={() => setOpenVideo(null)}
         >
           <div
-            className="relative w-full max-w-5xl aspect-video rounded-xl overflow-hidden ring-1 ring-cafe-gold/30 bg-black animate-scale-in"
+            className={`relative w-full ${openVideo.ratio === "vertical" ? "max-w-[420px] aspect-[9/16]" : "max-w-5xl aspect-video"} rounded-xl overflow-hidden ring-1 ring-cafe-gold/30 bg-black animate-scale-in`}
             onClick={(e) => e.stopPropagation()}
           >
             <button
               type="button"
-              onClick={() => setVideoOpen(false)}
-              className="absolute right-3 top-3 z-10 h-9 w-9 rounded-full bg-black/60 text-cafe-cream hover:bg-black/80 flex items-center justify-center"
+              onClick={() => setOpenVideo(null)}
+              className="absolute right-3 top-3 z-10 h-10 w-10 rounded-full bg-black/70 text-cafe-cream hover:bg-black/90 border border-cafe-gold/30 flex items-center justify-center transition-all hover:scale-110"
               aria-label="Fechar vídeo"
             >
-              ×
+              <X className="h-4 w-4" />
             </button>
-            <div className="flex h-full w-full items-center justify-center text-center text-cafe-cream/70 p-8">
-              <div>
-                <p className="font-cafe-display italic text-2xl text-cafe-gold mb-3">
-                  Vídeo do case em breve
-                </p>
-                <p className="text-sm text-cafe-mute">
-                  O mini documentário com a William &amp; Sons Coffee Co. será adicionado aqui.
-                </p>
-              </div>
-            </div>
+            <iframe
+              key={openVideo.id}
+              src={`https://www.youtube.com/embed/${openVideo.youtubeId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`}
+              title={openVideo.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
           </div>
         </div>
       )}
