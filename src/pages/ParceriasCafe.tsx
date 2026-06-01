@@ -4,6 +4,7 @@ import { Play, ArrowRight, Coffee, Sparkles, Droplet, Quote, X } from "lucide-re
 import heroPourover from "@/assets/cafe-hero-pourover.jpg";
 import caseWilliam from "@/assets/cafe-case-williamsons.jpg";
 import terracotaAmbiente from "@/assets/cafe-terracota-ambiente.jpg";
+import manifestoCup from "@/assets/cafe-manifesto-cup.jpg";
 import smartFilterProduct from "@/assets/indica-prod-terracota.png";
 import logoBranca from "@/assets/acqualive-logo-white.png";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
