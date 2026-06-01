@@ -904,35 +904,33 @@ const ParceriasCafe = () => {
       </footer>
 
       {/* Video modal */}
-      {videoOpen && (
+      {openVideo && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 animate-fade-in"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md p-4 animate-fade-in"
           role="dialog"
           aria-modal="true"
-          onClick={() => setVideoOpen(false)}
+          onClick={() => setOpenVideo(null)}
         >
           <div
-            className="relative w-full max-w-5xl aspect-video rounded-xl overflow-hidden ring-1 ring-cafe-gold/30 bg-black animate-scale-in"
+            className={`relative w-full ${openVideo.ratio === "vertical" ? "max-w-[420px] aspect-[9/16]" : "max-w-5xl aspect-video"} rounded-xl overflow-hidden ring-1 ring-cafe-gold/30 bg-black animate-scale-in`}
             onClick={(e) => e.stopPropagation()}
           >
             <button
               type="button"
-              onClick={() => setVideoOpen(false)}
-              className="absolute right-3 top-3 z-10 h-9 w-9 rounded-full bg-black/60 text-cafe-cream hover:bg-black/80 flex items-center justify-center"
+              onClick={() => setOpenVideo(null)}
+              className="absolute right-3 top-3 z-10 h-10 w-10 rounded-full bg-black/70 text-cafe-cream hover:bg-black/90 border border-cafe-gold/30 flex items-center justify-center transition-all hover:scale-110"
               aria-label="Fechar vídeo"
             >
-              ×
+              <X className="h-4 w-4" />
             </button>
-            <div className="flex h-full w-full items-center justify-center text-center text-cafe-cream/70 p-8">
-              <div>
-                <p className="font-cafe-display italic text-2xl text-cafe-gold mb-3">
-                  Vídeo do case em breve
-                </p>
-                <p className="text-sm text-cafe-mute">
-                  O mini documentário com a William &amp; Sons Coffee Co. será adicionado aqui.
-                </p>
-              </div>
-            </div>
+            <iframe
+              key={openVideo.id}
+              src={`https://www.youtube.com/embed/${openVideo.youtubeId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`}
+              title={openVideo.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
           </div>
         </div>
       )}
