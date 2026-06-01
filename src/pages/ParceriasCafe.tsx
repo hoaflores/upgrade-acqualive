@@ -473,62 +473,50 @@ const ParceriasCafe = () => {
           </p>
         </div>
 
-        {/* Interactive cup with hover words */}
-        <div data-reveal data-reveal-delay="2" className="relative mx-auto mt-20 max-w-4xl">
-          <div className="relative aspect-[16/10] flex items-center justify-center">
+        {/* Premium photo cup with floating sensorial words */}
+        <div data-reveal data-reveal-delay="2" className="relative mx-auto mt-20 max-w-5xl">
+          <div className="relative aspect-[16/11] md:aspect-[16/10]">
+            {/* Ambient glow behind */}
             <div
               aria-hidden
-              className="absolute inset-x-10 inset-y-6 rounded-full blur-3xl cup-glow"
+              className="absolute inset-x-[10%] inset-y-[8%] rounded-full blur-3xl cup-glow"
               style={{
                 background:
-                  "radial-gradient(closest-side, rgba(201,168,106,0.28), transparent 70%)",
+                  "radial-gradient(closest-side, rgba(201,168,106,0.32), transparent 70%)",
               }}
             />
 
-            {/* Animated steam */}
-            <div className="absolute left-1/2 top-[15%] -translate-x-1/2 flex flex-col items-center pointer-events-none">
-              <div className="relative h-24 w-32">
-                <span className="steam absolute left-1/2 bottom-0 -translate-x-1/2 h-16 w-6 rounded-full bg-cafe-cream/30 blur-md" />
-                <span className="steam delay-1 absolute left-[40%] bottom-0 h-12 w-4 rounded-full bg-cafe-cream/25 blur-md" />
-                <span className="steam delay-2 absolute left-[55%] bottom-0 h-14 w-5 rounded-full bg-cafe-cream/20 blur-md" />
-                <span className="steam delay-3 absolute left-[60%] bottom-0 h-10 w-3 rounded-full bg-cafe-cream/25 blur-md" />
+            {/* The photo */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="relative w-[78%] md:w-[62%] aspect-square overflow-hidden rounded-full ring-1 ring-cafe-gold/20 shadow-[0_60px_120px_-30px_rgba(0,0,0,0.9)]">
+                <img
+                  src={manifestoCup}
+                  alt="Espresso de cafés especiais sendo extraído com a água certa"
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover scale-110"
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-0 rounded-full"
+                  style={{
+                    background:
+                      "radial-gradient(closest-side, transparent 55%, rgba(14,8,5,0.85) 100%)",
+                  }}
+                />
               </div>
             </div>
 
-            {/* Cup */}
-            <div className="relative z-10 flex flex-col items-center pt-12">
-              <svg
-                viewBox="0 0 240 200"
-                className="w-44 md:w-56 h-auto drop-shadow-[0_20px_30px_rgba(0,0,0,0.6)]"
-                fill="none"
-              >
-                <defs>
-                  <linearGradient id="cupGrad" x1="0" x2="0" y1="0" y2="1">
-                    <stop offset="0" stopColor="#d28b5a" />
-                    <stop offset="1" stopColor="#7a3e22" />
-                  </linearGradient>
-                  <radialGradient id="coffee" cx="0.5" cy="0.5" r="0.5">
-                    <stop offset="0" stopColor="#4a2410" />
-                    <stop offset="1" stopColor="#1a0a04" />
-                  </radialGradient>
-                </defs>
-                <ellipse cx="115" cy="60" rx="75" ry="14" fill="url(#coffee)" />
-                <path d="M40 60 Q40 160 90 170 L140 170 Q190 160 190 60 Z" fill="url(#cupGrad)" />
-                <path d="M190 80 Q230 90 220 130 Q210 160 175 150" stroke="url(#cupGrad)" strokeWidth="10" fill="none" />
-                <ellipse cx="115" cy="60" rx="70" ry="11" fill="#1a0a04" />
-                <ellipse cx="100" cy="55" rx="15" ry="3" fill="#3a1d0e" opacity="0.7" />
-              </svg>
-            </div>
-
-            {/* Floating interactive words */}
+            {/* Floating sensorial words */}
             {SENSES.map((s, i) => {
               const positions = [
-                "top-2 left-4 md:left-12",
-                "top-6 right-6 md:right-16",
-                "top-1/2 left-0 md:-left-4 -translate-y-1/2",
-                "top-1/2 right-0 md:-right-4 -translate-y-1/2",
-                "bottom-6 left-10 md:left-24",
-                "bottom-2 right-10 md:right-28",
+                "top-[4%] left-[2%] md:left-[6%]",
+                "top-[10%] right-[3%] md:right-[8%]",
+                "top-1/2 left-[-1%] md:left-[2%] -translate-y-1/2",
+                "top-1/2 right-[-1%] md:right-[2%] -translate-y-1/2",
+                "bottom-[6%] left-[6%] md:left-[14%]",
+                "bottom-[2%] right-[8%] md:right-[18%]",
               ];
               const isActive = activeSense === i;
               return (
@@ -539,8 +527,8 @@ const ParceriasCafe = () => {
                   onMouseLeave={() => setActiveSense(null)}
                   onFocus={() => setActiveSense(i)}
                   onBlur={() => setActiveSense(null)}
-                  className={`sense-pill ${isActive ? "is-active" : ""} absolute ${positions[i]} font-cafe-display italic text-2xl md:text-4xl text-cafe-cream/80 cursor-default`}
-                  style={{ textShadow: "0 2px 20px rgba(0,0,0,0.6)" }}
+                  className={`sense-pill ${isActive ? "is-active" : ""} absolute ${positions[i]} font-cafe-display italic text-2xl md:text-4xl lg:text-5xl text-cafe-cream/85 cursor-default z-10`}
+                  style={{ textShadow: "0 2px 30px rgba(0,0,0,0.85)" }}
                 >
                   {s.word}
                 </button>
@@ -549,12 +537,12 @@ const ParceriasCafe = () => {
           </div>
 
           {/* Hover description */}
-          <div className="mt-6 mx-auto max-w-xl h-16 flex items-center justify-center text-center">
+          <div className="mt-8 mx-auto max-w-xl h-16 flex items-center justify-center text-center">
             <p
               key={activeSense ?? -1}
               className="text-sm md:text-base text-cafe-mute leading-relaxed transition-all duration-500"
               style={{
-                opacity: activeSense !== null ? 1 : 0.5,
+                opacity: activeSense !== null ? 1 : 0.55,
                 transform: `translateY(${activeSense !== null ? 0 : 4}px)`,
               }}
             >
@@ -565,7 +553,7 @@ const ParceriasCafe = () => {
           </div>
         </div>
 
-        <p data-reveal className="mt-12 mx-auto max-w-2xl text-center text-base text-cafe-mute leading-relaxed">
+        <p data-reveal className="mt-10 mx-auto max-w-2xl text-center text-base text-cafe-mute leading-relaxed">
           Quando a água tem mais qualidade, o café expressa melhor o que o grão, a torra e a receita foram pensados para entregar.
         </p>
       </section>
