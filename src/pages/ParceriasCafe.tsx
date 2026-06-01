@@ -1,9 +1,10 @@
 import { Helmet } from "react-helmet-async";
 import { useEffect, useRef, useState } from "react";
-import { Play, ArrowRight, Coffee, Sparkles, Droplet, Quote } from "lucide-react";
+import { Play, ArrowRight, Coffee, Sparkles, Droplet, Quote, X } from "lucide-react";
 import heroPourover from "@/assets/cafe-hero-pourover.jpg";
 import caseWilliam from "@/assets/cafe-case-williamsons.jpg";
 import terracotaAmbiente from "@/assets/cafe-terracota-ambiente.jpg";
+import smartFilterProduct from "@/assets/indica-prod-terracota.png";
 import logoBranca from "@/assets/acqualive-logo-white.png";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
@@ -117,6 +118,9 @@ const ParceriasCafe = () => {
           .text-cafe-gold { color: #c9a86a; }
           .text-cafe-mute { color: #9b8a73; }
           .bg-cafe-base { background-color: #0e0805; }
+          .bg-cafe-cream { background-color: #e8d9c0; }
+          .bg-cafe-cream-hover:hover { background-color: #f4ead8; }
+          .bg-cafe-gold { background-color: #c9a86a; }
 
           /* Reveal */
           [data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1); }
