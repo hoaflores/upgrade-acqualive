@@ -562,48 +562,143 @@ const ParceriasCafe = () => {
         <div className="h-px w-full bg-gradient-to-r from-transparent via-cafe-gold/30 to-transparent" />
       </div>
 
-      {/* 3. CASE WILLIAM & SONS */}
+      {/* 3. CASE WILLIAM & SONS — editorial */}
       <section id="case" className="relative px-6 md:px-12 py-28 md:py-36">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-5">
-            <span data-reveal className="text-[11px] uppercase tracking-[0.35em] text-cafe-gold inline-flex items-center gap-3">
-              <span className="h-px w-8 bg-cafe-gold/50" /> O case
-            </span>
-            <h2 data-reveal data-reveal-delay="1" className="mt-6 font-cafe-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-cafe-cream">
-              Quando a excelência no café encontra <em className="italic gold-shimmer font-medium">excelência na água.</em>
-            </h2>
-            <p data-reveal data-reveal-delay="2" className="mt-7 text-base md:text-lg text-cafe-cream/75 leading-relaxed">
-              A William &amp; Sons Coffee Co. é uma boutique cafeteria e microtorrefação de cafés especiais. Em sua busca por entregar uma experiência da semente à xícara, a água se torna uma etapa essencial da receita.
-            </p>
+        <div className="mx-auto max-w-5xl text-center">
+          <span data-reveal className="text-[11px] uppercase tracking-[0.35em] text-cafe-gold inline-flex items-center gap-3">
+            <span className="h-px w-8 bg-cafe-gold/50" /> O case <span className="h-px w-8 bg-cafe-gold/50" />
+          </span>
+          <h2 data-reveal data-reveal-delay="1" className="mt-6 font-cafe-display text-4xl md:text-6xl lg:text-[4.2rem] leading-[1.02] text-cafe-cream">
+            Quando a excelência no café encontra <em className="italic gold-shimmer not-italic font-medium" style={{ fontStyle: "italic" }}>excelência na água.</em>
+          </h2>
+          <p data-reveal data-reveal-delay="2" className="mt-8 mx-auto max-w-2xl text-base md:text-lg text-cafe-cream/75 leading-relaxed">
+            A William &amp; Sons Coffee Co. é uma boutique cafeteria e microtorrefação de cafés especiais. Em sua busca por entregar uma experiência da semente à xícara, a água se tornou parte essencial da receita — e nós entramos como parceiros desse cuidado.
+          </p>
+        </div>
 
-            <blockquote data-reveal data-reveal-delay="3" className="mt-10 relative pl-8">
-              <Quote className="absolute left-0 top-1 h-6 w-6 text-cafe-gold/60" />
-              <p className="font-cafe-display italic text-2xl md:text-[1.75rem] leading-snug text-cafe-cream">
+        <div className="mx-auto max-w-6xl mt-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Quote card */}
+          <div className="lg:col-span-7" data-reveal data-reveal-delay="2">
+            <div className="relative rounded-[1.5rem] border border-cafe-gold/15 bg-gradient-to-br from-white/[0.04] to-transparent backdrop-blur-sm p-8 md:p-12">
+              <Quote className="h-10 w-10 text-cafe-gold/50" />
+              <blockquote className="mt-5 font-cafe-display italic text-2xl md:text-3xl lg:text-[2.1rem] leading-[1.25] text-cafe-cream">
                 Quanto melhor a água, melhor a extração. A gente consegue melhorar doçura, acidez, corpo e tornar o café cada vez mais equilibrado.
-              </p>
-              <footer className="mt-5 flex items-center gap-3 text-sm text-cafe-mute tracking-wide">
-                <span className="h-10 w-10 rounded-full bg-gradient-to-br from-cafe-gold/40 to-[#7a3e22] flex items-center justify-center font-cafe-display text-cafe-cream">
+              </blockquote>
+              <footer className="mt-8 flex items-center gap-4 text-sm text-cafe-mute tracking-wide border-t border-cafe-gold/10 pt-6">
+                <span className="h-12 w-12 rounded-full bg-gradient-to-br from-cafe-gold/50 to-[#7a3e22] flex items-center justify-center font-cafe-display text-cafe-cream text-lg">
                   R
                 </span>
                 <div>
-                  <p className="text-cafe-gold">Ramon</p>
-                  <p className="text-xs">William &amp; Sons Coffee Co.</p>
+                  <p className="text-cafe-gold text-base font-medium">Ramon</p>
+                  <p className="text-xs uppercase tracking-[0.2em] mt-0.5">William &amp; Sons Coffee Co.</p>
                 </div>
               </footer>
-            </blockquote>
+            </div>
+          </div>
 
-            <p data-reveal data-reveal-delay="4" className="mt-8 text-sm md:text-base text-cafe-mute leading-relaxed max-w-lg">
-              Essa parceria mostra como a Acqualive pode estar presente em marcas que valorizam sabor, experiência e consistência em cada detalhe.
+          {/* Tasting badges stacked */}
+          <div className="lg:col-span-5 grid grid-cols-1 gap-4">
+            {[
+              { l: "Doçura", v: "destacada", n: "01" },
+              { l: "Acidez", v: "viva e limpa", n: "02" },
+              { l: "Equilíbrio", v: "consistente", n: "03" },
+            ].map((b, i) => (
+              <div
+                key={i}
+                data-reveal
+                data-reveal-delay={String(i + 1) as "1" | "2" | "3"}
+                className="group rounded-2xl border border-cafe-gold/15 bg-white/[0.02] backdrop-blur px-6 py-5 hover:border-cafe-gold/45 hover:bg-white/[0.04] transition-all flex items-center gap-5"
+              >
+                <span className="font-cafe-display text-cafe-gold/60 text-2xl">{b.n}</span>
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-cafe-mute">{b.l}</p>
+                  <p className="font-cafe-display text-2xl text-cafe-cream italic leading-tight mt-0.5">{b.v}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. WHY PARTNERSHIPS — new section */}
+      <section className="relative px-6 md:px-12 py-24 md:py-32 overflow-hidden">
+        <div
+          aria-hidden
+          className="absolute inset-0 -z-10"
+          style={{
+            background:
+              "radial-gradient(900px 500px at 50% 0%, rgba(201,168,106,0.08), transparent 70%)",
+          }}
+        />
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center max-w-3xl mx-auto">
+            <span data-reveal className="text-[11px] uppercase tracking-[0.35em] text-cafe-gold inline-flex items-center gap-3">
+              <span className="h-px w-8 bg-cafe-gold/50" /> Por que essa parceria importa
+            </span>
+            <h2 data-reveal data-reveal-delay="1" className="mt-6 font-cafe-display text-3xl md:text-5xl lg:text-[3.2rem] leading-[1.08] text-cafe-cream">
+              Caminhar ao lado de quem leva o ofício <em className="italic gold-shimmer not-italic font-medium" style={{ fontStyle: "italic" }}>a sério</em>.
+            </h2>
+            <p data-reveal data-reveal-delay="2" className="mt-7 text-base md:text-lg text-cafe-cream/75 leading-relaxed">
+              Para a Acqualive, estar presente em uma casa como a William &amp; Sons Coffee Co. é muito mais do que entregar um produto. É ser escolhido por quem dedica a vida a aperfeiçoar cada etapa do café — e enxerga, no nosso trabalho, o mesmo nível de cuidado.
             </p>
           </div>
 
-          {/* Video gallery — 1 featured + 2 shorts */}
-          <div className="lg:col-span-7 relative" data-reveal data-reveal-delay="2">
-            {/* Featured horizontal video */}
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-5">
+            {[
+              {
+                t: "Validação onde o paladar é treinado",
+                d: "Cafeterias de especialidade percebem nuances que ninguém mais nota. Quando elas confiam na nossa água, é o teste mais exigente que existe.",
+              },
+              {
+                t: "Cultura compartilhada",
+                d: "Microtorrefação, baristas, receita — e Acqualive na base. Parcerias com marcas autorais consolidam um ecossistema do bem-feito.",
+              },
+              {
+                t: "Padrão que eleva todo mundo",
+                d: "Cada xícara servida com a nossa água em uma boutique de cafés é uma prova viva do que a Acqualive entrega na casa do cliente final.",
+              },
+            ].map((c, i) => (
+              <article
+                key={i}
+                data-reveal
+                data-reveal-delay={String(i + 1) as "1" | "2" | "3"}
+                className="group relative rounded-2xl border border-cafe-gold/15 bg-white/[0.02] p-7 md:p-8 hover:border-cafe-gold/40 hover:-translate-y-1 hover:bg-white/[0.04] transition-all duration-500"
+              >
+                <span className="font-cafe-display italic text-cafe-gold/70 text-sm">0{i + 1}</span>
+                <h3 className="mt-4 font-cafe-display text-2xl leading-tight text-cafe-cream">{c.t}</h3>
+                <p className="mt-4 text-sm text-cafe-mute leading-relaxed">{c.d}</p>
+                <span className="absolute bottom-0 left-7 right-7 h-px bg-gradient-to-r from-transparent via-cafe-gold/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              </article>
+            ))}
+          </div>
+
+          <p data-reveal className="mt-14 mx-auto max-w-2xl text-center font-cafe-display italic text-xl md:text-2xl text-cafe-cream/90">
+            “Boas marcas só andam ao lado de outras boas marcas. Por isso, escolhemos com critério com quem dividimos a mesa.”
+          </p>
+        </div>
+      </section>
+
+      {/* 5. VIDEOS — own breathing section */}
+      <section className="relative px-6 md:px-12 py-24 md:py-32">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+            <span data-reveal className="text-[11px] uppercase tracking-[0.35em] text-cafe-gold inline-flex items-center gap-3">
+              <span className="h-px w-8 bg-cafe-gold/50" /> Veja na prática
+            </span>
+            <h2 data-reveal data-reveal-delay="1" className="mt-6 font-cafe-display text-3xl md:text-5xl leading-[1.08] text-cafe-cream">
+              A parceria, <em className="italic gold-shimmer not-italic font-medium" style={{ fontStyle: "italic" }}>nas próprias palavras</em>.
+            </h2>
+            <p data-reveal data-reveal-delay="2" className="mt-6 text-base md:text-lg text-cafe-cream/70 leading-relaxed">
+              Três peças filmadas dentro da William &amp; Sons. Um mini documentário e dois shorts dos bastidores — do ritual da extração à percepção do barista.
+            </p>
+          </div>
+
+          {/* Featured documentary */}
+          <div data-reveal data-reveal-delay="2">
             <button
               type="button"
               onClick={() => setOpenVideo(VIDEOS[2])}
-              className="group relative block w-full overflow-hidden rounded-[1.25rem] ring-1 ring-cafe-gold/20 shadow-[0_40px_80px_-30px_rgba(0,0,0,0.8)]"
+              className="group relative block w-full overflow-hidden rounded-[1.5rem] ring-1 ring-cafe-gold/20 shadow-[0_50px_120px_-40px_rgba(0,0,0,0.9)]"
               aria-label={`Reproduzir vídeo: ${VIDEOS[2].title}`}
             >
               <img
@@ -615,102 +710,92 @@ const ParceriasCafe = () => {
                 onError={(e) => {
                   (e.currentTarget as HTMLImageElement).src = caseWilliam;
                 }}
-                className="w-full aspect-[16/9] object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]"
+                className="w-full aspect-[16/9] object-cover transition-transform duration-[1.6s] ease-out group-hover:scale-[1.04]"
               />
               <div
                 aria-hidden
                 className="absolute inset-0"
                 style={{
                   background:
-                    "linear-gradient(180deg, rgba(14,8,5,0.0) 35%, rgba(14,8,5,0.9) 100%)",
+                    "linear-gradient(180deg, rgba(14,8,5,0.1) 30%, rgba(14,8,5,0.92) 100%)",
                 }}
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="relative inline-flex h-20 w-20 md:h-24 md:w-24 items-center justify-center rounded-full bg-cafe-cream text-[#1a0f08] shadow-[0_20px_60px_-10px_rgba(201,168,106,0.5)] transition-transform group-hover:scale-110">
-                  <Play className="h-7 w-7 md:h-8 md:w-8 fill-current ml-1" />
+                <span className="relative inline-flex h-20 w-20 md:h-28 md:w-28 items-center justify-center rounded-full bg-cafe-cream text-[#1a0f08] shadow-[0_30px_80px_-10px_rgba(201,168,106,0.6)] transition-transform group-hover:scale-110">
+                  <Play className="h-8 w-8 md:h-10 md:w-10 fill-current ml-1" />
                   <span aria-hidden className="absolute inset-0 rounded-full ring-1 ring-cafe-gold/60 ripple" />
                 </span>
               </div>
-              <div className="absolute left-6 bottom-6 right-6 flex items-end justify-between">
-                <div>
+              <div className="absolute left-6 md:left-10 bottom-6 md:bottom-10 right-6 md:right-10 flex flex-col md:flex-row md:items-end md:justify-between gap-3">
+                <div className="max-w-2xl">
                   <p className="text-[10px] uppercase tracking-[0.3em] text-cafe-gold">{VIDEOS[2].tag}</p>
-                  <p className="font-cafe-display text-2xl md:text-3xl text-cafe-cream italic mt-1">
+                  <p className="font-cafe-display text-2xl md:text-4xl text-cafe-cream italic mt-2 leading-tight">
                     {VIDEOS[2].title}
                   </p>
+                  <p className="hidden md:block mt-3 text-sm text-cafe-cream/70 max-w-lg leading-relaxed">
+                    {VIDEOS[2].desc}
+                  </p>
                 </div>
-                <span className="hidden md:inline-flex items-center gap-2 text-xs text-cafe-cream/80 tracking-[0.2em] uppercase rounded-full border border-cafe-gold/30 px-3 py-1 bg-black/40 backdrop-blur">
+                <span className="self-start md:self-auto inline-flex items-center gap-2 text-xs text-cafe-cream/85 tracking-[0.2em] uppercase rounded-full border border-cafe-gold/30 px-3 py-1.5 bg-black/50 backdrop-blur">
                   <Play className="h-3 w-3 fill-current" />
                   {VIDEOS[2].duration}
                 </span>
               </div>
             </button>
+          </div>
 
-            {/* Two vertical shorts */}
-            <div className="mt-6 grid grid-cols-2 gap-4">
-              {[VIDEOS[0], VIDEOS[1]].map((v) => (
+          {/* Two vertical shorts — breathing room */}
+          <div className="mt-10 md:mt-14 grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
+            {[VIDEOS[0], VIDEOS[1]].map((v, idx) => (
+              <div
+                key={v.id}
+                data-reveal
+                data-reveal-delay={(idx + 1).toString() as "1" | "2"}
+                className="flex flex-col items-center"
+              >
                 <button
-                  key={v.id}
                   type="button"
                   onClick={() => setOpenVideo(v)}
-                  className="group relative block overflow-hidden rounded-2xl ring-1 ring-cafe-gold/15 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.8)] hover:ring-cafe-gold/50 transition-all text-left"
+                  className="group relative block w-full overflow-hidden rounded-2xl ring-1 ring-cafe-gold/15 shadow-[0_40px_80px_-30px_rgba(0,0,0,0.85)] hover:ring-cafe-gold/50 transition-all"
                   aria-label={`Reproduzir Short: ${v.title}`}
                 >
-                  <div className="relative aspect-[9/14] overflow-hidden">
+                  <div className="relative aspect-[9/16] overflow-hidden">
                     <img
                       src={`https://img.youtube.com/vi/${v.youtubeId}/hqdefault.jpg`}
                       alt={v.title}
                       loading="lazy"
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.4s] group-hover:scale-110"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.6s] group-hover:scale-110"
                     />
                     <div
                       aria-hidden
                       className="absolute inset-0"
                       style={{
                         background:
-                          "linear-gradient(180deg, rgba(14,8,5,0) 30%, rgba(14,8,5,0.92) 100%)",
+                          "linear-gradient(180deg, rgba(14,8,5,0) 40%, rgba(14,8,5,0.92) 100%)",
                       }}
                     />
-                    <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur border border-cafe-gold/30 px-2.5 py-1 text-[9px] uppercase tracking-[0.2em] text-cafe-gold">
+                    <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur border border-cafe-gold/30 px-3 py-1.5 text-[10px] uppercase tracking-[0.25em] text-cafe-gold">
                       <span className="h-1.5 w-1.5 rounded-full bg-cafe-gold animate-pulse" />
-                      Short
+                      Short · {v.duration}
                     </div>
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-cafe-cream text-[#1a0f08] shadow-[0_10px_30px_-5px_rgba(201,168,106,0.5)] transition-transform group-hover:scale-110">
-                        <Play className="h-5 w-5 fill-current ml-0.5" />
+                      <span className="inline-flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full bg-cafe-cream text-[#1a0f08] shadow-[0_20px_50px_-10px_rgba(201,168,106,0.55)] transition-transform group-hover:scale-110">
+                        <Play className="h-6 w-6 md:h-7 md:w-7 fill-current ml-0.5" />
                       </span>
-                    </div>
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <p className="font-cafe-display italic text-cafe-cream text-base md:text-lg leading-tight">
-                        {v.title}
-                      </p>
-                      <p className="text-[10px] text-cafe-mute mt-1.5 line-clamp-2">{v.desc}</p>
                     </div>
                   </div>
                 </button>
-              ))}
-            </div>
-
-            {/* Tasting badges */}
-            <div className="mt-6 grid grid-cols-3 gap-3">
-              {[
-                { l: "Doçura", v: "+", d: "destacada" },
-                { l: "Acidez", v: "+", d: "viva" },
-                { l: "Equilíbrio", v: "+", d: "consistente" },
-              ].map((b, i) => (
-                <div
-                  key={i}
-                  data-reveal
-                  data-reveal-delay={String(i + 1) as "1" | "2" | "3"}
-                  className="rounded-xl border border-cafe-gold/15 bg-white/[0.02] backdrop-blur px-4 py-3 hover:border-cafe-gold/40 hover:bg-white/[0.04] transition-all"
-                >
-                  <p className="text-[10px] uppercase tracking-[0.25em] text-cafe-mute">{b.l}</p>
-                  <p className="font-cafe-display text-2xl text-cafe-gold leading-none mt-1">
-                    {b.v}
-                    <span className="text-cafe-cream text-base italic ml-1">{b.d}</span>
+                <div className="mt-5 text-center px-2">
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-cafe-gold">{v.tag}</p>
+                  <p className="mt-2 font-cafe-display italic text-cafe-cream text-xl md:text-2xl leading-tight">
+                    {v.title}
+                  </p>
+                  <p className="mt-3 text-xs md:text-sm text-cafe-mute leading-relaxed max-w-xs mx-auto">
+                    {v.desc}
                   </p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
