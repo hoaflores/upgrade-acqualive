@@ -743,16 +743,29 @@ const ParceriasCafe = () => {
               }}
             />
             <div
-              className="relative overflow-hidden rounded-[1.25rem] ring-1 ring-cafe-gold/15 shadow-[0_40px_80px_-30px_rgba(0,0,0,0.8)]"
-              style={{ transform: `translateY(${Math.min((scrollY - 1200) * 0.04, 24)}px)` }}
+              className="relative rounded-[1.5rem] overflow-hidden"
+              style={{
+                background:
+                  "radial-gradient(closest-side at 50% 40%, rgba(201,168,106,0.18), transparent 70%), linear-gradient(160deg, rgba(60,30,15,0.65), rgba(14,8,5,0.85))",
+                transform: `translateY(${Math.min(Math.max((scrollY - 1200) * 0.04, 0), 24)}px)`,
+              }}
             >
               <img
                 src={terracotaAmbiente}
-                alt="Smart Filter Terracota Acqualive em uma cafeteria premium"
+                alt="Ambiente de cafeteria premium com Smart Filter Acqualive"
                 width={1024}
                 height={1280}
                 loading="lazy"
-                className="relative w-full object-cover transition-transform duration-[2s] hover:scale-105"
+                className="w-full h-full object-cover opacity-40 mix-blend-luminosity"
+              />
+              <img
+                src={smartFilterProduct}
+                alt="Smart Filter Terracota Acqualive"
+                width={800}
+                height={1000}
+                loading="lazy"
+                className="absolute inset-0 m-auto w-[72%] h-auto object-contain drop-shadow-[0_40px_60px_rgba(0,0,0,0.7)] transition-transform duration-[2s] hover:scale-[1.04] float-y"
+                style={{ animationDuration: "8s" }}
               />
             </div>
 
