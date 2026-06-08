@@ -4416,7 +4416,7 @@ ${JSON.stringify({
         <a href="#filtros" data-cat="Investigação">Investigações</a>
         <a href="#filtros" data-cat="Guia & Comparativos">Filtros</a>
         <a href="#filtros" data-cat="Bem-estar">Saúde</a>
-        <a href="#filtros" data-cat="Café & Sabor">Café e sabor</a>
+        
       </div>
       <div class="hero-proof">
         <div class="av"><span></span><span></span><span></span><span></span></div>
@@ -4431,7 +4431,7 @@ ${JSON.stringify({
 
 <div class="proof-strip">
   <div class="proof-inner">
-    <div class="proof-stat"><span class="n"><span class="accent" id="stat-posts">--</span>+</span><span class="l">Artigos publicados</span></div>
+    <div class="proof-stat"><span class="n"><span class="accent">100</span>+</span><span class="l">Blogposts publicados</span></div>
     <div class="proof-stat"><span class="n"><span class="accent">15</span>+</span><span class="l">Anos de Acqualive</span></div>
     <div class="proof-stat"><span class="n"><span class="accent">150k</span>+</span><span class="l">Pessoas atendidas</span></div>
     <div class="proof-stat"><span class="n"><span class="accent">100%</span></span><span class="l">Conteúdo revisado</span></div>
@@ -4457,24 +4457,6 @@ ${JSON.stringify({
   </div>
 </section>
 
-<section class="testimonial reveal">
-  <div class="testimonial-inner">
-    <p class="testimonial-quote">A maioria das pessoas pensa no que come, no que veste, no que respira. Quase ninguém pensa no que bebe. E a água é o que mais entra no corpo.</p>
-    <p class="testimonial-cite">Equipe Editorial <span>· Blog Acqualive</span></p>
-  </div>
-</section>
-
-<section class="section" id="recentes" style="padding-top:84px">
-  <div class="section-inner">
-    <div class="section-head center reveal">
-      <span class="section-eyebrow">Recentes</span>
-      <h2>Publicações <span class="serif">recentes</span>.</h2>
-      <p class="head-sub">Toda semana um novo olhar sobre hidratação, longevidade e a ciência da água.</p>
-    </div>
-    <div class="grid-4" id="recent-slot"></div>
-  </div>
-</section>
-
 <section class="carousel-section" id="podcasts">
   <div class="section-inner">
     <div class="section-head reveal">
@@ -4493,6 +4475,45 @@ ${JSON.stringify({
         <button class="car-btn" data-dir="1" aria-label="Próximo">›</button>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="testimonial reveal">
+  <div class="testimonial-inner">
+    <p class="testimonial-quote">A maioria das pessoas pensa no que come, no que veste, no que respira. Quase ninguém pensa no que bebe. E a água é o que mais entra no corpo.</p>
+    <p class="testimonial-cite">Equipe Editorial <span>· Blog Acqualive</span></p>
+  </div>
+</section>
+
+<section class="carousel-section light" id="conheca">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Conheça a Acqualive</span>
+      <h2>Por dentro da <span class="serif">Acqualive</span>.</h2>
+      <p class="head-sub">Histórias, bastidores e o cuidado que existe por trás de cada purificador que chega na sua casa.</p>
+    </div>
+    <div class="carousel" data-carousel data-type="conheca">
+      <div class="carousel-track-wrap">
+        <div class="carousel-track">
+          ${CONHECA.map(conhecaSlide).join("")}
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="car-btn" data-dir="-1" aria-label="Anterior">‹</button>
+        <button class="car-btn" data-dir="1" aria-label="Próximo">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="recentes" style="padding-top:84px">
+  <div class="section-inner">
+    <div class="section-head center reveal">
+      <span class="section-eyebrow">Recentes</span>
+      <h2>Publicações <span class="serif">recentes</span>.</h2>
+      <p class="head-sub">Toda semana um novo olhar sobre hidratação, longevidade e a ciência da água.</p>
+    </div>
+    <div class="grid-4" id="recent-slot"></div>
   </div>
 </section>
 
@@ -4524,27 +4545,6 @@ ${JSON.stringify({
         <div class="mail-block"><strong>Descoberta</strong>O pH da água potável e a regulação do estresse oxidativo.</div>
         <div class="mail-block"><strong>Para esta semana</strong>O teste de 5 minutos para saber se sua água está limpa.</div>
         <div class="mail-block"><strong>Leitura curada</strong>Por que as Blue Zones bebem da nascente, não da garrafa.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="carousel-section light" id="conheca">
-  <div class="section-inner">
-    <div class="section-head reveal">
-      <span class="section-eyebrow">Conheça a Acqualive</span>
-      <h2>Por dentro da <span class="serif">Acqualive</span>.</h2>
-      <p class="head-sub">Histórias, bastidores e o cuidado que existe por trás de cada purificador que chega na sua casa.</p>
-    </div>
-    <div class="carousel" data-carousel data-type="conheca">
-      <div class="carousel-track-wrap">
-        <div class="carousel-track">
-          ${CONHECA.map(conhecaSlide).join("")}
-        </div>
-      </div>
-      <div class="carousel-controls">
-        <button class="car-btn" data-dir="-1" aria-label="Anterior">‹</button>
-        <button class="car-btn" data-dir="1" aria-label="Próximo">›</button>
       </div>
     </div>
   </div>
@@ -4728,7 +4728,7 @@ ${JSON.stringify({
     ALL_POSTS = posts;
     var hero = posts[0];
     var ranked = posts.slice(1,4);
-    var recent = posts.slice(0,8);
+    var recent = posts.slice(0,3);
 
     var hSlot = document.getElementById('hero-feat-slot');
     if(hSlot && hero) hSlot.innerHTML = heroFeatHtml(hero);
