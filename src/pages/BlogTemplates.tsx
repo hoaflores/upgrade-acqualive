@@ -4076,7 +4076,425 @@ const BASE_ARTICLES = [
   },
 ];
 
-const ARTICLES = [...BASE_ARTICLES, ...EXTRA_ARTICLES];
+const RAW_ARTICLES = [...BASE_ARTICLES, ...EXTRA_ARTICLES];
+
+const pickMeta = (html: string) => {
+  const g = (re: RegExp) => { const m = html.match(re); return m ? m[1] : ""; };
+  return {
+    title: g(/<title>([^<]+)<\/title>/).replace(/\s*\|\s*Acqualive.*$/i, "").trim(),
+    description: g(/<meta name="description" content="([^"]+)"/),
+    image: g(/<meta property="og:image" content="([^"]+)"/) || g(/<img[^>]+src="([^"]+)"/),
+    date: g(/"datePublished"\s*:\s*"([^"]+)"/),
+    keywords: g(/<meta name="keywords" content="([^"]+)"/),
+  };
+};
+
+const BLOG_BASE = "https://blog.acqualive.com.br";
+
+const formatDate = (iso: string) => {
+  if (!iso) return "";
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return "";
+  return d.toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" });
+};
+
+const guessCategory = (kw: string, title: string) => {
+  const t = (kw + " " + title).toLowerCase();
+  if (/caf[eé]|barista|extra[cç][aã]o/.test(t)) return "Café & Sabor";
+  if (/menopausa|m[aã]e|gravidez|filho|crian[cç]a/.test(t)) return "Família & Vida";
+  if (/micropl[aá]stico|cloro|torneira|contamina/.test(t)) return "Investigação";
+  if (/alcalina|pral|ioniza|anti-inflamat|magn[eé]sio|long|blue zone/.test(t)) return "Ciência da Água";
+  if (/inverno|copa|hidrata|pele|cabelo/.test(t)) return "Bem-estar";
+  if (/filtro|purificador|barro|osmose/.test(t)) return "Guia & Comparativos";
+  return "Acqualive";
+};
+
+const buildBlogHomeHtml = (articles: { title: string; slug: string; html: string }[]) => {
+  const items = articles.map((a) => {
+    const m = pickMeta(a.html);
+    return {
+      title: a.title,
+      slug: a.slug,
+      url: `${BLOG_BASE}/${a.slug}/`,
+      description: m.description,
+      image: m.image,
+      date: m.date,
+      dateLabel: formatDate(m.date),
+      category: guessCategory(m.keywords, a.title),
+    };
+  }).sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+
+  const featured = items[0];
+  const secondary = items.slice(1, 3);
+  const grid = items.slice(3, 11);
+  const more = items.slice(11);
+
+  const card = (p: typeof items[number], variant: "grid" | "list" = "grid") => `
+  <a class="card card-${variant}" href="${p.url}">
+    <div class="card-img"><img src="${p.image}" alt="${p.title.replace(/"/g, "&quot;")}" loading="lazy"></div>
+    <div class="card-body">
+      <span class="chip">${p.category}</span>
+      <h3>${p.title}</h3>
+      <p>${p.description}</p>
+      <div class="card-meta"><span>${p.dateLabel}</span><span class="arrow">Ler artigo →</span></div>
+    </div>
+  </a>`;
+
+  return `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Acqualive — Ciência, água e saúde em uma leitura</title>
+<meta name="description" content="O Blog Acqualive reúne investigações, ciência e guias práticos sobre a água que você bebe todos os dias. Conteúdo confiável para quem cuida da própria saúde e bem-estar.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="${BLOG_BASE}/">
+<meta property="og:title" content="Blog Acqualive — Ciência, água e saúde">
+<meta property="og:description" content="Artigos sobre água, hidratação, filtros e longevidade. Conteúdo Acqualive.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="${BLOG_BASE}/">
+<meta property="og:image" content="${featured.image}">
+<script type="application/ld+json">
+${JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "Blog Acqualive",
+  url: BLOG_BASE,
+  description: "Ciência, água e saúde em uma leitura.",
+  publisher: { "@type": "Organization", name: "Acqualive" },
+  blogPost: items.slice(0, 10).map((p) => ({
+    "@type": "BlogPosting",
+    headline: p.title,
+    url: p.url,
+    image: p.image,
+    datePublished: p.date,
+    description: p.description,
+  })),
+})}
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Plus Jakarta Sans',-apple-system,sans-serif;background:#f7f6f2;color:#0f172a;-webkit-font-smoothing:antialiased;line-height:1.55}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit;text-decoration:none}
+
+  /* HEADER */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(247,246,242,.85);backdrop-filter:blur(14px);border-bottom:1px solid rgba(15,23,42,.06)}
+  .nav-inner{max-width:1280px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .brand{font-family:'Fraunces',serif;font-size:24px;font-weight:600;letter-spacing:-0.02em;display:flex;align-items:center;gap:10px}
+  .brand-dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,#0891b2,#06b6d4);box-shadow:0 0 0 4px rgba(8,145,178,.12)}
+  .nav-links{display:flex;gap:28px;font-size:14px;font-weight:500;color:#475569}
+  .nav-links a:hover{color:#0f172a}
+  .nav-cta{background:#0f172a;color:#fff;padding:10px 20px;border-radius:999px;font-size:13px;font-weight:600;transition:transform .2s,background .2s}
+  .nav-cta:hover{background:#0891b2;transform:translateY(-1px)}
+  @media(max-width:768px){.nav-links{display:none}.nav-inner{padding:14px 20px}}
+
+  /* HERO */
+  .hero{position:relative;padding:80px 32px 60px;overflow:hidden}
+  .hero-inner{max-width:1280px;margin:0 auto;position:relative;z-index:2}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;background:rgba(8,145,178,.08);color:#0891b2;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:24px}
+  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:#0891b2;animation:pulse 2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+  h1.hero-title{font-family:'Fraunces',serif;font-size:clamp(40px,6.5vw,84px);line-height:1.02;font-weight:500;letter-spacing:-0.035em;max-width:1100px;margin-bottom:28px}
+  .hero-title em{font-style:italic;background:linear-gradient(120deg,#0891b2,#06b6d4 50%,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero-sub{font-size:clamp(17px,1.6vw,21px);color:#475569;max-width:680px;line-height:1.6;margin-bottom:40px}
+  .hero-stats{display:flex;gap:48px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(15,23,42,.08);max-width:680px}
+  .stat .n{font-family:'Fraunces',serif;font-size:32px;font-weight:600;color:#0f172a;letter-spacing:-0.02em;display:block}
+  .stat .l{font-size:13px;color:#64748b;margin-top:4px}
+  .hero-bg{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.55}
+  .hero-bg::before,.hero-bg::after{content:"";position:absolute;border-radius:50%;filter:blur(80px)}
+  .hero-bg::before{width:520px;height:520px;background:radial-gradient(circle,#06b6d4 0%,transparent 70%);top:-180px;right:-120px}
+  .hero-bg::after{width:420px;height:420px;background:radial-gradient(circle,#fbbf24 0%,transparent 70%);bottom:-160px;left:-80px;opacity:.4}
+
+  /* FEATURED */
+  .featured{padding:40px 32px 100px}
+  .featured-inner{max-width:1280px;margin:0 auto}
+  .featured-card{display:grid;grid-template-columns:1.15fr 1fr;gap:0;background:#fff;border-radius:32px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(15,23,42,.18);transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
+  .featured-card:hover{transform:translateY(-6px);box-shadow:0 40px 100px -30px rgba(15,23,42,.28)}
+  .featured-img{position:relative;min-height:520px;overflow:hidden}
+  .featured-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+  .featured-card:hover .featured-img img{transform:scale(1.05)}
+  .featured-badge{position:absolute;top:24px;left:24px;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);padding:8px 16px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#0f172a}
+  .featured-body{padding:56px 56px;display:flex;flex-direction:column;justify-content:center}
+  .featured-chip{display:inline-block;color:#0891b2;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px}
+  .featured-body h2{font-family:'Fraunces',serif;font-size:clamp(28px,3.4vw,44px);line-height:1.08;font-weight:500;letter-spacing:-0.025em;margin-bottom:20px;color:#0f172a}
+  .featured-body p{font-size:17px;color:#475569;line-height:1.6;margin-bottom:32px}
+  .featured-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:#64748b;padding-top:24px;border-top:1px solid #e2e8f0}
+  .read-btn{margin-left:auto;display:inline-flex;align-items:center;gap:8px;color:#0f172a;font-weight:700}
+  .read-btn::after{content:"→";transition:transform .3s}
+  .featured-card:hover .read-btn::after{transform:translateX(6px)}
+  @media(max-width:900px){.featured-card{grid-template-columns:1fr}.featured-img{min-height:280px}.featured-body{padding:36px 28px}}
+
+  /* SECTION HEADER */
+  .sec{padding:0 32px 80px}
+  .sec-inner{max-width:1280px;margin:0 auto}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:48px;padding-bottom:28px;border-bottom:1px solid rgba(15,23,42,.08)}
+  .sec-head h2{font-family:'Fraunces',serif;font-size:clamp(28px,3.6vw,44px);font-weight:500;letter-spacing:-0.025em;line-height:1.05;color:#0f172a}
+  .sec-head h2 em{font-style:italic;color:#0891b2}
+  .sec-head p{color:#64748b;font-size:15px;max-width:380px;text-align:right}
+  @media(max-width:768px){.sec-head{flex-direction:column;align-items:flex-start}.sec-head p{text-align:left}}
+
+  /* SECONDARY ROW */
+  .row-2{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+  @media(max-width:900px){.row-2{grid-template-columns:1fr}}
+
+  /* GRID */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  @media(max-width:980px){.grid-3{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:640px){.grid-3{grid-template-columns:1fr}}
+
+  /* CARD */
+  .card{background:#fff;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s;box-shadow:0 4px 20px -8px rgba(15,23,42,.08);border:1px solid rgba(15,23,42,.04)}
+  .card:hover{transform:translateY(-8px);box-shadow:0 30px 60px -20px rgba(15,23,42,.22)}
+  .card-img{aspect-ratio:16/10;overflow:hidden;background:#e2e8f0}
+  .card-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+  .card:hover .card-img img{transform:scale(1.08)}
+  .card-body{padding:28px 28px 30px;display:flex;flex-direction:column;flex:1;gap:14px}
+  .card .chip{align-self:flex-start;color:#0891b2;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+  .card h3{font-family:'Fraunces',serif;font-size:23px;line-height:1.18;font-weight:500;letter-spacing:-0.02em;color:#0f172a}
+  .card p{color:#64748b;font-size:14.5px;line-height:1.55;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .card-meta{display:flex;align-items:center;justify-content:space-between;font-size:12.5px;color:#94a3b8;padding-top:14px;border-top:1px solid #f1f5f9;margin-top:6px}
+  .card .arrow{color:#0891b2;font-weight:600}
+
+  .card-list .card-body h3{font-size:26px}
+
+  /* CATEGORIES */
+  .cats{padding:0 32px 100px}
+  .cats-inner{max-width:1280px;margin:0 auto;background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);border-radius:36px;padding:80px 56px;color:#fff;position:relative;overflow:hidden}
+  .cats-inner::before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(6,182,212,.25),transparent 70%);top:-200px;right:-100px;filter:blur(40px)}
+  .cats-head{position:relative;z-index:2;margin-bottom:48px}
+  .cats-head h2{font-family:'Fraunces',serif;font-size:clamp(28px,3.6vw,44px);font-weight:500;letter-spacing:-0.025em;line-height:1.05;margin-bottom:14px}
+  .cats-head h2 em{font-style:italic;color:#22d3ee}
+  .cats-head p{color:#94a3b8;font-size:16px;max-width:560px}
+  .cats-list{position:relative;z-index:2;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+  .cat-tag{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:24px 22px;transition:background .3s,transform .3s;cursor:pointer}
+  .cat-tag:hover{background:rgba(34,211,238,.1);border-color:rgba(34,211,238,.4);transform:translateY(-3px)}
+  .cat-tag .n{font-family:'Fraunces',serif;font-size:36px;font-weight:500;color:#22d3ee;letter-spacing:-0.02em;display:block;line-height:1}
+  .cat-tag .l{font-size:14px;color:#e2e8f0;margin-top:10px;font-weight:500}
+  @media(max-width:768px){.cats-inner{padding:48px 28px;border-radius:24px}}
+
+  /* MORE */
+  .more-list{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border-radius:24px;overflow:hidden;border:1px solid rgba(15,23,42,.06)}
+  .more-item{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:24px;border-bottom:1px solid #f1f5f9;border-right:1px solid #f1f5f9;transition:background .3s}
+  .more-item:hover{background:#fafafa}
+  .more-item:nth-child(2n){border-right:none}
+  .more-item img{width:120px;height:90px;object-fit:cover;border-radius:12px}
+  .more-item h4{font-family:'Fraunces',serif;font-size:18px;line-height:1.2;font-weight:500;letter-spacing:-0.015em;color:#0f172a;margin-bottom:8px}
+  .more-item .mc{font-size:11px;color:#0891b2;font-weight:700;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:6px}
+  .more-item .md{font-size:12.5px;color:#94a3b8;margin-top:8px}
+  @media(max-width:768px){.more-list{grid-template-columns:1fr}.more-item{border-right:none}}
+
+  /* NEWSLETTER */
+  .news{padding:40px 32px 120px}
+  .news-inner{max-width:1080px;margin:0 auto;background:linear-gradient(135deg,#06b6d4 0%,#0891b2 60%,#0e7490 100%);border-radius:36px;padding:80px 56px;color:#fff;text-align:center;position:relative;overflow:hidden}
+  .news-inner::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(251,191,36,.25),transparent 50%);pointer-events:none}
+  .news-inner h2{font-family:'Fraunces',serif;font-size:clamp(32px,4.5vw,52px);font-weight:500;letter-spacing:-0.025em;line-height:1.05;margin-bottom:18px;position:relative}
+  .news-inner h2 em{font-style:italic}
+  .news-inner p{font-size:17px;opacity:.95;max-width:560px;margin:0 auto 36px;position:relative}
+  .news-form{display:flex;gap:10px;max-width:480px;margin:0 auto;position:relative}
+  .news-form input{flex:1;padding:16px 22px;border-radius:999px;border:0;font-size:15px;font-family:inherit;background:rgba(255,255,255,.95);color:#0f172a;outline:none}
+  .news-form button{padding:16px 28px;border-radius:999px;border:0;background:#0f172a;color:#fff;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit;transition:background .3s,transform .2s}
+  .news-form button:hover{background:#000;transform:translateY(-2px)}
+  @media(max-width:600px){.news-inner{padding:56px 24px;border-radius:24px}.news-form{flex-direction:column}}
+
+  /* FOOTER */
+  footer{background:#0f172a;color:#94a3b8;padding:70px 32px 40px}
+  .ft-inner{max-width:1280px;margin:0 auto}
+  .ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .ft-brand .brand{color:#fff;margin-bottom:18px}
+  .ft-brand p{font-size:14.5px;line-height:1.6;max-width:340px}
+  .ft-col h5{color:#fff;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+  .ft-col a{display:block;font-size:14px;padding:6px 0;color:#94a3b8;transition:color .2s}
+  .ft-col a:hover{color:#22d3ee}
+  .ft-bottom{padding-top:32px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px}
+  @media(max-width:900px){.ft-top{grid-template-columns:1fr 1fr;gap:36px}}
+  @media(max-width:560px){.ft-top{grid-template-columns:1fr}}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="${BLOG_BASE}/"><span class="brand-dot"></span> Blog Acqualive</a>
+    <div class="nav-links">
+      <a href="#destaque">Em destaque</a>
+      <a href="#recentes">Recentes</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#newsletter">Newsletter</a>
+    </div>
+    <a class="nav-cta" href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer Acqualive</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <span class="eyebrow reveal">Conteúdo Acqualive · ${items.length} artigos</span>
+    <h1 class="hero-title reveal">Ciência, água e <em>saúde</em><br>em uma leitura por vez.</h1>
+    <p class="hero-sub reveal">Investigações, guias e reflexões sobre a água que você bebe todos os dias. Conteúdo confiável, escrito para quem cuida de verdade da própria saúde e bem-estar.</p>
+    <div class="hero-stats reveal">
+      <div class="stat"><span class="n">${items.length}+</span><span class="l">artigos publicados</span></div>
+      <div class="stat"><span class="n">15+</span><span class="l">anos estudando água</span></div>
+      <div class="stat"><span class="n">150k+</span><span class="l">pessoas atendidas</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="featured" id="destaque">
+  <div class="featured-inner">
+    <a class="featured-card reveal" href="${featured.url}">
+      <div class="featured-img">
+        <span class="featured-badge">Mais recente</span>
+        <img src="${featured.image}" alt="${featured.title.replace(/"/g, "&quot;")}">
+      </div>
+      <div class="featured-body">
+        <span class="featured-chip">${featured.category}</span>
+        <h2>${featured.title}</h2>
+        <p>${featured.description}</p>
+        <div class="featured-meta">
+          <span>${featured.dateLabel}</span>
+          <span class="read-btn">Ler agora</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="sec" id="leituras">
+  <div class="sec-inner">
+    <div class="sec-head reveal">
+      <h2>Leituras <em>essenciais</em><br>desta semana.</h2>
+      <p>Selecionamos os artigos que mais transformaram a forma como nossos leitores enxergam a água.</p>
+    </div>
+    <div class="row-2">
+      ${secondary.map((p) => card(p, "list")).join("")}
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="recentes">
+  <div class="sec-inner">
+    <div class="sec-head reveal">
+      <h2>Publicações <em>recentes</em>.</h2>
+      <p>Toda semana um novo olhar sobre hidratação, longevidade e a ciência da água.</p>
+    </div>
+    <div class="grid-3">
+      ${grid.map((p) => card(p, "grid")).join("")}
+    </div>
+  </div>
+</section>
+
+<section class="cats" id="categorias">
+  <div class="cats-inner">
+    <div class="cats-head">
+      <h2>Temas que <em>importam</em>.</h2>
+      <p>Conteúdo organizado para você ir fundo no que mais faz sentido agora.</p>
+    </div>
+    <div class="cats-list">
+      ${["Ciência da Água","Bem-estar","Investigação","Família & Vida","Café & Sabor","Guia & Comparativos"].map((c) => {
+        const count = items.filter((i) => i.category === c).length;
+        return `<div class="cat-tag"><span class="n">${String(count).padStart(2,"0")}</span><span class="l">${c}</span></div>`;
+      }).join("")}
+    </div>
+  </div>
+</section>
+
+${more.length ? `
+<section class="sec" id="mais">
+  <div class="sec-inner">
+    <div class="sec-head reveal">
+      <h2>Continue <em>explorando</em>.</h2>
+      <p>Mais conteúdos do arquivo Acqualive para quem quer ir além.</p>
+    </div>
+    <div class="more-list">
+      ${more.map((p) => `
+        <a class="more-item" href="${p.url}">
+          <img src="${p.image}" alt="${p.title.replace(/"/g, "&quot;")}" loading="lazy">
+          <div>
+            <span class="mc">${p.category}</span>
+            <h4>${p.title}</h4>
+            <span class="md">${p.dateLabel}</span>
+          </div>
+        </a>`).join("")}
+    </div>
+  </div>
+</section>` : ""}
+
+<section class="news" id="newsletter">
+  <div class="news-inner">
+    <h2>Receba nossas <em>melhores leituras</em>.</h2>
+    <p>Um e-mail por semana, sem ruído. Apenas ciência, água e bem-estar direto na sua caixa de entrada.</p>
+    <form class="news-form" onsubmit="event.preventDefault();this.querySelector('button').innerText='Inscrito!';">
+      <input type="email" required placeholder="seu melhor e-mail">
+      <button type="submit">Quero receber</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <div class="brand"><span class="brand-dot"></span> Acqualive</div>
+        <p>A melhor versão da sua água. Há mais de 15 anos levando saúde e bem-estar para famílias em todo o Brasil.</p>
+      </div>
+      <div class="ft-col">
+        <h5>Blog</h5>
+        <a href="#destaque">Em destaque</a>
+        <a href="#recentes">Recentes</a>
+        <a href="#categorias">Categorias</a>
+      </div>
+      <div class="ft-col">
+        <h5>Acqualive</h5>
+        <a href="https://acqualive.com.br" target="_blank" rel="noopener">Site oficial</a>
+        <a href="https://acqualive.com.br/produtos" target="_blank" rel="noopener">Purificadores</a>
+        <a href="https://acqualive.com.br/contato" target="_blank" rel="noopener">Contato</a>
+      </div>
+      <div class="ft-col">
+        <h5>Siga</h5>
+        <a href="https://instagram.com/acqualive" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://youtube.com/@acqualive" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© ${new Date().getFullYear()} Acqualive. Todos os direitos reservados.</span>
+      <span>Feito com cuidado para quem ama água de verdade.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
+  },{threshold:.12, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal, .card, .more-item, .cat-tag').forEach(function(el){ el.classList.add('reveal'); io.observe(el); });
+
+  function sendHeight(){
+    try { parent.postMessage({type:'blog-iframe-height', height: document.documentElement.scrollHeight}, '*'); } catch(e){}
+  }
+  window.addEventListener('load', sendHeight);
+  setTimeout(sendHeight, 600);
+  setTimeout(sendHeight, 1600);
+  window.addEventListener('resize', sendHeight);
+})();
+</script>
+
+</body>
+</html>`;
+};
+
+const ARTICLES = [
+  { title: "Home do Blog Acqualive", slug: "blog-home", html: buildBlogHomeHtml(RAW_ARTICLES) },
+  ...RAW_ARTICLES,
+];
 
 const extractMeta = (html: string) => {
   const get = (re: RegExp) => { const m = html.match(re); return m ? m[1] : ""; };
