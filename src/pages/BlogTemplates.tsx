@@ -4177,7 +4177,7 @@ ${JSON.stringify({
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;background:#fafbfc;color:#0f172a;line-height:1.7;-webkit-font-smoothing:antialiased}
+  body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;background:#ffffff;color:#0f172a;line-height:1.7;-webkit-font-smoothing:antialiased}
   img{display:block;max-width:100%;height:auto}
   a{color:inherit;text-decoration:none}
   .serif{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500}
