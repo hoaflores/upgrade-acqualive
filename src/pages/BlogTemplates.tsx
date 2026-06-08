@@ -4256,7 +4256,7 @@ ${JSON.stringify({
   .filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;justify-content:center}
   .filter-chip{font-size:13px;font-weight:700;color:#475569;background:#fff;border:1.5px solid #e2e8f0;padding:9px 18px;border-radius:100px;cursor:pointer;transition:all .2s;font-family:inherit}
   .filter-chip:hover{border-color:#60a5fa;color:#2563eb}
-  .filter-chip.active{background:#08101e;color:#fff;border-color:#08101e}
+  .filter-chip.active{background:#2563eb;color:#fff;border-color:#2563eb}
   .filter-chip .count{opacity:.5;margin-left:6px;font-weight:600}
 
   /* RANKED TOP */
