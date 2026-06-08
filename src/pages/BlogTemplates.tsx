@@ -4190,7 +4190,7 @@ const buildBlogHomeHtml = (articles: { title: string; slug: string; html: string
 <meta property="og:description" content="Artigos sobre água, hidratação, filtros e longevidade. Conteúdo Acqualive.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="${BLOG_BASE}/">
-<meta property="og:image" content="${featured.image}">
+<meta property="og:image" content="${BLOG_BASE}/wp-content/uploads/og-default.jpg">
 <script type="application/ld+json">
 ${JSON.stringify({
   "@context": "https://schema.org",
@@ -4199,14 +4199,6 @@ ${JSON.stringify({
   url: BLOG_BASE,
   description: "Ciência, água e saúde em uma leitura.",
   publisher: { "@type": "Organization", name: "Acqualive" },
-  blogPost: items.slice(0, 10).map((p) => ({
-    "@type": "BlogPosting",
-    headline: p.title,
-    url: p.url,
-    image: p.image,
-    datePublished: p.date,
-    description: p.description,
-  })),
 })}
 </script>
 <style>
