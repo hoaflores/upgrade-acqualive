@@ -4418,7 +4418,7 @@ ${JSON.stringify({
       </div>
       <div class="hero-proof">
         <div class="av"><span></span><span></span><span></span><span></span></div>
-        <span>Mais de <strong style="color:#cbd5e1">150 mil pessoas</strong> já confiam na Acqualive</span>
+        <span>Mais de <strong style="color:#0f172a">150 mil pessoas</strong> já confiam na Acqualive</span>
       </div>
     </div>
     <div class="hero-feat" id="hero-feat-slot">
