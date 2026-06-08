@@ -4450,9 +4450,7 @@ ${JSON.stringify({
       <h2>Publicações <span>recentes</span>.</h2>
       <p class="head-sub">Toda semana um novo olhar sobre hidratação, longevidade e a ciência da água.</p>
     </div>
-    <div class="grid-3">
-      ${grid.map((p) => card(p)).join("")}
-    </div>
+    <div class="grid-3" id="grid-slot" data-skeleton="grid"></div>
   </div>
 </section>
 
