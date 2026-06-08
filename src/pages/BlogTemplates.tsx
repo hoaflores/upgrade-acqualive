@@ -4126,36 +4126,9 @@ const CONHECA = [
 
 const NEWSLETTER_ENDPOINT = "https://kvlkcavrxxwxxvijwqhd.supabase.co/functions/v1/inscrever-newsletter";
 
-const buildBlogHomeHtml = (articles: { title: string; slug: string; html: string }[]) => {
-  const items = articles.map((a) => {
-    const m = pickMeta(a.html);
-    return {
-      title: a.title,
-      slug: a.slug,
-      url: `${BLOG_BASE}/${a.slug}/`,
-      description: m.description,
-      image: m.image,
-      date: m.date,
-      dateLabel: formatDate(m.date),
-      category: guessCategory(m.keywords, a.title),
-    };
-  }).sort((a, b) => (b.date || "").localeCompare(a.date || ""));
-
-  const featured = items[0];
-  const secondary = items.slice(1, 3);
-  const grid = items.slice(3, 9);
-  const more = items.slice(9);
-
-  const card = (p: typeof items[number]) => `
-  <a class="post-card" href="${p.url}">
-    <div class="post-card-img"><img src="${p.image}" alt="${p.title.replace(/"/g, "&quot;")}" loading="lazy"></div>
-    <div class="post-card-body">
-      <span class="post-chip">${p.category}</span>
-      <h3>${p.title}</h3>
-      <p>${p.description}</p>
-      <div class="post-meta"><span>${p.dateLabel}</span><span class="post-arrow">Ler artigo →</span></div>
-    </div>
-  </a>`;
+const buildBlogHomeHtml = (_articles: { title: string; slug: string; html: string }[]) => {
+  // Posts are fetched live from the WordPress REST API on the client.
+  // The _articles param is kept for API compatibility but not used to render.
 
   const podcastSlide = (v: typeof PODCASTS[number]) => `
   <article class="carousel-slide podcast-slide">
@@ -4190,7 +4163,7 @@ const buildBlogHomeHtml = (articles: { title: string; slug: string; html: string
 <meta property="og:description" content="Artigos sobre água, hidratação, filtros e longevidade. Conteúdo Acqualive.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="${BLOG_BASE}/">
-<meta property="og:image" content="${featured.image}">
+<meta property="og:image" content="${BLOG_BASE}/wp-content/uploads/og-default.jpg">
 <script type="application/ld+json">
 ${JSON.stringify({
   "@context": "https://schema.org",
@@ -4199,14 +4172,6 @@ ${JSON.stringify({
   url: BLOG_BASE,
   description: "Ciência, água e saúde em uma leitura.",
   publisher: { "@type": "Organization", name: "Acqualive" },
-  blogPost: items.slice(0, 10).map((p) => ({
-    "@type": "BlogPosting",
-    headline: p.title,
-    url: p.url,
-    image: p.image,
-    datePublished: p.date,
-    description: p.description,
-  })),
 })}
 </script>
 <style>
@@ -4389,11 +4354,11 @@ ${JSON.stringify({
 
 <header class="article-header">
   <div class="header-inner">
-    <span class="badge reveal">Blog Acqualive · ${items.length} artigos</span>
+    <span class="badge reveal"><span id="post-count-badge">Blog Acqualive</span></span>
     <h1 class="reveal">Ciência, água e <span>saúde</span> em uma leitura por vez.</h1>
     <p class="header-desc reveal">Investigações, guias e reflexões sobre a água que você bebe todos os dias. Conteúdo confiável, escrito para quem cuida de verdade da própria saúde e bem-estar.</p>
     <div class="header-stats reveal">
-      <div class="stat"><span class="n">${items.length}+</span><span class="l">Artigos</span></div>
+      <div class="stat"><span class="n" id="stat-posts">--</span><span class="l">Artigos</span></div>
       <div class="stat"><span class="n">15+</span><span class="l">Anos de Acqualive</span></div>
       <div class="stat"><span class="n">150k+</span><span class="l">Pessoas atendidas</span></div>
     </div>
@@ -4407,21 +4372,7 @@ ${JSON.stringify({
       <h2>O artigo da <span>semana</span></h2>
       <p class="head-sub">A leitura mais recente do nosso arquivo, escolhida para abrir a sua semana com clareza.</p>
     </div>
-    <a class="featured-card reveal" href="${featured.url}">
-      <div class="featured-img">
-        <span class="featured-badge">Mais recente</span>
-        <img src="${featured.image}" alt="${featured.title.replace(/"/g, "&quot;")}">
-      </div>
-      <div class="featured-body">
-        <span class="featured-chip">${featured.category}</span>
-        <h3>${featured.title}</h3>
-        <p>${featured.description}</p>
-        <div class="featured-meta">
-          <span>${featured.dateLabel}</span>
-          <span class="read-btn">Ler agora</span>
-        </div>
-      </div>
-    </a>
+    <div id="featured-slot" class="reveal" data-skeleton="featured"></div>
   </div>
 </section>
 
@@ -4432,9 +4383,7 @@ ${JSON.stringify({
       <h2>O que está <span>transformando</span> nossos leitores.</h2>
       <p class="head-sub">Os textos que mais mudaram a forma como nossos leitores enxergam a água.</p>
     </div>
-    <div class="row-2">
-      ${secondary.map((p) => card(p)).join("")}
-    </div>
+    <div class="row-2" id="secondary-slot" data-skeleton="row2"></div>
   </div>
 </section>
 
@@ -4466,9 +4415,7 @@ ${JSON.stringify({
       <h2>Publicações <span>recentes</span>.</h2>
       <p class="head-sub">Toda semana um novo olhar sobre hidratação, longevidade e a ciência da água.</p>
     </div>
-    <div class="grid-3">
-      ${grid.map((p) => card(p)).join("")}
-    </div>
+    <div class="grid-3" id="grid-slot" data-skeleton="grid"></div>
   </div>
 </section>
 
@@ -4493,27 +4440,16 @@ ${JSON.stringify({
   </div>
 </section>
 
-${more.length ? `
-<section class="section" id="mais" style="padding-top:0">
+<section class="section" id="mais" style="padding-top:0;display:none">
   <div class="section-inner">
     <div class="section-head reveal">
       <span class="section-eyebrow">Arquivo</span>
       <h2>Continue <span>explorando</span>.</h2>
       <p class="head-sub">Mais conteúdos do arquivo Acqualive para quem quer ir além.</p>
     </div>
-    <div class="more-list">
-      ${more.map((p) => `
-        <a class="more-item" href="${p.url}">
-          <img src="${p.image}" alt="${p.title.replace(/"/g, "&quot;")}" loading="lazy">
-          <div>
-            <span class="mc">${p.category}</span>
-            <h4>${p.title}</h4>
-            <span class="md">${p.dateLabel}</span>
-          </div>
-        </a>`).join("")}
-    </div>
+    <div class="more-list" id="more-slot"></div>
   </div>
-</section>` : ""}
+</section>
 
 <section class="news" id="newsletter">
   <div class="news-inner">
@@ -4564,10 +4500,183 @@ ${more.length ? `
 
 <script>
 (function(){
+  // ===== Live posts via WordPress REST API =====
+  var BLOG_BASE = '${BLOG_BASE}';
+  var WP_ENDPOINT = BLOG_BASE + '/wp-json/wp/v2/posts?_embed&per_page=15&_fields=id,date,link,title,excerpt,_links,_embedded';
+
+  function categoryFor(title, cats){
+    var t = ((cats || []).join(' ') + ' ' + (title || '')).toLowerCase();
+    if (/caf[eé]|barista|extra[cç][aã]o/.test(t)) return 'Café & Sabor';
+    if (/menopausa|m[aã]e|gravidez|filho|crian[cç]a/.test(t)) return 'Família & Vida';
+    if (/micropl[aá]stico|cloro|torneira|contamina/.test(t)) return 'Investigação';
+    if (/alcalina|pral|ioniza|anti-inflamat|magn[eé]sio|long|blue zone/.test(t)) return 'Ciência da Água';
+    if (/inverno|copa|hidrata|pele|cabelo/.test(t)) return 'Bem-estar';
+    if (/filtro|purificador|barro|osmose/.test(t)) return 'Guia & Comparativos';
+    return 'Acqualive';
+  }
+  function fmtDate(iso){
+    try { return new Date(iso).toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'}); }
+    catch(e){ return ''; }
+  }
+  function decode(html){
+    var d = document.createElement('div'); d.innerHTML = html || ''; return d.textContent || d.innerText || '';
+  }
+  function strip(html){
+    var d = document.createElement('div'); d.innerHTML = html || '';
+    return (d.textContent || d.innerText || '').replace(/\\s+/g,' ').trim();
+  }
+  function esc(s){ return String(s).replace(/"/g,'&quot;'); }
+
+  function normalize(post){
+    var emb = post._embedded || {};
+    var media = (emb['wp:featuredmedia'] || [])[0] || {};
+    var image = media.source_url || (media.media_details && media.media_details.sizes && (media.media_details.sizes.large || media.media_details.sizes.medium_large || media.media_details.sizes.medium) || {}).source_url || '';
+    var terms = (emb['wp:term'] || []).flat ? (emb['wp:term'] || []).flat() : [].concat.apply([], emb['wp:term'] || []);
+    var catNames = terms.filter(function(t){ return t && t.taxonomy === 'category'; }).map(function(t){ return t.name; });
+    var title = decode((post.title && post.title.rendered) || '');
+    var desc = strip((post.excerpt && post.excerpt.rendered) || '');
+    if (desc.length > 180) desc = desc.slice(0,177) + '...';
+    return {
+      title: title,
+      url: post.link,
+      image: image || (BLOG_BASE + '/wp-content/uploads/og-default.jpg'),
+      description: desc,
+      date: post.date,
+      dateLabel: fmtDate(post.date),
+      category: categoryFor(title, catNames),
+    };
+  }
+
+  function cardHtml(p){
+    return '<a class="post-card reveal" href="' + p.url + '">' +
+      '<div class="post-card-img"><img src="' + p.image + '" alt="' + esc(p.title) + '" loading="lazy"></div>' +
+      '<div class="post-card-body">' +
+        '<span class="post-chip">' + p.category + '</span>' +
+        '<h3>' + p.title + '</h3>' +
+        '<p>' + p.description + '</p>' +
+        '<div class="post-meta"><span>' + p.dateLabel + '</span><span class="post-arrow">Ler artigo →</span></div>' +
+      '</div></a>';
+  }
+
+  function featuredHtml(p){
+    return '<a class="featured-card" href="' + p.url + '">' +
+      '<div class="featured-img">' +
+        '<span class="featured-badge">Mais recente</span>' +
+        '<img src="' + p.image + '" alt="' + esc(p.title) + '">' +
+      '</div>' +
+      '<div class="featured-body">' +
+        '<span class="featured-chip">' + p.category + '</span>' +
+        '<h3>' + p.title + '</h3>' +
+        '<p>' + p.description + '</p>' +
+        '<div class="featured-meta">' +
+          '<span>' + p.dateLabel + '</span>' +
+          '<span class="read-btn">Ler agora</span>' +
+        '</div>' +
+      '</div></a>';
+  }
+
+  function moreHtml(p){
+    return '<a class="more-item reveal" href="' + p.url + '">' +
+      '<img src="' + p.image + '" alt="' + esc(p.title) + '" loading="lazy">' +
+      '<div>' +
+        '<span class="mc">' + p.category + '</span>' +
+        '<h4>' + p.title + '</h4>' +
+        '<span class="md">' + p.dateLabel + '</span>' +
+      '</div></a>';
+  }
+
+  function injectLd(posts){
+    try {
+      var ld = {
+        '@context':'https://schema.org','@type':'Blog',
+        name:'Blog Acqualive', url: BLOG_BASE,
+        blogPost: posts.slice(0,10).map(function(p){
+          return {'@type':'BlogPosting', headline:p.title, url:p.url, image:p.image, datePublished:p.date, description:p.description};
+        })
+      };
+      var s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.text = JSON.stringify(ld);
+      document.head.appendChild(s);
+    } catch(e){}
+  }
+
+  function render(posts){
+    if (!posts || !posts.length) return;
+    var featured = posts[0];
+    var secondary = posts.slice(1,3);
+    var grid = posts.slice(3,9);
+    var more = posts.slice(9);
+
+    var fSlot = document.getElementById('featured-slot');
+    if (fSlot && featured) fSlot.innerHTML = featuredHtml(featured);
+
+    var sSlot = document.getElementById('secondary-slot');
+    if (sSlot) sSlot.innerHTML = secondary.map(cardHtml).join('');
+
+    var gSlot = document.getElementById('grid-slot');
+    if (gSlot) gSlot.innerHTML = grid.map(cardHtml).join('');
+
+    if (more.length){
+      var mSlot = document.getElementById('more-slot');
+      var mSec = document.getElementById('mais');
+      if (mSlot) mSlot.innerHTML = more.map(moreHtml).join('');
+      if (mSec) mSec.style.display = '';
+    }
+
+    var pc = document.getElementById('post-count-badge');
+    if (pc) pc.innerText = 'Blog Acqualive · ' + posts.length + ' artigos';
+    var ps = document.getElementById('stat-posts');
+    if (ps) ps.innerText = posts.length + '+';
+
+    injectLd(posts);
+
+    // observe new reveals + resize iframe
+    document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ io.observe(el); });
+    setTimeout(sendHeight, 100); setTimeout(sendHeight, 800);
+  }
+
+  function showError(msg){
+    var fSlot = document.getElementById('featured-slot');
+    if (fSlot) fSlot.innerHTML = '<div style="background:#fff;border:1px solid #e4e4e7;border-radius:18px;padding:48px 24px;text-align:center;color:#52525b"><p style="margin-bottom:18px">Não foi possível carregar os artigos agora.</p><a href="' + BLOG_BASE + '" style="color:#2563eb;font-weight:700">Ver no blog →</a></div>';
+  }
+
+  function loadPosts(){
+    fetch(WP_ENDPOINT, { headers: { 'Accept':'application/json' } })
+      .then(function(r){ if(!r.ok) throw new Error('http '+r.status); return r.json(); })
+      .then(function(posts){ render((posts || []).map(normalize)); })
+      .catch(function(err){
+        // Fallback proxy (CORS) via rss2json
+        fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(BLOG_BASE + '/feed/'))
+          .then(function(r){ return r.json(); })
+          .then(function(j){
+            if (!j || !j.items) return showError();
+            var items = j.items.map(function(it){
+              var img = it.thumbnail || '';
+              if (!img && it.enclosure && it.enclosure.link) img = it.enclosure.link;
+              if (!img){ var m = (it.content||'').match(/<img[^>]+src=\"([^\"]+)\"/); if(m) img = m[1]; }
+              var desc = strip(it.description || '');
+              if (desc.length > 180) desc = desc.slice(0,177) + '...';
+              var title = decode(it.title || '');
+              return {
+                title: title, url: it.link, image: img || (BLOG_BASE + '/wp-content/uploads/og-default.jpg'),
+                description: desc, date: it.pubDate, dateLabel: fmtDate(it.pubDate),
+                category: categoryFor(title, it.categories || []),
+              };
+            });
+            render(items);
+          })
+          .catch(showError);
+      });
+  }
+
+  // Reveal observer (shared)
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
   },{threshold:.12, rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.reveal, .post-card, .more-item, .carousel-slide').forEach(function(el){ el.classList.add('reveal'); io.observe(el); });
+
+  loadPosts();
 
   // Carousels
   document.querySelectorAll('[data-carousel]').forEach(function(car){
