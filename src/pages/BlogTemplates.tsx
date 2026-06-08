@@ -4126,36 +4126,9 @@ const CONHECA = [
 
 const NEWSLETTER_ENDPOINT = "https://kvlkcavrxxwxxvijwqhd.supabase.co/functions/v1/inscrever-newsletter";
 
-const buildBlogHomeHtml = (articles: { title: string; slug: string; html: string }[]) => {
-  const items = articles.map((a) => {
-    const m = pickMeta(a.html);
-    return {
-      title: a.title,
-      slug: a.slug,
-      url: `${BLOG_BASE}/${a.slug}/`,
-      description: m.description,
-      image: m.image,
-      date: m.date,
-      dateLabel: formatDate(m.date),
-      category: guessCategory(m.keywords, a.title),
-    };
-  }).sort((a, b) => (b.date || "").localeCompare(a.date || ""));
-
-  const featured = items[0];
-  const secondary = items.slice(1, 3);
-  const grid = items.slice(3, 9);
-  const more = items.slice(9);
-
-  const card = (p: typeof items[number]) => `
-  <a class="post-card" href="${p.url}">
-    <div class="post-card-img"><img src="${p.image}" alt="${p.title.replace(/"/g, "&quot;")}" loading="lazy"></div>
-    <div class="post-card-body">
-      <span class="post-chip">${p.category}</span>
-      <h3>${p.title}</h3>
-      <p>${p.description}</p>
-      <div class="post-meta"><span>${p.dateLabel}</span><span class="post-arrow">Ler artigo →</span></div>
-    </div>
-  </a>`;
+const buildBlogHomeHtml = (_articles: { title: string; slug: string; html: string }[]) => {
+  // Posts are fetched live from the WordPress REST API on the client.
+  // The _articles param is kept for API compatibility but not used to render.
 
   const podcastSlide = (v: typeof PODCASTS[number]) => `
   <article class="carousel-slide podcast-slide">
