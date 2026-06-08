@@ -4407,21 +4407,7 @@ ${JSON.stringify({
       <h2>O artigo da <span>semana</span></h2>
       <p class="head-sub">A leitura mais recente do nosso arquivo, escolhida para abrir a sua semana com clareza.</p>
     </div>
-    <a class="featured-card reveal" href="${featured.url}">
-      <div class="featured-img">
-        <span class="featured-badge">Mais recente</span>
-        <img src="${featured.image}" alt="${featured.title.replace(/"/g, "&quot;")}">
-      </div>
-      <div class="featured-body">
-        <span class="featured-chip">${featured.category}</span>
-        <h3>${featured.title}</h3>
-        <p>${featured.description}</p>
-        <div class="featured-meta">
-          <span>${featured.dateLabel}</span>
-          <span class="read-btn">Ler agora</span>
-        </div>
-      </div>
-    </a>
+    <div id="featured-slot" class="reveal" data-skeleton="featured"></div>
   </div>
 </section>
 
@@ -4432,9 +4418,7 @@ ${JSON.stringify({
       <h2>O que está <span>transformando</span> nossos leitores.</h2>
       <p class="head-sub">Os textos que mais mudaram a forma como nossos leitores enxergam a água.</p>
     </div>
-    <div class="row-2">
-      ${secondary.map((p) => card(p)).join("")}
-    </div>
+    <div class="row-2" id="secondary-slot" data-skeleton="row2"></div>
   </div>
 </section>
 
