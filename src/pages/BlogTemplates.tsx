@@ -4295,16 +4295,16 @@ ${JSON.stringify({
   .testimonial-cite span{color:#2563eb}
 
   /* CAROUSEL */
-  .carousel-section{padding:90px 0;position:relative;overflow:hidden;background:#08101e;color:#fff}
+  .carousel-section{padding:90px 0;position:relative;overflow:hidden;background:linear-gradient(180deg,#eff6ff,#dbeafe);color:#0f172a}
   .carousel-section.light{background:linear-gradient(180deg,#fff,#eff6ff);color:#0f172a}
-  .carousel-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 10%,rgba(59,130,246,.16) 0%,transparent 55%),radial-gradient(ellipse at 10% 90%,rgba(6,182,212,.10) 0%,transparent 55%);pointer-events:none}
+  .carousel-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 10%,rgba(59,130,246,.14) 0%,transparent 55%),radial-gradient(ellipse at 10% 90%,rgba(6,182,212,.10) 0%,transparent 55%);pointer-events:none}
   .carousel-section.light::before{opacity:.35}
   .carousel-section .section-inner{position:relative;z-index:1;max-width:1280px;padding:0 24px}
   .carousel-section .section-head{margin-bottom:38px}
-  .carousel-section:not(.light) .section-eyebrow{color:#60a5fa}
-  .carousel-section:not(.light) h2{color:#fff}
-  .carousel-section:not(.light) h2 .serif{color:#60a5fa}
-  .carousel-section:not(.light) .head-sub{color:#94a3b8}
+  .carousel-section .section-eyebrow{color:#2563eb}
+  .carousel-section h2{color:#0f172a}
+  .carousel-section h2 .serif{color:#2563eb}
+  .carousel-section .head-sub{color:#475569}
 
   .carousel{position:relative}
   .carousel-track-wrap{overflow:hidden;margin:0 -8px;cursor:grab}
@@ -4315,21 +4315,19 @@ ${JSON.stringify({
   @media(min-width:760px){.podcast-slide{flex-basis:calc(50% - 12px)}.conheca-slide{flex-basis:calc(50% - 12px)}}
   @media(min-width:1080px){.podcast-slide{flex-basis:calc(33.333% - 16px)}.conheca-slide{flex-basis:calc(25% - 18px)}}
 
-  .video-wrap{position:relative;width:100%;padding-top:56.25%;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 20px 50px -20px rgba(0,0,0,.55)}
+  .video-wrap{position:relative;width:100%;padding-top:56.25%;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 20px 50px -20px rgba(15,23,42,.35)}
   .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
   .podcast-body{padding:22px 6px 0}
-  .badge-blue{display:inline-block;background:rgba(96,165,250,.16);border:1px solid rgba(96,165,250,.3);color:#93c5fd;font-size:10.5px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:12px}
-  .podcast-body h3{font-size:19px;font-weight:800;color:#fff;line-height:1.25;margin-bottom:10px;letter-spacing:-0.015em}
-  .podcast-body p{font-size:14.5px;color:#94a3b8;line-height:1.6}
+  .badge-blue{display:inline-block;background:rgba(37,99,235,.12);border:1px solid rgba(37,99,235,.3);color:#1d4ed8;font-size:10.5px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:12px}
+  .podcast-body h3{font-size:19px;font-weight:800;color:#0f172a;line-height:1.25;margin-bottom:10px;letter-spacing:-0.015em}
+  .podcast-body p{font-size:14.5px;color:#475569;line-height:1.6}
 
   .conheca-title{font-size:16px;font-weight:700;color:#0f172a;line-height:1.3;margin-top:16px;padding:0 4px;letter-spacing:-0.01em}
 
   .carousel-controls{display:flex;justify-content:center;gap:10px;margin-top:32px}
-  .car-btn{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;font-size:20px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:background .25s,border-color .25s,transform .25s}
-  .car-btn:hover{background:#60a5fa;border-color:#60a5fa;color:#08101e;transform:translateY(-2px)}
-  .carousel-section.light .car-btn{border-color:#cbd5e1;background:#fff;color:#0f172a}
-  .carousel-section.light .car-btn:hover{background:#2563eb;border-color:#2563eb;color:#fff}
+  .car-btn{width:46px;height:46px;border-radius:50%;border:1px solid #cbd5e1;background:#fff;color:#0f172a;font-size:20px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:background .25s,border-color .25s,transform .25s;box-shadow:0 4px 12px -4px rgba(15,23,42,.15)}
+  .car-btn:hover{background:#2563eb;border-color:#2563eb;color:#fff;transform:translateY(-2px)}
   .car-btn:disabled{opacity:.35;cursor:not-allowed;transform:none}
 
   /* NEWSLETTER */
