@@ -4389,11 +4389,11 @@ ${JSON.stringify({
 
 <header class="article-header">
   <div class="header-inner">
-    <span class="badge reveal">Blog Acqualive · ${items.length} artigos</span>
+    <span class="badge reveal"><span id="post-count-badge">Blog Acqualive</span></span>
     <h1 class="reveal">Ciência, água e <span>saúde</span> em uma leitura por vez.</h1>
     <p class="header-desc reveal">Investigações, guias e reflexões sobre a água que você bebe todos os dias. Conteúdo confiável, escrito para quem cuida de verdade da própria saúde e bem-estar.</p>
     <div class="header-stats reveal">
-      <div class="stat"><span class="n">${items.length}+</span><span class="l">Artigos</span></div>
+      <div class="stat"><span class="n" id="stat-posts">--</span><span class="l">Artigos</span></div>
       <div class="stat"><span class="n">15+</span><span class="l">Anos de Acqualive</span></div>
       <div class="stat"><span class="n">150k+</span><span class="l">Pessoas atendidas</span></div>
     </div>
