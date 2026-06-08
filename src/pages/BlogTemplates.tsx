@@ -4175,16 +4175,16 @@ ${JSON.stringify({
 })}
 </script>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;background:#fafbfc;color:#18181b;line-height:1.7;-webkit-font-smoothing:antialiased}
+  body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;background:#fafbfc;color:#0f172a;line-height:1.7;-webkit-font-smoothing:antialiased}
   img{display:block;max-width:100%;height:auto}
   a{color:inherit;text-decoration:none}
+  .serif{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500}
 
   /* NAV */
   .nav{position:sticky;top:0;z-index:50;background:rgba(8,16,30,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(96,165,250,.18)}
-  .nav-inner{max-width:1200px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .nav-inner{max-width:1200px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
   .brand{font-size:18px;font-weight:800;letter-spacing:-0.01em;color:#fff;display:flex;align-items:center;gap:10px}
   .brand-dot{width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,#60a5fa,#06b6d4);box-shadow:0 0 0 4px rgba(96,165,250,.18)}
   .brand .b-accent{color:#60a5fa}
@@ -4192,82 +4192,125 @@ ${JSON.stringify({
   .nav-links a:hover{color:#60a5fa}
   .nav-cta{background:#60a5fa;color:#08101e;padding:10px 18px;border-radius:100px;font-size:13px;font-weight:800;transition:transform .2s,background .2s}
   .nav-cta:hover{background:#93c5fd;transform:translateY(-1px)}
-  @media(max-width:820px){.nav-links{display:none}.nav-inner{padding:14px 18px}}
+  @media(max-width:820px){.nav-links{display:none}.nav-inner{padding:12px 18px}}
 
-  /* HEADER / HERO */
-  .article-header{background:#08101e;padding:80px 24px 72px;position:relative;overflow:hidden}
-  .article-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 100%,rgba(59,130,246,.14) 0%,transparent 55%),radial-gradient(ellipse at 80% 0%,rgba(6,182,212,.10) 0%,transparent 50%)}
-  .header-inner{position:relative;z-index:1;max-width:780px;margin:0 auto;text-align:center}
-  .badge{display:inline-block;background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.25);color:#93c5fd;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;padding:7px 18px;border-radius:100px;margin-bottom:24px}
-  .article-header h1{font-size:clamp(34px,5.4vw,58px);font-weight:900;color:#fff;line-height:1.1;margin-bottom:20px;letter-spacing:-0.025em}
-  .article-header h1 span{color:#60a5fa}
-  .header-desc{font-size:18px;color:#94a3b8;max-width:620px;margin:0 auto;line-height:1.7}
-  .header-stats{margin-top:44px;display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
-  .stat{text-align:center}
-  .stat .n{font-size:32px;font-weight:900;color:#60a5fa;letter-spacing:-0.02em;display:block;line-height:1}
-  .stat .l{font-size:12px;color:#64748b;margin-top:8px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600}
+  /* HERO */
+  .hero{background:#08101e;padding:64px 24px 80px;position:relative;overflow:hidden;color:#fff}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 15% 100%,rgba(59,130,246,.20) 0%,transparent 55%),radial-gradient(ellipse at 85% 0%,rgba(6,182,212,.13) 0%,transparent 50%)}
+  .hero-grid{position:relative;z-index:1;max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+  .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(96,165,250,.10);border:1px solid rgba(96,165,250,.28);color:#93c5fd;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;padding:8px 16px;border-radius:100px;margin-bottom:26px}
+  .hero-eyebrow .pulse{width:7px;height:7px;border-radius:50%;background:#60a5fa;box-shadow:0 0 0 0 rgba(96,165,250,.7);animation:pulse 2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(96,165,250,.7)}70%{box-shadow:0 0 0 10px rgba(96,165,250,0)}100%{box-shadow:0 0 0 0 rgba(96,165,250,0)}}
+  .hero h1{font-size:clamp(36px,5.2vw,62px);font-weight:900;color:#fff;line-height:1.04;margin-bottom:22px;letter-spacing:-0.03em}
+  .hero h1 .serif{color:#60a5fa;font-weight:600}
+  .hero-desc{font-size:18px;color:#cbd5e1;max-width:540px;line-height:1.65;margin-bottom:30px}
+  .hero-index{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px}
+  .hero-index a{font-size:12.5px;font-weight:700;color:#cbd5e1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);padding:8px 14px;border-radius:100px;transition:background .2s,color .2s,border-color .2s}
+  .hero-index a:hover{background:#60a5fa;color:#08101e;border-color:#60a5fa}
+  .hero-proof{display:flex;align-items:center;gap:14px;font-size:13px;color:#94a3b8}
+  .hero-proof .av{display:flex}
+  .hero-proof .av span{width:32px;height:32px;border-radius:50%;border:2px solid #08101e;background:linear-gradient(135deg,#60a5fa,#06b6d4);margin-left:-10px}
+  .hero-proof .av span:first-child{margin-left:0}
+
+  /* Hero featured */
+  .hero-feat{position:relative}
+  .hero-feat-card{position:relative;display:block;border-radius:22px;overflow:hidden;background:#0f1b30;border:1px solid rgba(96,165,250,.22);box-shadow:0 30px 80px -20px rgba(0,0,0,.65);transition:transform .5s,box-shadow .5s}
+  .hero-feat-card:hover{transform:translateY(-6px);box-shadow:0 40px 100px -20px rgba(0,0,0,.75)}
+  .hero-feat-card .hf-img{aspect-ratio:4/3;background:#08101e;overflow:hidden;position:relative}
+  .hero-feat-card .hf-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+  .hero-feat-card:hover .hf-img img{transform:scale(1.06)}
+  .hf-tag{position:absolute;top:18px;left:18px;background:#60a5fa;color:#08101e;padding:7px 14px;border-radius:100px;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px}
+  .hf-tag::before{content:'';width:6px;height:6px;background:#08101e;border-radius:50%;animation:pulse 2s infinite}
+  .hf-body{padding:28px 28px 30px}
+  .hf-chip{display:inline-block;color:#60a5fa;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+  .hf-body h2{font-size:24px;font-weight:800;color:#fff;line-height:1.2;letter-spacing:-0.02em;margin-bottom:12px}
+  .hf-body p{font-size:14.5px;color:#94a3b8;line-height:1.6;margin-bottom:20px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .hf-meta{display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);font-size:12.5px;color:#94a3b8}
+  .hf-cta{color:#60a5fa;font-weight:800;font-size:13px}
+  .hf-cta::after{content:" →";display:inline-block;transition:transform .3s}
+  .hero-feat-card:hover .hf-cta::after{transform:translateX(5px)}
+
+  @media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:44px}.hero{padding:56px 22px 64px}}
+
+  /* PROOF STRIP */
+  .proof-strip{background:#fff;border-top:1px solid #e4e4e7;border-bottom:1px solid #e4e4e7;padding:28px 24px}
+  .proof-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;align-items:center}
+  .proof-stat{text-align:center}
+  .proof-stat .n{font-size:26px;font-weight:900;color:#0f172a;letter-spacing:-0.02em;display:block;line-height:1}
+  .proof-stat .n .accent{color:#2563eb}
+  .proof-stat .l{font-size:11.5px;color:#64748b;margin-top:6px;text-transform:uppercase;letter-spacing:1.4px;font-weight:700;display:block}
+  @media(max-width:760px){.proof-inner{grid-template-columns:repeat(2,1fr);gap:22px}}
 
   /* SECTION */
-  .section{padding:80px 24px}
+  .section{padding:84px 24px}
   .section-inner{max-width:1200px;margin:0 auto}
-  .section-head{text-align:center;margin-bottom:48px}
+  .section-head{margin-bottom:42px;max-width:760px}
+  .section-head.center{text-align:center;margin-left:auto;margin-right:auto}
   .section-eyebrow{display:inline-block;color:#2563eb;font-size:12px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:12px}
-  .section-head h2{font-size:clamp(28px,4vw,40px);font-weight:900;color:#0f172a;line-height:1.15;letter-spacing:-0.02em;max-width:680px;margin:0 auto 14px}
-  .section-head h2 span{color:#2563eb}
-  .section-head .head-sub{color:#52525b;font-size:16px;max-width:560px;margin:0 auto}
+  .section-head h2{font-size:clamp(30px,4vw,44px);font-weight:900;color:#0f172a;line-height:1.1;letter-spacing:-0.025em;margin-bottom:14px}
+  .section-head h2 .serif{color:#2563eb;font-weight:600}
+  .section-head .head-sub{color:#52525b;font-size:16.5px;line-height:1.6;max-width:580px}
+  .section-head.center .head-sub{margin-left:auto;margin-right:auto}
 
-  /* FEATURED */
-  .featured-card{display:grid;grid-template-columns:1.15fr 1fr;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px -20px rgba(15,23,42,.18);border:1px solid rgba(15,23,42,.04);transition:transform .4s,box-shadow .4s}
-  .featured-card:hover{transform:translateY(-6px);box-shadow:0 30px 80px -20px rgba(15,23,42,.28)}
-  .featured-img{position:relative;min-height:460px;overflow:hidden;background:#08101e}
-  .featured-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
-  .featured-card:hover .featured-img img{transform:scale(1.06)}
-  .featured-badge{position:absolute;top:20px;left:20px;background:#60a5fa;color:#08101e;padding:7px 14px;border-radius:100px;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
-  .featured-body{padding:48px;display:flex;flex-direction:column;justify-content:center}
-  .featured-chip{display:inline-block;color:#2563eb;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
-  .featured-body h3{font-size:clamp(26px,3.2vw,38px);line-height:1.15;font-weight:900;letter-spacing:-0.02em;margin-bottom:18px;color:#0f172a}
-  .featured-body p{font-size:16px;color:#52525b;line-height:1.7;margin-bottom:28px}
-  .featured-meta{display:flex;align-items:center;gap:14px;font-size:13px;color:#71717a;padding-top:22px;border-top:1px solid #e4e4e7}
-  .read-btn{margin-left:auto;color:#2563eb;font-weight:800;font-size:14px}
-  .read-btn::after{content:" →";transition:transform .3s;display:inline-block}
-  .featured-card:hover .read-btn::after{transform:translateX(5px)}
-  @media(max-width:880px){.featured-card{grid-template-columns:1fr}.featured-img{min-height:260px}.featured-body{padding:32px 24px}}
+  /* FILTERS */
+  .filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;justify-content:center}
+  .filter-chip{font-size:13px;font-weight:700;color:#475569;background:#fff;border:1.5px solid #e2e8f0;padding:9px 18px;border-radius:100px;cursor:pointer;transition:all .2s;font-family:inherit}
+  .filter-chip:hover{border-color:#60a5fa;color:#2563eb}
+  .filter-chip.active{background:#08101e;color:#fff;border-color:#08101e}
+  .filter-chip .count{opacity:.5;margin-left:6px;font-weight:600}
 
-  /* GRID */
-  .row-2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-  @media(max-width:960px){.grid-3{grid-template-columns:repeat(2,1fr)}.row-2{grid-template-columns:1fr}}
-  @media(max-width:600px){.grid-3{grid-template-columns:1fr}}
+  /* RANKED TOP */
+  .ranked{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:80px}
+  @media(max-width:880px){.ranked{grid-template-columns:1fr}}
+  .ranked-card{position:relative;background:#fff;border-radius:16px;padding:28px 24px 26px;border:1px solid #e4e4e7;box-shadow:0 4px 14px -6px rgba(15,23,42,.07);transition:transform .35s,box-shadow .35s,border-color .35s;display:block}
+  .ranked-card:hover{transform:translateY(-5px);border-color:rgba(96,165,250,.4);box-shadow:0 22px 50px -16px rgba(15,23,42,.2)}
+  .ranked-num{font-family:'Fraunces',serif;font-weight:800;font-style:italic;font-size:62px;line-height:1;color:#2563eb;opacity:.16;position:absolute;top:14px;right:22px;letter-spacing:-0.04em}
+  .ranked-chip{display:inline-block;color:#2563eb;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;position:relative;z-index:1}
+  .ranked-card h3{font-size:19px;font-weight:800;line-height:1.25;letter-spacing:-0.015em;color:#0f172a;margin-bottom:14px;position:relative;z-index:1}
+  .ranked-meta{font-size:12.5px;color:#94a3b8;font-weight:600;display:flex;gap:10px;align-items:center}
+  .ranked-meta .dot{width:3px;height:3px;background:#cbd5e1;border-radius:50%}
 
   /* POST CARD */
-  .post-card{background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;border:1px solid #e4e4e7;box-shadow:0 4px 16px -6px rgba(15,23,42,.08);transition:transform .35s,box-shadow .35s,border-color .35s}
-  .post-card:hover{transform:translateY(-6px);box-shadow:0 24px 50px -16px rgba(15,23,42,.22);border-color:rgba(96,165,250,.4)}
-  .post-card-img{aspect-ratio:16/10;overflow:hidden;background:#e4e4e7}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  @media(max-width:1080px){.grid-4{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:820px){.grid-4{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:540px){.grid-4{grid-template-columns:1fr}}
+  .post-card{background:#fff;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;border:1px solid #e4e4e7;box-shadow:0 4px 14px -6px rgba(15,23,42,.07);transition:transform .35s,box-shadow .35s,border-color .35s}
+  .post-card:hover{transform:translateY(-6px);box-shadow:0 22px 48px -16px rgba(15,23,42,.22);border-color:rgba(96,165,250,.4)}
+  .post-card-img{aspect-ratio:16/10;overflow:hidden;background:#e4e4e7;position:relative}
   .post-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
   .post-card:hover .post-card-img img{transform:scale(1.07)}
-  .post-card-body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1;gap:12px}
-  .post-chip{align-self:flex-start;color:#2563eb;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
-  .post-card h3{font-size:20px;line-height:1.25;font-weight:800;letter-spacing:-0.015em;color:#0f172a}
-  .post-card p{color:#71717a;font-size:14.5px;line-height:1.6;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-  .post-meta{display:flex;align-items:center;justify-content:space-between;font-size:12.5px;color:#a1a1aa;padding-top:14px;border-top:1px solid #f4f4f5;margin-top:4px}
-  .post-arrow{color:#2563eb;font-weight:700}
+  .post-card-body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1;gap:10px}
+  .post-chip{align-self:flex-start;color:#2563eb;font-size:10.5px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}
+  .post-card h3{font-size:18px;line-height:1.25;font-weight:800;letter-spacing:-0.015em;color:#0f172a}
+  .post-meta{display:flex;align-items:center;justify-content:space-between;font-size:12px;color:#94a3b8;padding-top:12px;border-top:1px solid #f1f5f9;margin-top:auto;font-weight:600}
+  .post-read{color:#2563eb;font-weight:800}
+
+  /* TESTIMONIAL */
+  .testimonial{background:linear-gradient(180deg,#fff,#f1f5f9);padding:80px 24px;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0}
+  .testimonial-inner{max-width:880px;margin:0 auto;text-align:center}
+  .testimonial-quote{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:clamp(24px,3.4vw,34px);line-height:1.35;color:#0f172a;letter-spacing:-0.015em;margin-bottom:28px}
+  .testimonial-quote::before{content:'\\201C';display:block;font-size:80px;line-height:.5;color:#60a5fa;margin-bottom:24px;font-weight:700}
+  .testimonial-cite{font-size:13px;color:#475569;text-transform:uppercase;letter-spacing:2px;font-weight:700}
+  .testimonial-cite span{color:#2563eb}
 
   /* CAROUSEL */
-  .carousel-section{padding:90px 0;position:relative;overflow:hidden}
-  .carousel-section.dark{background:#08101e;color:#fff}
-  .carousel-section.light{background:linear-gradient(180deg,#fafbfc,#eff6ff);color:#0f172a}
+  .carousel-section{padding:90px 0;position:relative;overflow:hidden;background:#08101e;color:#fff}
+  .carousel-section.light{background:linear-gradient(180deg,#fff,#eff6ff);color:#0f172a}
   .carousel-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 10%,rgba(59,130,246,.16) 0%,transparent 55%),radial-gradient(ellipse at 10% 90%,rgba(6,182,212,.10) 0%,transparent 55%);pointer-events:none}
   .carousel-section.light::before{opacity:.35}
-  .carousel-section .section-inner{position:relative;z-index:1;max-width:1280px}
-  .carousel-section .section-head{padding:0 24px;margin-bottom:42px}
-  .carousel-section.dark .section-eyebrow{color:#60a5fa}
-  .carousel-section.dark h2{color:#fff}
-  .carousel-section.dark h2 span{color:#60a5fa}
-  .carousel-section.dark .head-sub{color:#94a3b8}
+  .carousel-section .section-inner{position:relative;z-index:1;max-width:1280px;padding:0 24px}
+  .carousel-section .section-head{margin-bottom:38px}
+  .carousel-section:not(.light) .section-eyebrow{color:#60a5fa}
+  .carousel-section:not(.light) h2{color:#fff}
+  .carousel-section:not(.light) h2 .serif{color:#60a5fa}
+  .carousel-section:not(.light) .head-sub{color:#94a3b8}
 
-  .carousel{position:relative;padding:0 24px}
-  .carousel-track-wrap{overflow:hidden;margin:0 -8px}
-  .carousel-track{display:flex;gap:24px;transition:transform .55s cubic-bezier(.22,.8,.2,1);padding:8px}
+  .carousel{position:relative}
+  .carousel-track-wrap{overflow:hidden;margin:0 -8px;cursor:grab}
+  .carousel-track-wrap.dragging{cursor:grabbing}
+  .carousel-track{display:flex;gap:24px;transition:transform .55s cubic-bezier(.22,.8,.2,1);padding:8px;will-change:transform}
+  .carousel-track.no-anim{transition:none}
   .carousel-slide{flex:0 0 calc(100% - 16px)}
   @media(min-width:760px){.podcast-slide{flex-basis:calc(50% - 12px)}.conheca-slide{flex-basis:calc(50% - 12px)}}
   @media(min-width:1080px){.podcast-slide{flex-basis:calc(33.333% - 16px)}.conheca-slide{flex-basis:calc(25% - 18px)}}
@@ -4280,60 +4323,71 @@ ${JSON.stringify({
   .podcast-body h3{font-size:19px;font-weight:800;color:#fff;line-height:1.25;margin-bottom:10px;letter-spacing:-0.015em}
   .podcast-body p{font-size:14.5px;color:#94a3b8;line-height:1.6}
 
-  .conheca-title{font-size:17px;font-weight:700;color:#0f172a;line-height:1.3;margin-top:16px;padding:0 4px;letter-spacing:-0.01em}
+  .conheca-title{font-size:16px;font-weight:700;color:#0f172a;line-height:1.3;margin-top:16px;padding:0 4px;letter-spacing:-0.01em}
 
-  .carousel-controls{display:flex;justify-content:center;gap:10px;margin-top:36px}
+  .carousel-controls{display:flex;justify-content:center;gap:10px;margin-top:32px}
   .car-btn{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;font-size:20px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:background .25s,border-color .25s,transform .25s}
   .car-btn:hover{background:#60a5fa;border-color:#60a5fa;color:#08101e;transform:translateY(-2px)}
   .carousel-section.light .car-btn{border-color:#cbd5e1;background:#fff;color:#0f172a}
   .carousel-section.light .car-btn:hover{background:#2563eb;border-color:#2563eb;color:#fff}
   .car-btn:disabled{opacity:.35;cursor:not-allowed;transform:none}
 
-  /* MORE LIST */
-  .more-list{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border-radius:18px;overflow:hidden;border:1px solid #e4e4e7}
-  .more-item{display:grid;grid-template-columns:108px 1fr;gap:18px;padding:22px;border-bottom:1px solid #f4f4f5;border-right:1px solid #f4f4f5;transition:background .25s}
-  .more-item:hover{background:#f8fafc}
-  .more-item:nth-child(2n){border-right:none}
-  .more-item img{width:108px;height:82px;object-fit:cover;border-radius:10px}
-  .more-item h4{font-size:16px;line-height:1.25;font-weight:800;letter-spacing:-0.015em;color:#0f172a;margin-bottom:6px}
-  .more-item .mc{font-size:10.5px;color:#2563eb;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;display:block;margin-bottom:6px}
-  .more-item .md{font-size:12px;color:#a1a1aa;margin-top:6px}
-  @media(max-width:760px){.more-list{grid-template-columns:1fr}.more-item{border-right:none}}
-
   /* NEWSLETTER */
-  .news{padding:30px 24px 110px}
-  .news-inner{max-width:1040px;margin:0 auto;background:#08101e;border-radius:28px;padding:72px 48px;color:#fff;text-align:center;position:relative;overflow:hidden}
-  .news-inner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 0%,rgba(59,130,246,.25),transparent 55%),radial-gradient(ellipse at 80% 100%,rgba(6,182,212,.18),transparent 55%);pointer-events:none}
-  .news-inner > *{position:relative}
-  .news-inner .badge{margin-bottom:20px}
-  .news-inner h2{font-size:clamp(30px,4.4vw,46px);font-weight:900;letter-spacing:-0.025em;line-height:1.1;margin-bottom:16px}
-  .news-inner h2 span{color:#60a5fa}
-  .news-inner .news-desc{font-size:17px;color:#94a3b8;max-width:560px;margin:0 auto 32px}
-  .news-form{display:flex;gap:10px;max-width:480px;margin:0 auto}
-  .news-form input{flex:1;padding:16px 22px;border-radius:100px;border:0;font-size:15px;font-family:inherit;background:rgba(255,255,255,.95);color:#0f172a;outline:none}
+  .news{padding:40px 24px 110px;background:#fafbfc}
+  .news-inner{max-width:1100px;margin:0 auto;background:#08101e;border-radius:28px;padding:60px;color:#fff;position:relative;overflow:hidden;display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+  .news-inner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 0% 0%,rgba(59,130,246,.28),transparent 55%),radial-gradient(ellipse at 100% 100%,rgba(6,182,212,.20),transparent 55%);pointer-events:none}
+  .news-copy{position:relative;z-index:1}
+  .news-copy .badge{display:inline-block;background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.32);color:#93c5fd;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;padding:7px 16px;border-radius:100px;margin-bottom:18px}
+  .news-copy h2{font-size:clamp(28px,3.6vw,38px);font-weight:900;letter-spacing:-0.025em;line-height:1.1;margin-bottom:18px}
+  .news-copy h2 .serif{color:#60a5fa;font-weight:600}
+  .news-copy .news-desc{font-size:16px;color:#cbd5e1;line-height:1.6;margin-bottom:26px}
+  .news-promises{list-style:none;margin-bottom:28px;display:grid;gap:10px}
+  .news-promises li{font-size:14px;color:#cbd5e1;display:flex;gap:12px;align-items:flex-start;line-height:1.5}
+  .news-promises li::before{content:'';width:18px;height:18px;border-radius:50%;background:rgba(96,165,250,.18);border:1px solid rgba(96,165,250,.4);flex-shrink:0;margin-top:2px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2393c5fd' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");background-size:11px;background-position:center;background-repeat:no-repeat}
+  .news-form{display:flex;gap:10px;max-width:480px}
+  .news-form input{flex:1;padding:15px 22px;border-radius:100px;border:0;font-size:15px;font-family:inherit;background:rgba(255,255,255,.95);color:#0f172a;outline:none}
   .news-form input:focus{box-shadow:0 0 0 3px rgba(96,165,250,.45)}
-  .news-form button{padding:16px 28px;border-radius:100px;border:0;background:#60a5fa;color:#08101e;font-weight:800;font-size:14px;cursor:pointer;font-family:inherit;transition:background .25s,transform .2s;letter-spacing:.5px}
+  .news-form button{padding:15px 26px;border-radius:100px;border:0;background:#60a5fa;color:#08101e;font-weight:800;font-size:14px;cursor:pointer;font-family:inherit;transition:background .25s,transform .2s;letter-spacing:.4px;white-space:nowrap}
   .news-form button:hover{background:#93c5fd;transform:translateY(-2px)}
   .news-form button:disabled{opacity:.7;cursor:wait}
-  .news-msg{margin-top:18px;font-size:14px;color:#93c5fd;min-height:20px;font-weight:600}
-  @media(max-width:600px){.news-inner{padding:52px 24px;border-radius:20px}.news-form{flex-direction:column}}
+  .news-msg{margin-top:14px;font-size:13.5px;color:#93c5fd;min-height:18px;font-weight:600}
+  .news-fine{margin-top:14px;font-size:11.5px;color:#64748b;letter-spacing:.3px}
+
+  /* Email preview mockup */
+  .news-preview{position:relative;z-index:1}
+  .mail{background:#fff;color:#0f172a;border-radius:14px;padding:22px;box-shadow:0 30px 80px -20px rgba(0,0,0,.55);transform:rotate(1.5deg);transition:transform .4s}
+  .mail:hover{transform:rotate(0)}
+  .mail-head{display:flex;align-items:center;gap:10px;padding-bottom:12px;border-bottom:1px solid #e4e4e7;margin-bottom:14px}
+  .mail-av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#60a5fa,#06b6d4);flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#08101e;font-size:13px;font-weight:800}
+  .mail-from{font-size:12.5px;font-weight:700;color:#0f172a;line-height:1.2}
+  .mail-from span{display:block;font-weight:500;color:#94a3b8;font-size:11px;margin-top:2px}
+  .mail-subject{font-size:15px;font-weight:800;color:#0f172a;line-height:1.3;margin-bottom:14px;letter-spacing:-0.01em}
+  .mail-block{padding:10px 0;border-bottom:1px solid #f1f5f9;font-size:12.5px;color:#475569;line-height:1.5}
+  .mail-block strong{color:#2563eb;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:800;display:block;margin-bottom:4px}
+  .mail-block:last-child{border-bottom:0}
+  @media(max-width:880px){.news-inner{grid-template-columns:1fr;padding:44px 28px;border-radius:22px;gap:36px}.news-preview{order:-1}.news-form{flex-direction:column}.mail{transform:none}}
 
   /* FOOTER */
-  footer{background:#050a14;color:#64748b;padding:64px 24px 36px;border-top:1px solid rgba(96,165,250,.1)}
+  footer{background:#050a14;color:#64748b;padding:60px 24px 36px;border-top:1px solid rgba(96,165,250,.1)}
   .ft-inner{max-width:1200px;margin:0 auto}
-  .ft-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.06)}
+  .ft-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.06)}
   .ft-brand .brand{color:#fff;margin-bottom:16px}
   .ft-brand p{font-size:14px;line-height:1.7;max-width:340px;color:#64748b}
-  .ft-col h5{color:#fff;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
-  .ft-col a{display:block;font-size:14px;padding:6px 0;color:#64748b;transition:color .2s}
+  .ft-col h5{color:#fff;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+  .ft-col a{display:block;font-size:14px;padding:5px 0;color:#64748b;transition:color .2s}
   .ft-col a:hover{color:#60a5fa}
-  .ft-bottom{padding-top:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:#475569}
+  .ft-bottom{padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:#475569}
   @media(max-width:900px){.ft-top{grid-template-columns:1fr 1fr;gap:32px}}
   @media(max-width:540px){.ft-top{grid-template-columns:1fr}}
 
   /* REVEAL */
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
   .reveal.in{opacity:1;transform:none}
+
+  /* Skeleton */
+  .skel{background:linear-gradient(90deg,#e2e8f0,#f1f5f9,#e2e8f0);background-size:200% 100%;animation:shimmer 1.6s linear infinite;border-radius:12px}
+  @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+  .skel-hero{aspect-ratio:4/3;border-radius:22px;background:rgba(255,255,255,.04)}
 </style>
 </head>
 <body>
@@ -4342,57 +4396,91 @@ ${JSON.stringify({
   <div class="nav-inner">
     <a class="brand" href="${BLOG_BASE}/"><span class="brand-dot"></span> Blog <span class="b-accent">Acqualive</span></a>
     <div class="nav-links">
-      <a href="#destaque">Em destaque</a>
-      <a href="#recentes">Recentes</a>
+      <a href="#recentes">Artigos</a>
       <a href="#podcasts">Podcasts</a>
-      <a href="#conheca">Conheça</a>
       <a href="#newsletter">Newsletter</a>
+      <a href="#conheca">Conheça</a>
     </div>
     <a class="nav-cta" href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer Acqualive</a>
   </div>
 </nav>
 
-<header class="article-header">
-  <div class="header-inner">
-    <span class="badge reveal"><span id="post-count-badge">Blog Acqualive</span></span>
-    <h1 class="reveal">Ciência, água e <span>saúde</span> em uma leitura por vez.</h1>
-    <p class="header-desc reveal">Investigações, guias e reflexões sobre a água que você bebe todos os dias. Conteúdo confiável, escrito para quem cuida de verdade da própria saúde e bem-estar.</p>
-    <div class="header-stats reveal">
-      <div class="stat"><span class="n" id="stat-posts">--</span><span class="l">Artigos</span></div>
-      <div class="stat"><span class="n">15+</span><span class="l">Anos de Acqualive</span></div>
-      <div class="stat"><span class="n">150k+</span><span class="l">Pessoas atendidas</span></div>
+<header class="hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <span class="hero-eyebrow"><span class="pulse"></span> Atualizado toda semana</span>
+      <h1>A água que você bebeu hoje pode estar te <span class="serif">envelhecendo</span>. Veja o que a ciência descobriu.</h1>
+      <p class="hero-desc">Investigações, guias e reflexões sobre a água que você consome todos os dias. Conteúdo confiável, escrito para quem cuida de verdade da própria saúde e bem-estar.</p>
+      <div class="hero-index" id="hero-index">
+        <a href="#filtros" data-cat="Ciência da Água">Ciência da Água</a>
+        <a href="#filtros" data-cat="Investigação">Investigações</a>
+        <a href="#filtros" data-cat="Guia & Comparativos">Filtros</a>
+        <a href="#filtros" data-cat="Bem-estar">Saúde</a>
+        <a href="#filtros" data-cat="Café & Sabor">Café e sabor</a>
+      </div>
+      <div class="hero-proof">
+        <div class="av"><span></span><span></span><span></span><span></span></div>
+        <span>Mais de <strong style="color:#cbd5e1">150 mil pessoas</strong> já confiam na Acqualive</span>
+      </div>
+    </div>
+    <div class="hero-feat" id="hero-feat-slot">
+      <div class="skel skel-hero"></div>
     </div>
   </div>
 </header>
 
-<section class="section" id="destaque">
+<div class="proof-strip">
+  <div class="proof-inner">
+    <div class="proof-stat"><span class="n"><span class="accent" id="stat-posts">--</span>+</span><span class="l">Artigos publicados</span></div>
+    <div class="proof-stat"><span class="n"><span class="accent">15</span>+</span><span class="l">Anos de Acqualive</span></div>
+    <div class="proof-stat"><span class="n"><span class="accent">150k</span>+</span><span class="l">Pessoas atendidas</span></div>
+    <div class="proof-stat"><span class="n"><span class="accent">100%</span></span><span class="l">Conteúdo revisado</span></div>
+  </div>
+</div>
+
+<section class="section" id="leituras">
   <div class="section-inner">
-    <div class="section-head reveal">
-      <span class="section-eyebrow">Em destaque</span>
-      <h2>O artigo da <span>semana</span></h2>
-      <p class="head-sub">A leitura mais recente do nosso arquivo, escolhida para abrir a sua semana com clareza.</p>
+    <div class="section-head center reveal">
+      <span class="section-eyebrow">Mais lidos</span>
+      <h2>As leituras que estão <span class="serif">transformando</span> nossos leitores.</h2>
+      <p class="head-sub">Os três textos que mais mudaram a forma como nossos leitores enxergam a água que bebem todos os dias.</p>
     </div>
-    <div id="featured-slot" class="reveal" data-skeleton="featured"></div>
+    <div class="ranked" id="ranked-slot"></div>
+
+    <div class="section-head center reveal" id="filtros" style="margin-bottom:28px;scroll-margin-top:90px">
+      <span class="section-eyebrow">Todos os artigos</span>
+      <h2>Explore por <span class="serif">tema</span>.</h2>
+      <p class="head-sub">Clique no tema que mais combina com você. A lista abaixo se ajusta na hora.</p>
+    </div>
+    <div class="filters reveal" id="filters"></div>
+    <div class="grid-4" id="grid-slot"></div>
   </div>
 </section>
 
-<section class="section" id="leituras" style="padding-top:0">
-  <div class="section-inner">
-    <div class="section-head reveal">
-      <span class="section-eyebrow">Leituras essenciais</span>
-      <h2>O que está <span>transformando</span> nossos leitores.</h2>
-      <p class="head-sub">Os textos que mais mudaram a forma como nossos leitores enxergam a água.</p>
-    </div>
-    <div class="row-2" id="secondary-slot" data-skeleton="row2"></div>
+<section class="testimonial reveal">
+  <div class="testimonial-inner">
+    <p class="testimonial-quote">A maioria das pessoas pensa no que come, no que veste, no que respira. Quase ninguém pensa no que bebe. E a água é o que mais entra no corpo.</p>
+    <p class="testimonial-cite">Equipe Editorial <span>· Blog Acqualive</span></p>
   </div>
 </section>
 
-<section class="carousel-section dark" id="podcasts">
+<section class="section" id="recentes" style="padding-top:84px">
+  <div class="section-inner">
+    <div class="section-head center reveal">
+      <span class="section-eyebrow">Recentes</span>
+      <h2>Publicações <span class="serif">recentes</span>.</h2>
+      <p class="head-sub">Toda semana um novo olhar sobre hidratação, longevidade e a ciência da água.</p>
+    </div>
+    <div class="grid-4" id="recent-slot"></div>
+  </div>
+</section>
+
+<section class="carousel-section" id="podcasts">
   <div class="section-inner">
     <div class="section-head reveal">
-      <span class="section-eyebrow">Podcasts</span>
-      <h2>Acqualive em <span>conversas reais</span>.</h2>
-      <p class="head-sub">Os encontros e entrevistas em que a Acqualive falou sobre água, saúde e o que move o nosso trabalho.</p>
+      <span class="section-eyebrow">Prefere ouvir?</span>
+      <h2>Acqualive em <span class="serif">conversas reais</span>.</h2>
+      <p class="head-sub">Os encontros e entrevistas em que a Acqualive falou sobre água, saúde e o que move o nosso trabalho. Para ouvir no caminho, na cozinha ou no fim do dia.</p>
     </div>
     <div class="carousel" data-carousel data-type="podcast">
       <div class="carousel-track-wrap">
@@ -4408,14 +4496,36 @@ ${JSON.stringify({
   </div>
 </section>
 
-<section class="section" id="recentes">
-  <div class="section-inner">
-    <div class="section-head reveal">
-      <span class="section-eyebrow">Recentes</span>
-      <h2>Publicações <span>recentes</span>.</h2>
-      <p class="head-sub">Toda semana um novo olhar sobre hidratação, longevidade e a ciência da água.</p>
+<section class="news" id="newsletter">
+  <div class="news-inner">
+    <div class="news-copy">
+      <span class="badge">Boletim da Água</span>
+      <h2>Toda quinta-feira, uma leitura que <span class="serif">vale o seu tempo</span>.</h2>
+      <p class="news-desc">Um e-mail curto, sem ruído. Para quem quer entender de verdade o que a ciência diz sobre a água que bebe.</p>
+      <ul class="news-promises">
+        <li>1 descoberta científica explicada de forma simples</li>
+        <li>1 prática para aplicar ainda na mesma semana</li>
+        <li>1 leitura curada do nosso arquivo</li>
+      </ul>
+      <form class="news-form" id="news-form">
+        <input type="email" name="email" required placeholder="seu melhor e-mail">
+        <button type="submit">Quero receber</button>
+      </form>
+      <div class="news-msg" id="news-msg"></div>
+      <p class="news-fine">Sem spam. Você pode cancelar a qualquer momento.</p>
     </div>
-    <div class="grid-3" id="grid-slot" data-skeleton="grid"></div>
+    <div class="news-preview" aria-hidden="true">
+      <div class="mail">
+        <div class="mail-head">
+          <div class="mail-av">A</div>
+          <div class="mail-from">Boletim Acqualive<span>quinta, 07:00</span></div>
+        </div>
+        <p class="mail-subject">A água alcalina realmente combate inflamação? Veja o que 14 estudos dizem.</p>
+        <div class="mail-block"><strong>Descoberta</strong>O pH da água potável e a regulação do estresse oxidativo.</div>
+        <div class="mail-block"><strong>Para esta semana</strong>O teste de 5 minutos para saber se sua água está limpa.</div>
+        <div class="mail-block"><strong>Leitura curada</strong>Por que as Blue Zones bebem da nascente, não da garrafa.</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -4423,7 +4533,7 @@ ${JSON.stringify({
   <div class="section-inner">
     <div class="section-head reveal">
       <span class="section-eyebrow">Conheça a Acqualive</span>
-      <h2>Por dentro da <span>Acqualive</span>.</h2>
+      <h2>Por dentro da <span class="serif">Acqualive</span>.</h2>
       <p class="head-sub">Histórias, bastidores e o cuidado que existe por trás de cada purificador que chega na sua casa.</p>
     </div>
     <div class="carousel" data-carousel data-type="conheca">
@@ -4440,30 +4550,6 @@ ${JSON.stringify({
   </div>
 </section>
 
-<section class="section" id="mais" style="padding-top:0;display:none">
-  <div class="section-inner">
-    <div class="section-head reveal">
-      <span class="section-eyebrow">Arquivo</span>
-      <h2>Continue <span>explorando</span>.</h2>
-      <p class="head-sub">Mais conteúdos do arquivo Acqualive para quem quer ir além.</p>
-    </div>
-    <div class="more-list" id="more-slot"></div>
-  </div>
-</section>
-
-<section class="news" id="newsletter">
-  <div class="news-inner">
-    <span class="badge">Newsletter</span>
-    <h2>Receba nossas <span>melhores leituras</span>.</h2>
-    <p class="news-desc">Um e-mail por semana, sem ruído. Apenas ciência, água e bem-estar direto na sua caixa de entrada.</p>
-    <form class="news-form" id="news-form">
-      <input type="email" name="email" required placeholder="seu melhor e-mail">
-      <button type="submit">Quero receber</button>
-    </form>
-    <div class="news-msg" id="news-msg"></div>
-  </div>
-</section>
-
 <footer>
   <div class="ft-inner">
     <div class="ft-top">
@@ -4473,10 +4559,10 @@ ${JSON.stringify({
       </div>
       <div class="ft-col">
         <h5>Blog</h5>
-        <a href="#destaque">Em destaque</a>
+        <a href="#leituras">Mais lidos</a>
         <a href="#recentes">Recentes</a>
         <a href="#podcasts">Podcasts</a>
-        <a href="#conheca">Conheça</a>
+        <a href="#newsletter">Newsletter</a>
       </div>
       <div class="ft-col">
         <h5>Acqualive</h5>
@@ -4500,9 +4586,8 @@ ${JSON.stringify({
 
 <script>
 (function(){
-  // ===== Live posts via WordPress REST API =====
   var BLOG_BASE = '${BLOG_BASE}';
-  var WP_ENDPOINT = BLOG_BASE + '/wp-json/wp/v2/posts?_embed&per_page=15&_fields=id,date,link,title,excerpt,_links,_embedded';
+  var WP_ENDPOINT = BLOG_BASE + '/wp-json/wp/v2/posts?_embed&per_page=24&_fields=id,date,link,title,excerpt,_links,_embedded';
 
   function categoryFor(title, cats){
     var t = ((cats || []).join(' ') + ' ' + (title || '')).toLowerCase();
@@ -4514,18 +4599,25 @@ ${JSON.stringify({
     if (/filtro|purificador|barro|osmose/.test(t)) return 'Guia & Comparativos';
     return 'Acqualive';
   }
-  function fmtDate(iso){
-    try { return new Date(iso).toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'}); }
-    catch(e){ return ''; }
+  function fmtDate(iso){ try { return new Date(iso).toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'}); } catch(e){ return ''; } }
+  function relDate(iso){
+    try{
+      var diff = (Date.now() - new Date(iso).getTime())/1000;
+      if(diff<60) return 'agora';
+      if(diff<3600) return 'há ' + Math.floor(diff/60) + ' min';
+      if(diff<86400) return 'há ' + Math.floor(diff/3600) + 'h';
+      if(diff<604800) return 'há ' + Math.floor(diff/86400) + ' dias';
+      if(diff<2592000) return 'há ' + Math.floor(diff/604800) + ' sem';
+      return fmtDate(iso);
+    }catch(e){ return ''; }
   }
-  function decode(html){
-    var d = document.createElement('div'); d.innerHTML = html || ''; return d.textContent || d.innerText || '';
+  function readMin(html){
+    var w = (html || '').replace(/<[^>]+>/g,' ').split(/\\s+/).filter(Boolean).length;
+    return Math.max(2, Math.round(w/220));
   }
-  function strip(html){
-    var d = document.createElement('div'); d.innerHTML = html || '';
-    return (d.textContent || d.innerText || '').replace(/\\s+/g,' ').trim();
-  }
-  function esc(s){ return String(s).replace(/"/g,'&quot;'); }
+  function decode(html){ var d = document.createElement('div'); d.innerHTML = html || ''; return d.textContent || d.innerText || ''; }
+  function strip(html){ var d = document.createElement('div'); d.innerHTML = html || ''; return (d.textContent || d.innerText || '').replace(/\\s+/g,' ').trim(); }
+  function esc(s){ return String(s).replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
 
   function normalize(post){
     var emb = post._embedded || {};
@@ -4534,119 +4626,138 @@ ${JSON.stringify({
     var terms = (emb['wp:term'] || []).flat ? (emb['wp:term'] || []).flat() : [].concat.apply([], emb['wp:term'] || []);
     var catNames = terms.filter(function(t){ return t && t.taxonomy === 'category'; }).map(function(t){ return t.name; });
     var title = decode((post.title && post.title.rendered) || '');
-    var desc = strip((post.excerpt && post.excerpt.rendered) || '');
-    if (desc.length > 180) desc = desc.slice(0,177) + '...';
+    var rawExcerpt = (post.excerpt && post.excerpt.rendered) || '';
+    var desc = strip(rawExcerpt);
+    if (desc.length > 160) desc = desc.slice(0,157) + '...';
     return {
-      title: title,
-      url: post.link,
+      title: title, url: post.link,
       image: image || (BLOG_BASE + '/wp-content/uploads/og-default.jpg'),
-      description: desc,
-      date: post.date,
-      dateLabel: fmtDate(post.date),
+      description: desc, date: post.date,
+      dateLabel: fmtDate(post.date), dateRel: relDate(post.date),
+      readMin: readMin(rawExcerpt + ' ' + title),
       category: categoryFor(title, catNames),
     };
   }
 
+  function heroFeatHtml(p){
+    return '<a class="hero-feat-card" href="' + p.url + '">' +
+      '<div class="hf-img"><span class="hf-tag">Acabou de sair</span>' +
+      '<img src="' + p.image + '" alt="' + esc(p.title) + '"></div>' +
+      '<div class="hf-body">' +
+        '<span class="hf-chip">' + p.category + '</span>' +
+        '<h2>' + p.title + '</h2>' +
+        '<p>' + p.description + '</p>' +
+        '<div class="hf-meta"><span>' + p.dateRel + ' · ' + p.readMin + ' min de leitura</span><span class="hf-cta">Ler agora</span></div>' +
+      '</div></a>';
+  }
+
+  function rankedHtml(p, i){
+    var n = String(i+1).padStart(2,'0');
+    return '<a class="ranked-card reveal" href="' + p.url + '">' +
+      '<span class="ranked-num">' + n + '</span>' +
+      '<span class="ranked-chip">' + p.category + '</span>' +
+      '<h3>' + p.title + '</h3>' +
+      '<div class="ranked-meta"><span>' + p.readMin + ' min de leitura</span><span class="dot"></span><span>' + p.dateRel + '</span></div>' +
+    '</a>';
+  }
+
   function cardHtml(p){
-    return '<a class="post-card reveal" href="' + p.url + '">' +
+    return '<a class="post-card reveal" href="' + p.url + '" data-cat="' + esc(p.category) + '">' +
       '<div class="post-card-img"><img src="' + p.image + '" alt="' + esc(p.title) + '" loading="lazy"></div>' +
       '<div class="post-card-body">' +
         '<span class="post-chip">' + p.category + '</span>' +
         '<h3>' + p.title + '</h3>' +
-        '<p>' + p.description + '</p>' +
-        '<div class="post-meta"><span>' + p.dateLabel + '</span><span class="post-arrow">Ler artigo →</span></div>' +
-      '</div></a>';
-  }
-
-  function featuredHtml(p){
-    return '<a class="featured-card" href="' + p.url + '">' +
-      '<div class="featured-img">' +
-        '<span class="featured-badge">Mais recente</span>' +
-        '<img src="' + p.image + '" alt="' + esc(p.title) + '">' +
-      '</div>' +
-      '<div class="featured-body">' +
-        '<span class="featured-chip">' + p.category + '</span>' +
-        '<h3>' + p.title + '</h3>' +
-        '<p>' + p.description + '</p>' +
-        '<div class="featured-meta">' +
-          '<span>' + p.dateLabel + '</span>' +
-          '<span class="read-btn">Ler agora</span>' +
-        '</div>' +
-      '</div></a>';
-  }
-
-  function moreHtml(p){
-    return '<a class="more-item reveal" href="' + p.url + '">' +
-      '<img src="' + p.image + '" alt="' + esc(p.title) + '" loading="lazy">' +
-      '<div>' +
-        '<span class="mc">' + p.category + '</span>' +
-        '<h4>' + p.title + '</h4>' +
-        '<span class="md">' + p.dateLabel + '</span>' +
+        '<div class="post-meta"><span>' + p.dateRel + '</span><span class="post-read">' + p.readMin + ' min →</span></div>' +
       '</div></a>';
   }
 
   function injectLd(posts){
     try {
-      var ld = {
-        '@context':'https://schema.org','@type':'Blog',
-        name:'Blog Acqualive', url: BLOG_BASE,
-        blogPost: posts.slice(0,10).map(function(p){
-          return {'@type':'BlogPosting', headline:p.title, url:p.url, image:p.image, datePublished:p.date, description:p.description};
-        })
-      };
-      var s = document.createElement('script');
-      s.type = 'application/ld+json';
-      s.text = JSON.stringify(ld);
+      var ld = {'@context':'https://schema.org','@type':'Blog', name:'Blog Acqualive', url: BLOG_BASE,
+        blogPost: posts.slice(0,10).map(function(p){ return {'@type':'BlogPosting', headline:p.title, url:p.url, image:p.image, datePublished:p.date, description:p.description}; })};
+      var s = document.createElement('script'); s.type = 'application/ld+json'; s.text = JSON.stringify(ld);
       document.head.appendChild(s);
     } catch(e){}
   }
 
-  function render(posts){
-    if (!posts || !posts.length) return;
-    var featured = posts[0];
-    var secondary = posts.slice(1,3);
-    var grid = posts.slice(3,9);
-    var more = posts.slice(9);
+  var ALL_POSTS = [];
+  var ACTIVE_CAT = 'Todos';
 
-    var fSlot = document.getElementById('featured-slot');
-    if (fSlot && featured) fSlot.innerHTML = featuredHtml(featured);
-
-    var sSlot = document.getElementById('secondary-slot');
-    if (sSlot) sSlot.innerHTML = secondary.map(cardHtml).join('');
-
-    var gSlot = document.getElementById('grid-slot');
-    if (gSlot) gSlot.innerHTML = grid.map(cardHtml).join('');
-
-    if (more.length){
-      var mSlot = document.getElementById('more-slot');
-      var mSec = document.getElementById('mais');
-      if (mSlot) mSlot.innerHTML = more.map(moreHtml).join('');
-      if (mSec) mSec.style.display = '';
-    }
-
-    var pc = document.getElementById('post-count-badge');
-    if (pc) pc.innerText = 'Blog Acqualive · ' + posts.length + ' artigos';
-    var ps = document.getElementById('stat-posts');
-    if (ps) ps.innerText = posts.length + '+';
-
-    injectLd(posts);
-
-    // observe new reveals + resize iframe
-    document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ io.observe(el); });
-    setTimeout(sendHeight, 100); setTimeout(sendHeight, 800);
+  function renderFilters(){
+    var counts = {};
+    ALL_POSTS.forEach(function(p){ counts[p.category] = (counts[p.category]||0)+1; });
+    var cats = Object.keys(counts).sort(function(a,b){ return counts[b]-counts[a]; });
+    var html = '<button class="filter-chip active" data-cat="Todos">Todos <span class="count">' + ALL_POSTS.length + '</span></button>';
+    cats.forEach(function(c){ html += '<button class="filter-chip" data-cat="' + esc(c) + '">' + c + ' <span class="count">' + counts[c] + '</span></button>'; });
+    var f = document.getElementById('filters');
+    if(!f) return;
+    f.innerHTML = html;
+    f.querySelectorAll('.filter-chip').forEach(function(b){
+      b.addEventListener('click', function(){
+        ACTIVE_CAT = b.dataset.cat;
+        f.querySelectorAll('.filter-chip').forEach(function(x){ x.classList.toggle('active', x === b); });
+        renderGrid();
+      });
+    });
   }
 
-  function showError(msg){
-    var fSlot = document.getElementById('featured-slot');
-    if (fSlot) fSlot.innerHTML = '<div style="background:#fff;border:1px solid #e4e4e7;border-radius:18px;padding:48px 24px;text-align:center;color:#52525b"><p style="margin-bottom:18px">Não foi possível carregar os artigos agora.</p><a href="' + BLOG_BASE + '" style="color:#2563eb;font-weight:700">Ver no blog →</a></div>';
+  function renderGrid(){
+    var list = ACTIVE_CAT === 'Todos' ? ALL_POSTS : ALL_POSTS.filter(function(p){ return p.category === ACTIVE_CAT; });
+    // Skip the first 4 already used in hero+ranked, but keep grid full
+    var grid = list.slice(0, 12);
+    var slot = document.getElementById('grid-slot');
+    if(slot){
+      slot.innerHTML = grid.length ? grid.map(cardHtml).join('') : '<p style="grid-column:1/-1;text-align:center;color:#94a3b8;padding:40px 0">Nenhum artigo neste tema ainda.</p>';
+      slot.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+    }
+    setTimeout(sendHeight, 80);
+  }
+
+  // Hero category links scroll to filters and apply
+  document.querySelectorAll('#hero-index a').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var cat = a.dataset.cat;
+      if(!cat) return;
+      var target = document.querySelector('.filter-chip[data-cat="' + cat + '"]');
+      if(target){ e.preventDefault(); target.click(); document.getElementById('filtros').scrollIntoView({behavior:'smooth',block:'start'}); }
+    });
+  });
+
+  function render(posts){
+    if (!posts || !posts.length){ showError(); return; }
+    ALL_POSTS = posts;
+    var hero = posts[0];
+    var ranked = posts.slice(1,4);
+    var recent = posts.slice(0,8);
+
+    var hSlot = document.getElementById('hero-feat-slot');
+    if(hSlot && hero) hSlot.innerHTML = heroFeatHtml(hero);
+
+    var rSlot = document.getElementById('ranked-slot');
+    if(rSlot) rSlot.innerHTML = ranked.map(rankedHtml).join('');
+
+    var recSlot = document.getElementById('recent-slot');
+    if(recSlot) recSlot.innerHTML = recent.map(cardHtml).join('');
+
+    renderFilters();
+    renderGrid();
+
+    var ps = document.getElementById('stat-posts'); if(ps) ps.innerText = posts.length;
+    injectLd(posts);
+    document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ io.observe(el); });
+    setTimeout(sendHeight, 120); setTimeout(sendHeight, 900);
+  }
+
+  function showError(){
+    var hSlot = document.getElementById('hero-feat-slot');
+    if (hSlot) hSlot.innerHTML = '<div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:42px 28px;text-align:center;color:#cbd5e1"><p style="margin-bottom:16px">Não foi possível carregar os artigos agora.</p><a href="' + BLOG_BASE + '" style="color:#60a5fa;font-weight:700">Ver no blog →</a></div>';
   }
 
   function loadPosts(){
     fetch(WP_ENDPOINT, { headers: { 'Accept':'application/json' } })
       .then(function(r){ if(!r.ok) throw new Error('http '+r.status); return r.json(); })
       .then(function(posts){ render((posts || []).map(normalize)); })
-      .catch(function(err){
-        // Fallback proxy (CORS) via rss2json
+      .catch(function(){
         fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(BLOG_BASE + '/feed/'))
           .then(function(r){ return r.json(); })
           .then(function(j){
@@ -4654,15 +4765,13 @@ ${JSON.stringify({
             var items = j.items.map(function(it){
               var img = it.thumbnail || '';
               if (!img && it.enclosure && it.enclosure.link) img = it.enclosure.link;
-              if (!img){ var m = (it.content||'').match(/<img[^>]+src=\"([^\"]+)\"/); if(m) img = m[1]; }
-              var desc = strip(it.description || '');
-              if (desc.length > 180) desc = desc.slice(0,177) + '...';
+              if (!img){ var m = (it.content||'').match(/<img[^>]+src=\\"([^\\"]+)\\"/); if(m) img = m[1]; }
+              var desc = strip(it.description || ''); if (desc.length > 160) desc = desc.slice(0,157) + '...';
               var title = decode(it.title || '');
-              return {
-                title: title, url: it.link, image: img || (BLOG_BASE + '/wp-content/uploads/og-default.jpg'),
-                description: desc, date: it.pubDate, dateLabel: fmtDate(it.pubDate),
-                category: categoryFor(title, it.categories || []),
-              };
+              return { title:title, url:it.link, image: img || (BLOG_BASE + '/wp-content/uploads/og-default.jpg'),
+                description:desc, date: it.pubDate, dateLabel: fmtDate(it.pubDate), dateRel: relDate(it.pubDate),
+                readMin: readMin(it.content || it.description || ''),
+                category: categoryFor(title, it.categories || []) };
             });
             render(items);
           })
@@ -4670,16 +4779,16 @@ ${JSON.stringify({
       });
   }
 
-  // Reveal observer (shared)
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
   },{threshold:.12, rootMargin:'0px 0px -8% 0px'});
-  document.querySelectorAll('.reveal, .post-card, .more-item, .carousel-slide').forEach(function(el){ el.classList.add('reveal'); io.observe(el); });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 
   loadPosts();
 
-  // Carousels
+  // Carousels with touch/drag
   document.querySelectorAll('[data-carousel]').forEach(function(car){
+    var wrap = car.querySelector('.carousel-track-wrap');
     var track = car.querySelector('.carousel-track');
     var slides = car.querySelectorAll('.carousel-slide');
     var btns = car.querySelectorAll('.car-btn');
@@ -4690,26 +4799,37 @@ ${JSON.stringify({
       if(w >= 760) return 2;
       return 1;
     }
+    function slideW(){ var s = slides[0]; return s ? s.getBoundingClientRect().width + 24 : 0; }
     function update(){
       var pv = perView();
       var maxIdx = Math.max(0, slides.length - pv);
       if(idx > maxIdx) idx = maxIdx;
       if(idx < 0) idx = 0;
-      var slide = slides[0];
-      if(!slide) return;
-      var slideW = slide.getBoundingClientRect().width + 24;
-      track.style.transform = 'translateX(' + (-idx * slideW) + 'px)';
+      track.style.transform = 'translateX(' + (-idx * slideW()) + 'px)';
       btns[0].disabled = idx === 0;
       btns[1].disabled = idx >= maxIdx;
     }
-    btns.forEach(function(b){
-      b.addEventListener('click', function(){
-        idx += parseInt(b.dataset.dir, 10);
-        update();
-      });
-    });
+    btns.forEach(function(b){ b.addEventListener('click', function(){ idx += parseInt(b.dataset.dir, 10); update(); }); });
     window.addEventListener('resize', update);
     setTimeout(update, 50);
+
+    // Touch / drag
+    var startX = 0, curX = 0, dragging = false;
+    function onStart(x){ dragging = true; startX = x; curX = x; track.classList.add('no-anim'); wrap.classList.add('dragging'); }
+    function onMove(x){ if(!dragging) return; curX = x; track.style.transform = 'translateX(' + (-idx * slideW() + (x - startX)) + 'px)'; }
+    function onEnd(){
+      if(!dragging) return; dragging = false;
+      var d = curX - startX;
+      track.classList.remove('no-anim'); wrap.classList.remove('dragging');
+      if(Math.abs(d) > 50){ idx += d < 0 ? 1 : -1; }
+      update();
+    }
+    wrap.addEventListener('touchstart', function(e){ onStart(e.touches[0].clientX); }, {passive:true});
+    wrap.addEventListener('touchmove', function(e){ onMove(e.touches[0].clientX); }, {passive:true});
+    wrap.addEventListener('touchend', onEnd);
+    wrap.addEventListener('mousedown', function(e){ e.preventDefault(); onStart(e.clientX); });
+    window.addEventListener('mousemove', function(e){ onMove(e.clientX); });
+    window.addEventListener('mouseup', onEnd);
   });
 
   // Newsletter
@@ -4723,15 +4843,13 @@ ${JSON.stringify({
       btn.disabled = true; btn.innerText = 'Enviando...';
       msg.innerText = '';
       fetch('${NEWSLETTER_ENDPOINT}', {
-        method: 'POST',
-        headers: {'Content-Type':'application/json'},
+        method: 'POST', headers: {'Content-Type':'application/json'},
         body: JSON.stringify({ email: email, source: 'blog-home' })
       }).then(function(r){ return r.json().then(function(j){ return {ok:r.ok,j:j}; }); })
         .then(function(res){
           if(res.ok){
-            msg.innerText = 'Pronto! Você está inscrito. Em breve você recebe nossa primeira leitura.';
-            form.reset();
-            btn.innerText = 'Inscrito!';
+            msg.innerText = 'Pronto! Sua primeira leitura chega na próxima quinta.';
+            form.reset(); btn.innerText = 'Inscrito!';
           } else {
             msg.innerText = 'Não foi possível inscrever agora. Tente novamente em instantes.';
             btn.disabled = false; btn.innerText = 'Quero receber';
@@ -4743,12 +4861,9 @@ ${JSON.stringify({
     });
   }
 
-  function sendHeight(){
-    try { parent.postMessage({type:'blog-iframe-height', height: document.documentElement.scrollHeight}, '*'); } catch(e){}
-  }
+  function sendHeight(){ try { parent.postMessage({type:'blog-iframe-height', height: document.documentElement.scrollHeight}, '*'); } catch(e){} }
   window.addEventListener('load', sendHeight);
-  setTimeout(sendHeight, 600);
-  setTimeout(sendHeight, 1600);
+  setTimeout(sendHeight, 600); setTimeout(sendHeight, 1600);
   window.addEventListener('resize', sendHeight);
 })();
 </script>
