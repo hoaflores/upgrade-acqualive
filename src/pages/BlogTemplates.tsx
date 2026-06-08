@@ -4109,6 +4109,23 @@ const guessCategory = (kw: string, title: string) => {
   return "Acqualive";
 };
 
+const PODCASTS = [
+  { id: "1-BG-pCU6fA", title: "Acqualive no Leda Nagle", desc: "Uma conversa franca sobre água, longevidade e o que ninguém te conta sobre o que você bebe todos os dias." },
+  { id: "hGejIPMD1mg", title: "Dalle Laste recebe a Acqualive", desc: "Bastidores da relação entre água viva, saúde e a forma como vivemos hoje." },
+  { id: "Futw3uOmTQA", title: "Água: o que muda no seu corpo", desc: "Um papo direto sobre o impacto real da água que entra no seu organismo." },
+  { id: "tsoVE_OZfe0", title: "Ana Sorrentino entrevista Acqualive", desc: "Mais de 40 minutos sobre ciência, intuição e a busca pela melhor versão da sua água." },
+];
+
+const CONHECA = [
+  { id: "Hbjzm1Lx99w", title: "Conheça a Acqualive" },
+  { id: "woNSg0nfOWI", title: "A história por trás da marca" },
+  { id: "kr25h-A3jW0", title: "Água viva, dia após dia" },
+  { id: "OnsWHtGad1Y", title: "O ritual de uma boa hidratação" },
+  { id: "52lCNTPK8-A", title: "A diferença está na fonte" },
+];
+
+const NEWSLETTER_ENDPOINT = "https://kvlkcavrxxwxxvijwqhd.supabase.co/functions/v1/inscrever-newsletter";
+
 const buildBlogHomeHtml = (articles: { title: string; slug: string; html: string }[]) => {
   const items = articles.map((a) => {
     const m = pickMeta(a.html);
@@ -4126,19 +4143,39 @@ const buildBlogHomeHtml = (articles: { title: string; slug: string; html: string
 
   const featured = items[0];
   const secondary = items.slice(1, 3);
-  const grid = items.slice(3, 11);
-  const more = items.slice(11);
+  const grid = items.slice(3, 9);
+  const more = items.slice(9);
 
-  const card = (p: typeof items[number], variant: "grid" | "list" = "grid") => `
-  <a class="card card-${variant}" href="${p.url}">
-    <div class="card-img"><img src="${p.image}" alt="${p.title.replace(/"/g, "&quot;")}" loading="lazy"></div>
-    <div class="card-body">
-      <span class="chip">${p.category}</span>
+  const card = (p: typeof items[number]) => `
+  <a class="post-card" href="${p.url}">
+    <div class="post-card-img"><img src="${p.image}" alt="${p.title.replace(/"/g, "&quot;")}" loading="lazy"></div>
+    <div class="post-card-body">
+      <span class="post-chip">${p.category}</span>
       <h3>${p.title}</h3>
       <p>${p.description}</p>
-      <div class="card-meta"><span>${p.dateLabel}</span><span class="arrow">Ler artigo →</span></div>
+      <div class="post-meta"><span>${p.dateLabel}</span><span class="post-arrow">Ler artigo →</span></div>
     </div>
   </a>`;
+
+  const podcastSlide = (v: typeof PODCASTS[number]) => `
+  <article class="carousel-slide podcast-slide">
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/${v.id}?rel=0&modestbranding=1" title="${v.title.replace(/"/g, "&quot;")}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="podcast-body">
+      <span class="badge-blue">Podcast</span>
+      <h3>${v.title}</h3>
+      <p>${v.desc}</p>
+    </div>
+  </article>`;
+
+  const conhecaSlide = (v: typeof CONHECA[number]) => `
+  <article class="carousel-slide conheca-slide">
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/${v.id}?rel=0&modestbranding=1" title="${v.title.replace(/"/g, "&quot;")}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <h3 class="conheca-title">${v.title}</h3>
+  </article>`;
 
   return `<!DOCTYPE html>
 <html lang="pt-BR">
@@ -4173,147 +4210,164 @@ ${JSON.stringify({
 })}
 </script>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:'Plus Jakarta Sans',-apple-system,sans-serif;background:#f7f6f2;color:#0f172a;-webkit-font-smoothing:antialiased;line-height:1.55}
+  body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;background:#fafbfc;color:#18181b;line-height:1.7;-webkit-font-smoothing:antialiased}
   img{display:block;max-width:100%;height:auto}
   a{color:inherit;text-decoration:none}
 
-  /* HEADER */
-  .nav{position:sticky;top:0;z-index:50;background:rgba(247,246,242,.85);backdrop-filter:blur(14px);border-bottom:1px solid rgba(15,23,42,.06)}
-  .nav-inner{max-width:1280px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-  .brand{font-family:'Fraunces',serif;font-size:24px;font-weight:600;letter-spacing:-0.02em;display:flex;align-items:center;gap:10px}
-  .brand-dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,#0891b2,#06b6d4);box-shadow:0 0 0 4px rgba(8,145,178,.12)}
-  .nav-links{display:flex;gap:28px;font-size:14px;font-weight:500;color:#475569}
-  .nav-links a:hover{color:#0f172a}
-  .nav-cta{background:#0f172a;color:#fff;padding:10px 20px;border-radius:999px;font-size:13px;font-weight:600;transition:transform .2s,background .2s}
-  .nav-cta:hover{background:#0891b2;transform:translateY(-1px)}
-  @media(max-width:768px){.nav-links{display:none}.nav-inner{padding:14px 20px}}
+  /* NAV */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(8,16,30,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(96,165,250,.18)}
+  .nav-inner{max-width:1200px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .brand{font-size:18px;font-weight:800;letter-spacing:-0.01em;color:#fff;display:flex;align-items:center;gap:10px}
+  .brand-dot{width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,#60a5fa,#06b6d4);box-shadow:0 0 0 4px rgba(96,165,250,.18)}
+  .brand .b-accent{color:#60a5fa}
+  .nav-links{display:flex;gap:24px;font-size:14px;font-weight:600;color:#94a3b8}
+  .nav-links a:hover{color:#60a5fa}
+  .nav-cta{background:#60a5fa;color:#08101e;padding:10px 18px;border-radius:100px;font-size:13px;font-weight:800;transition:transform .2s,background .2s}
+  .nav-cta:hover{background:#93c5fd;transform:translateY(-1px)}
+  @media(max-width:820px){.nav-links{display:none}.nav-inner{padding:14px 18px}}
 
-  /* HERO */
-  .hero{position:relative;padding:80px 32px 60px;overflow:hidden}
-  .hero-inner{max-width:1280px;margin:0 auto;position:relative;z-index:2}
-  .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;background:rgba(8,145,178,.08);color:#0891b2;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:24px}
-  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:#0891b2;animation:pulse 2s ease-in-out infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-  h1.hero-title{font-family:'Fraunces',serif;font-size:clamp(40px,6.5vw,84px);line-height:1.02;font-weight:500;letter-spacing:-0.035em;max-width:1100px;margin-bottom:28px}
-  .hero-title em{font-style:italic;background:linear-gradient(120deg,#0891b2,#06b6d4 50%,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .hero-sub{font-size:clamp(17px,1.6vw,21px);color:#475569;max-width:680px;line-height:1.6;margin-bottom:40px}
-  .hero-stats{display:flex;gap:48px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(15,23,42,.08);max-width:680px}
-  .stat .n{font-family:'Fraunces',serif;font-size:32px;font-weight:600;color:#0f172a;letter-spacing:-0.02em;display:block}
-  .stat .l{font-size:13px;color:#64748b;margin-top:4px}
-  .hero-bg{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.55}
-  .hero-bg::before,.hero-bg::after{content:"";position:absolute;border-radius:50%;filter:blur(80px)}
-  .hero-bg::before{width:520px;height:520px;background:radial-gradient(circle,#06b6d4 0%,transparent 70%);top:-180px;right:-120px}
-  .hero-bg::after{width:420px;height:420px;background:radial-gradient(circle,#fbbf24 0%,transparent 70%);bottom:-160px;left:-80px;opacity:.4}
+  /* HEADER / HERO */
+  .article-header{background:#08101e;padding:80px 24px 72px;position:relative;overflow:hidden}
+  .article-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 100%,rgba(59,130,246,.14) 0%,transparent 55%),radial-gradient(ellipse at 80% 0%,rgba(6,182,212,.10) 0%,transparent 50%)}
+  .header-inner{position:relative;z-index:1;max-width:780px;margin:0 auto;text-align:center}
+  .badge{display:inline-block;background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.25);color:#93c5fd;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;padding:7px 18px;border-radius:100px;margin-bottom:24px}
+  .article-header h1{font-size:clamp(34px,5.4vw,58px);font-weight:900;color:#fff;line-height:1.1;margin-bottom:20px;letter-spacing:-0.025em}
+  .article-header h1 span{color:#60a5fa}
+  .header-desc{font-size:18px;color:#94a3b8;max-width:620px;margin:0 auto;line-height:1.7}
+  .header-stats{margin-top:44px;display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+  .stat{text-align:center}
+  .stat .n{font-size:32px;font-weight:900;color:#60a5fa;letter-spacing:-0.02em;display:block;line-height:1}
+  .stat .l{font-size:12px;color:#64748b;margin-top:8px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600}
+
+  /* SECTION */
+  .section{padding:80px 24px}
+  .section-inner{max-width:1200px;margin:0 auto}
+  .section-head{text-align:center;margin-bottom:48px}
+  .section-eyebrow{display:inline-block;color:#2563eb;font-size:12px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:12px}
+  .section-head h2{font-size:clamp(28px,4vw,40px);font-weight:900;color:#0f172a;line-height:1.15;letter-spacing:-0.02em;max-width:680px;margin:0 auto 14px}
+  .section-head h2 span{color:#2563eb}
+  .section-head .head-sub{color:#52525b;font-size:16px;max-width:560px;margin:0 auto}
 
   /* FEATURED */
-  .featured{padding:40px 32px 100px}
-  .featured-inner{max-width:1280px;margin:0 auto}
-  .featured-card{display:grid;grid-template-columns:1.15fr 1fr;gap:0;background:#fff;border-radius:32px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(15,23,42,.18);transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
-  .featured-card:hover{transform:translateY(-6px);box-shadow:0 40px 100px -30px rgba(15,23,42,.28)}
-  .featured-img{position:relative;min-height:520px;overflow:hidden}
-  .featured-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
-  .featured-card:hover .featured-img img{transform:scale(1.05)}
-  .featured-badge{position:absolute;top:24px;left:24px;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);padding:8px 16px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#0f172a}
-  .featured-body{padding:56px 56px;display:flex;flex-direction:column;justify-content:center}
-  .featured-chip{display:inline-block;color:#0891b2;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px}
-  .featured-body h2{font-family:'Fraunces',serif;font-size:clamp(28px,3.4vw,44px);line-height:1.08;font-weight:500;letter-spacing:-0.025em;margin-bottom:20px;color:#0f172a}
-  .featured-body p{font-size:17px;color:#475569;line-height:1.6;margin-bottom:32px}
-  .featured-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:#64748b;padding-top:24px;border-top:1px solid #e2e8f0}
-  .read-btn{margin-left:auto;display:inline-flex;align-items:center;gap:8px;color:#0f172a;font-weight:700}
-  .read-btn::after{content:"→";transition:transform .3s}
-  .featured-card:hover .read-btn::after{transform:translateX(6px)}
-  @media(max-width:900px){.featured-card{grid-template-columns:1fr}.featured-img{min-height:280px}.featured-body{padding:36px 28px}}
-
-  /* SECTION HEADER */
-  .sec{padding:0 32px 80px}
-  .sec-inner{max-width:1280px;margin:0 auto}
-  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:48px;padding-bottom:28px;border-bottom:1px solid rgba(15,23,42,.08)}
-  .sec-head h2{font-family:'Fraunces',serif;font-size:clamp(28px,3.6vw,44px);font-weight:500;letter-spacing:-0.025em;line-height:1.05;color:#0f172a}
-  .sec-head h2 em{font-style:italic;color:#0891b2}
-  .sec-head p{color:#64748b;font-size:15px;max-width:380px;text-align:right}
-  @media(max-width:768px){.sec-head{flex-direction:column;align-items:flex-start}.sec-head p{text-align:left}}
-
-  /* SECONDARY ROW */
-  .row-2{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-  @media(max-width:900px){.row-2{grid-template-columns:1fr}}
+  .featured-card{display:grid;grid-template-columns:1.15fr 1fr;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px -20px rgba(15,23,42,.18);border:1px solid rgba(15,23,42,.04);transition:transform .4s,box-shadow .4s}
+  .featured-card:hover{transform:translateY(-6px);box-shadow:0 30px 80px -20px rgba(15,23,42,.28)}
+  .featured-img{position:relative;min-height:460px;overflow:hidden;background:#08101e}
+  .featured-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+  .featured-card:hover .featured-img img{transform:scale(1.06)}
+  .featured-badge{position:absolute;top:20px;left:20px;background:#60a5fa;color:#08101e;padding:7px 14px;border-radius:100px;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+  .featured-body{padding:48px;display:flex;flex-direction:column;justify-content:center}
+  .featured-chip{display:inline-block;color:#2563eb;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+  .featured-body h3{font-size:clamp(26px,3.2vw,38px);line-height:1.15;font-weight:900;letter-spacing:-0.02em;margin-bottom:18px;color:#0f172a}
+  .featured-body p{font-size:16px;color:#52525b;line-height:1.7;margin-bottom:28px}
+  .featured-meta{display:flex;align-items:center;gap:14px;font-size:13px;color:#71717a;padding-top:22px;border-top:1px solid #e4e4e7}
+  .read-btn{margin-left:auto;color:#2563eb;font-weight:800;font-size:14px}
+  .read-btn::after{content:" →";transition:transform .3s;display:inline-block}
+  .featured-card:hover .read-btn::after{transform:translateX(5px)}
+  @media(max-width:880px){.featured-card{grid-template-columns:1fr}.featured-img{min-height:260px}.featured-body{padding:32px 24px}}
 
   /* GRID */
-  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-  @media(max-width:980px){.grid-3{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:640px){.grid-3{grid-template-columns:1fr}}
+  .row-2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  @media(max-width:960px){.grid-3{grid-template-columns:repeat(2,1fr)}.row-2{grid-template-columns:1fr}}
+  @media(max-width:600px){.grid-3{grid-template-columns:1fr}}
 
-  /* CARD */
-  .card{background:#fff;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s;box-shadow:0 4px 20px -8px rgba(15,23,42,.08);border:1px solid rgba(15,23,42,.04)}
-  .card:hover{transform:translateY(-8px);box-shadow:0 30px 60px -20px rgba(15,23,42,.22)}
-  .card-img{aspect-ratio:16/10;overflow:hidden;background:#e2e8f0}
-  .card-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
-  .card:hover .card-img img{transform:scale(1.08)}
-  .card-body{padding:28px 28px 30px;display:flex;flex-direction:column;flex:1;gap:14px}
-  .card .chip{align-self:flex-start;color:#0891b2;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-  .card h3{font-family:'Fraunces',serif;font-size:23px;line-height:1.18;font-weight:500;letter-spacing:-0.02em;color:#0f172a}
-  .card p{color:#64748b;font-size:14.5px;line-height:1.55;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-  .card-meta{display:flex;align-items:center;justify-content:space-between;font-size:12.5px;color:#94a3b8;padding-top:14px;border-top:1px solid #f1f5f9;margin-top:6px}
-  .card .arrow{color:#0891b2;font-weight:600}
+  /* POST CARD */
+  .post-card{background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;border:1px solid #e4e4e7;box-shadow:0 4px 16px -6px rgba(15,23,42,.08);transition:transform .35s,box-shadow .35s,border-color .35s}
+  .post-card:hover{transform:translateY(-6px);box-shadow:0 24px 50px -16px rgba(15,23,42,.22);border-color:rgba(96,165,250,.4)}
+  .post-card-img{aspect-ratio:16/10;overflow:hidden;background:#e4e4e7}
+  .post-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+  .post-card:hover .post-card-img img{transform:scale(1.07)}
+  .post-card-body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1;gap:12px}
+  .post-chip{align-self:flex-start;color:#2563eb;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+  .post-card h3{font-size:20px;line-height:1.25;font-weight:800;letter-spacing:-0.015em;color:#0f172a}
+  .post-card p{color:#71717a;font-size:14.5px;line-height:1.6;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .post-meta{display:flex;align-items:center;justify-content:space-between;font-size:12.5px;color:#a1a1aa;padding-top:14px;border-top:1px solid #f4f4f5;margin-top:4px}
+  .post-arrow{color:#2563eb;font-weight:700}
 
-  .card-list .card-body h3{font-size:26px}
+  /* CAROUSEL */
+  .carousel-section{padding:90px 0;position:relative;overflow:hidden}
+  .carousel-section.dark{background:#08101e;color:#fff}
+  .carousel-section.light{background:linear-gradient(180deg,#fafbfc,#eff6ff);color:#0f172a}
+  .carousel-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 10%,rgba(59,130,246,.16) 0%,transparent 55%),radial-gradient(ellipse at 10% 90%,rgba(6,182,212,.10) 0%,transparent 55%);pointer-events:none}
+  .carousel-section.light::before{opacity:.35}
+  .carousel-section .section-inner{position:relative;z-index:1;max-width:1280px}
+  .carousel-section .section-head{padding:0 24px;margin-bottom:42px}
+  .carousel-section.dark .section-eyebrow{color:#60a5fa}
+  .carousel-section.dark h2{color:#fff}
+  .carousel-section.dark h2 span{color:#60a5fa}
+  .carousel-section.dark .head-sub{color:#94a3b8}
 
-  /* CATEGORIES */
-  .cats{padding:0 32px 100px}
-  .cats-inner{max-width:1280px;margin:0 auto;background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);border-radius:36px;padding:80px 56px;color:#fff;position:relative;overflow:hidden}
-  .cats-inner::before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(6,182,212,.25),transparent 70%);top:-200px;right:-100px;filter:blur(40px)}
-  .cats-head{position:relative;z-index:2;margin-bottom:48px}
-  .cats-head h2{font-family:'Fraunces',serif;font-size:clamp(28px,3.6vw,44px);font-weight:500;letter-spacing:-0.025em;line-height:1.05;margin-bottom:14px}
-  .cats-head h2 em{font-style:italic;color:#22d3ee}
-  .cats-head p{color:#94a3b8;font-size:16px;max-width:560px}
-  .cats-list{position:relative;z-index:2;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
-  .cat-tag{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:24px 22px;transition:background .3s,transform .3s;cursor:pointer}
-  .cat-tag:hover{background:rgba(34,211,238,.1);border-color:rgba(34,211,238,.4);transform:translateY(-3px)}
-  .cat-tag .n{font-family:'Fraunces',serif;font-size:36px;font-weight:500;color:#22d3ee;letter-spacing:-0.02em;display:block;line-height:1}
-  .cat-tag .l{font-size:14px;color:#e2e8f0;margin-top:10px;font-weight:500}
-  @media(max-width:768px){.cats-inner{padding:48px 28px;border-radius:24px}}
+  .carousel{position:relative;padding:0 24px}
+  .carousel-track-wrap{overflow:hidden;margin:0 -8px}
+  .carousel-track{display:flex;gap:24px;transition:transform .55s cubic-bezier(.22,.8,.2,1);padding:8px}
+  .carousel-slide{flex:0 0 calc(100% - 16px)}
+  @media(min-width:760px){.podcast-slide{flex-basis:calc(50% - 12px)}.conheca-slide{flex-basis:calc(50% - 12px)}}
+  @media(min-width:1080px){.podcast-slide{flex-basis:calc(33.333% - 16px)}.conheca-slide{flex-basis:calc(25% - 18px)}}
 
-  /* MORE */
-  .more-list{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border-radius:24px;overflow:hidden;border:1px solid rgba(15,23,42,.06)}
-  .more-item{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:24px;border-bottom:1px solid #f1f5f9;border-right:1px solid #f1f5f9;transition:background .3s}
-  .more-item:hover{background:#fafafa}
+  .video-wrap{position:relative;width:100%;padding-top:56.25%;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 20px 50px -20px rgba(0,0,0,.55)}
+  .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  .podcast-body{padding:22px 6px 0}
+  .badge-blue{display:inline-block;background:rgba(96,165,250,.16);border:1px solid rgba(96,165,250,.3);color:#93c5fd;font-size:10.5px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:12px}
+  .podcast-body h3{font-size:19px;font-weight:800;color:#fff;line-height:1.25;margin-bottom:10px;letter-spacing:-0.015em}
+  .podcast-body p{font-size:14.5px;color:#94a3b8;line-height:1.6}
+
+  .conheca-title{font-size:17px;font-weight:700;color:#0f172a;line-height:1.3;margin-top:16px;padding:0 4px;letter-spacing:-0.01em}
+
+  .carousel-controls{display:flex;justify-content:center;gap:10px;margin-top:36px}
+  .car-btn{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;font-size:20px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:background .25s,border-color .25s,transform .25s}
+  .car-btn:hover{background:#60a5fa;border-color:#60a5fa;color:#08101e;transform:translateY(-2px)}
+  .carousel-section.light .car-btn{border-color:#cbd5e1;background:#fff;color:#0f172a}
+  .carousel-section.light .car-btn:hover{background:#2563eb;border-color:#2563eb;color:#fff}
+  .car-btn:disabled{opacity:.35;cursor:not-allowed;transform:none}
+
+  /* MORE LIST */
+  .more-list{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border-radius:18px;overflow:hidden;border:1px solid #e4e4e7}
+  .more-item{display:grid;grid-template-columns:108px 1fr;gap:18px;padding:22px;border-bottom:1px solid #f4f4f5;border-right:1px solid #f4f4f5;transition:background .25s}
+  .more-item:hover{background:#f8fafc}
   .more-item:nth-child(2n){border-right:none}
-  .more-item img{width:120px;height:90px;object-fit:cover;border-radius:12px}
-  .more-item h4{font-family:'Fraunces',serif;font-size:18px;line-height:1.2;font-weight:500;letter-spacing:-0.015em;color:#0f172a;margin-bottom:8px}
-  .more-item .mc{font-size:11px;color:#0891b2;font-weight:700;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:6px}
-  .more-item .md{font-size:12.5px;color:#94a3b8;margin-top:8px}
-  @media(max-width:768px){.more-list{grid-template-columns:1fr}.more-item{border-right:none}}
+  .more-item img{width:108px;height:82px;object-fit:cover;border-radius:10px}
+  .more-item h4{font-size:16px;line-height:1.25;font-weight:800;letter-spacing:-0.015em;color:#0f172a;margin-bottom:6px}
+  .more-item .mc{font-size:10.5px;color:#2563eb;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;display:block;margin-bottom:6px}
+  .more-item .md{font-size:12px;color:#a1a1aa;margin-top:6px}
+  @media(max-width:760px){.more-list{grid-template-columns:1fr}.more-item{border-right:none}}
 
   /* NEWSLETTER */
-  .news{padding:40px 32px 120px}
-  .news-inner{max-width:1080px;margin:0 auto;background:linear-gradient(135deg,#06b6d4 0%,#0891b2 60%,#0e7490 100%);border-radius:36px;padding:80px 56px;color:#fff;text-align:center;position:relative;overflow:hidden}
-  .news-inner::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(251,191,36,.25),transparent 50%);pointer-events:none}
-  .news-inner h2{font-family:'Fraunces',serif;font-size:clamp(32px,4.5vw,52px);font-weight:500;letter-spacing:-0.025em;line-height:1.05;margin-bottom:18px;position:relative}
-  .news-inner h2 em{font-style:italic}
-  .news-inner p{font-size:17px;opacity:.95;max-width:560px;margin:0 auto 36px;position:relative}
-  .news-form{display:flex;gap:10px;max-width:480px;margin:0 auto;position:relative}
-  .news-form input{flex:1;padding:16px 22px;border-radius:999px;border:0;font-size:15px;font-family:inherit;background:rgba(255,255,255,.95);color:#0f172a;outline:none}
-  .news-form button{padding:16px 28px;border-radius:999px;border:0;background:#0f172a;color:#fff;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit;transition:background .3s,transform .2s}
-  .news-form button:hover{background:#000;transform:translateY(-2px)}
-  @media(max-width:600px){.news-inner{padding:56px 24px;border-radius:24px}.news-form{flex-direction:column}}
+  .news{padding:30px 24px 110px}
+  .news-inner{max-width:1040px;margin:0 auto;background:#08101e;border-radius:28px;padding:72px 48px;color:#fff;text-align:center;position:relative;overflow:hidden}
+  .news-inner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 0%,rgba(59,130,246,.25),transparent 55%),radial-gradient(ellipse at 80% 100%,rgba(6,182,212,.18),transparent 55%);pointer-events:none}
+  .news-inner > *{position:relative}
+  .news-inner .badge{margin-bottom:20px}
+  .news-inner h2{font-size:clamp(30px,4.4vw,46px);font-weight:900;letter-spacing:-0.025em;line-height:1.1;margin-bottom:16px}
+  .news-inner h2 span{color:#60a5fa}
+  .news-inner .news-desc{font-size:17px;color:#94a3b8;max-width:560px;margin:0 auto 32px}
+  .news-form{display:flex;gap:10px;max-width:480px;margin:0 auto}
+  .news-form input{flex:1;padding:16px 22px;border-radius:100px;border:0;font-size:15px;font-family:inherit;background:rgba(255,255,255,.95);color:#0f172a;outline:none}
+  .news-form input:focus{box-shadow:0 0 0 3px rgba(96,165,250,.45)}
+  .news-form button{padding:16px 28px;border-radius:100px;border:0;background:#60a5fa;color:#08101e;font-weight:800;font-size:14px;cursor:pointer;font-family:inherit;transition:background .25s,transform .2s;letter-spacing:.5px}
+  .news-form button:hover{background:#93c5fd;transform:translateY(-2px)}
+  .news-form button:disabled{opacity:.7;cursor:wait}
+  .news-msg{margin-top:18px;font-size:14px;color:#93c5fd;min-height:20px;font-weight:600}
+  @media(max-width:600px){.news-inner{padding:52px 24px;border-radius:20px}.news-form{flex-direction:column}}
 
   /* FOOTER */
-  footer{background:#0f172a;color:#94a3b8;padding:70px 32px 40px}
-  .ft-inner{max-width:1280px;margin:0 auto}
-  .ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08)}
-  .ft-brand .brand{color:#fff;margin-bottom:18px}
-  .ft-brand p{font-size:14.5px;line-height:1.6;max-width:340px}
-  .ft-col h5{color:#fff;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
-  .ft-col a{display:block;font-size:14px;padding:6px 0;color:#94a3b8;transition:color .2s}
-  .ft-col a:hover{color:#22d3ee}
-  .ft-bottom{padding-top:32px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px}
-  @media(max-width:900px){.ft-top{grid-template-columns:1fr 1fr;gap:36px}}
-  @media(max-width:560px){.ft-top{grid-template-columns:1fr}}
+  footer{background:#050a14;color:#64748b;padding:64px 24px 36px;border-top:1px solid rgba(96,165,250,.1)}
+  .ft-inner{max-width:1200px;margin:0 auto}
+  .ft-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.06)}
+  .ft-brand .brand{color:#fff;margin-bottom:16px}
+  .ft-brand p{font-size:14px;line-height:1.7;max-width:340px;color:#64748b}
+  .ft-col h5{color:#fff;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+  .ft-col a{display:block;font-size:14px;padding:6px 0;color:#64748b;transition:color .2s}
+  .ft-col a:hover{color:#60a5fa}
+  .ft-bottom{padding-top:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:#475569}
+  @media(max-width:900px){.ft-top{grid-template-columns:1fr 1fr;gap:32px}}
+  @media(max-width:540px){.ft-top{grid-template-columns:1fr}}
 
   /* REVEAL */
-  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
   .reveal.in{opacity:1;transform:none}
 </style>
 </head>
@@ -4321,33 +4375,38 @@ ${JSON.stringify({
 
 <nav class="nav">
   <div class="nav-inner">
-    <a class="brand" href="${BLOG_BASE}/"><span class="brand-dot"></span> Blog Acqualive</a>
+    <a class="brand" href="${BLOG_BASE}/"><span class="brand-dot"></span> Blog <span class="b-accent">Acqualive</span></a>
     <div class="nav-links">
       <a href="#destaque">Em destaque</a>
       <a href="#recentes">Recentes</a>
-      <a href="#categorias">Categorias</a>
+      <a href="#podcasts">Podcasts</a>
+      <a href="#conheca">Conheça</a>
       <a href="#newsletter">Newsletter</a>
     </div>
     <a class="nav-cta" href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer Acqualive</a>
   </div>
 </nav>
 
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-inner">
-    <span class="eyebrow reveal">Conteúdo Acqualive · ${items.length} artigos</span>
-    <h1 class="hero-title reveal">Ciência, água e <em>saúde</em><br>em uma leitura por vez.</h1>
-    <p class="hero-sub reveal">Investigações, guias e reflexões sobre a água que você bebe todos os dias. Conteúdo confiável, escrito para quem cuida de verdade da própria saúde e bem-estar.</p>
-    <div class="hero-stats reveal">
-      <div class="stat"><span class="n">${items.length}+</span><span class="l">artigos publicados</span></div>
-      <div class="stat"><span class="n">15+</span><span class="l">anos estudando água</span></div>
-      <div class="stat"><span class="n">150k+</span><span class="l">pessoas atendidas</span></div>
+<header class="article-header">
+  <div class="header-inner">
+    <span class="badge reveal">Blog Acqualive · ${items.length} artigos</span>
+    <h1 class="reveal">Ciência, água e <span>saúde</span> em uma leitura por vez.</h1>
+    <p class="header-desc reveal">Investigações, guias e reflexões sobre a água que você bebe todos os dias. Conteúdo confiável, escrito para quem cuida de verdade da própria saúde e bem-estar.</p>
+    <div class="header-stats reveal">
+      <div class="stat"><span class="n">${items.length}+</span><span class="l">Artigos</span></div>
+      <div class="stat"><span class="n">15+</span><span class="l">Anos de Acqualive</span></div>
+      <div class="stat"><span class="n">150k+</span><span class="l">Pessoas atendidas</span></div>
     </div>
   </div>
-</section>
+</header>
 
-<section class="featured" id="destaque">
-  <div class="featured-inner">
+<section class="section" id="destaque">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Em destaque</span>
+      <h2>O artigo da <span>semana</span></h2>
+      <p class="head-sub">A leitura mais recente do nosso arquivo, escolhida para abrir a sua semana com clareza.</p>
+    </div>
     <a class="featured-card reveal" href="${featured.url}">
       <div class="featured-img">
         <span class="featured-badge">Mais recente</span>
@@ -4355,7 +4414,7 @@ ${JSON.stringify({
       </div>
       <div class="featured-body">
         <span class="featured-chip">${featured.category}</span>
-        <h2>${featured.title}</h2>
+        <h3>${featured.title}</h3>
         <p>${featured.description}</p>
         <div class="featured-meta">
           <span>${featured.dateLabel}</span>
@@ -4366,51 +4425,81 @@ ${JSON.stringify({
   </div>
 </section>
 
-<section class="sec" id="leituras">
-  <div class="sec-inner">
-    <div class="sec-head reveal">
-      <h2>Leituras <em>essenciais</em><br>desta semana.</h2>
-      <p>Selecionamos os artigos que mais transformaram a forma como nossos leitores enxergam a água.</p>
+<section class="section" id="leituras" style="padding-top:0">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Leituras essenciais</span>
+      <h2>O que está <span>transformando</span> nossos leitores.</h2>
+      <p class="head-sub">Os textos que mais mudaram a forma como nossos leitores enxergam a água.</p>
     </div>
     <div class="row-2">
-      ${secondary.map((p) => card(p, "list")).join("")}
+      ${secondary.map((p) => card(p)).join("")}
     </div>
   </div>
 </section>
 
-<section class="sec" id="recentes">
-  <div class="sec-inner">
-    <div class="sec-head reveal">
-      <h2>Publicações <em>recentes</em>.</h2>
-      <p>Toda semana um novo olhar sobre hidratação, longevidade e a ciência da água.</p>
+<section class="carousel-section dark" id="podcasts">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Podcasts</span>
+      <h2>Acqualive em <span>conversas reais</span>.</h2>
+      <p class="head-sub">Os encontros e entrevistas em que a Acqualive falou sobre água, saúde e o que move o nosso trabalho.</p>
+    </div>
+    <div class="carousel" data-carousel data-type="podcast">
+      <div class="carousel-track-wrap">
+        <div class="carousel-track">
+          ${PODCASTS.map(podcastSlide).join("")}
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="car-btn" data-dir="-1" aria-label="Anterior">‹</button>
+        <button class="car-btn" data-dir="1" aria-label="Próximo">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="recentes">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Recentes</span>
+      <h2>Publicações <span>recentes</span>.</h2>
+      <p class="head-sub">Toda semana um novo olhar sobre hidratação, longevidade e a ciência da água.</p>
     </div>
     <div class="grid-3">
-      ${grid.map((p) => card(p, "grid")).join("")}
+      ${grid.map((p) => card(p)).join("")}
     </div>
   </div>
 </section>
 
-<section class="cats" id="categorias">
-  <div class="cats-inner">
-    <div class="cats-head">
-      <h2>Temas que <em>importam</em>.</h2>
-      <p>Conteúdo organizado para você ir fundo no que mais faz sentido agora.</p>
+<section class="carousel-section light" id="conheca">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Conheça a Acqualive</span>
+      <h2>Por dentro da <span>Acqualive</span>.</h2>
+      <p class="head-sub">Histórias, bastidores e o cuidado que existe por trás de cada purificador que chega na sua casa.</p>
     </div>
-    <div class="cats-list">
-      ${["Ciência da Água","Bem-estar","Investigação","Família & Vida","Café & Sabor","Guia & Comparativos"].map((c) => {
-        const count = items.filter((i) => i.category === c).length;
-        return `<div class="cat-tag"><span class="n">${String(count).padStart(2,"0")}</span><span class="l">${c}</span></div>`;
-      }).join("")}
+    <div class="carousel" data-carousel data-type="conheca">
+      <div class="carousel-track-wrap">
+        <div class="carousel-track">
+          ${CONHECA.map(conhecaSlide).join("")}
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="car-btn" data-dir="-1" aria-label="Anterior">‹</button>
+        <button class="car-btn" data-dir="1" aria-label="Próximo">›</button>
+      </div>
     </div>
   </div>
 </section>
 
 ${more.length ? `
-<section class="sec" id="mais">
-  <div class="sec-inner">
-    <div class="sec-head reveal">
-      <h2>Continue <em>explorando</em>.</h2>
-      <p>Mais conteúdos do arquivo Acqualive para quem quer ir além.</p>
+<section class="section" id="mais" style="padding-top:0">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Arquivo</span>
+      <h2>Continue <span>explorando</span>.</h2>
+      <p class="head-sub">Mais conteúdos do arquivo Acqualive para quem quer ir além.</p>
     </div>
     <div class="more-list">
       ${more.map((p) => `
@@ -4428,12 +4517,14 @@ ${more.length ? `
 
 <section class="news" id="newsletter">
   <div class="news-inner">
-    <h2>Receba nossas <em>melhores leituras</em>.</h2>
-    <p>Um e-mail por semana, sem ruído. Apenas ciência, água e bem-estar direto na sua caixa de entrada.</p>
-    <form class="news-form" onsubmit="event.preventDefault();this.querySelector('button').innerText='Inscrito!';">
-      <input type="email" required placeholder="seu melhor e-mail">
+    <span class="badge">Newsletter</span>
+    <h2>Receba nossas <span>melhores leituras</span>.</h2>
+    <p class="news-desc">Um e-mail por semana, sem ruído. Apenas ciência, água e bem-estar direto na sua caixa de entrada.</p>
+    <form class="news-form" id="news-form">
+      <input type="email" name="email" required placeholder="seu melhor e-mail">
       <button type="submit">Quero receber</button>
     </form>
+    <div class="news-msg" id="news-msg"></div>
   </div>
 </section>
 
@@ -4441,14 +4532,15 @@ ${more.length ? `
   <div class="ft-inner">
     <div class="ft-top">
       <div class="ft-brand">
-        <div class="brand"><span class="brand-dot"></span> Acqualive</div>
+        <div class="brand"><span class="brand-dot"></span> <span class="b-accent">Acqualive</span></div>
         <p>A melhor versão da sua água. Há mais de 15 anos levando saúde e bem-estar para famílias em todo o Brasil.</p>
       </div>
       <div class="ft-col">
         <h5>Blog</h5>
         <a href="#destaque">Em destaque</a>
         <a href="#recentes">Recentes</a>
-        <a href="#categorias">Categorias</a>
+        <a href="#podcasts">Podcasts</a>
+        <a href="#conheca">Conheça</a>
       </div>
       <div class="ft-col">
         <h5>Acqualive</h5>
@@ -4475,7 +4567,72 @@ ${more.length ? `
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
   },{threshold:.12, rootMargin:'0px 0px -8% 0px'});
-  document.querySelectorAll('.reveal, .card, .more-item, .cat-tag').forEach(function(el){ el.classList.add('reveal'); io.observe(el); });
+  document.querySelectorAll('.reveal, .post-card, .more-item, .carousel-slide').forEach(function(el){ el.classList.add('reveal'); io.observe(el); });
+
+  // Carousels
+  document.querySelectorAll('[data-carousel]').forEach(function(car){
+    var track = car.querySelector('.carousel-track');
+    var slides = car.querySelectorAll('.carousel-slide');
+    var btns = car.querySelectorAll('.car-btn');
+    var idx = 0;
+    function perView(){
+      var w = window.innerWidth;
+      if(w >= 1080) return car.dataset.type === 'conheca' ? 4 : 3;
+      if(w >= 760) return 2;
+      return 1;
+    }
+    function update(){
+      var pv = perView();
+      var maxIdx = Math.max(0, slides.length - pv);
+      if(idx > maxIdx) idx = maxIdx;
+      if(idx < 0) idx = 0;
+      var slide = slides[0];
+      if(!slide) return;
+      var slideW = slide.getBoundingClientRect().width + 24;
+      track.style.transform = 'translateX(' + (-idx * slideW) + 'px)';
+      btns[0].disabled = idx === 0;
+      btns[1].disabled = idx >= maxIdx;
+    }
+    btns.forEach(function(b){
+      b.addEventListener('click', function(){
+        idx += parseInt(b.dataset.dir, 10);
+        update();
+      });
+    });
+    window.addEventListener('resize', update);
+    setTimeout(update, 50);
+  });
+
+  // Newsletter
+  var form = document.getElementById('news-form');
+  var msg = document.getElementById('news-msg');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var email = form.email.value.trim();
+      var btn = form.querySelector('button');
+      btn.disabled = true; btn.innerText = 'Enviando...';
+      msg.innerText = '';
+      fetch('${NEWSLETTER_ENDPOINT}', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({ email: email, source: 'blog-home' })
+      }).then(function(r){ return r.json().then(function(j){ return {ok:r.ok,j:j}; }); })
+        .then(function(res){
+          if(res.ok){
+            msg.innerText = 'Pronto! Você está inscrito. Em breve você recebe nossa primeira leitura.';
+            form.reset();
+            btn.innerText = 'Inscrito!';
+          } else {
+            msg.innerText = 'Não foi possível inscrever agora. Tente novamente em instantes.';
+            btn.disabled = false; btn.innerText = 'Quero receber';
+          }
+        }).catch(function(){
+          msg.innerText = 'Não foi possível inscrever agora. Tente novamente em instantes.';
+          btn.disabled = false; btn.innerText = 'Quero receber';
+        });
+    });
+  }
 
   function sendHeight(){
     try { parent.postMessage({type:'blog-iframe-height', height: document.documentElement.scrollHeight}, '*'); } catch(e){}
@@ -4490,6 +4647,7 @@ ${more.length ? `
 </body>
 </html>`;
 };
+
 
 const ARTICLES = [
   { title: "Home do Blog Acqualive", slug: "blog-home", html: buildBlogHomeHtml(RAW_ARTICLES) },
