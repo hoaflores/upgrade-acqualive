@@ -4475,27 +4475,16 @@ ${JSON.stringify({
   </div>
 </section>
 
-${more.length ? `
-<section class="section" id="mais" style="padding-top:0">
+<section class="section" id="mais" style="padding-top:0;display:none">
   <div class="section-inner">
     <div class="section-head reveal">
       <span class="section-eyebrow">Arquivo</span>
       <h2>Continue <span>explorando</span>.</h2>
       <p class="head-sub">Mais conteúdos do arquivo Acqualive para quem quer ir além.</p>
     </div>
-    <div class="more-list">
-      ${more.map((p) => `
-        <a class="more-item" href="${p.url}">
-          <img src="${p.image}" alt="${p.title.replace(/"/g, "&quot;")}" loading="lazy">
-          <div>
-            <span class="mc">${p.category}</span>
-            <h4>${p.title}</h4>
-            <span class="md">${p.dateLabel}</span>
-          </div>
-        </a>`).join("")}
-    </div>
+    <div class="more-list" id="more-slot"></div>
   </div>
-</section>` : ""}
+</section>
 
 <section class="news" id="newsletter">
   <div class="news-inner">
