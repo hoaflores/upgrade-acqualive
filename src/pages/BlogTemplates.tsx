@@ -4416,7 +4416,7 @@ ${JSON.stringify({
         <a href="#filtros" data-cat="Investigação">Investigações</a>
         <a href="#filtros" data-cat="Guia & Comparativos">Filtros</a>
         <a href="#filtros" data-cat="Bem-estar">Saúde</a>
-        <a href="#filtros" data-cat="Café & Sabor">Café e sabor</a>
+        
       </div>
       <div class="hero-proof">
         <div class="av"><span></span><span></span><span></span><span></span></div>
@@ -4431,7 +4431,7 @@ ${JSON.stringify({
 
 <div class="proof-strip">
   <div class="proof-inner">
-    <div class="proof-stat"><span class="n"><span class="accent" id="stat-posts">--</span>+</span><span class="l">Artigos publicados</span></div>
+    <div class="proof-stat"><span class="n"><span class="accent">100</span>+</span><span class="l">Blogposts publicados</span></div>
     <div class="proof-stat"><span class="n"><span class="accent">15</span>+</span><span class="l">Anos de Acqualive</span></div>
     <div class="proof-stat"><span class="n"><span class="accent">150k</span>+</span><span class="l">Pessoas atendidas</span></div>
     <div class="proof-stat"><span class="n"><span class="accent">100%</span></span><span class="l">Conteúdo revisado</span></div>
@@ -4728,7 +4728,7 @@ ${JSON.stringify({
     ALL_POSTS = posts;
     var hero = posts[0];
     var ranked = posts.slice(1,4);
-    var recent = posts.slice(0,8);
+    var recent = posts.slice(0,3);
 
     var hSlot = document.getElementById('hero-feat-slot');
     if(hSlot && hero) hSlot.innerHTML = heroFeatHtml(hero);
