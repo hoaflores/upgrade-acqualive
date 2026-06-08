@@ -4504,7 +4504,7 @@ ${JSON.stringify({
   </div>
 </section>
 
-<section class="section" id="recentes" style="padding-top:84px">
+<section class="section" id="recentes" style="padding-top:84px;background:linear-gradient(180deg,#f8fafc,#eff6ff)">
   <div class="section-inner">
     <div class="section-head center reveal">
       <span class="section-eyebrow">Recentes</span>
