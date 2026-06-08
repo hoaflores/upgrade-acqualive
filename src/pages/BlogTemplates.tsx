@@ -4385,7 +4385,7 @@ ${JSON.stringify({
   /* Skeleton */
   .skel{background:linear-gradient(90deg,#e2e8f0,#f1f5f9,#e2e8f0);background-size:200% 100%;animation:shimmer 1.6s linear infinite;border-radius:12px}
   @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
-  .skel-hero{aspect-ratio:4/3;border-radius:22px;background:rgba(255,255,255,.04)}
+  .skel-hero{aspect-ratio:4/3;border-radius:22px;background:rgba(37,99,235,.08)}
 </style>
 </head>
 <body>
