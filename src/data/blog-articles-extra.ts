@@ -2216,4 +2216,465 @@ const article17 = {
   )
 };
 
-export const EXTRA_ARTICLES = [article6, article7, article8, article9, article10, article11, article12, article13, article14, article15, article16, article17];
+// ============================================================
+// ARTIGO 18 — Água alcalina, refluxo e azia
+// ============================================================
+const article18 = {
+  title: "Água alcalina ajuda em refluxo, azia e gastrite? O que diz a ciência (e o que a Acqualive faz)",
+  slug: "agua-alcalina-refluxo-azia-gastrite",
+  html: wrap(
+    `<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Água Alcalina para Refluxo e Azia: Funciona? | Acqualive</title>
+<meta name="description" content="Estudos mostram que água com pH alcalino pode desativar a pepsina, enzima do refluxo. Entenda o que a ciência diz sobre água alcalina, azia e gastrite, e como ter essa água em casa.">
+<meta name="keywords" content="água alcalina refluxo, água alcalina azia, água alcalina gastrite, pepsina, pH da água, refluxo gastroesofágico, Acqualive, purificador alcalino">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Acqualive">
+<link rel="canonical" href="https://blog.acqualive.com.br/agua-alcalina-refluxo-azia-gastrite/">
+<meta property="og:title" content="Água alcalina ajuda em refluxo e azia? O que diz a ciência">
+<meta property="og:description" content="Pesquisa publicada nos Annals of Otology mostrou que água com pH 8.8 desativa a pepsina. Entenda a conexão com refluxo e azia.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/agua-alcalina-refluxo.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Água alcalina ajuda em refluxo, azia e gastrite? O que diz a ciência","description":"Estudos sobre o efeito da água alcalina na pepsina, no refluxo e na azia, e como ter essa água em casa com o Purificador Acqualive.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-06-14","dateModified":"2026-06-14","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/agua-alcalina-refluxo.jpg"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Água alcalina ajuda na azia e no refluxo?","acceptedAnswer":{"@type":"Answer","text":"Sim. Estudo publicado nos Annals of Otology, Rhinology and Laryngology (Koufman, 2012) mostrou que água com pH 8.8 desativa de forma irreversível a pepsina, principal enzima envolvida na irritação do refluxo, e ainda neutraliza a acidez gástrica de forma mais eficaz que água comum."},"name":"Água alcalina ajuda na azia e no refluxo?"},
+{"@type":"Question","name":"Água alcalina pode substituir o remédio para refluxo?","acceptedAnswer":{"@type":"Answer","text":"Não. A água alcalina é um apoio diário ao tratamento e ao alívio dos sintomas, mas não substitui orientação médica, exames e medicamentos prescritos. Quem tem refluxo crônico deve manter o acompanhamento."}},
+{"@type":"Question","name":"Qual o pH ideal da água para quem tem gastrite?","acceptedAnswer":{"@type":"Answer","text":"Para apoio diário em casos de azia e refluxo, faixas entre pH 8,5 e 9,5 são as mais estudadas. Acima disso, sem orientação profissional, não há benefício adicional comprovado."}},
+{"@type":"Question","name":"O Acqualive entrega água nesse pH?","acceptedAnswer":{"@type":"Answer","text":"Sim. O Purificador Acqualive entrega água filtrada, mineralizada com magnésio e com pH próximo a 9, dentro da faixa estudada para apoio em azia e refluxo, sem necessidade de aditivos, eletricidade ou bombas."}}
+]}
+</script>`,
+    `<header class="article-header">
+  <div class="header-inner">
+    <span class="badge">SAÚDE DIGESTIVA</span>
+    <h1>Água alcalina ajuda em <span>refluxo, azia e gastrite</span>? O que diz a ciência</h1>
+    <p class="header-desc">Pesquisas mostram que a água com pH alcalino pode desativar a pepsina e neutralizar a acidez. Entenda o que isso significa na prática.</p>
+    <div class="header-meta">
+      <span>Acqualive</span><span>•</span><span>14 jun 2026</span><span>•</span><span>9 min de leitura</span>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/agua-alcalina-refluxo.jpg" alt="Pessoa com a mão no peito sentindo azia e dois copos de água alcalina sobre a bancada de uma cozinha branca" width="1280" height="800" loading="eager">
+  </div>
+</header>
+
+<main class="article-body">
+  <p>Quem convive com refluxo, azia ou gastrite conhece o roteiro: queimação subindo pelo esôfago, gosto ácido na boca, noite mal dormida. A medicina trata o problema com remédios específicos, mudanças de hábito e acompanhamento. Mas existe uma pergunta que aparece em quase todo consultório: <strong>a água que eu bebo influencia?</strong></p>
+
+  <p>A resposta curta é: sim, e bastante. A água alcalina entrou no radar da gastroenterologia depois de um estudo robusto publicado nos <a href="https://pubmed.ncbi.nlm.nih.gov/22844861/" target="_blank" rel="noopener">Annals of Otology, Rhinology and Laryngology em 2012</a>, conduzido pela Dra. Jamie Koufman, uma das maiores autoridades mundiais em refluxo laringofaríngeo.</p>
+
+  <div class="quote">"Água com pH 8.8 desativa a pepsina humana de forma irreversível e oferece uma capacidade de neutralização ácida superior à da maioria dos antiácidos convencionais." — Koufman & Johnston, 2012</div>
+
+  <nav class="toc">
+    <div class="toc-title">Neste artigo</div>
+    <ol>
+      <li><a href="#pepsina">Pepsina: a enzima que ninguém te contou</a></li>
+      <li><a href="#estudo">O estudo de 2012 que mudou a conversa</a></li>
+      <li><a href="#sintomas">Quais sintomas podem melhorar</a></li>
+      <li><a href="#nao-substitui">O que a água alcalina não faz</a></li>
+      <li><a href="#dia-a-dia">Como usar no dia a dia</a></li>
+      <li><a href="#acqualive">Por que o Acqualive cabe nessa rotina</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="pepsina">Pepsina: a enzima que ninguém te contou</h2>
+  <p>O grande vilão do refluxo não é só o ácido do estômago. É a <strong>pepsina</strong>, uma enzima digestiva que sobe junto com o conteúdo gástrico e gruda nos tecidos do esôfago, da garganta e até das vias aéreas. Mesmo depois que o ácido baixa, a pepsina continua ali, e basta qualquer alimento ácido para reativá-la e causar nova irritação.</p>
+
+  <p>Por isso muita gente toma omeprazol, melhora um pouco e depois piora de novo. O remédio reduz o ácido, mas não desativa a pepsina já depositada.</p>
+
+  <h2 id="estudo">O estudo de 2012 que mudou a conversa</h2>
+  <p>Koufman e Johnston testaram diferentes tipos de água em ambiente laboratorial. Água comum (pH 6,7) praticamente não teve efeito sobre a pepsina. Já a água alcalina ionizada com <strong>pH 8.8 desativou a enzima de forma irreversível</strong> e mostrou poder tampão muito maior, ou seja, neutralizou o ácido por mais tempo.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-number">pH 8.8</div><div class="stat-label">faixa estudada que desativou a pepsina</div></div>
+    <div class="stat-card"><div class="stat-number">100%</div><div class="stat-label">de desativação irreversível da enzima no estudo</div></div>
+    <div class="stat-card"><div class="stat-number">> antiácidos</div><div class="stat-label">capacidade de neutralização superior à média dos antiácidos comuns</div></div>
+  </div>
+
+  <p>O resultado abriu espaço para uma recomendação prática que muitos médicos integrativos e gastroenterologistas usam hoje: para quem tem refluxo laringofaríngeo (LPR), tossir crônico, rouquidão matinal ou pigarro, beber água alcalina nas refeições e ao longo do dia é uma medida coadjuvante simples e barata.</p>
+
+  <h2 id="sintomas">Quais sintomas podem melhorar</h2>
+  <p>Não é mágica, mas o conjunto de evidências e relatos clínicos aponta para alívio em:</p>
+
+  <ul class="check-list">
+    <li><strong>Azia frequente</strong> após refeições.</li>
+    <li><strong>Refluxo silencioso</strong> (LPR), com pigarro, tosse seca e rouquidão pela manhã.</li>
+    <li><strong>Gastrite leve a moderada</strong>, especialmente associada à alimentação ácida e ultraprocessada.</li>
+    <li><strong>Sensação de queimação</strong> e gosto amargo na boca.</li>
+    <li><strong>Desconforto digestivo</strong> em dias de excesso de café, álcool ou refrigerante.</li>
+  </ul>
+
+  <div class="mid-cta">
+    <p>Apoiar a digestão começa pelo copo certo, todos os dias.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Acqualive →</a>
+  </div>
+
+  <h2 id="nao-substitui">O que a água alcalina não faz</h2>
+  <p>Para que não reste dúvida: água alcalina <strong>não cura</strong> refluxo, não substitui medicamento prescrito e não é tratamento isolado para esôfago de Barrett, úlceras graves ou Helicobacter pylori. O que ela faz é entrar como apoio diário, dentro de uma rotina que inclui:</p>
+
+  <ul class="check-list">
+    <li>Acompanhamento com gastroenterologista quando os sintomas são frequentes.</li>
+    <li>Redução de gatilhos: frituras, álcool, café em excesso, refrigerantes, alimentos muito ácidos à noite.</li>
+    <li>Jantar leve, pelo menos 2 horas antes de deitar.</li>
+    <li>Manejo de estresse, sono e peso corporal.</li>
+  </ul>
+
+  <div class="danger-box">
+    <h4>Atenção</h4>
+    <p>Quem usa medicação contínua para refluxo, tem insuficiência renal grave ou está sob restrição médica de líquidos deve conversar com o profissional de saúde antes de mudar a fonte principal de hidratação.</p>
+  </div>
+
+  <h2 id="dia-a-dia">Como usar no dia a dia</h2>
+  <p>O protocolo simples que mais funciona na prática clínica:</p>
+
+  <ul class="check-list">
+    <li>1 copo de água alcalina ao acordar, em jejum.</li>
+    <li>1 copo 20 minutos antes de cada refeição principal.</li>
+    <li>Pequenos goles ao longo do dia, evitando grandes volumes durante a refeição.</li>
+    <li>1 copo cerca de 1 hora antes de dormir, se não houver restrição.</li>
+  </ul>
+
+  <p>É um hábito de baixo custo e alto impacto. O ponto crítico é ter essa água sempre disponível, fresquinha, em casa. É aí que entra o ponto seguinte.</p>
+
+  <h2 id="acqualive">Por que o Acqualive cabe nessa rotina</h2>
+  <p>O <strong>Purificador Acqualive</strong> é um filtro ionizador por gravidade que entrega água filtrada, mineralizada com magnésio e com <strong>pH próximo a 9</strong>, dentro da faixa estudada para apoio em refluxo e azia. Sem eletricidade, sem bomba, sem garrafa plástica, sem dose extra de sódio (diferente do truque do bicarbonato).</p>
+
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-cozinha-moderna.png" alt="Purificador Acqualive transparente em cozinha contemporânea, fonte diária de água alcalina para quem tem refluxo e azia" class="article-img" loading="lazy" width="1080" height="1350">
+
+  <div class="info-box">
+    <h4>Para quem é</h4>
+    <p>Quem convive com azia frequente, refluxo silencioso, gastrite leve ou simplesmente quer apoiar a digestão e a saúde gástrica com a água que já bebe todos os dias.</p>
+  </div>
+
+  <div class="cta-section">
+    <h2>Comece pelo <span>copo certo</span>, hoje</h2>
+    <p>Tenha água alcalina, filtrada e mineralizada em casa, todos os dias. Em até 10x sem juros e frete grátis. Consulte regiões disponíveis.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Conhecer o Acqualive →</a>
+  </div>
+
+  <div class="related-links">
+    <h4>Continue lendo</h4>
+    <ul>
+      <li><a href="https://blog.acqualive.com.br/agua-anti-inflamatoria/" target="_blank">Água anti-inflamatória: desligando a inflamação silenciosa</a></li>
+      <li><a href="https://blog.acqualive.com.br/como-fazer-agua-alcalina-em-casa/" target="_blank">Como fazer água alcalina em casa em menos de 1 minuto</a></li>
+      <li><a href="https://blog.acqualive.com.br/magnesio-beneficios-saude/" target="_blank">Magnésio: o mineral esquecido</a></li>
+    </ul>
+  </div>
+</main>`
+  )
+};
+
+// ============================================================
+// ARTIGO 19 — Água hidrogenada / hidrogênio molecular
+// ============================================================
+const article19 = {
+  title: "Água hidrogenada: o que é hidrogênio molecular na água e por que a ciência está de olho",
+  slug: "agua-hidrogenada-hidrogenio-molecular",
+  html: wrap(
+    `<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Água Hidrogenada: O Que Diz a Ciência Sobre o Hidrogênio Molecular | Acqualive</title>
+<meta name="description" content="Água hidrogenada virou febre, mas pouca gente entende o que é. Conheça o hidrogênio molecular (H2), o estudo da Nature Medicine, os benefícios estudados e como a ionização da água entrega esse efeito em casa.">
+<meta name="keywords" content="água hidrogenada, hidrogênio molecular, H2, água ionizada, ORP, antioxidante seletivo, água alcalina ionizada, Acqualive">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Acqualive">
+<link rel="canonical" href="https://blog.acqualive.com.br/agua-hidrogenada-hidrogenio-molecular/">
+<meta property="og:title" content="Água hidrogenada: o que é e por que a ciência está de olho">
+<meta property="og:description" content="O hidrogênio molecular se mostrou um antioxidante seletivo em estudos. Entenda como a água ionizada entrega esse efeito.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/agua-hidrogenada.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Água hidrogenada: o que é hidrogênio molecular na água e por que a ciência está de olho","description":"Guia honesto sobre água hidrogenada, hidrogênio molecular, ORP e ionização. O que a ciência mostra, o que ainda é marketing e como ter esse tipo de água em casa.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-06-14","dateModified":"2026-06-14","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/agua-hidrogenada.jpg"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"O que é água hidrogenada?","acceptedAnswer":{"@type":"Answer","text":"Água hidrogenada é a água enriquecida com hidrogênio molecular (H2) dissolvido. Esse hidrogênio é uma molécula muito pequena, capaz de atravessar membranas celulares e atuar como antioxidante seletivo, neutralizando os radicais livres mais agressivos sem afetar os benéficos."}},
+{"@type":"Question","name":"Água hidrogenada é a mesma coisa que água alcalina?","acceptedAnswer":{"@type":"Answer","text":"Não. Toda água alcalina ionizada tende a ter alguma carga de hidrogênio molecular, mas nem toda água alcalina é hidrogenada. A diferença real está na ionização: é o processo que reduz o ORP (potencial de oxirredução) e gera o H2 dissolvido."}},
+{"@type":"Question","name":"Quais os benefícios estudados da água hidrogenada?","acceptedAnswer":{"@type":"Answer","text":"Estudos publicados na Nature Medicine e em revisões posteriores apontam efeitos antioxidantes, anti-inflamatórios, neuroprotetores e melhora da recuperação após exercício físico. As evidências são promissoras, mas ainda em fase de consolidação clínica."}},
+{"@type":"Question","name":"O Acqualive produz água hidrogenada?","acceptedAnswer":{"@type":"Answer","text":"O Purificador Acqualive entrega água alcalina ionizada por gravidade, com ORP reduzido e propriedades antioxidantes em níveis adequados para consumo diário. Não é um gerador médico de H2 industrial, mas reproduz a química que se encontra nas águas naturais mais longevas do mundo."}}
+]}
+</script>`,
+    `<header class="article-header">
+  <div class="header-inner">
+    <span class="badge">CIÊNCIA DA ÁGUA</span>
+    <h1>Água <span>hidrogenada</span>: o que é hidrogênio molecular na água e por que a ciência está de olho</h1>
+    <p class="header-desc">Um guia honesto sobre H2, ionização, ORP e o que separa marketing barato da ciência publicada nas melhores revistas do mundo.</p>
+    <div class="header-meta">
+      <span>Acqualive</span><span>•</span><span>14 jun 2026</span><span>•</span><span>10 min de leitura</span>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/agua-hidrogenada.jpg" alt="Copo de cristal com água ionizada e microbolhas de hidrogênio molecular brilhando em luz azul, em fundo escuro elegante" width="1280" height="800" loading="eager">
+  </div>
+</header>
+
+<main class="article-body">
+  <p>A cada poucos meses surge uma "nova água" no mercado de bem-estar. Quase todas somem rápido. Uma, em particular, está sobrevivendo bem ao escrutínio científico: a <strong>água hidrogenada</strong>, ou seja, água enriquecida com hidrogênio molecular (H2) dissolvido.</p>
+
+  <p>O ponto de virada foi em 2007, quando a revista <a href="https://www.nature.com/articles/nm1577" target="_blank" rel="noopener">Nature Medicine publicou o estudo de Ohsawa et al.</a> mostrando que o hidrogênio molecular atua como um antioxidante seletivo: ele neutraliza os radicais livres mais tóxicos do corpo (como o radical hidroxila) sem mexer nos radicais que o organismo precisa para sinalização celular saudável.</p>
+
+  <div class="quote">"Hidrogênio atua como antioxidante terapêutico ao reduzir seletivamente radicais de oxigênio citotóxicos." — Ohsawa I. et al., Nature Medicine, 2007</div>
+
+  <nav class="toc">
+    <div class="toc-title">Neste artigo</div>
+    <ol>
+      <li><a href="#o-que-e">Afinal, o que é água hidrogenada</a></li>
+      <li><a href="#diferenca">Hidrogenada x alcalina x ionizada</a></li>
+      <li><a href="#estudos">O que os estudos mostram</a></li>
+      <li><a href="#orp">ORP: o número que mede o poder antioxidante</a></li>
+      <li><a href="#cuidado">O que é ciência e o que é marketing</a></li>
+      <li><a href="#acqualive">Como o Acqualive entrega isso em casa</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="o-que-e">Afinal, o que é água hidrogenada</h2>
+  <p>Água hidrogenada é a H2O comum com moléculas de hidrogênio molecular (H2) dissolvidas. O H2 é o menor elemento da tabela periódica, o que lhe dá uma vantagem rara: <strong>ele atravessa membranas celulares e até a barreira hematoencefálica</strong> sem precisar de transportador.</p>
+
+  <p>Em termos práticos, é uma água que parece igual a qualquer outra, sem gosto, sem cheiro, mas que carrega uma carga extra capaz de chegar a tecidos onde antioxidantes comuns têm dificuldade.</p>
+
+  <h2 id="diferenca">Hidrogenada x alcalina x ionizada: pare de confundir</h2>
+  <p>É aqui que muita gente se perde. Os três termos andam juntos, mas significam coisas diferentes:</p>
+
+  <table style="width:100%; border-collapse:collapse; margin:24px 0; font-size:15px;">
+    <thead>
+      <tr style="background:#eff6ff;">
+        <th style="padding:12px; text-align:left; color:#1e3a8a; border-bottom:2px solid #bfdbfe;">Tipo</th>
+        <th style="padding:12px; text-align:left; color:#1e3a8a; border-bottom:2px solid #bfdbfe;">O que é</th>
+        <th style="padding:12px; text-align:left; color:#1e3a8a; border-bottom:2px solid #bfdbfe;">Efeito principal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;"><strong>Alcalina</strong></td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Água com pH acima de 7,5</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Apoia o equilíbrio ácido-base</td></tr>
+      <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;"><strong>Ionizada</strong></td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Água que passou por processo de ionização, alterando carga elétrica e ORP</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Reduz o potencial de oxirredução, ganha caráter antioxidante</td></tr>
+      <tr><td style="padding:10px;"><strong>Hidrogenada</strong></td><td style="padding:10px;">Água com H2 molecular dissolvido</td><td style="padding:10px;">Antioxidante seletivo, anti-inflamatório</td></tr>
+    </tbody>
+  </table>
+
+  <p>A boa notícia: <strong>uma água alcalina bem ionizada já carrega, naturalmente, alguma carga de hidrogênio molecular</strong>. É o caso da água que sai de um bom filtro ionizador por gravidade.</p>
+
+  <h2 id="estudos">O que os estudos mostram</h2>
+  <p>Desde 2007, mais de mil artigos foram publicados sobre o H2 em modelos animais e humanos. As revisões mais recentes, como a <a href="https://www.periodicojs.com.br/index.php/hs/article/download/2428/2373/6764" target="_blank" rel="noopener">revisão brasileira de 2025 sobre H2 e doenças neurodegenerativas</a>, apontam efeitos consistentes em quatro grandes frentes:</p>
+
+  <ul class="check-list">
+    <li><strong>Estresse oxidativo:</strong> redução de marcadores de oxidação em sangue e tecidos.</li>
+    <li><strong>Inflamação crônica:</strong> queda de citocinas inflamatórias.</li>
+    <li><strong>Performance e recuperação:</strong> menos fadiga e melhor lactato sanguíneo após exercício.</li>
+    <li><strong>Saúde metabólica:</strong> melhora em marcadores de síndrome metabólica e perfil lipídico.</li>
+  </ul>
+
+  <p>Não é "remédio para tudo". É um adjuvante interessante, com perfil de segurança excelente e mecanismo plausível.</p>
+
+  <div class="mid-cta">
+    <p>Hidrogênio molecular não é mágica. É química. E você pode ter em casa, todos os dias.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Acqualive →</a>
+  </div>
+
+  <h2 id="orp">ORP: o número que mede o poder antioxidante da sua água</h2>
+  <p>ORP é a sigla para <strong>Oxidation Reduction Potential</strong>, ou potencial de oxirredução. Em palavras simples: quanto mais negativo o ORP, mais antioxidante é a água.</p>
+
+  <ul class="check-list">
+    <li>Água da torneira: ORP positivo, costuma ficar entre +200 e +500 mV. Oxida o corpo.</li>
+    <li>Água engarrafada comum: também positiva, próxima da torneira.</li>
+    <li>Água alcalina ionizada de qualidade: ORP negativo, geralmente entre -100 e -400 mV. Antioxidante.</li>
+  </ul>
+
+  <p>É o mesmo princípio que faz frutas, vegetais frescos e chás verdes serem antioxidantes: ORP baixo. A diferença é que com a água você consome 2 a 3 litros todos os dias.</p>
+
+  <h2 id="cuidado">O que é ciência e o que é marketing</h2>
+  <p>É preciso ser justo. Nem tudo o que se vende como "água hidrogenada milagrosa" tem base. Alguns alertas honestos:</p>
+
+  <ul class="check-list">
+    <li>Pastilhas baratas de mercado livre podem gerar H2, mas em concentrações irregulares e às vezes com resíduos.</li>
+    <li>Garrafas plásticas e fechadas por muito tempo perdem H2, ele escapa pelas paredes.</li>
+    <li>Não existe "cura para câncer" com água hidrogenada, e qualquer site que prometa isso está mentindo.</li>
+    <li>O efeito real é cumulativo, depende de consumo diário e consistente, não de uma dose milagrosa.</li>
+  </ul>
+
+  <div class="danger-box">
+    <h4>Atenção</h4>
+    <p>Pessoas com doenças graves devem manter acompanhamento médico. Água hidrogenada é apoio, não tratamento isolado.</p>
+  </div>
+
+  <h2 id="acqualive">Como o Acqualive entrega isso em casa</h2>
+  <p>O <strong>Purificador Acqualive</strong> é um filtro ionizador por gravidade. Filtra a água, mineraliza com magnésio, deixa o pH em torno de 9 e reduz o ORP, entregando uma água com <strong>caráter antioxidante real</strong> e propriedades próximas às águas naturais mais longevas do mundo.</p>
+
+  <p>Sem eletricidade, sem bomba, sem pastilha química e sem garrafa plástica. Você abre o equipamento, coloca a água da sua torneira, e a química acontece em pouquíssimo tempo.</p>
+
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-cozinha-natureza.jpg" alt="Purificador Acqualive transparente em cozinha aberta, fonte diária de água ionizada e antioxidante" class="article-img" loading="lazy" width="1200" height="800">
+
+  <div class="info-box">
+    <h4>Para quem é</h4>
+    <p>Para quem quer somar um hábito antioxidante diário sem virar fanático por suplementos, e para quem entendeu que a água que se bebe todos os dias é a base da saúde, não um detalhe.</p>
+  </div>
+
+  <div class="cta-section">
+    <h2>Sua água pode ser um <span>antioxidante diário</span></h2>
+    <p>Substitua a água oxidante por uma água alcalina, ionizada e fresquinha. Em até 10x sem juros e frete grátis. Consulte regiões disponíveis.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Conhecer o Acqualive →</a>
+  </div>
+
+  <div class="related-links">
+    <h4>Continue lendo</h4>
+    <ul>
+      <li><a href="https://blog.acqualive.com.br/blue-zones-agua-longevidade/" target="_blank">Blue Zones: a água dos lugares onde se vive mais de 100 anos</a></li>
+      <li><a href="https://blog.acqualive.com.br/agua-anti-inflamatoria/" target="_blank">Água anti-inflamatória: o copo que desliga a inflamação silenciosa</a></li>
+      <li><a href="https://blog.acqualive.com.br/como-fazer-agua-alcalina-em-casa/" target="_blank">Como fazer água alcalina em casa em menos de 1 minuto</a></li>
+    </ul>
+  </div>
+</main>`
+  )
+};
+
+// ============================================================
+// ARTIGO 20 — Água alcalina e esporte / performance
+// ============================================================
+const article20 = {
+  title: "Água alcalina para treino: o que muda na performance, na recuperação e na hidratação esportiva",
+  slug: "agua-alcalina-treino-performance-esportiva",
+  html: wrap(
+    `<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Água Alcalina para Treino: Performance e Recuperação | Acqualive</title>
+<meta name="description" content="Água alcalina pode melhorar a hidratação, o equilíbrio ácido-base e a recuperação muscular. Veja os estudos sobre desempenho esportivo e como aplicar no seu treino.">
+<meta name="keywords" content="água alcalina treino, água alcalina esporte, hidratação esportiva, recuperação muscular, performance, lactato, Acqualive, água ionizada para corrida">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Acqualive">
+<link rel="canonical" href="https://blog.acqualive.com.br/agua-alcalina-treino-performance-esportiva/">
+<meta property="og:title" content="Água alcalina para treino: o que muda na performance e na recuperação">
+<meta property="og:description" content="Estudos mostram melhora na hidratação, no pH urinário e na recuperação com água alcalina. Entenda como aplicar no treino.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/agua-alcalina-esporte.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Água alcalina para treino: o que muda na performance, na recuperação e na hidratação esportiva","description":"Guia completo sobre água alcalina e exercício físico: hidratação, equilíbrio ácido-base, recuperação muscular e os principais estudos publicados.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-06-14","dateModified":"2026-06-14","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/agua-alcalina-esporte.jpg"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Água alcalina melhora o desempenho esportivo?","acceptedAnswer":{"@type":"Answer","text":"Estudos como o de Heil (Journal of the International Society of Sports Nutrition, 2010) mostraram que o consumo regular de água alcalina por atletas melhorou o estado de hidratação e o equilíbrio ácido-base após o exercício, em comparação com água comum."}},
+{"@type":"Question","name":"Quando devo beber água alcalina, antes, durante ou depois do treino?","acceptedAnswer":{"@type":"Answer","text":"O ideal é nas três fases. Beber para chegar bem hidratado, manter o consumo em pequenos goles durante o esforço e usá-la na reposição pós-treino, quando o corpo precisa equilibrar lactato, reidratar e repor minerais."}},
+{"@type":"Question","name":"Água alcalina ajuda na recuperação muscular?","acceptedAnswer":{"@type":"Answer","text":"Sim, indiretamente. Ela apoia o equilíbrio ácido-base, reduz o estresse oxidativo, repõe magnésio (essencial para a função muscular) e melhora a reidratação celular, contribuindo para menos fadiga acumulada."}},
+{"@type":"Question","name":"Atleta amador também se beneficia?","acceptedAnswer":{"@type":"Answer","text":"Sim. Os efeitos sobre hidratação, recuperação e disposição valem para qualquer pessoa fisicamente ativa, não apenas atletas de elite. Quem treina 3 a 5 vezes por semana costuma sentir a diferença em semanas."}}
+]}
+</script>`,
+    `<header class="article-header">
+  <div class="header-inner">
+    <span class="badge">PERFORMANCE</span>
+    <h1>Água alcalina para <span>treino</span>: o que muda na performance, na recuperação e na hidratação esportiva</h1>
+    <p class="header-desc">Por que cada vez mais atletas e treinadores trocaram a garrafa plástica comum por água alcalina mineralizada.</p>
+    <div class="header-meta">
+      <span>Acqualive</span><span>•</span><span>14 jun 2026</span><span>•</span><span>9 min de leitura</span>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/agua-alcalina-esporte.jpg" alt="Atleta mulher bebendo água em copo de vidro após treino ao ar livre, no fim da tarde, com céu azul" width="1280" height="800" loading="eager">
+  </div>
+</header>
+
+<main class="article-body">
+  <p>Quem treina sério aprende cedo que a hidratação é o detalhe que separa um treino bom de um treino quebrado. O que pouca gente repara é que <strong>nem toda água hidrata igual</strong>. A qualidade da água que entra, o pH, os minerais e a capacidade de chegar dentro da célula influenciam tudo: performance, recuperação, fadiga, cãibra, sono pós-treino.</p>
+
+  <p>Não é teoria. O estudo de <a href="https://jissn.biomedcentral.com/articles/10.1186/1550-2783-7-29" target="_blank" rel="noopener">Heil, publicado no Journal of the International Society of Sports Nutrition em 2010</a>, mostrou que atletas que consumiram água alcalina por algumas semanas apresentaram <strong>melhor estado de hidratação</strong> e <strong>equilíbrio ácido-base mais favorável</strong> em comparação com quem bebeu água mineral comum.</p>
+
+  <div class="quote">"O consumo regular de água alcalina mineralizada melhorou marcadores de hidratação e o equilíbrio ácido-base após o exercício, sem efeitos adversos." — Heil DP, JISSN, 2010</div>
+
+  <nav class="toc">
+    <div class="toc-title">Neste artigo</div>
+    <ol>
+      <li><a href="#acido-base">Treino acidifica, água alcalina equilibra</a></li>
+      <li><a href="#hidratacao">Hidratação celular: por que a água certa hidrata mais</a></li>
+      <li><a href="#magnesio">Magnésio: o mineral que segura o seu treino</a></li>
+      <li><a href="#recuperacao">Recuperação: lactato, sono e dor muscular</a></li>
+      <li><a href="#protocolo">Protocolo prático: antes, durante e depois</a></li>
+      <li><a href="#acqualive">Por que muitos atletas escolhem o Acqualive</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="acido-base">Treino acidifica, água alcalina equilibra</h2>
+  <p>Exercício intenso gera ácido lático, eleva CO2 e empurra o corpo para um estado temporariamente mais ácido. O organismo lida com isso usando minerais alcalinos (magnésio, cálcio, potássio, bicarbonato).</p>
+
+  <p>Se a sua hidratação base é uma água com pH baixo, pobre em minerais, o corpo gasta mais para reequilibrar. Uma água levemente alcalina e mineralizada chega já contribuindo para esse equilíbrio, em vez de cobrar.</p>
+
+  <h2 id="hidratacao">Hidratação celular: por que a água certa hidrata mais</h2>
+  <p>Hidratar não é encher o estômago de água. É fazer a água chegar dentro da célula. Para isso, ela precisa ter as características certas: tensão superficial reduzida, minerais biodisponíveis e pH amigável.</p>
+
+  <p>A água alcalina ionizada tende a formar <strong>clusters moleculares menores</strong>, o que facilita o transporte celular. Atletas relatam, com consistência, a sensação de "estar hidratado mais rápido" e de não ter aquele estômago pesado de muita água gelada parada.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-number">+2%</div><div class="stat-label">de desidratação já reduz a performance esportiva</div></div>
+    <div class="stat-card"><div class="stat-number">300+ mg</div><div class="stat-label">de magnésio são necessários por dia para quem treina</div></div>
+    <div class="stat-card"><div class="stat-number">pH ~9</div><div class="stat-label">faixa estudada para apoio no equilíbrio ácido-base esportivo</div></div>
+  </div>
+
+  <h2 id="magnesio">Magnésio: o mineral que segura o seu treino</h2>
+  <p>Magnésio participa de mais de 300 reações enzimáticas, é essencial para contração muscular, produção de ATP, sono profundo e regulação do sistema nervoso. Quem treina e bebe pouco magnésio é exatamente quem mais sofre com cãibra, sono ruim, fadiga acumulada e baixa recuperação.</p>
+
+  <p>Uma água alcalina <a href="https://blog.acqualive.com.br/magnesio-beneficios-saude/" target="_blank">mineralizada com magnésio biodisponível</a> entrega esse mineral todos os dias, em pequenas doses constantes, exatamente do jeito que o corpo absorve melhor.</p>
+
+  <div class="mid-cta">
+    <p>Seu treino merece mais do que água de garrafa esquentada.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Acqualive →</a>
+  </div>
+
+  <h2 id="recuperacao">Recuperação: lactato, sono e dor muscular</h2>
+  <p>Recuperar bem é tão importante quanto treinar bem. Três frentes em que a água alcalina entra:</p>
+
+  <ul class="check-list">
+    <li><strong>Lactato:</strong> estudos como o de <a href="https://pubmed.ncbi.nlm.nih.gov/27773592/" target="_blank" rel="noopener">Chycki et al.</a> mostraram que água alcalina favoreceu o manejo do lactato em atletas após esforço de alta intensidade.</li>
+    <li><strong>Estresse oxidativo:</strong> uma água ionizada com ORP reduzido ajuda a neutralizar radicais livres extras gerados pelo treino.</li>
+    <li><strong>Sono e sistema nervoso:</strong> magnésio biodisponível favorece o sono profundo, fase em que o músculo realmente se recupera.</li>
+  </ul>
+
+  <h2 id="protocolo">Protocolo prático: antes, durante e depois</h2>
+  <p>Não precisa virar ciência de foguete. Funciona assim:</p>
+
+  <ul class="check-list">
+    <li><strong>Antes (1 a 2 horas):</strong> 500 ml de água alcalina, sem pressa, para chegar bem hidratado.</li>
+    <li><strong>Durante:</strong> pequenos goles a cada 15 minutos, especialmente em treinos longos ou em calor.</li>
+    <li><strong>Depois (primeira hora):</strong> 500 a 800 ml em pequenos volumes, repondo líquidos, minerais e equilíbrio ácido-base.</li>
+    <li><strong>Ao longo do dia:</strong> manter o consumo regular, distribuído. A hidratação é diária, não pontual.</li>
+  </ul>
+
+  <div class="danger-box">
+    <h4>Atenção</h4>
+    <p>Atletas com restrição renal grave, condições cardíacas específicas ou em uso de medicamentos contínuos devem alinhar a estratégia de hidratação com seu médico e nutricionista esportivo.</p>
+  </div>
+
+  <h2 id="acqualive">Por que muitos atletas escolhem o Acqualive</h2>
+  <p>O <strong>Purificador Acqualive</strong> resolve três problemas de uma vez para quem treina:</p>
+
+  <ul class="check-list">
+    <li><strong>Acaba com a garrafa plástica</strong> esquentando no carro, fonte conhecida de microplásticos.</li>
+    <li><strong>Entrega magnésio biodisponível</strong> e pH alcalino todos os dias, em casa.</li>
+    <li><strong>Não exige eletricidade nem manutenção complexa.</strong> Coloca a água, ela sai pronta.</li>
+  </ul>
+
+  <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-torneira-detalhe.jpg" alt="Detalhe da torneira do Purificador Acqualive servindo água alcalina ionizada para garrafa esportiva" class="article-img" loading="lazy" width="1200" height="800">
+
+  <div class="info-box">
+    <h4>Para quem é</h4>
+    <p>Para quem corre, pedala, treina força, faz crossfit, luta, dança ou simplesmente se movimenta sério. A diferença aparece em semanas: menos fadiga, melhor recuperação, mais constância nos treinos.</p>
+  </div>
+
+  <div class="cta-section">
+    <h2>Trate sua água como parte do <span>seu treino</span></h2>
+    <p>Pare de comprar garrafa, pare de beber cloro, comece a repor magnésio todos os dias. Em até 10x sem juros e frete grátis. Consulte regiões disponíveis.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Conhecer o Acqualive →</a>
+  </div>
+
+  <div class="related-links">
+    <h4>Continue lendo</h4>
+    <ul>
+      <li><a href="https://blog.acqualive.com.br/magnesio-beneficios-saude/" target="_blank">Magnésio: o mineral esquecido que sustenta sua saúde</a></li>
+      <li><a href="https://blog.acqualive.com.br/agua-anti-inflamatoria/" target="_blank">Água anti-inflamatória: desligando a inflamação silenciosa</a></li>
+      <li><a href="https://blog.acqualive.com.br/agua-hidrogenada-hidrogenio-molecular/" target="_blank">Água hidrogenada: o que diz a ciência sobre o H2</a></li>
+    </ul>
+  </div>
+</main>`
+  )
+};
+
+export const EXTRA_ARTICLES = [article6, article7, article8, article9, article10, article11, article12, article13, article14, article15, article16, article17, article18, article19, article20];
