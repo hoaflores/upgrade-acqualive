@@ -22,7 +22,8 @@ import quemSomosAsset from "@/assets/quem-somos.jpg.asset.json";
 import appImg from "@/assets/app-mockup.jpg";
 import logoWhite from "@/assets/acqualive-logo-white.png.asset.json";
 import motherPregnantImg from "@/assets/mother-pregnant.jpg";
-import motherBabyKitchenImg from "@/assets/mother-baby-kitchen.jpg";
+import motherBabyKitchenAsset from "@/assets/mother-baby-kitchen-v2.jpg.asset.json";
+const motherBabyKitchenImg = motherBabyKitchenAsset.url;
 import familyHomeImg from "@/assets/family-home.jpg";
 
 const productImg = productAsset.url;
