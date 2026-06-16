@@ -638,20 +638,20 @@ function ProductFeature() {
           </p>
         </Reveal>
 
-        <div className="relative mx-auto mt-20 max-w-3xl">
+        <div className="relative mx-auto mt-20 w-full max-w-md md:max-w-lg">
           <div className="absolute inset-0 -z-10 rounded-full bg-[radial-gradient(circle,oklch(0.65_0.18_200/0.4),transparent_65%)] blur-3xl" />
           <motion.img
             src={productImg}
             alt="Purificador Acqualive em destaque"
-            width={1024}
-            height={1024}
+            width={1440}
+            height={1920}
             loading="lazy"
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
             animate={{ y: [0, -10, 0] }}
-            className="mx-auto w-full rounded-3xl"
+            className="mx-auto block w-full rounded-3xl object-cover aspect-[3/4]"
           />
 
           {productPoints.map((p, i) => (
