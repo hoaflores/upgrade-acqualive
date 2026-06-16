@@ -611,12 +611,12 @@ function RoutineBenefits() {
 /* ---------- Product feature ---------- */
 
 const productPoints = [
-  { label: "Água alcalina e ionizada", pos: "top-[8%] left-[2%]" },
-  { label: "Reduz cloro e impurezas", pos: "top-[28%] right-[2%]" },
-  { label: "Mais praticidade no dia a dia", pos: "top-[55%] left-[1%]" },
-  { label: "Menos garrafas plásticas", pos: "top-[68%] right-[2%]" },
-  { label: "Hidratação mais agradável", pos: "bottom-[8%] left-[5%]" },
-  { label: "Cuidado para mãe, bebê e família", pos: "bottom-[2%] right-[5%]" },
+  { label: "Água alcalina e ionizada", pos: "top-[10%] left-[-6%]" },
+  { label: "Reduz cloro e impurezas", pos: "top-[14%] right-[-2%]" },
+  { label: "Mais praticidade no dia a dia", pos: "top-[44%] right-[-6%]" },
+  { label: "Menos garrafas plásticas", pos: "top-[68%] right-[-2%]" },
+  { label: "Hidratação mais agradável", pos: "bottom-[10%] left-[-6%]" },
+  { label: "Cuidado para mãe, bebê e família", pos: "bottom-[4%] right-[6%]" },
 ];
 
 function ProductFeature() {
