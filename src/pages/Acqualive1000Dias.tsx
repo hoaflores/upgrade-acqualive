@@ -612,12 +612,12 @@ function RoutineBenefits() {
 /* ---------- Product feature ---------- */
 
 const productPoints = [
-  { label: "Água alcalina e ionizada", pos: "top-[10%] left-[-6%]" },
-  { label: "Reduz cloro e impurezas", pos: "top-[14%] right-[-2%]" },
-  { label: "Mais praticidade no dia a dia", pos: "top-[44%] right-[-6%]" },
-  { label: "Menos garrafas plásticas", pos: "top-[68%] right-[-2%]" },
-  { label: "Hidratação mais agradável", pos: "bottom-[10%] left-[-6%]" },
-  { label: "Cuidado para mãe, bebê e família", pos: "bottom-[4%] right-[6%]" },
+  { label: "Água alcalina e ionizada", icon: Droplets, pos: "top-[8%] left-[58%]" },
+  { label: "Reduz cloro e impurezas", icon: ShieldCheck, pos: "top-[26%] left-[68%]" },
+  { label: "Mais praticidade no dia a dia", icon: Sparkles, pos: "top-[46%] left-[72%]" },
+  { label: "Menos garrafas plásticas", icon: Leaf, pos: "top-[64%] left-[68%]" },
+  { label: "Hidratação mais agradável", icon: Heart, pos: "top-[80%] left-[58%]" },
+  { label: "Cuidado para mãe, bebê e família", icon: Baby, pos: "top-[92%] left-[42%]" },
 ];
 
 function ProductFeature() {
@@ -639,45 +639,65 @@ function ProductFeature() {
           </p>
         </Reveal>
 
-        <div className="relative mx-auto mt-20 w-full max-w-md md:max-w-lg">
-          <div className="absolute inset-0 -z-10 rounded-full bg-[radial-gradient(circle,oklch(0.65_0.18_200/0.4),transparent_65%)] blur-3xl" />
-          <motion.img
-            src={productImg}
-            alt="Purificador Acqualive em destaque"
-            width={1440}
-            height={1920}
-            loading="lazy"
-            initial={{ scale: 0.9, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-            animate={{ y: [0, -10, 0] }}
-            className="mx-auto block w-full rounded-3xl object-cover aspect-[3/4]"
-          />
+        <div className="relative mx-auto mt-20 w-full max-w-3xl md:max-w-4xl">
+          <div className="absolute inset-0 -z-10 rounded-full bg-[radial-gradient(circle,oklch(0.65_0.18_200/0.35),transparent_65%)] blur-3xl" />
 
-          {productPoints.map((p, i) => (
-            <motion.div
-              key={p.label}
-              initial={{ opacity: 0, scale: 0.7 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 + i * 0.15, duration: 0.6 }}
-              className={`absolute ${p.pos} hidden md:flex items-center gap-2 rounded-full glass-card px-4 py-2 text-xs text-white/85`}
-            >
-              <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--color-aqua-glow)] shimmer" />
-              {p.label}
-            </motion.div>
-          ))}
+          <div className="relative grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+            {/* Image column */}
+            <div className="relative mx-auto w-full max-w-sm md:max-w-md">
+              <motion.img
+                src={productImg}
+                alt="Purificador Acqualive em destaque"
+                width={1440}
+                height={1920}
+                loading="lazy"
+                initial={{ scale: 0.9, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                animate={{ y: [0, -10, 0] }}
+                className="mx-auto block w-full rounded-3xl object-cover aspect-[3/4]"
+              />
+            </div>
+
+            {/* Benefits column with visual cards */}
+            <div className="hidden md:flex flex-col gap-3 text-left">
+              {productPoints.map((p, i) => {
+                const Icon = p.icon;
+                return (
+                  <motion.div
+                    key={p.label}
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 + i * 0.1, duration: 0.6 }}
+                    className="group flex items-center gap-4 rounded-2xl glass-card px-5 py-4 transition-all hover:scale-[1.02] hover:bg-white/10"
+                  >
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[color:var(--color-aqua-bright)]/30 to-[color:var(--color-aqua-glow)]/20 ring-1 ring-[color:var(--color-aqua-glow)]/40">
+                      <Icon className="h-5 w-5 text-[color:var(--color-aqua-glow)]" />
+                    </div>
+                    <span className="text-sm font-medium text-white/90">{p.label}</span>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
         </div>
 
         <div className="mt-12 grid gap-3 sm:grid-cols-2 md:hidden">
-          {productPoints.map((p) => (
-            <div key={p.label} className="flex items-center gap-3 rounded-2xl glass-card px-4 py-3 text-left text-sm text-white/85">
-              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[color:var(--color-aqua-glow)]" />
-              {p.label}
-            </div>
-          ))}
+          {productPoints.map((p) => {
+            const Icon = p.icon;
+            return (
+              <div key={p.label} className="flex items-center gap-3 rounded-2xl glass-card px-4 py-3 text-left text-sm text-white/85">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[color:var(--color-aqua-glow)]/15 ring-1 ring-[color:var(--color-aqua-glow)]/30">
+                  <Icon className="h-4 w-4 text-[color:var(--color-aqua-glow)]" />
+                </div>
+                {p.label}
+              </div>
+            );
+          })}
         </div>
+
 
         <Reveal delay={0.3}>
           <a
