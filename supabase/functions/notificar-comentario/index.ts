@@ -54,6 +54,15 @@ async function sendGmail(to: string, subject: string, html: string) {
   if (!resp.ok) console.error("Gmail send failed", resp.status, await resp.text());
 }
 
+function escapeHtml(str: unknown): string {
+  return String(str ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 function htmlEmail(d: any, autor: string, texto: string) {
   const primeiroNome = (d.solicitante || "").split(" ")[0] || "";
   return `
@@ -61,15 +70,15 @@ function htmlEmail(d: any, autor: string, texto: string) {
     <div style="background:#ffffff;border-radius:12px;padding:28px;border:1px solid #e5e7eb">
       <div style="background:linear-gradient(135deg,#0a3d62,#1e6091);color:#fff;padding:18px 20px;border-radius:8px;margin-bottom:20px">
         <div style="font-size:12px;letter-spacing:1px;opacity:.8">NOVO COMENTÁRIO</div>
-        <div style="font-size:24px;font-weight:700">${d.protocolo}</div>
+        <div style="font-size:24px;font-weight:700">${escapeHtml(d.protocolo)}</div>
       </div>
-      <p style="color:#333;margin:0 0 16px">Olá ${primeiroNome}, o time deixou um novo comentário na sua demanda.</p>
-      <h3 style="color:#0a3d62;margin:0 0 12px">${d.titulo}</h3>
+      <p style="color:#333;margin:0 0 16px">Olá ${escapeHtml(primeiroNome)}, o time deixou um novo comentário na sua demanda.</p>
+      <h3 style="color:#0a3d62;margin:0 0 12px">${escapeHtml(d.titulo)}</h3>
       <div style="background:#f9fafb;border-left:4px solid #0a3d62;padding:14px 16px;border-radius:6px;margin:16px 0">
-        <div style="font-size:12px;color:#64748b;margin-bottom:6px"><strong>${autor}</strong> escreveu:</div>
-        <div style="color:#1f2937;white-space:pre-wrap">${texto.replace(/</g, "&lt;")}</div>
+        <div style="font-size:12px;color:#64748b;margin-bottom:6px"><strong>${escapeHtml(autor)}</strong> escreveu:</div>
+        <div style="color:#1f2937;white-space:pre-wrap">${escapeHtml(texto)}</div>
       </div>
-      <p style="margin-top:24px;color:#666;font-size:13px">Acompanhe sua demanda informando o protocolo <strong>${d.protocolo}</strong> em nosso painel.</p>
+      <p style="margin-top:24px;color:#666;font-size:13px">Acompanhe sua demanda informando o protocolo <strong>${escapeHtml(d.protocolo)}</strong> em nosso painel.</p>
     </div>
   </div>`;
 }
