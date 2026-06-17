@@ -44,6 +44,25 @@ function b64url(str: string): string {
   return btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 }
 
+function escapeHtml(str: unknown): string {
+  return String(str ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function escapeAttr(str: unknown): string {
+  return escapeHtml(str);
+}
+
+function safeUrl(u: unknown): string {
+  const s = String(u ?? "").trim();
+  if (/^https?:\/\//i.test(s)) return escapeAttr(s);
+  return "#";
+}
+
 function buildEmailRaw(to: string[], subject: string, html: string, fromName = "Demandas Acqualive") {
   const boundary = "BOUNDARY_" + Math.random().toString(36).slice(2);
   const headers = [
@@ -110,7 +129,7 @@ async function appendToSheet(row: (string | number)[]) {
 function emailHtml(d: any, anexosUrls: string[]) {
   const anexosHtml = anexosUrls.length
     ? `<p style="margin:12px 0 4px"><strong>Anexos:</strong></p><ul>${anexosUrls
-        .map((u) => `<li><a href="${u}">${u.split("/").pop()}</a></li>`)
+        .map((u) => `<li><a href="${safeUrl(u)}">${escapeHtml(String(u).split("/").pop() || "")}</a></li>`)
         .join("")}</ul>`
     : "";
   return `
@@ -118,21 +137,39 @@ function emailHtml(d: any, anexosUrls: string[]) {
     <div style="background:#ffffff;border-radius:12px;padding:28px;border:1px solid #e5e7eb">
       <div style="background:linear-gradient(135deg,#0a3d62,#1e6091);color:#fff;padding:18px 20px;border-radius:8px;margin-bottom:20px">
         <div style="font-size:12px;letter-spacing:1px;opacity:.8">PROTOCOLO</div>
-        <div style="font-size:24px;font-weight:700">${d.protocolo}</div>
+        <div style="font-size:24px;font-weight:700">${escapeHtml(d.protocolo)}</div>
       </div>
-      <h2 style="margin:0 0 8px;color:#0a3d62">${d.titulo}</h2>
-      <p style="color:#555;margin:0 0 16px"><strong>Tipo:</strong> ${d.tipo_label || TIPO_LABEL[d.tipo] || d.tipo} • <strong>Frequência:</strong> ${d.frequencia === "recorrente" ? "Recorrente" : "Individual"} • <strong>Prioridade:</strong> ${d.prioridade.toUpperCase()}</p>
+      <h2 style="margin:0 0 8px;color:#0a3d62">${escapeHtml(d.titulo)}</h2>
+      <p style="color:#555;margin:0 0 16px"><strong>Tipo:</strong> ${escapeHtml(d.tipo_label || TIPO_LABEL[d.tipo] || d.tipo)} • <strong>Frequência:</strong> ${d.frequencia === "recorrente" ? "Recorrente" : "Individual"} • <strong>Prioridade:</strong> ${escapeHtml(String(d.prioridade).toUpperCase())}</p>
       <table style="width:100%;border-collapse:collapse;margin:12px 0">
-        <tr><td style="padding:8px;background:#f9fafb;border:1px solid #e5e7eb;width:40%"><strong>Solicitante</strong></td><td style="padding:8px;border:1px solid #e5e7eb">${d.solicitante}</td></tr>
-        <tr><td style="padding:8px;background:#f9fafb;border:1px solid #e5e7eb"><strong>Email</strong></td><td style="padding:8px;border:1px solid #e5e7eb">${d.solicitante_email}</td></tr>
-        <tr><td style="padding:8px;background:#f9fafb;border:1px solid #e5e7eb"><strong>Prazo esperado</strong></td><td style="padding:8px;border:1px solid #e5e7eb">${d.prazo_esperado}</td></tr>
-        <tr><td style="padding:8px;background:#f9fafb;border:1px solid #e5e7eb"><strong>Estimativa interna</strong></td><td style="padding:8px;border:1px solid #e5e7eb">${d.prazo_estimado_dias} dias úteis</td></tr>
+        <tr><td style="padding:8px;background:#f9fafb;border:1px solid #e5e7eb;width:40%"><strong>Solicitante</strong></td><td style="padding:8px;border:1px solid #e5e7eb">${escapeHtml(d.solicitante)}</td></tr>
+        <tr><td style="padding:8px;background:#f9fafb;border:1px solid #e5e7eb"><strong>Email</strong></td><td style="padding:8px;border:1px solid #e5e7eb">${escapeHtml(d.solicitante_email)}</td></tr>
+        <tr><td style="padding:8px;background:#f9fafb;border:1px solid #e5e7eb"><strong>Prazo esperado</strong></td><td style="padding:8px;border:1px solid #e5e7eb">${escapeHtml(d.prazo_esperado)}</td></tr>
+        <tr><td style="padding:8px;background:#f9fafb;border:1px solid #e5e7eb"><strong>Estimativa interna</strong></td><td style="padding:8px;border:1px solid #e5e7eb">${escapeHtml(d.prazo_estimado_dias)} dias úteis</td></tr>
       </table>
       <p style="margin:16px 0 4px"><strong>Briefing:</strong></p>
-      <div style="background:#f9fafb;padding:14px;border-radius:8px;border:1px solid #e5e7eb;white-space:pre-wrap;color:#333">${d.briefing}</div>
-      ${d.links_referencia ? `<p style="margin:16px 0 4px"><strong>Links de referência:</strong></p><div style="background:#f9fafb;padding:14px;border-radius:8px;border:1px solid #e5e7eb;white-space:pre-wrap;color:#333">${d.links_referencia}</div>` : ""}
+      <div style="background:#f9fafb;padding:14px;border-radius:8px;border:1px solid #e5e7eb;white-space:pre-wrap;color:#333">${escapeHtml(d.briefing)}</div>
+      ${d.links_referencia ? `<p style="margin:16px 0 4px"><strong>Links de referência:</strong></p><div style="background:#f9fafb;padding:14px;border-radius:8px;border:1px solid #e5e7eb;white-space:pre-wrap;color:#333">${escapeHtml(d.links_referencia)}</div>` : ""}
       ${anexosHtml}
       <p style="margin-top:24px;color:#666;font-size:13px">Acesse o painel de demandas para acompanhar e responder.</p>
+    </div>
+  </div>`;
+}
+
+function confirmEmailHtml(d: any) {
+  return `
+  <div style="font-family:Arial,sans-serif;max-width:640px;margin:0 auto;padding:24px;background:#f6f7f9">
+    <div style="background:#ffffff;border-radius:12px;padding:28px;border:1px solid #e5e7eb">
+      <div style="background:linear-gradient(135deg,#0a3d62,#1e6091);color:#fff;padding:18px 20px;border-radius:8px;margin-bottom:20px">
+        <div style="font-size:12px;letter-spacing:1px;opacity:.8">DEMANDA RECEBIDA</div>
+        <div style="font-size:24px;font-weight:700">${escapeHtml(d.protocolo)}</div>
+      </div>
+      <p style="color:#333">Olá ${escapeHtml(String(d.solicitante).split(" ")[0])}, recebemos sua solicitação. O time de marketing já foi notificado.</p>
+      <h3 style="color:#0a3d62;margin:20px 0 8px">${escapeHtml(d.titulo)}</h3>
+      <p style="color:#555;margin:0 0 12px"><strong>Tipo:</strong> ${escapeHtml(d.tipo_label || TIPO_LABEL[d.tipo] || d.tipo)} • <strong>Frequência:</strong> ${d.frequencia === "recorrente" ? "Recorrente" : "Individual"}</p>
+      <p style="color:#555;margin:0 0 12px"><strong>Estimativa interna:</strong> ${escapeHtml(d.prazo_estimado_dias)} dias úteis</p>
+      <p style="color:#555;margin:0 0 12px"><strong>Prazo esperado por você:</strong> ${escapeHtml(d.prazo_esperado)}</p>
+      <p style="margin-top:24px;color:#666;font-size:13px">Guarde este protocolo para acompanhamento: <strong>${escapeHtml(d.protocolo)}</strong></p>
     </div>
   </div>`;
 }

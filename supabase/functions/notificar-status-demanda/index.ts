@@ -80,6 +80,15 @@ async function sendGmail(to: string, subject: string, html: string) {
   }
 }
 
+function escapeHtml(str: unknown): string {
+  return String(str ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 function htmlEmail(d: any, statusNovo: string, statusAnterior: string | null, observacao: string | null) {
   const labelNovo = STATUS_LABEL[statusNovo] || statusNovo;
   const labelAntigo = statusAnterior ? (STATUS_LABEL[statusAnterior] || statusAnterior) : "";
@@ -92,30 +101,30 @@ function htmlEmail(d: any, statusNovo: string, statusAnterior: string | null, ob
     <div style="background:#ffffff;border-radius:12px;padding:28px;border:1px solid #e5e7eb">
       <div style="background:linear-gradient(135deg,#0a3d62,#1e6091);color:#fff;padding:18px 20px;border-radius:8px;margin-bottom:20px">
         <div style="font-size:12px;letter-spacing:1px;opacity:.8">ATUALIZAÇÃO DE STATUS</div>
-        <div style="font-size:24px;font-weight:700">${d.protocolo}</div>
+        <div style="font-size:24px;font-weight:700">${escapeHtml(d.protocolo)}</div>
       </div>
 
-      <p style="color:#333;margin:0 0 16px">Olá ${primeiroNome}, sua demanda teve uma atualização de status.</p>
+      <p style="color:#333;margin:0 0 16px">Olá ${escapeHtml(primeiroNome)}, sua demanda teve uma atualização de status.</p>
 
-      <h3 style="color:#0a3d62;margin:0 0 12px">${d.titulo}</h3>
+      <h3 style="color:#0a3d62;margin:0 0 12px">${escapeHtml(d.titulo)}</h3>
 
       <div style="text-align:center;margin:24px 0">
-        ${labelAntigo ? `<span style="display:inline-block;padding:8px 14px;background:#f1f5f9;color:#64748b;border-radius:999px;font-weight:600;font-size:13px">${labelAntigo}</span>
+        ${labelAntigo ? `<span style="display:inline-block;padding:8px 14px;background:#f1f5f9;color:#64748b;border-radius:999px;font-weight:600;font-size:13px">${escapeHtml(labelAntigo)}</span>
         <span style="margin:0 10px;color:#94a3b8;font-size:18px">→</span>` : ""}
-        <span style="display:inline-block;padding:10px 18px;background:${cor};color:#fff;border-radius:999px;font-weight:700;font-size:14px">${labelNovo}</span>
+        <span style="display:inline-block;padding:10px 18px;background:${cor};color:#fff;border-radius:999px;font-weight:700;font-size:14px">${escapeHtml(labelNovo)}</span>
       </div>
 
-      <p style="color:#475569;background:#f9fafb;padding:14px 16px;border-radius:8px;border-left:4px solid ${cor};margin:0 0 18px">${desc}</p>
+      <p style="color:#475569;background:#f9fafb;padding:14px 16px;border-radius:8px;border-left:4px solid ${cor};margin:0 0 18px">${escapeHtml(desc)}</p>
 
-      ${observacao ? `<p style="margin:16px 0 4px"><strong>Observação do time:</strong></p><div style="background:#fffbeb;border:1px solid #fde68a;padding:14px;border-radius:8px;color:#78350f;white-space:pre-wrap">${observacao}</div>` : ""}
+      ${observacao ? `<p style="margin:16px 0 4px"><strong>Observação do time:</strong></p><div style="background:#fffbeb;border:1px solid #fde68a;padding:14px;border-radius:8px;color:#78350f;white-space:pre-wrap">${escapeHtml(observacao)}</div>` : ""}
 
       <table style="width:100%;border-collapse:collapse;margin:18px 0">
-        <tr><td style="padding:8px;background:#f9fafb;border:1px solid #e5e7eb;width:40%"><strong>Tipo</strong></td><td style="padding:8px;border:1px solid #e5e7eb">${d.tipo}</td></tr>
-        <tr><td style="padding:8px;background:#f9fafb;border:1px solid #e5e7eb"><strong>Prazo esperado</strong></td><td style="padding:8px;border:1px solid #e5e7eb">${d.prazo_esperado}</td></tr>
-        ${d.responsavel ? `<tr><td style="padding:8px;background:#f9fafb;border:1px solid #e5e7eb"><strong>Responsável</strong></td><td style="padding:8px;border:1px solid #e5e7eb">${d.responsavel}</td></tr>` : ""}
+        <tr><td style="padding:8px;background:#f9fafb;border:1px solid #e5e7eb;width:40%"><strong>Tipo</strong></td><td style="padding:8px;border:1px solid #e5e7eb">${escapeHtml(d.tipo)}</td></tr>
+        <tr><td style="padding:8px;background:#f9fafb;border:1px solid #e5e7eb"><strong>Prazo esperado</strong></td><td style="padding:8px;border:1px solid #e5e7eb">${escapeHtml(d.prazo_esperado)}</td></tr>
+        ${d.responsavel ? `<tr><td style="padding:8px;background:#f9fafb;border:1px solid #e5e7eb"><strong>Responsável</strong></td><td style="padding:8px;border:1px solid #e5e7eb">${escapeHtml(d.responsavel)}</td></tr>` : ""}
       </table>
 
-      <p style="margin-top:24px;color:#666;font-size:13px">Acompanhe sua demanda informando o protocolo <strong>${d.protocolo}</strong> em nosso painel.</p>
+      <p style="margin-top:24px;color:#666;font-size:13px">Acompanhe sua demanda informando o protocolo <strong>${escapeHtml(d.protocolo)}</strong> em nosso painel.</p>
     </div>
   </div>`;
 }
