@@ -16,7 +16,12 @@ import {
   Menu,
   X,
   Home as HomeIcon,
+  Check,
+  Minus,
+  Crown,
 } from "lucide-react";
+
+const SITE_URL = "https://www.acqualive.com.br";
 import productAsset from "@/assets/acqualive-real.jpg.asset.json";
 import quemSomosAsset from "@/assets/quem-somos.jpg.asset.json";
 import appImg from "@/assets/app-mockup.jpg";
@@ -99,10 +104,12 @@ function Header() {
         </div>
 
         <a
-          href="#produto"
+          href={SITE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden md:inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-[color:var(--color-aqua-night)] transition-transform hover:scale-[1.03] btn-glow"
         >
-          Ver produtos no app <ArrowRight className="h-4 w-4" />
+          Conhecer no site Acqualive <ArrowRight className="h-4 w-4" />
         </a>
 
         <button
@@ -128,11 +135,13 @@ function Header() {
               </a>
             ))}
             <a
-              href="#produto"
+              href={SITE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-[color:var(--color-aqua-night)]"
             >
-              Ver produtos no app <ArrowRight className="h-4 w-4" />
+              Conhecer no site Acqualive <ArrowRight className="h-4 w-4" />
             </a>
           </div>
         </div>
@@ -213,7 +222,9 @@ function Hero() {
             className="mt-10 flex flex-col gap-3 sm:flex-row"
           >
             <a
-              href="#produto"
+              href={SITE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[color:var(--color-aqua-bright)] to-[color:var(--color-aqua-glow)] px-7 py-4 text-sm font-semibold text-[color:var(--color-aqua-night)] transition-transform hover:scale-[1.03] btn-glow"
             >
               Conhecer os purificadores Acqualive
@@ -701,10 +712,12 @@ function ProductFeature() {
 
         <Reveal delay={0.3}>
           <a
-            href="#cta"
+            href={SITE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-14 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[color:var(--color-aqua-bright)] to-[color:var(--color-aqua-glow)] px-8 py-4 text-sm font-semibold text-[color:var(--color-aqua-night)] transition-transform hover:scale-[1.03] btn-glow"
           >
-            Ver filtros Acqualive no app <ArrowRight className="h-4 w-4" />
+            Conhecer os purificadores no site Acqualive <ArrowRight className="h-4 w-4" />
           </a>
         </Reveal>
       </div>
@@ -712,7 +725,139 @@ function ProductFeature() {
   );
 }
 
+/* ---------- Comparison ---------- */
+
+const comparisonRows: { feature: string; tap: "no" | "partial" | "yes"; common: "no" | "partial" | "yes"; acqualive: "no" | "partial" | "yes" }[] = [
+  { feature: "Reduz cloro, sabor e odor", tap: "no", common: "partial", acqualive: "yes" },
+  { feature: "Reduz metais pesados e microplásticos", tap: "no", common: "no", acqualive: "yes" },
+  { feature: "Água alcalina (pH equilibrado)", tap: "no", common: "no", acqualive: "yes" },
+  { feature: "Água ionizada com antioxidantes", tap: "no", common: "no", acqualive: "yes" },
+  { feature: "Mantém minerais essenciais", tap: "partial", common: "no", acqualive: "yes" },
+  { feature: "Hidratação mais leve e agradável", tap: "no", common: "partial", acqualive: "yes" },
+  { feature: "Indicada para gestantes, bebês e crianças", tap: "no", common: "partial", acqualive: "yes" },
+  { feature: "Reduz uso de garrafas plásticas", tap: "no", common: "partial", acqualive: "yes" },
+];
+
+function Cell({ v }: { v: "no" | "partial" | "yes" }) {
+  if (v === "yes")
+    return (
+      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[color:var(--color-aqua-glow)]/20 ring-1 ring-[color:var(--color-aqua-glow)]/50">
+        <Check className="h-4 w-4 text-[color:var(--color-aqua-glow)]" />
+      </span>
+    );
+  if (v === "partial")
+    return (
+      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/20">
+        <Minus className="h-4 w-4 text-white/60" />
+      </span>
+    );
+  return (
+    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 ring-1 ring-white/10">
+      <X className="h-4 w-4 text-white/40" />
+    </span>
+  );
+}
+
+function ComparisonSection() {
+  return (
+    <section id="comparativo" className="relative overflow-hidden py-32 md:py-40">
+      <AquaBackdrop />
+      <div className="relative mx-auto max-w-7xl px-6">
+        <div className="text-center">
+          <Reveal>
+            <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--color-aqua-glow)]">Comparativo</p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <h2 className="mx-auto mt-5 max-w-4xl font-display text-4xl font-medium leading-tight tracking-tight md:text-6xl">
+              Por que Acqualive vai <span className="text-aqua-gradient">muito além</span> de um purificador comum
+            </h2>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-white/70">
+              Purificadores comuns só retiram o que está visível. A Acqualive cuida da água em profundidade, deixando ela mais pura, viva e adequada para a sua família.
+            </p>
+          </Reveal>
+        </div>
+
+        {/* Desktop table */}
+        <Reveal delay={0.25}>
+          <div className="mt-16 hidden overflow-hidden rounded-3xl border border-white/10 glass-card md:block">
+            <div className="grid grid-cols-[1.5fr_1fr_1fr_1.1fr] items-center gap-4 border-b border-white/10 px-6 py-5 text-left">
+              <div className="text-xs uppercase tracking-[0.2em] text-white/40">Característica</div>
+              <div className="text-center text-xs uppercase tracking-[0.2em] text-white/40">Água da torneira</div>
+              <div className="text-center text-xs uppercase tracking-[0.2em] text-white/40">Purificador comum</div>
+              <div className="flex items-center justify-center gap-2 text-center text-xs uppercase tracking-[0.2em] text-[color:var(--color-aqua-glow)]">
+                <Crown className="h-3.5 w-3.5" /> Acqualive
+              </div>
+            </div>
+            {comparisonRows.map((r, i) => (
+              <div
+                key={r.feature}
+                className={`grid grid-cols-[1.5fr_1fr_1fr_1.1fr] items-center gap-4 px-6 py-5 ${
+                  i % 2 === 0 ? "bg-white/[0.02]" : ""
+                }`}
+              >
+                <div className="text-sm text-white/85">{r.feature}</div>
+                <div className="flex justify-center"><Cell v={r.tap} /></div>
+                <div className="flex justify-center"><Cell v={r.common} /></div>
+                <div className="flex justify-center"><Cell v={r.acqualive} /></div>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        {/* Mobile cards */}
+        <div className="mt-12 grid gap-5 md:hidden">
+          {[
+            { title: "Água da torneira", subtitle: "Sem tratamento adicional", key: "tap" as const, accent: "from-white/10 to-white/5" },
+            { title: "Purificador comum", subtitle: "Filtragem básica", key: "common" as const, accent: "from-white/10 to-white/5" },
+            { title: "Acqualive", subtitle: "Pura, alcalina e ionizada", key: "acqualive" as const, accent: "from-[color:var(--color-aqua-bright)]/20 to-[color:var(--color-aqua-glow)]/10", featured: true },
+          ].map((col) => (
+            <div
+              key={col.title}
+              className={`rounded-2xl border ${col.featured ? "border-[color:var(--color-aqua-glow)]/40" : "border-white/10"} bg-gradient-to-br ${col.accent} p-5 backdrop-blur`}
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="font-display text-lg text-white">{col.title}</p>
+                  <p className="text-xs text-white/60">{col.subtitle}</p>
+                </div>
+                {col.featured && <Crown className="h-5 w-5 text-[color:var(--color-aqua-glow)]" />}
+              </div>
+              <ul className="mt-4 space-y-3">
+                {comparisonRows.map((r) => (
+                  <li key={r.feature} className="flex items-center justify-between gap-3 text-sm text-white/85">
+                    <span className="flex-1">{r.feature}</span>
+                    <Cell v={r[col.key]} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <Reveal delay={0.35}>
+          <div className="mt-14 flex flex-col items-center gap-4 text-center">
+            <p className="max-w-2xl text-base text-white/70">
+              Não é só sobre filtrar a água. É sobre oferecer a melhor água possível para quem você ama.
+            </p>
+            <a
+              href={SITE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[color:var(--color-aqua-bright)] to-[color:var(--color-aqua-glow)] px-8 py-4 text-sm font-semibold text-[color:var(--color-aqua-night)] transition-transform hover:scale-[1.03] btn-glow"
+            >
+              Conhecer os purificadores no site Acqualive <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
 /* ---------- Mothers choice ---------- */
+
 
 function MothersChoiceSection() {
   return (
@@ -742,10 +887,12 @@ function MothersChoiceSection() {
         </Reveal>
         <Reveal delay={0.5}>
           <a
-            href="#produto"
+            href={SITE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-14 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-7 py-4 text-sm font-medium text-white backdrop-blur transition-colors hover:bg-white/10"
           >
-            Ver filtros Acqualive no app <ArrowRight className="h-4 w-4" />
+            Conhecer no site Acqualive <ArrowRight className="h-4 w-4" />
           </a>
         </Reveal>
       </div>
@@ -872,7 +1019,9 @@ function FinalCTA() {
         <Reveal delay={0.6}>
           <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
-              href="#produto"
+              href={SITE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[color:var(--color-aqua-bright)] to-[color:var(--color-aqua-glow)] px-8 py-4 text-sm font-semibold text-[color:var(--color-aqua-night)] transition-transform hover:scale-[1.03] btn-glow"
             >
               Conhecer produtos Acqualive <ArrowRight className="h-4 w-4" />
@@ -881,7 +1030,7 @@ function FinalCTA() {
               href="#parceria"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-medium text-white backdrop-blur transition-colors hover:bg-white/10"
             >
-              Ver no marketplace 1000 Dias
+              Entender a parceria
             </a>
           </div>
         </Reveal>
@@ -910,8 +1059,8 @@ function Footer() {
           <ul className="space-y-2 text-sm text-white/75">
             <li><a href="#top" className="hover:text-white">Acqualive</a></li>
             <li><a href="#parceria" className="hover:text-white">1000 Dias</a></li>
-            <li><a href="#produto" className="hover:text-white">Produtos</a></li>
-            <li><a href="#cta" className="hover:text-white">Marketplace</a></li>
+            <li><a href="#comparativo" className="hover:text-white">Comparativo</a></li>
+            <li><a href={SITE_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white">Site oficial</a></li>
           </ul>
         </div>
         <div>
@@ -956,6 +1105,7 @@ export default function Acqualive1000Dias() {
         <Timeline1000Dias />
         <RoutineBenefits />
         <ProductFeature />
+        <ComparisonSection />
         <MothersChoiceSection />
         <PartnershipSection />
         <FinalCTA />
