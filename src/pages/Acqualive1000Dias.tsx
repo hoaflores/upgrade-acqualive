@@ -1105,6 +1105,7 @@ export default function Acqualive1000Dias() {
         <Timeline1000Dias />
         <RoutineBenefits />
         <ProductFeature />
+        <ComparisonSection />
         <MothersChoiceSection />
         <PartnershipSection />
         <FinalCTA />
