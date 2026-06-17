@@ -44,23 +44,22 @@ const DayanBenefits = () => {
               <span className="dayan-num text-2xl text-[hsl(var(--ds-blue-deep))] not-italic">
                 05
               </span>
-              O que muda na sua vida
+              O que muda na sua rotina
             </span>
             <h2 className="ds-display mt-5 text-4xl lg:text-6xl text-[hsl(var(--ds-ink))] leading-tight">
-              Não é sobre beber água.
+              Não é só beber água.
               <br />
-              É sobre{" "}
+              É ter uma{" "}
               <span className="ds-italic font-medium text-[hsl(var(--ds-blue-deep))]">
-                acordar diferente
+                fonte melhor
               </span>
               <br />
-              em 30 dias.
+              dentro de casa.
             </h2>
           </div>
           <div className="lg:col-span-5 dayan-reveal dayan-reveal-delay-1 lg:pt-6">
             <p className="text-base lg:text-lg text-[hsl(var(--ds-ink-soft))] leading-relaxed">
-              Esquece pH, ORP, hidrogênio molecular por um minuto. O que você
-              vai sentir, de verdade, na sua casa, no seu corpo e no seu humor.
+              Esquece pH, ORP, hidrogênio molecular por um minuto. O que muda na prática, na sua cozinha, no seu copo e na rotina da sua família.
             </p>
           </div>
         </div>
@@ -88,9 +87,7 @@ const DayanBenefits = () => {
 
         <div className="dayan-reveal mt-16 max-w-3xl">
           <p className="ds-italic text-xl lg:text-2xl text-[hsl(var(--ds-ink))] leading-snug">
-            "A maioria dos meus pacientes não percebe que está desidratada. Eles
-            só percebem quando voltam a beber água de verdade, e o corpo
-            responde."
+            "Recomendo que as pessoas prestem atenção à qualidade da água que consomem todos os dias. É uma escolha simples que muda o sabor do que se bebe em casa."
           </p>
           <p className="mt-4 text-sm text-[hsl(var(--ds-ink-soft))]">
             Dr. Dayan Siebra, Cirurgião Vascular.
