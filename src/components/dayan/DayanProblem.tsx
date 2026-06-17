@@ -108,8 +108,7 @@ const DayanProblem = () => {
         {/* Quote */}
         <blockquote className="dayan-reveal mt-24 max-w-4xl">
           <span className="ds-italic text-2xl lg:text-4xl text-white leading-tight">
-            "Tem gente que toma 8 remédios por dia e nunca olhou para a água
-            que engole junto."
+            "A qualidade da água que entra na sua casa todos os dias merece a mesma atenção que você dá ao que come."
           </span>
           <footer className="mt-6 ds-eyebrow text-white/60">
             Dr. Dayan Siebra
