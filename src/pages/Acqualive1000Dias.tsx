@@ -712,10 +712,12 @@ function ProductFeature() {
 
         <Reveal delay={0.3}>
           <a
-            href="#cta"
+            href={SITE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-14 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[color:var(--color-aqua-bright)] to-[color:var(--color-aqua-glow)] px-8 py-4 text-sm font-semibold text-[color:var(--color-aqua-night)] transition-transform hover:scale-[1.03] btn-glow"
           >
-            Ver filtros Acqualive no app <ArrowRight className="h-4 w-4" />
+            Conhecer os purificadores no site Acqualive <ArrowRight className="h-4 w-4" />
           </a>
         </Reveal>
       </div>
