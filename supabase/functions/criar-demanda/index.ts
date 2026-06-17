@@ -44,6 +44,25 @@ function b64url(str: string): string {
   return btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 }
 
+function escapeHtml(str: unknown): string {
+  return String(str ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function escapeAttr(str: unknown): string {
+  return escapeHtml(str);
+}
+
+function safeUrl(u: unknown): string {
+  const s = String(u ?? "").trim();
+  if (/^https?:\/\//i.test(s)) return escapeAttr(s);
+  return "#";
+}
+
 function buildEmailRaw(to: string[], subject: string, html: string, fromName = "Demandas Acqualive") {
   const boundary = "BOUNDARY_" + Math.random().toString(36).slice(2);
   const headers = [
