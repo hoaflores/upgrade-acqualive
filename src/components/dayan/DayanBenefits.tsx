@@ -60,8 +60,9 @@ const DayanBenefits = () => {
           </div>
           <div className="lg:col-span-5 dayan-reveal dayan-reveal-delay-1 lg:pt-6">
             <p className="text-base lg:text-lg text-[hsl(var(--ds-ink-soft))] leading-relaxed">
-              A boa hidratação é um dos hábitos mais simples e mais importantes para a saúde e o bem-estar da família. Ter uma fonte de água filtrada, leve e sempre disponível em casa torna esse cuidado natural — sem esforço, sem peso e sem complicação.
+              Hidratação é um dos hábitos mais simples e mais importantes para a saúde da família. Ter uma fonte de água filtrada, leve e sempre disponível em casa torna esse cuidado parte natural da rotina, sem esforço.
             </p>
+
           </div>
         </div>
 
