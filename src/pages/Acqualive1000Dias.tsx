@@ -927,8 +927,8 @@ function Footer() {
           <ul className="space-y-2 text-sm text-white/75">
             <li><a href="#top" className="hover:text-white">Acqualive</a></li>
             <li><a href="#parceria" className="hover:text-white">1000 Dias</a></li>
-            <li><a href="#produto" className="hover:text-white">Produtos</a></li>
-            <li><a href="#cta" className="hover:text-white">Marketplace</a></li>
+            <li><a href="#comparativo" className="hover:text-white">Comparativo</a></li>
+            <li><a href={SITE_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white">Site oficial</a></li>
           </ul>
         </div>
         <div>
