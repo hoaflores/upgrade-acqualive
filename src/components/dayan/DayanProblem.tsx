@@ -4,22 +4,22 @@ const VENENOS = [
   {
     n: "01",
     name: "Cloro",
-    body: "O mesmo que limpa piscina entra no seu intestino. Mata bactéria boa, queima mucosa, oxida tudo por dentro.",
+    body: "Usado para desinfecção, deixa gosto e odor marcantes na água. Muita gente sente diferença ao tomar uma água sem cloro.",
   },
   {
     n: "02",
-    name: "Trialometanos",
-    body: "Subprodutos do cloro. A OMS já classificou como provável carcinógeno humano. Você não vê. Você não sente. Acumula.",
+    name: "Subprodutos do cloro",
+    body: "A reação do cloro com matéria orgânica gera subprodutos. Reduzi-los melhora a qualidade percebida da água que chega à sua casa.",
   },
   {
     n: "03",
-    name: "Metais pesados",
-    body: "Chumbo, alumínio, mercúrio. Tubulações antigas + tratamento mal feito. Vão direto para o sistema nervoso.",
+    name: "Metais e sedimentos",
+    body: "Tubulações antigas podem liberar partículas e sedimentos no caminho até a torneira. Uma boa filtragem retém essas impurezas.",
   },
   {
     n: "04",
     name: "Microplásticos",
-    body: "Garrafa PET no calor do carro libera bisfenol. Você está bebendo plástico em estado coloidal. Já achamos no sangue de bebês.",
+    body: "Garrafas plásticas podem liberar partículas com o tempo. Uma fonte filtrada em casa reduz a dependência de embalagens descartáveis.",
   },
 ];
 
