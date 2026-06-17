@@ -90,7 +90,7 @@ const DayanBenefits = () => {
 
         <div className="dayan-reveal mt-16 max-w-3xl">
           <p className="ds-italic text-xl lg:text-2xl text-[hsl(var(--ds-ink))] leading-snug">
-            "A água que entra no seu corpo todos os dias é parte importante da sua saúde. Vale prestar atenção na qualidade dela — é uma escolha simples que acompanha a família a vida toda."
+            "A água que entra no seu corpo todos os dias é parte importante da sua saúde. Vale prestar atenção na qualidade dela. É uma escolha simples que acompanha a família a vida toda."
           </p>
           <p className="mt-4 text-sm text-[hsl(var(--ds-ink-soft))]">
             Dr. Dayan Siebra, Cirurgião Vascular.
