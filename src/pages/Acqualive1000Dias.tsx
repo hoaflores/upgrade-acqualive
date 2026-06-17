@@ -887,7 +887,9 @@ function FinalCTA() {
         <Reveal delay={0.6}>
           <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
-              href="#produto"
+              href={SITE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[color:var(--color-aqua-bright)] to-[color:var(--color-aqua-glow)] px-8 py-4 text-sm font-semibold text-[color:var(--color-aqua-night)] transition-transform hover:scale-[1.03] btn-glow"
             >
               Conhecer produtos Acqualive <ArrowRight className="h-4 w-4" />
@@ -896,7 +898,7 @@ function FinalCTA() {
               href="#parceria"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-medium text-white backdrop-blur transition-colors hover:bg-white/10"
             >
-              Ver no marketplace 1000 Dias
+              Entender a parceria
             </a>
           </div>
         </Reveal>
