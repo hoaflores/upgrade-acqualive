@@ -2,20 +2,20 @@ const VIDEOS = [
   {
     id: "fbFGc8QxmVE",
     n: "01",
-    title: "A água que te enferruja por dentro",
-    desc: "Por que a maioria dos brasileiros bebe veneno legalizado todos os dias.",
+    title: "A qualidade da água que chega na sua casa",
+    desc: "O que tem na água da torneira e por que vale prestar atenção no que você bebe.",
   },
   {
     id: "KpsTsCc2bDE",
     n: "02",
     title: "Os 5 pilares da água ideal",
-    desc: "O que a OMS, a NASA e a medicina ortomolecular concordam.",
+    desc: "Critérios técnicos que o Dr. Dayan considera para escolher uma água melhor.",
   },
   {
     id: "x1SgUYcT6Ak",
     n: "03",
     title: "Podcast completo",
-    desc: "1h44 sobre hidratação celular, longevidade e prevenção.",
+    desc: "1h44 de conversa sobre hidratação, rotina e qualidade da água em casa.",
   },
 ];
 

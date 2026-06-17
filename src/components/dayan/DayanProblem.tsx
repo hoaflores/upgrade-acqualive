@@ -4,22 +4,22 @@ const VENENOS = [
   {
     n: "01",
     name: "Cloro",
-    body: "O mesmo que limpa piscina entra no seu intestino. Mata bactéria boa, queima mucosa, oxida tudo por dentro.",
+    body: "Usado para desinfecção, deixa gosto e odor marcantes na água. Muita gente sente diferença ao tomar uma água sem cloro.",
   },
   {
     n: "02",
-    name: "Trialometanos",
-    body: "Subprodutos do cloro. A OMS já classificou como provável carcinógeno humano. Você não vê. Você não sente. Acumula.",
+    name: "Subprodutos do cloro",
+    body: "A reação do cloro com matéria orgânica gera subprodutos. Reduzi-los melhora a qualidade percebida da água que chega à sua casa.",
   },
   {
     n: "03",
-    name: "Metais pesados",
-    body: "Chumbo, alumínio, mercúrio. Tubulações antigas + tratamento mal feito. Vão direto para o sistema nervoso.",
+    name: "Metais e sedimentos",
+    body: "Tubulações antigas podem liberar partículas e sedimentos no caminho até a torneira. Uma boa filtragem retém essas impurezas.",
   },
   {
     n: "04",
     name: "Microplásticos",
-    body: "Garrafa PET no calor do carro libera bisfenol. Você está bebendo plástico em estado coloidal. Já achamos no sangue de bebês.",
+    body: "Garrafas plásticas podem liberar partículas com o tempo. Uma fonte filtrada em casa reduz a dependência de embalagens descartáveis.",
   },
 ];
 
@@ -40,28 +40,23 @@ const DayanProblem = () => {
             </span>
 
             <h2 className="ds-display mt-6 text-4xl lg:text-6xl text-white leading-tight">
-              Existe água que
+              Nem toda água
               <br />
               <span className="ds-italic font-medium text-[hsl(var(--ds-accent))]">
-                cura.
+                é igual.
               </span>{" "}
-              E existe água
+              E isso
               <br />
-              que <span className="ds-italic font-medium">adoece.</span>
+              faz <span className="ds-italic font-medium">diferença.</span>
             </h2>
           </div>
 
           <div className="lg:col-span-5 lg:pt-12 dayan-reveal dayan-reveal-delay-1">
             <p className="text-base lg:text-lg text-white/75 leading-relaxed">
-              Quando comecei a estudar a fundo o que sai das torneiras
-              brasileiras, me dei conta de uma coisa simples. O saneamento
-              público foi feito para você não morrer de cólera{" "}
-              <em className="ds-italic text-white">hoje</em>, não para você
-              chegar saudável aos 80.
+              Quando comecei a estudar a fundo o que sai das torneiras brasileiras, percebi uma coisa simples. O saneamento público existe para tornar a água segura para consumo, mas isso não significa que ela seja a melhor opção possível para a sua casa.
             </p>
             <p className="mt-6 text-base lg:text-lg text-white/75 leading-relaxed">
-              A conta vem em forma de inflamação crônica, intestino inflamado,
-              tireoide desregulada e cansaço que ninguém explica.
+              Cloro, sedimentos, gosto e odor são percebidos no dia a dia. Para muita gente, melhorar a água que chega ao copo é uma escolha de qualidade e conforto.
             </p>
           </div>
         </div>
@@ -83,7 +78,7 @@ const DayanProblem = () => {
                   Imagem ilustrativa
                 </span>
                 <p className="ds-italic text-white text-xl mt-1">
-                  O que você não vê é o que mais te machuca.
+                  Qualidade da água é uma escolha diária.
                 </p>
               </div>
             </div>
@@ -99,7 +94,7 @@ const DayanProblem = () => {
                   <span className="dayan-num text-4xl text-[hsl(var(--ds-accent))]">
                     {v.n}
                   </span>
-                  <span className="ds-eyebrow text-white/40">veneno</span>
+                  <span className="ds-eyebrow text-white/40">item</span>
                 </div>
                 <h3 className="ds-display text-3xl text-white">{v.name}</h3>
                 <p className="mt-4 text-white/70 leading-relaxed text-sm">
@@ -113,8 +108,7 @@ const DayanProblem = () => {
         {/* Quote */}
         <blockquote className="dayan-reveal mt-24 max-w-4xl">
           <span className="ds-italic text-2xl lg:text-4xl text-white leading-tight">
-            "Tem gente que toma 8 remédios por dia e nunca olhou para a água
-            que engole junto."
+            "A qualidade da água que entra na sua casa todos os dias merece a mesma atenção que você dá ao que come."
           </span>
           <footer className="mt-6 ds-eyebrow text-white/60">
             Dr. Dayan Siebra

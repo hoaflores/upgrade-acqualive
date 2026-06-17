@@ -25,39 +25,35 @@ const DayanProof = () => {
               <span className="dayan-num text-2xl text-[hsl(var(--ds-accent))] not-italic">
                 06
               </span>
-              Ciência, em palavras simples
+              Certificações e laudos
             </span>
             <h2 className="ds-display mt-5 text-4xl lg:text-6xl text-white leading-tight">
-              Trocaram a água da torneira
+              Tecnologia certificada
               <br />
-              por água alcalina.
+              para a sua casa.
               <br />
               <span className="ds-italic font-medium text-[hsl(var(--ds-accent))]">
-                O estômago melhorou.
+                Transparência total.
               </span>
             </h2>
           </div>
           <div className="lg:col-span-5 dayan-reveal dayan-reveal-delay-1">
             <p className="text-base lg:text-lg text-white/75 leading-relaxed">
-              A Universidade Federal pegou 28 pessoas com gastrite. Olhou o
-              estômago de cada uma com câmera (endoscopia). Pediu pra elas só
-              mudarem a água que bebiam todo dia. Nada mais.
+              O purificador Acqualive passou por testes laboratoriais para avaliar a redução de cloro, retenção de partículas e parâmetros físico-químicos da água tratada.
             </p>
             <p className="mt-4 text-base lg:text-lg text-white/75 leading-relaxed">
-              Quatro meses depois, olharam o estômago de novo. A maioria estava
-              melhor. Algumas, completamente curadas. Sem remédio novo, sem
-              dieta nova. Só água.
+              Trabalhamos com fornecedores certificados e disponibilizamos os laudos técnicos para consulta. Você sabe exatamente o que está levando para a sua casa.
             </p>
           </div>
         </div>
 
-        {/* Stats grid: linguagem simples */}
+        {/* Stats grid: parâmetros técnicos do produto */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 mb-20">
           {[
-            { n: "28", l: "pessoas com gastrite participaram do estudo" },
-            { n: "4 meses", l: "bebendo água alcalina, sem mudar mais nada" },
-            { n: "43%", l: "melhoraram a gastrite, comprovado por câmera" },
-            { n: "7%", l: "ficaram completamente curadas só com a água" },
+            { n: "99,9%", l: "de redução de cloro nos testes do produto" },
+            { n: "pH 8,5+", l: "faixa alcalina configurada no purificador" },
+            { n: "INMETRO", l: "certificação Classe A do equipamento" },
+            { n: "10 anos", l: "de vida útil estimada com manutenção" },
           ].map((s, i) => (
             <div
               key={s.n}
@@ -76,17 +72,14 @@ const DayanProof = () => {
         {/* Bloco interpretação simples */}
         <div className="dayan-reveal grid lg:grid-cols-12 gap-10 mb-20 border-t border-white/10 pt-12">
           <div className="lg:col-span-5">
-            <span className="ds-eyebrow text-white/50">Traduzindo</span>
+            <span className="ds-eyebrow text-white/50">Em resumo</span>
           </div>
           <div className="lg:col-span-7">
             <p className="ds-italic text-2xl lg:text-3xl text-white leading-snug">
-              "Mudar só a água que entra na sua casa pode melhorar o seu
-              estômago e diminuir a inflamação do seu corpo. Isso não é achismo.
-              Foi medido com câmera dentro do estômago de gente de verdade."
+              "O Acqualive entrega uma água filtrada, alcalina e com minerais preservados, com certificações e laudos que você pode consultar antes de levar para casa."
             </p>
             <p className="mt-4 text-sm text-white/50">
-              Estudo da Universidade Federal sobre o consumo diário de água
-              alcalina em pacientes com gastrite.
+              Informações técnicas baseadas nos laudos do produto. Resultados podem variar de acordo com a qualidade da água de entrada.
             </p>
           </div>
         </div>

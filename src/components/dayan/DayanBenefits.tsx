@@ -1,33 +1,33 @@
 const BENEFITS = [
   {
     n: "01",
-    t: "Mais energia ao acordar",
-    d: "Você dorme hidratado de verdade. A água com pH ideal é absorvida mais rápido pelas células, então o corpo acorda menos pesado e a manhã rende mais.",
+    t: "Mais sabor no copo",
+    d: "Sem o gosto e o odor do cloro, a água fica mais agradável de beber. Muita gente passa a tomar mais água naturalmente quando ela tem um sabor melhor.",
   },
   {
     n: "02",
-    t: "Digestão mais leve",
-    d: "Sem cloro e sem acidez agressiva, o estômago para de reclamar depois das refeições. Azia, queimação e aquele inchaço chato diminuem em poucas semanas.",
+    t: "Cozinha mais saborosa",
+    d: "Café, chá, arroz e sopa ganham outro sabor quando a água base é filtrada. Você sente o gosto real dos ingredientes, sem o fundo metálico do cloro.",
   },
   {
     n: "03",
-    t: "Pele e cabelo melhores",
-    d: "Quando o corpo está hidratado por dentro, a pele aparece por fora. Menos ressecamento, menos olheira, cabelo com mais brilho. Sem creme, só água boa.",
+    t: "Praticidade no dia a dia",
+    d: "Água filtrada direto na torneira da bancada. Sem precisar lembrar de comprar galão, carregar peso ou esperar entrega.",
   },
   {
     n: "04",
-    t: "Menos inflamação no corpo",
-    d: "Dor de cabeça frequente, articulação que estala, cansaço sem motivo. Muita coisa que você acha normal é só inflamação silenciosa pedindo água de qualidade.",
+    t: "Menos plástico em casa",
+    d: "Reduz o consumo de garrafas e galões descartáveis. Uma escolha mais consciente para a sua rotina e para o planeta.",
   },
   {
     n: "05",
-    t: "Comida com sabor de verdade",
-    d: "Café, chá, arroz, sopa. Tudo muda quando a água base é limpa. Você vai sentir o gosto real do que come, sem o fundo metálico do cloro.",
+    t: "Tranquilidade para a família",
+    d: "Toda a casa bebendo da mesma fonte filtrada e certificada. Você sabe exatamente o que está oferecendo para quem você ama.",
   },
   {
     n: "06",
-    t: "Tranquilidade pra família toda",
-    d: "Criança, idoso, gestante. Todos bebem da mesma fonte segura. Você para de comprar galão, para de carregar peso e para de se preocupar com a procedência.",
+    t: "Equipamento durável",
+    d: "Projetado para durar anos com manutenção simples. Refis com lembrete de troca para você nunca ficar sem.",
   },
 ];
 
@@ -44,23 +44,22 @@ const DayanBenefits = () => {
               <span className="dayan-num text-2xl text-[hsl(var(--ds-blue-deep))] not-italic">
                 05
               </span>
-              O que muda na sua vida
+              O que muda na sua rotina
             </span>
             <h2 className="ds-display mt-5 text-4xl lg:text-6xl text-[hsl(var(--ds-ink))] leading-tight">
-              Não é sobre beber água.
+              Não é só beber água.
               <br />
-              É sobre{" "}
+              É ter uma{" "}
               <span className="ds-italic font-medium text-[hsl(var(--ds-blue-deep))]">
-                acordar diferente
+                fonte melhor
               </span>
               <br />
-              em 30 dias.
+              dentro de casa.
             </h2>
           </div>
           <div className="lg:col-span-5 dayan-reveal dayan-reveal-delay-1 lg:pt-6">
             <p className="text-base lg:text-lg text-[hsl(var(--ds-ink-soft))] leading-relaxed">
-              Esquece pH, ORP, hidrogênio molecular por um minuto. O que você
-              vai sentir, de verdade, na sua casa, no seu corpo e no seu humor.
+              Esquece pH, ORP, hidrogênio molecular por um minuto. O que muda na prática, na sua cozinha, no seu copo e na rotina da sua família.
             </p>
           </div>
         </div>
@@ -88,9 +87,7 @@ const DayanBenefits = () => {
 
         <div className="dayan-reveal mt-16 max-w-3xl">
           <p className="ds-italic text-xl lg:text-2xl text-[hsl(var(--ds-ink))] leading-snug">
-            "A maioria dos meus pacientes não percebe que está desidratada. Eles
-            só percebem quando voltam a beber água de verdade, e o corpo
-            responde."
+            "Recomendo que as pessoas prestem atenção à qualidade da água que consomem todos os dias. É uma escolha simples que muda o sabor do que se bebe em casa."
           </p>
           <p className="mt-4 text-sm text-[hsl(var(--ds-ink-soft))]">
             Dr. Dayan Siebra, Cirurgião Vascular.

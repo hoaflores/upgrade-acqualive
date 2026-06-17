@@ -2,12 +2,12 @@ import waterPouring from "@/assets/dayan-office.jpg";
 import portraitSide from "@/assets/dayan-with-filter.png";
 
 const PILARES = [
-  { n: "01", t: "Pura", d: "Sem cloro, sem metais, sem trialometanos." },
-  { n: "02", t: "Alcalina", d: "pH entre 8.5 e 9.5, contra a inflamação." },
-  { n: "03", t: "Mineralizada", d: "Cálcio e magnésio biodisponíveis." },
-  { n: "04", t: "Antioxidante", d: "ORP negativo. Combate radicais livres." },
-  { n: "05", t: "Estruturada", d: "Hexagonal. Hidrata célula a célula." },
-  { n: "06", t: "Leve", d: "Tensão superficial reduzida. Você bebe mais." },
+  { n: "01", t: "Pura", d: "Reduz cloro, sedimentos e partículas presentes na água tratada." },
+  { n: "02", t: "Alcalina", d: "Faixa de pH entre 8,5 e 9,5, configurada pelo equipamento." },
+  { n: "03", t: "Mineralizada", d: "Cálcio e magnésio preservados na água filtrada." },
+  { n: "04", t: "Equilibrada", d: "ORP negativo conforme parâmetros técnicos do produto." },
+  { n: "05", t: "Estruturada", d: "Tecnologia que reorganiza as moléculas da água." },
+  { n: "06", t: "Leve", d: "Tensão superficial reduzida. Sabor mais agradável." },
 ];
 
 const DayanSolution = () => {

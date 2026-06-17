@@ -80,8 +80,7 @@ const DayanFilterFails = () => {
           </div>
           <div className="lg:col-span-4 lg:col-start-9 lg:pt-10 dayan-reveal dayan-reveal-delay-1">
             <p className="text-lg text-[hsl(var(--ds-ink-soft))] leading-relaxed">
-              Filtrar é o mínimo. Mineralizar, alcalinizar e estruturar é o que
-              transforma água em medicina preventiva. Veja a diferença.
+              Filtrar é o básico. Mineralizar, alcalinizar e estruturar a água são diferenciais técnicos do Acqualive. Veja a comparação.
             </p>
           </div>
         </div>

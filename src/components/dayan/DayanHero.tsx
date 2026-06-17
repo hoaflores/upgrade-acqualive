@@ -70,7 +70,7 @@ const DayanHero = () => {
                 você bebe está
                 <br />
                 <span className="ds-italic font-medium text-[hsl(var(--ds-accent))]">
-                  te enferrujando
+                  merece atenção
                 </span>
                 <span className="text-white">.</span>
               </h1>
@@ -156,7 +156,7 @@ const DayanHero = () => {
               você bebe está
               <br />
               <span className="ds-italic font-medium text-[hsl(var(--ds-accent))]">
-                te enferrujando
+                merece atenção
               </span>
               <span className="text-[hsl(var(--ds-ink))]">.</span>
             </h1>
