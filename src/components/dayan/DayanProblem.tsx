@@ -78,7 +78,7 @@ const DayanProblem = () => {
                   Imagem ilustrativa
                 </span>
                 <p className="ds-italic text-white text-xl mt-1">
-                  O que você não vê é o que mais te machuca.
+                  Qualidade da água é uma escolha diária.
                 </p>
               </div>
             </div>
@@ -94,7 +94,7 @@ const DayanProblem = () => {
                   <span className="dayan-num text-4xl text-[hsl(var(--ds-accent))]">
                     {v.n}
                   </span>
-                  <span className="ds-eyebrow text-white/40">veneno</span>
+                  <span className="ds-eyebrow text-white/40">item</span>
                 </div>
                 <h3 className="ds-display text-3xl text-white">{v.name}</h3>
                 <p className="mt-4 text-white/70 leading-relaxed text-sm">
