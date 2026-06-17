@@ -1,33 +1,33 @@
 const BENEFITS = [
   {
     n: "01",
-    t: "Mais sabor no copo",
-    d: "Sem o gosto e o odor do cloro, a água fica mais agradável de beber. Muita gente passa a tomar mais água naturalmente quando ela tem um sabor melhor.",
+    t: "Hidratação que entra com prazer",
+    d: "Sem o gosto e o odor do cloro, a água fica leve e agradável. Quando ela tem sabor melhor, a família tende a beber mais água ao longo do dia — algo que faz diferença na rotina e no bem-estar.",
   },
   {
     n: "02",
-    t: "Cozinha mais saborosa",
-    d: "Café, chá, arroz e sopa ganham outro sabor quando a água base é filtrada. Você sente o gosto real dos ingredientes, sem o fundo metálico do cloro.",
+    t: "Menos cloro no copo do dia a dia",
+    d: "Reduz cloro residual, sedimentos e impurezas que vêm pela tubulação. Uma água mais limpa para beber, cozinhar e oferecer para as crianças, sem precisar ferver ou comprar galão.",
   },
   {
     n: "03",
-    t: "Praticidade no dia a dia",
-    d: "Água filtrada direto na torneira da bancada. Sem precisar lembrar de comprar galão, carregar peso ou esperar entrega.",
+    t: "Apoio para uma rotina mais saudável",
+    d: "Manter uma boa hidratação ao longo do dia faz parte de hábitos simples de saúde e bem-estar. Ter água de qualidade sempre à mão é um empurrão a mais para cuidar de você e da sua família.",
   },
   {
     n: "04",
-    t: "Menos plástico em casa",
-    d: "Reduz o consumo de garrafas e galões descartáveis. Uma escolha mais consciente para a sua rotina e para o planeta.",
+    t: "Cozinha mais saborosa e leve",
+    d: "Café, chá, arroz, sopa e sucos ganham outro sabor com água filtrada de qualidade. Você sente o gosto real dos ingredientes, sem o fundo metálico do cloro.",
   },
   {
     n: "05",
-    t: "Tranquilidade para a família",
-    d: "Toda a casa bebendo da mesma fonte filtrada e certificada. Você sabe exatamente o que está oferecendo para quem você ama.",
+    t: "Tranquilidade para a família toda",
+    d: "Toda a casa bebendo da mesma fonte filtrada e certificada. Você sabe exatamente o que está oferecendo para as crianças, os idosos e para quem você ama todos os dias.",
   },
   {
     n: "06",
-    t: "Equipamento durável",
-    d: "Projetado para durar anos com manutenção simples. Refis com lembrete de troca para você nunca ficar sem.",
+    t: "Menos plástico, mais consciência",
+    d: "Reduz o consumo de garrafas e galões descartáveis. Uma escolha mais leve para a sua rotina, para o orçamento e para o planeta — sem precisar carregar peso nem esperar entrega.",
   },
 ];
 
@@ -44,25 +44,26 @@ const DayanBenefits = () => {
               <span className="dayan-num text-2xl text-[hsl(var(--ds-blue-deep))] not-italic">
                 05
               </span>
-              O que muda na sua rotina
+              Saúde, bem-estar e rotina
             </span>
             <h2 className="ds-display mt-5 text-4xl lg:text-6xl text-[hsl(var(--ds-ink))] leading-tight">
-              Não é só beber água.
+              Água é a base
               <br />
-              É ter uma{" "}
+              de quase tudo que o seu corpo{" "}
               <span className="ds-italic font-medium text-[hsl(var(--ds-blue-deep))]">
-                fonte melhor
+                faz por você
               </span>
               <br />
-              dentro de casa.
+              todos os dias.
             </h2>
           </div>
           <div className="lg:col-span-5 dayan-reveal dayan-reveal-delay-1 lg:pt-6">
             <p className="text-base lg:text-lg text-[hsl(var(--ds-ink-soft))] leading-relaxed">
-              Esquece pH, ORP, hidrogênio molecular por um minuto. O que muda na prática, na sua cozinha, no seu copo e na rotina da sua família.
+              A boa hidratação é um dos hábitos mais simples e mais importantes para a saúde e o bem-estar da família. Ter uma fonte de água filtrada, leve e sempre disponível em casa torna esse cuidado natural — sem esforço, sem peso e sem complicação.
             </p>
           </div>
         </div>
+
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[hsl(var(--ds-ink))]/10">
           {BENEFITS.map((b, i) => (
