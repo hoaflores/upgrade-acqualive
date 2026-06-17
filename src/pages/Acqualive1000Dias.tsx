@@ -755,10 +755,12 @@ function MothersChoiceSection() {
         </Reveal>
         <Reveal delay={0.5}>
           <a
-            href="#produto"
+            href={SITE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-14 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-7 py-4 text-sm font-medium text-white backdrop-blur transition-colors hover:bg-white/10"
           >
-            Ver filtros Acqualive no app <ArrowRight className="h-4 w-4" />
+            Conhecer no site Acqualive <ArrowRight className="h-4 w-4" />
           </a>
         </Reveal>
       </div>
