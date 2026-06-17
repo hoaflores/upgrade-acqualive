@@ -7,20 +7,20 @@ import {
 
 const ITEMS = [
   {
-    q: "Água alcalina não desregula o suco gástrico do estômago?",
-    a: "Não. O estômago se ajusta em segundos. O que ele rejeita é cloro, metal pesado e microplástico. Água alcalina ingerida fora das refeições age no intestino e na corrente sanguínea, onde o pH levemente básico é exatamente o que o seu corpo busca o tempo todo.",
+    q: "O que diferencia a água do Acqualive da água da torneira?",
+    a: "O Acqualive reduz cloro, sedimentos e partículas, ajusta o pH para a faixa alcalina (8,5 a 9,5) e mantém minerais como cálcio e magnésio. O resultado é uma água com sabor mais agradável e qualidade técnica controlada.",
   },
   {
-    q: "Por que pagar por um filtro se a água da torneira já é potável?",
-    a: "Potável significa que não te mata hoje. Não significa que te mantém saudável amanhã. Saneamento e saúde celular são conversas diferentes. O Acqualive resolve a segunda.",
+    q: "Por que escolher um purificador em vez de continuar com a água da torneira?",
+    a: "A água tratada é segura para consumo, mas muitas pessoas buscam uma qualidade superior em casa, com menos cloro, melhor sabor e mais praticidade. O Acqualive entrega essa experiência no dia a dia.",
   },
   {
     q: "Quanto tempo dura o equipamento e os refis?",
-    a: "O equipamento dura cerca de 10 anos com manutenção. Os refis são trocados em cadência inteligente, você recebe lembretes e nunca fica sem.",
+    a: "O equipamento tem vida útil estimada de cerca de 10 anos com manutenção. Os refis são trocados em cadência inteligente, você recebe lembretes e nunca fica sem.",
   },
   {
     q: "Tem garantia, e se eu não me adaptar?",
-    a: "Sim, garantia de fábrica e suporte vitalício do time Acqualive. A imensa maioria dos clientes percebe diferença na primeira semana. Caso algo não esteja ok, o suporte resolve sem burocracia.",
+    a: "Sim, garantia de fábrica e suporte do time Acqualive. Caso algo não esteja certo, nosso suporte resolve sem burocracia.",
   },
   {
     q: "Como funciona a instalação?",
