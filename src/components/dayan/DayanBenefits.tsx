@@ -1,35 +1,36 @@
 const BENEFITS = [
   {
     n: "01",
-    t: "Hidratação que entra com prazer",
-    d: "Sem o gosto e o odor do cloro, a água fica leve e agradável. Quando ela tem sabor melhor, a família tende a beber mais água ao longo do dia — algo que faz diferença na rotina e no bem-estar.",
+    t: "Sua família bebe mais água",
+    d: "Sem cloro, sem gosto estranho, sem odor. Quando a água é leve e saborosa, todo mundo em casa passa a beber mais ao longo do dia. Hidratação que acontece sem cobrança.",
   },
   {
     n: "02",
-    t: "Menos cloro no copo do dia a dia",
-    d: "Reduz cloro residual, sedimentos e impurezas que vêm pela tubulação. Uma água mais limpa para beber, cozinhar e oferecer para as crianças, sem precisar ferver ou comprar galão.",
+    t: "Menos cloro no corpo todos os dias",
+    d: "Reduz cloro residual, sedimentos e impurezas que chegam pela tubulação. Uma água mais limpa para beber, cozinhar e dar para as crianças. Sem ferver, sem comprar galão.",
   },
   {
     n: "03",
-    t: "Apoio para uma rotina mais saudável",
-    d: "Manter uma boa hidratação ao longo do dia faz parte de hábitos simples de saúde e bem-estar. Ter água de qualidade sempre à mão é um empurrão a mais para cuidar de você e da sua família.",
+    t: "Hidratação como hábito de saúde",
+    d: "Beber água de qualidade ao longo do dia é um dos hábitos mais simples para cuidar do corpo e do bem-estar. Ter uma boa fonte em casa torna esse cuidado parte natural da rotina.",
   },
   {
     n: "04",
-    t: "Cozinha mais saborosa e leve",
-    d: "Café, chá, arroz, sopa e sucos ganham outro sabor com água filtrada de qualidade. Você sente o gosto real dos ingredientes, sem o fundo metálico do cloro.",
+    t: "Comida com sabor de verdade",
+    d: "Café, chá, arroz, sopa e sucos ganham outro nível com água filtrada de qualidade. Você sente o gosto real dos ingredientes, sem o fundo metálico do cloro.",
   },
   {
     n: "05",
     t: "Tranquilidade para a família toda",
-    d: "Toda a casa bebendo da mesma fonte filtrada e certificada. Você sabe exatamente o que está oferecendo para as crianças, os idosos e para quem você ama todos os dias.",
+    d: "Toda a casa bebendo da mesma fonte filtrada e certificada. Você sabe exatamente o que está oferecendo para as crianças, os idosos e para quem você ama.",
   },
   {
     n: "06",
-    t: "Menos plástico, mais consciência",
-    d: "Reduz o consumo de garrafas e galões descartáveis. Uma escolha mais leve para a sua rotina, para o orçamento e para o planeta — sem precisar carregar peso nem esperar entrega.",
+    t: "Adeus galão e garrafa plástica",
+    d: "Sem peso, sem entrega, sem plástico acumulado na cozinha. Uma escolha mais leve para a sua rotina, para o orçamento e para o planeta.",
   },
 ];
+
 
 const DayanBenefits = () => {
   return (
