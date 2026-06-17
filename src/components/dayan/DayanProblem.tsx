@@ -40,28 +40,23 @@ const DayanProblem = () => {
             </span>
 
             <h2 className="ds-display mt-6 text-4xl lg:text-6xl text-white leading-tight">
-              Existe água que
+              Nem toda água
               <br />
               <span className="ds-italic font-medium text-[hsl(var(--ds-accent))]">
-                cura.
+                é igual.
               </span>{" "}
-              E existe água
+              E isso
               <br />
-              que <span className="ds-italic font-medium">adoece.</span>
+              faz <span className="ds-italic font-medium">diferença.</span>
             </h2>
           </div>
 
           <div className="lg:col-span-5 lg:pt-12 dayan-reveal dayan-reveal-delay-1">
             <p className="text-base lg:text-lg text-white/75 leading-relaxed">
-              Quando comecei a estudar a fundo o que sai das torneiras
-              brasileiras, me dei conta de uma coisa simples. O saneamento
-              público foi feito para você não morrer de cólera{" "}
-              <em className="ds-italic text-white">hoje</em>, não para você
-              chegar saudável aos 80.
+              Quando comecei a estudar a fundo o que sai das torneiras brasileiras, percebi uma coisa simples. O saneamento público existe para tornar a água segura para consumo, mas isso não significa que ela seja a melhor opção possível para a sua casa.
             </p>
             <p className="mt-6 text-base lg:text-lg text-white/75 leading-relaxed">
-              A conta vem em forma de inflamação crônica, intestino inflamado,
-              tireoide desregulada e cansaço que ninguém explica.
+              Cloro, sedimentos, gosto e odor são percebidos no dia a dia. Para muita gente, melhorar a água que chega ao copo é uma escolha de qualidade e conforto.
             </p>
           </div>
         </div>
