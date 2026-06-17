@@ -222,7 +222,9 @@ function Hero() {
             className="mt-10 flex flex-col gap-3 sm:flex-row"
           >
             <a
-              href="#produto"
+              href={SITE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[color:var(--color-aqua-bright)] to-[color:var(--color-aqua-glow)] px-7 py-4 text-sm font-semibold text-[color:var(--color-aqua-night)] transition-transform hover:scale-[1.03] btn-glow"
             >
               Conhecer os purificadores Acqualive
