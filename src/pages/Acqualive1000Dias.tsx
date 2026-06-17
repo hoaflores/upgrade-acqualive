@@ -16,7 +16,12 @@ import {
   Menu,
   X,
   Home as HomeIcon,
+  Check,
+  Minus,
+  Crown,
 } from "lucide-react";
+
+const SITE_URL = "https://www.acqualive.com.br";
 import productAsset from "@/assets/acqualive-real.jpg.asset.json";
 import quemSomosAsset from "@/assets/quem-somos.jpg.asset.json";
 import appImg from "@/assets/app-mockup.jpg";
