@@ -104,10 +104,12 @@ function Header() {
         </div>
 
         <a
-          href="#produto"
+          href={SITE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden md:inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-[color:var(--color-aqua-night)] transition-transform hover:scale-[1.03] btn-glow"
         >
-          Ver produtos no app <ArrowRight className="h-4 w-4" />
+          Conhecer no site Acqualive <ArrowRight className="h-4 w-4" />
         </a>
 
         <button
