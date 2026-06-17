@@ -89,7 +89,7 @@ const DayanHero = () => {
         </div>
 
         <p className="dayan-reveal dayan-reveal-delay-2 mt-6 text-base text-[hsl(var(--ds-ink-soft))] leading-relaxed">
-          O Dr. Dayan resolveu falar sobre a água porque descobriu que 99% das pessoas não sabem o que realmente estão bebendo — e essa informação mudou a vida dele e de milhares de pacientes.
+          O Dr. Dayan resolveu falar sobre a água porque descobriu que 99% das pessoas não sabem o que realmente estão bebendo. E essa informação mudou a vida dele e de milhares de pacientes.
         </p>
         <p className="dayan-reveal dayan-reveal-delay-2 mt-4 text-base text-[hsl(var(--ds-ink-soft))] leading-relaxed">
           Sou o Dr. Dayan Siebra, cirurgião vascular. Estudei medicina
@@ -162,7 +162,7 @@ const DayanHero = () => {
             </h1>
 
             <p className="dayan-reveal dayan-reveal-delay-2 mt-8 text-base lg:text-lg text-[hsl(var(--ds-ink-soft))] max-w-xl leading-relaxed">
-              O Dr. Dayan resolveu falar sobre a água porque descobriu que 99% das pessoas não sabem o que realmente estão bebendo — e essa informação mudou a vida dele e de milhares de pacientes.
+              O Dr. Dayan resolveu falar sobre a água porque descobriu que 99% das pessoas não sabem o que realmente estão bebendo. E essa informação mudou a vida dele e de milhares de pacientes.
             </p>
             <p className="dayan-reveal dayan-reveal-delay-2 mt-4 text-base lg:text-lg text-[hsl(var(--ds-ink-soft))] max-w-xl leading-relaxed">
               Sou o Dr. Dayan Siebra, cirurgião vascular. Estudei medicina por 11 anos e não tive{" "}
