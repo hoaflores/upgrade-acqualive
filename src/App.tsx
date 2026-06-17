@@ -75,6 +75,7 @@ const App = () => (
             <Route path="/midia-kit" element={<MidiaKit />} />
             <Route path="/midia-kit/:slug" element={<MidiaKit />} />
             <Route path="/parcerias-cafe" element={<ParceriasCafe />} />
+            <Route path="/1000-dias" element={<Acqualive1000Dias />} />
             <Route path="/acqualive1000dias" element={<Acqualive1000Dias />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
