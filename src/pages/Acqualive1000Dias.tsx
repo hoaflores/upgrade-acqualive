@@ -135,11 +135,13 @@ function Header() {
               </a>
             ))}
             <a
-              href="#produto"
+              href={SITE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-[color:var(--color-aqua-night)]"
             >
-              Ver produtos no app <ArrowRight className="h-4 w-4" />
+              Conhecer no site Acqualive <ArrowRight className="h-4 w-4" />
             </a>
           </div>
         </div>
