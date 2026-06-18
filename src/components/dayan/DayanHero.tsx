@@ -153,7 +153,7 @@ const DayanHero = () => {
             <h1 className="ds-display dayan-reveal dayan-reveal-delay-1 mt-6 text-[3.4rem] lg:text-[4.6rem] xl:text-[5.4rem] text-[hsl(var(--ds-ink))] leading-[1.02]">
               A água que
               <br />
-              você bebe está
+              você bebe
               <br />
               <span className="ds-italic font-medium text-[hsl(var(--ds-accent))]">
                 merece atenção
