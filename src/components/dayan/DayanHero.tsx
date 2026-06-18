@@ -67,7 +67,7 @@ const DayanHero = () => {
               <h1 className="ds-display text-white text-[2rem] sm:text-[2.6rem] leading-[1.02]">
                 A água que
                 <br />
-                você bebe está
+                você bebe
                 <br />
                 <span className="ds-italic font-medium text-[hsl(var(--ds-accent))]">
                   merece atenção
