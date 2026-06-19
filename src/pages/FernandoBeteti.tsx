@@ -650,33 +650,33 @@ const BetetiDor = () => (
 const PILARES = [
   {
     n: "01",
-    t: "Sem cloro residual",
-    d: "Remoção de até 99,9% do cloro e dos trihalometanos formados quando ele reage com matéria orgânica.",
+    t: "Redução do cloro residual",
+    d: "Sistema que reduz significativamente o cloro livre e os subprodutos formados na reação com matéria orgânica.",
   },
   {
     n: "02",
     t: "pH alcalino entre 8,5 e 10",
-    d: "A faixa que o corpo busca para neutralizar a acidez crônica da alimentação moderna.",
+    d: "Faixa de pH alcalino, característica de águas valorizadas em estudos de qualidade.",
   },
   {
     n: "03",
     t: "Minerais preservados",
-    d: "Cálcio, magnésio e potássio mantidos. Nada de água destilada vazia que rouba minerais do seu corpo.",
+    d: "Cálcio, magnésio e potássio mantidos na água. Não é água destilada ou desmineralizada.",
   },
   {
     n: "04",
-    t: "Antioxidante (ORP negativo)",
-    d: "Capacidade de doar elétrons e neutralizar radicais livres, o oposto da água engarrafada parada na prateleira.",
+    t: "ORP negativo",
+    d: "Potencial de oxirredução negativo, parâmetro físico-químico que indica baixa oxidação na água.",
   },
   {
     n: "05",
     t: "Estrutura molecular menor",
-    d: "Hidratação celular real, não apenas líquido passando pelo corpo.",
+    d: "Reagrupamento das moléculas em clusters menores, característica associada a melhor sensação de hidratação.",
   },
   {
     n: "06",
     t: "Sem microplásticos",
-    d: "Um copo de água de garrafa PET pode conter milhares de partículas. Filtragem física resolve.",
+    d: "Filtragem física que retém partículas e reduz o consumo de água engarrafada em PET.",
   },
 ];
 
@@ -688,18 +688,18 @@ const BetetiSolucao = () => (
     <div className="max-w-[1300px] mx-auto px-5 lg:px-8">
       <div className="dayan-reveal flex items-center gap-3 mb-5">
         <span className="bt-tag bt-tag-red">Pesquisa</span>
-        <span className="bt-meta">04 · A água ideal</span>
+        <span className="bt-meta">04 · Critérios de qualidade</span>
       </div>
 
       <h2 className="dayan-reveal bt-display text-3xl lg:text-5xl text-[hsl(var(--bt-ink))] max-w-4xl">
-        Existe uma água que o corpo reconhece como sua.
+        Seis critérios que definem uma água de qualidade.
       </h2>
       <div className="bt-rule mt-6 mb-10" />
 
       <p className="dayan-reveal max-w-2xl text-lg text-[hsl(var(--bt-ink-soft))] bt-body mb-12">
-        Pesquisadores chamam de "água ideal" a que cumpre seis critérios.
-        Quando todos estão presentes, o corpo deixa de gastar energia para se
-        proteger do líquido que recebe e começa a se reparar.
+        Pesquisadores de qualidade da água trabalham com seis parâmetros
+        principais. Quando todos estão presentes, a água ganha em sabor,
+        conforto e fica mais agradável de beber no dia a dia.
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[hsl(var(--bt-line))] border border-[hsl(var(--bt-line))]">
