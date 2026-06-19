@@ -351,25 +351,25 @@ const BetetiReportagem = () => (
         </p>
         <blockquote className="border-l-4 border-[hsl(var(--bt-red))] pl-6 my-8">
           <p className="bt-display text-2xl lg:text-3xl text-[hsl(var(--bt-ink))] leading-snug">
-            "Existe uma diferença gigante entre água potável, que não te mata
-            na hora, e água ideal, aquela que o corpo realmente precisa para
-            funcionar bem."
+            "Existe uma diferença grande entre água potável, que cumpre os
+            parâmetros legais, e uma água de qualidade, que você bebe com
+            prazer todos os dias."
           </p>
           <footer className="bt-meta text-[hsl(var(--bt-muted))] mt-3">
             Fernando Beteti, Repórter Saúde
           </footer>
         </blockquote>
         <p>
-          Os limites de cloro, fluoreto, alumínio e fármacos considerados
-          "seguros" foram desenhados para não causar morte aguda. Não para
-          preservar sua tireoide, sua microbiota, seu fígado e o cérebro dos
-          seus filhos.
+          Os limites de cloro, fluoreto e outros parâmetros considerados
+          aceitáveis pelas normas brasileiras foram desenhados para
+          potabilidade básica. Quando o assunto é sabor, conforto e a água
+          que a família realmente quer beber, dá para ir muito além.
         </p>
         <p>
           Por isso essa página existe. Reuni aqui as principais reportagens
           que produzi sobre o assunto, ao lado de especialistas que estudam a
-          água há décadas, e a única solução que eu, pessoalmente, recomendo
-          para quem assiste o nosso canal: o filtro Acqualive.
+          água há décadas, e a escolha de filtro que eu faço em casa: o
+          Acqualive.
         </p>
       </div>
     </div>
