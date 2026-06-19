@@ -108,10 +108,10 @@ const BetetiNav = () => {
           {Array.from({ length: 2 }).map((_, k) => (
             <div key={k} className="flex items-center gap-10 pr-10 shrink-0">
               {[
-                "URGENTE · 99,9% da água da torneira no Brasil contém cloro residual",
-                "INVESTIGAÇÃO · restos de hormônios e fármacos detectados em águas tratadas",
-                "ALERTA · caixas d'água sem limpeza viram criadouros silenciosos",
-                "REPORTAGEM ESPECIAL · a água que você bebe pode estar te adoecendo",
+                "EM PAUTA · 99,9% da água da torneira no Brasil contém cloro residual",
+                "REPORTAGEM · resíduos químicos detectados em estudos sobre águas tratadas",
+                "ALERTA · caixas d'água sem limpeza acumulam sedimentos e biofilme",
+                "REPORTAGEM ESPECIAL · você sabe mesmo o que sai da sua torneira?",
               ].map((t, i) => (
                 <span
                   key={`${k}-${i}`}
@@ -155,15 +155,15 @@ const BetetiHero = () => (
           </div>
 
           <h1 className="bt-display text-[2.2rem] sm:text-[3rem] lg:text-[4.4rem] xl:text-[5rem] text-[hsl(var(--bt-ink))]">
-            A água do brasileiro virou um{" "}
-            <span className="bt-italic">escândalo</span> que ninguém reporta.
+            A água do brasileiro merece uma{" "}
+            <span className="bt-italic">reportagem honesta</span>.
           </h1>
 
           <p className="mt-7 text-lg lg:text-xl text-[hsl(var(--bt-ink-soft))] bt-body max-w-2xl">
-            Cloro residual, fluoreto, restos de hormônios, microplásticos e
-            metais pesados. Tudo dentro do limite "permitido" e fora de
-            qualquer reportagem de horário nobre. Esta é a investigação que a
-            indústria preferia que você nunca lesse.
+            Cloro residual, microplásticos, sabor de produto químico e caixas
+            d'água esquecidas. Esta página reúne reportagens que produzi sobre
+            a qualidade da água que chega na torneira brasileira e a escolha
+            de filtro que eu, pessoalmente, faço em casa.
           </p>
 
           <div className="mt-8 flex items-center gap-4 text-[hsl(var(--bt-muted))] bt-meta">
@@ -242,25 +242,25 @@ const HEADLINES = [
   {
     id: "nd6zhHTWR5s",
     tag: "Fique de olho",
-    title: "Algo na sua caixa d'água pode estar te adoecendo",
+    title: "O que costuma se acumular numa caixa d'água sem limpeza",
     excerpt:
-      "Sedimentos, biofilme e contaminação por microrganismos. O que vive escondido na caixa que ninguém limpa.",
-    cat: "Investigação",
+      "Sedimentos, biofilme e resíduos que se depositam quando a manutenção é esquecida, e o que dá para fazer no dia a dia.",
+    cat: "Reportagem",
   },
   {
     id: "9MN4PxggKu4",
-    tag: "Polêmica",
-    title: "A água que bebemos tem hormônios e restos de remédio",
+    tag: "Reportagem",
+    title: "O que o tratamento convencional não consegue remover da água",
     excerpt:
-      "Reportagem com Sidney Rodrigues sobre o que o tratamento convencional não retira da torneira.",
-    cat: "Polêmica",
+      "Reportagem com Sidney Rodrigues sobre os limites do tratamento padrão e o que isso significa para a água da sua torneira.",
+    cat: "Reportagem",
   },
   {
     id: "pkwYtusmIo4",
     tag: "Pesquisa",
-    title: "Esta água inflama seu corpo, e você nem sabe",
+    title: "pH, PRAL e oxidação: o que esses indicadores dizem sobre a água",
     excerpt:
-      "PRAL, pH e oxidação. O que os exames mostram quando você troca a água que bebe.",
+      "Os parâmetros que pesquisadores observam quando analisam a qualidade de uma água de consumo.",
     cat: "Pesquisa",
   },
 ];
@@ -351,25 +351,25 @@ const BetetiReportagem = () => (
         </p>
         <blockquote className="border-l-4 border-[hsl(var(--bt-red))] pl-6 my-8">
           <p className="bt-display text-2xl lg:text-3xl text-[hsl(var(--bt-ink))] leading-snug">
-            "Existe uma diferença gigante entre água potável, que não te mata
-            na hora, e água ideal, aquela que o corpo realmente precisa para
-            funcionar bem."
+            "Existe uma diferença grande entre água potável, que cumpre os
+            parâmetros legais, e uma água de qualidade, que você bebe com
+            prazer todos os dias."
           </p>
           <footer className="bt-meta text-[hsl(var(--bt-muted))] mt-3">
             Fernando Beteti, Repórter Saúde
           </footer>
         </blockquote>
         <p>
-          Os limites de cloro, fluoreto, alumínio e fármacos considerados
-          "seguros" foram desenhados para não causar morte aguda. Não para
-          preservar sua tireoide, sua microbiota, seu fígado e o cérebro dos
-          seus filhos.
+          Os limites de cloro, fluoreto e outros parâmetros considerados
+          aceitáveis pelas normas brasileiras foram desenhados para
+          potabilidade básica. Quando o assunto é sabor, conforto e a água
+          que a família realmente quer beber, dá para ir muito além.
         </p>
         <p>
           Por isso essa página existe. Reuni aqui as principais reportagens
           que produzi sobre o assunto, ao lado de especialistas que estudam a
-          água há décadas, e a única solução que eu, pessoalmente, recomendo
-          para quem assiste o nosso canal: o filtro Acqualive.
+          água há décadas, e a escolha de filtro que eu faço em casa: o
+          Acqualive.
         </p>
       </div>
     </div>
@@ -382,30 +382,30 @@ const BetetiReportagem = () => (
 const VIDEOS = [
   {
     id: "G74XNiv7MUY",
-    cat: "Investigação",
+    cat: "Reportagem",
     title: "Os 2 segredos da água Acqualive",
-    desc: "O que faz desse filtro o único que eu recomendo no canal, em detalhe técnico.",
+    desc: "O que faz desse filtro o único que eu indico no canal, em detalhe técnico.",
     duration: "12 min",
   },
   {
     id: "hUOj1BbSr3k",
     cat: "Entrevista",
-    title: "A médica que curou a azia trocando a água",
-    desc: "Sidney Rodrigues conta o caso clínico que mudou a forma dele de enxergar a água.",
+    title: "A médica que trocou de água e ganhou mais conforto no dia a dia",
+    desc: "Sidney Rodrigues conta o caso que mudou a forma dele de enxergar a qualidade da água de consumo.",
     duration: "8 min",
   },
   {
     id: "x1SgUYcT6Ak",
     cat: "Especialista",
-    title: "Dr. Dayan Siebra: como escolher a água ideal",
-    desc: "Cirurgião cardiovascular explica por que a água que cura é diferente da que vende.",
+    title: "Dr. Dayan Siebra: como avaliar a qualidade da água",
+    desc: "Cirurgião cardiovascular explica os parâmetros que considera ao escolher a água do dia a dia.",
     duration: "10 min",
   },
   {
     id: "5VipdvlZHHM",
     cat: "Cortes",
-    title: "O cemitério que o cloro deixa na água",
-    desc: "Trihalometanos, o subproduto do cloro que poucos jornalistas se atrevem a citar.",
+    title: "O que acontece quando o cloro reage na água tratada",
+    desc: "Subprodutos do cloro: o que a literatura técnica descreve sobre o assunto.",
     duration: "6 min",
   },
 ];
@@ -552,33 +552,33 @@ const BetetiVideos = () => {
 const SINTOMAS = [
   {
     n: "01",
-    t: "Cansaço sem explicação",
-    d: "Você dorme, come, descansa e mesmo assim acorda exausto. A desidratação celular crônica é uma das causas mais subestimadas pela medicina convencional.",
+    t: "Cheiro de cloro no copo",
+    d: "Aquele aroma de piscina que aparece quando o tratamento é reforçado. O cloro residual é o composto mais facilmente percebido pelo olfato.",
   },
   {
     n: "02",
-    t: "Inflamação que não passa",
-    d: "Dores articulares, inchaço, gordura abdominal teimosa. Água ácida e oxidada alimenta o ambiente inflamatório do corpo.",
+    t: "Sabor metálico ou estranho",
+    d: "Sais minerais em excesso, oxidação na rede de distribuição e tubulação antiga deixam um gosto que muda a experiência de beber.",
   },
   {
     n: "03",
-    t: "Pele seca e envelhecida",
-    d: "70% da pele é água. Quando o líquido que entra no corpo é cheio de cloro e metais, o colágeno paga o preço primeiro.",
+    t: "Sedimentos visíveis",
+    d: "Pontinhos escuros, água levemente turva, areia no fundo da garrafa. Sinais clássicos de caixa d'água sem manutenção.",
   },
   {
     n: "04",
-    t: "Problemas digestivos",
-    d: "Azia, refluxo, prisão de ventre. Água com pH errado destrói o equilíbrio gástrico e a microbiota intestinal.",
+    t: "Marca branca no copo e na chaleira",
+    d: "Calcário e dureza acima do recomendado. Aparece como crosta esbranquiçada em utensílios e eletrodomésticos.",
   },
   {
     n: "05",
-    t: "Tireoide em desordem",
-    d: "Fluoreto adicionado à água tratada compete com o iodo. Reportagens internacionais já ligam o consumo crônico a hipotireoidismo.",
+    t: "Água que ninguém da família quer beber",
+    d: "Quando a água da torneira é rejeitada, o consumo diário cai e a casa passa a depender de galão e garrafa PET o tempo todo.",
   },
   {
     n: "06",
-    t: "Hormônios desregulados",
-    d: "O tratamento convencional não filtra resíduos de anticoncepcionais, antidepressivos e antibióticos. Você toma o medicamento de outra pessoa todos os dias.",
+    t: "Conta crescente de água engarrafada",
+    d: "Galões, garrafinhas, plástico acumulado. O custo financeiro e ambiental de não confiar na água que sai da torneira.",
   },
 ];
 
@@ -586,19 +586,19 @@ const BetetiDor = () => (
   <section id="dor" className="relative py-20 lg:py-28 bg-white">
     <div className="max-w-[1300px] mx-auto px-5 lg:px-8">
       <div className="dayan-reveal flex items-center gap-3 mb-5">
-        <span className="bt-tag bt-tag-red">Investigação</span>
-        <span className="bt-meta">03 · O preço escondido</span>
+        <span className="bt-tag bt-tag-red">Reportagem</span>
+        <span className="bt-meta">03 · Sinais do dia a dia</span>
       </div>
 
       <h2 className="dayan-reveal bt-display text-3xl lg:text-5xl text-[hsl(var(--bt-ink))] max-w-4xl">
-        Você convive com sintomas que o seu médico nunca associou à sua água.
+        Seis sinais na água da sua casa que costumam passar despercebidos.
       </h2>
       <div className="bt-rule mt-6 mb-10" />
 
       <p className="dayan-reveal max-w-2xl text-lg text-[hsl(var(--bt-ink-soft))] bt-body mb-12">
         Em décadas de reportagem, recebi milhares de relatos. A história se
-        repete. As pessoas só conectam o problema à água depois que trocam e
-        os sintomas começam a desaparecer.
+        repete: as pessoas só percebem o quanto a água da torneira incomoda
+        depois que experimentam uma alternativa de melhor qualidade.
       </p>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[hsl(var(--bt-line))] border border-[hsl(var(--bt-line))]">
@@ -608,7 +608,7 @@ const BetetiDor = () => (
             className={`dayan-reveal dayan-reveal-delay-${(i % 3) + 1} bg-white p-7 lg:p-8`}
           >
             <div className="flex items-center gap-3">
-              <span className="bt-tag">Sintoma {s.n}</span>
+              <span className="bt-tag">Sinal {s.n}</span>
             </div>
             <h3 className="bt-display text-2xl text-[hsl(var(--bt-ink))] mt-4 leading-tight">
               {s.t}
@@ -633,9 +633,9 @@ const BetetiDor = () => (
           <div className="lg:col-span-10">
             <span className="bt-meta text-white/60">Análise · Repórter Saúde</span>
             <p className="bt-display text-2xl lg:text-4xl text-white mt-3 leading-tight">
-              "O brasileiro foi educado a confiar no tratamento da torneira. O
-              problema é que o tratamento foi feito para evitar que você
-              morresse hoje, não para que você viva bem amanhã."
+              "O brasileiro foi educado a confiar no tratamento da torneira.
+              O ponto é que tratamento básico cumpre a norma, mas qualidade,
+              sabor e conforto são outra conversa."
             </p>
           </div>
         </div>
@@ -650,33 +650,33 @@ const BetetiDor = () => (
 const PILARES = [
   {
     n: "01",
-    t: "Sem cloro residual",
-    d: "Remoção de até 99,9% do cloro e dos trihalometanos formados quando ele reage com matéria orgânica.",
+    t: "Redução do cloro residual",
+    d: "Sistema que reduz significativamente o cloro livre e os subprodutos formados na reação com matéria orgânica.",
   },
   {
     n: "02",
     t: "pH alcalino entre 8,5 e 10",
-    d: "A faixa que o corpo busca para neutralizar a acidez crônica da alimentação moderna.",
+    d: "Faixa de pH alcalino, característica de águas valorizadas em estudos de qualidade.",
   },
   {
     n: "03",
     t: "Minerais preservados",
-    d: "Cálcio, magnésio e potássio mantidos. Nada de água destilada vazia que rouba minerais do seu corpo.",
+    d: "Cálcio, magnésio e potássio mantidos na água. Não é água destilada ou desmineralizada.",
   },
   {
     n: "04",
-    t: "Antioxidante (ORP negativo)",
-    d: "Capacidade de doar elétrons e neutralizar radicais livres, o oposto da água engarrafada parada na prateleira.",
+    t: "ORP negativo",
+    d: "Potencial de oxirredução negativo, parâmetro físico-químico que indica baixa oxidação na água.",
   },
   {
     n: "05",
     t: "Estrutura molecular menor",
-    d: "Hidratação celular real, não apenas líquido passando pelo corpo.",
+    d: "Reagrupamento das moléculas em clusters menores, característica associada a melhor sensação de hidratação.",
   },
   {
     n: "06",
     t: "Sem microplásticos",
-    d: "Um copo de água de garrafa PET pode conter milhares de partículas. Filtragem física resolve.",
+    d: "Filtragem física que retém partículas e reduz o consumo de água engarrafada em PET.",
   },
 ];
 
@@ -688,18 +688,18 @@ const BetetiSolucao = () => (
     <div className="max-w-[1300px] mx-auto px-5 lg:px-8">
       <div className="dayan-reveal flex items-center gap-3 mb-5">
         <span className="bt-tag bt-tag-red">Pesquisa</span>
-        <span className="bt-meta">04 · A água ideal</span>
+        <span className="bt-meta">04 · Critérios de qualidade</span>
       </div>
 
       <h2 className="dayan-reveal bt-display text-3xl lg:text-5xl text-[hsl(var(--bt-ink))] max-w-4xl">
-        Existe uma água que o corpo reconhece como sua.
+        Seis critérios que definem uma água de qualidade.
       </h2>
       <div className="bt-rule mt-6 mb-10" />
 
       <p className="dayan-reveal max-w-2xl text-lg text-[hsl(var(--bt-ink-soft))] bt-body mb-12">
-        Pesquisadores chamam de "água ideal" a que cumpre seis critérios.
-        Quando todos estão presentes, o corpo deixa de gastar energia para se
-        proteger do líquido que recebe e começa a se reparar.
+        Pesquisadores de qualidade da água trabalham com seis parâmetros
+        principais. Quando todos estão presentes, a água ganha em sabor,
+        conforto e fica mais agradável de beber no dia a dia.
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[hsl(var(--bt-line))] border border-[hsl(var(--bt-line))]">
@@ -761,8 +761,8 @@ const BetetiAcqualive = () => (
           <div className="dayan-reveal mt-6 space-y-5 text-[hsl(var(--bt-ink-soft))] text-base lg:text-lg bt-body">
             <p>
               Recebo apresentações de marcas o tempo todo. A maioria não passa
-              do primeiro filtro técnico. O Acqualive entrega os seis pilares
-              da água ideal em um único equipamento brasileiro, com
+              do primeiro filtro técnico. O Acqualive entrega os seis critérios
+              de qualidade da água em um único equipamento brasileiro, com
               tecnologia patenteada e décadas de pesquisa por trás.
             </p>
             <p>
@@ -835,9 +835,10 @@ const BetetiBio = () => (
             </p>
             <p>
               Autor do livro "Não aceitei a sentença de morte que deram para
-              minha filha", sobre a jornada de cura que o motivou a investigar
-              saúde a fundo. É esse Beteti que está te falando agora e que
-              assina a recomendação do Acqualive.
+              minha filha", obra que conta a experiência pessoal que o
+              motivou a se aprofundar nos temas que reporta hoje. É esse
+              Beteti que está te falando agora e que assina a recomendação
+              editorial do Acqualive.
             </p>
           </div>
 
@@ -892,7 +893,7 @@ const BetetiOferta = () => (
               {[
                 "Parcelamento em até 10x sem juros",
                 "Frete grátis para todo o Brasil. Consulte regiões disponíveis",
-                "Garantia de saúde e bem-estar",
+                "Garantia de satisfação",
                 "Atendimento humano com a equipe Acqualive",
               ].map((t) => (
                 <li
@@ -941,11 +942,11 @@ const BetetiOferta = () => (
 const FAQS = [
   {
     q: "Por que o Beteti recomenda justamente o Acqualive?",
-    a: "Porque é o único filtro brasileiro que entrega, em um único equipamento, os seis pilares da água ideal: sem cloro residual, pH alcalino, minerais preservados, antioxidante, estrutura molecular menor e sem microplásticos. Já testei, entrevistei os especialistas envolvidos, e a minha família bebe.",
+    a: "Porque é o filtro brasileiro que entrega, em um único equipamento, os seis critérios de qualidade da água que costumo destacar nas reportagens: redução de cloro residual, pH alcalino, minerais preservados, ORP negativo, estrutura molecular menor e filtragem que retém microplásticos. Eu testei, entrevistei os especialistas envolvidos, e a minha família bebe.",
   },
   {
     q: "Eu já tenho filtro em casa. Preciso trocar?",
-    a: "A maioria dos filtros comuns só retém sedimentos e parte do cloro. Nenhum dos populares chega aos seis pilares da água ideal. Se você quer prevenção e saúde a longo prazo, vale conversar com a equipe Acqualive para uma análise.",
+    a: "A maioria dos filtros comuns só retém sedimentos e parte do cloro. Para quem quer atender os seis critérios de qualidade citados nas reportagens, vale conversar com a equipe Acqualive para uma análise.",
   },
   {
     q: "Funciona em apartamento, com caixa d'água compartilhada?",
@@ -1009,9 +1010,9 @@ const BetetiFooter = () => (
             Repórter Saúde · em parceria editorial com Acqualive
           </p>
           <p className="text-sm text-white/70 bt-body mt-5 max-w-md">
-            A informação é o melhor remédio para a saúde. Reportagens,
-            entrevistas e investigações sobre o que afeta o corpo e a vida do
-            brasileiro.
+            Informação de qualidade sobre o que afeta o dia a dia do
+            brasileiro. Reportagens, entrevistas e investigações com fontes
+            qualificadas.
           </p>
         </div>
         <div className="md:col-span-3 text-sm text-white/70">
@@ -1058,16 +1059,16 @@ const FernandoBeteti = () => {
     <>
       <Helmet>
         <title>
-          Fernando Beteti, a água do Brasil é uma emergência silenciosa | Acqualive
+          Fernando Beteti, reportagens sobre a água do Brasil | Acqualive
         </title>
         <meta
           name="description"
-          content="Reportagem especial do jornalista Fernando Beteti sobre a água que entra no seu copo. Cloro, hormônios, microplásticos e a saída: o filtro Acqualive."
+          content="Reportagens do jornalista Fernando Beteti sobre a qualidade da água que chega na torneira brasileira e a escolha editorial do filtro Acqualive."
         />
         <meta property="og:title" content="Fernando Beteti × Acqualive" />
         <meta
           property="og:description"
-          content="A água do brasileiro virou um escândalo que ninguém reporta. Carta aberta de um jornalista de 30 anos."
+          content="Reportagens sobre a qualidade da água que chega no copo do brasileiro, com curadoria editorial de Fernando Beteti."
         />
         <link
           rel="canonical"
