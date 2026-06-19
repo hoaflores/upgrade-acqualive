@@ -242,25 +242,25 @@ const HEADLINES = [
   {
     id: "nd6zhHTWR5s",
     tag: "Fique de olho",
-    title: "Algo na sua caixa d'água pode estar te adoecendo",
+    title: "O que costuma se acumular numa caixa d'água sem limpeza",
     excerpt:
-      "Sedimentos, biofilme e contaminação por microrganismos. O que vive escondido na caixa que ninguém limpa.",
-    cat: "Investigação",
+      "Sedimentos, biofilme e resíduos que se depositam quando a manutenção é esquecida, e o que dá para fazer no dia a dia.",
+    cat: "Reportagem",
   },
   {
     id: "9MN4PxggKu4",
-    tag: "Polêmica",
-    title: "A água que bebemos tem hormônios e restos de remédio",
+    tag: "Reportagem",
+    title: "O que o tratamento convencional não consegue remover da água",
     excerpt:
-      "Reportagem com Sidney Rodrigues sobre o que o tratamento convencional não retira da torneira.",
-    cat: "Polêmica",
+      "Reportagem com Sidney Rodrigues sobre os limites do tratamento padrão e o que isso significa para a água da sua torneira.",
+    cat: "Reportagem",
   },
   {
     id: "pkwYtusmIo4",
     tag: "Pesquisa",
-    title: "Esta água inflama seu corpo, e você nem sabe",
+    title: "pH, PRAL e oxidação: o que esses indicadores dizem sobre a água",
     excerpt:
-      "PRAL, pH e oxidação. O que os exames mostram quando você troca a água que bebe.",
+      "Os parâmetros que pesquisadores observam quando analisam a qualidade de uma água de consumo.",
     cat: "Pesquisa",
   },
 ];
