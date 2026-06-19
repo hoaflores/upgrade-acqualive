@@ -552,33 +552,33 @@ const BetetiVideos = () => {
 const SINTOMAS = [
   {
     n: "01",
-    t: "Cansaço sem explicação",
-    d: "Você dorme, come, descansa e mesmo assim acorda exausto. A desidratação celular crônica é uma das causas mais subestimadas pela medicina convencional.",
+    t: "Cheiro de cloro no copo",
+    d: "Aquele aroma de piscina que aparece quando o tratamento é reforçado. O cloro residual é o composto mais facilmente percebido pelo olfato.",
   },
   {
     n: "02",
-    t: "Inflamação que não passa",
-    d: "Dores articulares, inchaço, gordura abdominal teimosa. Água ácida e oxidada alimenta o ambiente inflamatório do corpo.",
+    t: "Sabor metálico ou estranho",
+    d: "Sais minerais em excesso, oxidação na rede de distribuição e tubulação antiga deixam um gosto que muda a experiência de beber.",
   },
   {
     n: "03",
-    t: "Pele seca e envelhecida",
-    d: "70% da pele é água. Quando o líquido que entra no corpo é cheio de cloro e metais, o colágeno paga o preço primeiro.",
+    t: "Sedimentos visíveis",
+    d: "Pontinhos escuros, água levemente turva, areia no fundo da garrafa. Sinais clássicos de caixa d'água sem manutenção.",
   },
   {
     n: "04",
-    t: "Problemas digestivos",
-    d: "Azia, refluxo, prisão de ventre. Água com pH errado destrói o equilíbrio gástrico e a microbiota intestinal.",
+    t: "Marca branca no copo e na chaleira",
+    d: "Calcário e dureza acima do recomendado. Aparece como crosta esbranquiçada em utensílios e eletrodomésticos.",
   },
   {
     n: "05",
-    t: "Tireoide em desordem",
-    d: "Fluoreto adicionado à água tratada compete com o iodo. Reportagens internacionais já ligam o consumo crônico a hipotireoidismo.",
+    t: "Água que ninguém da família quer beber",
+    d: "Quando a água da torneira é rejeitada, o consumo diário cai e a casa passa a depender de galão e garrafa PET o tempo todo.",
   },
   {
     n: "06",
-    t: "Hormônios desregulados",
-    d: "O tratamento convencional não filtra resíduos de anticoncepcionais, antidepressivos e antibióticos. Você toma o medicamento de outra pessoa todos os dias.",
+    t: "Conta crescente de água engarrafada",
+    d: "Galões, garrafinhas, plástico acumulado. O custo financeiro e ambiental de não confiar na água que sai da torneira.",
   },
 ];
 
@@ -586,19 +586,19 @@ const BetetiDor = () => (
   <section id="dor" className="relative py-20 lg:py-28 bg-white">
     <div className="max-w-[1300px] mx-auto px-5 lg:px-8">
       <div className="dayan-reveal flex items-center gap-3 mb-5">
-        <span className="bt-tag bt-tag-red">Investigação</span>
-        <span className="bt-meta">03 · O preço escondido</span>
+        <span className="bt-tag bt-tag-red">Reportagem</span>
+        <span className="bt-meta">03 · Sinais do dia a dia</span>
       </div>
 
       <h2 className="dayan-reveal bt-display text-3xl lg:text-5xl text-[hsl(var(--bt-ink))] max-w-4xl">
-        Você convive com sintomas que o seu médico nunca associou à sua água.
+        Seis sinais na água da sua casa que costumam passar despercebidos.
       </h2>
       <div className="bt-rule mt-6 mb-10" />
 
       <p className="dayan-reveal max-w-2xl text-lg text-[hsl(var(--bt-ink-soft))] bt-body mb-12">
         Em décadas de reportagem, recebi milhares de relatos. A história se
-        repete. As pessoas só conectam o problema à água depois que trocam e
-        os sintomas começam a desaparecer.
+        repete: as pessoas só percebem o quanto a água da torneira incomoda
+        depois que experimentam uma alternativa de melhor qualidade.
       </p>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[hsl(var(--bt-line))] border border-[hsl(var(--bt-line))]">
@@ -608,7 +608,7 @@ const BetetiDor = () => (
             className={`dayan-reveal dayan-reveal-delay-${(i % 3) + 1} bg-white p-7 lg:p-8`}
           >
             <div className="flex items-center gap-3">
-              <span className="bt-tag">Sintoma {s.n}</span>
+              <span className="bt-tag">Sinal {s.n}</span>
             </div>
             <h3 className="bt-display text-2xl text-[hsl(var(--bt-ink))] mt-4 leading-tight">
               {s.t}
@@ -633,9 +633,9 @@ const BetetiDor = () => (
           <div className="lg:col-span-10">
             <span className="bt-meta text-white/60">Análise · Repórter Saúde</span>
             <p className="bt-display text-2xl lg:text-4xl text-white mt-3 leading-tight">
-              "O brasileiro foi educado a confiar no tratamento da torneira. O
-              problema é que o tratamento foi feito para evitar que você
-              morresse hoje, não para que você viva bem amanhã."
+              "O brasileiro foi educado a confiar no tratamento da torneira.
+              O ponto é que tratamento básico cumpre a norma, mas qualidade,
+              sabor e conforto são outra conversa."
             </p>
           </div>
         </div>
