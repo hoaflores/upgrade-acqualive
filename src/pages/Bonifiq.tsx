@@ -670,7 +670,7 @@ const BonifiqFooter = () => (
   <footer className="py-12 bg-secondary">
     <div className="container">
       <div className="flex flex-col items-center gap-6 text-center">
-        <img src={logoAcqualiveBranca} alt="Acqualive" className="h-8 w-auto opacity-70" />
+        <img src={logoAcqualiveBranca} alt="Acqualive" className="h-16 md:h-20 w-auto opacity-80" />
         <p className="text-primary-foreground/50 text-sm max-w-md">
           Pontos, cupons e regras estão sujeitos aos termos do programa Acqualive Club.
         </p>
