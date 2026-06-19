@@ -835,9 +835,10 @@ const BetetiBio = () => (
             </p>
             <p>
               Autor do livro "Não aceitei a sentença de morte que deram para
-              minha filha", sobre a jornada de cura que o motivou a investigar
-              saúde a fundo. É esse Beteti que está te falando agora e que
-              assina a recomendação do Acqualive.
+              minha filha", obra que conta a experiência pessoal que o
+              motivou a se aprofundar nos temas que reporta hoje. É esse
+              Beteti que está te falando agora e que assina a recomendação
+              editorial do Acqualive.
             </p>
           </div>
 
