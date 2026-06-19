@@ -382,30 +382,30 @@ const BetetiReportagem = () => (
 const VIDEOS = [
   {
     id: "G74XNiv7MUY",
-    cat: "Investigação",
+    cat: "Reportagem",
     title: "Os 2 segredos da água Acqualive",
-    desc: "O que faz desse filtro o único que eu recomendo no canal, em detalhe técnico.",
+    desc: "O que faz desse filtro o único que eu indico no canal, em detalhe técnico.",
     duration: "12 min",
   },
   {
     id: "hUOj1BbSr3k",
     cat: "Entrevista",
-    title: "A médica que curou a azia trocando a água",
-    desc: "Sidney Rodrigues conta o caso clínico que mudou a forma dele de enxergar a água.",
+    title: "A médica que trocou de água e ganhou mais conforto no dia a dia",
+    desc: "Sidney Rodrigues conta o caso que mudou a forma dele de enxergar a qualidade da água de consumo.",
     duration: "8 min",
   },
   {
     id: "x1SgUYcT6Ak",
     cat: "Especialista",
-    title: "Dr. Dayan Siebra: como escolher a água ideal",
-    desc: "Cirurgião cardiovascular explica por que a água que cura é diferente da que vende.",
+    title: "Dr. Dayan Siebra: como avaliar a qualidade da água",
+    desc: "Cirurgião cardiovascular explica os parâmetros que considera ao escolher a água do dia a dia.",
     duration: "10 min",
   },
   {
     id: "5VipdvlZHHM",
     cat: "Cortes",
-    title: "O cemitério que o cloro deixa na água",
-    desc: "Trihalometanos, o subproduto do cloro que poucos jornalistas se atrevem a citar.",
+    title: "O que acontece quando o cloro reage na água tratada",
+    desc: "Subprodutos do cloro: o que a literatura técnica descreve sobre o assunto.",
     duration: "6 min",
   },
 ];
