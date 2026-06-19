@@ -730,7 +730,7 @@ const Bonifiq = () => {
         {/* Minimal header */}
         <header className="absolute top-0 left-0 right-0 z-50 py-5">
           <div className="container flex justify-center">
-            <img src={iconAcqualive} alt="Acqualive" className="h-10 w-auto opacity-80" />
+            <img src={iconAcqualive} alt="Acqualive" className="h-16 md:h-20 w-auto opacity-90" />
           </div>
         </header>
 
