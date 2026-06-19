@@ -108,10 +108,10 @@ const BetetiNav = () => {
           {Array.from({ length: 2 }).map((_, k) => (
             <div key={k} className="flex items-center gap-10 pr-10 shrink-0">
               {[
-                "URGENTE · 99,9% da água da torneira no Brasil contém cloro residual",
-                "INVESTIGAÇÃO · restos de hormônios e fármacos detectados em águas tratadas",
-                "ALERTA · caixas d'água sem limpeza viram criadouros silenciosos",
-                "REPORTAGEM ESPECIAL · a água que você bebe pode estar te adoecendo",
+                "EM PAUTA · 99,9% da água da torneira no Brasil contém cloro residual",
+                "REPORTAGEM · resíduos químicos detectados em estudos sobre águas tratadas",
+                "ALERTA · caixas d'água sem limpeza acumulam sedimentos e biofilme",
+                "REPORTAGEM ESPECIAL · você sabe mesmo o que sai da sua torneira?",
               ].map((t, i) => (
                 <span
                   key={`${k}-${i}`}
