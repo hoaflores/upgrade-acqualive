@@ -761,8 +761,8 @@ const BetetiAcqualive = () => (
           <div className="dayan-reveal mt-6 space-y-5 text-[hsl(var(--bt-ink-soft))] text-base lg:text-lg bt-body">
             <p>
               Recebo apresentações de marcas o tempo todo. A maioria não passa
-              do primeiro filtro técnico. O Acqualive entrega os seis pilares
-              da água ideal em um único equipamento brasileiro, com
+              do primeiro filtro técnico. O Acqualive entrega os seis critérios
+              de qualidade da água em um único equipamento brasileiro, com
               tecnologia patenteada e décadas de pesquisa por trás.
             </p>
             <p>
