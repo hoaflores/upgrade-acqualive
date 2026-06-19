@@ -155,15 +155,15 @@ const BetetiHero = () => (
           </div>
 
           <h1 className="bt-display text-[2.2rem] sm:text-[3rem] lg:text-[4.4rem] xl:text-[5rem] text-[hsl(var(--bt-ink))]">
-            A água do brasileiro virou um{" "}
-            <span className="bt-italic">escândalo</span> que ninguém reporta.
+            A água do brasileiro merece uma{" "}
+            <span className="bt-italic">reportagem honesta</span>.
           </h1>
 
           <p className="mt-7 text-lg lg:text-xl text-[hsl(var(--bt-ink-soft))] bt-body max-w-2xl">
-            Cloro residual, fluoreto, restos de hormônios, microplásticos e
-            metais pesados. Tudo dentro do limite "permitido" e fora de
-            qualquer reportagem de horário nobre. Esta é a investigação que a
-            indústria preferia que você nunca lesse.
+            Cloro residual, microplásticos, sabor de produto químico e caixas
+            d'água esquecidas. Esta página reúne reportagens que produzi sobre
+            a qualidade da água que chega na torneira brasileira e a escolha
+            de filtro que eu, pessoalmente, faço em casa.
           </p>
 
           <div className="mt-8 flex items-center gap-4 text-[hsl(var(--bt-muted))] bt-meta">
