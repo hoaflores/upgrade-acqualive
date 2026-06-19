@@ -942,11 +942,11 @@ const BetetiOferta = () => (
 const FAQS = [
   {
     q: "Por que o Beteti recomenda justamente o Acqualive?",
-    a: "Porque é o único filtro brasileiro que entrega, em um único equipamento, os seis pilares da água ideal: sem cloro residual, pH alcalino, minerais preservados, antioxidante, estrutura molecular menor e sem microplásticos. Já testei, entrevistei os especialistas envolvidos, e a minha família bebe.",
+    a: "Porque é o filtro brasileiro que entrega, em um único equipamento, os seis critérios de qualidade da água que costumo destacar nas reportagens: redução de cloro residual, pH alcalino, minerais preservados, ORP negativo, estrutura molecular menor e filtragem que retém microplásticos. Eu testei, entrevistei os especialistas envolvidos, e a minha família bebe.",
   },
   {
     q: "Eu já tenho filtro em casa. Preciso trocar?",
-    a: "A maioria dos filtros comuns só retém sedimentos e parte do cloro. Nenhum dos populares chega aos seis pilares da água ideal. Se você quer prevenção e saúde a longo prazo, vale conversar com a equipe Acqualive para uma análise.",
+    a: "A maioria dos filtros comuns só retém sedimentos e parte do cloro. Para quem quer atender os seis critérios de qualidade citados nas reportagens, vale conversar com a equipe Acqualive para uma análise.",
   },
   {
     q: "Funciona em apartamento, com caixa d'água compartilhada?",
