@@ -1010,9 +1010,9 @@ const BetetiFooter = () => (
             Repórter Saúde · em parceria editorial com Acqualive
           </p>
           <p className="text-sm text-white/70 bt-body mt-5 max-w-md">
-            A informação é o melhor remédio para a saúde. Reportagens,
-            entrevistas e investigações sobre o que afeta o corpo e a vida do
-            brasileiro.
+            Informação de qualidade sobre o que afeta o dia a dia do
+            brasileiro. Reportagens, entrevistas e investigações com fontes
+            qualificadas.
           </p>
         </div>
         <div className="md:col-span-3 text-sm text-white/70">
