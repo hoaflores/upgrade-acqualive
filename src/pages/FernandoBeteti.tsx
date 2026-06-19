@@ -1059,16 +1059,16 @@ const FernandoBeteti = () => {
     <>
       <Helmet>
         <title>
-          Fernando Beteti, a água do Brasil é uma emergência silenciosa | Acqualive
+          Fernando Beteti, reportagens sobre a água do Brasil | Acqualive
         </title>
         <meta
           name="description"
-          content="Reportagem especial do jornalista Fernando Beteti sobre a água que entra no seu copo. Cloro, hormônios, microplásticos e a saída: o filtro Acqualive."
+          content="Reportagens do jornalista Fernando Beteti sobre a qualidade da água que chega na torneira brasileira e a escolha editorial do filtro Acqualive."
         />
         <meta property="og:title" content="Fernando Beteti × Acqualive" />
         <meta
           property="og:description"
-          content="A água do brasileiro virou um escândalo que ninguém reporta. Carta aberta de um jornalista de 30 anos."
+          content="Reportagens sobre a qualidade da água que chega no copo do brasileiro, com curadoria editorial de Fernando Beteti."
         />
         <link
           rel="canonical"
