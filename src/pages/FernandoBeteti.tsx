@@ -893,7 +893,7 @@ const BetetiOferta = () => (
               {[
                 "Parcelamento em até 10x sem juros",
                 "Frete grátis para todo o Brasil. Consulte regiões disponíveis",
-                "Garantia de saúde e bem-estar",
+                "Garantia de satisfação",
                 "Atendimento humano com a equipe Acqualive",
               ].map((t) => (
                 <li
