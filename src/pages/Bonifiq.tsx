@@ -148,7 +148,7 @@ const ReferralSection = () => {
       step: "03",
       icon: Trophy,
       title: "Você ganha um Kit de Refis GRÁTIS!",
-      description: "Quando a compra do seu amigo for confirmada, você ganha 21.400 pontos automaticamente — o equivalente a um kit de refis completo. Uma indicação por semestre e você nunca mais paga para ter água alcalina de qualidade!",
+      description: "Quando a compra do seu amigo for confirmada, você ganha 22.850 pontos automaticamente — o equivalente a um kit de refis completo. Uma indicação por semestre e você nunca mais paga para ter água alcalina de qualidade!",
     },
   ];
 
@@ -225,7 +225,7 @@ const ReferralSection = () => {
                   <p className="text-sm text-muted-foreground mb-2 font-medium">VOCÊ GANHA</p>
                   <p className="text-3xl sm:text-4xl font-display font-bold text-primary">Kit de Refis</p>
                   <p className="text-lg font-bold text-accent mt-1">GRÁTIS!</p>
-                  <p className="text-xs text-muted-foreground mt-1">21.400 pts por indicação</p>
+                  <p className="text-xs text-muted-foreground mt-1">22.850 pts por indicação</p>
                   <p className="text-xs text-primary font-semibold mt-2">1 indicação/semestre = água alcalina para sempre</p>
                 </div>
                 <div className="text-center p-6 rounded-xl bg-accent/5 border border-accent/10">
@@ -425,7 +425,7 @@ const OtherWaysSection = () => {
 /* ───────────── TABELA DE CONVERSÃO ───────────── */
 const ConversionSection = () => {
   const rows = [
-    { action: "Indicar Amigo (Compra Filtro)", points: "21.400 pts", value: "Kit de Refis GRÁTIS", highlight: "1 indicação/semestre = nunca mais pagar!", featured: true },
+    { action: "Indicar Amigo (Compra Filtro)", points: "22.850 pts", value: "Kit de Refis GRÁTIS", highlight: "1 indicação/semestre = nunca mais pagar!", featured: true },
     { action: "Review Completo (Texto + Foto + Vídeo)", points: "250 pts", value: "R$ 5,00", highlight: "" },
     { action: "Presente de Aniversário", points: "1.000 pts", value: "R$ 20,00", highlight: "" },
     { action: "Criação de Conta", points: "500 pts", value: "R$ 10,00", highlight: "" },
@@ -519,7 +519,7 @@ const FAQSection = () => {
     },
     {
       question: "Posso indicar mais de um amigo?",
-      answer: "Sim! Não há limite de indicações. Cada amigo que comprar usando seu link gera 21.400 pontos — o equivalente a um kit de refis GRÁTIS. Com apenas uma indicação por semestre, você nunca mais paga para ter água alcalina de qualidade!",
+      answer: "Sim! Não há limite de indicações. Cada amigo que comprar usando seu link gera 22.850 pontos — o equivalente a um kit de refis GRÁTIS. Com apenas uma indicação por semestre, você nunca mais paga para ter água alcalina de qualidade!",
     },
     {
       question: "Meu amigo precisa usar meu link para eu ganhar os pontos?",
@@ -543,7 +543,7 @@ const FAQSection = () => {
     },
     {
       question: "E se o amigo que eu indiquei devolver o produto?",
-      answer: "Se a compra do seu amigo for cancelada ou devolvida, os 21.400 pontos da indicação serão estornados do seu saldo. Os pontos só são definitivos após o prazo de troca/devolução do pedido.",
+      answer: "Se a compra do seu amigo for cancelada ou devolvida, os 22.850 pontos da indicação serão estornados do seu saldo. Os pontos só são definitivos após o prazo de troca/devolução do pedido.",
     },
     {
       question: "Posso transferir meus pontos para outra pessoa?",

@@ -668,7 +668,7 @@ ${PRODUCT_GRID_HTML}
 <!-- Row: Indicação -->
 <tr>
 <td style="padding:14px 20px;border-bottom:1px solid #1e1e1e;"><p style="margin:0;font-size:14px;color:#ffffff;font-weight:600;">Indica&ccedil;&atilde;o confirmada</p></td>
-<td style="padding:14px 20px;border-bottom:1px solid #1e1e1e;text-align:center;"><p style="margin:0;font-size:14px;color:#e88a3a;font-weight:700;">21.400</p></td>
+<td style="padding:14px 20px;border-bottom:1px solid #1e1e1e;text-align:center;"><p style="margin:0;font-size:14px;color:#e88a3a;font-weight:700;">22.850</p></td>
 <td style="padding:14px 20px;border-bottom:1px solid #1e1e1e;text-align:right;"><p style="margin:0;font-size:14px;color:#ffffff;font-weight:700;">Kit de Refis</p></td>
 </tr>
 
