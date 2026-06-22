@@ -11,15 +11,15 @@ const PRODUCTS = [
     name: "Acqualive V Self Essencial 6L",
     img: vSelf6L,
     line: "Compacto",
-    price: "R$ 189,72",
+    price: "R$ 218,21",
     inst: "10x sem juros",
     badge: "Compacto",
   },
   {
-    name: "Acqualive V-Self Premium 10L",
+    name: "Acqualive V Self Premium 10L",
     img: vSelfPremium,
     line: "O mais vendido",
-    price: "R$ 256,22",
+    price: "R$ 279,96",
     inst: "10x sem juros",
     badge: "Best-seller",
     highlight: true,
@@ -28,7 +28,7 @@ const PRODUCTS = [
     name: "Acqualive Terracota",
     img: terracota,
     line: "A evolução do filtro de barro",
-    price: "R$ 298,97",
+    price: "R$ 313,21",
     inst: "10x sem juros",
     badge: "Design",
   },
@@ -123,9 +123,9 @@ const DayanOffer = () => {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`mt-6 inline-flex items-center justify-center gap-2 py-3 rounded-full text-sm font-semibold transition-colors ${
+                  className={`mt-6 inline-flex items-center justify-center gap-2 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
                     p.highlight
-                      ? "bg-[hsl(var(--ds-ink))] text-white hover:bg-[hsl(var(--ds-blue-deep))]"
+                      ? "bg-gradient-to-r from-accent to-gold text-white shadow-2xl animate-pulse-soft hover:opacity-90"
                       : "bg-[hsl(var(--ds-surface))] text-[hsl(var(--ds-ink))] hover:bg-[hsl(var(--ds-line))]"
                   }`}
                 >
