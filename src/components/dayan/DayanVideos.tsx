@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const VIDEOS = [
   {
     id: "fbFGc8QxmVE",
@@ -18,6 +20,56 @@ const VIDEOS = [
     desc: "1h44 de conversa sobre hidratação, rotina e qualidade da água em casa.",
   },
 ];
+
+// Facade leve: só carrega o iframe pesado do YouTube quando o usuário clica.
+// Isso elimina dezenas de requests por vídeo no carregamento inicial,
+// crítico para mobile (especialmente no in-app browser do YouTube/iOS).
+const LiteYouTube = ({ id, title }: { id: string; title: string }) => {
+  const [active, setActive] = useState(false);
+
+  if (active) {
+    return (
+      <iframe
+        src={`https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`}
+        title={title}
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+        className="absolute inset-0 w-full h-full"
+      />
+    );
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={() => setActive(true)}
+      aria-label={`Reproduzir: ${title}`}
+      className="absolute inset-0 w-full h-full group/play"
+    >
+      <img
+        src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
+        alt={title}
+        loading="lazy"
+        width={480}
+        height={360}
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <span className="absolute inset-0 bg-black/20 group-hover/play:bg-black/30 transition-colors" />
+      <span className="absolute inset-0 flex items-center justify-center">
+        <span className="flex items-center justify-center w-16 h-16 rounded-full bg-white/95 shadow-xl group-hover/play:scale-110 transition-transform">
+          <svg
+            viewBox="0 0 24 24"
+            className="w-7 h-7 ml-1 fill-[hsl(var(--ds-ink))]"
+            aria-hidden="true"
+          >
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </span>
+      </span>
+    </button>
+  );
+};
 
 const DayanVideos = () => {
   return (
@@ -55,14 +107,7 @@ const DayanVideos = () => {
               className={`dayan-reveal dayan-reveal-delay-${(i % 3) + 1} group`}
             >
               <div className="relative aspect-video overflow-hidden bg-[hsl(var(--ds-blue-deep))] rounded-sm">
-                <iframe
-                  src={`https://www.youtube.com/embed/${v.id}?rel=0&modestbranding=1`}
-                  title={v.title}
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
+                <LiteYouTube id={v.id} title={v.title} />
               </div>
               <div className="mt-6 flex items-start gap-4">
                 <span className="dayan-num text-3xl text-[hsl(var(--ds-accent))]">
