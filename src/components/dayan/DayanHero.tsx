@@ -1,4 +1,4 @@
-import dayanHero from "@/assets/dayan-hero-portrait.png";
+import dayanHero from "@/assets/dayan-hero-portrait.jpg";
 
 const DayanHero = () => {
   return (
