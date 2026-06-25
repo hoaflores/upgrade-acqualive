@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
 import { useDayanReveal } from "@/hooks/useDayanReveal";
+import LiteYouTube from "@/components/LiteYouTube";
 import betetiCapa from "@/assets/beteti-novo-3.jpg";
 import betetiCamera from "@/assets/beteti-novo-2.jpg";
 import betetiEstudio from "@/assets/beteti-terracota.jpg";
@@ -283,14 +284,7 @@ const BetetiHeadlines = () => (
             className={`dayan-reveal dayan-reveal-delay-${(i % 3) + 1} bt-card-hover group`}
           >
             <div className="bt-video-frame aspect-video mb-4">
-              <iframe
-                src={`https://www.youtube.com/embed/${h.id}?rel=0&modestbranding=1`}
-                title={h.title}
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              />
+              <LiteYouTube id={h.id} title={h.title} />
               <span className="absolute top-3 left-3 bt-tag z-[3]">{h.tag}</span>
             </div>
             <span className="bt-meta text-[hsl(var(--bt-blue-deep))]">{h.cat}</span>
@@ -449,14 +443,7 @@ const BetetiVideos = () => {
           {/* Destaque */}
           <article className="dayan-reveal lg:col-span-8">
             <div className="bt-video-frame aspect-video">
-              <iframe
-                src={`https://www.youtube.com/embed/${feature.id}?rel=0&modestbranding=1`}
-                title={feature.title}
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              />
+              <LiteYouTube id={feature.id} title={feature.title} quality="sd" />
               <span className="absolute top-4 left-4 bt-tag bt-tag-red z-[3]">
                 Em destaque
               </span>
@@ -512,14 +499,7 @@ const BetetiVideos = () => {
               className={`dayan-reveal dayan-reveal-delay-${(i % 3) + 1} bt-card-hover`}
             >
               <div className="bt-video-frame aspect-video">
-                <iframe
-                  src={`https://www.youtube.com/embed/${v.id}?rel=0&modestbranding=1`}
-                  title={v.title}
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
+                <LiteYouTube id={v.id} title={v.title} />
                 <span className="bt-play-badge">
                   <span className="bt-play-tri" /> {v.duration}
                 </span>
