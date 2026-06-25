@@ -22,7 +22,7 @@ const HTML = `<!DOCTYPE html>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
 <tr>
 <td align="left" style="vertical-align:middle;">
-<img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-logo-azul-email.png" alt="Acqualive" width="140" style="display:block;">
+<img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-logo-oficial-email.png" alt="Acqualive" width="150" style="display:block;">
 </td>
 <td align="right" style="vertical-align:middle;">
 <span style="display:inline-block;padding:8px 14px;background-color:#C5F542;color:#0a0a0a;font-size:11px;font-weight:800;letter-spacing:1px;border-radius:999px;text-transform:uppercase;">Mãe Nutrida Experience</span>
