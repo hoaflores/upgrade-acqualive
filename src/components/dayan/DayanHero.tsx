@@ -1,4 +1,4 @@
-import dayanHero from "@/assets/dayan-hero-portrait.jpg";
+import dayanHero from "@/assets/dayan-hero-portrait.png";
 
 const DayanHero = () => {
   return (
@@ -55,8 +55,8 @@ const DayanHero = () => {
               src={dayanHero}
               alt="Dr. Dayan Siebra, cirurgião vascular"
               className="absolute inset-0 w-full h-full object-cover object-top"
-              width={900}
-              height={1125}
+              width={915}
+              height={1200}
             />
 
             {/* Vinheta inferior para legibilidade */}
@@ -225,8 +225,8 @@ const DayanHero = () => {
                   src={dayanHero}
                   alt="Dr. Dayan Siebra, cirurgião vascular"
                   className="absolute inset-0 w-full h-full object-cover object-top"
-                  width={1080}
-                  height={1440}
+                  width={915}
+                  height={1200}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--ds-blue-deep))]/40 via-transparent to-transparent" />
               </div>
