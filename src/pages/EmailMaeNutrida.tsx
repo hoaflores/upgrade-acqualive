@@ -72,7 +72,7 @@ const HTML = `<!DOCTYPE html>
 <tr>
 <td style="width:4px;background-color:#D4AF37;border-radius:2px;"></td>
 <td style="padding:6px 24px;">
-<p style="margin:0;font-size:18px;line-height:1.6;color:#0A1A4A;font-style:italic;">"Pequenas escolhas, repetidas todos os dias, constroem como você se sente, se entrega e lidera."</p>
+<p style="margin:0;font-size:18px;line-height:1.6;color:#0A1A4A;font-style:italic;">"Cada paciente é uma só pessoa. Cada gole também. A qualidade da água que entra no corpo importa tanto quanto a prescrição que sai do consultório."</p>
 </td>
 </tr>
 </table>
@@ -81,8 +81,8 @@ const HTML = `<!DOCTYPE html>
 <!-- Conexão MN -->
 <tr><td style="padding:28px 40px 8px;">
 <h2 style="margin:0 0 14px;font-size:22px;line-height:1.35;color:#0A1A4A;font-weight:700;">Por que isso conversa com a Mãe Nutrida Experience?</h2>
-<p style="margin:0 0 16px;font-size:16px;line-height:1.8;color:#374151;">Porque a proposta é a mesma: cuidar do que é essencial, com critério, ciência e leveza. A Acqualive entra como a base silenciosa da sua rotina, a hidratação que sustenta cada um dos seus outros hábitos de saúde e bem-estar.</p>
-<p style="margin:0 0 16px;font-size:16px;line-height:1.8;color:#374151;">Sem galão pesado. Sem garrafa plástica. Sem dúvida sobre o que está dentro do copo.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.8;color:#374151;">Porque a proposta é a mesma: tratar o essencial com critério, ciência aplicada e raciocínio clínico. Assim como você escolhe o ferro, o ômega e o pré-natal certos para cada gestante, a água também merece esse olhar — para você, para a sua família e para a paciente que recebe a sua orientação.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.8;color:#374151;">A Acqualive entra como a base silenciosa da rotina: hidratação pura, alcalina e mineralizada, direto da torneira. Sem galão pesado. Sem garrafa plástica. Sem dúvida sobre o que está dentro do copo.</p>
 </td></tr>
 
 <!-- Oferta Card -->
@@ -91,7 +91,7 @@ const HTML = `<!DOCTYPE html>
 <tr><td style="padding:32px 28px;text-align:center;">
 <p style="margin:0 0 10px;font-size:12px;font-weight:800;letter-spacing:2px;color:#0A1A4A;text-transform:uppercase;">Cupom exclusivo</p>
 <p style="margin:0 0 14px;font-size:36px;font-weight:900;color:#0A1A4A;letter-spacing:3px;">MAENUTRIDA</p>
-<p style="margin:0 0 22px;font-size:14px;line-height:1.6;color:#0A1A4A;">Benefício especial para participantes da Mãe Nutrida Experience na linha completa de purificadores Acqualive.</p>
+<p style="margin:0 0 22px;font-size:14px;line-height:1.6;color:#0A1A4A;">Benefício exclusivo para a comunidade Mãe Nutrida na linha completa de purificadores Acqualive.</p>
 <table role="presentation" cellpadding="0" cellspacing="0" align="center"><tr><td style="background-color:#0A1A4A;border-radius:999px;">
 <a href="https://www.acqualive.com.br/MAENUTRIDA" target="_blank" style="display:inline-block;padding:16px 34px;font-size:14px;font-weight:800;color:#D4AF37;text-decoration:none;letter-spacing:1px;text-transform:uppercase;">Quero meu Acqualive</a>
 </td></tr></table>
@@ -117,7 +117,7 @@ const HTML = `<!DOCTYPE html>
 
 <!-- CTA secundário -->
 <tr><td style="padding:20px 40px 48px;text-align:center;">
-<p style="margin:0 0 18px;font-size:14px;line-height:1.7;color:#6b7280;">A escolha pela água certa é discreta. O impacto, não.</p>
+<p style="margin:0 0 18px;font-size:14px;line-height:1.7;color:#6b7280;">A escolha pela água certa é discreta. O impacto na sua saúde, na sua família e no que você prescreve, não.</p>
 <table role="presentation" cellpadding="0" cellspacing="0" align="center"><tr><td style="border:2px solid #0A1A4A;border-radius:999px;">
 <a href="https://www.acqualive.com.br/MAENUTRIDA" target="_blank" style="display:inline-block;padding:14px 28px;font-size:13px;font-weight:700;color:#0A1A4A;text-decoration:none;letter-spacing:1px;text-transform:uppercase;">Aplicar cupom MAENUTRIDA</a>
 </td></tr></table>
