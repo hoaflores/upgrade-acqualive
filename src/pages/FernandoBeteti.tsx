@@ -1,11 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
 import { useDayanReveal } from "@/hooks/useDayanReveal";
-import betetiCapa from "@/assets/beteti-novo-3.png";
-import betetiCamera from "@/assets/beteti-novo-2.png";
-import betetiEstudio from "@/assets/beteti-terracota.png";
-import betetiPerfil from "@/assets/beteti-novo-4.png";
-import betetiRetrato from "@/assets/beteti-novo-1.png";
+import betetiCapa from "@/assets/beteti-novo-3.jpg";
+import betetiCamera from "@/assets/beteti-novo-2.jpg";
+import betetiEstudio from "@/assets/beteti-terracota.jpg";
+import betetiPerfil from "@/assets/beteti-novo-4.jpg";
+import betetiRetrato from "@/assets/beteti-novo-1.jpg";
 
 const WHATSAPP =
   "http://www.acqualive.com.br/n2026";
