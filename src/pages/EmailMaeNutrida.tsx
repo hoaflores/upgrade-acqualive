@@ -3,7 +3,7 @@ import { Copy, Check, Eye, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
-const SUBJECT = "A água que sustenta a sua rotina de alta performance";
+const SUBJECT = "A base da nutrição começa antes do prato: na água";
 
 const HTML = `<!DOCTYPE html>
 <html lang="pt-BR">
@@ -33,9 +33,9 @@ const HTML = `<!DOCTYPE html>
 
 <!-- Hero -->
 <tr><td style="background:linear-gradient(135deg,#0A1A4A 0%,#1A3A6E 100%);padding:56px 40px 48px;text-align:left;">
-<p style="margin:0 0 18px;font-size:12px;font-weight:700;letter-spacing:2px;color:#D4AF37;text-transform:uppercase;">Benefício exclusivo</p>
-<h1 style="margin:0 0 18px;font-size:34px;line-height:1.15;color:#ffffff;font-weight:800;">A água que sustenta a sua rotina de <span style="color:#D4AF37;">alta performance</span>.</h1>
-<p style="margin:0;font-size:16px;line-height:1.7;color:#e2e8f0;">Quem lidera pessoas, empresas e famílias sabe que energia, foco e bem-estar não acontecem por acaso. Começam por algo básico que quase ninguém questiona: a qualidade da água que você bebe todos os dias.</p>
+<p style="margin:0 0 18px;font-size:12px;font-weight:700;letter-spacing:2px;color:#D4AF37;text-transform:uppercase;">Parceria Mãe Nutrida Experience</p>
+<h1 style="margin:0 0 18px;font-size:34px;line-height:1.15;color:#ffffff;font-weight:800;">Critério no prato. Critério no copo. <span style="color:#D4AF37;">A nutrição começa pela água.</span></h1>
+<p style="margin:0;font-size:16px;line-height:1.7;color:#e2e8f0;">Você que cuida da saúde materno-infantil com ciência aplicada, sabe melhor do que ninguém: cada escolha repetida todos os dias constrói o resultado. E a primeira escolha do dia, antes de qualquer suplemento ou refeição, é a água.</p>
 </td></tr>
 
 <!-- Gold divider -->
@@ -43,9 +43,9 @@ const HTML = `<!DOCTYPE html>
 
 <!-- Intro Bloco 1 -->
 <tr><td style="padding:44px 40px 8px;">
-<h2 style="margin:0 0 16px;font-size:24px;line-height:1.35;color:#0A1A4A;font-weight:700;">A água está em praticamente tudo que acontece no seu corpo.</h2>
-<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#374151;">Da clareza mental nas decisões do dia, à recuperação no fim da jornada. Da digestão de cada refeição, ao humor com quem você ama.</p>
-<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#374151;">Mesmo assim, a maioria das mulheres de alta performance ainda bebe água com <strong style="color:#0A1A4A;">cloro, microplásticos e resíduos de tratamento</strong> sem saber. Ou troca por garrafas plásticas, em uma rotina cara, pouco prática e ambientalmente questionável.</p>
+<h2 style="margin:0 0 16px;font-size:24px;line-height:1.35;color:#0A1A4A;font-weight:700;">A água atravessa todo o ciclo materno-infantil.</h2>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#374151;">Da fertilidade à gestação. Da formação do leite materno à introdução alimentar. Da hidratação celular da mulher de alta performance ao copinho da criança em casa. Tudo passa pela água que entra no corpo todos os dias.</p>
+<p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#374151;">Mesmo assim, a maioria das famílias ainda consome água com <strong style="color:#0A1A4A;">cloro, microplásticos e resíduos de tratamento</strong>. Ou troca pelo galão e pela garrafa plástica, em uma rotina cara, pouco prática e que contradiz o cuidado que você prescreve no consultório e pratica em casa.</p>
 </td></tr>
 
 <!-- 3 pilares -->
@@ -54,17 +54,13 @@ const HTML = `<!DOCTYPE html>
 
 <tr><td style="padding:22px 24px;border-bottom:1px solid #dbeafe;">
 <p style="margin:0 0 6px;font-size:13px;font-weight:800;color:#0A1A4A;letter-spacing:1px;text-transform:uppercase;">01 . Pura</p>
-<p style="margin:0;font-size:15px;line-height:1.7;color:#4b5563;">Remove cloro, metais pesados, microplásticos e mais de 80 contaminantes da água da torneira.</p>
-</td></tr>
-
-<tr><td style="padding:22px 24px;border-bottom:1px solid #dbeafe;">
+<p style="margin:0;font-size:15px;line-height:1.7;color:#4b5563;">Remove cloro, metais pesados, microplásticos e mais de 80 contaminantes. A base limpa que toda prescrição, gestante e criança merece.</p>
+</td></tr><tr><td height="14" style="line-height:14px;font-size:0;">&nbsp;</td></tr><tr><td>
 <p style="margin:0 0 6px;font-size:13px;font-weight:800;color:#0A1A4A;letter-spacing:1px;text-transform:uppercase;">02 . Alcalina</p>
-<p style="margin:0;font-size:15px;line-height:1.7;color:#4b5563;">pH equilibrado, que combina com uma rotina de movimento, alimentação consciente e descanso de qualidade.</p>
-</td></tr>
-
-<tr><td style="padding:22px 24px;">
+<p style="margin:0;font-size:15px;line-height:1.7;color:#4b5563;">pH equilibrado, que conversa com uma rotina de alimentação consciente, suplementação com critério e descanso de qualidade.</p>
+</td></tr><tr><td height="14" style="line-height:14px;font-size:0;">&nbsp;</td></tr><tr><td>
 <p style="margin:0 0 6px;font-size:13px;font-weight:800;color:#0A1A4A;letter-spacing:1px;text-transform:uppercase;">03 . Mineralizada</p>
-<p style="margin:0;font-size:15px;line-height:1.7;color:#4b5563;">Devolve à água minerais essenciais como magnésio, cálcio e potássio, que sustentam disposição e foco no dia a dia.</p>
+<p style="margin:0;font-size:15px;line-height:1.7;color:#4b5563;">Devolve magnésio, cálcio e potássio à água. Minerais essenciais para hidratação celular, disposição e foco no dia a dia da mãe e do bebê.</p>
 </td></tr>
 
 </table>
