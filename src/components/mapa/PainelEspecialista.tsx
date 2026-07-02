@@ -7,6 +7,7 @@ import {
   MapPin,
   User,
   Sparkles,
+  Clock,
 } from "lucide-react";
 import type { CidadeAtendimento, Especialista } from "@/types/mapa";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
