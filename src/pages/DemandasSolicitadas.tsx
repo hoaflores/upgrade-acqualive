@@ -541,7 +541,7 @@ export default function DemandasSolicitadas() {
                   </button>
                 </div>
                 <Button variant="outline" size="sm" onClick={load}>Atualizar</Button>
-                <Button variant="ghost" size="sm" onClick={() => setAuth(false)}>Sair</Button>
+                <Button variant="ghost" size="sm" onClick={handleLogout}>Sair</Button>
               </div>
             </div>
           </header>
