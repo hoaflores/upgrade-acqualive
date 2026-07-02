@@ -35,6 +35,7 @@ import ParceriasCafe from "./pages/ParceriasCafe";
 import Acqualive1000Dias from "./pages/Acqualive1000Dias";
 import EmailMaeNutrida from "./pages/EmailMaeNutrida";
 import MapaSolo from "./pages/MapaSolo";
+import AdminFranqueados from "./pages/AdminFranqueados";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
