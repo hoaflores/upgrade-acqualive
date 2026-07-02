@@ -1,5 +1,4 @@
 import { useMemo, useState, useCallback, useEffect } from "react";
-import { cidadesAtendimento as cidadesEstaticas } from "@/data/especialistas";
 import { fuzzySearch, haversineKm, normalize } from "@/utils/fuzzySearch";
 import type { CidadeAtendimento, Especialista } from "@/types/mapa";
 import { supabase } from "@/integrations/supabase/client";
@@ -40,7 +39,8 @@ function agruparFranqueados(rows: any[]): CidadeAtendimento[] {
 export function useMapaSolo() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [query, setQuery] = useState("");
-  const [cidades, setCidades] = useState<CidadeAtendimento[]>(cidadesEstaticas);
+  const [cidades, setCidades] = useState<CidadeAtendimento[]>([]);
+  const [carregando, setCarregando] = useState(true);
 
   useEffect(() => {
     let cancel = false;
@@ -51,8 +51,8 @@ export function useMapaSolo() {
       .order("cidade")
       .then(({ data, error }) => {
         if (cancel) return;
-        if (error || !data || data.length === 0) return;
-        setCidades(agruparFranqueados(data));
+        if (!error && data) setCidades(agruparFranqueados(data));
+        setCarregando(false);
       });
     return () => {
       cancel = true;
