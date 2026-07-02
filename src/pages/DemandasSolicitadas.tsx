@@ -19,8 +19,8 @@ import { cn } from "@/lib/utils";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Switch } from "@/components/ui/switch";
 
-const ADMIN_USER = "marketing";
-const ADMIN_PASSWORD = "AcqualiveTerracota123!";
+// Admin access is enforced server-side via Supabase Auth + user_roles.admin role
+
 
 const STATUS_OPTIONS = [
   { value: "nova", label: "Na fila", color: "bg-blue-100 text-blue-800 border-blue-200", dot: "bg-blue-500" },
