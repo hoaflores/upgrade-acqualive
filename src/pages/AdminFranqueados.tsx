@@ -471,6 +471,8 @@ export default function AdminFranqueados() {
                 </div>
               </div>
 
+              <ImportarPlanilha onDone={load} />
+
               <Card className="overflow-hidden">
                 <Table>
                   <TableHeader>
