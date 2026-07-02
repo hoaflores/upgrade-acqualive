@@ -13,6 +13,7 @@ import { Loader2, Pencil, Trash2, Plus, LogOut, Search, Eye, EyeOff, MapPin, Upl
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import ImportarPlanilha from "@/components/admin/ImportarPlanilha";
 
 interface Franqueado {
   id: string;
@@ -469,6 +470,8 @@ export default function AdminFranqueados() {
                   <Button onClick={openNew} size="sm"><Plus className="w-4 h-4 mr-1" /> Novo</Button>
                 </div>
               </div>
+
+              <ImportarPlanilha onDone={load} />
 
               <Card className="overflow-hidden">
                 <Table>
