@@ -80,6 +80,7 @@ const App = () => (
             <Route path="/1000-dias" element={<Acqualive1000Dias />} />
             <Route path="/acqualive1000dias" element={<Acqualive1000Dias />} />
             <Route path="/email-mae-nutrida" element={<EmailMaeNutrida />} />
+            <Route path="/mapa-solo" element={<MapaSolo />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
