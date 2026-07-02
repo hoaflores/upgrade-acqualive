@@ -1,5 +1,10 @@
 import { useRef, useState } from "react";
-import * as XLSX from "xlsx";
+type XLSXModule = typeof import("xlsx");
+let _xlsx: XLSXModule | null = null;
+const loadXLSX = async (): Promise<XLSXModule> => {
+  if (!_xlsx) _xlsx = await import("xlsx");
+  return _xlsx;
+};
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -53,7 +58,8 @@ export default function ImportarPlanilha({ onDone }: { onDone: () => void }) {
   const [progress, setProgress] = useState({ done: 0, total: 0 });
   const [results, setResults] = useState<Resultado[]>([]);
 
-  const baixarTemplate = () => {
+  const baixarTemplate = async () => {
+    const XLSX = await loadXLSX();
     const ws = XLSX.utils.aoa_to_sheet([
       HEADERS,
       [
@@ -79,8 +85,9 @@ export default function ImportarPlanilha({ onDone }: { onDone: () => void }) {
 
   const carregarArquivo = (file: File) => {
     const reader = new FileReader();
-    reader.onload = (e) => {
+    reader.onload = async (e) => {
       try {
+        const XLSX = await loadXLSX();
         const data = new Uint8Array(e.target?.result as ArrayBuffer);
         const wb = XLSX.read(data, { type: "array" });
         const sheet = wb.Sheets[wb.SheetNames[0]];

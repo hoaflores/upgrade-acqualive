@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
@@ -13,7 +13,7 @@ import { Loader2, Pencil, Trash2, Plus, LogOut, Search, Eye, EyeOff, MapPin, Upl
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import ImportarPlanilha from "@/components/admin/ImportarPlanilha";
+const ImportarPlanilha = lazy(() => import("@/components/admin/ImportarPlanilha"));
 
 interface Franqueado {
   id: string;
@@ -475,7 +475,9 @@ export default function AdminFranqueados() {
                 </div>
               </div>
 
-              <ImportarPlanilha onDone={load} />
+              <Suspense fallback={<div className="p-6 text-center text-sm text-muted-foreground"><Loader2 className="w-4 h-4 animate-spin inline mr-2" />Carregando importador…</div>}>
+                <ImportarPlanilha onDone={load} />
+              </Suspense>
 
               <Card className="overflow-hidden">
                 <Table>
