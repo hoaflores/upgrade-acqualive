@@ -475,7 +475,9 @@ export default function AdminFranqueados() {
                 </div>
               </div>
 
-              <ImportarPlanilha onDone={load} />
+              <Suspense fallback={<div className="p-6 text-center text-sm text-muted-foreground"><Loader2 className="w-4 h-4 animate-spin inline mr-2" />Carregando importador…</div>}>
+                <ImportarPlanilha onDone={load} />
+              </Suspense>
 
               <Card className="overflow-hidden">
                 <Table>
