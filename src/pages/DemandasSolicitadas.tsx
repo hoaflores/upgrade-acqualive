@@ -502,7 +502,7 @@ export default function DemandasSolicitadas() {
                   </button>
                 </div>
               </div>
-              <Button type="submit" className="w-full">Entrar</Button>
+              <Button type="submit" className="w-full" disabled={loginBusy}>{loginBusy ? <Loader2 className="w-4 h-4 animate-spin" /> : "Entrar"}</Button>
             </form>
           </Card>
         </div>
