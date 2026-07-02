@@ -19,8 +19,6 @@ const MARKETING_EMAILS = [
   "gustavo@acqualive.com.br",
 ];
 
-const SOLICITANTE_PASSWORD = "Acqualive!@#";
-
 const PRAZO_POR_TIPO: Record<string, number> = {
   texto: 2,
   arte: 3,
@@ -53,13 +51,9 @@ function escapeHtml(str: unknown): string {
     .replace(/'/g, "&#39;");
 }
 
-function escapeAttr(str: unknown): string {
-  return escapeHtml(str);
-}
-
 function safeUrl(u: unknown): string {
   const s = String(u ?? "").trim();
-  if (/^https?:\/\//i.test(s)) return escapeAttr(s);
+  if (/^https?:\/\//i.test(s)) return escapeHtml(s);
   return "#";
 }
 
@@ -99,18 +93,13 @@ async function sendGmail(to: string[], subject: string, html: string) {
     },
     body: JSON.stringify({ raw }),
   });
-  if (!resp.ok) {
-    console.error("Gmail send failed", resp.status, await resp.text());
-  }
+  if (!resp.ok) console.error("Gmail send failed", resp.status, await resp.text());
 }
 
 async function appendToSheet(row: (string | number)[]) {
   const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
   const GOOGLE_SHEETS_API_KEY = Deno.env.get("GOOGLE_SHEETS_API_KEY");
-  if (!LOVABLE_API_KEY || !GOOGLE_SHEETS_API_KEY) {
-    console.error("Missing Sheets credentials");
-    return;
-  }
+  if (!LOVABLE_API_KEY || !GOOGLE_SHEETS_API_KEY) return;
   const url = `${SHEETS_GATEWAY}/spreadsheets/${SPREADSHEET_ID}/values/Demandas!A1:append?valueInputOption=USER_ENTERED&insertDataOption=INSERT_ROWS`;
   const resp = await fetch(url, {
     method: "POST",
@@ -121,9 +110,7 @@ async function appendToSheet(row: (string | number)[]) {
     },
     body: JSON.stringify({ values: [row] }),
   });
-  if (!resp.ok) {
-    console.error("Sheets append failed", resp.status, await resp.text());
-  }
+  if (!resp.ok) console.error("Sheets append failed", resp.status, await resp.text());
 }
 
 function emailHtml(d: any, anexosUrls: string[]) {
@@ -174,53 +161,60 @@ function confirmEmailHtml(d: any) {
   </div>`;
 }
 
-function confirmEmailHtml(d: any) {
-  return `
-  <div style="font-family:Arial,sans-serif;max-width:640px;margin:0 auto;padding:24px;background:#f6f7f9">
-    <div style="background:#ffffff;border-radius:12px;padding:28px;border:1px solid #e5e7eb">
-      <div style="background:linear-gradient(135deg,#0a3d62,#1e6091);color:#fff;padding:18px 20px;border-radius:8px;margin-bottom:20px">
-        <div style="font-size:12px;letter-spacing:1px;opacity:.8">DEMANDA RECEBIDA</div>
-        <div style="font-size:24px;font-weight:700">${d.protocolo}</div>
-      </div>
-      <p style="color:#333">Olá ${d.solicitante.split(" ")[0]}, recebemos sua solicitação. O time de marketing já foi notificado.</p>
-      <h3 style="color:#0a3d62;margin:20px 0 8px">${d.titulo}</h3>
-      <p style="color:#555;margin:0 0 12px"><strong>Tipo:</strong> ${d.tipo_label || TIPO_LABEL[d.tipo] || d.tipo} • <strong>Frequência:</strong> ${d.frequencia === "recorrente" ? "Recorrente" : "Individual"}</p>
-      <p style="color:#555;margin:0 0 12px"><strong>Estimativa interna:</strong> ${d.prazo_estimado_dias} dias úteis</p>
-      <p style="color:#555;margin:0 0 12px"><strong>Prazo esperado por você:</strong> ${d.prazo_esperado}</p>
-      <p style="margin-top:24px;color:#666;font-size:13px">Guarde este protocolo para acompanhamento: <strong>${d.protocolo}</strong></p>
-    </div>
-  </div>`;
-}
-
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
   try {
-    const body = await req.json();
-    if (body.password !== SOLICITANTE_PASSWORD) {
-      return new Response(JSON.stringify({ error: "Senha inválida" }), {
-        status: 401,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
+    // Verify JWT — any authenticated user can create a demanda
+    const authHeader = req.headers.get("Authorization") || "";
+    const token = authHeader.replace(/^Bearer\s+/i, "");
+    if (!token) {
+      return new Response(JSON.stringify({ error: "Não autenticado" }), {
+        status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+    const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+    const supabaseAnon = Deno.env.get("SUPABASE_ANON_KEY")!;
+    const authClient = createClient(supabaseUrl, supabaseAnon, {
+      global: { headers: { Authorization: `Bearer ${token}` } },
+    });
+    const { data: userData, error: userErr } = await authClient.auth.getUser(token);
+    if (userErr || !userData.user) {
+      return new Response(JSON.stringify({ error: "Sessão inválida" }), {
+        status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+    const userEmail = (userData.user.email || "").toLowerCase();
+    if (!userEmail) {
+      return new Response(JSON.stringify({ error: "Usuário sem email" }), {
+        status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
 
-    const required = ["solicitante", "solicitante_email", "tipo", "titulo", "briefing", "prazo_esperado"];
+    const body = await req.json();
+    const required = ["solicitante", "tipo", "titulo", "briefing", "prazo_esperado"];
     for (const k of required) {
       if (!body[k] || String(body[k]).trim() === "") {
         return new Response(JSON.stringify({ error: `Campo obrigatório: ${k}` }), {
-          status: 400,
-          headers: { ...corsHeaders, "Content-Type": "application/json" },
+          status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
         });
       }
     }
 
+    // Basic input length limits
+    if (String(body.titulo).length > 300 || String(body.briefing).length > 20000) {
+      return new Response(JSON.stringify({ error: "Campos excedem o tamanho permitido" }), {
+        status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
     const supabase = createClient(
-      Deno.env.get("SUPABASE_URL")!,
+      supabaseUrl,
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
     );
 
     const prazoEstimado = PRAZO_POR_TIPO[body.tipo] ?? 5;
     const emailsExtras: string[] = Array.isArray(body.emails_extras)
-      ? body.emails_extras.filter((e: string) => e && e.includes("@"))
+      ? body.emails_extras.filter((e: string) => typeof e === "string" && e.includes("@")).slice(0, 20)
       : [];
 
     const tipoOutroDesc = body.tipo === "outro" && body.tipo_outro
@@ -233,13 +227,13 @@ Deno.serve(async (req) => {
     const { data: demanda, error } = await supabase
       .from("demandas")
       .insert({
-        solicitante: body.solicitante.trim(),
-        solicitante_email: body.solicitante_email.trim().toLowerCase(),
+        solicitante: String(body.solicitante).trim().slice(0, 200),
+        solicitante_email: userEmail, // Trusted from JWT — cannot be spoofed
         emails_extras: emailsExtras,
         tipo: body.tipo,
-        titulo: body.titulo.trim(),
-        briefing: body.briefing.trim(),
-        links_referencia: body.links_referencia?.trim() || null,
+        titulo: String(body.titulo).trim().slice(0, 300),
+        briefing: String(body.briefing).trim(),
+        links_referencia: body.links_referencia ? String(body.links_referencia).trim().slice(0, 2000) : null,
         prazo_esperado: body.prazo_esperado,
         prazo_estimado_dias: prazoEstimado,
         prioridade: body.prioridade || "media",
@@ -250,7 +244,6 @@ Deno.serve(async (req) => {
 
     if (error) throw error;
 
-    // Anexos
     const anexosUrls: string[] = [];
     if (Array.isArray(body.anexos)) {
       for (const a of body.anexos) {
@@ -266,7 +259,6 @@ Deno.serve(async (req) => {
       }
     }
 
-    // Sheets mirror
     appendToSheet([
       demanda.protocolo,
       new Date(demanda.created_at).toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" }),
@@ -284,7 +276,6 @@ Deno.serve(async (req) => {
       anexosUrls.join(" | "),
     ]).catch((e) => console.error("sheet error", e));
 
-    // Email para marketing + extras
     const destinatarios = [...new Set([...MARKETING_EMAILS, ...emailsExtras])];
     sendGmail(
       destinatarios,
@@ -292,7 +283,6 @@ Deno.serve(async (req) => {
       emailHtml({ ...demanda, tipo_label: tipoLabel }, anexosUrls),
     ).catch((e) => console.error("gmail mkt error", e));
 
-    // Confirmação para solicitante
     sendGmail(
       [demanda.solicitante_email],
       `Demanda recebida: ${demanda.protocolo}`,
@@ -305,7 +295,7 @@ Deno.serve(async (req) => {
     );
   } catch (e: any) {
     console.error("criar-demanda error", e);
-    return new Response(JSON.stringify({ error: e.message || "Erro interno" }), {
+    return new Response(JSON.stringify({ error: "Erro interno" }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
