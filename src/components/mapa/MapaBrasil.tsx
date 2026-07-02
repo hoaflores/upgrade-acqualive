@@ -143,19 +143,6 @@ const MapaBrasilInner = ({
         }}
       />
 
-      <svg width="0" height="0" style={{ position: "absolute" }}>
-        <defs>
-          <linearGradient id="brStateFill" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="hsl(215 62% 55%)" stopOpacity="0.14" />
-            <stop offset="100%" stopColor="hsl(215 62% 40%)" stopOpacity="0.22" />
-          </linearGradient>
-          <linearGradient id="brStateHover" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="hsl(215 62% 55%)" stopOpacity="0.28" />
-            <stop offset="100%" stopColor="hsl(215 62% 40%)" stopOpacity="0.38" />
-          </linearGradient>
-        </defs>
-      </svg>
-
       <ComposableMap
         projection="geoMercator"
         projectionConfig={{ scale: 700, center: DEFAULT_CENTER }}
@@ -179,14 +166,14 @@ const MapaBrasilInner = ({
                   geography={geo}
                   style={{
                     default: {
-                      fill: "url(#brStateFill)",
-                      stroke: "hsl(var(--primary) / 0.35)",
-                      strokeWidth: 0.5,
+                      fill: "hsl(215 62% 88%)",
+                      stroke: "hsl(215 62% 55% / 0.45)",
+                      strokeWidth: 0.6,
                       outline: "none",
                       transition: "fill 300ms ease",
                     },
                     hover: {
-                      fill: "url(#brStateHover)",
+                      fill: "hsl(215 62% 82%)",
                       outline: "none",
                       cursor: "default",
                     },
@@ -196,6 +183,7 @@ const MapaBrasilInner = ({
               ))
             }
           </Geographies>
+
 
           {cidades.map((c) => {
             const active = c.id === selecionadaId;
