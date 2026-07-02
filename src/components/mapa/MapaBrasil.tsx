@@ -216,7 +216,7 @@ const MapaBrasilInner = ({
       {/* Reflexo topo */}
       <div
         aria-hidden
-        className="pointer-events-none absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-white/60 to-transparent rounded-t-[28px]"
+        className="pointer-events-none absolute top-0 inset-x-0 h-12 bg-gradient-to-b from-white/25 to-transparent rounded-t-[28px]"
       />
     </div>
   );
