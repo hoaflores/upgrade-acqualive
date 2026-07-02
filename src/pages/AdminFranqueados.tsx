@@ -198,10 +198,7 @@ export default function AdminFranqueados() {
       toast.error(error.message);
       return;
     }
-    // Se já tem sessão (auto-confirm), cria perfil já
-    if (data.session) {
-      await supabase.rpc("criar_meu_perfil", { _nome: signupNome, _funcao: signupFuncao });
-    }
+    // Perfil é criado automaticamente por trigger em auth.users
     setLoginBusy(false);
     toast.success("Cadastro enviado! Aguarde a aprovação de um administrador.");
     setAuthMode("login");
