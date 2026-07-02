@@ -138,17 +138,20 @@ const MapaBrasilInner = ({
 
       <ComposableMap
         projection="geoMercator"
-        projectionConfig={{ scale: 700, center: DEFAULT_CENTER }}
+        projectionConfig={{ scale: 780, rotate: [54, 14, 0] }}
+        width={800}
+        height={720}
         style={{ width: "100%", height: "100%" }}
+      
       >
         <defs>
           <linearGradient id="stateGradBase" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="hsl(215 55% 88%)" />
-            <stop offset="100%" stopColor="hsl(215 60% 76%)" />
+            <stop offset="0%" stopColor="hsl(215 75% 92%)" />
+            <stop offset="100%" stopColor="hsl(215 70% 82%)" />
           </linearGradient>
           <linearGradient id="stateGradHover" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="hsl(215 60% 82%)" />
-            <stop offset="100%" stopColor="hsl(215 65% 70%)" />
+            <stop offset="0%" stopColor="hsl(215 80% 85%)" />
+            <stop offset="100%" stopColor="hsl(215 78% 72%)" />
           </linearGradient>
           <linearGradient id="stateGradActive" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" stopColor="hsl(21 92% 68%)" />
@@ -210,12 +213,12 @@ const MapaBrasilInner = ({
                     geography={geo}
                     onMouseEnter={() => setHoveredUF(uf ?? null)}
                     onMouseLeave={() => setHoveredUF(null)}
-                    filter={isActive ? "url(#stateGlow)" : "url(#stateShadow)"}
+                    filter={isActive ? "url(#stateGlow)" : undefined}
                     style={{
                       default: {
                         fill,
-                        stroke: isActive ? "hsl(21 85% 45%)" : "hsl(215 55% 55%)",
-                        strokeWidth: isActive ? 0.9 : 0.6,
+                        stroke: isActive ? "hsl(21 90% 35%)" : "hsl(215 70% 28%)",
+                        strokeWidth: isActive ? 2.2 : 1.6,
                         strokeLinejoin: "round",
                         outline: "none",
                         transition: "fill 500ms ease, stroke 300ms ease, stroke-width 300ms ease",
