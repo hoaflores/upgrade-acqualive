@@ -1,5 +1,4 @@
 import { useMemo, useState, useCallback, useEffect } from "react";
-import { cidadesAtendimento as cidadesEstaticas } from "@/data/especialistas";
 import { fuzzySearch, haversineKm, normalize } from "@/utils/fuzzySearch";
 import type { CidadeAtendimento, Especialista } from "@/types/mapa";
 import { supabase } from "@/integrations/supabase/client";
