@@ -168,7 +168,46 @@ const MapaSolo = () => {
               <PainelEspecialista cidade={selecionada} />
             </div>
           </div>
+
+          {/* CTA persistente — Seja um representante */}
+          <div className="mt-10 md:mt-14">
+            <div className="relative overflow-hidden rounded-[28px] border border-accent/25 bg-gradient-to-br from-white via-[hsl(var(--water-light))] to-[hsl(21_95%_96%)] p-6 md:p-10 shadow-[0_30px_80px_-40px_hsl(var(--accent)/_0.35)]">
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full opacity-40"
+                style={{ background: "radial-gradient(circle, hsl(21 95% 65% / 0.25), transparent 70%)" }}
+              />
+              <div className="relative flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
+                <div className="flex-1 min-w-0">
+                  <span className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-[0.18em] uppercase text-accent">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    Oportunidade Acqualive
+                  </span>
+                  <h2 className="mt-2 font-display text-2xl md:text-3xl font-semibold text-foreground tracking-tight">
+                    Sua cidade ainda não tem um representante?
+                  </h2>
+                  <p className="mt-2 text-sm md:text-base text-muted-foreground max-w-2xl">
+                    Seja o primeiro a levar saúde e bem-estar através da água Acqualive
+                    para a sua região. Treinamento, suporte e uma marca reconhecida ao
+                    seu lado.
+                  </p>
+                </div>
+                <a
+                  href={REPRESENTANTE_WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 h-14 px-7 rounded-2xl bg-gradient-to-r from-accent to-[hsl(38_95%_55%)] text-white text-[13px] md:text-sm font-bold tracking-wide shadow-2xl shadow-accent/40 hover:shadow-accent/60 hover:scale-[1.02] transition-all animate-pulse-soft whitespace-nowrap"
+                >
+                  <Sparkles className="w-4 h-4" />
+                  QUERO SER UM REPRESENTANTE ACQUALIVE SOLO
+                </a>
+              </div>
+            </div>
+          </div>
         </section>
+
+
+
 
 
 
