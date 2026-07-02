@@ -1,0 +1,1 @@
+ALTER TABLE public.franqueados ADD COLUMN IF NOT EXISTS horario_atendimento TEXT;

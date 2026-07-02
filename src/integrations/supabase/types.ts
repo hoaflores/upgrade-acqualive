@@ -233,6 +233,7 @@ export type Database = {
           email: string | null
           estado: string
           foto: string | null
+          horario_atendimento: string | null
           id: string
           instagram: string | null
           lat: number
@@ -250,6 +251,7 @@ export type Database = {
           email?: string | null
           estado: string
           foto?: string | null
+          horario_atendimento?: string | null
           id?: string
           instagram?: string | null
           lat: number
@@ -267,6 +269,7 @@ export type Database = {
           email?: string | null
           estado?: string
           foto?: string | null
+          horario_atendimento?: string | null
           id?: string
           instagram?: string | null
           lat?: number
