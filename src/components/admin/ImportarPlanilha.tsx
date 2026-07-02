@@ -58,7 +58,8 @@ export default function ImportarPlanilha({ onDone }: { onDone: () => void }) {
   const [progress, setProgress] = useState({ done: 0, total: 0 });
   const [results, setResults] = useState<Resultado[]>([]);
 
-  const baixarTemplate = () => {
+  const baixarTemplate = async () => {
+    const XLSX = await loadXLSX();
     const ws = XLSX.utils.aoa_to_sheet([
       HEADERS,
       [
