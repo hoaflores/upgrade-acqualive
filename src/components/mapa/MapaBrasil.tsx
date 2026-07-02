@@ -166,17 +166,18 @@ const MapaBrasilInner = ({
                   geography={geo}
                   style={{
                     default: {
-                      fill: "hsl(215 62% 88%)",
-                      stroke: "hsl(215 62% 55% / 0.45)",
-                      strokeWidth: 0.6,
+                      fill: "hsl(215 55% 78%)",
+                      stroke: "hsl(215 62% 42%)",
+                      strokeWidth: 0.8,
                       outline: "none",
                       transition: "fill 300ms ease",
                     },
                     hover: {
-                      fill: "hsl(215 62% 82%)",
+                      fill: "hsl(215 55% 72%)",
                       outline: "none",
                       cursor: "default",
                     },
+
                     pressed: { outline: "none" },
                   }}
                 />
