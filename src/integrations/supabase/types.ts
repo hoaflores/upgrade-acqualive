@@ -341,10 +341,6 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      criar_meu_perfil: {
-        Args: { _funcao: string; _nome: string }
-        Returns: undefined
-      }
       gerar_protocolo_demanda: { Args: never; Returns: string }
       has_role: {
         Args: {
