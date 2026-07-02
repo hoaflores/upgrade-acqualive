@@ -279,6 +279,39 @@ export type Database = {
         }
         Relationships: []
       }
+      profiles: {
+        Row: {
+          aprovado: boolean
+          created_at: string
+          email: string
+          funcao: string | null
+          id: string
+          is_master: boolean
+          nome: string
+          updated_at: string
+        }
+        Insert: {
+          aprovado?: boolean
+          created_at?: string
+          email: string
+          funcao?: string | null
+          id: string
+          is_master?: boolean
+          nome?: string
+          updated_at?: string
+        }
+        Update: {
+          aprovado?: boolean
+          created_at?: string
+          email?: string
+          funcao?: string | null
+          id?: string
+          is_master?: boolean
+          nome?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string
@@ -305,6 +338,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      criar_meu_perfil: {
+        Args: { _funcao: string; _nome: string }
+        Returns: undefined
+      }
       gerar_protocolo_demanda: { Args: never; Returns: string }
       has_role: {
         Args: {
@@ -313,9 +350,10 @@ export type Database = {
         }
         Returns: boolean
       }
+      tem_acesso_painel: { Args: { _user_id: string }; Returns: boolean }
     }
     Enums: {
-      app_role: "admin"
+      app_role: "admin" | "operador"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -443,7 +481,7 @@ export type CompositeTypes<
 export const Constants = {
   public: {
     Enums: {
-      app_role: ["admin"],
+      app_role: ["admin", "operador"],
     },
   },
 } as const
