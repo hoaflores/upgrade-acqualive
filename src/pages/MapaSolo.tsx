@@ -1,13 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { toast } from "sonner";
+import { Sparkles } from "lucide-react";
 import HeroMapa from "@/components/mapa/HeroMapa";
-import BuscaEspecialista from "@/components/mapa/BuscaEspecialista";
+import BuscaEspecialista, { REPRESENTANTE_WHATSAPP_URL } from "@/components/mapa/BuscaEspecialista";
 import ListaCidades from "@/components/mapa/ListaCidades";
 import MapaBrasil from "@/components/mapa/MapaBrasil";
 import PainelEspecialista from "@/components/mapa/PainelEspecialista";
 import FooterSection from "@/components/FooterSection";
 import { useMapaSolo } from "@/hooks/useMapaSolo";
+
 
 const MapaSolo = () => {
   const {
