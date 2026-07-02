@@ -7,6 +7,7 @@ export interface Especialista {
   instagram?: string;
   email?: string;
   observacoes?: string;
+  horario_atendimento?: string;
 }
 
 export interface CidadeAtendimento {

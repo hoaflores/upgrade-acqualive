@@ -7,6 +7,7 @@ import {
   MapPin,
   User,
   Sparkles,
+  Clock,
 } from "lucide-react";
 import type { CidadeAtendimento, Especialista } from "@/types/mapa";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
@@ -136,6 +137,13 @@ const EspecialistaCard = ({
             {esp.email}
           </a>
         )}
+      </div>
+    )}
+
+    {esp.horario_atendimento && (
+      <div className="mt-4 flex items-start gap-2 text-sm text-muted-foreground">
+        <Clock className="w-3.5 h-3.5 mt-0.5 text-primary/80 shrink-0" aria-hidden />
+        <span className="leading-relaxed">{esp.horario_atendimento}</span>
       </div>
     )}
 
