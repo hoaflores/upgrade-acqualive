@@ -28,6 +28,7 @@ interface Franqueado {
   foto: string | null;
   telefone: string | null;
   observacoes: string | null;
+  horario_atendimento: string | null;
   ativo: boolean;
   created_at: string;
   updated_at: string;
@@ -61,6 +62,7 @@ const emptyForm: FormState = {
   foto: "",
   telefone: "",
   observacoes: "",
+  horario_atendimento: "",
   ativo: true,
 };
 
@@ -218,6 +220,7 @@ export default function AdminFranqueados() {
       lat: String(f.lat), lng: String(f.lng),
       whatsapp: f.whatsapp, instagram: f.instagram ?? "", email: f.email ?? "",
       foto: f.foto ?? "", telefone: f.telefone ?? "", observacoes: f.observacoes ?? "",
+      horario_atendimento: f.horario_atendimento ?? "",
       ativo: f.ativo,
     });
     setDialogOpen(true);
@@ -270,6 +273,7 @@ export default function AdminFranqueados() {
       foto: form.foto?.trim() || null,
       telefone: form.telefone?.trim() || null,
       observacoes: form.observacoes?.trim() || null,
+      horario_atendimento: form.horario_atendimento?.trim() || null,
       ativo: form.ativo,
     };
     setSaving(true);
@@ -618,6 +622,7 @@ export default function AdminFranqueados() {
 
               <div><Label>WhatsApp * (E.164 sem +)</Label><Input value={form.whatsapp} onChange={(e) => setForm({ ...form, whatsapp: e.target.value })} placeholder="5511999990001" /></div>
               <div><Label>Telefone</Label><Input value={form.telefone} onChange={(e) => setForm({ ...form, telefone: e.target.value })} /></div>
+              <div className="md:col-span-2"><Label>Horário de atendimento</Label><Input value={form.horario_atendimento} onChange={(e) => setForm({ ...form, horario_atendimento: e.target.value })} placeholder="Ex: Seg a Sex, 8h às 18h" /></div>
               <div><Label>Instagram (sem @)</Label><Input value={form.instagram} onChange={(e) => setForm({ ...form, instagram: e.target.value })} /></div>
               <div><Label>E-mail</Label><Input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} /></div>
 

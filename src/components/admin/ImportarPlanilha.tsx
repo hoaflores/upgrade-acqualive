@@ -17,6 +17,7 @@ interface Linha {
   email?: string;
   foto?: string;
   observacoes?: string;
+  horario_atendimento?: string;
   lat?: string;
   lng?: string;
 }
@@ -28,7 +29,7 @@ interface Resultado {
   mensagem: string;
 }
 
-const HEADERS = ["nome", "cidade", "estado", "whatsapp", "telefone", "instagram", "email", "foto", "observacoes", "lat", "lng"];
+const HEADERS = ["nome", "cidade", "estado", "whatsapp", "telefone", "horario_atendimento", "instagram", "email", "foto", "observacoes", "lat", "lng"];
 
 async function geocode(cidade: string, estado: string): Promise<{ lat: number; lng: number } | null> {
   const q = encodeURIComponent(`${cidade}, ${estado}, Brasil`);
@@ -61,6 +62,7 @@ export default function ImportarPlanilha({ onDone }: { onDone: () => void }) {
         "SP",
         "5511999990001",
         "1133330001",
+        "Seg a Sex, 8h às 18h",
         "joaosilva",
         "joao@exemplo.com",
         "https://drive.google.com/file/d/EXEMPLO_ID/view",
@@ -89,6 +91,7 @@ export default function ImportarPlanilha({ onDone }: { onDone: () => void }) {
           estado: String(r.estado ?? r.Estado ?? r.uf ?? r.UF ?? "").trim().toUpperCase().slice(0, 2),
           whatsapp: String(r.whatsapp ?? r.WhatsApp ?? r.Whatsapp ?? "").replace(/\D/g, ""),
           telefone: String(r.telefone ?? r.Telefone ?? "").trim(),
+          horario_atendimento: String(r.horario_atendimento ?? r["horário de atendimento"] ?? r.HorarioAtendimento ?? r.Horario ?? "").trim(),
           instagram: String(r.instagram ?? r.Instagram ?? "").replace(/^@/, "").trim(),
           email: String(r.email ?? r.Email ?? r["e-mail"] ?? "").trim(),
           foto: String(r.foto ?? r.Foto ?? r.imagem ?? r.Imagem ?? "").trim(),
@@ -148,6 +151,7 @@ export default function ImportarPlanilha({ onDone }: { onDone: () => void }) {
           lat, lng,
           whatsapp: r.whatsapp,
           telefone: r.telefone || null,
+          horario_atendimento: r.horario_atendimento || null,
           instagram: r.instagram || null,
           email: r.email || null,
           foto: fotoUrl,

@@ -9,16 +9,17 @@ function agruparFranqueados(rows: any[]): CidadeAtendimento[] {
   const map = new Map<string, CidadeAtendimento>();
   for (const r of rows) {
     const key = `${normalize(r.cidade)}-${r.estado.toLowerCase()}`;
-    const esp: Especialista = {
-      id: r.id,
-      nome: r.nome,
-      whatsapp: r.whatsapp,
-      instagram: r.instagram ?? undefined,
-      email: r.email ?? undefined,
-      foto: r.foto ?? undefined,
-      telefone: r.telefone ?? undefined,
-      observacoes: r.observacoes ?? undefined,
-    };
+      const esp: Especialista = {
+        id: r.id,
+        nome: r.nome,
+        whatsapp: r.whatsapp,
+        instagram: r.instagram ?? undefined,
+        email: r.email ?? undefined,
+        foto: r.foto ?? undefined,
+        telefone: r.telefone ?? undefined,
+        observacoes: r.observacoes ?? undefined,
+        horario_atendimento: r.horario_atendimento ?? undefined,
+      };
     const existing = map.get(key);
     if (existing) {
       existing.especialistas.push(esp);
