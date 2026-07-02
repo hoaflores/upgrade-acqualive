@@ -478,9 +478,10 @@ export default function DemandasSolicitadas() {
             <p className="text-slate-600 mb-6">Acesso restrito ao time de marketing.</p>
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
-                <Label>Usuário</Label>
-                <Input value={loginUser} onChange={(e) => setLoginUser(e.target.value)} placeholder="Digite seu usuário" autoFocus />
+                <Label>Email</Label>
+                <Input type="email" value={loginEmail} onChange={(e) => setLoginEmail(e.target.value)} placeholder="voce@acqualive.com.br" autoFocus autoComplete="email" required />
               </div>
+
               <div>
                 <Label>Senha</Label>
                 <div className="relative">
