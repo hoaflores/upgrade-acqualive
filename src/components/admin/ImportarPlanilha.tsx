@@ -1,5 +1,10 @@
 import { useRef, useState } from "react";
-import * as XLSX from "xlsx";
+type XLSXModule = typeof import("xlsx");
+let _xlsx: XLSXModule | null = null;
+const loadXLSX = async (): Promise<XLSXModule> => {
+  if (!_xlsx) _xlsx = await import("xlsx");
+  return _xlsx;
+};
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
