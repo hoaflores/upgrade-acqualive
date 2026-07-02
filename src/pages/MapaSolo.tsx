@@ -120,22 +120,22 @@ const MapaSolo = () => {
 
         <section
           aria-label="Mapa e especialistas"
-          className="container pb-16 md:pb-24"
+          className="container pb-20 md:pb-28"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-7">
             {/* Lista - lateral esquerda no desktop */}
             <div className="lg:col-span-3 order-2 lg:order-1">
-              <div className="rounded-2xl border border-border bg-card shadow-soft overflow-hidden">
-                <header className="px-4 py-3 border-b border-border">
-                  <h2 className="font-display font-semibold text-sm text-foreground">
+              <div className="rounded-[24px] border border-border/60 bg-white/70 backdrop-blur-xl shadow-[0_20px_50px_-30px_hsl(var(--primary)/_0.3),0_1px_0_hsl(0_0%_100%)_inset] overflow-hidden">
+                <header className="px-5 py-4 border-b border-border/50 bg-gradient-to-b from-white/60 to-transparent">
+                  <h2 className="font-display font-semibold text-[13px] text-foreground tracking-tight">
                     Cidades atendidas
                   </h2>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="text-[11px] text-muted-foreground mt-0.5">
                     {resultados.length}{" "}
                     {resultados.length === 1 ? "resultado" : "resultados"}
                   </p>
                 </header>
-                <div className="max-h-[520px] overflow-y-auto">
+                <div className="max-h-[540px] overflow-y-auto scrollbar-thin">
                   <ListaCidades
                     cidades={resultados}
                     selecionadaId={selecionada?.id ?? null}
@@ -145,9 +145,9 @@ const MapaSolo = () => {
               </div>
             </div>
 
-            {/* Mapa - centro */}
+            {/* Mapa - centro (protagonista) */}
             <div className="lg:col-span-6 order-1 lg:order-2">
-              <div className="h-[380px] md:h-[520px]">
+              <div className="h-[420px] md:h-[560px]">
                 <MapaBrasil
                   cidades={cidadesOrdenadas}
                   selecionadaId={selecionada?.id ?? null}
@@ -166,6 +166,8 @@ const MapaSolo = () => {
             </div>
           </div>
         </section>
+
+
 
         <FooterSection
           heading="Não encontrou sua cidade?"
