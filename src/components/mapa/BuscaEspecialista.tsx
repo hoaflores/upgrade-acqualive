@@ -172,13 +172,29 @@ const BuscaEspecialista = ({
             className="absolute z-30 left-0 right-0 mt-3 max-h-80 overflow-y-auto rounded-2xl border border-border/60 bg-white/95 backdrop-blur-xl shadow-[0_30px_70px_-30px_hsl(var(--primary)/_0.4)] p-1.5"
           >
             {sugestoes.length === 0 ? (
-              <li className="px-4 py-5 text-sm text-muted-foreground text-center">
-                Nenhuma cidade corresponde. Tente outro nome ou use a sua
-                localização.
+              <li className="p-2">
+                <div className="rounded-xl bg-gradient-to-br from-accent/5 via-white to-primary/5 border border-accent/20 p-4 text-center">
+                  <p className="text-sm text-foreground font-medium">
+                    Ainda não temos representante nessa cidade
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-1 mb-3">
+                    Que tal ser o primeiro a levar a Acqualive para a sua região?
+                  </p>
+                  <a
+                    href={REPRESENTANTE_WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 h-11 px-5 rounded-xl bg-gradient-to-r from-accent to-[hsl(38_95%_55%)] text-white text-[12px] font-bold tracking-wide shadow-2xl shadow-accent/30 hover:shadow-accent/50 hover:scale-[1.02] transition-all animate-pulse-soft"
+                  >
+                    <Sparkles className="w-4 h-4" />
+                    QUERO SER UM REPRESENTANTE ACQUALIVE SOLO
+                  </a>
+                </div>
               </li>
             ) : (
               sugestoes.map((c, i) => (
                 <li key={c.id} role="option" aria-selected={i === activeIdx}>
+
                   <button
                     type="button"
                     onMouseEnter={() => setActiveIdx(i)}
