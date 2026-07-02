@@ -13,6 +13,7 @@ import { Loader2, Pencil, Trash2, Plus, LogOut, Search, Eye, EyeOff, MapPin, Upl
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import ImportarPlanilha from "@/components/admin/ImportarPlanilha";
 
 interface Franqueado {
   id: string;
