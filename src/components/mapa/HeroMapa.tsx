@@ -60,8 +60,9 @@ const HeroMapa = ({ onCTAClick }: HeroMapaProps) => {
           </h1>
 
           <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Uma pessoa preparada para cuidar da sua água, da sua saúde e da sua
-            família. Digite a sua cidade e comece uma conversa em segundos.
+            Uma pessoa preparada para cuidar da sua água e assim ajudar a
+            melhorar a sua saúde e da sua família através da hidratação
+            funcional. Digite a sua cidade e comece uma conversa em segundos.
           </p>
 
           <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
