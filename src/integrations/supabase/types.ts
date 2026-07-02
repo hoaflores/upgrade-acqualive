@@ -225,6 +225,60 @@ export type Database = {
         }
         Relationships: []
       }
+      franqueados: {
+        Row: {
+          ativo: boolean
+          cidade: string
+          created_at: string
+          email: string | null
+          estado: string
+          foto: string | null
+          id: string
+          instagram: string | null
+          lat: number
+          lng: number
+          nome: string
+          observacoes: string | null
+          telefone: string | null
+          updated_at: string
+          whatsapp: string
+        }
+        Insert: {
+          ativo?: boolean
+          cidade: string
+          created_at?: string
+          email?: string | null
+          estado: string
+          foto?: string | null
+          id?: string
+          instagram?: string | null
+          lat: number
+          lng: number
+          nome: string
+          observacoes?: string | null
+          telefone?: string | null
+          updated_at?: string
+          whatsapp: string
+        }
+        Update: {
+          ativo?: boolean
+          cidade?: string
+          created_at?: string
+          email?: string | null
+          estado?: string
+          foto?: string | null
+          id?: string
+          instagram?: string | null
+          lat?: number
+          lng?: number
+          nome?: string
+          observacoes?: string | null
+          telefone?: string | null
+          updated_at?: string
+          whatsapp?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string

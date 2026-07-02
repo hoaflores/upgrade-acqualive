@@ -1,40 +1,90 @@
-import { useMemo, useState, useCallback } from "react";
-import { cidadesAtendimento } from "@/data/especialistas";
+import { useMemo, useState, useCallback, useEffect } from "react";
+import { cidadesAtendimento as cidadesEstaticas } from "@/data/especialistas";
 import { fuzzySearch, haversineKm, normalize } from "@/utils/fuzzySearch";
-import type { CidadeAtendimento } from "@/types/mapa";
+import type { CidadeAtendimento, Especialista } from "@/types/mapa";
+import { supabase } from "@/integrations/supabase/client";
+
+/** Agrupa franqueados por cidade+estado. */
+function agruparFranqueados(rows: any[]): CidadeAtendimento[] {
+  const map = new Map<string, CidadeAtendimento>();
+  for (const r of rows) {
+    const key = `${normalize(r.cidade)}-${r.estado.toLowerCase()}`;
+    const esp: Especialista = {
+      id: r.id,
+      nome: r.nome,
+      whatsapp: r.whatsapp,
+      instagram: r.instagram ?? undefined,
+      email: r.email ?? undefined,
+      foto: r.foto ?? undefined,
+      telefone: r.telefone ?? undefined,
+      observacoes: r.observacoes ?? undefined,
+    };
+    const existing = map.get(key);
+    if (existing) {
+      existing.especialistas.push(esp);
+    } else {
+      map.set(key, {
+        id: key,
+        cidade: r.cidade,
+        estado: r.estado,
+        lat: Number(r.lat),
+        lng: Number(r.lng),
+        especialistas: [esp],
+      });
+    }
+  }
+  return Array.from(map.values());
+}
 
 export function useMapaSolo() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [query, setQuery] = useState("");
+  const [cidades, setCidades] = useState<CidadeAtendimento[]>(cidadesEstaticas);
+
+  useEffect(() => {
+    let cancel = false;
+    supabase
+      .from("franqueados")
+      .select("*")
+      .eq("ativo", true)
+      .order("cidade")
+      .then(({ data, error }) => {
+        if (cancel) return;
+        if (error || !data || data.length === 0) return;
+        setCidades(agruparFranqueados(data));
+      });
+    return () => {
+      cancel = true;
+    };
+  }, []);
 
   const cidadesOrdenadas = useMemo(
     () =>
-      [...cidadesAtendimento].sort((a, b) =>
+      [...cidades].sort((a, b) =>
         normalize(a.cidade).localeCompare(normalize(b.cidade)),
       ),
-    [],
+    [cidades],
   );
 
   const resultados = useMemo(() => {
     if (!query.trim()) return cidadesOrdenadas;
-    return fuzzySearch(query, cidadesAtendimento, (c) => `${c.cidade} ${c.estado}`).map(
+    return fuzzySearch(query, cidades, (c) => `${c.cidade} ${c.estado}`).map(
       (m) => m.item,
     );
-  }, [query, cidadesOrdenadas]);
+  }, [query, cidadesOrdenadas, cidades]);
 
   const selecionada: CidadeAtendimento | null = useMemo(
-    () => cidadesAtendimento.find((c) => c.id === selectedId) ?? null,
-    [selectedId],
+    () => cidades.find((c) => c.id === selectedId) ?? null,
+    [selectedId, cidades],
   );
 
   const selecionarCidade = useCallback((id: string) => setSelectedId(id), []);
 
-  /** Encontra especialista mais próximo (fallback quando cidade não existe). */
   const buscarMaisProximo = useCallback(
     (origem: { lat: number; lng: number }) => {
       let best: CidadeAtendimento | null = null;
       let bestDist = Infinity;
-      for (const c of cidadesAtendimento) {
+      for (const c of cidades) {
         const d = haversineKm(origem, { lat: c.lat, lng: c.lng });
         if (d < bestDist) {
           bestDist = d;
@@ -44,7 +94,7 @@ export function useMapaSolo() {
       if (best) setSelectedId(best.id);
       return best;
     },
-    [],
+    [cidades],
   );
 
   return {
