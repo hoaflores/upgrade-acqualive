@@ -140,6 +140,13 @@ const EspecialistaCard = ({
       </div>
     )}
 
+    {esp.horario_atendimento && (
+      <div className="mt-4 flex items-start gap-2 text-sm text-muted-foreground">
+        <Clock className="w-3.5 h-3.5 mt-0.5 text-primary/80 shrink-0" aria-hidden />
+        <span className="leading-relaxed">{esp.horario_atendimento}</span>
+      </div>
+    )}
+
     <motion.a
       href={waLink(esp.whatsapp, cidade)}
       target="_blank"
