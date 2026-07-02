@@ -55,23 +55,24 @@ const PinMark = ({
       {/* Halo */}
       <circle
         r={size + 4}
-        fill={active ? "hsl(var(--accent))" : "hsl(var(--primary))"}
-        opacity={active ? 0.28 : hovered ? 0.22 : 0.16}
+        fill="hsl(var(--accent))"
+        opacity={active ? 0.32 : hovered ? 0.26 : 0.2}
         style={{ transition: "opacity 300ms ease" }}
       />
       {/* Núcleo com gradiente */}
       <circle
         r={size}
-        fill={active ? "url(#pinGradAccent)" : "url(#pinGradPrimary)"}
+        fill="url(#pinGradAccent)"
         stroke="white"
         strokeWidth={1.8}
         style={{
           filter: active
-            ? "drop-shadow(0 3px 8px hsl(var(--accent) / 0.55))"
-            : "drop-shadow(0 2px 5px hsl(var(--primary) / 0.45))",
+            ? "drop-shadow(0 3px 10px hsl(21 85% 45% / 0.7))"
+            : "drop-shadow(0 2px 6px hsl(21 85% 45% / 0.55))",
           transition: "r 300ms cubic-bezier(0.22, 1, 0.36, 1)",
         }}
       />
+
       {/* Reflexo interno */}
       <circle cx={-size / 3.2} cy={-size / 3.2} r={size / 3.2} fill="white" opacity={0.6} />
     </g>
