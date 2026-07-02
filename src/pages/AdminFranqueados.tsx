@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
@@ -9,7 +9,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Loader2, Pencil, Trash2, Plus, LogOut, Search, Eye, EyeOff } from "lucide-react";
+import { Loader2, Pencil, Trash2, Plus, LogOut, Search, Eye, EyeOff, MapPin, Upload } from "lucide-react";
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 interface Franqueado {
@@ -50,6 +50,20 @@ const emptyForm: FormState = {
   ativo: true,
 };
 
+// Geocode via Nominatim (OpenStreetMap) - gratuito, sem chave.
+async function geocodeCidade(cidade: string, estado: string): Promise<{ lat: number; lng: number } | null> {
+  const q = encodeURIComponent(`${cidade}, ${estado}, Brasil`);
+  const url = `https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=br&q=${q}`;
+  try {
+    const res = await fetch(url, { headers: { "Accept-Language": "pt-BR" } });
+    const arr = await res.json();
+    if (Array.isArray(arr) && arr[0]?.lat && arr[0]?.lon) {
+      return { lat: parseFloat(arr[0].lat), lng: parseFloat(arr[0].lon) };
+    }
+  } catch {}
+  return null;
+}
+
 export default function AdminFranqueados() {
   const [session, setSession] = useState<any>(null);
   const [isAdmin, setIsAdmin] = useState(false);
@@ -66,6 +80,9 @@ export default function AdminFranqueados() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [form, setForm] = useState<FormState>(emptyForm);
   const [saving, setSaving] = useState(false);
+  const [geocoding, setGeocoding] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const fileRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const { data: sub } = supabase.auth.onAuthStateChange(async (_e, s) => {
@@ -137,17 +154,72 @@ export default function AdminFranqueados() {
     setDialogOpen(true);
   };
 
-  const save = async () => {
-    if (!form.nome || !form.cidade || !form.estado || !form.whatsapp || !form.lat || !form.lng) {
-      toast.error("Preencha nome, cidade, estado, whatsapp, lat e lng.");
+  const buscarCoordenadas = async () => {
+    if (!form.cidade || !form.estado) {
+      toast.error("Preencha cidade e UF antes.");
       return;
+    }
+    setGeocoding(true);
+    const r = await geocodeCidade(form.cidade, form.estado);
+    setGeocoding(false);
+    if (!r) {
+      toast.error("Não encontrei essa cidade. Preencha lat/lng manualmente.");
+      return;
+    }
+    setForm((f) => ({ ...f, lat: r.lat.toFixed(6), lng: r.lng.toFixed(6) }));
+    toast.success("Coordenadas preenchidas automaticamente.");
+  };
+
+  const onUploadFoto = async (file: File) => {
+    if (!file) return;
+    if (file.size > 5 * 1024 * 1024) {
+      toast.error("Foto máxima de 5MB.");
+      return;
+    }
+    setUploading(true);
+    const ext = file.name.split(".").pop() || "jpg";
+    const path = `franqueados/${crypto.randomUUID()}.${ext}`;
+    const { error } = await supabase.storage.from("blog-images").upload(path, file, {
+      cacheControl: "3600",
+      upsert: false,
+      contentType: file.type,
+    });
+    if (error) {
+      setUploading(false);
+      toast.error("Falha no upload: " + error.message);
+      return;
+    }
+    const { data } = supabase.storage.from("blog-images").getPublicUrl(path);
+    setForm((f) => ({ ...f, foto: data.publicUrl }));
+    setUploading(false);
+    toast.success("Foto enviada.");
+  };
+
+  const save = async () => {
+    if (!form.nome || !form.cidade || !form.estado || !form.whatsapp) {
+      toast.error("Preencha nome, cidade, UF e WhatsApp.");
+      return;
+    }
+    let lat = parseFloat(form.lat);
+    let lng = parseFloat(form.lng);
+    // Se faltar lat/lng, tentar geocodificar automaticamente.
+    if (isNaN(lat) || isNaN(lng)) {
+      setSaving(true);
+      const r = await geocodeCidade(form.cidade, form.estado);
+      if (!r) {
+        setSaving(false);
+        toast.error("Não foi possível localizar a cidade. Preencha lat/lng manualmente.");
+        return;
+      }
+      lat = r.lat;
+      lng = r.lng;
     }
     const payload = {
       nome: form.nome.trim(),
       cidade: form.cidade.trim(),
       estado: form.estado.trim().toUpperCase().slice(0, 2),
-      lat: parseFloat(form.lat),
-      lng: parseFloat(form.lng),
+      lat,
+      lng,
       whatsapp: form.whatsapp.replace(/\D/g, ""),
       instagram: form.instagram?.trim() || null,
       email: form.email?.trim() || null,
@@ -294,6 +366,7 @@ export default function AdminFranqueados() {
             <Table>
               <TableHeader>
                 <TableRow>
+                  <TableHead>Foto</TableHead>
                   <TableHead>Nome</TableHead>
                   <TableHead>Cidade / UF</TableHead>
                   <TableHead>WhatsApp</TableHead>
@@ -305,20 +378,27 @@ export default function AdminFranqueados() {
               <TableBody>
                 {loading && (
                   <TableRow>
-                    <TableCell colSpan={6} className="text-center py-8">
+                    <TableCell colSpan={7} className="text-center py-8">
                       <Loader2 className="w-5 h-5 animate-spin inline" />
                     </TableCell>
                   </TableRow>
                 )}
                 {!loading && filtered.length === 0 && (
                   <TableRow>
-                    <TableCell colSpan={6} className="text-center text-sm text-muted-foreground py-8">
-                      Nenhum franqueado encontrado.
+                    <TableCell colSpan={7} className="text-center text-sm text-muted-foreground py-8">
+                      Nenhum franqueado cadastrado. Clique em "Novo" para começar.
                     </TableCell>
                   </TableRow>
                 )}
                 {filtered.map((f) => (
                   <TableRow key={f.id}>
+                    <TableCell>
+                      {f.foto ? (
+                        <img src={f.foto} alt={f.nome} className="w-10 h-10 rounded-full object-cover" />
+                      ) : (
+                        <div className="w-10 h-10 rounded-full bg-muted grid place-items-center text-xs text-muted-foreground">—</div>
+                      )}
+                    </TableCell>
                     <TableCell className="font-medium">{f.nome}</TableCell>
                     <TableCell>{f.cidade} / {f.estado}</TableCell>
                     <TableCell className="font-mono text-xs">{f.whatsapp}</TableCell>
@@ -363,14 +443,33 @@ export default function AdminFranqueados() {
                 <Label>UF *</Label>
                 <Input maxLength={2} value={form.estado} onChange={(e) => setForm({ ...form, estado: e.target.value.toUpperCase() })} />
               </div>
-              <div>
-                <Label>Latitude *</Label>
-                <Input value={form.lat} onChange={(e) => setForm({ ...form, lat: e.target.value })} placeholder="-23.5505" />
+
+              <div className="md:col-span-2 rounded-lg border bg-muted/40 p-3 space-y-2">
+                <div className="flex items-center justify-between gap-2 flex-wrap">
+                  <div className="text-sm">
+                    <p className="font-medium">Coordenadas do mapa</p>
+                    <p className="text-xs text-muted-foreground">
+                      Deixe em branco para localizar automaticamente pela cidade ao salvar,
+                      ou clique em "Buscar coordenadas".
+                    </p>
+                  </div>
+                  <Button type="button" variant="outline" size="sm" onClick={buscarCoordenadas} disabled={geocoding}>
+                    {geocoding ? <Loader2 className="w-4 h-4 mr-1 animate-spin" /> : <MapPin className="w-4 h-4 mr-1" />}
+                    Buscar coordenadas
+                  </Button>
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div>
+                    <Label className="text-xs">Latitude</Label>
+                    <Input value={form.lat} onChange={(e) => setForm({ ...form, lat: e.target.value })} placeholder="-23.5505" />
+                  </div>
+                  <div>
+                    <Label className="text-xs">Longitude</Label>
+                    <Input value={form.lng} onChange={(e) => setForm({ ...form, lng: e.target.value })} placeholder="-46.6333" />
+                  </div>
+                </div>
               </div>
-              <div>
-                <Label>Longitude *</Label>
-                <Input value={form.lng} onChange={(e) => setForm({ ...form, lng: e.target.value })} placeholder="-46.6333" />
-              </div>
+
               <div>
                 <Label>WhatsApp * (E.164 sem +)</Label>
                 <Input value={form.whatsapp} onChange={(e) => setForm({ ...form, whatsapp: e.target.value })} placeholder="5511999990001" />
@@ -387,10 +486,42 @@ export default function AdminFranqueados() {
                 <Label>E-mail</Label>
                 <Input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
               </div>
-              <div className="md:col-span-2">
-                <Label>Foto (URL)</Label>
-                <Input value={form.foto} onChange={(e) => setForm({ ...form, foto: e.target.value })} />
+
+              <div className="md:col-span-2 rounded-lg border p-3 space-y-2">
+                <Label>Foto do franqueado</Label>
+                <div className="flex items-center gap-3">
+                  {form.foto ? (
+                    <img src={form.foto} alt="preview" className="w-16 h-16 rounded-full object-cover border" />
+                  ) : (
+                    <div className="w-16 h-16 rounded-full bg-muted grid place-items-center text-xs text-muted-foreground">sem foto</div>
+                  )}
+                  <div className="flex-1 space-y-2">
+                    <Input
+                      value={form.foto}
+                      onChange={(e) => setForm({ ...form, foto: e.target.value })}
+                      placeholder="URL da foto ou envie um arquivo"
+                    />
+                    <div>
+                      <input
+                        ref={fileRef}
+                        type="file"
+                        accept="image/*"
+                        className="hidden"
+                        onChange={(e) => {
+                          const f = e.target.files?.[0];
+                          if (f) onUploadFoto(f);
+                          if (fileRef.current) fileRef.current.value = "";
+                        }}
+                      />
+                      <Button type="button" size="sm" variant="outline" onClick={() => fileRef.current?.click()} disabled={uploading}>
+                        {uploading ? <Loader2 className="w-4 h-4 mr-1 animate-spin" /> : <Upload className="w-4 h-4 mr-1" />}
+                        Enviar foto
+                      </Button>
+                    </div>
+                  </div>
+                </div>
               </div>
+
               <div className="md:col-span-2">
                 <Label>Observações</Label>
                 <Textarea value={form.observacoes} onChange={(e) => setForm({ ...form, observacoes: e.target.value })} rows={3} />
