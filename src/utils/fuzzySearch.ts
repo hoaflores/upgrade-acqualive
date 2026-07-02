@@ -57,7 +57,7 @@ export function fuzzySearch<T>(
       }
       return { item, score };
     })
-    .filter((m) => m.score < 2.5)
+    .filter((m) => m.score < 1.5)
     .sort((a, b) => a.score - b.score);
 }
 
