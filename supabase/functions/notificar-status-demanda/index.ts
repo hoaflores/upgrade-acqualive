@@ -129,9 +129,31 @@ function htmlEmail(d: any, statusNovo: string, statusAnterior: string | null, ob
   </div>`;
 }
 
+async function requireAdmin(req: Request) {
+  const authHeader = req.headers.get("Authorization") || "";
+  const token = authHeader.replace(/^Bearer\s+/i, "");
+  if (!token) return { ok: false, status: 401, msg: "Não autenticado" };
+  const url = Deno.env.get("SUPABASE_URL")!;
+  const anon = Deno.env.get("SUPABASE_ANON_KEY")!;
+  const authClient = createClient(url, anon);
+  const { data, error } = await authClient.auth.getUser(token);
+  if (error || !data.user) return { ok: false, status: 401, msg: "Sessão inválida" };
+  const admin = createClient(url, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
+  const { data: roles } = await admin.from("user_roles").select("role").eq("user_id", data.user.id).eq("role", "admin").maybeSingle();
+  if (!roles) return { ok: false, status: 403, msg: "Acesso negado" };
+  return { ok: true as const, email: data.user.email };
+}
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
   try {
+    const auth = await requireAdmin(req);
+    if (!auth.ok) {
+      return new Response(JSON.stringify({ error: auth.msg }), {
+        status: auth.status,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
     const body = await req.json();
     const { demanda_id, status_novo, status_anterior, alterado_por, observacao } = body;
 
@@ -154,16 +176,14 @@ Deno.serve(async (req) => {
       .single();
     if (error || !demanda) throw error || new Error("Demanda não encontrada");
 
-    // Registrar histórico
     await supabase.from("demanda_status_log").insert({
       demanda_id,
       status_anterior: status_anterior || null,
       status_novo,
-      alterado_por: alterado_por || "marketing",
+      alterado_por: alterado_por || auth.email || "marketing",
       observacao: observacao || null,
     });
 
-    // Enviar email apenas para o solicitante
     const subject = `[${demanda.protocolo}] Status atualizado: ${STATUS_LABEL[status_novo] || status_novo}`;
     await sendGmail(demanda.solicitante_email, subject, htmlEmail(demanda, status_novo, status_anterior, observacao));
 
@@ -172,9 +192,10 @@ Deno.serve(async (req) => {
     });
   } catch (e: any) {
     console.error("notificar-status-demanda error", e);
-    return new Response(JSON.stringify({ error: e.message || "Erro interno" }), {
+    return new Response(JSON.stringify({ error: "Erro interno" }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   }
 });
+

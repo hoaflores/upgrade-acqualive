@@ -11,7 +11,7 @@ import { toast } from "@/hooks/use-toast";
 import { Loader2, Upload, X, CheckCircle2, FileText, Image as ImageIcon, Video, Layout, Sparkles, Eye, EyeOff, Search, Clock, AlertCircle, MessageSquare, Send, Paperclip, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
-const SOLICITANTE_PASSWORD = "Acqualive!@#";
+
 
 const TIPOS = [
   { value: "texto", label: "Texto / Copy", icon: FileText, prazo: 2 },
@@ -23,12 +23,30 @@ const TIPOS = [
 
 export default function Demandas() {
   const [auth, setAuth] = useState(false);
-  const [loginUser, setLoginUser] = useState("");
+  const [userEmail, setUserEmail] = useState<string>("");
+  const [checkingSession, setCheckingSession] = useState(true);
+  const [loginEmail, setLoginEmail] = useState("");
   const [loginPass, setLoginPass] = useState("");
+  const [loginBusy, setLoginBusy] = useState(false);
   const [showPass, setShowPass] = useState(false);
   const [submitted, setSubmitted] = useState<{ protocolo: string } | null>(null);
   const [loading, setLoading] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
+
+  // Session bootstrap and listener
+  useEffect(() => {
+    const { data: sub } = supabase.auth.onAuthStateChange((_event, session) => {
+      setAuth(!!session);
+      setUserEmail(session?.user?.email ?? "");
+    });
+    supabase.auth.getSession().then(({ data }) => {
+      setAuth(!!data.session);
+      setUserEmail(data.session?.user?.email ?? "");
+      setCheckingSession(false);
+    });
+    return () => sub.subscription.unsubscribe();
+  }, []);
+
 
   const [form, setForm] = useState({
     solicitante: "",
@@ -172,14 +190,25 @@ export default function Demandas() {
     }
   };
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (loginUser.trim().toLowerCase() === "solicitante" && loginPass === SOLICITANTE_PASSWORD) {
-      setAuth(true);
+    setLoginBusy(true);
+    const { error } = await supabase.auth.signInWithPassword({
+      email: loginEmail.trim().toLowerCase(),
+      password: loginPass,
+    });
+    setLoginBusy(false);
+    if (error) {
+      toast({ title: "Acesso negado", description: "Email ou senha incorretos.", variant: "destructive" });
     } else {
-      toast({ title: "Acesso negado", description: "Usuário ou senha incorretos.", variant: "destructive" });
+      setLoginPass("");
     }
   };
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+  };
+
 
   const onFiles = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newFiles = Array.from(e.target.files || []);
@@ -214,12 +243,12 @@ export default function Demandas() {
 
       const { data, error } = await supabase.functions.invoke("criar-demanda", {
         body: {
-          password: SOLICITANTE_PASSWORD,
           ...form,
           emails_extras: emailsExtras,
           anexos,
         },
       });
+
       if (error) throw error;
       if (data?.error) throw new Error(data.error);
 
@@ -268,7 +297,8 @@ export default function Demandas() {
               <Search className="w-4 h-4" /> Acompanhar demanda
             </Button>
             {auth && (
-              <Button variant="ghost" size="sm" onClick={() => setAuth(false)}>Sair</Button>
+              <Button variant="ghost" size="sm" onClick={handleLogout}>Sair</Button>
+
             )}
           </div>
         </div>
@@ -425,12 +455,13 @@ export default function Demandas() {
         {!auth ? (
           <Card className="p-8 max-w-md mx-auto shadow-xl border-0">
             <h2 className="text-2xl font-bold text-slate-900 mb-2">Acesso restrito</h2>
-            <p className="text-slate-600 mb-6">Informe o usuário e a senha compartilhada da equipe.</p>
+            <p className="text-slate-600 mb-6">Entre com seu email corporativo Acqualive.</p>
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
-                <Label>Usuário</Label>
-                <Input value={loginUser} onChange={(e) => setLoginUser(e.target.value)} placeholder="Digite seu usuário" autoFocus />
+                <Label>Email</Label>
+                <Input type="email" value={loginEmail} onChange={(e) => setLoginEmail(e.target.value)} placeholder="voce@acqualive.com.br" autoFocus autoComplete="email" required />
               </div>
+
               <div>
                 <Label>Senha</Label>
                 <div className="relative">
@@ -451,7 +482,7 @@ export default function Demandas() {
                   </button>
                 </div>
               </div>
-              <Button type="submit" className="w-full">Entrar</Button>
+              <Button type="submit" className="w-full" disabled={loginBusy}>{loginBusy ? <Loader2 className="w-4 h-4 animate-spin" /> : "Entrar"}</Button>
             </form>
           </Card>
         ) : submitted ? (

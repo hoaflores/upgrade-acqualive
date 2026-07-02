@@ -83,9 +83,30 @@ function htmlEmail(d: any, autor: string, texto: string) {
   </div>`;
 }
 
+async function requireAdmin(req: Request) {
+  const authHeader = req.headers.get("Authorization") || "";
+  const token = authHeader.replace(/^Bearer\s+/i, "");
+  if (!token) return { ok: false, status: 401, msg: "Não autenticado" };
+  const url = Deno.env.get("SUPABASE_URL")!;
+  const anon = Deno.env.get("SUPABASE_ANON_KEY")!;
+  const authClient = createClient(url, anon);
+  const { data, error } = await authClient.auth.getUser(token);
+  if (error || !data.user) return { ok: false, status: 401, msg: "Sessão inválida" };
+  const admin = createClient(url, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
+  const { data: roles } = await admin.from("user_roles").select("role").eq("user_id", data.user.id).eq("role", "admin").maybeSingle();
+  if (!roles) return { ok: false, status: 403, msg: "Acesso negado" };
+  return { ok: true as const };
+}
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
   try {
+    const auth = await requireAdmin(req);
+    if (!auth.ok) {
+      return new Response(JSON.stringify({ error: auth.msg }), {
+        status: auth.status, headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
     const { demanda_id, autor, texto } = await req.json();
     if (!demanda_id || !autor || !texto) {
       return new Response(JSON.stringify({ error: "demanda_id, autor e texto são obrigatórios" }), {
@@ -104,8 +125,9 @@ Deno.serve(async (req) => {
     return new Response(JSON.stringify({ success: true }), { headers: { ...corsHeaders, "Content-Type": "application/json" } });
   } catch (e: any) {
     console.error("notificar-comentario error", e);
-    return new Response(JSON.stringify({ error: e.message || "Erro" }), {
+    return new Response(JSON.stringify({ error: "Erro interno" }), {
       status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   }
 });
+

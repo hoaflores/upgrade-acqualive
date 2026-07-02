@@ -19,8 +19,8 @@ import { cn } from "@/lib/utils";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Switch } from "@/components/ui/switch";
 
-const ADMIN_USER = "marketing";
-const ADMIN_PASSWORD = "AcqualiveTerracota123!";
+// Admin access is enforced server-side via Supabase Auth + user_roles.admin role
+
 
 const STATUS_OPTIONS = [
   { value: "nova", label: "Na fila", color: "bg-blue-100 text-blue-800 border-blue-200", dot: "bg-blue-500" },
@@ -91,8 +91,10 @@ function isFixedResp(name?: string | null) {
 
 export default function DemandasSolicitadas() {
   const [auth, setAuth] = useState(false);
-  const [loginUser, setLoginUser] = useState("");
+  const [checkingSession, setCheckingSession] = useState(true);
+  const [loginEmail, setLoginEmail] = useState("");
   const [loginPass, setLoginPass] = useState("");
+  const [loginBusy, setLoginBusy] = useState(false);
   const [showPass, setShowPass] = useState(false);
   const [demandas, setDemandas] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
@@ -118,15 +120,67 @@ export default function DemandasSolicitadas() {
   const [priorityOverId, setPriorityOverId] = useState<string | null>(null);
   const [filterVelocidade, setFilterVelocidade] = useState("todos");
 
-  const handleLogin = (e: React.FormEvent) => {
+  const verifyAdminSession = async () => {
+    const { data: sessionData } = await supabase.auth.getSession();
+    const user = sessionData.session?.user;
+    if (!user) {
+      setAuth(false);
+      return false;
+    }
+    const { data: roles } = await supabase
+      .from("user_roles")
+      .select("role")
+      .eq("user_id", user.id)
+      .eq("role", "admin")
+      .maybeSingle();
+    if (!roles) {
+      await supabase.auth.signOut();
+      toast({ title: "Acesso negado", description: "Sua conta não tem permissão de administrador.", variant: "destructive" });
+      setAuth(false);
+      return false;
+    }
+    setAuth(true);
+    return true;
+  };
+
+  useEffect(() => {
+    const { data: sub } = supabase.auth.onAuthStateChange((_e, session) => {
+      if (!session) setAuth(false);
+    });
+    (async () => {
+      const ok = await verifyAdminSession();
+      if (ok) load();
+      setCheckingSession(false);
+    })();
+    return () => sub.subscription.unsubscribe();
+  }, []);
+
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (loginUser.trim().toLowerCase() === ADMIN_USER && loginPass === ADMIN_PASSWORD) {
-      setAuth(true);
+    setLoginBusy(true);
+    const { error } = await supabase.auth.signInWithPassword({
+      email: loginEmail.trim().toLowerCase(),
+      password: loginPass,
+    });
+    if (error) {
+      setLoginBusy(false);
+      toast({ title: "Acesso negado", description: "Email ou senha incorretos.", variant: "destructive" });
+      return;
+    }
+    const ok = await verifyAdminSession();
+    setLoginBusy(false);
+    if (ok) {
+      setLoginPass("");
       load();
-    } else {
-      toast({ title: "Acesso negado", variant: "destructive" });
     }
   };
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    setAuth(false);
+  };
+
+
 
   const load = async () => {
     setLoading(true);
@@ -424,9 +478,10 @@ export default function DemandasSolicitadas() {
             <p className="text-slate-600 mb-6">Acesso restrito ao time de marketing.</p>
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
-                <Label>Usuário</Label>
-                <Input value={loginUser} onChange={(e) => setLoginUser(e.target.value)} placeholder="Digite seu usuário" autoFocus />
+                <Label>Email</Label>
+                <Input type="email" value={loginEmail} onChange={(e) => setLoginEmail(e.target.value)} placeholder="voce@acqualive.com.br" autoFocus autoComplete="email" required />
               </div>
+
               <div>
                 <Label>Senha</Label>
                 <div className="relative">
@@ -447,7 +502,7 @@ export default function DemandasSolicitadas() {
                   </button>
                 </div>
               </div>
-              <Button type="submit" className="w-full">Entrar</Button>
+              <Button type="submit" className="w-full" disabled={loginBusy}>{loginBusy ? <Loader2 className="w-4 h-4 animate-spin" /> : "Entrar"}</Button>
             </form>
           </Card>
         </div>
@@ -486,7 +541,7 @@ export default function DemandasSolicitadas() {
                   </button>
                 </div>
                 <Button variant="outline" size="sm" onClick={load}>Atualizar</Button>
-                <Button variant="ghost" size="sm" onClick={() => setAuth(false)}>Sair</Button>
+                <Button variant="ghost" size="sm" onClick={handleLogout}>Sair</Button>
               </div>
             </div>
           </header>
