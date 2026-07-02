@@ -256,13 +256,17 @@ export default function AdminFranqueados() {
     if (!form.nome || !form.cidade || !form.estado || !form.whatsapp) {
       toast.error("Preencha nome, cidade, UF e WhatsApp."); return;
     }
+    setSaving(true);
     let lat = parseFloat(form.lat);
     let lng = parseFloat(form.lng);
     if (isNaN(lat) || isNaN(lng)) {
-      setSaving(true);
       const r = await geocodeCidade(form.cidade, form.estado);
-      if (!r) { setSaving(false); toast.error("Cidade não localizada."); return; }
-      lat = r.lat; lng = r.lng;
+      if (r) { lat = r.lat; lng = r.lng; }
+      else {
+        // Não bloqueia salvamento: entra com 0/0 e avisa
+        lat = 0; lng = 0;
+        toast.warning("Não localizei a cidade automaticamente. Salvei sem coordenadas — edite depois para aparecer no mapa.");
+      }
     }
     const payload = {
       nome: form.nome.trim(), cidade: form.cidade.trim(),
@@ -276,12 +280,15 @@ export default function AdminFranqueados() {
       horario_atendimento: form.horario_atendimento?.trim() || null,
       ativo: form.ativo,
     };
-    setSaving(true);
     const { error } = editingId
       ? await supabase.from("franqueados").update(payload).eq("id", editingId)
       : await supabase.from("franqueados").insert(payload);
     setSaving(false);
-    if (error) { toast.error("Erro ao salvar: " + error.message); return; }
+    if (error) {
+      console.error("Erro ao salvar franqueado:", error);
+      toast.error("Erro ao salvar: " + (error.message || "verifique o console"));
+      return;
+    }
     toast.success(editingId ? "Franqueado atualizado" : "Franqueado adicionado");
     setDialogOpen(false);
     load();
