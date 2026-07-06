@@ -81,7 +81,7 @@ const MapaSolo = () => {
           name="description"
           content="Encontre em segundos um especialista Acqualive na sua cidade. Fale por WhatsApp com uma pessoa preparada para cuidar da sua água, saúde e família."
         />
-        <link rel="canonical" href="https://paginas.acqualive.com.br/mapa-solo" />
+        <link rel="canonical" href="https://paginas.acqualive.com.br/franquias-solo" />
         <meta property="og:title" content="Mapa de Especialistas Acqualive" />
         <meta
           property="og:description"
