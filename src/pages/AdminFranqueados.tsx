@@ -647,7 +647,22 @@ export default function AdminFranqueados() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-2">
               <div className="md:col-span-2"><Label>Nome *</Label><Input value={form.nome} onChange={(e) => setForm({ ...form, nome: e.target.value })} /></div>
               <div><Label>Cidade *</Label><Input value={form.cidade} onChange={(e) => setForm({ ...form, cidade: e.target.value })} /></div>
-              <div><Label>UF *</Label><Input maxLength={2} value={form.estado} onChange={(e) => setForm({ ...form, estado: e.target.value.toUpperCase() })} /></div>
+              <div>
+                <Label>UF *</Label>
+                <Input
+                  maxLength={2}
+                  value={form.estado}
+                  onChange={(e) => setForm({ ...form, estado: e.target.value.toUpperCase() })}
+                  onBlur={async () => {
+                    if (form.cidade && form.estado.length === 2 && !form.lat && !form.lng) {
+                      setGeocoding(true);
+                      const r = await geocodeCidade(form.cidade, form.estado);
+                      setGeocoding(false);
+                      if (r) setForm((f) => ({ ...f, lat: r.lat.toFixed(6), lng: r.lng.toFixed(6) }));
+                    }
+                  }}
+                />
+              </div>
 
               <div className="md:col-span-2 rounded-lg border bg-muted/40 p-3 space-y-2">
                 <div className="flex items-center justify-between gap-2 flex-wrap">
