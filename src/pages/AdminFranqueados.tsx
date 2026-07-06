@@ -79,6 +79,29 @@ async function geocodeCidade(cidade: string, estado: string): Promise<{ lat: num
   return null;
 }
 
+/** Redimensiona/comprime a foto no navegador antes do upload.
+ *  Reduz drasticamente o tempo de envio (fotos de celular ~5MB viram ~200KB). */
+async function comprimirImagem(file: File, maxDim = 1200, quality = 0.82): Promise<File> {
+  if (!file.type.startsWith("image/") || file.type === "image/gif") return file;
+  const bitmap = await createImageBitmap(file).catch(() => null);
+  if (!bitmap) return file;
+  const scale = Math.min(1, maxDim / Math.max(bitmap.width, bitmap.height));
+  const w = Math.round(bitmap.width * scale);
+  const h = Math.round(bitmap.height * scale);
+  const canvas = document.createElement("canvas");
+  canvas.width = w; canvas.height = h;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return file;
+  ctx.drawImage(bitmap, 0, 0, w, h);
+  bitmap.close?.();
+  const blob: Blob | null = await new Promise((res) => canvas.toBlob(res, "image/jpeg", quality));
+  if (!blob) return file;
+  // Se ficou maior que o original (raro), usa o original
+  if (blob.size >= file.size) return file;
+  return new File([blob], file.name.replace(/\.[^.]+$/, "") + ".jpg", { type: "image/jpeg" });
+}
+
+
 export default function AdminFranqueados() {
   const [session, setSession] = useState<any>(null);
   const [profile, setProfile] = useState<ProfileRow | null>(null);
@@ -235,19 +258,35 @@ export default function AdminFranqueados() {
 
   const onUploadFoto = async (file: File) => {
     if (!file) return;
-    if (file.size > 5 * 1024 * 1024) { toast.error("Foto máxima de 5MB."); return; }
+    if (file.size > 20 * 1024 * 1024) { toast.error("Foto máxima de 20MB."); return; }
     setUploading(true);
-    const ext = file.name.split(".").pop() || "jpg";
-    const path = `franqueados/${crypto.randomUUID()}.${ext}`;
-    const { error } = await supabase.storage.from("blog-images").upload(path, file, {
-      cacheControl: "3600", upsert: false, contentType: file.type,
-    });
-    if (error) { setUploading(false); toast.error("Falha: " + error.message); return; }
-    const { data } = supabase.storage.from("blog-images").getPublicUrl(path);
-    setForm((f) => ({ ...f, foto: data.publicUrl }));
-    setUploading(false);
-    toast.success("Foto enviada.");
+    try {
+      const arquivo = await comprimirImagem(file);
+      const ext = (arquivo.type.split("/")[1] || "jpg").replace("jpeg", "jpg");
+      const path = `franqueados/${crypto.randomUUID()}.${ext}`;
+
+      // Timeout de 45s para não travar indefinidamente
+      const uploadPromise = supabase.storage.from("blog-images").upload(path, arquivo, {
+        cacheControl: "3600", upsert: false, contentType: arquivo.type,
+      });
+      const timeout = new Promise<{ error: { message: string } }>((res) =>
+        setTimeout(() => res({ error: { message: "tempo esgotado (45s)" } }), 45000)
+      );
+      const { error } = (await Promise.race([uploadPromise, timeout])) as any;
+      if (error) { toast.error("Falha no upload: " + error.message); return; }
+
+      const { data } = supabase.storage.from("blog-images").getPublicUrl(path);
+      setForm((f) => ({ ...f, foto: data.publicUrl }));
+      toast.success(`Foto enviada (${Math.round(arquivo.size / 1024)}KB).`);
+    } catch (e: any) {
+      console.error("upload foto", e);
+      toast.error("Erro no upload: " + (e?.message || "desconhecido"));
+    } finally {
+      setUploading(false);
+      if (fileRef.current) fileRef.current.value = "";
+    }
   };
+
 
   const save = async () => {
     if (!form.nome || !form.cidade || !form.estado || !form.whatsapp) {
@@ -608,7 +647,22 @@ export default function AdminFranqueados() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-2">
               <div className="md:col-span-2"><Label>Nome *</Label><Input value={form.nome} onChange={(e) => setForm({ ...form, nome: e.target.value })} /></div>
               <div><Label>Cidade *</Label><Input value={form.cidade} onChange={(e) => setForm({ ...form, cidade: e.target.value })} /></div>
-              <div><Label>UF *</Label><Input maxLength={2} value={form.estado} onChange={(e) => setForm({ ...form, estado: e.target.value.toUpperCase() })} /></div>
+              <div>
+                <Label>UF *</Label>
+                <Input
+                  maxLength={2}
+                  value={form.estado}
+                  onChange={(e) => setForm({ ...form, estado: e.target.value.toUpperCase() })}
+                  onBlur={async () => {
+                    if (form.cidade && form.estado.length === 2 && !form.lat && !form.lng) {
+                      setGeocoding(true);
+                      const r = await geocodeCidade(form.cidade, form.estado);
+                      setGeocoding(false);
+                      if (r) setForm((f) => ({ ...f, lat: r.lat.toFixed(6), lng: r.lng.toFixed(6) }));
+                    }
+                  }}
+                />
+              </div>
 
               <div className="md:col-span-2 rounded-lg border bg-muted/40 p-3 space-y-2">
                 <div className="flex items-center justify-between gap-2 flex-wrap">
