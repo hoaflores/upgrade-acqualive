@@ -94,7 +94,7 @@ const MapaSolo = () => {
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "Acqualive",
-            url: "https://paginas.acqualive.com.br/mapa-solo",
+            url: "https://paginas.acqualive.com.br/franquias-solo",
             areaServed: "BR",
           })}
         </script>
