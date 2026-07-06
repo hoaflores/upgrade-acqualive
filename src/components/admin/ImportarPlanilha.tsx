@@ -36,16 +36,48 @@ interface Resultado {
 
 const HEADERS = ["nome", "cidade", "estado", "whatsapp", "telefone", "horario_atendimento", "instagram", "email", "foto", "observacoes", "lat", "lng"];
 
+const UF_NOME: Record<string, string> = {
+  AC: "Acre", AL: "Alagoas", AP: "Amapá", AM: "Amazonas", BA: "Bahia", CE: "Ceará",
+  DF: "Distrito Federal", ES: "Espírito Santo", GO: "Goiás", MA: "Maranhão",
+  MT: "Mato Grosso", MS: "Mato Grosso do Sul", MG: "Minas Gerais", PA: "Pará",
+  PB: "Paraíba", PR: "Paraná", PE: "Pernambuco", PI: "Piauí", RJ: "Rio de Janeiro",
+  RN: "Rio Grande do Norte", RS: "Rio Grande do Sul", RO: "Rondônia", RR: "Roraima",
+  SC: "Santa Catarina", SP: "São Paulo", SE: "Sergipe", TO: "Tocantins",
+};
+const norm = (s: string) => (s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
 async function geocode(cidade: string, estado: string): Promise<{ lat: number; lng: number } | null> {
-  const q = encodeURIComponent(`${cidade}, ${estado}, Brasil`);
-  const url = `https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=br&q=${q}`;
-  try {
-    const res = await fetch(url, { headers: { "Accept-Language": "pt-BR" } });
-    const arr = await res.json();
-    if (Array.isArray(arr) && arr[0]?.lat && arr[0]?.lon) {
-      return { lat: parseFloat(arr[0].lat), lng: parseFloat(arr[0].lon) };
-    }
-  } catch {}
+  const uf = (estado || "").toUpperCase().trim();
+  const stateName = UF_NOME[uf];
+  if (!stateName) return null;
+  const params = new URLSearchParams({
+    format: "json", addressdetails: "1", limit: "5", countrycodes: "br",
+    city: cidade, state: stateName, country: "Brasil",
+  });
+  const urls = [
+    `https://nominatim.openstreetmap.org/search?${params.toString()}`,
+    `https://nominatim.openstreetmap.org/search?format=json&addressdetails=1&limit=5&countrycodes=br&q=${encodeURIComponent(`${cidade}, ${stateName}, Brasil`)}`,
+  ];
+  const alvoUF = norm(stateName);
+  const alvoCid = norm(cidade);
+  for (const url of urls) {
+    try {
+      const res = await fetch(url, { headers: { "Accept-Language": "pt-BR" } });
+      const arr = await res.json();
+      if (!Array.isArray(arr) || !arr.length) continue;
+      const validos = arr.filter((r: any) => {
+        const st = norm(r?.address?.state || "");
+        const dn = norm(r?.display_name || "");
+        return st === alvoUF || dn.includes(alvoUF);
+      });
+      if (!validos.length) continue;
+      const match = validos.find((r: any) => {
+        const city = norm(r?.address?.city || r?.address?.town || r?.address?.municipality || r?.address?.village || r?.name || "");
+        return city === alvoCid || city.includes(alvoCid) || alvoCid.includes(city);
+      }) ?? validos[0];
+      if (match?.lat && match?.lon) return { lat: parseFloat(match.lat), lng: parseFloat(match.lon) };
+    } catch {}
+  }
   return null;
 }
 
