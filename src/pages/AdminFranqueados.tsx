@@ -144,16 +144,20 @@ export default function AdminFranqueados() {
   };
 
   useEffect(() => {
-    const { data: sub } = supabase.auth.onAuthStateChange(async (_e, s) => {
+    // IMPORTANT: nunca chamar supabase dentro do callback de forma síncrona (deadlock).
+    const { data: sub } = supabase.auth.onAuthStateChange((_e, s) => {
       setSession(s);
-      if (s) await loadMe(s.user.id);
-      else { setProfile(null); setMyRoles([]); }
+      if (s) {
+        setTimeout(() => { loadMe(s.user.id); }, 0);
+      } else {
+        setProfile(null); setMyRoles([]);
+      }
     });
-    supabase.auth.getSession().then(async ({ data }) => {
+    supabase.auth.getSession().then(({ data }) => {
       setSession(data.session);
-      if (data.session) await loadMe(data.session.user.id);
-      setChecking(false);
-    });
+      setChecking(false); // libera a tela imediatamente
+      if (data.session) loadMe(data.session.user.id); // em background
+    }).catch(() => setChecking(false));
     return () => sub.subscription.unsubscribe();
   }, []);
 
