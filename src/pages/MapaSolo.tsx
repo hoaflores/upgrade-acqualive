@@ -81,20 +81,20 @@ const MapaSolo = () => {
           name="description"
           content="Encontre em segundos um especialista Acqualive na sua cidade. Fale por WhatsApp com uma pessoa preparada para cuidar da sua água, saúde e família."
         />
-        <link rel="canonical" href="https://paginas.acqualive.com.br/mapa-solo" />
+        <link rel="canonical" href="https://paginas.acqualive.com.br/franquias-solo" />
         <meta property="og:title" content="Mapa de Especialistas Acqualive" />
         <meta
           property="og:description"
           content="Encontre um especialista Acqualive perto de você e converse pelo WhatsApp."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://paginas.acqualive.com.br/mapa-solo" />
+        <meta property="og:url" content="https://paginas.acqualive.com.br/franquias-solo" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "Acqualive",
-            url: "https://paginas.acqualive.com.br/mapa-solo",
+            url: "https://paginas.acqualive.com.br/franquias-solo",
             areaServed: "BR",
           })}
         </script>

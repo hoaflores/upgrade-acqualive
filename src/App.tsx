@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import Upgrade from "./pages/Upgrade";
@@ -81,7 +81,8 @@ const App = () => (
             <Route path="/1000-dias" element={<Acqualive1000Dias />} />
             <Route path="/acqualive1000dias" element={<Acqualive1000Dias />} />
             <Route path="/email-mae-nutrida" element={<EmailMaeNutrida />} />
-            <Route path="/mapa-solo" element={<MapaSolo />} />
+            <Route path="/franquias-solo" element={<MapaSolo />} />
+            <Route path="/mapa-solo" element={<Navigate to="/franquias-solo" replace />} />
             <Route path="/admin/franqueados" element={<AdminFranqueados />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
