@@ -88,7 +88,7 @@ const MapaSolo = () => {
           content="Encontre um especialista Acqualive perto de você e converse pelo WhatsApp."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://paginas.acqualive.com.br/mapa-solo" />
+        <meta property="og:url" content="https://paginas.acqualive.com.br/franquias-solo" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
