@@ -62,29 +62,30 @@ const HeroSection = () => (
           variants={fadeInUp}
           className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-primary-foreground leading-tight mb-6"
         >
-          Ganhe seu próximo{" "}
-          <span className="text-accent">Refil Grátis</span>{" "}
-          indicando amigos.
+          Economize{" "}
+          <span className="text-accent">R$ 457,00</span>{" "}
+          indicando um amigo.
         </motion.h2>
 
         <motion.p
           variants={fadeInUp}
-          className="text-lg sm:text-xl text-primary-foreground/80 max-w-2xl mb-4 leading-relaxed"
+          className="text-lg sm:text-xl text-primary-foreground/85 max-w-2xl mb-4 leading-relaxed"
         >
-          No Acqualive Club, cada indicação vale um{" "}
+          Cada indicação confirmada te dá um{" "}
           <strong className="text-accent">Kit de Refis GRÁTIS</strong>{" "}
-          e seu amigo ainda ganha{" "}
+          (o mesmo kit que custa <strong className="text-accent">R$ 457,00</strong> na loja) e seu amigo ainda ganha{" "}
           <strong className="text-primary-foreground">R$&nbsp;100,00 de desconto</strong>{" "}
           na primeira compra.{" "}
-          <strong className="text-accent">Uma indicação por semestre e você nunca mais paga para ter água alcalina de qualidade!</strong>
+          <strong className="text-accent">Uma indicação por semestre e você nunca mais paga para ter água alcalina de qualidade.</strong>
         </motion.p>
 
         <motion.p
           variants={fadeInUp}
           className="text-sm text-primary-foreground/60 mb-8"
         >
-          Programa de fidelidade com cashback real, avaliações que valem descontos e muito mais.
+          É cashback real: você indica, seu amigo compra com desconto e você recebe seu refil sem tirar do bolso.
         </motion.p>
+
 
         <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
           <Button variant="cta" size="xl" asChild className="group">
