@@ -1083,7 +1083,7 @@ const EMAILS = [
   <h2 style="margin:0 0 20px;font-family:Georgia,'Times New Roman',serif;font-size:28px;line-height:1.2;color:#0e2a52;font-weight:700;letter-spacing:-0.5px;">Nasce o Acqualive DUO: duas experiências, uma cozinha.</h2>
 </td></tr>
 <tr><td style="padding:0 40px 20px;">
-  <img src="https://images.unsplash.com/photo-1523362628745-0c100150b504?w=1280&q=80" alt="Acqualive DUO" width="560" style="display:block;width:100%;height:auto;border-radius:6px;">
+  <img src="https://paginas.acqualive.com.br/__l5e/assets-v1/401eb55a-8570-4311-b9a8-ffc20815e730/acqualive-duo-consultorio.png" alt="Acqualive DUO em ambiente de consultório" width="560" style="display:block;width:100%;height:auto;border-radius:6px;">
 </td></tr>
 <tr><td style="padding:0 40px;">
   <p style="margin:0 0 14px;font-size:15px;line-height:1.7;color:#4a5b7a;">O DUO nasceu de uma observação simples: quem busca água alcalina para a saúde e bem-estar quer também o conforto da água fresquinha no dia a dia. Reunir as duas experiências em um único equipamento foi um exercício de engenharia, mas antes de tudo de escuta — anos ouvindo o que a cozinha brasileira pede.</p>
