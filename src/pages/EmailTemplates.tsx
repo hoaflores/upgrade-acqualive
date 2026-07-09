@@ -975,6 +975,187 @@ const EMAILS = [
 </body>
 </html>`,
   },
+  {
+    day: "Newsletter Premium — Acqualive DUO",
+    subject: "Apresentamos o Acqualive DUO — a evolução da sua água",
+    html: `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="x-apple-disable-message-reformatting">
+<title>Newsletter Acqualive — DUO</title>
+</head>
+<body style="margin:0;padding:0;background-color:#eef2f7;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Água alcalina e gelada, agora em um único equipamento. Conheça o novo Acqualive DUO.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#eef2f7;">
+<tr><td align="center" style="padding:24px 0;">
+<table role="presentation" width="640" cellpadding="0" cellspacing="0" style="max-width:640px;width:100%;background-color:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(14,42,82,0.06);">
+
+<!-- ============ HEADER ============ -->
+<tr><td style="padding:28px 40px;background:#ffffff;border-bottom:1px solid #eef2f7;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+<td align="left" style="font-size:0;line-height:0;">
+<img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/logo-acqualive.png" alt="Acqualive" width="128" style="display:block;height:auto;border:0;">
+</td>
+<td align="right" style="font-size:12px;color:#7a8aa2;letter-spacing:1.4px;text-transform:uppercase;font-weight:600;">Edição · Novembro</td>
+</tr></table>
+</td></tr>
+
+<!-- ============ HERO ============ -->
+<tr><td style="padding:56px 40px 40px;background:linear-gradient(180deg,#ffffff 0%,#f4f8fd 100%);text-align:center;">
+<span style="display:inline-block;padding:6px 14px;background:#f97316;color:#ffffff;font-size:11px;font-weight:700;letter-spacing:2px;border-radius:100px;text-transform:uppercase;">Novo lançamento</span>
+<h1 style="margin:22px 0 14px;font-size:38px;line-height:1.15;color:#0e2a52;font-weight:800;letter-spacing:-0.5px;">Acqualive DUO</h1>
+<p style="margin:0 auto 28px;max-width:460px;font-size:17px;line-height:1.6;color:#4a5b7a;">A evolução da experiência Acqualive. Água alcalina natural e água gelada, em um único equipamento pensado para o seu dia.</p>
+<img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/acqualive-real.jpg" alt="Acqualive DUO" width="480" style="display:block;margin:0 auto 32px;max-width:100%;height:auto;border-radius:12px;">
+<a href="#" style="display:inline-block;padding:16px 34px;background:#0e2a52;color:#ffffff;font-size:15px;font-weight:700;text-decoration:none;border-radius:100px;letter-spacing:0.3px;">Conhecer o DUO</a>
+</td></tr>
+
+<!-- ============ BENEFÍCIOS ============ -->
+<tr><td style="padding:56px 40px 24px;">
+<p style="margin:0 0 8px;font-size:12px;color:#f97316;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-align:center;">Duas experiências. Um equipamento.</p>
+<h2 style="margin:0 0 40px;font-size:26px;line-height:1.3;color:#0e2a52;font-weight:700;text-align:center;letter-spacing:-0.3px;">Feito para acompanhar cada momento do seu dia</h2>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="33%" valign="top" style="padding:0 10px;text-align:center;">
+<div style="width:56px;height:56px;margin:0 auto 16px;background:#eaf3ff;border-radius:14px;line-height:56px;font-size:26px;">💧</div>
+<h3 style="margin:0 0 8px;font-size:15px;color:#0e2a52;font-weight:700;">Alcalina natural</h3>
+<p style="margin:0;font-size:13px;line-height:1.6;color:#7a8aa2;">pH equilibrado por processo natural, sem aditivos químicos.</p>
+</td>
+<td width="33%" valign="top" style="padding:0 10px;text-align:center;">
+<div style="width:56px;height:56px;margin:0 auto 16px;background:#eaf3ff;border-radius:14px;line-height:56px;font-size:26px;">❄️</div>
+<h3 style="margin:0 0 8px;font-size:15px;color:#0e2a52;font-weight:700;">Fresquinha na hora</h3>
+<p style="margin:0;font-size:13px;line-height:1.6;color:#7a8aa2;">Sistema silencioso e eficiente para servir na temperatura ideal.</p>
+</td>
+<td width="33%" valign="top" style="padding:0 10px;text-align:center;">
+<div style="width:56px;height:56px;margin:0 auto 16px;background:#eaf3ff;border-radius:14px;line-height:56px;font-size:26px;">✨</div>
+<h3 style="margin:0 0 8px;font-size:15px;color:#0e2a52;font-weight:700;">Design premium</h3>
+<p style="margin:0;font-size:13px;line-height:1.6;color:#7a8aa2;">Acabamento sofisticado que se integra a qualquer cozinha.</p>
+</td>
+</tr>
+</table>
+</td></tr>
+
+<!-- ============ INSTITUCIONAL ============ -->
+<tr><td style="padding:48px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f8fd;border-radius:16px;overflow:hidden;">
+<tr>
+<td width="50%" valign="middle" style="padding:36px 32px;">
+<p style="margin:0 0 10px;font-size:11px;color:#f97316;font-weight:700;letter-spacing:2px;text-transform:uppercase;">Nossa essência</p>
+<h2 style="margin:0 0 14px;font-size:22px;line-height:1.3;color:#0e2a52;font-weight:700;letter-spacing:-0.3px;">Cuidar da água é cuidar da vida</h2>
+<p style="margin:0;font-size:14px;line-height:1.7;color:#4a5b7a;">Há mais de quinze anos desenvolvemos tecnologia de purificação que transforma a relação das famílias com a água. Cada gota que passa por um Acqualive carrega esse compromisso.</p>
+</td>
+<td width="50%" style="padding:0;font-size:0;line-height:0;">
+<img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/quem-somos.jpg" alt="Equipe Acqualive" width="320" style="display:block;width:100%;height:auto;border:0;">
+</td>
+</tr>
+</table>
+</td></tr>
+
+<!-- ============ BLOG ============ -->
+<tr><td style="padding:16px 40px 24px;">
+<p style="margin:0 0 6px;font-size:11px;color:#f97316;font-weight:700;letter-spacing:2px;text-transform:uppercase;">Leituras da semana</p>
+<h2 style="margin:0 0 28px;font-size:24px;line-height:1.3;color:#0e2a52;font-weight:700;letter-spacing:-0.3px;">O que anda passando pela sua torneira?</h2>
+</td></tr>
+
+<tr><td style="padding:0 40px 12px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #eef2f7;border-radius:14px;overflow:hidden;">
+<tr>
+<td width="35%" style="padding:0;font-size:0;line-height:0;">
+<img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/agua-alcalina.jpg" alt="Água alcalina" width="200" style="display:block;width:100%;height:auto;border:0;">
+</td>
+<td width="65%" valign="middle" style="padding:22px 24px;">
+<p style="margin:0 0 6px;font-size:10px;color:#f97316;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;">Saúde</p>
+<h3 style="margin:0 0 8px;font-size:16px;line-height:1.35;color:#0e2a52;font-weight:700;">Água alcalina: por que ela virou pauta entre médicos e nutricionistas</h3>
+<p style="margin:0 0 10px;font-size:13px;line-height:1.6;color:#7a8aa2;">Como o pH da água interfere no equilíbrio do organismo e o que a ciência realmente diz.</p>
+<a href="#" style="font-size:13px;color:#0e2a52;font-weight:700;text-decoration:none;">Ler artigo →</a>
+</td>
+</tr>
+</table>
+</td></tr>
+
+<tr><td style="padding:0 40px 12px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #eef2f7;border-radius:14px;overflow:hidden;">
+<tr>
+<td width="35%" style="padding:0;font-size:0;line-height:0;">
+<img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/cloro.jpg" alt="Cloro na água" width="200" style="display:block;width:100%;height:auto;border:0;">
+</td>
+<td width="65%" valign="middle" style="padding:22px 24px;">
+<p style="margin:0 0 6px;font-size:10px;color:#f97316;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;">Qualidade da água</p>
+<h3 style="margin:0 0 8px;font-size:16px;line-height:1.35;color:#0e2a52;font-weight:700;">O cloro da rede pública: necessário, mas nem tanto na sua garrafa</h3>
+<p style="margin:0 0 10px;font-size:13px;line-height:1.6;color:#7a8aa2;">Por que o composto que protege a distribuição pode atrapalhar quando chega ao copo.</p>
+<a href="#" style="font-size:13px;color:#0e2a52;font-weight:700;text-decoration:none;">Ler artigo →</a>
+</td>
+</tr>
+</table>
+</td></tr>
+
+<tr><td style="padding:0 40px 32px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #eef2f7;border-radius:14px;overflow:hidden;">
+<tr>
+<td width="35%" style="padding:0;font-size:0;line-height:0;">
+<img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/microplasticos.jpg" alt="Microplásticos" width="200" style="display:block;width:100%;height:auto;border:0;">
+</td>
+<td width="65%" valign="middle" style="padding:22px 24px;">
+<p style="margin:0 0 6px;font-size:10px;color:#f97316;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;">Contaminantes</p>
+<h3 style="margin:0 0 8px;font-size:16px;line-height:1.35;color:#0e2a52;font-weight:700;">Microplásticos: o que a garrafinha do dia a dia esconde</h3>
+<p style="margin:0 0 10px;font-size:13px;line-height:1.6;color:#7a8aa2;">Um recorte prático sobre o que estudos recentes revelaram e como se proteger.</p>
+<a href="#" style="font-size:13px;color:#0e2a52;font-weight:700;text-decoration:none;">Ler artigo →</a>
+</td>
+</tr>
+</table>
+</td></tr>
+
+<!-- ============ TROCA DE REFIL ============ -->
+<tr><td style="padding:8px 40px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#0e2a52;border-radius:16px;overflow:hidden;">
+<tr><td style="padding:36px 32px;text-align:center;">
+<div style="width:52px;height:52px;margin:0 auto 18px;background:rgba(249,115,22,0.15);border-radius:14px;line-height:52px;font-size:24px;">🔄</div>
+<h2 style="margin:0 0 10px;font-size:22px;line-height:1.35;color:#ffffff;font-weight:700;letter-spacing:-0.2px;">Está na hora de revisar seus refis?</h2>
+<p style="margin:0 auto 22px;max-width:420px;font-size:14px;line-height:1.65;color:#b7c5db;">A troca periódica dos refis mantém a qualidade da água e o desempenho do seu purificador em nível ideal.</p>
+<a href="#" style="display:inline-block;padding:14px 30px;background:#f97316;color:#ffffff;font-size:14px;font-weight:700;text-decoration:none;border-radius:100px;letter-spacing:0.3px;">Verificar meu refil</a>
+</td></tr>
+</table>
+</td></tr>
+
+<!-- ============ MODELO DE NEGÓCIO ============ -->
+<tr><td style="padding:0 40px 48px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #eef2f7;border-radius:16px;overflow:hidden;">
+<tr>
+<td style="padding:0;font-size:0;line-height:0;">
+<img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/mother-baby-kitchen-v2.jpg" alt="Oportunidades Acqualive" width="560" style="display:block;width:100%;height:auto;border:0;">
+</td>
+</tr>
+<tr><td style="padding:32px;text-align:center;">
+<p style="margin:0 0 8px;font-size:11px;color:#f97316;font-weight:700;letter-spacing:2px;text-transform:uppercase;">Oportunidade</p>
+<h2 style="margin:0 0 12px;font-size:22px;line-height:1.35;color:#0e2a52;font-weight:700;letter-spacing:-0.2px;">Empreender com propósito, junto da Acqualive</h2>
+<p style="margin:0 auto 22px;max-width:460px;font-size:14px;line-height:1.7;color:#4a5b7a;">Um mercado em expansão, tecnologia consolidada e uma rede que cresce sustentando quem chega. Se faz sentido para você, faz sentido conversarmos.</p>
+<a href="#" style="display:inline-block;padding:14px 30px;background:#ffffff;color:#0e2a52;font-size:14px;font-weight:700;text-decoration:none;border-radius:100px;border:1.5px solid #0e2a52;letter-spacing:0.3px;">Conheça as oportunidades</a>
+</td></tr>
+</table>
+</td></tr>
+
+<!-- ============ FOOTER ============ -->
+<tr><td style="padding:40px;background:#0e2a52;text-align:center;">
+<img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/logo-branca.png" alt="Acqualive" width="120" style="display:block;margin:0 auto 20px;height:auto;border:0;">
+<p style="margin:0 0 18px;font-size:13px;line-height:1.7;color:#b7c5db;max-width:400px;display:inline-block;">Tecnologia de purificação a serviço da saúde e do bem-estar das famílias brasileiras.</p>
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 22px;"><tr>
+<td style="padding:0 10px;"><a href="#" style="font-size:12px;color:#f97316;text-decoration:none;font-weight:600;">Instagram</a></td>
+<td style="padding:0 10px;color:rgba(255,255,255,0.2);">·</td>
+<td style="padding:0 10px;"><a href="#" style="font-size:12px;color:#f97316;text-decoration:none;font-weight:600;">YouTube</a></td>
+<td style="padding:0 10px;color:rgba(255,255,255,0.2);">·</td>
+<td style="padding:0 10px;"><a href="#" style="font-size:12px;color:#f97316;text-decoration:none;font-weight:600;">Site</a></td>
+</tr></table>
+<p style="margin:0 0 4px;font-size:12px;color:#b7c5db;">(51) 9292-8468 · contato@acqualive.com.br</p>
+<p style="margin:16px 0 0;font-size:11px;color:rgba(183,197,219,0.6);">© 2026 Acqualive. Todos os direitos reservados.<br>Você recebeu esta mensagem porque faz parte da comunidade Acqualive.</p>
+</td></tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>`,
+  },
 ];
 
 const EmailTemplates = () => {
