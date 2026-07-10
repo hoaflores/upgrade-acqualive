@@ -977,17 +977,17 @@ const EMAILS = [
   },
   {
     day: "Acqualive News — Revista Digital",
-    subject: "Acqualive News • Edição de Julho: água, ciência e leituras selecionadas",
+    subject: "Acqualive News: água, ciência e leituras selecionadas",
     html: `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="x-apple-disable-message-reformatting">
-<title>Acqualive News — Julho 2026</title>
+<title>Acqualive News</title>
 </head>
 <body style="margin:0;padding:0;background-color:#eef1f6;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1a2440;-webkit-font-smoothing:antialiased;">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Uma curadoria mensal sobre água, ciência e saúde — direto da redação Acqualive.</div>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Uma curadoria sobre água, ciência e saúde — direto da redação Acqualive.</div>
 
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eef1f6;padding:24px 0;">
 <tr><td align="center">
@@ -998,7 +998,7 @@ const EMAILS = [
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
     <tr>
       <td style="font-family:Georgia,'Times New Roman',serif;font-size:22px;font-weight:700;letter-spacing:-0.5px;color:#0e2a52;">Acqualive <span style="color:#f97316;">News</span></td>
-      <td align="right" style="font-size:11px;letter-spacing:2px;color:#7a8aa2;text-transform:uppercase;">Edição 07 • Julho 2026</td>
+      <td align="right" style="font-size:11px;letter-spacing:2px;color:#7a8aa2;text-transform:uppercase;">Revista Digital</td>
     </tr>
   </table>
 </td></tr>
