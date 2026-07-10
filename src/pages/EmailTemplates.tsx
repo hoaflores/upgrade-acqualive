@@ -1077,6 +1077,29 @@ const EMAILS = [
 
 <tr><td style="padding:44px 40px 0;"><div style="height:1px;background:#e6ebf3;"></div></td></tr>
 
+<!-- ============ CUIDE DO SEU ACQUALIVE — TROCA DE REFIS ============ -->
+<tr><td style="padding:36px 40px 0;">
+  <p style="margin:0 0 14px;font-size:11px;letter-spacing:3px;color:#10b981;text-transform:uppercase;font-weight:600;">Cuide do seu Acqualive &nbsp;•&nbsp; Troca de refis</p>
+  <h2 style="margin:0 0 16px;font-family:Georgia,'Times New Roman',serif;font-size:26px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.5px;">A água boa depende de um gesto simples: trocar o refil na hora certa.</h2>
+</td></tr>
+<tr><td style="padding:0 40px 20px;">
+  <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#4a5b7a;">Os refis são o coração do purificador. Com o tempo, retêm cloro, metais, microplásticos e sedimentos que estavam na sua água — e é justamente por isso que precisam ser renovados. Um refil vencido deixa de proteger e pode devolver ao copo aquilo que deveria estar filtrando.</p>
+  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">A recomendação da engenharia Acqualive é trocar a cada <strong style="color:#0e2a52;">6 meses</strong>, ou antes se você percebeu mudança no sabor, no fluxo ou no cheiro da água. É o cuidado silencioso que mantém sua família bebendo água de verdade, todos os dias.</p>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f4f8fd;border-radius:8px;margin:0 0 22px;">
+    <tr><td style="padding:22px 24px;">
+      <p style="margin:0 0 6px;font-size:11px;letter-spacing:2px;color:#7a8aa2;text-transform:uppercase;font-weight:700;">Sinais de que é hora de trocar</p>
+      <p style="margin:0;font-size:14px;line-height:1.7;color:#1a2440;">Fluxo mais lento • sabor ou odor diferente • mais de 6 meses desde a última troca • uso intenso pela família toda.</p>
+    </td></tr>
+  </table>
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
+    <tr><td align="center" style="background:linear-gradient(135deg,#f97316 0%,#f9c74f 100%);border-radius:6px;">
+      <a href="https://acqualive.com.br/refis" target="_blank" style="display:block;padding:16px 36px;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:0.5px;">QUERO TROCAR MEUS REFIS</a>
+    </td></tr>
+  </table>
+</td></tr>
+
+<tr><td style="padding:44px 40px 0;"><div style="height:1px;background:#e6ebf3;"></div></td></tr>
+
 <!-- ============ DESTAQUE DA EDIÇÃO — DUO (editorial, não anúncio) ============ -->
 <tr><td style="padding:36px 40px 0;">
   <p style="margin:0 0 14px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:600;">Novo Capítulo &nbsp;•&nbsp; Bastidores</p>
@@ -1088,7 +1111,7 @@ const EMAILS = [
 <tr><td style="padding:0 40px;">
   <p style="margin:0 0 14px;font-size:15px;line-height:1.7;color:#4a5b7a;">O DUO nasceu de uma observação simples: quem busca água alcalina para a saúde e bem-estar quer também o conforto da água fresquinha no dia a dia. Reunir as duas experiências em um único equipamento foi um exercício de engenharia, mas antes de tudo de escuta — anos ouvindo o que a cozinha brasileira pede.</p>
   <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">Mais do que um lançamento, é o começo de um novo capítulo na forma como pensamos hidratação em casa.</p>
-  <a href="https://acqualive.com.br" style="font-size:14px;color:#f97316;text-decoration:none;font-weight:600;">Conhecer o DUO →</a>
+  <a href="https://www.acqualive.com.br/collections/all/products/purificador-de-agua-alcalina-acqualive-duo-natural-e-gelada" style="font-size:14px;color:#f97316;text-decoration:none;font-weight:600;">Conhecer o DUO →</a>
 </td></tr>
 
 <!-- ============ DICA RÁPIDA ============ -->
@@ -1177,30 +1200,6 @@ const EMAILS = [
   </table>
 </td></tr>
 
-<tr><td style="padding:24px 40px 0;"><div style="height:1px;background:#e6ebf3;"></div></td></tr>
-
-<!-- ============ CUIDE DO SEU ACQUALIVE — TROCA DE REFIS ============ -->
-<tr><td style="padding:36px 40px 0;">
-  <p style="margin:0 0 14px;font-size:11px;letter-spacing:3px;color:#10b981;text-transform:uppercase;font-weight:600;">Cuide do seu Acqualive &nbsp;•&nbsp; Troca de refis</p>
-  <h2 style="margin:0 0 16px;font-family:Georgia,'Times New Roman',serif;font-size:26px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.5px;">A água boa depende de um gesto simples: trocar o refil na hora certa.</h2>
-</td></tr>
-<tr><td style="padding:0 40px 20px;">
-  <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#4a5b7a;">Os refis são o coração do purificador. Com o tempo, retêm cloro, metais, microplásticos e sedimentos que estavam na sua água — e é justamente por isso que precisam ser renovados. Um refil vencido deixa de proteger e pode devolver ao copo aquilo que deveria estar filtrando.</p>
-  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">A recomendação da engenharia Acqualive é trocar a cada <strong style="color:#0e2a52;">6 meses</strong>, ou antes se você percebeu mudança no sabor, no fluxo ou no cheiro da água. É o cuidado silencioso que mantém sua família bebendo água de verdade, todos os dias.</p>
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f4f8fd;border-radius:8px;margin:0 0 22px;">
-    <tr><td style="padding:22px 24px;">
-      <p style="margin:0 0 6px;font-size:11px;letter-spacing:2px;color:#7a8aa2;text-transform:uppercase;font-weight:700;">Sinais de que é hora de trocar</p>
-      <p style="margin:0;font-size:14px;line-height:1.7;color:#1a2440;">Fluxo mais lento • sabor ou odor diferente • mais de 6 meses desde a última troca • uso intenso pela família toda.</p>
-    </td></tr>
-  </table>
-  <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
-    <tr><td align="center" style="background:linear-gradient(135deg,#f97316 0%,#f9c74f 100%);border-radius:6px;">
-      <a href="https://acqualive.com.br/refis" target="_blank" style="display:block;padding:16px 36px;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:0.5px;">QUERO TROCAR MEUS REFIS</a>
-    </td></tr>
-  </table>
-</td></tr>
-
-<tr><td style="padding:32px 40px 0;"><div style="height:1px;background:#e6ebf3;"></div></td></tr>
 
 
 <!-- ============ OPORTUNIDADE DE NEGÓCIO ============ -->
