@@ -1029,7 +1029,7 @@ const EMAILS = [
   <h2 style="margin:0 0 20px;font-family:Georgia,'Times New Roman',serif;font-size:28px;line-height:1.2;color:#0e2a52;font-weight:700;letter-spacing:-0.5px;">Água Anti-Inflamatória: o estudo que mudou tudo</h2>
 </td></tr>
 <tr><td style="padding:0 40px 20px;">
-  <img src="https://blog.acqualive.com.br/wp-content/uploads/2020/05/Family-Quarentine.png" alt="Água anti-inflamatória" width="560" style="display:block;width:100%;height:auto;border-radius:6px;">
+  <img src="https://paginas.acqualive.com.br/__l5e/assets-v1/92f534b8-533d-498b-b212-d714d3f64c5b/maos-copo-agua.jpg" alt="Água anti-inflamatória" width="560" style="display:block;width:100%;height:auto;border-radius:6px;">
 </td></tr>
 <tr><td style="padding:0 40px;">
   <p style="margin:0 0 14px;font-size:15px;line-height:1.7;color:#4a5b7a;">A relação entre inflamação crônica e qualidade da água ganhou novos contornos com uma pesquisa brasileira recente. Entenda, de forma simples, como a água que você bebe pode estar inflamando ou desinflamando o seu corpo, e o que o estudo revelou sobre a água alcalina ionizada.</p>
@@ -1095,7 +1095,7 @@ const EMAILS = [
 <tr><td style="padding:36px 40px 0;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:linear-gradient(135deg,#0e2a52 0%,#1a3a6b 100%);border-radius:10px;">
     <tr><td style="padding:26px 30px;">
-      <p style="margin:0 0 10px;font-size:11px;letter-spacing:3px;color:#f9c74f;text-transform:uppercase;font-weight:700;">Dica do mês</p>
+      <p style="margin:0 0 10px;font-size:11px;letter-spacing:3px;color:#f9c74f;text-transform:uppercase;font-weight:700;">Dica da redação</p>
       <h3 style="margin:0 0 10px;font-family:Georgia,serif;font-size:20px;color:#ffffff;font-weight:700;letter-spacing:-0.3px;">Água alcalina em casa, em menos de 1 minuto.</h3>
       <p style="margin:0 0 14px;font-size:14px;line-height:1.65;color:#b7c5db;">Três formas de fazer água alcalina no dia a dia — com bicarbonato, com limão e com filtro ionizador. Cada uma com suas vantagens e limites.</p>
       <a href="https://blog.acqualive.com.br/como-fazer-agua-alcalina-em-casa/" style="font-size:13px;color:#f9c74f;text-decoration:none;font-weight:600;">Ler no blog →</a>
@@ -1179,6 +1179,40 @@ const EMAILS = [
 
 <tr><td style="padding:24px 40px 0;"><div style="height:1px;background:#e6ebf3;"></div></td></tr>
 
+<!-- ============ OPORTUNIDADE DE NEGÓCIO ============ -->
+<tr><td style="padding:36px 40px 0;">
+  <p style="margin:0 0 14px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:600;">Oportunidade &nbsp;•&nbsp; Franquia Acqualive</p>
+  <h2 style="margin:0 0 20px;font-family:Georgia,'Times New Roman',serif;font-size:28px;line-height:1.2;color:#0e2a52;font-weight:700;letter-spacing:-0.5px;">Transforme a saúde das pessoas. Construa seu futuro.</h2>
+</td></tr>
+<tr><td style="padding:0 40px 22px;">
+  <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#4a5b7a;">Há 16 anos a Acqualive é líder em água funcional de alta performance no Brasil, com mais de 200 mil clientes ativos e cobertura nacional. Levar essa transformação para novas cidades passou a ser possível através de um modelo de franquia enxuto, com investimento acessível e vagas limitadas por região.</p>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 22px;">
+    <tr>
+      <td width="33%" valign="top" style="padding:16px 12px;background:#f4f8fd;border-radius:8px;text-align:center;">
+        <p style="margin:0 0 4px;font-family:Georgia,serif;font-size:22px;color:#0e2a52;font-weight:700;">R$ 30 a 60 mil</p>
+        <p style="margin:0;font-size:12px;color:#7a8aa2;letter-spacing:0.5px;">Investimento inicial</p>
+      </td>
+      <td width="2%">&nbsp;</td>
+      <td width="33%" valign="top" style="padding:16px 12px;background:#f4f8fd;border-radius:8px;text-align:center;">
+        <p style="margin:0 0 4px;font-family:Georgia,serif;font-size:22px;color:#0e2a52;font-weight:700;">Risco zero</p>
+        <p style="margin:0;font-size:12px;color:#7a8aa2;letter-spacing:0.5px;">do investimento inicial</p>
+      </td>
+      <td width="2%">&nbsp;</td>
+      <td width="30%" valign="top" style="padding:16px 12px;background:#f4f8fd;border-radius:8px;text-align:center;">
+        <p style="margin:0 0 4px;font-family:Georgia,serif;font-size:22px;color:#0e2a52;font-weight:700;">Vagas</p>
+        <p style="margin:0;font-size:12px;color:#7a8aa2;letter-spacing:0.5px;">limitadas por cidade</p>
+      </td>
+    </tr>
+  </table>
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
+    <tr><td align="center" style="background:linear-gradient(135deg,#f97316 0%,#f9c74f 100%);border-radius:6px;">
+      <a href="https://franquias.acqualive.com.br/" target="_blank" style="display:block;padding:16px 36px;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:0.5px;">QUERO RECEBER O PLANO DE NEGÓCIO</a>
+    </td></tr>
+  </table>
+</td></tr>
+
+<tr><td style="padding:32px 40px 0;"><div style="height:1px;background:#e6ebf3;"></div></td></tr>
+
 <!-- ============ ENCERRAMENTO ============ -->
 <tr><td style="padding:44px 40px 40px;">
   <div style="text-align:center;">
@@ -1190,7 +1224,7 @@ const EMAILS = [
 <!-- ============ FOOTER ============ -->
 <tr><td style="background:#0e2a52;padding:32px 40px;text-align:center;">
   <p style="margin:0 0 8px;font-family:Georgia,serif;font-size:16px;color:#ffffff;font-weight:700;letter-spacing:0.3px;">Acqualive <span style="color:#f97316;">News</span></p>
-  <p style="margin:0 0 16px;font-size:12px;color:#b7c5db;">Uma publicação mensal para clientes e amigos da Acqualive.</p>
+  <p style="margin:0 0 16px;font-size:12px;color:#b7c5db;">Uma publicação para clientes e amigos da Acqualive.</p>
   <p style="margin:0;font-size:11px;color:rgba(183,197,219,0.6);line-height:1.6;">© 2026 Acqualive. Todos os direitos reservados.<br>Você recebeu esta edição porque faz parte da comunidade Acqualive.<br><a href="#" style="color:rgba(183,197,219,0.8);text-decoration:underline;">Preferências de e-mail</a> &nbsp;•&nbsp; <a href="#" style="color:rgba(183,197,219,0.8);text-decoration:underline;">Cancelar assinatura</a></p>
 </td></tr>
 
