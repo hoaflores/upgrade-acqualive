@@ -182,9 +182,9 @@ const HowItWorksSection = () => {
             Como <span className="text-gradient-blue">funciona</span>?
           </h2>
           <p className="text-xl md:text-2xl font-display font-semibold">
-            <span className="text-gradient-orange">1 Amigo Saudável</span>
+            <span className="text-gradient-orange">1 Amigo que compra</span>
             <span className="text-muted-foreground"> = </span>
-            <span className="text-foreground">6 meses de Economia para você</span>
+            <span className="text-foreground">1 Kit Refil grátis (~R$ 457,00)</span>
           </p>
         </motion.div>
 
