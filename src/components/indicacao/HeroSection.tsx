@@ -76,11 +76,11 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
               className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-display font-bold text-primary-foreground leading-[1.1] mb-8"
             >
-              Indique seus amigos,{" "}
-              <span className="text-gradient-orange inline-block">ganhe refis grátis</span>
+              Indique um amigo e{" "}
+              <span className="text-gradient-orange inline-block">ganhe um Kit Refil</span>
               <br />
               <span className="text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-normal opacity-90">
-                e leve saúde para quem você ama.
+                Economize aproximadamente R$ 457,00 na sua próxima troca.
               </span>
             </motion.h1>
 
@@ -90,8 +90,8 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               className="text-lg md:text-xl text-primary-foreground/90 mb-3 leading-relaxed"
             >
-              Para cada amigo que comprar um Acqualive através da sua indicação, 
-              você ganha <strong className="text-gold-light font-bold">1 Kit de Refis completo</strong>.
+              Seu amigo compra um purificador Acqualive e você recebe{" "}
+              <strong className="text-gold-light font-bold">1 Kit Refil Acqualive gratuitamente</strong>. Simples assim.
             </motion.p>
 
             <motion.p
@@ -101,7 +101,7 @@ const HeroSection = () => {
               className="text-base md:text-lg text-primary-foreground/80 mb-10 font-medium"
             >
               <span className="text-gold-light font-bold">Indicou, comprou, ganhou.</span>{" "}
-              Simples assim. Sem sorteios, sem limites.
+              Sem pontos, sem carteira, sem burocracia — atendimento direto com a equipe Acqualive.
             </motion.p>
 
             <motion.div

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { AlertTriangle } from "lucide-react";
 import logoBranca from "@/assets/logo-acqualive-branca.png";
 import iconAcqualive from "@/assets/icon-acqualive.png";
 
@@ -12,7 +11,7 @@ const FooterSection = () => {
         <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-[radial-gradient(ellipse_at_bottom_left,_hsl(0_0%_100%_/_0.05),_transparent_60%)]" />
       </div>
       
-      {/* Urgency Banner */}
+      {/* Value Banner */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -22,10 +21,10 @@ const FooterSection = () => {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(0_0%_100%_/_0.1),_transparent_70%)]" />
         <div className="container relative">
           <div className="flex items-center justify-center gap-3 text-center">
-            <AlertTriangle className="w-5 h-5 text-white flex-shrink-0" />
             <p className="text-white font-semibold text-sm md:text-base">
-              ⚠️ Atenção: O bônus do sorteio de 1 ano grátis encerra em{" "}
-              <strong>Junho/2026</strong>. Não deixe seus amigos esperando.
+              Cada amigo indicado que comprar um Acqualive te garante{" "}
+              <strong>1 Kit Refil grátis</strong> — aproximadamente{" "}
+              <strong>R$ 457,00</strong> de economia.
             </p>
           </div>
         </div>
@@ -87,7 +86,7 @@ const FooterSection = () => {
               />
               
               <p className="text-primary-foreground/40 text-xs mb-2">
-                * O desconto vitalício de 10% é válido por 3 anos a partir da data de ativação.
+                * Kit Refil enviado após a confirmação da compra do amigo indicado. Programa administrado diretamente pela equipe Acqualive.
               </p>
               <p className="text-primary-foreground/40 text-xs">
                 © {new Date().getFullYear()} Acqualive. Todos os direitos reservados.
