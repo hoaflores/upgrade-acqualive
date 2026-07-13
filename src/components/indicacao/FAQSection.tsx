@@ -10,39 +10,44 @@ import {
 
 const faqs = [
   {
+    question: "Como funciona o programa, na prática?",
+    answer:
+      "É simples: você indica um amigo, ele compra um purificador Acqualive e, assim que a compra for confirmada, você ganha 1 Kit Refil Acqualive gratuitamente. Uma economia de aproximadamente R$ 457,00 na sua próxima troca.",
+  },
+  {
+    question: "Quanto vale o Kit Refil que eu recebo?",
+    answer:
+      "O Kit Refil Acqualive tem valor aproximado de R$ 457,00 e garante meses de água alcalina pura na sua casa sem custo adicional.",
+  },
+  {
     question: "Como sei que meu amigo comprou?",
     answer:
-      "Transparência total. Você recebe um alerta automático no WhatsApp assim que a nota fiscal for emitida. O crédito é seu na hora.",
+      "Transparência total. Nossa equipe comercial acompanha cada indicação e avisa você no WhatsApp assim que a compra do seu amigo for confirmada.",
   },
   {
-    question: "Existe limite de ganhos?",
+    question: "Existe limite de indicações?",
     answer:
-      "Zero. Se você indicar 10 pessoas e elas comprarem, você garante 10 kits de refis. Uma economia superior a R$ 5.000,00.",
+      "Zero. Se você indicar 10 pessoas e elas comprarem, você ganha 10 Kits Refil. Uma economia superior a R$ 4.500,00.",
   },
   {
-    question: "O que meu indicado ganha de verdade?",
+    question: "O que meu amigo indicado ganha?",
     answer:
-      'Acesso ao nosso "Clube de Vendas Privado", com condições de parcelamento e brindes que o público geral não tem acesso.',
+      "Seu amigo é atendido diretamente pela equipe comercial da Acqualive com uma condição especial exclusiva para indicados.",
   },
   {
-    question: "Preciso pagar algo para participar do programa?",
+    question: "Preciso pagar algo para participar?",
     answer:
-      "Absolutamente nada. O Programa Embaixador é 100% gratuito. Você só precisa ser cliente Acqualive e ter vontade de ajudar pessoas a ter uma vida mais saudável.",
+      "Absolutamente nada. O Programa de Indicação é 100% gratuito e administrado diretamente pela Acqualive. Basta ser cliente e indicar quem você gosta.",
   },
   {
-    question: "Quanto tempo leva para receber meu kit de refis?",
+    question: "Quando recebo meu Kit Refil?",
     answer:
-      "Assim que a compra do seu indicado for confirmada, você recebe o crédito automaticamente. O kit é enviado junto com seu próximo pedido de reposição ou pode ser solicitado a qualquer momento.",
+      "Assim que a compra do seu indicado for confirmada. O Kit Refil é enviado para o seu endereço ou pode ser combinado junto com sua próxima troca.",
   },
   {
     question: "Posso indicar pessoas de outras cidades ou estados?",
     answer:
-      "Sim! Entregamos em todo o Brasil. Suas indicações podem estar em qualquer lugar do país. O frete é por conta do indicado, nas mesmas condições especiais.",
-  },
-  {
-    question: "Os prêmios da campanha de verão são cumulativos?",
-    answer:
-      "Sim! Além de ganhar 1 kit por indicação, você concorre ao sorteio de 1 ano de água grátis. E ao atingir 5 indicações, desbloqueia o status Embaixador Vitalício com 10% de desconto por 3 anos.",
+      "Sim. Atendemos todo o Brasil, então suas indicações podem estar em qualquer lugar do país.",
   },
 ];
 

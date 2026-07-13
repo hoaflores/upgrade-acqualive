@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet-async";
 import HeroSection from "@/components/indicacao/HeroSection";
 import HowItWorksSection from "@/components/indicacao/HowItWorksSection";
 import HealthSection from "@/components/indicacao/HealthSection";
-import SummerCampaignSection from "@/components/indicacao/SummerCampaignSection";
 import FAQSection from "@/components/indicacao/FAQSection";
 import FormSection from "@/components/indicacao/FormSection";
 import FooterSection from "@/components/indicacao/FooterSection";
@@ -30,7 +29,6 @@ const ProgramaIndicacao = () => {
         <HeroSection />
         <HowItWorksSection />
         <HealthSection />
-        <SummerCampaignSection />
         <FAQSection />
         <FormSection />
         <FooterSection />
