@@ -217,8 +217,8 @@ const PainelEspecialista = ({ cidade }: PainelEspecialistaProps) => {
             <p className="mt-1 text-xs text-muted-foreground">
               {cidade.especialistas.length}{" "}
               {cidade.especialistas.length === 1
-                ? "especialista disponível na sua região"
-                : "especialistas disponíveis na sua região"}
+                ? "Franqueado disponível na sua região"
+                : "Franqueados disponíveis na sua região"}
               .
             </p>
           </header>
