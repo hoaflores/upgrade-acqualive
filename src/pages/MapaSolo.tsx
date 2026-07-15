@@ -215,7 +215,7 @@ const MapaSolo = () => {
           heading="Não encontrou sua cidade?"
           ctaLabel="FALAR COM A ACQUALIVE"
           showUrgencyBanner={false}
-          whatsappLink="https://wa.me/555192928468?text=Olá!%20Gostaria%20de%20saber%20se%20há%20um%20especialista%20Acqualive%20na%20minha%20região."
+          whatsappLink="https://wa.me/555192928468?text=Olá!%20Gostaria%20de%20saber%20se%20há%20um%20Franqueado%20Acqualive%20na%20minha%20região."
         />
       </main>
     </>
