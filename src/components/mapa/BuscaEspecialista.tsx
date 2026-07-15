@@ -6,7 +6,7 @@ import { fuzzySearch } from "@/utils/fuzzySearch";
 import type { CidadeAtendimento } from "@/types/mapa";
 
 export const REPRESENTANTE_WHATSAPP_URL =
-  "https://wa.me/555192928468?text=Ol%C3%A1!%20Quero%20ser%20um%20representante%20Acqualive%20Solo%20na%20minha%20cidade.";
+  "https://wa.me/555192928468?text=Ol%C3%A1!%20Quero%20ser%20um%20Franqueado%20Acqualive%20Solo%20na%20minha%20cidade.";
 
 
 interface BuscaEspecialistaProps {
