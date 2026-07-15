@@ -27,7 +27,7 @@ const initials = (nome: string) =>
 
 const waLink = (numero: string, cidade: string) =>
   `https://wa.me/${numero}?text=${encodeURIComponent(
-    `Olá! Sou de ${cidade} e gostaria de falar com um especialista Acqualive.`,
+    `Olá! Sou de ${cidade} e gostaria de falar com um Franqueado Acqualive.`,
   )}`;
 
 /** Foto com skeleton, fallback e proteção contra deformação. */
