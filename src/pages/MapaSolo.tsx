@@ -122,7 +122,7 @@ const MapaSolo = () => {
 
 
         <section
-          aria-label="Mapa e especialistas"
+          aria-label="Mapa e franqueados"
           className="container pb-20 md:pb-28"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-7">
