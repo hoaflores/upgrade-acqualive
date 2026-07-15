@@ -105,7 +105,7 @@ const MapaSolo = () => {
 
         <section
           ref={buscaRef}
-          aria-label="Buscar especialista"
+          aria-label="Buscar Franqueado"
           className="container relative -mt-10 md:-mt-14 z-10 pb-10 md:pb-14"
         >
           <div className="max-w-3xl mx-auto">
