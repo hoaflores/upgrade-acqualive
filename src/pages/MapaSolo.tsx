@@ -51,7 +51,7 @@ const MapaSolo = () => {
         });
         setGeoLoading(false);
         if (proximo) {
-          toast.success(`Especialista mais próximo: ${proximo.cidade} - ${proximo.estado}`);
+          toast.success(`Franqueado mais próximo: ${proximo.cidade} - ${proximo.estado}`);
         }
       },
       () => {
