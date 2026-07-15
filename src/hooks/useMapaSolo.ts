@@ -46,7 +46,7 @@ export function useMapaSolo() {
     let cancel = false;
     supabase
       .from("franqueados")
-      .select("*")
+      .select("id,nome,cidade,estado,lat,lng,whatsapp,instagram,foto,observacoes,horario_atendimento,ativo")
       .eq("ativo", true)
       .order("cidade")
       .then(({ data, error }) => {
