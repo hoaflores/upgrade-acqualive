@@ -6,7 +6,7 @@ import { fuzzySearch } from "@/utils/fuzzySearch";
 import type { CidadeAtendimento } from "@/types/mapa";
 
 export const REPRESENTANTE_WHATSAPP_URL =
-  "https://wa.me/555192928468?text=Ol%C3%A1!%20Quero%20ser%20um%20representante%20Acqualive%20Solo%20na%20minha%20cidade.";
+  "https://wa.me/555192928468?text=Ol%C3%A1!%20Quero%20ser%20um%20Franqueado%20Acqualive%20Solo%20na%20minha%20cidade.";
 
 
 interface BuscaEspecialistaProps {
@@ -175,7 +175,7 @@ const BuscaEspecialista = ({
               <li className="p-2">
                 <div className="rounded-xl bg-gradient-to-br from-accent/5 via-white to-primary/5 border border-accent/20 p-4 text-center">
                   <p className="text-sm text-foreground font-medium">
-                    Ainda não temos representante nessa cidade
+                    Ainda não temos Franqueado nessa cidade
                   </p>
                   <p className="text-xs text-muted-foreground mt-1 mb-3">
                     Que tal ser o primeiro a levar a Acqualive para a sua região?
@@ -187,7 +187,7 @@ const BuscaEspecialista = ({
                     className="inline-flex items-center justify-center gap-2 h-11 px-5 rounded-xl bg-gradient-to-r from-accent to-[hsl(38_95%_55%)] text-white text-[12px] font-bold tracking-wide shadow-2xl shadow-accent/30 hover:shadow-accent/50 hover:scale-[1.02] transition-all animate-pulse-soft"
                   >
                     <Sparkles className="w-4 h-4" />
-                    QUERO SER UM REPRESENTANTE ACQUALIVE SOLO
+                    QUERO SER UM FRANQUEADO ACQUALIVE SOLO
                   </a>
                 </div>
               </li>
