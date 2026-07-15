@@ -169,7 +169,7 @@ const MapaSolo = () => {
             </div>
           </div>
 
-          {/* CTA persistente — Seja um representante */}
+          {/* CTA persistente — Seja um Franqueado */}
           <div className="mt-10 md:mt-14">
             <div className="relative overflow-hidden rounded-[28px] border border-accent/25 bg-gradient-to-br from-white via-[hsl(var(--water-light))] to-[hsl(21_95%_96%)] p-6 md:p-10 shadow-[0_30px_80px_-40px_hsl(var(--accent)/_0.35)]">
               <div
@@ -184,7 +184,7 @@ const MapaSolo = () => {
                     Oportunidade Acqualive
                   </span>
                   <h2 className="mt-2 font-display text-2xl md:text-3xl font-semibold text-foreground tracking-tight">
-                    Sua cidade ainda não tem um representante?
+                    Sua cidade ainda não tem um Franqueado?
                   </h2>
                   <p className="mt-2 text-sm md:text-base text-muted-foreground max-w-2xl">
                     Seja o primeiro a levar saúde e bem-estar através da água Acqualive
@@ -199,7 +199,7 @@ const MapaSolo = () => {
                   className="inline-flex items-center justify-center gap-2 h-14 px-7 rounded-2xl bg-gradient-to-r from-accent to-[hsl(38_95%_55%)] text-white text-[13px] md:text-sm font-bold tracking-wide shadow-2xl shadow-accent/40 hover:shadow-accent/60 hover:scale-[1.02] transition-all animate-pulse-soft whitespace-nowrap"
                 >
                   <Sparkles className="w-4 h-4" />
-                  QUERO SER UM REPRESENTANTE ACQUALIVE SOLO
+                  QUERO SER UM FRANQUEADO ACQUALIVE SOLO
                 </a>
               </div>
             </div>
