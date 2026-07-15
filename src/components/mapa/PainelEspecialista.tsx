@@ -96,7 +96,7 @@ const EspecialistaCard = ({
         </h3>
         <p className="mt-1 inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary/80">
           <Sparkles className="w-3 h-3" aria-hidden />
-          Especialista Acqualive
+          Franqueado Acqualive
         </p>
       </div>
     </header>
