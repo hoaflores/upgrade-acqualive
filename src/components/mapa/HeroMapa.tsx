@@ -44,7 +44,7 @@ const HeroMapa = ({ onCTAClick }: HeroMapaProps) => {
           </div>
 
           <h1 className="mt-6 font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold text-foreground leading-[1.05] tracking-[-0.02em]">
-            Encontre um especialista Acqualive{" "}
+            Encontre um Franqueado Acqualive{" "}
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                 perto de você
