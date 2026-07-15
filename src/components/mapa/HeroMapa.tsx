@@ -44,7 +44,7 @@ const HeroMapa = ({ onCTAClick }: HeroMapaProps) => {
           </div>
 
           <h1 className="mt-6 font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold text-foreground leading-[1.05] tracking-[-0.02em]">
-            Encontre um especialista Acqualive{" "}
+            Encontre um Franqueado Acqualive{" "}
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                 perto de você
@@ -79,7 +79,7 @@ const HeroMapa = ({ onCTAClick }: HeroMapaProps) => {
                 className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
               />
               <Search className="w-4 h-4" aria-hidden />
-              Encontrar Especialista
+              Encontrar Franqueado
             </motion.button>
             <div className="flex items-center gap-2 text-xs text-muted-foreground">
               <span className="relative flex h-2 w-2">

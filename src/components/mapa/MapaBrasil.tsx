@@ -251,7 +251,7 @@ const MapaBrasilInner = ({
               >
                 <g
                   role="button"
-                  aria-label={`Especialista em ${c.cidade}`}
+                  aria-label={`Franqueado em ${c.cidade}`}
                   className="focus:outline-none"
                 >
                   <PinMark active={active} hovered={hovered} />

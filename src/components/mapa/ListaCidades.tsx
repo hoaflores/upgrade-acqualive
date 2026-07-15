@@ -84,8 +84,8 @@ const ListaCidades = ({ cidades, selecionadaId, onSelect }: ListaCidadesProps) =
                   <span className="block text-[11px] text-muted-foreground">
                     {c.estado} · {c.especialistas.length}{" "}
                     {c.especialistas.length === 1
-                      ? "especialista"
-                      : "especialistas"}
+                      ? "Franqueado"
+                      : "Franqueados"}
                   </span>
                 </span>
                 <ChevronRight

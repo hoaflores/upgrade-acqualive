@@ -27,7 +27,7 @@ const initials = (nome: string) =>
 
 const waLink = (numero: string, cidade: string) =>
   `https://wa.me/${numero}?text=${encodeURIComponent(
-    `Olá! Sou de ${cidade} e gostaria de falar com um especialista Acqualive.`,
+    `Olá! Sou de ${cidade} e gostaria de falar com um Franqueado Acqualive.`,
   )}`;
 
 /** Foto com skeleton, fallback e proteção contra deformação. */
@@ -96,7 +96,7 @@ const EspecialistaCard = ({
         </h3>
         <p className="mt-1 inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary/80">
           <Sparkles className="w-3 h-3" aria-hidden />
-          Especialista Acqualive
+          Franqueado Acqualive
         </p>
       </div>
     </header>
@@ -217,8 +217,8 @@ const PainelEspecialista = ({ cidade }: PainelEspecialistaProps) => {
             <p className="mt-1 text-xs text-muted-foreground">
               {cidade.especialistas.length}{" "}
               {cidade.especialistas.length === 1
-                ? "especialista disponível na sua região"
-                : "especialistas disponíveis na sua região"}
+                ? "Franqueado disponível na sua região"
+                : "Franqueados disponíveis na sua região"}
               .
             </p>
           </header>

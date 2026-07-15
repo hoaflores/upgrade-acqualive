@@ -51,7 +51,7 @@ const MapaSolo = () => {
         });
         setGeoLoading(false);
         if (proximo) {
-          toast.success(`Especialista mais próximo: ${proximo.cidade} - ${proximo.estado}`);
+          toast.success(`Franqueado mais próximo: ${proximo.cidade} - ${proximo.estado}`);
         }
       },
       () => {
@@ -76,16 +76,16 @@ const MapaSolo = () => {
   return (
     <>
       <Helmet>
-        <title>Mapa de Especialistas Acqualive · Encontre um perto de você</title>
+        <title>Mapa de Franqueados Acqualive · Encontre um perto de você</title>
         <meta
           name="description"
-          content="Encontre em segundos um especialista Acqualive na sua cidade. Fale por WhatsApp com uma pessoa preparada para cuidar da sua água, saúde e família."
+          content="Encontre em segundos um Franqueado Acqualive na sua cidade. Fale por WhatsApp com uma pessoa preparada para cuidar da sua água, saúde e família."
         />
         <link rel="canonical" href="https://paginas.acqualive.com.br/franquias-solo" />
-        <meta property="og:title" content="Mapa de Especialistas Acqualive" />
+        <meta property="og:title" content="Mapa de Franqueados Acqualive" />
         <meta
           property="og:description"
-          content="Encontre um especialista Acqualive perto de você e converse pelo WhatsApp."
+          content="Encontre um Franqueado Acqualive perto de você e converse pelo WhatsApp."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://paginas.acqualive.com.br/franquias-solo" />
@@ -105,7 +105,7 @@ const MapaSolo = () => {
 
         <section
           ref={buscaRef}
-          aria-label="Buscar especialista"
+          aria-label="Buscar Franqueado"
           className="container relative -mt-10 md:-mt-14 z-10 pb-10 md:pb-14"
         >
           <div className="max-w-3xl mx-auto">
@@ -122,7 +122,7 @@ const MapaSolo = () => {
 
 
         <section
-          aria-label="Mapa e especialistas"
+          aria-label="Mapa e franqueados"
           className="container pb-20 md:pb-28"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-7">
@@ -215,7 +215,7 @@ const MapaSolo = () => {
           heading="Não encontrou sua cidade?"
           ctaLabel="FALAR COM A ACQUALIVE"
           showUrgencyBanner={false}
-          whatsappLink="https://wa.me/555192928468?text=Olá!%20Gostaria%20de%20saber%20se%20há%20um%20especialista%20Acqualive%20na%20minha%20região."
+          whatsappLink="https://wa.me/555192928468?text=Olá!%20Gostaria%20de%20saber%20se%20há%20um%20Franqueado%20Acqualive%20na%20minha%20região."
         />
       </main>
     </>
