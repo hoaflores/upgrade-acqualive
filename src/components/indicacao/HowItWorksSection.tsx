@@ -270,7 +270,7 @@ const HowItWorksSection = () => {
         delay: 0.4
       }} className="text-center">
           <Button variant="gold" size="xl" asChild className="group shadow-orange">
-            <a href="https://wa.me/555192928468?text=Olá!%20Quero%20participar%20do%20Programa%20Embaixador%20Acqualive." target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/555192928468?text=Ol%C3%A1!%20Gostaria%20de%20indicar%20um%20amigo%20para%20comprar%20um%20Purificador%20Acqualive%20e%20ganhar%20meu%20kit%20refil%20gr%C3%A1tis!" target="_blank" rel="noopener noreferrer">
               
               Falar com meu Consultor Exclusivo
             </a>
