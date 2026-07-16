@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const WHATSAPP_LINK = "https://wa.me/555192928468?text=Olá!%20Quero%20participar%20do%20Programa%20Embaixador%20Acqualive.";
+const WHATSAPP_LINK = `https://wa.me/555192928468?text=${encodeURIComponent("Olá! Gostaria de indicar um amigo para comprar um Purificador Acqualive e ganhar meu kit refil grátis!")}`;
 
 const FloatingWhatsAppIndicacao = () => {
   return (
