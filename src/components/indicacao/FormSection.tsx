@@ -62,7 +62,7 @@ const FormSection = () => {
 
   const whatsappNumber = "555192928468";
   const whatsappMessage = encodeURIComponent(
-    "Olá! Quero participar do Programa Embaixador Acqualive."
+    "Olá! Gostaria de indicar um amigo para comprar um Purificador Acqualive e ganhar meu kit refil grátis!"
   );
 
   return (
