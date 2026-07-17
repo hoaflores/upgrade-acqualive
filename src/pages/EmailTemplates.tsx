@@ -1527,7 +1527,7 @@ const EMAILS = [
 <title>Condição exclusiva — Acqualive</title>
 </head>
 <body style="margin:0;padding:0;background-color:#eef1f6;font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1a2440;-webkit-font-smoothing:antialiased;">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0;">A experiência do evento pode continuar fazendo parte da sua rotina.</div>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">A experiência do evento pode continuar fazendo parte da sua rotina de autocuidado.</div>
 
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eef1f6;padding:24px 0;">
 <tr><td align="center">
@@ -1548,10 +1548,10 @@ const EMAILS = [
   <img src="https://paginas.acqualive.com.br/__l5e/assets-v1/401eb55a-8570-4311-b9a8-ffc20815e730/acqualive-duo-consultorio.png" alt="Purificador Acqualive DUO" width="640" style="display:block;width:100%;height:auto;">
 </td></tr>
 <tr><td style="padding:36px 40px 8px;">
-  <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Para quem esteve com a gente</p>
-  <h1 style="margin:0 0 14px;font-size:32px;line-height:1.2;color:#0e2a52;font-weight:700;letter-spacing:-0.7px;">A água que fez parte do evento agora pode fazer parte da sua rotina</h1>
-  <p style="margin:0 0 8px;font-size:15px;line-height:1.65;color:#4a5b7a;">Durante o evento, você conheceu mais sobre a Acqualive e experimentou uma água escolhida para acompanhar uma experiência dedicada à saúde e à performance.</p>
-  <p style="margin:0;font-size:15px;line-height:1.65;color:#4a5b7a;">Agora, preparamos uma condição exclusiva para você levar esse cuidado para casa.</p>
+  <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Para você que esteve com a gente</p>
+  <h1 style="margin:0 0 14px;font-size:32px;line-height:1.2;color:#0e2a52;font-weight:700;letter-spacing:-0.7px;">A água que fez parte do evento agora pode fazer parte da sua rotina de autocuidado</h1>
+  <p style="margin:0 0 8px;font-size:15px;line-height:1.65;color:#4a5b7a;">Durante o evento, você conheceu mais sobre a Acqualive e experimentou uma água escolhida a dedo para acompanhar uma experiência dedicada à saúde e ao bem-estar da mulher.</p>
+  <p style="margin:0;font-size:15px;line-height:1.65;color:#4a5b7a;">Agora, preparamos uma condição exclusiva para você levar esse cuidado para a sua casa — e para quem você ama.</p>
 </td></tr>
 
 <!-- CARD DA OFERTA -->
