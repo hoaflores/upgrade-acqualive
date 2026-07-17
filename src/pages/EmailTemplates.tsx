@@ -1306,9 +1306,9 @@ const EMAILS = [
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:linear-gradient(135deg,#0e2a52 0%,#1a3a6b 100%);border-radius:10px;">
     <tr><td style="padding:32px 32px;">
       <p style="margin:0 0 10px;font-size:11px;letter-spacing:3px;color:#f9c74f;text-transform:uppercase;font-weight:700;">Um detalhe do evento</p>
-      <h2 style="margin:0 0 14px;font-size:24px;line-height:1.3;color:#ffffff;font-weight:700;letter-spacing:-0.4px;">Você não encontrou a Acqualive apenas no nosso stand.</h2>
-      <p style="margin:0 0 12px;font-size:15px;line-height:1.7;color:#dbe4f2;">Durante o evento, toda a água disponibilizada para abastecimento dos participantes também era Acqualive.</p>
-      <p style="margin:0;font-size:15px;line-height:1.7;color:#dbe4f2;">Ou seja: enquanto você acompanhava conteúdos sobre nutrição, saúde e performance, a qualidade da água também fazia parte dessa experiência.</p>
+      <h2 style="margin:0 0 14px;font-size:24px;line-height:1.3;color:#ffffff;font-weight:700;letter-spacing:-0.4px;">Você encontrou a Acqualive além do nosso stand.</h2>
+      <p style="margin:0 0 12px;font-size:15px;line-height:1.7;color:#dbe4f2;">Durante o evento, toda a água disponibilizada para hidratação das participantes também era Acqualive.</p>
+      <p style="margin:0;font-size:15px;line-height:1.7;color:#dbe4f2;">Ou seja: enquanto você acompanhava conteúdos sobre saúde, nutrição e bem-estar, a qualidade da água que você bebeu também fez parte desse cuidado.</p>
     </td></tr>
   </table>
 </td></tr>
@@ -1316,9 +1316,9 @@ const EMAILS = [
 <!-- BLOCO EDUCATIVO -->
 <tr><td style="padding:40px 40px 0;">
   <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Por que esse cuidado importa?</p>
-  <h2 style="margin:0 0 16px;font-size:24px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">A água está em quase todos os processos do organismo.</h2>
-  <p style="margin:0 0 14px;font-size:15px;line-height:1.7;color:#4a5b7a;">Por isso, quando falamos de hidratação, não devemos observar apenas a quantidade consumida, mas também a procedência e a qualidade da água que faz parte da rotina.</p>
-  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">Na Acqualive, acreditamos que cuidar da água é uma forma simples e diária de apoiar hábitos mais saudáveis.</p>
+  <h2 style="margin:0 0 16px;font-size:24px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">A água participa de quase todos os processos do seu corpo.</h2>
+  <p style="margin:0 0 14px;font-size:15px;line-height:1.7;color:#4a5b7a;">Ela sustenta a vitalidade da pele, o equilíbrio hormonal, a disposição e a beleza que vêm de dentro. Por isso, quando falamos em hidratação, não é só a quantidade que importa — a procedência e a qualidade da água que você bebe todos os dias também fazem diferença.</p>
+  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">Na Acqualive, acreditamos que cuidar da água é um gesto simples de autocuidado, presente em cada copo que você oferece a si mesma e à sua família.</p>
 </td></tr>
 
 <!-- 3 DESTAQUES -->
@@ -1327,17 +1327,17 @@ const EMAILS = [
     <tr>
       <td width="32%" valign="top" style="padding:18px 14px;background:#f4f8fd;border-radius:8px;text-align:center;">
         <p style="margin:0 0 6px;font-size:22px;">💧</p>
-        <p style="margin:0;font-size:13px;line-height:1.45;color:#0e2a52;font-weight:700;">Qualidade para o consumo diário</p>
+        <p style="margin:0;font-size:13px;line-height:1.45;color:#0e2a52;font-weight:700;">Beleza e vitalidade que começam pela água</p>
       </td>
       <td width="2%">&nbsp;</td>
       <td width="32%" valign="top" style="padding:18px 14px;background:#f4f8fd;border-radius:8px;text-align:center;">
         <p style="margin:0 0 6px;font-size:22px;">✦</p>
-        <p style="margin:0;font-size:13px;line-height:1.45;color:#0e2a52;font-weight:700;">Cuidado presente em cada detalhe</p>
+        <p style="margin:0;font-size:13px;line-height:1.45;color:#0e2a52;font-weight:700;">Autocuidado presente em cada detalhe</p>
       </td>
       <td width="2%">&nbsp;</td>
       <td width="32%" valign="top" style="padding:18px 14px;background:#f4f8fd;border-radius:8px;text-align:center;">
         <p style="margin:0 0 6px;font-size:22px;">↻</p>
-        <p style="margin:0;font-size:13px;line-height:1.45;color:#0e2a52;font-weight:700;">Hidratação integrada à rotina</p>
+        <p style="margin:0;font-size:13px;line-height:1.45;color:#0e2a52;font-weight:700;">Um ritual diário para você e sua família</p>
       </td>
     </tr>
   </table>
