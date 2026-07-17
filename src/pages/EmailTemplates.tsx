@@ -1347,7 +1347,7 @@ const EMAILS = [
 
 <!-- ENCERRAMENTO -->
 <tr><td style="padding:36px 40px 12px;">
-  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">Esperamos que o evento tenha proporcionado novos conhecimentos, conexões e experiências. E que, a partir de agora, você também passe a olhar com mais atenção para algo que acompanha todas essas escolhas: a água.</p>
+  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">Esperamos que o evento tenha trazido novos conhecimentos, conexões e inspirações para a sua rotina de saúde e beleza. E que, a partir de agora, você também passe a olhar com mais carinho para algo que acompanha todas essas escolhas: a sua água.</p>
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
     <tr><td align="center" style="background:linear-gradient(135deg,#f97316 0%,#f9c74f 100%);border-radius:6px;">
       <a href="[LINK_ACQUALIVE]" target="_blank" style="display:block;padding:16px 36px;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:0.5px;">CONHEÇA A ACQUALIVE</a>
