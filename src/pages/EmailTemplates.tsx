@@ -1375,7 +1375,7 @@ const EMAILS = [
 
   {
     day: "Pós-evento Andreia Naves — 02 — Hidratação e performance",
-    subject: "Toda água hidrata da mesma forma?",
+    subject: "Toda água hidrata a sua pele e o seu corpo da mesma forma?",
     html: `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
