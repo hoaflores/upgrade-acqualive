@@ -1562,7 +1562,7 @@ const EMAILS = [
         <span style="display:inline-block;padding:6px 14px;background:#0e2a52;color:#f9c74f;font-size:10px;letter-spacing:2px;font-weight:700;text-transform:uppercase;border-radius:999px;">Condição exclusiva do evento</span>
       </p>
       <h2 style="margin:0 0 12px;font-size:26px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.5px;">[INSERIR BENEFÍCIO OU OFERTA]</h2>
-      <p style="margin:0 0 20px;font-size:14px;line-height:1.65;color:#4a5b7a;">Use o cupom abaixo e aproveite a condição preparada especialmente para quem visitou a Acqualive durante o evento.</p>
+      <p style="margin:0 0 20px;font-size:14px;line-height:1.65;color:#4a5b7a;">Use o cupom abaixo e aproveite a condição preparada especialmente para as mulheres que visitaram a Acqualive durante o evento.</p>
       <div style="display:inline-block;padding:16px 28px;background:#ffffff;border:2px dashed #f97316;border-radius:8px;margin:0 0 18px;">
         <p style="margin:0 0 4px;font-size:10px;letter-spacing:2px;color:#7a8aa2;text-transform:uppercase;font-weight:700;">Cupom</p>
         <p style="margin:0;font-size:22px;letter-spacing:3px;color:#0e2a52;font-weight:700;">[INSERIR CUPOM]</p>
