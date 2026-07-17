@@ -1616,10 +1616,10 @@ const EMAILS = [
 <tr><td style="padding:36px 40px 0;">
   <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Fale com o time</p>
   <h2 style="margin:0 0 14px;font-size:22px;line-height:1.3;color:#0e2a52;font-weight:700;letter-spacing:-0.3px;">Ficou com alguma dúvida antes de escolher?</h2>
-  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">Nosso time pode ajudar você a entender os modelos, características, instalação e qual opção combina melhor com a sua rotina.</p>
+  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">Nosso time pode conversar com você com calma para entender os modelos, características, instalação e qual opção combina melhor com a sua rotina e com a sua casa.</p>
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
     <tr><td align="center" style="background:#ffffff;border:2px solid #0e2a52;border-radius:6px;">
-      <a href="[LINK_WHATSAPP]" target="_blank" style="display:block;padding:14px 32px;color:#0e2a52;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:0.5px;">FALAR COM UM ESPECIALISTA ACQUALIVE</a>
+      <a href="[LINK_WHATSAPP]" target="_blank" style="display:block;padding:14px 32px;color:#0e2a52;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:0.5px;">FALAR COM UMA CONSULTORA ACQUALIVE</a>
     </td></tr>
   </table>
 </td></tr>
@@ -1628,7 +1628,7 @@ const EMAILS = [
 <tr><td style="padding:36px 40px 0;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#fff6ec;border-left:3px solid #f97316;border-radius:4px;">
     <tr><td style="padding:18px 22px;">
-      <p style="margin:0;font-size:13px;line-height:1.6;color:#7a4a1a;">Esta condição foi criada exclusivamente para os participantes do evento e estará disponível por tempo limitado.</p>
+      <p style="margin:0;font-size:13px;line-height:1.6;color:#7a4a1a;">Esta condição foi criada exclusivamente para as participantes do evento e estará disponível por tempo limitado.</p>
     </td></tr>
   </table>
 </td></tr>
