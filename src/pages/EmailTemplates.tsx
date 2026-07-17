@@ -1385,7 +1385,7 @@ const EMAILS = [
 <title>Hidratação e performance — Acqualive</title>
 </head>
 <body style="margin:0;padding:0;background-color:#eef1f6;font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1a2440;-webkit-font-smoothing:antialiased;">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Na saúde e no esporte, hidratação não deveria ser tratada apenas como quantidade.</div>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Beleza, disposição e saúde começam pela água que você bebe todos os dias.</div>
 
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eef1f6;padding:24px 0;">
 <tr><td align="center">
@@ -1396,19 +1396,19 @@ const EMAILS = [
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
     <tr>
       <td style="font-size:20px;font-weight:700;letter-spacing:-0.4px;color:#0e2a52;">Acqualive</td>
-      <td align="right" style="font-size:11px;letter-spacing:2px;color:#7a8aa2;text-transform:uppercase;">Ciência & Hidratação</td>
+      <td align="right" style="font-size:11px;letter-spacing:2px;color:#7a8aa2;text-transform:uppercase;">Ciência, Beleza & Hidratação</td>
     </tr>
   </table>
 </td></tr>
 
 <!-- HERO -->
 <tr><td style="padding:0;">
-  <img src="https://blog.acqualive.com.br/wp-content/uploads/2026/06/woman-holding-stomach-illustration-healthcare-conc-2026-03-17-04-12-16-utc-scaled.jpg" alt="Mulher em atividade física e hidratação" width="640" style="display:block;width:100%;height:auto;">
+  <img src="https://blog.acqualive.com.br/wp-content/uploads/2026/06/woman-holding-stomach-illustration-healthcare-conc-2026-03-17-04-12-16-utc-scaled.jpg" alt="Hidratação, beleza e vitalidade da mulher" width="640" style="display:block;width:100%;height:auto;">
 </td></tr>
 <tr><td style="padding:36px 40px 8px;">
-  <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Hidratação & Performance</p>
-  <h1 style="margin:0 0 14px;font-size:32px;line-height:1.2;color:#0e2a52;font-weight:700;letter-spacing:-0.7px;">Hidratação vai além de simplesmente beber água</h1>
-  <p style="margin:0;font-size:15px;line-height:1.65;color:#4a5b7a;">Em um evento dedicado à nutrição esportiva, falar sobre hidratação é indispensável. Mas existe um ponto que muitas vezes recebe menos atenção do que deveria: a qualidade da água consumida diariamente.</p>
+  <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Hidratação, Beleza & Vitalidade</p>
+  <h1 style="margin:0 0 14px;font-size:32px;line-height:1.2;color:#0e2a52;font-weight:700;letter-spacing:-0.7px;">Hidratar-se é muito mais do que simplesmente beber água</h1>
+  <p style="margin:0;font-size:15px;line-height:1.65;color:#4a5b7a;">Em um evento dedicado à saúde da mulher, falar sobre hidratação é essencial. Mas existe um ponto que muitas vezes recebe menos atenção do que deveria: a qualidade da água que você consome todos os dias — em casa, no trabalho, na academia, no consultório.</p>
 </td></tr>
 
 <tr><td style="padding:36px 40px 0;"><div style="height:1px;background:#e6ebf3;"></div></td></tr>
