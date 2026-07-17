@@ -1284,19 +1284,19 @@ const EMAILS = [
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
     <tr>
       <td style="font-size:20px;font-weight:700;letter-spacing:-0.4px;color:#0e2a52;">Acqualive</td>
-      <td align="right" style="font-size:11px;letter-spacing:2px;color:#7a8aa2;text-transform:uppercase;">Pós-evento • Nutrição Esportiva</td>
+      <td align="right" style="font-size:11px;letter-spacing:2px;color:#7a8aa2;text-transform:uppercase;">Pós-evento • Saúde da Mulher</td>
     </tr>
   </table>
 </td></tr>
 
 <!-- HERO -->
 <tr><td style="padding:0;">
-  <img src="https://blog.acqualive.com.br/wp-content/uploads/2026/04/a-hidratacao-e-fundamental-para-homens-e-mulheres-acima-dos-40-anos-scaled.jpg" alt="Nutrição esportiva e hidratação" width="640" style="display:block;width:100%;height:auto;">
+  <img src="https://blog.acqualive.com.br/wp-content/uploads/2026/04/a-hidratacao-e-fundamental-para-homens-e-mulheres-acima-dos-40-anos-scaled.jpg" alt="Hidratação, saúde e bem-estar da mulher" width="640" style="display:block;width:100%;height:auto;">
 </td></tr>
 <tr><td style="padding:36px 40px 8px;">
-  <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Obrigada pela visita</p>
-  <h1 style="margin:0 0 14px;font-size:32px;line-height:1.2;color:#0e2a52;font-weight:700;letter-spacing:-0.7px;">Obrigada por viver essa experiência com a gente</h1>
-  <p style="margin:0;font-size:15px;line-height:1.6;color:#4a5b7a;">Foi um prazer receber você no stand da Acqualive e compartilhar um pouco mais sobre como a qualidade da água pode fazer parte de uma rotina de saúde e performance.</p>
+  <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Obrigada pela sua visita</p>
+  <h1 style="margin:0 0 14px;font-size:32px;line-height:1.2;color:#0e2a52;font-weight:700;letter-spacing:-0.7px;">Foi lindo receber você no nosso stand</h1>
+  <p style="margin:0;font-size:15px;line-height:1.6;color:#4a5b7a;">Ver tantas mulheres reunidas em torno de saúde, nutrição e bem-estar é sempre inspirador. Obrigada por ter passado no stand da Acqualive e compartilhado um pouco desse momento com a gente.</p>
 </td></tr>
 
 <tr><td style="padding:36px 40px 0;"><div style="height:1px;background:#e6ebf3;"></div></td></tr>
