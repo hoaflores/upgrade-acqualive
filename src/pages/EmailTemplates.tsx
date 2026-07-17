@@ -1488,8 +1488,8 @@ const EMAILS = [
 <tr><td style="padding:36px 40px 0;">
   <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Reflexão</p>
   <h2 style="margin:0 0 16px;font-size:24px;line-height:1.3;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">Se a água participa de tantos processos, por que olhar apenas para a quantidade?</h2>
-  <p style="margin:0 0 14px;font-size:15px;line-height:1.7;color:#4a5b7a;">Escolher uma água de qualidade não substitui uma alimentação equilibrada, acompanhamento profissional ou uma estratégia adequada de hidratação. É parte de um conjunto de cuidados que começa nas escolhas feitas todos os dias.</p>
-  <p style="margin:0 0 26px;font-size:15px;line-height:1.7;color:#4a5b7a;">Esse é o olhar que a Acqualive quer levar para mais casas, consultórios e rotinas: água tratada como parte da saúde, e não apenas como algo automático.</p>
+  <p style="margin:0 0 14px;font-size:15px;line-height:1.7;color:#4a5b7a;">Escolher uma água de qualidade não substitui uma alimentação equilibrada, o acompanhamento profissional ou uma estratégia adequada de hidratação. É parte de um conjunto de escolhas de autocuidado que você faz todos os dias — por você e por quem você ama.</p>
+  <p style="margin:0 0 26px;font-size:15px;line-height:1.7;color:#4a5b7a;">Esse é o olhar que a Acqualive quer levar para mais casas, consultórios e rotinas femininas: a água tratada como parte da saúde e da beleza, e não apenas como algo automático.</p>
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
     <tr><td align="center" style="background:linear-gradient(135deg,#f97316 0%,#f9c74f 100%);border-radius:6px;">
       <a href="[LINK_ACQUALIVE]" target="_blank" style="display:block;padding:16px 36px;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:0.5px;">DESCUBRA UMA NOVA FORMA DE CUIDAR DA SUA ÁGUA</a>
