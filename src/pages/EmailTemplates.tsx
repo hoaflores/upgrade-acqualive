@@ -1517,7 +1517,7 @@ const EMAILS = [
 
   {
     day: "Pós-evento Andreia Naves — 03 — Oferta exclusiva",
-    subject: "Uma condição especial para quem esteve com a gente",
+    subject: "Uma condição especial para você que esteve com a gente ✿",
     html: `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
