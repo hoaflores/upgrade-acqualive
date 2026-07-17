@@ -1263,7 +1263,7 @@ const EMAILS = [
   // ============================================================
   {
     day: "Pós-evento Andreia Naves — 01 — Agradecimento",
-    subject: "Foi um prazer receber você no stand da Acqualive",
+    subject: "Obrigada pela sua visita ao nosso stand ✿",
     html: `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
