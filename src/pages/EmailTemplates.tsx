@@ -1448,38 +1448,38 @@ const EMAILS = [
 
 <!-- SAÚDE E PERFORMANCE -->
 <tr><td style="padding:36px 40px 0;">
-  <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Saúde e performance</p>
-  <h2 style="margin:0 0 22px;font-size:24px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">O que a hidratação adequada apoia no organismo?</h2>
+  <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Saúde, beleza e vitalidade</p>
+  <h2 style="margin:0 0 22px;font-size:24px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">O que a hidratação adequada apoia no corpo da mulher?</h2>
 </td></tr>
 <tr><td style="padding:0 40px 8px;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
     <tr>
       <td width="49%" valign="top" style="padding:20px 18px;background:#f4f8fd;border-radius:8px;">
-        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Regulação da temperatura corporal</p>
-        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Fundamental durante o esforço físico e em ambientes de calor.</p>
+        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Pele mais viçosa e hidratada</p>
+        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">A beleza da pele começa pela hidratação que vem de dentro.</p>
       </td>
       <td width="2%">&nbsp;</td>
       <td width="49%" valign="top" style="padding:20px 18px;background:#f4f8fd;border-radius:8px;">
-        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Transporte de nutrientes</p>
-        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">A água é o meio pelo qual o corpo distribui o que absorve da alimentação.</p>
+        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Mais disposição e energia no dia a dia</p>
+        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">A água ajuda a manter o equilíbrio e o bem-estar ao longo do dia.</p>
       </td>
     </tr>
     <tr><td colspan="3" height="10">&nbsp;</td></tr>
     <tr>
       <td width="49%" valign="top" style="padding:20px 18px;background:#f4f8fd;border-radius:8px;">
-        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Funcionamento metabólico</p>
+        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Apoio ao funcionamento do organismo</p>
         <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Participa de reações químicas essenciais em praticamente todos os órgãos.</p>
       </td>
       <td width="2%">&nbsp;</td>
       <td width="49%" valign="top" style="padding:20px 18px;background:#f4f8fd;border-radius:8px;">
-        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Recuperação e resposta ao exercício</p>
-        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Apoia a recuperação muscular e a homeostase após o esforço.</p>
+        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Recuperação após treinos e rotina intensa</p>
+        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Apoia a recuperação muscular e o equilíbrio depois do esforço.</p>
       </td>
     </tr>
   </table>
 </td></tr>
 <tr><td style="padding:16px 40px 0;">
-  <p style="margin:0;font-size:12px;line-height:1.6;color:#7a8aa2;font-style:italic;">As necessidades de hidratação variam conforme características individuais, alimentação, clima, duração e intensidade do exercício. A estratégia deve ser adaptada à realidade de cada pessoa.</p>
+  <p style="margin:0;font-size:12px;line-height:1.6;color:#7a8aa2;font-style:italic;">As necessidades de hidratação variam conforme fase da vida, alimentação, clima, rotina e intensidade das atividades. A estratégia deve ser adaptada à realidade de cada mulher, sempre com acompanhamento profissional.</p>
 </td></tr>
 
 <tr><td style="padding:36px 40px 0;"><div style="height:1px;background:#e6ebf3;"></div></td></tr>
