@@ -1580,31 +1580,31 @@ const EMAILS = [
 <!-- BENEFÍCIOS -->
 <tr><td style="padding:44px 40px 0;">
   <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Benefícios</p>
-  <h2 style="margin:0 0 22px;font-size:24px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">Um cuidado que continua depois do evento</h2>
+  <h2 style="margin:0 0 22px;font-size:24px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">Um cuidado que continua depois do evento, na sua rotina</h2>
 </td></tr>
 <tr><td style="padding:0 40px 8px;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
     <tr>
       <td width="49%" valign="top" style="padding:18px 16px;background:#f4f8fd;border-radius:8px;">
         <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Água de qualidade todos os dias</p>
-        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Disponível na sua cozinha, sempre que precisar.</p>
+        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Fresquinha e disponível na sua cozinha, sempre que você e sua família precisarem.</p>
       </td>
       <td width="2%">&nbsp;</td>
       <td width="49%" valign="top" style="padding:18px 16px;background:#f4f8fd;border-radius:8px;">
-        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Mais praticidade para sua rotina</p>
-        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Menos garrafas, menos peso, menos preocupação.</p>
+        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Mais praticidade para a sua rotina</p>
+        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Menos galões, menos garrafas plásticas, menos peso para carregar.</p>
       </td>
     </tr>
     <tr><td colspan="3" height="10">&nbsp;</td></tr>
     <tr>
       <td width="49%" valign="top" style="padding:18px 16px;background:#f4f8fd;border-radius:8px;">
-        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Cuidado com a água da sua casa</p>
-        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Atenção à procedência da água que chega até você.</p>
+        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Cuidado com a água que chega até você</p>
+        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Atenção à procedência da água que entra na sua casa todos os dias.</p>
       </td>
       <td width="2%">&nbsp;</td>
       <td width="49%" valign="top" style="padding:18px 16px;background:#f4f8fd;border-radius:8px;">
         <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Tecnologia Acqualive próxima de você</p>
-        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Anos de pesquisa aplicados à sua rotina de saúde.</p>
+        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Anos de pesquisa aplicados à sua rotina de saúde e bem-estar.</p>
       </td>
     </tr>
   </table>
