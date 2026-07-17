@@ -1263,7 +1263,7 @@ const EMAILS = [
   // ============================================================
   {
     day: "Pós-evento Andreia Naves — 01 — Agradecimento",
-    subject: "Foi um prazer receber você no stand da Acqualive",
+    subject: "Obrigada pela sua visita ao nosso stand ✿",
     html: `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -1273,7 +1273,7 @@ const EMAILS = [
 <title>Obrigada pela visita — Acqualive</title>
 </head>
 <body style="margin:0;padding:0;background-color:#eef1f6;font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1a2440;-webkit-font-smoothing:antialiased;">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0;">E tem um detalhe sobre a água do evento que queremos compartilhar.</div>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Um pequeno detalhe sobre a água do evento que queremos compartilhar com você.</div>
 
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eef1f6;padding:24px 0;">
 <tr><td align="center">
@@ -1284,19 +1284,19 @@ const EMAILS = [
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
     <tr>
       <td style="font-size:20px;font-weight:700;letter-spacing:-0.4px;color:#0e2a52;">Acqualive</td>
-      <td align="right" style="font-size:11px;letter-spacing:2px;color:#7a8aa2;text-transform:uppercase;">Pós-evento • Nutrição Esportiva</td>
+      <td align="right" style="font-size:11px;letter-spacing:2px;color:#7a8aa2;text-transform:uppercase;">Pós-evento • Saúde da Mulher</td>
     </tr>
   </table>
 </td></tr>
 
 <!-- HERO -->
 <tr><td style="padding:0;">
-  <img src="https://blog.acqualive.com.br/wp-content/uploads/2026/04/a-hidratacao-e-fundamental-para-homens-e-mulheres-acima-dos-40-anos-scaled.jpg" alt="Nutrição esportiva e hidratação" width="640" style="display:block;width:100%;height:auto;">
+  <img src="https://blog.acqualive.com.br/wp-content/uploads/2026/04/a-hidratacao-e-fundamental-para-homens-e-mulheres-acima-dos-40-anos-scaled.jpg" alt="Hidratação, saúde e bem-estar da mulher" width="640" style="display:block;width:100%;height:auto;">
 </td></tr>
 <tr><td style="padding:36px 40px 8px;">
-  <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Obrigada pela visita</p>
-  <h1 style="margin:0 0 14px;font-size:32px;line-height:1.2;color:#0e2a52;font-weight:700;letter-spacing:-0.7px;">Obrigada por viver essa experiência com a gente</h1>
-  <p style="margin:0;font-size:15px;line-height:1.6;color:#4a5b7a;">Foi um prazer receber você no stand da Acqualive e compartilhar um pouco mais sobre como a qualidade da água pode fazer parte de uma rotina de saúde e performance.</p>
+  <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Obrigada pela sua visita</p>
+  <h1 style="margin:0 0 14px;font-size:32px;line-height:1.2;color:#0e2a52;font-weight:700;letter-spacing:-0.7px;">Foi lindo receber você no nosso stand</h1>
+  <p style="margin:0;font-size:15px;line-height:1.6;color:#4a5b7a;">Ver tantas mulheres reunidas em torno de saúde, nutrição e bem-estar é sempre inspirador. Obrigada por ter passado no stand da Acqualive e compartilhado um pouco desse momento com a gente.</p>
 </td></tr>
 
 <tr><td style="padding:36px 40px 0;"><div style="height:1px;background:#e6ebf3;"></div></td></tr>
@@ -1306,9 +1306,9 @@ const EMAILS = [
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:linear-gradient(135deg,#0e2a52 0%,#1a3a6b 100%);border-radius:10px;">
     <tr><td style="padding:32px 32px;">
       <p style="margin:0 0 10px;font-size:11px;letter-spacing:3px;color:#f9c74f;text-transform:uppercase;font-weight:700;">Um detalhe do evento</p>
-      <h2 style="margin:0 0 14px;font-size:24px;line-height:1.3;color:#ffffff;font-weight:700;letter-spacing:-0.4px;">Você não encontrou a Acqualive apenas no nosso stand.</h2>
-      <p style="margin:0 0 12px;font-size:15px;line-height:1.7;color:#dbe4f2;">Durante o evento, toda a água disponibilizada para abastecimento dos participantes também era Acqualive.</p>
-      <p style="margin:0;font-size:15px;line-height:1.7;color:#dbe4f2;">Ou seja: enquanto você acompanhava conteúdos sobre nutrição, saúde e performance, a qualidade da água também fazia parte dessa experiência.</p>
+      <h2 style="margin:0 0 14px;font-size:24px;line-height:1.3;color:#ffffff;font-weight:700;letter-spacing:-0.4px;">Você encontrou a Acqualive além do nosso stand.</h2>
+      <p style="margin:0 0 12px;font-size:15px;line-height:1.7;color:#dbe4f2;">Durante o evento, toda a água disponibilizada para hidratação das participantes também era Acqualive.</p>
+      <p style="margin:0;font-size:15px;line-height:1.7;color:#dbe4f2;">Ou seja: enquanto você acompanhava conteúdos sobre saúde, nutrição e bem-estar, a qualidade da água que você bebeu também fez parte desse cuidado.</p>
     </td></tr>
   </table>
 </td></tr>
@@ -1316,9 +1316,9 @@ const EMAILS = [
 <!-- BLOCO EDUCATIVO -->
 <tr><td style="padding:40px 40px 0;">
   <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Por que esse cuidado importa?</p>
-  <h2 style="margin:0 0 16px;font-size:24px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">A água está em quase todos os processos do organismo.</h2>
-  <p style="margin:0 0 14px;font-size:15px;line-height:1.7;color:#4a5b7a;">Por isso, quando falamos de hidratação, não devemos observar apenas a quantidade consumida, mas também a procedência e a qualidade da água que faz parte da rotina.</p>
-  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">Na Acqualive, acreditamos que cuidar da água é uma forma simples e diária de apoiar hábitos mais saudáveis.</p>
+  <h2 style="margin:0 0 16px;font-size:24px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">A água participa de quase todos os processos do seu corpo.</h2>
+  <p style="margin:0 0 14px;font-size:15px;line-height:1.7;color:#4a5b7a;">Ela sustenta a vitalidade da pele, o equilíbrio hormonal, a disposição e a beleza que vêm de dentro. Por isso, quando falamos em hidratação, não é só a quantidade que importa — a procedência e a qualidade da água que você bebe todos os dias também fazem diferença.</p>
+  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">Na Acqualive, acreditamos que cuidar da água é um gesto simples de autocuidado, presente em cada copo que você oferece a si mesma e à sua família.</p>
 </td></tr>
 
 <!-- 3 DESTAQUES -->
@@ -1327,17 +1327,17 @@ const EMAILS = [
     <tr>
       <td width="32%" valign="top" style="padding:18px 14px;background:#f4f8fd;border-radius:8px;text-align:center;">
         <p style="margin:0 0 6px;font-size:22px;">💧</p>
-        <p style="margin:0;font-size:13px;line-height:1.45;color:#0e2a52;font-weight:700;">Qualidade para o consumo diário</p>
+        <p style="margin:0;font-size:13px;line-height:1.45;color:#0e2a52;font-weight:700;">Beleza e vitalidade que começam pela água</p>
       </td>
       <td width="2%">&nbsp;</td>
       <td width="32%" valign="top" style="padding:18px 14px;background:#f4f8fd;border-radius:8px;text-align:center;">
         <p style="margin:0 0 6px;font-size:22px;">✦</p>
-        <p style="margin:0;font-size:13px;line-height:1.45;color:#0e2a52;font-weight:700;">Cuidado presente em cada detalhe</p>
+        <p style="margin:0;font-size:13px;line-height:1.45;color:#0e2a52;font-weight:700;">Autocuidado presente em cada detalhe</p>
       </td>
       <td width="2%">&nbsp;</td>
       <td width="32%" valign="top" style="padding:18px 14px;background:#f4f8fd;border-radius:8px;text-align:center;">
         <p style="margin:0 0 6px;font-size:22px;">↻</p>
-        <p style="margin:0;font-size:13px;line-height:1.45;color:#0e2a52;font-weight:700;">Hidratação integrada à rotina</p>
+        <p style="margin:0;font-size:13px;line-height:1.45;color:#0e2a52;font-weight:700;">Um ritual diário para você e sua família</p>
       </td>
     </tr>
   </table>
@@ -1347,7 +1347,7 @@ const EMAILS = [
 
 <!-- ENCERRAMENTO -->
 <tr><td style="padding:36px 40px 12px;">
-  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">Esperamos que o evento tenha proporcionado novos conhecimentos, conexões e experiências. E que, a partir de agora, você também passe a olhar com mais atenção para algo que acompanha todas essas escolhas: a água.</p>
+  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">Esperamos que o evento tenha trazido novos conhecimentos, conexões e inspirações para a sua rotina de saúde e beleza. E que, a partir de agora, você também passe a olhar com mais carinho para algo que acompanha todas essas escolhas: a sua água.</p>
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
     <tr><td align="center" style="background:linear-gradient(135deg,#f97316 0%,#f9c74f 100%);border-radius:6px;">
       <a href="[LINK_ACQUALIVE]" target="_blank" style="display:block;padding:16px 36px;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:0.5px;">CONHEÇA A ACQUALIVE</a>
@@ -1375,7 +1375,7 @@ const EMAILS = [
 
   {
     day: "Pós-evento Andreia Naves — 02 — Hidratação e performance",
-    subject: "Toda água hidrata da mesma forma?",
+    subject: "Toda água hidrata a sua pele e o seu corpo da mesma forma?",
     html: `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -1385,7 +1385,7 @@ const EMAILS = [
 <title>Hidratação e performance — Acqualive</title>
 </head>
 <body style="margin:0;padding:0;background-color:#eef1f6;font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1a2440;-webkit-font-smoothing:antialiased;">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Na saúde e no esporte, hidratação não deveria ser tratada apenas como quantidade.</div>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Beleza, disposição e saúde começam pela água que você bebe todos os dias.</div>
 
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eef1f6;padding:24px 0;">
 <tr><td align="center">
@@ -1396,19 +1396,19 @@ const EMAILS = [
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
     <tr>
       <td style="font-size:20px;font-weight:700;letter-spacing:-0.4px;color:#0e2a52;">Acqualive</td>
-      <td align="right" style="font-size:11px;letter-spacing:2px;color:#7a8aa2;text-transform:uppercase;">Ciência & Hidratação</td>
+      <td align="right" style="font-size:11px;letter-spacing:2px;color:#7a8aa2;text-transform:uppercase;">Ciência, Beleza & Hidratação</td>
     </tr>
   </table>
 </td></tr>
 
 <!-- HERO -->
 <tr><td style="padding:0;">
-  <img src="https://blog.acqualive.com.br/wp-content/uploads/2026/06/woman-holding-stomach-illustration-healthcare-conc-2026-03-17-04-12-16-utc-scaled.jpg" alt="Mulher em atividade física e hidratação" width="640" style="display:block;width:100%;height:auto;">
+  <img src="https://blog.acqualive.com.br/wp-content/uploads/2026/06/woman-holding-stomach-illustration-healthcare-conc-2026-03-17-04-12-16-utc-scaled.jpg" alt="Hidratação, beleza e vitalidade da mulher" width="640" style="display:block;width:100%;height:auto;">
 </td></tr>
 <tr><td style="padding:36px 40px 8px;">
-  <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Hidratação & Performance</p>
-  <h1 style="margin:0 0 14px;font-size:32px;line-height:1.2;color:#0e2a52;font-weight:700;letter-spacing:-0.7px;">Hidratação vai além de simplesmente beber água</h1>
-  <p style="margin:0;font-size:15px;line-height:1.65;color:#4a5b7a;">Em um evento dedicado à nutrição esportiva, falar sobre hidratação é indispensável. Mas existe um ponto que muitas vezes recebe menos atenção do que deveria: a qualidade da água consumida diariamente.</p>
+  <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Hidratação, Beleza & Vitalidade</p>
+  <h1 style="margin:0 0 14px;font-size:32px;line-height:1.2;color:#0e2a52;font-weight:700;letter-spacing:-0.7px;">Hidratar-se é muito mais do que simplesmente beber água</h1>
+  <p style="margin:0;font-size:15px;line-height:1.65;color:#4a5b7a;">Em um evento dedicado à saúde da mulher, falar sobre hidratação é essencial. Mas existe um ponto que muitas vezes recebe menos atenção do que deveria: a qualidade da água que você consome todos os dias — em casa, no trabalho, na academia, no consultório.</p>
 </td></tr>
 
 <tr><td style="padding:36px 40px 0;"><div style="height:1px;background:#e6ebf3;"></div></td></tr>
@@ -1448,38 +1448,38 @@ const EMAILS = [
 
 <!-- SAÚDE E PERFORMANCE -->
 <tr><td style="padding:36px 40px 0;">
-  <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Saúde e performance</p>
-  <h2 style="margin:0 0 22px;font-size:24px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">O que a hidratação adequada apoia no organismo?</h2>
+  <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Saúde, beleza e vitalidade</p>
+  <h2 style="margin:0 0 22px;font-size:24px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">O que a hidratação adequada apoia no corpo da mulher?</h2>
 </td></tr>
 <tr><td style="padding:0 40px 8px;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
     <tr>
       <td width="49%" valign="top" style="padding:20px 18px;background:#f4f8fd;border-radius:8px;">
-        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Regulação da temperatura corporal</p>
-        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Fundamental durante o esforço físico e em ambientes de calor.</p>
+        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Pele mais viçosa e hidratada</p>
+        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">A beleza da pele começa pela hidratação que vem de dentro.</p>
       </td>
       <td width="2%">&nbsp;</td>
       <td width="49%" valign="top" style="padding:20px 18px;background:#f4f8fd;border-radius:8px;">
-        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Transporte de nutrientes</p>
-        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">A água é o meio pelo qual o corpo distribui o que absorve da alimentação.</p>
+        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Mais disposição e energia no dia a dia</p>
+        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">A água ajuda a manter o equilíbrio e o bem-estar ao longo do dia.</p>
       </td>
     </tr>
     <tr><td colspan="3" height="10">&nbsp;</td></tr>
     <tr>
       <td width="49%" valign="top" style="padding:20px 18px;background:#f4f8fd;border-radius:8px;">
-        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Funcionamento metabólico</p>
+        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Apoio ao funcionamento do organismo</p>
         <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Participa de reações químicas essenciais em praticamente todos os órgãos.</p>
       </td>
       <td width="2%">&nbsp;</td>
       <td width="49%" valign="top" style="padding:20px 18px;background:#f4f8fd;border-radius:8px;">
-        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Recuperação e resposta ao exercício</p>
-        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Apoia a recuperação muscular e a homeostase após o esforço.</p>
+        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Recuperação após treinos e rotina intensa</p>
+        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Apoia a recuperação muscular e o equilíbrio depois do esforço.</p>
       </td>
     </tr>
   </table>
 </td></tr>
 <tr><td style="padding:16px 40px 0;">
-  <p style="margin:0;font-size:12px;line-height:1.6;color:#7a8aa2;font-style:italic;">As necessidades de hidratação variam conforme características individuais, alimentação, clima, duração e intensidade do exercício. A estratégia deve ser adaptada à realidade de cada pessoa.</p>
+  <p style="margin:0;font-size:12px;line-height:1.6;color:#7a8aa2;font-style:italic;">As necessidades de hidratação variam conforme fase da vida, alimentação, clima, rotina e intensidade das atividades. A estratégia deve ser adaptada à realidade de cada mulher, sempre com acompanhamento profissional.</p>
 </td></tr>
 
 <tr><td style="padding:36px 40px 0;"><div style="height:1px;background:#e6ebf3;"></div></td></tr>
@@ -1488,8 +1488,8 @@ const EMAILS = [
 <tr><td style="padding:36px 40px 0;">
   <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Reflexão</p>
   <h2 style="margin:0 0 16px;font-size:24px;line-height:1.3;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">Se a água participa de tantos processos, por que olhar apenas para a quantidade?</h2>
-  <p style="margin:0 0 14px;font-size:15px;line-height:1.7;color:#4a5b7a;">Escolher uma água de qualidade não substitui uma alimentação equilibrada, acompanhamento profissional ou uma estratégia adequada de hidratação. É parte de um conjunto de cuidados que começa nas escolhas feitas todos os dias.</p>
-  <p style="margin:0 0 26px;font-size:15px;line-height:1.7;color:#4a5b7a;">Esse é o olhar que a Acqualive quer levar para mais casas, consultórios e rotinas: água tratada como parte da saúde, e não apenas como algo automático.</p>
+  <p style="margin:0 0 14px;font-size:15px;line-height:1.7;color:#4a5b7a;">Escolher uma água de qualidade não substitui uma alimentação equilibrada, o acompanhamento profissional ou uma estratégia adequada de hidratação. É parte de um conjunto de escolhas de autocuidado que você faz todos os dias — por você e por quem você ama.</p>
+  <p style="margin:0 0 26px;font-size:15px;line-height:1.7;color:#4a5b7a;">Esse é o olhar que a Acqualive quer levar para mais casas, consultórios e rotinas femininas: a água tratada como parte da saúde e da beleza, e não apenas como algo automático.</p>
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
     <tr><td align="center" style="background:linear-gradient(135deg,#f97316 0%,#f9c74f 100%);border-radius:6px;">
       <a href="[LINK_ACQUALIVE]" target="_blank" style="display:block;padding:16px 36px;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:0.5px;">DESCUBRA UMA NOVA FORMA DE CUIDAR DA SUA ÁGUA</a>
@@ -1517,7 +1517,7 @@ const EMAILS = [
 
   {
     day: "Pós-evento Andreia Naves — 03 — Oferta exclusiva",
-    subject: "Uma condição especial para quem esteve com a gente",
+    subject: "Uma condição especial para você que esteve com a gente ✿",
     html: `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -1527,7 +1527,7 @@ const EMAILS = [
 <title>Condição exclusiva — Acqualive</title>
 </head>
 <body style="margin:0;padding:0;background-color:#eef1f6;font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1a2440;-webkit-font-smoothing:antialiased;">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0;">A experiência do evento pode continuar fazendo parte da sua rotina.</div>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">A experiência do evento pode continuar fazendo parte da sua rotina de autocuidado.</div>
 
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eef1f6;padding:24px 0;">
 <tr><td align="center">
@@ -1548,10 +1548,10 @@ const EMAILS = [
   <img src="https://paginas.acqualive.com.br/__l5e/assets-v1/401eb55a-8570-4311-b9a8-ffc20815e730/acqualive-duo-consultorio.png" alt="Purificador Acqualive DUO" width="640" style="display:block;width:100%;height:auto;">
 </td></tr>
 <tr><td style="padding:36px 40px 8px;">
-  <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Para quem esteve com a gente</p>
-  <h1 style="margin:0 0 14px;font-size:32px;line-height:1.2;color:#0e2a52;font-weight:700;letter-spacing:-0.7px;">A água que fez parte do evento agora pode fazer parte da sua rotina</h1>
-  <p style="margin:0 0 8px;font-size:15px;line-height:1.65;color:#4a5b7a;">Durante o evento, você conheceu mais sobre a Acqualive e experimentou uma água escolhida para acompanhar uma experiência dedicada à saúde e à performance.</p>
-  <p style="margin:0;font-size:15px;line-height:1.65;color:#4a5b7a;">Agora, preparamos uma condição exclusiva para você levar esse cuidado para casa.</p>
+  <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Para você que esteve com a gente</p>
+  <h1 style="margin:0 0 14px;font-size:32px;line-height:1.2;color:#0e2a52;font-weight:700;letter-spacing:-0.7px;">A água que fez parte do evento agora pode fazer parte da sua rotina de autocuidado</h1>
+  <p style="margin:0 0 8px;font-size:15px;line-height:1.65;color:#4a5b7a;">Durante o evento, você conheceu mais sobre a Acqualive e experimentou uma água escolhida a dedo para acompanhar uma experiência dedicada à saúde e ao bem-estar da mulher.</p>
+  <p style="margin:0;font-size:15px;line-height:1.65;color:#4a5b7a;">Agora, preparamos uma condição exclusiva para você levar esse cuidado para a sua casa — e para quem você ama.</p>
 </td></tr>
 
 <!-- CARD DA OFERTA -->
@@ -1562,7 +1562,7 @@ const EMAILS = [
         <span style="display:inline-block;padding:6px 14px;background:#0e2a52;color:#f9c74f;font-size:10px;letter-spacing:2px;font-weight:700;text-transform:uppercase;border-radius:999px;">Condição exclusiva do evento</span>
       </p>
       <h2 style="margin:0 0 12px;font-size:26px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.5px;">[INSERIR BENEFÍCIO OU OFERTA]</h2>
-      <p style="margin:0 0 20px;font-size:14px;line-height:1.65;color:#4a5b7a;">Use o cupom abaixo e aproveite a condição preparada especialmente para quem visitou a Acqualive durante o evento.</p>
+      <p style="margin:0 0 20px;font-size:14px;line-height:1.65;color:#4a5b7a;">Use o cupom abaixo e aproveite a condição preparada especialmente para as mulheres que visitaram a Acqualive durante o evento.</p>
       <div style="display:inline-block;padding:16px 28px;background:#ffffff;border:2px dashed #f97316;border-radius:8px;margin:0 0 18px;">
         <p style="margin:0 0 4px;font-size:10px;letter-spacing:2px;color:#7a8aa2;text-transform:uppercase;font-weight:700;">Cupom</p>
         <p style="margin:0;font-size:22px;letter-spacing:3px;color:#0e2a52;font-weight:700;">[INSERIR CUPOM]</p>
@@ -1580,31 +1580,31 @@ const EMAILS = [
 <!-- BENEFÍCIOS -->
 <tr><td style="padding:44px 40px 0;">
   <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Benefícios</p>
-  <h2 style="margin:0 0 22px;font-size:24px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">Um cuidado que continua depois do evento</h2>
+  <h2 style="margin:0 0 22px;font-size:24px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">Um cuidado que continua depois do evento, na sua rotina</h2>
 </td></tr>
 <tr><td style="padding:0 40px 8px;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
     <tr>
       <td width="49%" valign="top" style="padding:18px 16px;background:#f4f8fd;border-radius:8px;">
         <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Água de qualidade todos os dias</p>
-        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Disponível na sua cozinha, sempre que precisar.</p>
+        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Fresquinha e disponível na sua cozinha, sempre que você e sua família precisarem.</p>
       </td>
       <td width="2%">&nbsp;</td>
       <td width="49%" valign="top" style="padding:18px 16px;background:#f4f8fd;border-radius:8px;">
-        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Mais praticidade para sua rotina</p>
-        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Menos garrafas, menos peso, menos preocupação.</p>
+        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Mais praticidade para a sua rotina</p>
+        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Menos galões, menos garrafas plásticas, menos peso para carregar.</p>
       </td>
     </tr>
     <tr><td colspan="3" height="10">&nbsp;</td></tr>
     <tr>
       <td width="49%" valign="top" style="padding:18px 16px;background:#f4f8fd;border-radius:8px;">
-        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Cuidado com a água da sua casa</p>
-        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Atenção à procedência da água que chega até você.</p>
+        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Cuidado com a água que chega até você</p>
+        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Atenção à procedência da água que entra na sua casa todos os dias.</p>
       </td>
       <td width="2%">&nbsp;</td>
       <td width="49%" valign="top" style="padding:18px 16px;background:#f4f8fd;border-radius:8px;">
         <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Tecnologia Acqualive próxima de você</p>
-        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Anos de pesquisa aplicados à sua rotina de saúde.</p>
+        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Anos de pesquisa aplicados à sua rotina de saúde e bem-estar.</p>
       </td>
     </tr>
   </table>
@@ -1616,10 +1616,10 @@ const EMAILS = [
 <tr><td style="padding:36px 40px 0;">
   <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Fale com o time</p>
   <h2 style="margin:0 0 14px;font-size:22px;line-height:1.3;color:#0e2a52;font-weight:700;letter-spacing:-0.3px;">Ficou com alguma dúvida antes de escolher?</h2>
-  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">Nosso time pode ajudar você a entender os modelos, características, instalação e qual opção combina melhor com a sua rotina.</p>
+  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">Nosso time pode conversar com você com calma para entender os modelos, características, instalação e qual opção combina melhor com a sua rotina e com a sua casa.</p>
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
     <tr><td align="center" style="background:#ffffff;border:2px solid #0e2a52;border-radius:6px;">
-      <a href="[LINK_WHATSAPP]" target="_blank" style="display:block;padding:14px 32px;color:#0e2a52;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:0.5px;">FALAR COM UM ESPECIALISTA ACQUALIVE</a>
+      <a href="[LINK_WHATSAPP]" target="_blank" style="display:block;padding:14px 32px;color:#0e2a52;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:0.5px;">FALAR COM UMA CONSULTORA ACQUALIVE</a>
     </td></tr>
   </table>
 </td></tr>
@@ -1628,7 +1628,7 @@ const EMAILS = [
 <tr><td style="padding:36px 40px 0;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#fff6ec;border-left:3px solid #f97316;border-radius:4px;">
     <tr><td style="padding:18px 22px;">
-      <p style="margin:0;font-size:13px;line-height:1.6;color:#7a4a1a;">Esta condição foi criada exclusivamente para os participantes do evento e estará disponível por tempo limitado.</p>
+      <p style="margin:0;font-size:13px;line-height:1.6;color:#7a4a1a;">Esta condição foi criada exclusivamente para as participantes do evento e estará disponível por tempo limitado.</p>
     </td></tr>
   </table>
 </td></tr>
