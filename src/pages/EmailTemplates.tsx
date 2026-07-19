@@ -1605,7 +1605,7 @@ const EMAILS = [
 <tr><td style="padding:36px 40px 0;">
   <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Fale com o time técnico</p>
   <h2 style="margin:0 0 14px;font-size:22px;line-height:1.3;color:#0e2a52;font-weight:700;letter-spacing:-0.3px;">Quer entrar no detalhe de tecnologia, mídias filtrantes e laudos?</h2>
-  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">Nosso time atende profissionais da saúde com o nível de profundidade que a decisão exige. Etapas de filtração, capacidade de retenção, análises físico-químicas, tudo na mesa.</p>
+  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">Nosso time atende profissionais da saúde e pessoas exigentes com a própria rotina, com o nível de profundidade que a decisão exige. Etapas de filtração, capacidade de retenção, análises físico-químicas, tudo na mesa.</p>
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
     <tr><td align="center" style="background:#ffffff;border:2px solid #0e2a52;border-radius:6px;">
       <a href="[LINK_WHATSAPP]" target="_blank" style="display:block;padding:14px 32px;color:#0e2a52;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:0.5px;">FALAR COM O TIME ACQUALIVE</a>
