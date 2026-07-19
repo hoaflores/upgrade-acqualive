@@ -1291,7 +1291,7 @@ const EMAILS = [
 </td></tr>
 
 <tr><td style="padding:0;">
-  <img src="https://paginas.acqualive.com.br/__l5e/assets-v1/5e94dc82-bda8-454d-82c3-436c75e3c2b7/atleta-hidratacao.jpg" alt="Hidratação, performance e recuperação" width="640" style="display:block;width:100%;height:auto;">
+  <img src="https://paginas.acqualive.com.br/__l5e/assets-v1/c15cd9fd-d521-4275-908a-fd54b6981979/woman-drinking-gym.jpg" alt="Hidratação, performance e recuperação" width="640" style="display:block;width:100%;height:auto;">
 </td></tr>
 <tr><td style="padding:36px 40px 8px;">
   <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Obrigado pela presença</p>
