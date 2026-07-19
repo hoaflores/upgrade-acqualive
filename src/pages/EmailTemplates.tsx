@@ -1570,7 +1570,7 @@ const EMAILS = [
 
 <tr><td style="padding:44px 40px 0;">
   <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">O que você leva</p>
-  <h2 style="margin:0 0 22px;font-size:24px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">Coerência entre discurso técnico e rotina real</h2>
+  <h2 style="margin:0 0 22px;font-size:24px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">Coerência entre o que você defende e o que você bebe</h2>
 </td></tr>
 <tr><td style="padding:0 40px 8px;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
