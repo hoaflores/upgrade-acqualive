@@ -1285,7 +1285,7 @@ const EMAILS = [
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
     <tr>
       <td style="font-size:20px;font-weight:700;letter-spacing:-0.4px;color:#0e2a52;">Acqualive</td>
-      <td align="right" style="font-size:11px;letter-spacing:2px;color:#7a8aa2;text-transform:uppercase;">Pós-evento, Nutrição & Performance</td>
+      <td align="right" style="font-size:11px;letter-spacing:2px;color:#7a8aa2;text-transform:uppercase;">Pós-evento, Hidratação & Performance</td>
     </tr>
   </table>
 </td></tr>
