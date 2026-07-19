@@ -1314,9 +1314,9 @@ const EMAILS = [
 
 <tr><td style="padding:40px 40px 0;">
   <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Por que isso importa clinicamente</p>
-  <h2 style="margin:0 0 16px;font-size:24px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">Você prescreve whey, creatina, ômega, magnésio. E a água?</h2>
-  <p style="margin:0 0 14px;font-size:15px;line-height:1.7;color:#4a5b7a;">A água é o veículo de absorção, distribuição e excreção de praticamente tudo o que você prescreve. É solvente universal, regulador térmico e substrato de reações metabólicas. Se ela chega contaminada, com resíduos de cloro, metais pesados, microplásticos ou compostos organoclorados, o eixo inflamatório é impactado antes mesmo do treino começar.</p>
-  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">Discutir performance sem discutir a qualidade da água ingerida é, no mínimo, incoerente.</p>
+  <h2 style="margin:0 0 16px;font-size:24px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">Whey, creatina, ômega, magnésio. E a água que vai junto?</h2>
+  <p style="margin:0 0 14px;font-size:15px;line-height:1.7;color:#4a5b7a;">Seja no consultório, na academia ou dentro de casa, a água é o veículo de absorção, distribuição e excreção de praticamente tudo o que passa pelo organismo. É solvente universal, regulador térmico e substrato de reações metabólicas. Se ela chega contaminada, com resíduos de cloro, metais pesados, microplásticos ou compostos organoclorados, o eixo inflamatório é impactado antes mesmo do treino começar.</p>
+  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">Discutir performance, longevidade ou saúde sem discutir a qualidade da água ingerida é, no mínimo, incoerente.</p>
 </td></tr>
 
 <tr><td style="padding:0 40px 8px;">
