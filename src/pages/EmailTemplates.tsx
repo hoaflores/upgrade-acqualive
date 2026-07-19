@@ -1593,8 +1593,8 @@ const EMAILS = [
       </td>
       <td width="2%">&nbsp;</td>
       <td width="49%" valign="top" style="padding:18px 16px;background:#f4f8fd;border-radius:8px;">
-        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Posicionamento profissional</p>
-        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Um consultório que serve Acqualive comunica padrão antes de qualquer palavra.</p>
+        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Padrão que se percebe</p>
+        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">Servir Acqualive, em casa ou no consultório, comunica cuidado antes de qualquer palavra.</p>
       </td>
     </tr>
   </table>
