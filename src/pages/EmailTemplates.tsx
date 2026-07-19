@@ -1343,7 +1343,7 @@ const EMAILS = [
 <tr><td style="padding:36px 40px 0;"><div style="height:1px;background:#e6ebf3;"></div></td></tr>
 
 <tr><td style="padding:36px 40px 12px;">
-  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">Nos próximos dias, vou compartilhar dois conteúdos técnicos aprofundando o papel da água na performance, na recuperação muscular e no controle da inflamação sistêmica. É a conversa que eu, como profissional, gostaria de ter tido no evento e que ficou faltando.</p>
+  <p style="margin:0 0 22px;font-size:15px;line-height:1.7;color:#4a5b7a;">Nos próximos dias, vou compartilhar dois conteúdos técnicos aprofundando o papel da água na performance, na recuperação muscular e no controle da inflamação sistêmica. Vale tanto para quem prescreve quanto para quem simplesmente quer aplicar isso na própria rotina.</p>
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
     <tr><td align="center" style="background:linear-gradient(135deg,#f97316 0%,#f9c74f 100%);border-radius:6px;">
       <a href="[LINK_ACQUALIVE]" target="_blank" style="display:block;padding:16px 36px;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:0.5px;">CONHEÇA A TECNOLOGIA ACQUALIVE</a>
