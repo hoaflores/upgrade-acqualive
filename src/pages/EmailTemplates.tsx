@@ -1307,7 +1307,7 @@ const EMAILS = [
       <p style="margin:0 0 10px;font-size:11px;letter-spacing:3px;color:#f9c74f;text-transform:uppercase;font-weight:700;">Um detalhe que passou despercebido</p>
       <h2 style="margin:0 0 14px;font-size:24px;line-height:1.3;color:#ffffff;font-weight:700;letter-spacing:-0.4px;">A Acqualive não estava apenas no stand. Estava em cada copo do evento.</h2>
       <p style="margin:0 0 12px;font-size:15px;line-height:1.7;color:#dbe4f2;">Toda a água disponibilizada para os participantes durante o evento foi Acqualive. Do café da manhã ao encerramento.</p>
-      <p style="margin:0;font-size:15px;line-height:1.7;color:#dbe4f2;">Não foi acaso, foi coerência. Um evento que discute performance e ciência da nutrição precisa começar pela variável mais básica e, ao mesmo tempo, mais negligenciada da suplementação: a qualidade da água que hidrata o atleta.</p>
+      <p style="margin:0;font-size:15px;line-height:1.7;color:#dbe4f2;">Não foi acaso, foi coerência. Um evento que discute performance e ciência da nutrição precisa começar pela variável mais básica e, ao mesmo tempo, mais negligenciada de qualquer protocolo: a qualidade da água que hidrata quem treina, quem prescreve e quem só quer viver melhor.</p>
     </td></tr>
   </table>
 </td></tr>
