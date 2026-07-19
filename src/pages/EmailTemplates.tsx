@@ -1443,8 +1443,8 @@ const EMAILS = [
 <tr><td style="padding:36px 40px 0;">
   <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Inflamação sistêmica</p>
   <h2 style="margin:0 0 16px;font-size:24px;line-height:1.25;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">O papel anti-inflamatório passa pela água que você bebe</h2>
-  <p style="margin:0 0 14px;font-size:15px;line-height:1.7;color:#4a5b7a;">Você prescreve ômega 3, cúrcuma, resveratrol, magnésio bisglicinato. Trabalha o eixo intestino, microbiota, permeabilidade. Modula NF-kB, atua na resolução do processo inflamatório. Tudo isso convive, todos os dias, com a carga inflamatória invisível da água de torneira mal tratada.</p>
-  <p style="margin:0;font-size:15px;line-height:1.7;color:#4a5b7a;">Subprodutos da cloração, microplásticos, resíduos de fármacos e metais são estímulos crônicos de baixo grau. Não incapacitam, mas somam. E somam justamente no denominador da equação da recuperação.</p>
+  <p style="margin:0 0 14px;font-size:15px;line-height:1.7;color:#4a5b7a;">Ômega 3, cúrcuma, resveratrol, magnésio bisglicinato. Trabalho no eixo intestino, microbiota, permeabilidade. Modulação de NF-kB, apoio à resolução do processo inflamatório. Tudo isso, prescrito ou consumido por conta própria, convive todos os dias com a carga inflamatória invisível da água de torneira mal tratada.</p>
+  <p style="margin:0;font-size:15px;line-height:1.7;color:#4a5b7a;">Subprodutos da cloração, microplásticos, resíduos de fármacos e metais são estímulos crônicos de baixo grau. Não incapacitam, mas somam. E somam justamente no denominador da equação da recuperação e da saúde de longo prazo.</p>
 </td></tr>
 
 <tr><td style="padding:32px 40px 0;">
