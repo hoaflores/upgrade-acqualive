@@ -1521,7 +1521,7 @@ const EMAILS = [
 <title>Condição exclusiva pós-evento | Acqualive</title>
 </head>
 <body style="margin:0;padding:0;background-color:#eef1f6;font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1a2440;-webkit-font-smoothing:antialiased;">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0;">A base bioquímica de tudo o que você prescreve, agora com condição especial para os participantes.</div>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">A base bioquímica de tudo o que você prescreve ou consome, agora com condição especial para os participantes.</div>
 
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eef1f6;padding:24px 0;">
 <tr><td align="center">
