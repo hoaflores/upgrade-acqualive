@@ -1296,7 +1296,7 @@ const EMAILS = [
 <tr><td style="padding:36px 40px 8px;">
   <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Obrigado pela presença</p>
   <h1 style="margin:0 0 14px;font-size:32px;line-height:1.2;color:#0e2a52;font-weight:700;letter-spacing:-0.7px;">Foi uma honra receber você no stand da Acqualive</h1>
-  <p style="margin:0;font-size:15px;line-height:1.65;color:#4a5b7a;">Reunir profissionais de nutrição, performance e ciência do exercício no mesmo espaço é raro. E é nesse tipo de ambiente que uma conversa séria sobre hidratação faz sentido, longe de generalizações e superficialidades.</p>
+  <p style="margin:0;font-size:15px;line-height:1.65;color:#4a5b7a;">Reunir profissionais de nutrição, entusiastas de performance e pessoas que levam a própria saúde a sério no mesmo espaço é raro. E é nesse tipo de ambiente que uma conversa séria sobre hidratação faz sentido, longe de generalizações e superficialidades.</p>
 </td></tr>
 
 <tr><td style="padding:36px 40px 0;"><div style="height:1px;background:#e6ebf3;"></div></td></tr>
