@@ -1483,9 +1483,9 @@ const EMAILS = [
 
 <tr><td style="padding:36px 40px 0;">
   <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Coerência clínica</p>
-  <h2 style="margin:0 0 16px;font-size:24px;line-height:1.3;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">Prescrever performance de ponta e beber água de qualidade duvidosa não fecha</h2>
-  <p style="margin:0 0 14px;font-size:15px;line-height:1.7;color:#4a5b7a;">A Acqualive nasceu para tratar a água como o que ela é, a base bioquímica de tudo o que você recomenda. É esse padrão que os atletas do stand experimentaram no evento e é esse padrão que faz sentido dentro de um consultório sério.</p>
-  <p style="margin:0 0 26px;font-size:15px;line-height:1.7;color:#4a5b7a;">No próximo e-mail, uma condição pensada para quem esteve com a gente e quer levar essa base para dentro de casa e do consultório.</p>
+  <h2 style="margin:0 0 16px;font-size:24px;line-height:1.3;color:#0e2a52;font-weight:700;letter-spacing:-0.4px;">Buscar performance de ponta e beber água de qualidade duvidosa não fecha</h2>
+  <p style="margin:0 0 14px;font-size:15px;line-height:1.7;color:#4a5b7a;">A Acqualive nasceu para tratar a água como o que ela é, a base bioquímica de tudo o que você recomenda, prescreve ou consome. É esse padrão que os participantes experimentaram no evento e é esse padrão que faz sentido tanto dentro de um consultório sério quanto dentro de casa.</p>
+  <p style="margin:0 0 26px;font-size:15px;line-height:1.7;color:#4a5b7a;">No próximo e-mail, uma condição pensada para quem esteve com a gente e quer levar essa base para a rotina, seja em casa, no consultório ou nos dois.</p>
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
     <tr><td align="center" style="background:linear-gradient(135deg,#f97316 0%,#f9c74f 100%);border-radius:6px;">
       <a href="[LINK_ACQUALIVE]" target="_blank" style="display:block;padding:16px 36px;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:0.5px;">VER A TECNOLOGIA POR TRÁS DA ACQUALIVE</a>
