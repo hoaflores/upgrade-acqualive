@@ -1291,7 +1291,7 @@ const EMAILS = [
 </td></tr>
 
 <tr><td style="padding:0;">
-  <img src="https://blog.acqualive.com.br/wp-content/uploads/2026/04/a-hidratacao-e-fundamental-para-homens-e-mulheres-acima-dos-40-anos-scaled.jpg" alt="Hidratação, performance e recuperação" width="640" style="display:block;width:100%;height:auto;">
+  <img src="https://paginas.acqualive.com.br/__l5e/assets-v1/5e94dc82-bda8-454d-82c3-436c75e3c2b7/atleta-hidratacao.jpg" alt="Hidratação, performance e recuperação" width="640" style="display:block;width:100%;height:auto;">
 </td></tr>
 <tr><td style="padding:36px 40px 8px;">
   <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Obrigado pela presença</p>
@@ -1352,7 +1352,7 @@ const EMAILS = [
 </td></tr>
 
 <tr><td style="padding:32px 40px 40px;text-align:center;">
-  <p style="margin:0;font-size:14px;line-height:1.6;color:#7a8aa2;">Abraço,<br><strong style="color:#0e2a52;">Guto da Acqualive</strong></p>
+  <p style="margin:0;font-size:14px;line-height:1.6;color:#7a8aa2;">Abraço,<br><strong style="color:#0e2a52;">Equipe Acqualive</strong></p>
 </td></tr>
 
 <tr><td style="background:#0e2a52;padding:28px 40px;text-align:center;">
@@ -1494,7 +1494,7 @@ const EMAILS = [
 </td></tr>
 
 <tr><td style="padding:36px 40px 40px;text-align:center;">
-  <p style="margin:0;font-size:14px;line-height:1.6;color:#7a8aa2;">Abraço,<br><strong style="color:#0e2a52;">Guto da Acqualive</strong></p>
+  <p style="margin:0;font-size:14px;line-height:1.6;color:#7a8aa2;">Abraço,<br><strong style="color:#0e2a52;">Equipe Acqualive</strong></p>
 </td></tr>
 
 <tr><td style="background:#0e2a52;padding:28px 40px;text-align:center;">
@@ -1623,7 +1623,7 @@ const EMAILS = [
 
 <tr><td style="padding:36px 40px 40px;text-align:center;">
   <p style="margin:0 0 8px;font-size:14px;line-height:1.6;color:#7a8aa2;font-style:italic;">A base de tudo o que você prescreve, recomenda ou consome pode, e deveria, começar pela água.</p>
-  <p style="margin:0;font-size:14px;line-height:1.6;color:#7a8aa2;">Abraço,<br><strong style="color:#0e2a52;">Guto da Acqualive</strong></p>
+  <p style="margin:0;font-size:14px;line-height:1.6;color:#7a8aa2;">Abraço,<br><strong style="color:#0e2a52;">Equipe Acqualive</strong></p>
 </td></tr>
 
 <tr><td style="background:#0e2a52;padding:28px 40px;text-align:center;">
