@@ -1622,7 +1622,7 @@ const EMAILS = [
 </td></tr>
 
 <tr><td style="padding:36px 40px 40px;text-align:center;">
-  <p style="margin:0 0 8px;font-size:14px;line-height:1.6;color:#7a8aa2;font-style:italic;">A base de tudo o que você prescreve pode, e deveria, começar pela água.</p>
+  <p style="margin:0 0 8px;font-size:14px;line-height:1.6;color:#7a8aa2;font-style:italic;">A base de tudo o que você prescreve, recomenda ou consome pode, e deveria, começar pela água.</p>
   <p style="margin:0;font-size:14px;line-height:1.6;color:#7a8aa2;">Abraço,<br><strong style="color:#0e2a52;">Guto da Acqualive</strong></p>
 </td></tr>
 
