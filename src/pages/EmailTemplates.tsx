@@ -1541,9 +1541,9 @@ const EMAILS = [
 </td></tr>
 <tr><td style="padding:36px 40px 8px;">
   <p style="margin:0 0 12px;font-size:11px;letter-spacing:3px;color:#f97316;text-transform:uppercase;font-weight:700;">Para os participantes do evento</p>
-  <h1 style="margin:0 0 14px;font-size:32px;line-height:1.2;color:#0e2a52;font-weight:700;letter-spacing:-0.7px;">A mesma água do stand, agora na sua casa e no seu consultório</h1>
+  <h1 style="margin:0 0 14px;font-size:32px;line-height:1.2;color:#0e2a52;font-weight:700;letter-spacing:-0.7px;">A mesma água do stand, agora na sua rotina</h1>
   <p style="margin:0 0 8px;font-size:15px;line-height:1.65;color:#4a5b7a;">Você já experimentou a Acqualive na prática durante o evento. Já leu, nos e-mails anteriores, o racional técnico por trás dessa escolha, performance, recuperação muscular e controle da carga inflamatória exógena.</p>
-  <p style="margin:0;font-size:15px;line-height:1.65;color:#4a5b7a;">Agora fica a pergunta prática: faz sentido continuar recomendando protocolos de ponta enquanto a água que abastece você, a sua família e os seus pacientes segue sendo tratada como detalhe?</p>
+  <p style="margin:0;font-size:15px;line-height:1.65;color:#4a5b7a;">Agora fica a pergunta prática: faz sentido buscar protocolos de ponta, seja para os seus pacientes, para os seus treinos ou para a sua família, enquanto a água que abastece o dia a dia segue sendo tratada como detalhe?</p>
 </td></tr>
 
 <tr><td style="padding:32px 40px 0;">
