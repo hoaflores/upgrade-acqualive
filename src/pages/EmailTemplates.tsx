@@ -1581,8 +1581,8 @@ const EMAILS = [
       </td>
       <td width="2%">&nbsp;</td>
       <td width="49%" valign="top" style="padding:18px 16px;background:#f4f8fd;border-radius:8px;">
-        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Base sólida para suplementação</p>
-        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">O veículo dos seus ativos deixa de ser variável descontrolada.</p>
+        <p style="margin:0 0 6px;font-size:14px;color:#0e2a52;font-weight:700;">Base sólida para suplementação e rotina</p>
+        <p style="margin:0;font-size:13px;line-height:1.55;color:#4a5b7a;">O veículo dos ativos que você prescreve ou consome deixa de ser variável descontrolada.</p>
       </td>
     </tr>
     <tr><td colspan="3" height="10">&nbsp;</td></tr>
