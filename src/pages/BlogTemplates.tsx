@@ -4601,7 +4601,7 @@ ${JSON.stringify({
 <script>
 (function(){
   var BLOG_BASE = '${BLOG_BASE}';
-  var PER_PAGE = 12;
+  var PER_PAGE = 8;
   function wpUrl(page){ return BLOG_BASE + '/wp-json/wp/v2/posts?_embed&per_page=' + PER_PAGE + '&page=' + page + '&_fields=id,date,link,title,excerpt,_links,_embedded'; }
 
   function categoryFor(title, cats){
