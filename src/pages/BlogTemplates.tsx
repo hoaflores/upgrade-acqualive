@@ -4604,7 +4604,8 @@ ${JSON.stringify({
 <script>
 (function(){
   var BLOG_BASE = '${BLOG_BASE}';
-  var WP_ENDPOINT = BLOG_BASE + '/wp-json/wp/v2/posts?_embed&per_page=24&_fields=id,date,link,title,excerpt,_links,_embedded';
+  var PER_PAGE = 12;
+  function wpUrl(page){ return BLOG_BASE + '/wp-json/wp/v2/posts?_embed&per_page=' + PER_PAGE + '&page=' + page + '&_fields=id,date,link,title,excerpt,_links,_embedded'; }
 
   function categoryFor(title, cats){
     var t = ((cats || []).join(' ') + ' ' + (title || '')).toLowerCase();
