@@ -4509,9 +4509,28 @@ ${JSON.stringify({
     <div class="section-head center reveal">
       <span class="section-eyebrow">Recentes</span>
       <h2>Publicações <span class="serif">recentes</span>.</h2>
-      <p class="head-sub">Toda semana um novo olhar sobre hidratação, longevidade e a ciência da água.</p>
+      <p class="head-sub">Todo o acervo do blog, em ordem de publicação. Use a busca para encontrar um tema específico.</p>
     </div>
+
+    <div class="recent-search reveal" style="max-width:560px;margin:0 auto 28px;position:relative">
+      <input id="recent-search-input" type="search" placeholder="Buscar artigos por título ou tema..." autocomplete="off"
+        style="width:100%;padding:16px 48px 16px 20px;border-radius:999px;border:1px solid #cbd5e1;background:#fff;font-size:16px;color:#0f172a;box-shadow:0 8px 24px rgba(15,23,42,.06);outline:none;transition:border-color .2s,box-shadow .2s" />
+      <span style="position:absolute;right:20px;top:50%;transform:translateY(-50%);color:#64748b;pointer-events:none">⌕</span>
+    </div>
+    <div id="recent-search-info" style="text-align:center;color:#64748b;font-size:14px;margin-bottom:20px;min-height:20px"></div>
+
     <div class="grid-4" id="recent-slot"></div>
+
+    <div style="text-align:center;margin-top:40px;display:flex;flex-direction:column;align-items:center;gap:16px">
+      <button id="recent-load-more" type="button"
+        style="display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:999px;border:none;cursor:pointer;background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;font-weight:700;font-size:15px;box-shadow:0 12px 28px rgba(37,99,235,.28);transition:transform .2s,box-shadow .2s">
+        Carregar mais artigos
+      </button>
+      <a href="${BLOG_BASE}" target="_blank" rel="noopener"
+        style="color:#1d4ed8;font-weight:600;text-decoration:none;border-bottom:1px solid #93c5fd;padding-bottom:2px">
+        Ver todos os blogposts no blog completo →
+      </a>
+    </div>
   </div>
 </section>
 
