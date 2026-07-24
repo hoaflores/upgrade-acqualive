@@ -4509,9 +4509,28 @@ ${JSON.stringify({
     <div class="section-head center reveal">
       <span class="section-eyebrow">Recentes</span>
       <h2>Publicações <span class="serif">recentes</span>.</h2>
-      <p class="head-sub">Toda semana um novo olhar sobre hidratação, longevidade e a ciência da água.</p>
+      <p class="head-sub">Todo o acervo do blog, em ordem de publicação. Use a busca para encontrar um tema específico.</p>
     </div>
+
+    <div class="recent-search reveal" style="max-width:560px;margin:0 auto 28px;position:relative">
+      <input id="recent-search-input" type="search" placeholder="Buscar artigos por título ou tema..." autocomplete="off"
+        style="width:100%;padding:16px 48px 16px 20px;border-radius:999px;border:1px solid #cbd5e1;background:#fff;font-size:16px;color:#0f172a;box-shadow:0 8px 24px rgba(15,23,42,.06);outline:none;transition:border-color .2s,box-shadow .2s" />
+      <span style="position:absolute;right:20px;top:50%;transform:translateY(-50%);color:#64748b;pointer-events:none">⌕</span>
+    </div>
+    <div id="recent-search-info" style="text-align:center;color:#64748b;font-size:14px;margin-bottom:20px;min-height:20px"></div>
+
     <div class="grid-4" id="recent-slot"></div>
+
+    <div style="text-align:center;margin-top:40px;display:flex;flex-direction:column;align-items:center;gap:16px">
+      <button id="recent-load-more" type="button"
+        style="display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:999px;border:none;cursor:pointer;background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;font-weight:700;font-size:15px;box-shadow:0 12px 28px rgba(37,99,235,.28);transition:transform .2s,box-shadow .2s">
+        Carregar mais artigos
+      </button>
+      <a href="${BLOG_BASE}" target="_blank" rel="noopener"
+        style="color:#1d4ed8;font-weight:600;text-decoration:none;border-bottom:1px solid #93c5fd;padding-bottom:2px">
+        Ver todos os blogposts no blog completo →
+      </a>
+    </div>
   </div>
 </section>
 
@@ -4585,7 +4604,8 @@ ${JSON.stringify({
 <script>
 (function(){
   var BLOG_BASE = '${BLOG_BASE}';
-  var WP_ENDPOINT = BLOG_BASE + '/wp-json/wp/v2/posts?_embed&per_page=24&_fields=id,date,link,title,excerpt,_links,_embedded';
+  var PER_PAGE = 12;
+  function wpUrl(page){ return BLOG_BASE + '/wp-json/wp/v2/posts?_embed&per_page=' + PER_PAGE + '&page=' + page + '&_fields=id,date,link,title,excerpt,_links,_embedded'; }
 
   function categoryFor(title, cats){
     var t = ((cats || []).join(' ') + ' ' + (title || '')).toLowerCase();
@@ -4721,12 +4741,43 @@ ${JSON.stringify({
     });
   });
 
+  var RECENT_PAGE = 1;
+  var RECENT_HAS_MORE = true;
+  var RECENT_QUERY = '';
+
+  function renderRecent(){
+    var recSlot = document.getElementById('recent-slot');
+    var info = document.getElementById('recent-search-info');
+    if(!recSlot) return;
+    var list = ALL_POSTS;
+    var q = (RECENT_QUERY || '').trim().toLowerCase();
+    if(q){
+      list = ALL_POSTS.filter(function(p){
+        return (p.title||'').toLowerCase().indexOf(q) !== -1
+          || (p.description||'').toLowerCase().indexOf(q) !== -1
+          || (p.category||'').toLowerCase().indexOf(q) !== -1;
+      });
+    }
+    if(!list.length){
+      recSlot.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#94a3b8;padding:40px 0">Nenhum artigo encontrado para "' + esc(RECENT_QUERY) + '".</p>';
+    } else {
+      recSlot.innerHTML = list.map(cardHtml).join('');
+      recSlot.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+    }
+    if(info){
+      if(q) info.innerText = list.length + ' artigo(s) encontrado(s) para "' + RECENT_QUERY + '"';
+      else info.innerText = 'Mostrando ' + ALL_POSTS.length + ' artigo(s)';
+    }
+    var btn = document.getElementById('recent-load-more');
+    if(btn){ btn.style.display = (!q && RECENT_HAS_MORE) ? 'inline-flex' : 'none'; }
+    setTimeout(sendHeight, 80);
+  }
+
   function render(posts){
     if (!posts || !posts.length){ showError(); return; }
     ALL_POSTS = posts;
     var hero = posts[0];
     var ranked = posts.slice(1,4);
-    var recent = posts.slice(0,3);
 
     var hSlot = document.getElementById('hero-feat-slot');
     if(hSlot && hero) hSlot.innerHTML = heroFeatHtml(hero);
@@ -4734,9 +4785,7 @@ ${JSON.stringify({
     var rSlot = document.getElementById('ranked-slot');
     if(rSlot) rSlot.innerHTML = ranked.map(rankedHtml).join('');
 
-    var recSlot = document.getElementById('recent-slot');
-    if(recSlot) recSlot.innerHTML = recent.map(cardHtml).join('');
-
+    renderRecent();
     renderFilters();
     renderGrid();
 
@@ -4752,8 +4801,13 @@ ${JSON.stringify({
   }
 
   function loadPosts(){
-    fetch(WP_ENDPOINT, { headers: { 'Accept':'application/json' } })
-      .then(function(r){ if(!r.ok) throw new Error('http '+r.status); return r.json(); })
+    fetch(wpUrl(1), { headers: { 'Accept':'application/json' } })
+      .then(function(r){
+        if(!r.ok) throw new Error('http '+r.status);
+        var total = parseInt(r.headers.get('X-WP-TotalPages') || '1', 10);
+        RECENT_HAS_MORE = total > 1;
+        return r.json();
+      })
       .then(function(posts){ render((posts || []).map(normalize)); })
       .catch(function(){
         fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(BLOG_BASE + '/feed/'))
@@ -4771,9 +4825,41 @@ ${JSON.stringify({
                 readMin: readMin(it.content || it.description || ''),
                 category: categoryFor(title, it.categories || []) };
             });
+            RECENT_HAS_MORE = false;
             render(items);
           })
           .catch(showError);
+      });
+  }
+
+  function loadMoreRecent(){
+    var btn = document.getElementById('recent-load-more');
+    if(!btn || !RECENT_HAS_MORE) return;
+    var next = RECENT_PAGE + 1;
+    var original = btn.innerText;
+    btn.disabled = true; btn.innerText = 'Carregando...';
+    fetch(wpUrl(next), { headers: { 'Accept':'application/json' } })
+      .then(function(r){
+        if(!r.ok) throw new Error('http '+r.status);
+        var total = parseInt(r.headers.get('X-WP-TotalPages') || '1', 10);
+        RECENT_HAS_MORE = next < total;
+        return r.json();
+      })
+      .then(function(posts){
+        var mapped = (posts || []).map(normalize);
+        var seen = {};
+        ALL_POSTS.forEach(function(p){ seen[p.url] = 1; });
+        mapped.forEach(function(p){ if(!seen[p.url]) ALL_POSTS.push(p); });
+        RECENT_PAGE = next;
+        renderRecent();
+        renderFilters();
+        renderGrid();
+        btn.disabled = false; btn.innerText = original;
+      })
+      .catch(function(){
+        RECENT_HAS_MORE = false;
+        btn.disabled = false; btn.innerText = original;
+        renderRecent();
       });
   }
 
@@ -4783,6 +4869,22 @@ ${JSON.stringify({
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 
   loadPosts();
+
+  var loadMoreBtn = document.getElementById('recent-load-more');
+  if(loadMoreBtn) loadMoreBtn.addEventListener('click', loadMoreRecent);
+  var searchInput = document.getElementById('recent-search-input');
+  if(searchInput){
+    var debounceT;
+    searchInput.addEventListener('input', function(){
+      clearTimeout(debounceT);
+      debounceT = setTimeout(function(){
+        RECENT_QUERY = searchInput.value || '';
+        renderRecent();
+      }, 180);
+    });
+  }
+
+
 
   // Carousels with touch/drag
   document.querySelectorAll('[data-carousel]').forEach(function(car){
