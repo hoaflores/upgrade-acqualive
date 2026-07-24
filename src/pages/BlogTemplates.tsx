@@ -4521,16 +4521,13 @@ ${JSON.stringify({
 
     <div class="grid-4" id="recent-slot"></div>
 
-    <div style="text-align:center;margin-top:40px;display:flex;flex-direction:column;align-items:center;gap:16px">
+    <div style="text-align:center;margin-top:40px">
       <button id="recent-load-more" type="button"
         style="display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:999px;border:none;cursor:pointer;background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;font-weight:700;font-size:15px;box-shadow:0 12px 28px rgba(37,99,235,.28);transition:transform .2s,box-shadow .2s">
         Carregar mais artigos
       </button>
-      <a href="${BLOG_BASE}" target="_blank" rel="noopener"
-        style="color:#1d4ed8;font-weight:600;text-decoration:none;border-bottom:1px solid #93c5fd;padding-bottom:2px">
-        Ver todos os blogposts no blog completo →
-      </a>
     </div>
+
   </div>
 </section>
 
