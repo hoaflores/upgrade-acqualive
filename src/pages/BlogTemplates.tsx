@@ -4509,7 +4509,7 @@ ${JSON.stringify({
     <div class="section-head center reveal">
       <span class="section-eyebrow">Recentes</span>
       <h2>Publicações <span class="serif">recentes</span>.</h2>
-      <p class="head-sub">Todo o acervo do blog, em ordem de publicação. Use a busca para encontrar um tema específico.</p>
+      <p class="head-sub">Toda semana um novo olhar sobre hidratação, longevidade e a ciência da água.</p>
     </div>
 
     <div class="recent-search reveal" style="max-width:560px;margin:0 auto 28px;position:relative">
