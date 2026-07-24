@@ -4535,12 +4535,12 @@ ${JSON.stringify({
   <div class="news-inner">
     <div class="news-copy">
       <span class="badge">Boletim da Água</span>
-      <h2>Toda quinta-feira, uma leitura que <span class="serif">vale o seu tempo</span>.</h2>
+      <h2>Uma leitura que <span class="serif">vale o seu tempo</span>.</h2>
       <p class="news-desc">Um e-mail curto, sem ruído. Para quem quer entender de verdade o que a ciência diz sobre a água que bebe.</p>
       <ul class="news-promises">
-        <li>1 descoberta científica explicada de forma simples</li>
-        <li>1 prática para aplicar ainda na mesma semana</li>
-        <li>1 leitura curada do nosso arquivo</li>
+        <li>Descobertas científicas explicadas de forma simples</li>
+        <li>Práticas para aplicar no seu dia a dia</li>
+        <li>Leituras curadas do nosso arquivo</li>
       </ul>
       <form class="news-form" id="news-form">
         <input type="email" name="email" required placeholder="seu melhor e-mail">
@@ -4553,14 +4553,15 @@ ${JSON.stringify({
       <div class="mail">
         <div class="mail-head">
           <div class="mail-av">A</div>
-          <div class="mail-from">Boletim Acqualive<span>quinta, 07:00</span></div>
+          <div class="mail-from">Boletim Acqualive<span>direto no seu e-mail</span></div>
         </div>
         <p class="mail-subject">A água alcalina realmente combate inflamação? Veja o que 14 estudos dizem.</p>
         <div class="mail-block"><strong>Descoberta</strong>O pH da água potável e a regulação do estresse oxidativo.</div>
-        <div class="mail-block"><strong>Para esta semana</strong>O teste de 5 minutos para saber se sua água está limpa.</div>
+        <div class="mail-block"><strong>Para colocar em prática</strong>O teste de 5 minutos para saber se sua água está limpa.</div>
         <div class="mail-block"><strong>Leitura curada</strong>Por que as Blue Zones bebem da nascente, não da garrafa.</div>
       </div>
     </div>
+
   </div>
 </section>
 
