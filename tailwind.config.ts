@@ -148,6 +148,10 @@ export default {
   			'2xl': 'calc(var(--radius) + 8px)'
   		},
   		keyframes: {
+  			marquee: {
+  				from: { transform: 'translateX(0)' },
+  				to: { transform: 'translateX(-50%)' }
+  			},
   			'accordion-down': {
   				from: {
   					height: '0'
