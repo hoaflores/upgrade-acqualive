@@ -893,8 +893,8 @@
   height: 46rem;
   margin: -23rem 0 0 -23rem;
   border-radius: 9999px;
-  border: 1px solid hsl(var(--pc-cyan) / 0.18);
-  box-shadow: 0 0 0 6rem hsl(var(--pc-cyan) / 0.05), 0 0 0 12rem hsl(var(--pc-cyan) / 0.035);
+  background: radial-gradient(circle, hsl(var(--pc-cyan) / 0.10), transparent 62%);
+  filter: blur(28px);
   animation: pc-pulse-ring 7s ease-in-out infinite;
   pointer-events: none;
 }
