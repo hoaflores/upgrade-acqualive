@@ -105,7 +105,7 @@ const PortalCientifico = () => {
             <img
               src={logoAcqualive.url}
               alt="Acqualive"
-              className="h-7 w-auto md:h-8"
+              className="h-11 w-auto md:h-14"
               width={200}
               height={40}
             />
