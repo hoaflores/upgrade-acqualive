@@ -36,7 +36,7 @@ const corPara = (ph: number) => {
 const EscalaPH = () => {
   const [idx, setIdx] = useState(5);
   const ponto = PONTOS[idx];
-  const pct = useMemo(() => (ponto.ph / 14) * 100, [ponto.ph]);
+  const pct = useMemo(() => (((ponto.ph + (ponto.phMax ?? ponto.ph)) / 2) / 14) * 100, [ponto]);
 
   return (
     <section id="escala-ph" className="border-t border-[hsl(var(--pc-line))] py-20 md:py-28">
