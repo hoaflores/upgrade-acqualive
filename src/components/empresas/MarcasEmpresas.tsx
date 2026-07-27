@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { Quote } from "lucide-react";
 import vitta from "@/assets/logos/vitta.jpg.asset.json";
 import raw from "@/assets/logos/raw.jpg.asset.json";
