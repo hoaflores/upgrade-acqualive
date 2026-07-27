@@ -9,6 +9,8 @@ import BlogRecentes from "@/components/portal/BlogRecentes";
 import VideosPortal from "@/components/portal/VideosPortal";
 import LeitorArtigo from "@/components/portal/LeitorArtigo";
 import ProgressoLeitura from "@/components/portal/ProgressoLeitura";
+import BolhasAgua from "@/components/portal/BolhasAgua";
+
 
 import ScrollReveal from "@/components/ScrollReveal";
 import { PERGUNTAS_GUIA, REFERÊNCIAS, type Referência } from "@/data/portal-cientifico";
