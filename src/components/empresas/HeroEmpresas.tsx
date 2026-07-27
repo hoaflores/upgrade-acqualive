@@ -32,9 +32,8 @@ const HeroEmpresas = () => {
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-[3.75rem] font-bold text-primary-foreground leading-[1.05] tracking-tight mb-7 animate-fade-in-up animation-delay-200">
-              Corte até{" "}
-              <span className="italic font-medium text-accent">R$ 7.920 por ano</span> em galão e tenha água{" "}
-              gelada e natural o dia inteiro.
+              Economize até{" "}
+              <span className="italic font-medium text-accent">R$ 7.920 por ano</span> em trocas de galões e tenha a melhor água para sua empresa!
             </h1>
 
             <div className="h-px w-24 mx-auto lg:mx-0 bg-gradient-to-r from-accent to-transparent mb-7" />
