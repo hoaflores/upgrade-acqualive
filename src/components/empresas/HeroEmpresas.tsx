@@ -6,7 +6,7 @@ import { IMG, WHATSAPP_EMPRESAS } from "./dados";
 
 const HeroEmpresas = () => {
   return (
-    <section className="relative min-h-[92vh] emp-aurora emp-noise overflow-hidden">
+    <section id="topo" className="relative min-h-[92vh] emp-aurora emp-noise overflow-hidden">
       {/* Camadas de profundidade */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-52 -right-40 w-[38rem] h-[38rem] rounded-full bg-accent/15 blur-3xl emp-drift" />
@@ -28,20 +28,22 @@ const HeroEmpresas = () => {
             <div className="inline-flex items-center gap-2.5 rounded-full border border-accent/40 bg-accent/10 backdrop-blur px-4 py-2 mb-7 animate-fade-in-up">
               <Droplets className="w-4 h-4 text-accent" />
               <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-accent">
-                Água natural e fresquinha, sem galão
+                Água gelada e natural, sem galão, sem desperdício
               </span>
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-[3.75rem] font-bold text-primary-foreground leading-[1.05] tracking-tight mb-7 animate-fade-in-up animation-delay-200">
-              Água natural e fresquinha para{" "}
-              <span className="italic font-medium text-accent">empresas que cuidam melhor das pessoas</span>
+              Sua empresa gasta até{" "}
+              <span className="italic font-medium text-accent">R$ 7.920 por ano</span> com galão. O Acqualive DUO
+              acaba com essa conta e entrega água gelada e natural o dia inteiro.
             </h1>
 
             <div className="h-px w-24 mx-auto lg:mx-0 bg-gradient-to-r from-accent to-transparent mb-7" />
 
             <p className="text-base md:text-lg text-primary-foreground/75 leading-relaxed mb-9 max-w-xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-400">
-              O Acqualive DUO entrega água purificada natural e fresquinha direto no ponto de uso.
-              Sem estoque de galões, sem troca pesada, sem interrupção na rotina da equipe.
+              Água purificada gelada e natural direto no ponto de uso, sem estoque, sem pedido atrasado e sem
+              ninguém da equipe carregando 20 litros nas costas. Menos custo fixo, mais produtividade e uma
+              estrutura que valoriza a sua marca diante de clientes e colaboradores.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up animation-delay-600">
@@ -65,7 +67,7 @@ const HeroEmpresas = () => {
             </div>
 
             <div className="mt-10 grid sm:grid-cols-3 gap-px rounded-2xl overflow-hidden border border-primary-foreground/15 bg-primary-foreground/10 animate-fade-in animation-delay-600">
-              {["Instalação e suporte técnico", "Manutenção programada", "Mais de 20 anos de mercado"].map((item) => (
+              {["Água gelada e natural no mesmo ponto", "Instalação, suporte e manutenção programada", "Mais de 20 anos de mercado"].map((item) => (
                 <div key={item} className="flex items-center gap-2.5 bg-secondary/40 backdrop-blur px-4 py-4">
                   <ShieldCheck className="w-4 h-4 text-accent flex-shrink-0" />
                   <span className="text-xs font-medium text-primary-foreground/85 text-left leading-snug">{item}</span>
@@ -80,7 +82,7 @@ const HeroEmpresas = () => {
               <div className="absolute inset-0 bg-accent/20 rounded-full blur-[90px] scale-75" />
               <img
                 src={IMG.duoFrente}
-                alt="Purificador Acqualive DUO para empresas, água natural e fresquinha"
+                alt="Purificador Acqualive DUO para empresas, água gelada e natural"
                 width={670}
                 height={1173}
                 decoding="async"
