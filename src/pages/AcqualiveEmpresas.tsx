@@ -18,6 +18,12 @@ const ComoFunciona = lazy(() =>
 const ProvaAutoridade = lazy(() =>
   import("@/components/empresas/SecoesEmpresas").then((m) => ({ default: m.ProvaAutoridade }))
 );
+const CarrosselMarcas = lazy(() =>
+  import("@/components/empresas/MarcasEmpresas").then((m) => ({ default: m.CarrosselMarcas }))
+);
+const DepoimentosEmpresas = lazy(() =>
+  import("@/components/empresas/MarcasEmpresas").then((m) => ({ default: m.DepoimentosEmpresas }))
+);
 const SimuladorEconomia = lazy(() => import("@/components/empresas/SimuladorEconomia"));
 const FormAvaliacao = lazy(() => import("@/components/empresas/FormAvaliacao"));
 const FaqEmpresas = lazy(() =>
@@ -59,9 +65,11 @@ const AcqualiveEmpresas = () => {
       <Suspense fallback={<Placeholder />}>
         <ScrollReveal variant="zoom"><AntesDepois /></ScrollReveal>
         <ScrollReveal variant="right"><Segmentos /></ScrollReveal>
+        <CarrosselMarcas />
         <ScrollReveal variant="zoom"><SimuladorEconomia /></ScrollReveal>
         <ScrollReveal variant="up"><ComoFunciona /></ScrollReveal>
         <ScrollReveal variant="up"><ProvaAutoridade /></ScrollReveal>
+        <ScrollReveal variant="up"><DepoimentosEmpresas /></ScrollReveal>
         <ScrollReveal variant="left"><FaqEmpresas /></ScrollReveal>
         <ScrollReveal variant="up"><FormAvaliacao /></ScrollReveal>
         <ScrollReveal variant="right"><NiionClick /></ScrollReveal>
