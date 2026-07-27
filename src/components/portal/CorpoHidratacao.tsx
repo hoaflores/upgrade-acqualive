@@ -111,12 +111,13 @@ const CorpoHidratacao = () => {
               Mapa interativo
             </span>
             <h2 className="mt-6 font-display text-3xl font-bold md:text-4xl">
-              O que a água faz dentro de você
+              Em média 70% de você é água
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-[hsl(var(--pc-ink-soft))]">
               Toque nos pontos do corpo e veja o que a literatura descreve sobre hidratação, alcalinidade e minerais em
               cada sistema.
             </p>
+
           </div>
         </ScrollReveal>
 
