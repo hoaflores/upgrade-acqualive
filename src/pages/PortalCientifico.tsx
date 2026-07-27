@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Droplets, ShieldCheck, ArrowRight } from "lucide-react";
+import { ShieldCheck, ArrowRight } from "lucide-react";
 import HeroPortal from "@/components/portal/HeroPortal";
 import ManifestoPortal from "@/components/portal/ManifestoPortal";
 import BuscaAcademica from "@/components/portal/BuscaAcademica";
@@ -11,6 +11,8 @@ import VideosPortal from "@/components/portal/VideosPortal";
 import LeitorArtigo from "@/components/portal/LeitorArtigo";
 import ProgressoLeitura from "@/components/portal/ProgressoLeitura";
 import BolhasAgua from "@/components/portal/BolhasAgua";
+import EscalaPH from "@/components/portal/EscalaPH";
+import logoAcqualive from "@/assets/acqualive-logo-azul.png.asset.json";
 
 
 import ScrollReveal from "@/components/ScrollReveal";
