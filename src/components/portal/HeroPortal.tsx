@@ -72,7 +72,21 @@ const HeroPortal = () => {
             </a>
           </div>
 
-          <dl ref={ref} className="mx-auto mt-14 grid max-w-2xl grid-cols-3 gap-4 text-center">
+          <figure className="relative mx-auto mt-14 max-w-3xl overflow-hidden rounded-[28px] border border-white/60 shadow-[0_40px_80px_-40px_hsl(var(--pc-blue)/0.6)]">
+            <img
+              src={imgHero.url}
+              alt="Gota de água formando ondas em um copo de vidro sobre bancada de laboratório"
+              width={1600}
+              height={912}
+              className="h-full w-full object-cover"
+            />
+            <div
+              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[hsl(var(--pc-blue)/0.35)] via-transparent to-transparent"
+              aria-hidden
+            />
+          </figure>
+
+          <dl ref={ref} className="mx-auto mt-10 grid max-w-2xl grid-cols-3 gap-4 text-center">
             {[
               { n: REFERÊNCIAS.length, l: "Referências indexadas" },
               { n: estudos, l: "Estudos e revisões" },
@@ -86,6 +100,7 @@ const HeroPortal = () => {
               </div>
             ))}
           </dl>
+
         </div>
       </div>
     </header>
