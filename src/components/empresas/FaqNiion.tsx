@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ArrowRight } from "lucide-react";
-import { IMG, WHATSAPP_EMPRESAS } from "./dados";
+import { WHATSAPP_EMPRESAS } from "./dados";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 export const FaqEmpresas = () => (
@@ -29,20 +29,36 @@ export const FaqEmpresas = () => (
         <Accordion type="single" collapsible className="space-y-3">
           {[
             {
-              q: "Como funciona a instalação na empresa?",
-              a: "A avaliação identifica o melhor ponto de instalação, próximo a um ponto de água e energia. A instalação é feita pela nossa equipe ou pelo franqueado da sua região, com orientação de uso para o time.",
+              q: "O DUO oferece água gelada e natural?",
+              a: "Sim. O Acqualive DUO entrega água gelada e água natural no mesmo equipamento, com saídas independentes para atender as preferências da equipe ao longo do dia.",
             },
             {
-              q: "E se a minha empresa tiver vários andares ou setores?",
-              a: "Nesse caso indicamos mais de um equipamento, distribuídos conforme o fluxo de pessoas. A avaliação define quantos pontos fazem sentido para o seu consumo.",
+              q: "Que tipos de empresa podem utilizar o DUO?",
+              a: "Restaurantes, cafeterias, academias e studios, clínicas e consultórios, escritórios, coworkings, indústrias e operações comerciais em geral. A configuração muda conforme o fluxo de pessoas.",
             },
             {
-              q: "Qual é a manutenção necessária?",
+              q: "Quantas pessoas o equipamento atende?",
+              a: "Depende do fluxo e do horário de pico. Na avaliação analisamos o consumo estimado e indicamos quantos equipamentos fazem sentido para atender sem fila e sem falta de água.",
+            },
+            {
+              q: "É possível instalar mais de um DUO?",
+              a: "Sim. Em empresas com vários andares, setores ou unidades indicamos mais de um equipamento, distribuídos conforme o fluxo de pessoas.",
+            },
+            {
+              q: "O equipamento precisa de ponto de água? A instalação exige obra?",
+              a: "O DUO é ligado a um ponto de água e a um ponto de energia. Na maioria dos casos não é necessária obra, apenas a adequação do ponto quando ele não existe no local escolhido.",
+            },
+            {
+              q: "Como funciona a instalação e onde o DUO pode ficar?",
+              a: "A avaliação identifica o melhor ponto, próximo a água e energia, em copas, recepções, salões, academias ou áreas de produção. A instalação é feita pela nossa equipe ou pelo franqueado da sua região, com orientação de uso para o time.",
+            },
+            {
+              q: "Como funciona a manutenção e a troca do refil?",
               a: "A manutenção é a troca programada dos refis, com periodicidade definida conforme o volume consumido. Avisamos com antecedência e cuidamos da troca.",
             },
             {
-              q: "A água sai gelada?",
-              a: "Sim. O Acqualive DUO entrega água gelada e água natural no mesmo equipamento, com duas saídas independentes para atender as preferências da equipe ao longo do dia.",
+              q: "A Acqualive oferece suporte depois da instalação?",
+              a: "Sim. São mais de 20 anos de mercado, com rede de franqueados e assistência técnica em todo o país acompanhando a operação.",
             },
             {
               q: "Qual é o investimento?",
@@ -53,6 +69,7 @@ export const FaqEmpresas = () => (
               a: "A Acqualive tem rede de franqueados e assistência técnica em todo o país. Envie a sua cidade no formulário e confirmamos o atendimento na sua região.",
             },
           ].map(({ q, a }) => (
+
             <AccordionItem
               key={q}
               value={q}
@@ -72,58 +89,32 @@ export const FaqEmpresas = () => (
 );
 
 export const NiionClick = () => (
-  <section className="py-20 lg:py-24 bg-background">
+  <section className="py-16 lg:py-20 bg-background">
     <div className="container">
-      <Card className="overflow-hidden rounded-[2rem] border-border/60 shadow-elevated">
-        <div className="grid md:grid-cols-2 gap-0 items-center">
-          <div className="p-9 md:p-12">
-            <span className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-accent mb-5">
-              <span className="h-px w-8 bg-current opacity-50" />
-              Solução complementar
-            </span>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground leading-tight tracking-tight mb-5">
-              NIION CLICK: filtragem modular para pontos específicos
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-7">
-              Para cozinhas industriais, máquinas de café e pontos de produção que precisam de água tratada
-              antes do equipamento, o NIION CLICK oferece um sistema de refis de encaixe rápido, com troca
-              simples e sem ferramentas.
-            </p>
-            <ul className="space-y-3 mb-8 text-sm text-muted-foreground">
-              {[
-                "Refis de troca rápida, sistema click",
-                "Instalação sob bancada ou em linha",
-                "Combina com o Acqualive DUO na mesma operação",
-              ].map((item) => (
-                <li key={item} className="flex gap-3 items-start">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent flex-shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <Button variant="outline" asChild className="group">
-              <a href={WHATSAPP_EMPRESAS} target="_blank" rel="noopener noreferrer">
-                <WhatsAppIcon className="w-4 h-4" />
-                <span>Falar sobre o NIION CLICK</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
-          </div>
-
-          <div className="relative bg-gradient-water p-10 flex items-center justify-center min-h-[320px]">
-            <div aria-hidden className="absolute -top-20 -right-16 w-64 h-64 rounded-full bg-accent/15 blur-3xl" />
-            <img
-              src={IMG.niionIlustra}
-              alt="Sistema de filtragem NIION CLICK com quatro refis"
-              className="relative w-full max-w-sm h-auto object-contain drop-shadow-2xl"
-              loading="lazy"
-            />
-          </div>
-        </div>
+      <Card className="max-w-4xl mx-auto rounded-[2rem] border-border/60 shadow-soft p-8 md:p-10 text-center">
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground leading-tight tracking-tight mb-4">
+          Sua empresa tem uma necessidade diferente?
+        </h2>
+        <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-4">
+          O Acqualive DUO é a nossa principal solução para ambientes empresariais. Dependendo do consumo, do
+          espaço disponível e da estrutura do local, nossa equipe também pode avaliar outras configurações
+          Acqualive.
+        </p>
+        <p className="text-sm text-muted-foreground/80 leading-relaxed max-w-2xl mx-auto mb-7">
+          Em projetos específicos, como cozinhas industriais e pontos de produção, o NIION CLICK também pode
+          ser considerado mediante avaliação comercial.
+        </p>
+        <Button variant="cta" size="lg" asChild className="group shadow-2xl">
+          <a href="#avaliacao">
+            <span>SOLICITAR UMA AVALIAÇÃO PERSONALIZADA</span>
+            <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+          </a>
+        </Button>
       </Card>
     </div>
   </section>
 );
+
 
 
 export const StickyCTAEmpresas = () => (

@@ -7,9 +7,11 @@ import { WHATSAPP_EMPRESAS } from "./dados";
 const LINKS = [
   { label: "Solução", href: "#solucao" },
   { label: "Segmentos", href: "#segmentos" },
+  { label: "Comparativo", href: "#comparativo" },
   { label: "Simulador", href: "#simulador" },
   { label: "Dúvidas", href: "#faq" },
 ];
+
 
 const NavEmpresas = () => {
   const [visible, setVisible] = useState(false);
