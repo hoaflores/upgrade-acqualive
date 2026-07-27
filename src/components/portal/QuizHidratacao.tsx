@@ -60,6 +60,11 @@ const QuizHidratacao = () => {
   const [escolha, setEscolha] = useState<number | null>(null);
   const [acertos, setAcertos] = useState(0);
   const [fim, setFim] = useState(false);
+  const [nome, setNome] = useState("");
+  const [telefone, setTelefone] = useState("");
+  const [email, setEmail] = useState("");
+  const [enviando, setEnviando] = useState(false);
+  const [enviado, setEnviado] = useState(false);
 
   const q = QUESTOES[passo];
   const progresso = ((passo + (escolha !== null ? 1 : 0)) / QUESTOES.length) * 100;
@@ -85,6 +90,44 @@ const QuizHidratacao = () => {
     setAcertos(0);
     setFim(false);
   };
+
+  const enviarLead = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const n = nome.trim();
+    const t = telefone.trim();
+    const m = email.trim();
+    if (n.length < 2) {
+      toast.error("Informe seu nome completo.");
+      return;
+    }
+    if (t.replace(/\D/g, "").length < 10) {
+      toast.error("Informe um telefone válido com DDD.");
+      return;
+    }
+    if (m && !/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(m)) {
+      toast.error("Informe um email válido ou deixe o campo em branco.");
+      return;
+    }
+
+    setEnviando(true);
+    const { error } = await supabase.from("leads_quiz").insert({
+      nome: n.slice(0, 120),
+      telefone: t.slice(0, 30),
+      email: m ? m.slice(0, 200) : null,
+      acertos,
+      total: QUESTOES.length,
+      origem: "portal-cientifico-quiz",
+    });
+    setEnviando(false);
+
+    if (error) {
+      toast.error("Não foi possível enviar agora. Tente novamente em instantes.");
+      return;
+    }
+    setEnviado(true);
+    toast.success("Participação confirmada! Em breve entramos em contato.");
+  };
+
 
   const veredito =
     acertos >= 4
