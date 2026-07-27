@@ -37,6 +37,7 @@ import EmailMaeNutrida from "./pages/EmailMaeNutrida";
 import MapaSolo from "./pages/MapaSolo";
 import AdminFranqueados from "./pages/AdminFranqueados";
 import NotFound from "./pages/NotFound";
+import RouteSeo from "./components/RouteSeo";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +48,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <RouteSeo />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/upgrade" element={<Upgrade />} />
