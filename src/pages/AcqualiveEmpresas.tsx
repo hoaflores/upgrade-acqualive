@@ -65,6 +65,7 @@ const AcqualiveEmpresas = () => {
       <Suspense fallback={<Placeholder />}>
         <ScrollReveal variant="zoom"><AntesDepois /></ScrollReveal>
         <ScrollReveal variant="right"><Segmentos /></ScrollReveal>
+        <ScrollReveal variant="up"><BeneficiosPessoas /></ScrollReveal>
         <CarrosselMarcas />
         <ScrollReveal variant="zoom"><SimuladorEconomia /></ScrollReveal>
         <ScrollReveal variant="up"><ComoFunciona /></ScrollReveal>
