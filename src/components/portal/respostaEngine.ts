@@ -157,6 +157,7 @@ export const pontuarReferências = (consulta: string, base: Referência[] = REFE
 export type Confiança = "alta" | "média" | "exploratória";
 
 export interface RespostaSintetizada {
+  titulo: string;
   resumo: string;
   detalhes: string[];
   confiança: Confiança;
@@ -226,14 +227,14 @@ export const responder = (consulta: string): RespostaSintetizada | null => {
     .slice(0, 3);
 
   return {
+    titulo: aberturaPorIntenção(consulta, melhor.ref),
     resumo,
     detalhes,
     confiança,
     eixos,
     fontes: principais.map((p) => p.ref),
     relacionadas,
-    titulo: aberturaPorIntenção(consulta, melhor.ref),
-  } as RespostaSintetizada & { titulo: string };
+  };
 };
 
 export const rótuloConfiança: Record<Confiança, string> = {
