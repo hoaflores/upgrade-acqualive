@@ -10,20 +10,9 @@ import {
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import imgLaboratorio from "@/assets/portal/laboratorio.jpg.asset.json";
-import logoUnicamp from "@/assets/portal/unicamp.svg.asset.json";
-import logoUfpa from "@/assets/portal/ufpa.jpg.asset.json";
 import { REFERÊNCIAS, type Referência } from "@/data/portal-cientifico";
 
-const LOGOS_FONTE: { chave: string; src: string; alt: string }[] = [
-  { chave: "unicamp", src: logoUnicamp.url, alt: "Unicamp" },
-  { chave: "ufpa", src: logoUfpa.url, alt: "UFPA" },
-  { chave: "pará", src: logoUfpa.url, alt: "UFPA" },
-];
 
-const logoDaFonte = (r: Referência) => {
-  const texto = `${r.fonte} ${r.id}`.toLowerCase();
-  return LOGOS_FONTE.find((l) => texto.includes(l.chave));
-};
 
 
 interface Props {
