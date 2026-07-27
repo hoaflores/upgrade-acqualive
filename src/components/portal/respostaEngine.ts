@@ -173,12 +173,21 @@ const primeiraFrase = (texto: string) => {
 
 const aberturaPorIntenção = (consulta: string, top: Referência): string => {
   const q = normalize(consulta);
-  const simNao = /^(a agua|agua|beber|tomar|faz|ajuda|serve|pode|vale|existe|tem|e |é )/.test(q) || q.includes("ajuda");
+  const definição = /^(o que e|oque e|o que sao|o que significa|que e|defini)/.test(q);
+  const simNao = /^(a agua|agua|beber|tomar|faz|ajuda|serve|pode|vale|existe|tem)/.test(q) || q.includes("ajuda");
+  if (definição) return "O que a base define";
   if (/quanto|quantos|quantas|litros/.test(q)) return "O que a base indica sobre quantidade";
   if (/como|de que forma|por que|porque/.test(q)) return "Como a ciência explica";
   if (simNao) return `Resposta curta, com base em ${top.autores} (${top.ano})`;
   return "O que os estudos indicados mostram";
 };
+
+/** Tokens da pergunta sem expansão por sinônimos. */
+const tokensLiterais = (texto: string): string[] =>
+  normalize(texto)
+    .replace(/[^a-z0-9\s]/g, " ")
+    .split(/\s+/)
+    .filter((p) => p.length > 2 && !STOPWORDS.has(p));
 
 /**
  * Sintetiza uma resposta em linguagem natural a partir das referências
@@ -191,18 +200,42 @@ export const responder = (consulta: string): RespostaSintetizada | null => {
   const principais = ranking.slice(0, 3);
   const [melhor] = principais;
 
-  const tokens = tokenizar(consulta);
-  const guiaPróxima = PERGUNTAS_GUIA.map((g) => {
-    const alvo = normalize(g.pergunta);
-    const acertos = tokens.filter((t) => contém(alvo, t)).length;
-    return { g, acertos };
-  })
-    .sort((a, b) => b.acertos - a.acertos)
-    .filter((x) => x.acertos >= 2)[0]?.g;
+  // Só reaproveita a resposta de uma pergunta-guia quando ela é praticamente
+  // a mesma pergunta: exige alta cobertura nos dois sentidos, usando apenas
+  // os termos literais digitados (sinônimos causavam respostas fora do tema).
+  const literais = tokensLiterais(consulta);
+  const guiaPróxima = literais.length
+    ? PERGUNTAS_GUIA.map((g) => {
+        const alvoTokens = tokensLiterais(g.pergunta);
+        if (!alvoTokens.length) return { g, similaridade: 0 };
+        const alvo = normalize(g.pergunta);
+        const acertos = literais.filter((t) => contém(alvo, t)).length;
+        const consultaTxt = normalize(consulta);
+        const acertosInversos = alvoTokens.filter((t) => contém(consultaTxt, t)).length;
+        const cobPergunta = acertos / literais.length;
+        const cobGuia = acertosInversos / alvoTokens.length;
+        return { g, similaridade: Math.min(cobPergunta, cobGuia) };
+      })
+        .sort((a, b) => b.similaridade - a.similaridade)
+        .filter((x) => x.similaridade >= 0.75)[0]?.g
+    : undefined;
 
+  // Sem pergunta-guia equivalente, a resposta é sintetizada a partir dos
+  // trechos das referências que realmente casaram com os termos digitados.
+  const trechosRelevantes = [...melhor.trechos];
+  for (const p of principais.slice(1)) {
+    for (const t of p.trechos) if (!trechosRelevantes.includes(t)) trechosRelevantes.push(t);
+  }
   const resumo = guiaPróxima
     ? guiaPróxima.resposta
-    : `${primeiraFrase(melhor.trechos[0] ?? melhor.ref.resumo)} ${primeiraFrase(melhor.ref.aplicação)}`.trim();
+    : [
+        primeiraFrase(trechosRelevantes[0] ?? melhor.ref.resumo),
+        primeiraFrase(trechosRelevantes[1] ?? melhor.ref.aplicação),
+      ]
+        .filter(Boolean)
+        .join(" ")
+        .trim();
+
 
   const detalhes: string[] = [];
   for (const p of principais) {
