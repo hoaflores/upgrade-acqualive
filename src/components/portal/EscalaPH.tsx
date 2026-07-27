@@ -56,9 +56,10 @@ const EscalaPH = () => {
           <div className="flex items-end justify-between">
             <div>
               <p className="text-[11px] uppercase tracking-wider text-[hsl(var(--pc-ink-soft))]">pH medido</p>
-              <p className="pc-tabnum font-display text-5xl font-bold" style={{ color: corPara(ponto.ph) }}>
-                {ponto.ph.toFixed(1)}
+              <p className="pc-tabnum font-display text-4xl font-bold md:text-5xl" style={{ color: corPara(ponto.ph) }}>
+                {formatoPh(ponto)}
               </p>
+
             </div>
             <p className="text-right font-display text-lg font-semibold text-[hsl(var(--pc-blue))]">{ponto.nome}</p>
           </div>
