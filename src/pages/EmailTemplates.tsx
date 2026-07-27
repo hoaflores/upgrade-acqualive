@@ -3,6 +3,7 @@ import { Copy, Check, Eye, Code, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { acqualiveNews } from "@/emails/acqualive-news";
+import { acqualiveNews02 } from "@/emails/acqualive-news-02";
 
 const EMAILS = [
   {
@@ -1359,6 +1360,8 @@ const EMAILS = [
   },
 
 
+
+  acqualiveNews02,
 
 ];
 
