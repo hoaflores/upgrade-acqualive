@@ -75,19 +75,25 @@ const FormAvaliacao = () => {
   };
 
   return (
-    <section id="avaliacao" className="py-16 lg:py-24 bg-background">
+    <section id="avaliacao" className="py-20 lg:py-28 bg-water-light">
       <div className="container">
-        <div className="max-w-3xl mx-auto text-center mb-10">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <span className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-primary">
+            <span className="h-px w-8 bg-current opacity-50" />
+            Avaliação gratuita
+            <span className="h-px w-8 bg-current opacity-50" />
+          </span>
+          <h2 className="mt-5 font-display text-3xl md:text-[2.75rem] font-bold text-foreground leading-[1.1] tracking-tight mb-5">
             Solicite a avaliação gratuita para a sua empresa
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-muted-foreground leading-relaxed">
             Analisamos o consumo, o ponto de instalação e indicamos a configuração ideal do Acqualive DUO.
             Sem compromisso.
           </p>
         </div>
 
-        <Card className="max-w-3xl mx-auto p-7 md:p-10 shadow-elevated border-border/70">
+        <Card className="max-w-3xl mx-auto p-8 md:p-11 rounded-[2rem] shadow-elevated border-border/60">
+
           {enviado ? (
             <div className="text-center py-8">
               <CheckCircle2 className="w-14 h-14 text-primary mx-auto mb-4" />

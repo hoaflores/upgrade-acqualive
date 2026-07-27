@@ -11,12 +11,20 @@ import { IMG, WHATSAPP_EMPRESAS } from "./dados";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 export const FaqEmpresas = () => (
-  <section className="py-16 lg:py-24 bg-water-light">
+  <section className="py-20 lg:py-28 bg-water-light">
     <div className="container">
       <div className="max-w-3xl mx-auto">
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-          Perguntas frequentes
-        </h2>
+        <div className="text-center mb-12">
+          <span className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-primary">
+            <span className="h-px w-8 bg-current opacity-50" />
+            Dúvidas frequentes
+            <span className="h-px w-8 bg-current opacity-50" />
+          </span>
+          <h2 className="mt-5 font-display text-3xl md:text-[2.75rem] font-bold text-foreground leading-[1.1] tracking-tight">
+            Perguntas frequentes
+          </h2>
+        </div>
+
 
         <Accordion type="single" collapsible className="space-y-3">
           {[
@@ -48,11 +56,14 @@ export const FaqEmpresas = () => (
             <AccordionItem
               key={q}
               value={q}
-              className="bg-card border border-border/70 rounded-xl px-5 shadow-soft"
+              className="bg-card border border-border/60 rounded-2xl px-6 shadow-soft data-[state=open]:border-primary/30 transition-colors"
             >
-              <AccordionTrigger className="text-left font-semibold text-foreground">{q}</AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">{a}</AccordionContent>
+              <AccordionTrigger className="text-left font-display font-semibold text-foreground tracking-tight py-5">
+                {q}
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-5">{a}</AccordionContent>
             </AccordionItem>
+
           ))}
         </Accordion>
       </div>
@@ -61,30 +72,31 @@ export const FaqEmpresas = () => (
 );
 
 export const NiionClick = () => (
-  <section className="py-16 lg:py-20 bg-background">
+  <section className="py-20 lg:py-24 bg-background">
     <div className="container">
-      <Card className="overflow-hidden border-border/70 shadow-soft">
+      <Card className="overflow-hidden rounded-[2rem] border-border/60 shadow-elevated">
         <div className="grid md:grid-cols-2 gap-0 items-center">
-          <div className="p-8 md:p-10">
-            <span className="inline-block text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-3">
+          <div className="p-9 md:p-12">
+            <span className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-accent mb-5">
+              <span className="h-px w-8 bg-current opacity-50" />
               Solução complementar
             </span>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground leading-tight tracking-tight mb-5">
               NIION CLICK: filtragem modular para pontos específicos
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <p className="text-muted-foreground leading-relaxed mb-7">
               Para cozinhas industriais, máquinas de café e pontos de produção que precisam de água tratada
               antes do equipamento, o NIION CLICK oferece um sistema de refis de encaixe rápido, com troca
               simples e sem ferramentas.
             </p>
-            <ul className="space-y-2 mb-7 text-sm text-muted-foreground">
+            <ul className="space-y-3 mb-8 text-sm text-muted-foreground">
               {[
                 "Refis de troca rápida, sistema click",
                 "Instalação sob bancada ou em linha",
                 "Combina com o Acqualive DUO na mesma operação",
               ].map((item) => (
-                <li key={item} className="flex gap-2">
-                  <span className="text-primary font-bold">•</span>
+                <li key={item} className="flex gap-3 items-start">
+                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent flex-shrink-0" />
                   {item}
                 </li>
               ))}
@@ -98,11 +110,12 @@ export const NiionClick = () => (
             </Button>
           </div>
 
-          <div className="bg-muted/20 p-8 flex items-center justify-center">
+          <div className="relative bg-gradient-water p-10 flex items-center justify-center min-h-[320px]">
+            <div aria-hidden className="absolute -top-20 -right-16 w-64 h-64 rounded-full bg-accent/15 blur-3xl" />
             <img
               src={IMG.niionIlustra}
               alt="Sistema de filtragem NIION CLICK com quatro refis"
-              className="w-full max-w-sm h-auto object-contain"
+              className="relative w-full max-w-sm h-auto object-contain drop-shadow-2xl"
               loading="lazy"
             />
           </div>
@@ -111,6 +124,7 @@ export const NiionClick = () => (
     </div>
   </section>
 );
+
 
 export const StickyCTAEmpresas = () => (
   <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-card/95 backdrop-blur border-t border-border p-3 flex gap-2">
