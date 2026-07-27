@@ -6,6 +6,8 @@
  * o original abre em janela isolada apenas quando o usuário pede.
  */
 
+import { REFERÊNCIAS_EXTRA } from "./portal-cientifico-extra";
+
 export type TipoReferencia = "estudo" | "revisão" | "institucional" | "enciclopédia";
 export type Impacto = "alto" | "medio" | "base";
 
