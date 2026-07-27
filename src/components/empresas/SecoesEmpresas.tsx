@@ -285,3 +285,57 @@ export const ProvaAutoridade = () => (
     </div>
   </section>
 );
+
+export const ComoFunciona = () => (
+  <section id="implantacao" className="py-20 lg:py-28 bg-background">
+    <div className="container">
+      <div className="max-w-3xl mb-14">
+        <Eyebrow>Implantação</Eyebrow>
+        <h2 className="mt-5 font-display text-3xl md:text-[2.75rem] font-bold text-foreground leading-[1.1] tracking-tight mb-5">
+          Da primeira conversa à água gelada no copo, em 4 passos
+        </h2>
+        <p className="text-lg text-muted-foreground leading-relaxed">
+          Um processo simples, conduzido pela nossa equipe e pelo franqueado da sua região.
+        </p>
+      </div>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          {
+            titulo: "Avaliação gratuita",
+            texto: "Entendemos o número de pessoas, o consumo atual e a rotina do espaço.",
+          },
+          {
+            titulo: "Proposta personalizada",
+            texto: "Definimos quantos equipamentos fazem sentido e apresentamos o investimento.",
+          },
+          {
+            titulo: "Instalação",
+            texto: "A equipe instala no ponto ideal e orienta o time sobre o uso no mesmo dia.",
+          },
+          {
+            titulo: "Acompanhamento",
+            texto: "Manutenção programada dos refis e suporte técnico sempre que precisar.",
+          },
+        ].map(({ titulo, texto }, i) => (
+          <Card
+            key={titulo}
+            className="relative p-7 rounded-[1.75rem] border-border/60 shadow-soft hover:shadow-elevated transition-shadow duration-300"
+          >
+            <span className="font-display text-5xl font-bold text-primary/10 leading-none">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <h3 className="mt-4 font-display text-lg font-bold text-foreground tracking-tight mb-2">{titulo}</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">{texto}</p>
+            {i < 3 && (
+              <ArrowRight
+                aria-hidden
+                className="hidden lg:block absolute top-1/2 -right-4 w-5 h-5 text-primary/25"
+              />
+            )}
+          </Card>
+        ))}
+      </div>
+    </div>
+  </section>
+);
