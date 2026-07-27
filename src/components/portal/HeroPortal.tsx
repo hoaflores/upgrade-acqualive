@@ -3,6 +3,8 @@ import { ArrowDown, FlaskConical, Search } from "lucide-react";
 import { REFERÊNCIAS } from "@/data/portal-cientifico";
 import { useTweenNumber } from "@/hooks/useTween";
 import BolhasAgua from "./BolhasAgua";
+import imgHero from "@/assets/portal/hero-portal.jpg.asset.json";
+
 
 const Contador = ({ alvo, ativo }: { alvo: number; ativo: boolean }) => {
   const v = useTweenNumber(ativo ? alvo : 0, { duration: 1400 });
