@@ -1,18 +1,33 @@
+import { lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
 import HeroEmpresas from "@/components/empresas/HeroEmpresas";
-import {
-  DorGaloes,
-  SolucaoDuo,
-  AntesDepois,
-  Segmentos,
-  ProvaAutoridade,
-} from "@/components/empresas/SecoesEmpresas";
-import SimuladorEconomia from "@/components/empresas/SimuladorEconomia";
-import FormAvaliacao from "@/components/empresas/FormAvaliacao";
-import { FaqEmpresas, NiionClick, StickyCTAEmpresas } from "@/components/empresas/FaqNiion";
-import FooterSection from "@/components/FooterSection";
+import { DorGaloes, SolucaoDuo } from "@/components/empresas/SecoesEmpresas";
 import ScrollReveal from "@/components/ScrollReveal";
 import { WHATSAPP_EMPRESAS } from "@/components/empresas/dados";
+
+const AntesDepois = lazy(() =>
+  import("@/components/empresas/SecoesEmpresas").then((m) => ({ default: m.AntesDepois }))
+);
+const Segmentos = lazy(() =>
+  import("@/components/empresas/SecoesEmpresas").then((m) => ({ default: m.Segmentos }))
+);
+const ProvaAutoridade = lazy(() =>
+  import("@/components/empresas/SecoesEmpresas").then((m) => ({ default: m.ProvaAutoridade }))
+);
+const SimuladorEconomia = lazy(() => import("@/components/empresas/SimuladorEconomia"));
+const FormAvaliacao = lazy(() => import("@/components/empresas/FormAvaliacao"));
+const FaqEmpresas = lazy(() =>
+  import("@/components/empresas/FaqNiion").then((m) => ({ default: m.FaqEmpresas }))
+);
+const NiionClick = lazy(() =>
+  import("@/components/empresas/FaqNiion").then((m) => ({ default: m.NiionClick }))
+);
+const StickyCTAEmpresas = lazy(() =>
+  import("@/components/empresas/FaqNiion").then((m) => ({ default: m.StickyCTAEmpresas }))
+);
+const FooterSection = lazy(() => import("@/components/FooterSection"));
+
+const Placeholder = () => <div className="min-h-[40vh]" aria-hidden />;
 
 const AcqualiveEmpresas = () => {
   return (
@@ -33,24 +48,27 @@ const AcqualiveEmpresas = () => {
       </Helmet>
 
       <HeroEmpresas />
-      <ScrollReveal><DorGaloes /></ScrollReveal>
-      <ScrollReveal><SolucaoDuo /></ScrollReveal>
-      <ScrollReveal><AntesDepois /></ScrollReveal>
-      <ScrollReveal><Segmentos /></ScrollReveal>
-      <ScrollReveal><SimuladorEconomia /></ScrollReveal>
-      <ScrollReveal><ProvaAutoridade /></ScrollReveal>
-      <ScrollReveal><FaqEmpresas /></ScrollReveal>
-      <ScrollReveal><FormAvaliacao /></ScrollReveal>
-      <ScrollReveal><NiionClick /></ScrollReveal>
+      <ScrollReveal variant="up"><DorGaloes /></ScrollReveal>
+      <ScrollReveal variant="left"><SolucaoDuo /></ScrollReveal>
 
-      <FooterSection
-        whatsappLink={WHATSAPP_EMPRESAS}
-        ctaLabel="FALAR COM A ACQUALIVE EMPRESAS"
-        heading="Pronto para tirar o galão da sua empresa?"
-        showUrgencyBanner={false}
-      />
+      <Suspense fallback={<Placeholder />}>
+        <ScrollReveal variant="zoom"><AntesDepois /></ScrollReveal>
+        <ScrollReveal variant="right"><Segmentos /></ScrollReveal>
+        <ScrollReveal variant="zoom"><SimuladorEconomia /></ScrollReveal>
+        <ScrollReveal variant="up"><ProvaAutoridade /></ScrollReveal>
+        <ScrollReveal variant="left"><FaqEmpresas /></ScrollReveal>
+        <ScrollReveal variant="up"><FormAvaliacao /></ScrollReveal>
+        <ScrollReveal variant="right"><NiionClick /></ScrollReveal>
 
-      <StickyCTAEmpresas />
+        <FooterSection
+          whatsappLink={WHATSAPP_EMPRESAS}
+          ctaLabel="FALAR COM A ACQUALIVE EMPRESAS"
+          heading="Pronto para tirar o galão da sua empresa?"
+          showUrgencyBanner={false}
+        />
+
+        <StickyCTAEmpresas />
+      </Suspense>
     </main>
   );
 };
