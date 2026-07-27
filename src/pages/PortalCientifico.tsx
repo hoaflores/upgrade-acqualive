@@ -27,6 +27,8 @@ const URL_PÁGINA = `${SITE}/portal-cientifico`;
 const NAV = [
   { href: "#fundamentos", label: "Fundamentos" },
   { href: "#busca", label: "Buscar" },
+  { href: "#corpo", label: "Seu corpo" },
+  { href: "#mitos", label: "Mitos" },
   { href: "#biblioteca", label: "Biblioteca" },
   { href: "#perguntas", label: "Perguntas" },
   { href: "#blog", label: "Blog" },
