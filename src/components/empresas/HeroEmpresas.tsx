@@ -6,24 +6,18 @@ import { IMG, WHATSAPP_EMPRESAS } from "./dados";
 
 const HeroEmpresas = () => {
   return (
-    <section className="relative min-h-[92vh] bg-gradient-water overflow-hidden">
+    <section className="relative min-h-[92vh] emp-aurora emp-noise overflow-hidden">
       {/* Camadas de profundidade */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-52 -right-40 w-[38rem] h-[38rem] rounded-full bg-accent/10 blur-3xl" />
-        <div className="absolute bottom-[-14rem] -left-32 w-[34rem] h-[34rem] rounded-full bg-primary/40 blur-3xl" />
-        <div
-          className="absolute inset-0 opacity-[0.07]"
-          style={{
-            backgroundImage:
-              "linear-gradient(hsl(0 0% 100% / 0.6) 1px, transparent 1px), linear-gradient(90deg, hsl(0 0% 100% / 0.6) 1px, transparent 1px)",
-            backgroundSize: "72px 72px",
-          }}
-        />
+        <div className="absolute -top-52 -right-40 w-[38rem] h-[38rem] rounded-full bg-accent/15 blur-3xl emp-drift" />
+        <div className="absolute bottom-[-16rem] -left-40 w-[38rem] h-[38rem] rounded-full bg-primary/40 blur-3xl emp-drift" style={{ animationDelay: "-6s" }} />
+        <div className="absolute inset-0 emp-beams opacity-70" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-secondary/40" />
       </div>
 
       <div className="container relative z-10 pt-8 pb-24 lg:pt-12">
         <header className="flex items-center justify-between mb-14 lg:mb-20 animate-fade-in">
-          <img src={logoAcqualiveWhite.url} alt="Acqualive" className="h-11 md:h-12 w-auto" />
+          <img src={logoAcqualiveWhite.url} alt="Acqualive" width={220} height={48} decoding="async" className="h-11 md:h-12 w-auto" />
           <span className="hidden md:inline-flex items-center text-[11px] font-semibold uppercase tracking-[0.32em] text-primary-foreground/70 border-l border-primary-foreground/20 pl-4">
             Divisão Empresas
           </span>
@@ -87,6 +81,10 @@ const HeroEmpresas = () => {
               <img
                 src={IMG.duoFrente}
                 alt="Purificador Acqualive DUO para empresas, água natural e fresquinha"
+                width={670}
+                height={1173}
+                decoding="async"
+                {...{ fetchpriority: "high" }}
                 className="relative w-full h-auto object-contain animate-float drop-shadow-2xl"
               />
             </div>

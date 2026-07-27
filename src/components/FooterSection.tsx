@@ -62,7 +62,7 @@ const FooterSection = ({
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <img src={logoBranca} alt="Acqualive" className="h-8 w-auto" />
+              <img src={logoBranca} alt="Acqualive" className="h-16 md:h-20 w-auto" />
             </div>
             <p className="text-sm text-primary-foreground/70 text-center md:text-right">
               © {new Date().getFullYear()} Acqualive. Todos os direitos
