@@ -139,7 +139,10 @@ const PortalCientifico = () => {
         <ManifestoPortal onAbrirArtigo={setArtigo} />
         <BuscaAcademica onAbrirArtigo={setArtigo} />
         <EscalaPH />
+        <CorpoHidratacao />
+        <MitosFatos />
         <BibliotecaArtigos onAbrirArtigo={setArtigo} />
+        <QuizHidratacao />
         <PerguntasGuia onAbrirArtigo={setArtigo} />
         <BlogRecentes />
         <VideosPortal />
