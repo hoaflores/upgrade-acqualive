@@ -6,19 +6,13 @@ import { IMG, WHATSAPP_EMPRESAS } from "./dados";
 
 const HeroEmpresas = () => {
   return (
-    <section className="relative min-h-[92vh] bg-gradient-water overflow-hidden">
+    <section className="relative min-h-[92vh] emp-aurora emp-noise overflow-hidden">
       {/* Camadas de profundidade */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-52 -right-40 w-[38rem] h-[38rem] rounded-full bg-accent/10 blur-3xl" />
-        <div className="absolute bottom-[-14rem] -left-32 w-[34rem] h-[34rem] rounded-full bg-primary/40 blur-3xl" />
-        <div
-          className="absolute inset-0 opacity-[0.07]"
-          style={{
-            backgroundImage:
-              "linear-gradient(hsl(0 0% 100% / 0.6) 1px, transparent 1px), linear-gradient(90deg, hsl(0 0% 100% / 0.6) 1px, transparent 1px)",
-            backgroundSize: "72px 72px",
-          }}
-        />
+        <div className="absolute -top-52 -right-40 w-[38rem] h-[38rem] rounded-full bg-accent/15 blur-3xl emp-drift" />
+        <div className="absolute bottom-[-16rem] -left-40 w-[38rem] h-[38rem] rounded-full bg-primary/40 blur-3xl emp-drift" style={{ animationDelay: "-6s" }} />
+        <div className="absolute inset-0 emp-beams opacity-70" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-secondary/40" />
       </div>
 
       <div className="container relative z-10 pt-8 pb-24 lg:pt-12">
