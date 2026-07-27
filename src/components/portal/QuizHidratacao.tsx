@@ -12,11 +12,12 @@ type Questao = {
 const QUESTOES: Questao[] = [
   {
     pergunta: "Qual percentual do corpo de um adulto é composto por água?",
-    opcoes: ["Cerca de 35%", "Cerca de 60%", "Cerca de 85%"],
+    opcoes: ["Cerca de 35%", "Cerca de 70%", "Cerca de 90%"],
     correta: 1,
     explicacao:
-      "Em média 60% do peso de um adulto é água, chegando a 75% no cérebro e 76% no músculo esquelético.",
+      "Em média 70% do corpo de um adulto é água, chegando a 75% no cérebro e 76% no músculo esquelético.",
   },
+
   {
     pergunta: "A partir de qual pH a pepsina, ligada à queimação do refluxo, é inativada de forma irreversível?",
     opcoes: ["pH 6,5", "pH 7,5", "pH 8,8"],
