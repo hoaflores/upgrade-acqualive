@@ -15,6 +15,11 @@ import EscalaPH from "@/components/portal/EscalaPH";
 import CorpoHidratacao from "@/components/portal/CorpoHidratacao";
 import MitosFatos from "@/components/portal/MitosFatos";
 import QuizHidratacao from "@/components/portal/QuizHidratacao";
+import InstituicoesPortal from "@/components/portal/InstituicoesPortal";
+import FaixaVisual from "@/components/portal/FaixaVisual";
+import imgAguaMacro from "@/assets/portal/agua-macro.jpg.asset.json";
+import imgHidratacao from "@/assets/portal/hidratacao.jpg.asset.json";
+import imgCopoLuz from "@/assets/portal/copo-luz.jpg.asset.json";
 import logoAcqualive from "@/assets/acqualive-logo-azul.png.asset.json";
 
 
@@ -140,9 +145,24 @@ const PortalCientifico = () => {
 
       <main>
         <HeroPortal />
+        <InstituicoesPortal />
         <ManifestoPortal onAbrirArtigo={setArtigo} />
+        <FaixaVisual
+          src={imgAguaMacro.url}
+          alt="Gota de água caindo em uma superfície de água formando ondas concêntricas"
+          etiqueta="Base científica"
+          titulo="Cada afirmação aqui nasce de um estudo que você pode abrir"
+          legenda="Pesquise por tema, sintoma ou dúvida e receba a resposta com a referência original a um clique."
+        />
         <BuscaAcademica onAbrirArtigo={setArtigo} />
         <EscalaPH />
+        <FaixaVisual
+          src={imgHidratacao.url}
+          alt="Atleta bebendo água de uma garrafa de vidro depois do treino"
+          etiqueta="Hidratação funcional"
+          titulo="Beber água é fácil. Hidratar a célula é outra história"
+          legenda="Veja no seu próprio corpo onde a água chega primeiro e o que muda quando ela é alcalina e mineralizada."
+        />
         <CorpoHidratacao />
         <MitosFatos />
         <BibliotecaArtigos onAbrirArtigo={setArtigo} />
@@ -150,6 +170,15 @@ const PortalCientifico = () => {
         <PerguntasGuia onAbrirArtigo={setArtigo} />
         <BlogRecentes />
         <VideosPortal />
+        <FaixaVisual
+          src={imgCopoLuz.url}
+          alt="Copo de água cristalina sobre bancada clara iluminada pela luz da manhã"
+          etiqueta="No dia a dia"
+          titulo="A melhor água do mundo, direto na sua torneira"
+          legenda="Alcalina, mineralizada, antioxidante e livre de cloro. Todos os dias, sem galão e sem esforço."
+          altura="h-[280px] md:h-[380px]"
+        />
+
 
 
         <section className="border-t border-[hsl(var(--pc-line))] py-20 md:py-28">
