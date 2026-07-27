@@ -1140,7 +1140,7 @@ export default function DemandasSolicitadas() {
                                   .from("demandas-anexos")
                                   .createSignedUrl(a.storage_path, 300);
                                 if (error || !data?.signedUrl) {
-                                  toast.error("Não foi possível abrir o anexo");
+                                  toast({ title: "Não foi possível abrir o anexo", variant: "destructive" });
                                   return;
                                 }
                                 window.open(data.signedUrl, "_blank", "noopener");
