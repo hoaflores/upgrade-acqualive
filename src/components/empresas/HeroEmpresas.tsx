@@ -33,9 +33,9 @@ const HeroEmpresas = () => {
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-[3.75rem] font-bold text-primary-foreground leading-[1.05] tracking-tight mb-7 animate-fade-in-up animation-delay-200">
-              Sua empresa gasta até{" "}
-              <span className="italic font-medium text-accent">R$ 7.920 por ano</span> com galão. O Acqualive DUO
-              acaba com essa conta e entrega água gelada e natural o dia inteiro.
+              Corte até{" "}
+              <span className="italic font-medium text-accent">R$ 7.920 por ano</span> em galão e tenha água{" "}
+              gelada e natural o dia inteiro.
             </h1>
 
             <div className="h-px w-24 mx-auto lg:mx-0 bg-gradient-to-r from-accent to-transparent mb-7" />
