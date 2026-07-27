@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ArrowRight } from "lucide-react";
-import { IMG, WHATSAPP_EMPRESAS } from "./dados";
+import { WHATSAPP_EMPRESAS } from "./dados";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 export const FaqEmpresas = () => (
