@@ -171,17 +171,6 @@ const primeiraFrase = (texto: string) => {
   return f.trim();
 };
 
-const aberturaPorIntenção = (consulta: string, top: Referência): string => {
-  const q = normalize(consulta);
-  const definição = /^(o que e|oque e|o que sao|o que significa|que e|defini)/.test(q);
-  const simNao = /^(a agua|agua|beber|tomar|faz|ajuda|serve|pode|vale|existe|tem)/.test(q) || q.includes("ajuda");
-  if (definição) return "O que a base define";
-  if (/quanto|quantos|quantas|litros/.test(q)) return "O que a base indica sobre quantidade";
-  if (/como|de que forma|por que|porque/.test(q)) return "Como a ciência explica";
-  if (simNao) return `Resposta curta, com base em ${top.autores} (${top.ano})`;
-  return "O que os estudos indicados mostram";
-};
-
 /** Tokens da pergunta sem expansão por sinônimos. */
 const tokensLiterais = (texto: string): string[] =>
   normalize(texto)
@@ -189,62 +178,216 @@ const tokensLiterais = (texto: string): string[] =>
     .split(/\s+/)
     .filter((p) => p.length > 2 && !STOPWORDS.has(p));
 
+type Intenção =
+  | "definicao"
+  | "quantidade"
+  | "seguranca"
+  | "comparacao"
+  | "mecanismo"
+  | "publico"
+  | "simnao"
+  | "geral";
+
+const detectarIntenção = (consulta: string): Intenção => {
+  const q = normalize(consulta);
+  if (/^(o que e|oque e|o que sao|o que significa|que e|que sao|defini|conceito|significado)/.test(q)) return "definicao";
+  if (/(quanto|quantos|quantas|litros|ml |mililitro|dose|por dia|frequencia)/.test(q)) return "quantidade";
+  if (/(faz mal|prejudic|risco|perigo|efeito colateral|contraindic|seguro|segura|excesso|toxic)/.test(q)) return "seguranca";
+  if (/(melhor que|comparad|versus| vs |diferenca|diferença|ou agua|em vez de|no lugar de)/.test(q)) return "comparacao";
+  if (/(como funciona|de que forma|por que|porque|por qual motivo|mecanismo|qual o efeito)/.test(q)) return "mecanismo";
+  if (/(crianca|criança|gestante|gravida|grávida|idoso|bebe|bebê|atleta|diabetic|hipertens)/.test(q)) return "publico";
+  if (/^(a agua|agua|beber|tomar|faz|ajuda|serve|pode|vale|existe|tem|previne|melhora|cura|emagrece)/.test(q) || /\bajuda\b/.test(q))
+    return "simnao";
+  return "geral";
+};
+
+/** Definições curtas para perguntas conceituais ("o que é ..."). */
+const CONCEITOS: { chaves: string[]; termo: string; definição: string }[] = [
+  {
+    chaves: ["agua alcalina", "alcalina", "alcalinidade"],
+    termo: "água alcalina",
+    definição:
+      "Água alcalina é a água com pH acima de 7 (na faixa estudada, entre 8 e 9,5) e com minerais alcalinizantes como cálcio, magnésio e bicarbonato, que reduzem a carga ácida da dieta (PRAL) e ajudam o organismo a manter o equilíbrio ácido-base.",
+  },
+  {
+    chaves: ["pral"],
+    termo: "PRAL",
+    definição:
+      "PRAL é a carga ácida renal potencial de um alimento ou bebida: valores negativos indicam efeito alcalinizante e valores positivos, efeito acidificante sobre o organismo.",
+  },
+  {
+    chaves: ["ph"],
+    termo: "pH",
+    definição:
+      "pH é a medida de acidez ou alcalinidade de um líquido, de 0 a 14: abaixo de 7 é ácido, 7 é neutro e acima de 7 é alcalino. Água alcalina para consumo fica normalmente entre 8 e 9,5.",
+  },
+  {
+    chaves: ["hidrogenio molecular", "hidrogenio", "h2"],
+    termo: "hidrogênio molecular (H2)",
+    definição:
+      "Hidrogênio molecular (H2) é um gás dissolvido na água com ação antioxidante seletiva, estudado por neutralizar radicais livres ligados ao estresse oxidativo e à fadiga.",
+  },
+  {
+    chaves: ["osmose reversa", "osmose"],
+    termo: "osmose reversa",
+    definição:
+      "Osmose reversa é um processo de filtragem que remove praticamente tudo da água, inclusive os minerais, produzindo água desmineralizada, com pH mais baixo e sem cálcio ou magnésio.",
+  },
+  {
+    chaves: ["agua ionizada", "ionizada", "ionizador"],
+    termo: "água ionizada",
+    definição:
+      "Água ionizada é obtida por eletrólise, que separa a água em frações alcalina e ácida. Ela se diferencia da alcalinização por minerais, que ocorre por contato com elementos naturais.",
+  },
+  {
+    chaves: ["microplastico", "microplasticos"],
+    termo: "microplásticos",
+    definição:
+      "Microplásticos são partículas plásticas menores que 5 mm que migram de garrafas e galões para a água e já foram detectadas em amostras de consumo humano.",
+  },
+  {
+    chaves: ["estresse oxidativo", "radicais livres", "antioxidante"],
+    termo: "estresse oxidativo",
+    definição:
+      "Estresse oxidativo é o desequilíbrio entre radicais livres e defesas antioxidantes do corpo, associado a envelhecimento celular e doenças crônicas.",
+  },
+  {
+    chaves: ["hidratacao"],
+    termo: "hidratação",
+    definição:
+      "Hidratação é a manutenção do equilíbrio de água e eletrólitos no organismo, avaliada por marcadores como osmolalidade urinária e volume plasmático.",
+  },
+  {
+    chaves: ["trihalometano", "cloro", "subproduto"],
+    termo: "cloro e subprodutos",
+    definição:
+      "O cloro usado no tratamento público reage com matéria orgânica e forma subprodutos como os trihalometanos, removidos por filtragem com carvão ativado.",
+  },
+];
+
+const conceitoDaPergunta = (consulta: string) => {
+  const q = normalize(consulta);
+  const candidatos = CONCEITOS.filter((c) => c.chaves.some((k) => q.includes(normalize(k))));
+  // prioriza a chave mais específica encontrada
+  return candidatos.sort(
+    (a, b) =>
+      Math.max(...b.chaves.map((k) => (q.includes(normalize(k)) ? k.length : 0))) -
+      Math.max(...a.chaves.map((k) => (q.includes(normalize(k)) ? k.length : 0))),
+  )[0];
+};
+
+/** Ordena frases candidatas pela aderência aos termos digitados. */
+const frasesOrdenadas = (frases: string[], literais: string[], intenção: Intenção): string[] => {
+  const vistas = new Set<string>();
+  return frases
+    .filter((f) => f && f.trim().length > 25 && !vistas.has(f) && vistas.add(f))
+    .map((f) => {
+      const n = normalize(f);
+      let s = literais.filter((t) => contém(n, t)).length * 3;
+      if (intenção === "quantidade" && /\d/.test(f)) s += 3;
+      if (intenção === "seguranca" && /(seguran|risco|adverso|efeito|tolerad|sem alteracao|sem alteração)/i.test(f)) s += 3;
+      if (intenção === "comparacao" && /(compara|do que|versus|melhor|maior|menor|em relacao|em relação)/i.test(f)) s += 2;
+      if (intenção === "mecanismo" && /(porque|pois|mecanismo|atua|reduz|aumenta|ativa|neutraliza)/i.test(f)) s += 2;
+      return { f: f.trim(), s };
+    })
+    .sort((a, b) => b.s - a.s)
+    .filter((x) => x.s > 0)
+    .map((x) => x.f);
+};
+
+const tituloPorIntenção = (intenção: Intenção, consulta: string, top: Referência): string => {
+  const foco = consulta.trim().replace(/\?+$/, "");
+  switch (intenção) {
+    case "definicao":
+      return `Definição: ${foco}`;
+    case "quantidade":
+      return "O que a base indica sobre quantidade";
+    case "seguranca":
+      return "O que a base indica sobre segurança";
+    case "comparacao":
+      return "O que a base mostra na comparação";
+    case "mecanismo":
+      return "Como a ciência explica";
+    case "publico":
+      return "O que a base indica para esse público";
+    case "simnao":
+      return `Resposta direta, com base em ${top.autores} (${top.ano})`;
+    default:
+      return "O que os estudos indicados mostram";
+  }
+};
+
 /**
  * Sintetiza uma resposta em linguagem natural a partir das referências
  * mais relevantes, sem depender de perguntas pré-cadastradas.
  */
 export const responder = (consulta: string): RespostaSintetizada | null => {
   const ranking = pontuarReferências(consulta);
-  if (!ranking.length) return null;
+  const literais = tokensLiterais(consulta);
+  const intenção = detectarIntenção(consulta);
+  const conceito = intenção === "definicao" ? conceitoDaPergunta(consulta) : undefined;
+
+  if (!ranking.length && !conceito) return null;
 
   const principais = ranking.slice(0, 3);
-  const [melhor] = principais;
+  const melhor = principais[0];
 
   // Só reaproveita a resposta de uma pergunta-guia quando ela é praticamente
   // a mesma pergunta: exige alta cobertura nos dois sentidos, usando apenas
   // os termos literais digitados (sinônimos causavam respostas fora do tema).
-  const literais = tokensLiterais(consulta);
-  const guiaPróxima = literais.length
-    ? PERGUNTAS_GUIA.map((g) => {
-        const alvoTokens = tokensLiterais(g.pergunta);
-        if (!alvoTokens.length) return { g, similaridade: 0 };
-        const alvo = normalize(g.pergunta);
-        const acertos = literais.filter((t) => contém(alvo, t)).length;
-        const consultaTxt = normalize(consulta);
-        const acertosInversos = alvoTokens.filter((t) => contém(consultaTxt, t)).length;
-        const cobPergunta = acertos / literais.length;
-        const cobGuia = acertosInversos / alvoTokens.length;
-        return { g, similaridade: Math.min(cobPergunta, cobGuia) };
-      })
-        .sort((a, b) => b.similaridade - a.similaridade)
-        .filter((x) => x.similaridade >= 0.75)[0]?.g
-    : undefined;
+  const guiaPróxima =
+    literais.length && intenção !== "definicao"
+      ? PERGUNTAS_GUIA.map((g) => {
+          const alvoTokens = tokensLiterais(g.pergunta);
+          if (!alvoTokens.length) return { g, similaridade: 0 };
+          const alvo = normalize(g.pergunta);
+          const consultaTxt = normalize(consulta);
+          const cobPergunta = literais.filter((t) => contém(alvo, t)).length / literais.length;
+          const cobGuia = alvoTokens.filter((t) => contém(consultaTxt, t)).length / alvoTokens.length;
+          return { g, similaridade: Math.min(cobPergunta, cobGuia) };
+        })
+          .sort((a, b) => b.similaridade - a.similaridade)
+          .filter((x) => x.similaridade >= 0.75)[0]?.g
+      : undefined;
 
-  // Sem pergunta-guia equivalente, a resposta é sintetizada a partir dos
-  // trechos das referências que realmente casaram com os termos digitados.
-  const trechosRelevantes = [...melhor.trechos];
-  for (const p of principais.slice(1)) {
-    for (const t of p.trechos) if (!trechosRelevantes.includes(t)) trechosRelevantes.push(t);
+  // Frases candidatas: prioriza os trechos que casaram com os termos digitados.
+  const candidatas = principais.flatMap((p) => [
+    ...p.trechos,
+    ...p.ref.pontos,
+    ...p.ref.resumo.split(/(?<=\.)\s+/),
+    p.ref.aplicação,
+  ]);
+  const relevantes = frasesOrdenadas(candidatas, literais, intenção);
+
+  const corpo = relevantes.slice(0, 2).map(primeiraFrase).join(" ").trim();
+
+  let resumo: string;
+  if (guiaPróxima) {
+    resumo = guiaPróxima.resposta;
+  } else if (conceito) {
+    resumo = [conceito.definição, corpo].filter(Boolean).join(" ");
+  } else if (intenção === "simnao" && melhor) {
+    const forte = melhor.score >= 22;
+    const abertura = forte
+      ? "Sim, a base científica sustenta essa relação."
+      : "A base traz indícios, mas a evidência ainda é parcial.";
+    resumo = [abertura, corpo || primeiraFrase(melhor.ref.resumo)].filter(Boolean).join(" ");
+  } else if (melhor) {
+    resumo = corpo || [primeiraFrase(melhor.ref.resumo), primeiraFrase(melhor.ref.aplicação)].filter(Boolean).join(" ");
+  } else {
+    resumo = conceito?.definição ?? "";
   }
-  const resumo = guiaPróxima
-    ? guiaPróxima.resposta
-    : [
-        primeiraFrase(trechosRelevantes[0] ?? melhor.ref.resumo),
-        primeiraFrase(trechosRelevantes[1] ?? melhor.ref.aplicação),
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .trim();
 
+  const detalhes: string[] = principais.map((p) => {
+    const frase =
+      frasesOrdenadas([...p.trechos, ...p.ref.pontos, primeiraFrase(p.ref.resumo)], literais, intenção)[0] ??
+      primeiraFrase(p.ref.resumo);
+    return `${frase.replace(/\.$/, "")} (${p.ref.autores}, ${p.ref.ano}, ${p.ref.fonte}).`;
+  });
 
-  const detalhes: string[] = [];
-  for (const p of principais) {
-    const frase = p.trechos[0] ?? primeiraFrase(p.ref.resumo);
-    detalhes.push(`${frase} (${p.ref.autores}, ${p.ref.ano}, ${p.ref.fonte}).`);
-  }
-
-  const confiança: Confiança =
-    melhor.score >= 22 && principais.filter((p) => p.ref.impacto === "alto").length >= 1
+  const confiança: Confiança = !melhor
+    ? "exploratória"
+    : melhor.score >= 22 && principais.some((p) => p.ref.impacto === "alto")
       ? "alta"
       : melhor.score >= 10
         ? "média"
@@ -256,11 +399,11 @@ export const responder = (consulta: string): RespostaSintetizada | null => {
     g.refs.some((id) => principais.some((p) => p.ref.id === id)),
   )
     .map((g) => g.pergunta)
-    .filter((p) => p !== guiaPróxima?.pergunta)
+    .filter((p) => p !== guiaPróxima?.pergunta && normalize(p) !== normalize(consulta))
     .slice(0, 3);
 
   return {
-    titulo: aberturaPorIntenção(consulta, melhor.ref),
+    titulo: tituloPorIntenção(intenção, consulta, melhor?.ref ?? principais[0]?.ref ?? ({ autores: "a base", ano: new Date().getFullYear() } as Referência)),
     resumo,
     detalhes,
     confiança,
@@ -275,3 +418,4 @@ export const rótuloConfiança: Record<Confiança, string> = {
   média: "Evidência parcial, leia as fontes",
   exploratória: "Relação indireta, use como ponto de partida",
 };
+
