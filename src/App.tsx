@@ -36,6 +36,7 @@ import Acqualive1000Dias from "./pages/Acqualive1000Dias";
 import EmailMaeNutrida from "./pages/EmailMaeNutrida";
 import MapaSolo from "./pages/MapaSolo";
 import AdminFranqueados from "./pages/AdminFranqueados";
+import AcqualiveEmpresas from "./pages/AcqualiveEmpresas";
 import NotFound from "./pages/NotFound";
 import RouteSeo from "./components/RouteSeo";
 
@@ -85,6 +86,7 @@ const App = () => (
             <Route path="/email-mae-nutrida" element={<EmailMaeNutrida />} />
             <Route path="/franquias-solo" element={<MapaSolo />} />
             <Route path="/mapa-solo" element={<Navigate to="/franquias-solo" replace />} />
+            <Route path="/acqualive-empresas" element={<AcqualiveEmpresas />} />
             <Route path="/admin/franqueados" element={<AdminFranqueados />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
