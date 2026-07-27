@@ -56,11 +56,14 @@ export const FaqEmpresas = () => (
             <AccordionItem
               key={q}
               value={q}
-              className="bg-card border border-border/70 rounded-xl px-5 shadow-soft"
+              className="bg-card border border-border/60 rounded-2xl px-6 shadow-soft data-[state=open]:border-primary/30 transition-colors"
             >
-              <AccordionTrigger className="text-left font-semibold text-foreground">{q}</AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">{a}</AccordionContent>
+              <AccordionTrigger className="text-left font-display font-semibold text-foreground tracking-tight py-5">
+                {q}
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-5">{a}</AccordionContent>
             </AccordionItem>
+
           ))}
         </Accordion>
       </div>
