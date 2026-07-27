@@ -70,6 +70,8 @@ const PortalCientifico = () => {
 
   return (
     <div className="portal-theme min-h-screen font-body">
+      <ProgressoLeitura />
+
       <Helmet>
         <title>Portal Científico Acqualive: estudos sobre água alcalina</title>
         <meta
