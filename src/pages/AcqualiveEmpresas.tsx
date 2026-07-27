@@ -15,6 +15,9 @@ const Segmentos = lazy(() =>
 const ComoFunciona = lazy(() =>
   import("@/components/empresas/SecoesEmpresas").then((m) => ({ default: m.ComoFunciona }))
 );
+const BeneficiosPessoas = lazy(() =>
+  import("@/components/empresas/SecoesEmpresas").then((m) => ({ default: m.BeneficiosPessoas }))
+);
 const ProvaAutoridade = lazy(() =>
   import("@/components/empresas/SecoesEmpresas").then((m) => ({ default: m.ProvaAutoridade }))
 );
