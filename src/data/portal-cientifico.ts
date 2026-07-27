@@ -6,6 +6,8 @@
  * o original abre em janela isolada apenas quando o usuário pede.
  */
 
+import { REFERÊNCIAS_EXTRA } from "./portal-cientifico-extra";
+
 export type TipoReferencia = "estudo" | "revisão" | "institucional" | "enciclopédia";
 export type Impacto = "alto" | "medio" | "base";
 
@@ -30,6 +32,7 @@ export interface Referência {
 
 export const EIXOS = [
   "Água alcalina",
+  "PRAL e poder alcalinizante",
   "Hidratação funcional",
   "Performance esportiva",
   "Antioxidantes e hidrogênio",
@@ -37,9 +40,10 @@ export const EIXOS = [
   "Minerais essenciais",
   "Qualidade da água comum",
   "Longevidade e metabolismo",
+  "Publicações Acqualive",
 ] as const;
 
-export const REFERÊNCIAS: Referência[] = [
+const REFERÊNCIAS_BASE: Referência[] = [
   {
     id: "koufman-2012-pepsina",
     titulo: "Água alcalina pH 8,8 desativa a pepsina, enzima que causa refluxo",
@@ -814,6 +818,10 @@ export const REFERÊNCIAS: Referência[] = [
     termos: ["emoto", "cristais", "estrutura", "água congelada"],
   },
 ];
+
+export const REFERÊNCIAS: Referência[] = [...REFERÊNCIAS_BASE, ...REFERÊNCIAS_EXTRA];
+
+
 
 /** Perguntas frequentes que direcionam o usuário para as referências certas. */
 export interface PerguntaGuia {
