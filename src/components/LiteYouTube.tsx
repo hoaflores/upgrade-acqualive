@@ -8,6 +8,8 @@ interface LiteYouTubeProps {
   /** Thumbnail quality (hq=480, sd=640, maxres=1280) */
   quality?: "hq" | "sd" | "maxres";
   className?: string;
+  /** Usa o dominio youtube-nocookie (sem cookies de rastreamento) */
+  nocookie?: boolean;
 }
 
 /**
