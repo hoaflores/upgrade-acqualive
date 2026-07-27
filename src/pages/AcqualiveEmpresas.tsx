@@ -77,13 +77,16 @@ const AcqualiveEmpresas = () => {
         <ScrollReveal variant="right"><Segmentos /></ScrollReveal>
         <ScrollReveal variant="up"><BeneficiosPessoas /></ScrollReveal>
         <CarrosselMarcas />
+        <ScrollReveal variant="left"><ComparativoSolucoes /></ScrollReveal>
         <ScrollReveal variant="zoom"><SimuladorEconomia /></ScrollReveal>
         <ScrollReveal variant="up"><ComoFunciona /></ScrollReveal>
         <ScrollReveal variant="up"><ProvaAutoridade /></ScrollReveal>
         <ScrollReveal variant="up"><DepoimentosEmpresas /></ScrollReveal>
+        <ScrollReveal variant="right"><QuebraObjecoes /></ScrollReveal>
         <ScrollReveal variant="left"><FaqEmpresas /></ScrollReveal>
         <ScrollReveal variant="up"><FormAvaliacao /></ScrollReveal>
         <ScrollReveal variant="right"><NiionClick /></ScrollReveal>
+
 
         <FooterSection
           whatsappLink={WHATSAPP_EMPRESAS}
