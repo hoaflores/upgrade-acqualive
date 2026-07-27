@@ -84,7 +84,7 @@ const HeroEmpresas = () => {
                 width={670}
                 height={1173}
                 decoding="async"
-                fetchPriority="high"
+                {...{ fetchpriority: "high" }}
                 className="relative w-full h-auto object-contain animate-float drop-shadow-2xl"
               />
             </div>
