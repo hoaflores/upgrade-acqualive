@@ -5,7 +5,7 @@ import type { EmailTemplate } from "./acqualive-news";
 
 const CDN = "https://paginas.acqualive.com.br/__l5e/assets-v1";
 const IMG_CAPA = `${CDN}/900950c4-c89b-40c3-ad5b-65e413c5dd27/news02-capa.jpg`;
-const IMG_PORTAL = `${CDN}/92f534b8-533d-498b-b212-d714d3f64c5b/maos-copo-agua.jpg`;
+const IMG_PORTAL = `${CDN}/50e25b0f-1d15-4d08-90e6-c47a71352931/news02-portal.jpg`;
 const IMG_DUO = `${CDN}/24dea6fb-b358-4526-b389-feec25aff6f7/Duo_Ambientada_1.png`;
 const IMG_DUO_2 = `${CDN}/401eb55a-8570-4311-b9a8-ffc20815e730/acqualive-duo-consultorio.png`;
 const LINK_DUO =
