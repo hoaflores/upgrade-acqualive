@@ -76,8 +76,8 @@ const PONTOS: Ponto[] = [
   {
     id: "ossos",
     nome: "Ossos",
-    x: 59,
-    y: 75,
+    x: 57,
+    y: 74,
     titulo: "Minerais biodisponíveis",
     texto:
       "Cálcio e magnésio dissolvidos na água são absorvidos com boa biodisponibilidade e somam-se à ingestão diária, especialmente em dietas pobres em minerais.",
@@ -86,8 +86,8 @@ const PONTOS: Ponto[] = [
   {
     id: "pele",
     nome: "Pele",
-    x: 78,
-    y: 33,
+    x: 72,
+    y: 30,
     titulo: "Elasticidade e viço",
     texto:
       "A pele é o maior órgão do corpo e um dos primeiros a sinalizar desidratação crônica, com perda de elasticidade e aspecto opaco.",
