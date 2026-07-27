@@ -129,8 +129,9 @@ const PortalCientifico = () => {
         <section className="border-t border-[hsl(var(--pc-line))] py-20 md:py-28">
           <div className="container">
             <ScrollReveal>
-              <div className="pc-radial overflow-hidden rounded-3xl border border-[hsl(var(--pc-line))] p-10 text-center md:p-16">
-                <ShieldCheck className="mx-auto h-10 w-10 text-[hsl(var(--pc-amber))]" aria-hidden />
+              <div className="pc-aurora relative overflow-hidden rounded-3xl border border-[hsl(var(--pc-line))] p-10 text-center shadow-[0_40px_80px_-60px_hsl(var(--pc-blue))] md:p-16">
+                <BolhasAgua />
+                <ShieldCheck className="pc-float relative mx-auto h-10 w-10 text-[hsl(var(--pc-amber))]" aria-hidden />
                 <h2 className="mt-6 font-display text-3xl font-bold md:text-4xl">
                   Da evidência para o seu copo, todos os dias
                 </h2>
