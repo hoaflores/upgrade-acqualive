@@ -223,7 +223,7 @@ export const Segmentos = () => (
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/70 via-secondary/10 to-transparent" />
               <div className="absolute bottom-4 left-5 flex items-center gap-3">
                 <div className="w-9 h-9 rounded-lg bg-card/90 backdrop-blur flex items-center justify-center">
-                  <Icon className="w-4.5 h-4.5 text-primary" />
+                  <Icon className="w-4 h-4 text-primary" />
                 </div>
                 <h3 className="font-display font-semibold text-primary-foreground tracking-tight">{title}</h3>
               </div>
