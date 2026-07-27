@@ -11,7 +11,7 @@ import { IMG, WHATSAPP_EMPRESAS } from "./dados";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 export const FaqEmpresas = () => (
-  <section className="py-20 lg:py-28 bg-water-light">
+  <section id="faq" className="py-20 lg:py-28 bg-water-light">
     <div className="container">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
@@ -42,7 +42,7 @@ export const FaqEmpresas = () => (
             },
             {
               q: "A água sai gelada?",
-              a: "O Acqualive DUO entrega água natural e fresquinha, com duas opções de saída para atender diferentes preferências da equipe ao longo do dia.",
+              a: "Sim. O Acqualive DUO entrega água gelada e água natural no mesmo equipamento, com duas saídas independentes para atender as preferências da equipe ao longo do dia.",
             },
             {
               q: "Qual é o investimento?",
