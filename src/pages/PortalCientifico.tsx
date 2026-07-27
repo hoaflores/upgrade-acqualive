@@ -15,6 +15,11 @@ import EscalaPH from "@/components/portal/EscalaPH";
 import CorpoHidratacao from "@/components/portal/CorpoHidratacao";
 import MitosFatos from "@/components/portal/MitosFatos";
 import QuizHidratacao from "@/components/portal/QuizHidratacao";
+import InstituicoesPortal from "@/components/portal/InstituicoesPortal";
+import FaixaVisual from "@/components/portal/FaixaVisual";
+import imgAguaMacro from "@/assets/portal/agua-macro.jpg.asset.json";
+import imgHidratacao from "@/assets/portal/hidratacao.jpg.asset.json";
+import imgCopoLuz from "@/assets/portal/copo-luz.jpg.asset.json";
 import logoAcqualive from "@/assets/acqualive-logo-azul.png.asset.json";
 
 
