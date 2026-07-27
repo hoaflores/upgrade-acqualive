@@ -282,6 +282,54 @@ export type Database = {
         }
         Relationships: []
       }
+      leads_empresas: {
+        Row: {
+          cidade: string | null
+          colaboradores: string | null
+          created_at: string
+          economia_estimada: number | null
+          email: string
+          empresa: string
+          galoes_mes: number | null
+          id: string
+          mensagem: string | null
+          nome: string
+          origem: string | null
+          segmento: string | null
+          telefone: string
+        }
+        Insert: {
+          cidade?: string | null
+          colaboradores?: string | null
+          created_at?: string
+          economia_estimada?: number | null
+          email: string
+          empresa: string
+          galoes_mes?: number | null
+          id?: string
+          mensagem?: string | null
+          nome: string
+          origem?: string | null
+          segmento?: string | null
+          telefone: string
+        }
+        Update: {
+          cidade?: string | null
+          colaboradores?: string | null
+          created_at?: string
+          economia_estimada?: number | null
+          email?: string
+          empresa?: string
+          galoes_mes?: number | null
+          id?: string
+          mensagem?: string | null
+          nome?: string
+          origem?: string | null
+          segmento?: string | null
+          telefone?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           aprovado: boolean
