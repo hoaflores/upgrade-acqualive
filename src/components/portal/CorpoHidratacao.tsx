@@ -242,8 +242,7 @@ const CorpoHidratacao = () => {
                 );
               })}
             </svg>
-              </div>
-            </div>
+
 
 
             <p className="absolute bottom-4 left-0 right-0 text-center text-[11px] uppercase tracking-[0.18em] text-[hsl(var(--pc-ink-soft))]">
