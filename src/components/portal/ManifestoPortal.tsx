@@ -141,20 +141,36 @@ const ManifestoPortal = ({ onAbrirArtigo }: Props) => {
         {/* Publicações Acqualive */}
         <div className="mt-20">
           <ScrollReveal>
-            <div className="mx-auto max-w-2xl text-center">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[hsl(var(--pc-cyan))]">
-                Publicações científicas da Acqualive
-              </p>
-              <h3 className="mt-4 font-display text-2xl font-bold md:text-3xl">
-                Laudos, ensaios e artigos revisados por pares
-              </h3>
-              <p className="mt-4 text-[15px] leading-relaxed text-[hsl(var(--pc-ink-soft))]">
-                Para garantir que a Acqualive entrega mesmo a água alcalina ionizada que promete, buscamos comprovação
-                científica em universidades e periódicos. Abaixo estão os estudos, laudos e testes que sustentam a
-                tecnologia, com leitura resumida aqui dentro e o documento original a um clique.
-              </p>
+            <div className="grid items-center gap-10 md:grid-cols-[1fr_1fr]">
+              <div className="relative overflow-hidden rounded-3xl border border-[hsl(var(--pc-line))] shadow-[0_40px_80px_-60px_hsl(var(--pc-blue))]">
+                <img
+                  src={imgLaboratorio.url}
+                  alt="Pesquisador segurando um béquer com água ao lado de um medidor de pH em laboratório"
+                  loading="lazy"
+                  width={1408}
+                  height={1008}
+                  className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-105"
+                />
+                <span className="absolute bottom-4 left-4 rounded-full bg-[hsl(var(--pc-paper)/0.9)] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-[hsl(var(--pc-blue))] backdrop-blur">
+                  Ensaios laboratoriais
+                </span>
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[hsl(var(--pc-cyan))]">
+                  Publicações científicas da Acqualive
+                </p>
+                <h3 className="mt-4 font-display text-2xl font-bold md:text-3xl">
+                  Laudos, ensaios e artigos revisados por pares
+                </h3>
+                <p className="mt-4 text-[15px] leading-relaxed text-[hsl(var(--pc-ink-soft))]">
+                  Para garantir que a Acqualive entrega mesmo a água alcalina ionizada que promete, buscamos comprovação
+                  científica em universidades e periódicos. Abaixo estão os estudos, laudos e testes que sustentam a
+                  tecnologia, com leitura resumida aqui dentro e o documento original a um clique.
+                </p>
+              </div>
             </div>
           </ScrollReveal>
+
 
           <div className="mt-10 grid gap-4 md:grid-cols-2">
             {publicações.map((r, i) => (
