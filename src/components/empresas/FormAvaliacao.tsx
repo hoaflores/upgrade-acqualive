@@ -28,6 +28,18 @@ const SEGMENTOS = [
 
 const COLABORADORES = ["Até 10", "11 a 30", "31 a 100", "101 a 300", "Mais de 300"];
 
+const UNIDADES = ["1 unidade", "2 a 3 unidades", "4 a 10 unidades", "Mais de 10 unidades"];
+
+const OBJETIVOS = [
+  "Substituir galões",
+  "Reduzir custos",
+  "Melhorar a experiência do cliente",
+  "Cuidar melhor da equipe",
+  "Reduzir plástico",
+  "Renovar o ambiente",
+  "Atender mais pessoas",
+];
+
 const FormAvaliacao = () => {
   const [enviando, setEnviando] = useState(false);
   const [enviado, setEnviado] = useState(false);
@@ -39,6 +51,8 @@ const FormAvaliacao = () => {
     cidade: "",
     colaboradores: "",
     segmento: "",
+    unidades: "",
+    objetivo: "",
     mensagem: "",
   });
 
@@ -60,6 +74,8 @@ const FormAvaliacao = () => {
       cidade: form.cidade || null,
       colaboradores: form.colaboradores || null,
       segmento: form.segmento || null,
+      unidades: form.unidades || null,
+      objetivo: form.objetivo || null,
       mensagem: form.mensagem || null,
       origem: "acqualive-empresas",
     });
@@ -143,6 +159,32 @@ const FormAvaliacao = () => {
                     <SelectContent>
                       {COLABORADORES.map((c) => (
                         <SelectItem key={c} value={c}>{c}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div>
+                  <Label>Unidades ou ambientes</Label>
+                  <Select value={form.unidades} onValueChange={(v) => set("unidades", v)}>
+                    <SelectTrigger className="mt-1.5">
+                      <SelectValue placeholder="Selecione" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {UNIDADES.map((u) => (
+                        <SelectItem key={u} value={u}>{u}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div>
+                  <Label>Principal objetivo</Label>
+                  <Select value={form.objetivo} onValueChange={(v) => set("objetivo", v)}>
+                    <SelectTrigger className="mt-1.5">
+                      <SelectValue placeholder="Selecione" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {OBJETIVOS.map((o) => (
+                        <SelectItem key={o} value={o}>{o}</SelectItem>
                       ))}
                     </SelectContent>
                   </Select>
