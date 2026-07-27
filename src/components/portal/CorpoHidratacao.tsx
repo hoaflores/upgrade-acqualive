@@ -136,12 +136,9 @@ const CorpoHidratacao = () => {
               70% água
             </span>
 
-            <div className="relative mx-auto flex h-full items-center justify-center">
-              <div className="relative h-full" style={{ aspectRatio: "100 / 190" }}>
             <svg
               viewBox="0 0 100 190"
-              className="relative h-full w-full"
-
+              className="relative mx-auto block h-full w-auto"
               role="img"
               aria-label="Silhueta humana preenchida com água até 70%"
             >
@@ -156,9 +153,14 @@ const CorpoHidratacao = () => {
                   <stop offset="100%" stopColor="hsl(var(--pc-blue) / 0.75)" />
                 </linearGradient>
                 <clipPath id="pc-corpo-clip">
-                  <circle cx="50" cy="15" r="11.5" />
-                  <rect x="45.5" y="24" width="9" height="7" rx="3.5" />
-                  <path d="M50 27c-6.5 0-11.6 2.2-13.6 5.4l-13.8 7.8c-3 1.7-4.4 4.6-5 8.6l-3.9 26c-.6 4 4.4 5.7 5.7 1.7l4.2-15.6 1 21.4c0 8-1 14.2-2 22.2l-2 29.5c-.5 6-.3 12 .3 18l2.2 22c.5 5 7.4 5 7.8 0l3.1-40.3 4.5-22.6 4.5 22.6 3.1 40.3c.4 5 7.3 5 7.8 0l2.2-22c.6-6 .8-12 .3-18l-2-29.5c-1-8-2-14.2-2-22.2l1-21.4 4.2 15.6c1.3 4 6.3 2.3 5.7-1.7l-3.9-26c-.6-4-2-6.9-5-8.6l-13.8-7.8C61.6 29.2 56.5 27 50 27z" />
+                  <circle cx="50" cy="16" r="12" />
+                  <rect x="45.5" y="25" width="9" height="9" rx="4" />
+                  <path d="M32 36c0-4 6-5 18-5s18 1 18 5l2 24c0 8-4 12-5 20l-3 12H38l-3-12c-1-8-5-12-5-20z" />
+                  <rect x="36" y="86" width="28" height="8" rx="4" />
+                  <path d="M30 37c-5 2-7 7-8 15l-4 34c-1 6 6 7 7 1l5-27z" />
+                  <path d="M70 37c5 2 7 7 8 15l4 34c1 6-6 7-7 1l-5-27z" />
+                  <path d="M38 90h9l1 40-1 50c0 4-7 4-7 0l-2-48z" />
+                  <path d="M62 90h-9l-1 40 1 50c0 4 7 4 7 0l2-48z" />
                 </clipPath>
               </defs>
 
@@ -166,21 +168,21 @@ const CorpoHidratacao = () => {
                 <rect x="0" y="0" width="100" height="190" fill="url(#pc-corpo-vidro)" />
                 <g className="pc-onda">
                   <path
-                    d="M-100 57c12 0 12-4 25-4s13 4 25 4 12-4 25-4 13 4 25 4 12-4 25-4 13 4 25 4 12-4 25-4 13 4 25 4v140h-200z"
+                    d="M-100 58c12 0 12-4 25-4s13 4 25 4 12-4 25-4 13 4 25 4 12-4 25-4 13 4 25 4 12-4 25-4 13 4 25 4v140h-200z"
                     fill="url(#pc-corpo-agua)"
                   />
                 </g>
                 <g className="pc-onda pc-onda-2">
                   <path
-                    d="M-100 60c12 0 12-4 25-4s13 4 25 4 12-4 25-4 13 4 25 4 12-4 25-4 13 4 25 4 12-4 25-4 13 4 25 4v140h-200z"
+                    d="M-100 61c12 0 12-4 25-4s13 4 25 4 12-4 25-4 13 4 25 4 12-4 25-4 13 4 25 4 12-4 25-4 13 4 25 4v140h-200z"
                     fill="hsl(var(--pc-blue) / 0.35)"
                   />
                 </g>
                 {[
                   { cx: 44, cy: 150, r: 2.1, d: "0s" },
                   { cx: 56, cy: 165, r: 1.5, d: "1.4s" },
-                  { cx: 38, cy: 120, r: 1.2, d: "2.6s" },
-                  { cx: 60, cy: 132, r: 1.8, d: "3.6s" },
+                  { cx: 42, cy: 120, r: 1.2, d: "2.6s" },
+                  { cx: 58, cy: 132, r: 1.8, d: "3.6s" },
                 ].map((b) => (
                   <circle
                     key={b.d}
@@ -194,35 +196,52 @@ const CorpoHidratacao = () => {
                 ))}
               </g>
 
-              <g fill="none" stroke="hsl(var(--pc-blue) / 0.55)" strokeWidth="0.9" strokeLinejoin="round">
-                <circle cx="50" cy="15" r="11.5" />
-                <path d="M50 27c-6.5 0-11.6 2.2-13.6 5.4l-13.8 7.8c-3 1.7-4.4 4.6-5 8.6l-3.9 26c-.6 4 4.4 5.7 5.7 1.7l4.2-15.6 1 21.4c0 8-1 14.2-2 22.2l-2 29.5c-.5 6-.3 12 .3 18l2.2 22c.5 5 7.4 5 7.8 0l3.1-40.3 4.5-22.6 4.5 22.6 3.1 40.3c.4 5 7.3 5 7.8 0l2.2-22c.6-6 .8-12 .3-18l-2-29.5c-1-8-2-14.2-2-22.2l1-21.4 4.2 15.6c1.3 4 6.3 2.3 5.7-1.7l-3.9-26c-.6-4-2-6.9-5-8.6l-13.8-7.8C61.6 29.2 56.5 27 50 27z" />
+              <g
+                fill="none"
+                stroke="hsl(var(--pc-blue) / 0.55)"
+                strokeWidth="0.9"
+                strokeLinejoin="round"
+                clipPath="url(#pc-corpo-clip)"
+              >
+                <rect x="0.45" y="0.45" width="99.1" height="189.1" strokeWidth="1.8" />
               </g>
-            </svg>
 
-            {PONTOS.map((p) => {
-              const on = p.id === ativo.id;
-              return (
-                <button
-                  key={p.id}
-                  type="button"
-                  onClick={() => setAtivo(p)}
-                  aria-label={p.nome}
-                  aria-pressed={on}
-                  className="absolute z-10 -translate-x-1/2 -translate-y-1/2 rounded-full transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--pc-blue))]"
-                  style={{ left: `${p.x}%`, top: `${p.y}%` }}
-                >
-                  <span
-                    className={`block rounded-full transition-all duration-300 ${
-                      on
-                        ? "h-4 w-4 bg-[hsl(var(--pc-amber))] shadow-[0_0_0_6px_hsl(var(--pc-amber)/0.28)]"
-                        : "h-3 w-3 bg-[hsl(var(--pc-paper))] shadow-[0_0_0_3px_hsl(var(--pc-blue)/0.55)] hover:scale-125"
-                    }`}
-                  />
-                  {!on && <span className="pc-ping absolute inset-0 rounded-full" aria-hidden />}
-                </button>
-              );
-            })}
+              {PONTOS.map((p) => {
+                const on = p.id === ativo.id;
+                return (
+                  <g
+                    key={p.id}
+                    role="button"
+                    tabIndex={0}
+                    aria-label={p.nome}
+                    aria-pressed={on}
+                    onClick={() => setAtivo(p)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        setAtivo(p);
+                      }
+                    }}
+                    className="cursor-pointer focus:outline-none"
+                  >
+                    <circle
+                      cx={p.x}
+                      cy={p.y}
+                      r={on ? 5.5 : 4}
+                      fill={on ? "hsl(var(--pc-amber) / 0.3)" : "hsl(var(--pc-blue) / 0.22)"}
+                    />
+                    <circle
+                      cx={p.x}
+                      cy={p.y}
+                      r={on ? 2.6 : 1.9}
+                      fill={on ? "hsl(var(--pc-amber))" : "hsl(var(--pc-paper))"}
+                      stroke={on ? "hsl(var(--pc-amber))" : "hsl(var(--pc-blue) / 0.7)"}
+                      strokeWidth="0.9"
+                    />
+                  </g>
+                );
+              })}
+            </svg>
               </div>
             </div>
 
@@ -231,6 +250,7 @@ const CorpoHidratacao = () => {
               Toque nos pontos
             </p>
           </div>
+
 
 
           <div>
