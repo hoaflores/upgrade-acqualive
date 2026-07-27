@@ -23,16 +23,18 @@ const LiteYouTube = ({
   params = "rel=0&modestbranding=1&playsinline=1",
   quality = "hq",
   className = "absolute inset-0 w-full h-full",
+  nocookie = false,
 }: LiteYouTubeProps) => {
   const [active, setActive] = useState(false);
 
   const thumbName = quality === "maxres" ? "maxresdefault" : quality === "sd" ? "sddefault" : "hqdefault";
   const autoplayParams = params.includes("autoplay=") ? params : `autoplay=1&${params}`;
+  const host = nocookie ? "https://www.youtube-nocookie.com" : "https://www.youtube.com";
 
   if (active) {
     return (
       <iframe
-        src={`https://www.youtube.com/embed/${id}?${autoplayParams}`}
+        src={`${host}/embed/${id}?${autoplayParams}`}
         title={title}
         loading="lazy"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
