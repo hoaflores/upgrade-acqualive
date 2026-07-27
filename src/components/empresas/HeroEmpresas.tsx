@@ -17,7 +17,7 @@ const HeroEmpresas = () => {
 
       <div className="container relative z-10 pt-8 pb-24 lg:pt-12">
         <header className="flex items-center justify-between mb-14 lg:mb-20 animate-fade-in">
-          <img src={logoAcqualiveWhite.url} alt="Acqualive" className="h-11 md:h-12 w-auto" />
+          <img src={logoAcqualiveWhite.url} alt="Acqualive" width={220} height={48} decoding="async" className="h-11 md:h-12 w-auto" />
           <span className="hidden md:inline-flex items-center text-[11px] font-semibold uppercase tracking-[0.32em] text-primary-foreground/70 border-l border-primary-foreground/20 pl-4">
             Divisão Empresas
           </span>
@@ -81,6 +81,10 @@ const HeroEmpresas = () => {
               <img
                 src={IMG.duoFrente}
                 alt="Purificador Acqualive DUO para empresas, água natural e fresquinha"
+                width={670}
+                height={1173}
+                decoding="async"
+                fetchPriority="high"
                 className="relative w-full h-auto object-contain animate-float drop-shadow-2xl"
               />
             </div>
