@@ -158,7 +158,7 @@ const PortalCientifico = () => {
       <footer className="border-t border-[hsl(var(--pc-line))] py-10">
         <div className="container flex flex-col items-center gap-4 text-center text-xs text-[hsl(var(--pc-ink-soft))]">
           <p className="max-w-2xl">
-            Conteudo de caráter informativo e educativo. Não substitui avaliação, diagnóstico ou tratamento realizado
+            Conteúdo de caráter informativo e educativo. Não substitui avaliação, diagnóstico ou tratamento realizado
             por profissional de saúde.
           </p>
           <p>Portal Científico Acqualive</p>

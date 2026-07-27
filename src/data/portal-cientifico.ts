@@ -45,7 +45,7 @@ export const REFERÊNCIAS: Referência[] = [
     titulo: "Água alcalina pH 8,8 desativa a pepsina, enzima que causa refluxo",
     tituloOriginal:
       "Potential benefits of pH 8.8 alkaline drinking water as an adjunct in the treatment of reflux disease",
-    autores: "Koufman JA, Johnston N",
+    autores: "Koufman Já, Johnston N",
     fonte: "Annals of Otology, Rhinology & Laryngology, 121(7)",
     ano: 2012,
     idioma: "en",
@@ -53,7 +53,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "alto",
     eixos: ["Água alcalina", "Digestão e refluxo"],
     resumo:
-      "Pesquisadores do Voice Institute of New York testaram água alcalina natural com pH 8,8 contra a pepsina humana, a enzima responsavel por grande parte da lesão tecidual no refluxo laringofaringeo. A água alcalina desnaturou a enzima de forma praticamente instantanea e irreversível, algo que a água mineral comum (pH proximo de 7) não conseguiu fazer. Além disso, a água de pH 8,8 apresentou boa capacidade tampão, ou seja, manteve o efeito mesmo diante da acidez do conteudo gástrico.",
+      "Pesquisadores do Voice Institute of New York testaram água alcalina natural com pH 8,8 contra a pepsina humana, a enzima responsável por grande parte da lesão tecidual no refluxo laringofaríngeo. A água alcalina desnaturou a enzima de forma praticamente instantânea e irreversível, algo que a água mineral comum (pH próximo de 7) não conseguiu fazer. Além disso, a água de pH 8,8 apresentou boa capacidade tampão, ou seja, manteve o efeito mesmo diante da acidez do conteúdo gástrico.",
     pontos: [
       "Desativação imediata da pepsina humana in vitro em pH 8,8",
       "Água com pH neutro não produziu o mesmo efeito",
@@ -79,7 +79,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "alto",
     eixos: ["Água alcalina", "Performance esportiva", "Hidratação funcional"],
     resumo:
-      "Ensaio randomizado com adultos saudaveis submetidos a exercicio de desidratação. O grupo que reidratou com água alcalina eletrolisada de alto pH apresentou redução de 6,3% na viscosidade sanguínea, contra 3,36% do grupo que bebeu água purificada padrão. Sangue menos viscoso significa menos esforco cardíaco para entregar oxigênio aos musculos e ao cerebro.",
+      "Ensaio randomizado com adultos saudaveis submetidos a exercicio de desidratação. O grupo que reidratou com água alcalina eletrolisada de alto pH apresentou redução de 6,3% na viscosidade sanguínea, contra 3,36% do grupo que bebeu água purificada padrão. Sangue menos viscoso significa menos esforco cardíaco para entregar oxigênio aos músculos e ao cérebro.",
     pontos: [
       "Redução de viscosidade quase duas vezes maior que a água comum",
       "Melhor entrega de oxigênio aos tecidos após esforco",
@@ -87,7 +87,7 @@ export const REFERÊNCIAS: Referência[] = [
       "Sugere reidratacao mais eficiente com água alcalina",
     ],
     aplicação:
-      "Sustenta a recomendação de água alcalina para atletas, praticantes de atividade fisica e pessoas com rotina de alta demanda.",
+      "Sustenta a recomendação de água alcalina para atletas, praticantes de atividade física e pessoas com rotina de alta demanda.",
     url: "https://jissn.biomedcentral.com/articles/10.1186/s12970-016-0153-8",
     acessoAberto: true,
     termos: ["viscosidade", "sangue", "atleta", "exercicio", "oxigênio", "reidratacao", "desempenho"],
@@ -155,7 +155,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "alto",
     eixos: ["Água alcalina", "Longevidade e metabolismo"],
     resumo:
-      "Estudo de três anos acompanhou camundongos que receberam água alcalina versus água comum ao longo de toda a vida. O grupo que bebeu água alcalina apresentou sobrevivência significativamente maior, além de melhores marcadores de saúde cardiaca e hepatica ao final do experimento.",
+      "Estudo de três anos acompanhou camundongos que receberam água alcalina versus água comum ao longo de toda a vida. O grupo que bebeu água alcalina apresentou sobrevivência significativamente maior, além de melhores marcadores de saúde cardíaca e hepática ao final do experimento.",
     pontos: [
       "Aumento estatisticamente significativo da longevidade",
       "Melhores parametros de tecido cardíaco e hepático",
@@ -381,7 +381,7 @@ export const REFERÊNCIAS: Referência[] = [
     resumo:
       "Norma que define os parametros de potabilidade no Brasil, incluindo limites para cloro residual, trihalometanos, metais e agrotóxicos. Potável significa dentro do limite legal aceitável, não significa ideal para o consumo diario de longo prazo.",
     pontos: [
-      "Define limites maximos, não níveis otimos",
+      "Define limites maximos, não níveis ótimos",
       "Cloro residual é obrigatório na rede de distribuição",
       "Contaminação pode ocorrer após a estação de tratamento, na rede e na caixa d'água",
     ],
@@ -403,9 +403,9 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "medio",
     eixos: ["Hidratação funcional"],
     resumo:
-      "Revisão clássica que reúne as evidências sobre o papel da água na termorregulação, função renal, cognição e desempenho físico. Mostra que desidratações leves, de 1% a 2% do peso corporal, ja prejudicam concentração, humor e rendimento.",
+      "Revisão clássica que reúne as evidências sobre o papel da água na termorregulação, função renal, cognição e desempenho físico. Mostra que desidratações leves, de 1% a 2% do peso corporal, já prejudicam concentração, humor e rendimento.",
     pontos: [
-      "Perda de 1% a 2% do peso ja reduz cognição e desempenho",
+      "Perda de 1% a 2% do peso já reduz cognição e desempenho",
       "Hidratação adequada impacta função renal e cardiovascular",
       "Sede é um sinal tardio de desidratação",
     ],
@@ -441,7 +441,7 @@ export const REFERÊNCIAS: Referência[] = [
   },
   {
     id: "wang-2018-h2-metabólico",
-    titulo: "Água com hidrogênio melhora marcadores metabolicos e lipidicos",
+    titulo: "Água com hidrogênio melhora marcadores metabolicos e lipídicos",
     tituloOriginal:
       "Effects of hydrogen-rich water on lipid and glucose metabolism in subjects with potential metabolic syndrome",
     autores: "Song G, Li M, Sang H, et al.",
@@ -452,11 +452,11 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "medio",
     eixos: ["Antioxidantes e hidrogênio", "Longevidade e metabolismo"],
     resumo:
-      "Participantes com sindrome metabólica potencial consumiram água rica em hidrogênio por dez semanas. Observou-se melhora do colesterol HDL, redução de marcadores de estresse oxidativo e melhora da tolerancia a glicose.",
+      "Participantes com sindrome metabólica potencial consumiram água rica em hidrogênio por dez semanas. Observou-se melhora do colesterol HDL, redução de marcadores de estresse oxidativo e melhora da tolerância a glicose.",
     pontos: [
-      "Melhora do perfil lipidico em dez semanas",
+      "Melhora do perfil lipídico em dez semanas",
       "Redução de marcadores de estresse oxidativo",
-      "Melhora de tolerancia a glicose no subgrupo analisado",
+      "Melhora de tolerância a glicose no subgrupo analisado",
     ],
     aplicação:
       "Complementa o eixo metabólico da água funcional para público interessado em saúde preventiva.",
@@ -529,7 +529,7 @@ export const REFERÊNCIAS: Referência[] = [
       "Modelo experimental mostrou que a ingestão de água alcalina eletrolisada alterou a composição da microbiota intestinal, com aumento de generos associados a produção de ácidos graxos de cadeia curta, que tem papel protetor na barreira intestinal.",
     pontos: [
       "Mudanca favoravel na composição da microbiota",
-      "Aumento de bacterias produtoras de butirato",
+      "Aumento de bactérias produtoras de butirato",
       "Sugere mecanismo além do simples pH",
     ],
     aplicação:
@@ -574,10 +574,10 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "alto",
     eixos: ["Minerais essenciais", "Longevidade e metabolismo"],
     resumo:
-      "Estudo cruzado com mulheres saudaveis comparou água mineral alcalina bicarbonatada com água ácida rica em cálcio. A água alcalina reduziu marcadores de reabsorção óssea é o paratormônio serico, mesmo em pessoas com ingestão adequada de cálcio.",
+      "Estudo cruzado com mulheres saudaveis comparou água mineral alcalina bicarbonatada com água ácida rica em cálcio. A água alcalina reduziu marcadores de reabsorção óssea é o paratormônio sérico, mesmo em pessoas com ingestão adequada de cálcio.",
     pontos: [
       "Redução de marcadores de reabsorção óssea",
-      "Queda do paratormônio serico",
+      "Queda do paratormônio sérico",
       "Efeito independente da quantidade de cálcio ingerida",
     ],
     aplicação:
@@ -886,13 +886,13 @@ export const PERGUNTAS_GUIA: PerguntaGuia[] = [
   {
     pergunta: "Água alcalina ajuda no metabolismo e no colesterol?",
     resposta:
-      "Estudos com água rica em hidrogênio mostraram melhora do HDL, redução de estresse oxidativo é melhor tolerancia a glicose em dez semanas.",
+      "Estudos com água rica em hidrogênio mostraram melhora do HDL, redução de estresse oxidativo é melhor tolerância a glicose em dez semanas.",
     refs: ["wang-2018-h2-metabólico", "lebaron-2019-h2-revisão", "magro-2016-longevidade"],
   },
   {
     pergunta: "Desidratação leve atrapalha o trabalho é o estudo?",
     resposta:
-      "Sim. Perdas de 1% a 2% do peso corporal ja reduzem memória de trabalho, atenção e humor, e aumentam a fadiga percebida.",
+      "Sim. Perdas de 1% a 2% do peso corporal já reduzem memória de trabalho, atenção e humor, e aumentam a fadiga percebida.",
     refs: ["popkin-2010-hidratação", "riebl-2013-desidratação"],
   },
 ];

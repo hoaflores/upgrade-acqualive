@@ -19,13 +19,13 @@ const HeroPortal = () => {
           </span>
 
           <h1 className="mt-7 font-display text-4xl font-bold leading-[1.1] md:text-6xl">
-            Tudo o que a ciência ja provou sobre{" "}
+            Tudo o que a ciência já provou sobre{" "}
             <span className="pc-underline-amber">água alcalina e hidratação</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[hsl(var(--pc-ink-soft))]">
-            Uma enciclopédia viva com estudos revisados por pares, documentos da OMS e conteudo técnico traduzido para o
-            português. Faca uma pergunta e receba a resposta com a referência na mão.
+            Uma enciclopédia viva com estudos revisados por pares, documentos da OMS e conteúdo técnico traduzido para o
+            português. Faça uma pergunta e receba a resposta com a referência na mão.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3">

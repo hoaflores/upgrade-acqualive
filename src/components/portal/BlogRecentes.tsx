@@ -30,7 +30,7 @@ const BlogRecentes = () => {
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold md:text-4xl">Direto do blog Acqualive</h2>
               <p className="mt-4 text-[hsl(var(--pc-ink-soft))]">
-                Conteudo novo publicado pela nossa equipe, atualizado automaticamente.
+                Conteúdo novo publicado pela nossa equipe, atualizado automaticamente.
               </p>
             </div>
           </div>
