@@ -10,20 +10,9 @@ import {
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import imgLaboratorio from "@/assets/portal/laboratorio.jpg.asset.json";
-import logoUnicamp from "@/assets/portal/unicamp.svg.asset.json";
-import logoUfpa from "@/assets/portal/ufpa.jpg.asset.json";
 import { REFERÊNCIAS, type Referência } from "@/data/portal-cientifico";
 
-const LOGOS_FONTE: { chave: string; src: string; alt: string }[] = [
-  { chave: "unicamp", src: logoUnicamp.url, alt: "Unicamp" },
-  { chave: "ufpa", src: logoUfpa.url, alt: "UFPA" },
-  { chave: "pará", src: logoUfpa.url, alt: "UFPA" },
-];
 
-const logoDaFonte = (r: Referência) => {
-  const texto = `${r.fonte} ${r.id}`.toLowerCase();
-  return LOGOS_FONTE.find((l) => texto.includes(l.chave));
-};
 
 
 interface Props {
@@ -188,25 +177,15 @@ const ManifestoPortal = ({ onAbrirArtigo }: Props) => {
 
 
           <div className="mt-10 grid gap-4 md:grid-cols-2">
-            {publicações.map((r, i) => {
-              const logo = logoDaFonte(r);
-              return (
+            {publicações.map((r, i) => (
               <ScrollReveal key={r.id} delay={(i % 2) * 90}>
                 <button
                   type="button"
                   onClick={() => onAbrirArtigo(r)}
                   className="pc-card group flex h-full w-full flex-col rounded-2xl p-6 text-left transition hover:-translate-y-0.5 hover:shadow-lg"
                 >
-                  {logo ? (
-                    <img
-                      src={logo.src}
-                      alt={logo.alt}
-                      loading="lazy"
-                      className="h-12 w-auto opacity-80 transition group-hover:opacity-100"
-                    />
-                  ) : (
-                    <FileCheck2 className="h-6 w-6 text-[hsl(var(--pc-amber))]" aria-hidden />
-                  )}
+                  <FileCheck2 className="h-6 w-6 text-[hsl(var(--pc-amber))]" aria-hidden />
+
                   <span className="mt-3 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-[hsl(var(--pc-amber))]">
                     {r.fonte}
                   </span>
@@ -220,8 +199,8 @@ const ManifestoPortal = ({ onAbrirArtigo }: Props) => {
                   </span>
                 </button>
               </ScrollReveal>
-              );
-            })}
+            ))}
+
           </div>
         </div>
       </div>
