@@ -57,37 +57,113 @@ const Eyebrow = ({ children }: { children: React.ReactNode }) => (
   </span>
 );
 
-export const CarrosselMarcas = () => (
-  <section className="py-16 lg:py-20 bg-background border-y border-border/60 overflow-hidden">
-    <div className="container mb-10">
-      <Eyebrow>Quem já bebe Acqualive</Eyebrow>
-      <h2 className="mt-4 font-display text-2xl md:text-3xl font-bold text-foreground tracking-tight">
-        Clínicas, academias, cafeterias e restaurantes que trocaram o galão
-      </h2>
-    </div>
+export const CarrosselMarcas = () => {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const pausedRef = useRef(false);
+  const dragRef = useRef({ active: false, startX: 0, startScroll: 0, moved: false });
 
-    <div className="relative group">
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-background to-transparent z-10" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-background to-transparent z-10" />
-      <div className="flex w-max animate-marquee gap-6 group-hover:[animation-play-state:paused]">
-        {[...MARCAS, ...MARCAS].map((m, i) => (
-          <div
-            key={`${m.nome}-${i}`}
-            className="w-36 h-36 md:w-44 md:h-44 flex-shrink-0 rounded-2xl overflow-hidden border border-border/70 bg-card shadow-sm transition-transform duration-300 hover:-translate-y-1"
-          >
-            <img
-              src={m.src}
-              alt={`Logo ${m.nome}`}
-              loading="lazy"
-              decoding="async"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        ))}
+  useEffect(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    let raf = 0;
+    let last = performance.now();
+    const step = (now: number) => {
+      const dt = now - last;
+      last = now;
+      if (!pausedRef.current && el.scrollWidth > 0) {
+        el.scrollLeft += (dt / 1000) * 40;
+        const half = el.scrollWidth / 2;
+        if (el.scrollLeft >= half) el.scrollLeft -= half;
+      }
+      raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+  }, []);
+
+  const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    const el = trackRef.current;
+    if (!el) return;
+    dragRef.current = { active: true, startX: e.clientX, startScroll: el.scrollLeft, moved: false };
+    pausedRef.current = true;
+    el.setPointerCapture(e.pointerId);
+  };
+
+  const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    const el = trackRef.current;
+    if (!el || !dragRef.current.active) return;
+    const dx = e.clientX - dragRef.current.startX;
+    if (Math.abs(dx) > 3) dragRef.current.moved = true;
+    el.scrollLeft = dragRef.current.startScroll - dx;
+    const half = el.scrollWidth / 2;
+    if (el.scrollLeft >= half) {
+      el.scrollLeft -= half;
+      dragRef.current.startScroll -= half;
+    } else if (el.scrollLeft <= 0) {
+      el.scrollLeft += half;
+      dragRef.current.startScroll += half;
+    }
+  };
+
+  const endDrag = (e: React.PointerEvent<HTMLDivElement>) => {
+    const el = trackRef.current;
+    dragRef.current.active = false;
+    pausedRef.current = false;
+    if (el?.hasPointerCapture(e.pointerId)) el.releasePointerCapture(e.pointerId);
+  };
+
+  return (
+    <section className="py-16 lg:py-20 bg-background border-y border-border/60 overflow-hidden">
+      <div className="container mb-10">
+        <Eyebrow>Quem já bebe Acqualive</Eyebrow>
+        <h2 className="mt-4 font-display text-2xl md:text-3xl font-bold text-foreground tracking-tight">
+          Clínicas, academias, cafeterias e restaurantes que trocaram o galão
+        </h2>
+        <p className="mt-3 text-sm text-muted-foreground">Arraste para o lado para ver todas as marcas.</p>
       </div>
-    </div>
-  </section>
-);
+
+      <div className="relative">
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-background to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-background to-transparent z-10" />
+        <div
+          ref={trackRef}
+          role="region"
+          aria-label="Marcas que usam Acqualive"
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={endDrag}
+          onPointerCancel={endDrag}
+          onMouseEnter={() => (pausedRef.current = true)}
+          onMouseLeave={() => {
+            if (!dragRef.current.active) pausedRef.current = false;
+          }}
+          onTouchStart={() => (pausedRef.current = true)}
+          onTouchEnd={() => (pausedRef.current = false)}
+          className="flex gap-6 overflow-x-auto px-6 cursor-grab active:cursor-grabbing select-none touch-pan-x [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        >
+          {[...MARCAS, ...MARCAS].map((m, i) => (
+            <div
+              key={`${m.nome}-${i}`}
+              className="w-36 h-36 md:w-44 md:h-44 flex-shrink-0 rounded-2xl overflow-hidden border border-border/70 bg-card shadow-sm flex items-center justify-center p-3 transition-transform duration-300 hover:-translate-y-1"
+            >
+              <img
+                src={m.src}
+                alt={`Logo ${m.nome}`}
+                loading="lazy"
+                decoding="async"
+                draggable={false}
+                className="max-w-full max-h-full w-auto h-auto object-contain rounded-lg pointer-events-none"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 
 export const DepoimentosEmpresas = () => (
   <section id="depoimentos" className="py-20 lg:py-28 bg-secondary text-primary-foreground">
