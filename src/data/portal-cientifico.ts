@@ -817,6 +817,10 @@ const REFERÊNCIAS_BASE: Referência[] = [
   },
 ];
 
+export const REFERÊNCIAS: Referência[] = [...REFERÊNCIAS_BASE, ...REFERÊNCIAS_EXTRA];
+
+
+
 /** Perguntas frequentes que direcionam o usuário para as referências certas. */
 export interface PerguntaGuia {
   pergunta: string;
