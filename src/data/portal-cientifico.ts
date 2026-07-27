@@ -61,7 +61,7 @@ export const REFERÊNCIAS: Referência[] = [
       "Os autores sugerem a água alcalina como coadjuvante no tratamento do refluxo",
     ],
     aplicação:
-      "E a base científica mais citada para quem sente queimacao, refluxo ou desconforto gástrico e busca uma água alcalina de consumo diario.",
+      "É a base científica mais citada para quem sente queimacao, refluxo ou desconforto gástrico e busca uma água alcalina de consumo diario.",
     url: "https://pubmed.ncbi.nlm.nih.gov/22844861/",
     acessoAberto: false,
     termos: ["refluxo", "pepsina", "azia", "queimacao", "estômago", "ph 8.8", "gastrite", "digestão"],
@@ -94,7 +94,7 @@ export const REFERÊNCIAS: Referência[] = [
   },
   {
     id: "chycki-2018-acidose",
-    titulo: "Água alcalina melhora o equilibrio acido-base e o desempenho de atletas",
+    titulo: "Água alcalina melhora o equilibrio acido-base é o desempenho de atletas",
     tituloOriginal:
       "Water and electrolyte balance and acid-base status after alkaline water ingestion in combat sport athletes",
     autores: "Chycki J, Kurylas A, Maszczyk A, Golas A, Zajac A",
@@ -163,7 +163,7 @@ export const REFERÊNCIAS: Referência[] = [
       "Nenhuma toxicidade observada no consumo crônico",
     ],
     aplicação:
-      "E a evidência mais forte de que o consumo crônico de água alcalina e seguro e pode ter efeito protetor a longo prazo.",
+      "É a evidência mais forte de que o consumo crônico de água alcalina é seguro e pode ter efeito protetor a longo prazo.",
     url: "https://onlinelibrary.wiley.com/doi/10.1155/2016/3084126",
     acessoAberto: true,
     termos: ["longevidade", "envelhecimento", "sobrevida", "coracao", "figado", "crônico"],
@@ -207,7 +207,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "alto",
     eixos: ["Antioxidantes e hidrogênio"],
     resumo:
-      "Publicado na Nature Medicine, este estudo mostrou que o hidrogênio molecular dissolvido neutraliza seletivamente os radicais mais tóxicos ao organismo, o radical hidroxila e o peroxinitrito, sem interferir nas espécies reativas que o corpo usa em processos fisiológicos normais. Deu origem a mais de mil publicações sobre hidrogênio na medicina.",
+      "Publicado na Nature Medicine, este estudo mostrou que o hidrogênio molecular dissolvido neutraliza seletivamente os radicais mais tóxicos ao organismo, o radical hidroxila é o peroxinitrito, sem interferir nas espécies reativas que o corpo usa em processos fisiológicos normais. Deu origem a mais de mil publicações sobre hidrogênio na medicina.",
     pontos: [
       "Acao antioxidante seletiva, sem desregular a sinalização celular",
       "Publicado em periodico de altíssimo impacto",
@@ -215,7 +215,7 @@ export const REFERÊNCIAS: Referência[] = [
       "Molécula pequena, atravessa membranas com facilidade",
     ],
     aplicação:
-      "Explica por que a água ionizada alcalina, rica em hidrogênio dissolvido, e tratada como água funcional e não apenas como água com pH mais alto.",
+      "Explica por que a água ionizada alcalina, rica em hidrogênio dissolvido, é tratada como água funcional e não apenas como água com pH mais alto.",
     url: "https://www.nature.com/articles/nm1577",
     acessoAberto: false,
     termos: ["hidrogênio", "h2", "antioxidante", "radical hidroxila", "nature"],
@@ -257,7 +257,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "medio",
     eixos: ["Minerais essenciais", "Longevidade e metabolismo"],
     resumo:
-      "Consumo de água mineral rica em magnésio e cálcio reduziu a pressao arterial em pessoas com baixa excreção urinária desses minerais, indicando que a água e uma via relevante de aporte mineral e não apenas um veiculo de hidratação.",
+      "Consumo de água mineral rica em magnésio e cálcio reduziu a pressao arterial em pessoas com baixa excreção urinária desses minerais, indicando que a água é uma via relevante de aporte mineral e não apenas um veiculo de hidratação.",
     pontos: [
       "Redução de pressao arterial em subgrupo com deficiencia",
       "Água como fonte real de magnésio e cálcio",
@@ -382,7 +382,7 @@ export const REFERÊNCIAS: Referência[] = [
       "Norma que define os parametros de potabilidade no Brasil, incluindo limites para cloro residual, trihalometanos, metais e agrotoxicos. Potável significa dentro do limite legal aceitavel, não significa ideal para o consumo diario de longo prazo.",
     pontos: [
       "Define limites maximos, não niveis otimos",
-      "Cloro residual e obrigatorio na rede de distribuição",
+      "Cloro residual é obrigatório na rede de distribuição",
       "Contaminação pode ocorrer após a estação de tratamento, na rede e na caixa d'água",
     ],
     aplicação:
@@ -407,7 +407,7 @@ export const REFERÊNCIAS: Referência[] = [
     pontos: [
       "Perda de 1% a 2% do peso ja reduz cognição e desempenho",
       "Hidratação adequada impacta função renal e cardiovascular",
-      "Sede e um sinal tardio de desidratação",
+      "Sede é um sinal tardio de desidratação",
     ],
     aplicação:
       "Ponto de partida didatico para o público leigo entender por que água de qualidade e acesso facil mudam a rotina.",
@@ -574,7 +574,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "alto",
     eixos: ["Minerais essenciais", "Longevidade e metabolismo"],
     resumo:
-      "Estudo cruzado com mulheres saudaveis comparou água mineral alcalina bicarbonatada com água ácida rica em cálcio. A água alcalina reduziu marcadores de reabsorção óssea e o paratormônio serico, mesmo em pessoas com ingestão adequada de cálcio.",
+      "Estudo cruzado com mulheres saudaveis comparou água mineral alcalina bicarbonatada com água ácida rica em cálcio. A água alcalina reduziu marcadores de reabsorção óssea é o paratormônio serico, mesmo em pessoas com ingestão adequada de cálcio.",
     pontos: [
       "Redução de marcadores de reabsorção óssea",
       "Queda do paratormônio serico",
@@ -588,7 +588,7 @@ export const REFERÊNCIAS: Referência[] = [
   },
   {
     id: "burckhardt-2008-acido-base-dieta",
-    titulo: "Carga ácida da dieta moderna e o papel da água alcalina",
+    titulo: "Carga ácida da dieta moderna é o papel da água alcalina",
     tituloOriginal: "The effect of the alkali load of mineral water on bone metabolism",
     autores: "Burckhardt P",
     fonte: "The Journal of Nutrition, 138(2)",
@@ -648,7 +648,7 @@ export const REFERÊNCIAS: Referência[] = [
     resumo:
       "Relatório conjunto mostra que bilhoes de pessoas no mundo ainda não contam com água potável gerenciada de forma segura no domicílio, e destaca contaminação química e microbiológica como desafios persistentes mesmo em areas urbanas.",
     pontos: [
-      "Contaminação domiciliar e um problema global",
+      "Contaminação domiciliar é um problema global",
       "Água chegar encanada não garante qualidade no copo",
       "Purificação no ponto de uso e recomendada",
     ],
@@ -713,7 +713,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "base",
     eixos: ["Antioxidantes e hidrogênio"],
     resumo:
-      "Verbete sobre o hidrogênio molecular, suas propriedades físico-químicas e o campo emergente de pesquisa biomedica em torno da molécula, incluindo água hidrogenada.",
+      "Verbete sobre o hidrogênio molecular, suas propriedades físico-químicas é o campo emergente de pesquisa biomedica em torno da molécula, incluindo água hidrogenada.",
     pontos: [
       "Menor molécula existente, alta difusibilidade",
       "Campo de pesquisa biomédico em expansão",
@@ -735,7 +735,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "base",
     eixos: ["Minerais essenciais"],
     resumo:
-      "Explica como águas minerais são classificadas por composição, incluindo águas bicarbonatadas, alcalinas e sulfatadas, e o que cada mineral representa para o organismo.",
+      "Explica como águas minerais são classificadas por composição, incluindo águas bicarbonatadas, alcalinas e sulfatadas, é o que cada mineral representa para o organismo.",
     pontos: [
       "Classificação oficial de águas minerais",
       "Diferenca entre alcalina natural e alcalina ionizada",
@@ -779,7 +779,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "base",
     eixos: ["Qualidade da água comum"],
     resumo:
-      "Descreve o mecanismo de adsorção do carvão ativado, sua eficiencia na remocao de cloro, odores e compostos orgânicos, e por que ele e o padrão em purificadores domésticos de qualidade.",
+      "Descreve o mecanismo de adsorção do carvão ativado, sua eficiencia na remocao de cloro, odores e compostos orgânicos, e por que ele é o padrão em purificadores domésticos de qualidade.",
     pontos: [
       "Adsorção remove cloro e compostos orgânicos",
       "Preserva minerais dissolvidos na água",
@@ -802,7 +802,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "base",
     eixos: ["Água alcalina"],
     resumo:
-      "Trabalho fotográfico de Masaru Emoto sobre a formação de cristais de água congelada em diferentes condições. E um material de divulgação e sensibilização sobre a qualidade da água, muito usado para despertar o interesse do público no tema.",
+      "Trabalho fotográfico de Masaru Emoto sobre a formação de cristais de água congelada em diferentes condições. É um material de divulgação e sensibilização sobre a qualidade da água, muito usado para despertar o interesse do público no tema.",
     pontos: [
       "Fotografia de cristais em diferentes fontes de água",
       "Material de divulgação, não de evidência clínica",
@@ -838,11 +838,11 @@ export const PERGUNTAS_GUIA: PerguntaGuia[] = [
   {
     pergunta: "Água alcalina hidrata melhor que água comum?",
     resposta:
-      "As evidências apontam que sim: melhor balanco hidrico em três dias, menor viscosidade sanguínea e melhor estado de hidratação em consumo continuo.",
+      "As evidências apontam que sim: melhor balanco hidrico em três dias, menor viscosidade sanguínea é melhor estado de hidratação em consumo continuo.",
     refs: ["heil-2010-acido-base", "weidman-2016-viscosidade", "popkin-2010-hidratação"],
   },
   {
-    pergunta: "Beber água alcalina todos os dias e seguro?",
+    pergunta: "Beber água alcalina todos os dias é seguro?",
     resposta:
       "Sim. Estudo de longo prazo com consumo crônico mostrou maior longevidade e nenhum sinal de toxicidade, e revisões sobre hidrogênio apontam perfil de segurança excelente.",
     refs: ["magro-2016-longevidade", "lebaron-2019-h2-revisão", "chycki-2018-acidose"],
@@ -854,13 +854,13 @@ export const PERGUNTAS_GUIA: PerguntaGuia[] = [
     refs: ["mason-2018-garrafas", "oms-2022-microplásticos", "unicef-2023-agua-segura"],
   },
   {
-    pergunta: "A água da torneira não e suficiente?",
+    pergunta: "A água da torneira não é suficiente?",
     resposta:
       "Potável significa dentro do limite legal, não ideal. Cloro residual e trihalometanos permanecem na água tratada e a contaminação pode ocorrer depois, na rede e na caixa d'água.",
     refs: ["villanueva-2015-thm", "ministerio-saude-portaria", "wiki-carvao-ativado"],
   },
   {
-    pergunta: "Osmose reversa e melhor que filtragem que preserva minerais?",
+    pergunta: "Osmose reversa é melhor que filtragem que preserva minerais?",
     resposta:
       "A OMS alerta que água desmineralizada sacia menos a sede, aumenta a perda urinária de minerais e não fornece cálcio e magnésio, que a água deveria entregar.",
     refs: ["oms-2005-desmineralizada", "rylander-2004-magnésio", "wiki-agua-mineral"],
@@ -874,7 +874,7 @@ export const PERGUNTAS_GUIA: PerguntaGuia[] = [
   {
     pergunta: "O que e hidratação funcional?",
     resposta:
-      "E hidratar com água que entrega algo além da molécula de água: minerais biodisponíveis, pH alcalino e hidrogênio dissolvido, impactando energia, foco e recuperacao.",
+      "É hidratar com água que entrega algo além da molécula de água: minerais biodisponíveis, pH alcalino e hidrogênio dissolvido, impactando energia, foco e recuperacao.",
     refs: ["popkin-2010-hidratação", "riebl-2013-desidratação", "heil-2010-acido-base"],
   },
   {
@@ -886,11 +886,11 @@ export const PERGUNTAS_GUIA: PerguntaGuia[] = [
   {
     pergunta: "Água alcalina ajuda no metabolismo e no colesterol?",
     resposta:
-      "Estudos com água rica em hidrogênio mostraram melhora do HDL, redução de estresse oxidativo e melhor tolerancia a glicose em dez semanas.",
+      "Estudos com água rica em hidrogênio mostraram melhora do HDL, redução de estresse oxidativo é melhor tolerancia a glicose em dez semanas.",
     refs: ["wang-2018-h2-metabólico", "lebaron-2019-h2-revisão", "magro-2016-longevidade"],
   },
   {
-    pergunta: "Desidratação leve atrapalha o trabalho e o estudo?",
+    pergunta: "Desidratação leve atrapalha o trabalho é o estudo?",
     resposta:
       "Sim. Perdas de 1% a 2% do peso corporal ja reduzem memória de trabalho, atenção e humor, e aumentam a fadiga percebida.",
     refs: ["popkin-2010-hidratação", "riebl-2013-desidratação"],
@@ -918,7 +918,7 @@ export const VÍDEOS: VideoPortal[] = [
     id: "v2",
     youtubeId: "dQw4w9WgXcQ",
     titulo: "Por que o galão e a garrafa plástica são um problema",
-    descricao: "Microplásticos, logística e o que a ciência mostra sobre embalagens.",
+    descricao: "Microplásticos, logística é o que a ciência mostra sobre embalagens.",
     duracao: "6 min",
   },
   {

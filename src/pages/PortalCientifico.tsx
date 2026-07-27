@@ -132,7 +132,7 @@ const PortalCientifico = () => {
                 </h2>
                 <p className="mx-auto mt-4 max-w-2xl text-[hsl(var(--pc-ink-soft))]">
                   Tudo o que você leu aqui aponta para a mesma direção: água alcalina, mineralizada e livre de cloro e
-                  microplásticos. E exatamente isso que a tecnologia Acqualive entrega direto na sua torneira.
+                  microplásticos. É exatamente isso que a tecnologia Acqualive entrega direto na sua torneira.
                 </p>
                 <div className="mt-9 flex flex-wrap justify-center gap-3">
                   <a
