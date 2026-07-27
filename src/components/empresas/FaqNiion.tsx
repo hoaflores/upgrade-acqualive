@@ -89,58 +89,32 @@ export const FaqEmpresas = () => (
 );
 
 export const NiionClick = () => (
-  <section className="py-20 lg:py-24 bg-background">
+  <section className="py-16 lg:py-20 bg-background">
     <div className="container">
-      <Card className="overflow-hidden rounded-[2rem] border-border/60 shadow-elevated">
-        <div className="grid md:grid-cols-2 gap-0 items-center">
-          <div className="p-9 md:p-12">
-            <span className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-accent mb-5">
-              <span className="h-px w-8 bg-current opacity-50" />
-              Solução complementar
-            </span>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground leading-tight tracking-tight mb-5">
-              NIION CLICK: filtragem modular para pontos específicos
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-7">
-              Para cozinhas industriais, máquinas de café e pontos de produção que precisam de água tratada
-              antes do equipamento, o NIION CLICK oferece um sistema de refis de encaixe rápido, com troca
-              simples e sem ferramentas.
-            </p>
-            <ul className="space-y-3 mb-8 text-sm text-muted-foreground">
-              {[
-                "Refis de troca rápida, sistema click",
-                "Instalação sob bancada ou em linha",
-                "Combina com o Acqualive DUO na mesma operação",
-              ].map((item) => (
-                <li key={item} className="flex gap-3 items-start">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent flex-shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <Button variant="outline" asChild className="group">
-              <a href={WHATSAPP_EMPRESAS} target="_blank" rel="noopener noreferrer">
-                <WhatsAppIcon className="w-4 h-4" />
-                <span>Falar sobre o NIION CLICK</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
-          </div>
-
-          <div className="relative bg-gradient-water p-10 flex items-center justify-center min-h-[320px]">
-            <div aria-hidden className="absolute -top-20 -right-16 w-64 h-64 rounded-full bg-accent/15 blur-3xl" />
-            <img
-              src={IMG.niionIlustra}
-              alt="Sistema de filtragem NIION CLICK com quatro refis"
-              className="relative w-full max-w-sm h-auto object-contain drop-shadow-2xl"
-              loading="lazy"
-            />
-          </div>
-        </div>
+      <Card className="max-w-4xl mx-auto rounded-[2rem] border-border/60 shadow-soft p-8 md:p-10 text-center">
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground leading-tight tracking-tight mb-4">
+          Sua empresa tem uma necessidade diferente?
+        </h2>
+        <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-4">
+          O Acqualive DUO é a nossa principal solução para ambientes empresariais. Dependendo do consumo, do
+          espaço disponível e da estrutura do local, nossa equipe também pode avaliar outras configurações
+          Acqualive.
+        </p>
+        <p className="text-sm text-muted-foreground/80 leading-relaxed max-w-2xl mx-auto mb-7">
+          Em projetos específicos, como cozinhas industriais e pontos de produção, o NIION CLICK também pode
+          ser considerado mediante avaliação comercial.
+        </p>
+        <Button variant="cta" size="lg" asChild className="group shadow-2xl">
+          <a href="#avaliacao">
+            <span>SOLICITAR UMA AVALIAÇÃO PERSONALIZADA</span>
+            <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+          </a>
+        </Button>
       </Card>
     </div>
   </section>
 );
+
 
 
 export const StickyCTAEmpresas = () => (
