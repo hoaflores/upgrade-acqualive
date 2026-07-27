@@ -11,6 +11,8 @@ import duo13 from "@/assets/duo/duo_13.png.asset.json";
 import niionRender from "@/assets/niion/NIION_2-_Cinza.png.asset.json";
 import niionIlustra from "@/assets/niion/NIION_illustration-_Cinza.png.asset.json";
 import niionRefil from "@/assets/niion/REFIL_NIION_CLICK.png.asset.json";
+import duoTransp from "@/assets/duo/duo-frente-transp.png.asset.json";
+import niionTransp from "@/assets/niion/niion-transp.png.asset.json";
 
 export const IMG = {
   duoCozinha: duoAmb1.url,
@@ -18,13 +20,15 @@ export const IMG = {
   duoAcademia: duoAmb3.url,
   duoGarrafa: duoAmb4.url,
   duoFamilia: duoAmb5.url,
-  duoFrente: duo1.url,
+  duoFrente: duoTransp.url,
+  duoFrenteBranco: duo1.url,
   duoFrenteAlt: duo3.url,
   duoTopo: duo4.url,
   duoPainel: duo10.url,
   duoCopo: duo13.url,
   niionRender: niionRender.url,
-  niionIlustra: niionIlustra.url,
+  niionIlustra: niionTransp.url,
+  niionIlustraBranco: niionIlustra.url,
   niionRefil: niionRefil.url,
 };
 
