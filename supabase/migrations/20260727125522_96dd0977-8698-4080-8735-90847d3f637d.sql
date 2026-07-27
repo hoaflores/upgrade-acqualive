@@ -1,0 +1,1 @@
+ALTER TABLE public.leads_empresas ADD COLUMN IF NOT EXISTS unidades text, ADD COLUMN IF NOT EXISTS objetivo text;

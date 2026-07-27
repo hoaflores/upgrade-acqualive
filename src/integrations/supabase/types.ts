@@ -294,9 +294,11 @@ export type Database = {
           id: string
           mensagem: string | null
           nome: string
+          objetivo: string | null
           origem: string | null
           segmento: string | null
           telefone: string
+          unidades: string | null
         }
         Insert: {
           cidade?: string | null
@@ -309,9 +311,11 @@ export type Database = {
           id?: string
           mensagem?: string | null
           nome: string
+          objetivo?: string | null
           origem?: string | null
           segmento?: string | null
           telefone: string
+          unidades?: string | null
         }
         Update: {
           cidade?: string | null
@@ -324,9 +328,11 @@ export type Database = {
           id?: string
           mensagem?: string | null
           nome?: string
+          objetivo?: string | null
           origem?: string | null
           segmento?: string | null
           telefone?: string
+          unidades?: string | null
         }
         Relationships: []
       }
