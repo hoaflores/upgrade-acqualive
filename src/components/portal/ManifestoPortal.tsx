@@ -157,7 +157,7 @@ const ManifestoPortal = ({ onAbrirArtigo }: Props) => {
         <div className="mt-20">
           <ScrollReveal>
             <div className="grid items-center gap-10 md:grid-cols-[1fr_1fr]">
-              <div className="relative overflow-hidden rounded-3xl border border-[hsl(var(--pc-line))] shadow-[0_40px_80px_-60px_hsl(var(--pc-blue))]">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-[hsl(var(--pc-line))] shadow-[0_40px_80px_-60px_hsl(var(--pc-blue))]">
                 <img
                   src={imgLaboratorio.url}
                   alt="Pesquisador segurando um béquer com água ao lado de um medidor de pH em laboratório"
