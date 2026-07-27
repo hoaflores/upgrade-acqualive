@@ -82,7 +82,7 @@ export const SolucaoDuo = () => (
           <div className="absolute inset-0 bg-gradient-water rounded-[2rem] blur-3xl opacity-10" />
           <img
             src={IMG.duoCopo}
-            alt="Colaborador servindo água natural e fresquinha no Acqualive DUO"
+            alt="Colaborador servindo água gelada e natural no Acqualive DUO"
             className="relative rounded-[2rem] shadow-elevated w-full h-auto object-cover"
             loading="lazy"
           />
@@ -97,7 +97,7 @@ export const SolucaoDuo = () => (
         <div className="pt-8 lg:pt-0">
           <Eyebrow>A solução</Eyebrow>
           <h2 className="mt-5 font-display text-3xl md:text-[2.75rem] font-bold text-foreground leading-[1.1] tracking-tight mb-5">
-            Acqualive DUO: água natural e fresquinha no ponto de uso
+            Acqualive DUO: água gelada e natural no ponto de uso
           </h2>
           <p className="text-lg text-muted-foreground mb-9 leading-relaxed">
             Ligado direto na rede de água, o DUO purifica e entrega dois tipos de saída para atender
@@ -106,7 +106,7 @@ export const SolucaoDuo = () => (
 
           <div className="rounded-3xl border border-border/70 bg-card/70 backdrop-blur divide-y divide-border/60 overflow-hidden shadow-soft">
             {[
-              { icon: Thermometer, title: "Natural e fresquinha", text: "Duas opções de saída para agradar toda a equipe ao longo do dia." },
+              { icon: Thermometer, title: "Gelada e natural", text: "Duas saídas independentes para agradar toda a equipe ao longo do dia." },
               { icon: Gauge, title: "Alta vazão", text: "Enche garrafas e jarras rápido, mesmo nos horários de maior movimento." },
               { icon: Wrench, title: "Manutenção simples", text: "Troca de refis prática e assistência técnica Acqualive quando precisar." },
               { icon: CheckCircle2, title: "Sem galão, sem estoque", text: "Acaba o pedido, a espera pela entrega e o espaço ocupado no ambiente." },
@@ -169,7 +169,7 @@ export const AntesDepois = () => (
           </p>
           <ul className="relative space-y-4">
             {[
-              "Água natural e fresquinha disponível o tempo todo",
+              "Água gelada e natural disponível o tempo todo",
               "Zero esforço físico e zero troca de galão",
               "Espaço livre na copa e no depósito",
               "Abastecimento contínuo, sem depender de entrega",
