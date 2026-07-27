@@ -28,7 +28,14 @@ const DepoimentosEmpresas = lazy(() =>
   import("@/components/empresas/MarcasEmpresas").then((m) => ({ default: m.DepoimentosEmpresas }))
 );
 const SimuladorEconomia = lazy(() => import("@/components/empresas/SimuladorEconomia"));
+const ComparativoSolucoes = lazy(() =>
+  import("@/components/empresas/ComparativoObjecoes").then((m) => ({ default: m.ComparativoSolucoes }))
+);
+const QuebraObjecoes = lazy(() =>
+  import("@/components/empresas/ComparativoObjecoes").then((m) => ({ default: m.QuebraObjecoes }))
+);
 const FormAvaliacao = lazy(() => import("@/components/empresas/FormAvaliacao"));
+
 const FaqEmpresas = lazy(() =>
   import("@/components/empresas/FaqNiion").then((m) => ({ default: m.FaqEmpresas }))
 );
