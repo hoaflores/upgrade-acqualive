@@ -30,6 +30,7 @@ export interface Referência {
 
 export const EIXOS = [
   "Água alcalina",
+  "PRAL e poder alcalinizante",
   "Hidratação funcional",
   "Performance esportiva",
   "Antioxidantes e hidrogênio",
@@ -37,9 +38,10 @@ export const EIXOS = [
   "Minerais essenciais",
   "Qualidade da água comum",
   "Longevidade e metabolismo",
+  "Publicações Acqualive",
 ] as const;
 
-export const REFERÊNCIAS: Referência[] = [
+const REFERÊNCIAS_BASE: Referência[] = [
   {
     id: "koufman-2012-pepsina",
     titulo: "Água alcalina pH 8,8 desativa a pepsina, enzima que causa refluxo",
