@@ -196,15 +196,15 @@ const CorpoHidratacao = () => {
                 ))}
               </g>
 
-              <g
-                fill="none"
-                stroke="hsl(var(--pc-blue) / 0.55)"
-                strokeWidth="0.9"
-                strokeLinejoin="round"
-                clipPath="url(#pc-corpo-clip)"
-              >
-                <rect x="0.45" y="0.45" width="99.1" height="189.1" strokeWidth="1.8" />
+              <g fill="none" stroke="hsl(var(--pc-blue) / 0.5)" strokeWidth="0.9" strokeLinejoin="round">
+                <circle cx="50" cy="16" r="12" />
+                <path d="M32 36c0-4 6-5 18-5s18 1 18 5l2 24c0 8-4 12-5 20l-3 12H38l-3-12c-1-8-5-12-5-20z" />
+                <path d="M30 37c-5 2-7 7-8 15l-4 34c-1 6 6 7 7 1l5-27" />
+                <path d="M70 37c5 2 7 7 8 15l4 34c1 6-6 7-7 1l-5-27" />
+                <path d="M38 90h9l1 40-1 50c0 4-7 4-7 0l-2-48z" />
+                <path d="M62 90h-9l-1 40 1 50c0 4 7 4 7 0l2-48z" />
               </g>
+
 
               {PONTOS.map((p) => {
                 const on = p.id === ativo.id;
