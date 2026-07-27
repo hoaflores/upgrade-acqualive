@@ -2,6 +2,8 @@ import { useMemo, useState } from "react";
 import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
 import { Calculator, ArrowRight } from "lucide-react";
+import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
+import { WHATSAPP_EMPRESAS } from "./dados";
 
 const PRECO_GALAO = 22;
 
@@ -11,14 +13,24 @@ const formatBRL = (v: number) =>
 const SimuladorEconomia = () => {
   const [galoes, setGaloes] = useState(30);
 
-  const { gastoMes, gastoAno, trocas } = useMemo(
+  const { gastoMes, gastoAno, trocas, litrosAno } = useMemo(
     () => ({
       gastoMes: galoes * PRECO_GALAO,
       gastoAno: galoes * PRECO_GALAO * 12,
       trocas: galoes * 12,
+      litrosAno: galoes * 20 * 12,
     }),
     [galoes],
   );
+
+  const linkSimulacao = useMemo(() => {
+    const base = WHATSAPP_EMPRESAS.split("?")[0];
+    const texto =
+      `Olá! Fiz a simulação no site da Acqualive Empresas: consumimos cerca de ${galoes} galões de 20 litros por mês, ` +
+      `o que dá aproximadamente ${formatBRL(gastoAno)} por ano e ${trocas} trocas de galão. ` +
+      `Quero receber uma proposta do Acqualive DUO para a minha empresa.`;
+    return `${base}?text=${encodeURIComponent(texto)}`;
+  }, [galoes, gastoAno, trocas]);
 
   return (
     <section id="simulador" className="py-20 lg:py-28 bg-background">
@@ -32,7 +44,7 @@ const SimuladorEconomia = () => {
             Quanto a sua empresa gasta com galões por ano?
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Ajuste o consumo mensal e veja o tamanho do custo que hoje passa despercebido.
+            Ajuste o consumo mensal e veja o tamanho do custo que hoje passa despercebido no seu orçamento.
           </p>
         </div>
 
@@ -56,7 +68,7 @@ const SimuladorEconomia = () => {
               {[
                 { label: "Gasto por mês", valor: formatBRL(gastoMes) },
                 { label: "Gasto por ano", valor: formatBRL(gastoAno), destaque: true },
-                { label: "Trocas de galão por ano", valor: `${trocas}` },
+                { label: "Litros carregados por ano", valor: `${litrosAno.toLocaleString("pt-BR")} L` },
               ].map(({ label, valor, destaque }) => (
                 <div
                   key={label}
@@ -79,11 +91,17 @@ const SimuladorEconomia = () => {
               real varia conforme a região e o fornecedor, e não considera o tempo da equipe gasto com pedidos e trocas.
             </p>
 
-            <div className="text-center">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button variant="cta" size="lg" asChild className="group shadow-2xl">
                 <a href="#avaliacao">
                   <span>QUERO UMA AVALIAÇÃO PARA MINHA EMPRESA</span>
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </Button>
+              <Button size="lg" variant="outline" asChild className="border-primary/30 text-primary hover:bg-primary/5">
+                <a href={linkSimulacao} target="_blank" rel="noopener noreferrer">
+                  <WhatsAppIcon className="w-5 h-5 flex-shrink-0" />
+                  <span>Receber esta simulação no WhatsApp</span>
                 </a>
               </Button>
             </div>
