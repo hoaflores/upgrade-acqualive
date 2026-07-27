@@ -136,9 +136,12 @@ const CorpoHidratacao = () => {
               70% água
             </span>
 
+            <div className="relative mx-auto flex h-full items-center justify-center">
+              <div className="relative h-full" style={{ aspectRatio: "100 / 190" }}>
             <svg
               viewBox="0 0 100 190"
               className="relative h-full w-full"
+
               role="img"
               aria-label="Silhueta humana preenchida com água até 70%"
             >
