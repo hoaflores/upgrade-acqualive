@@ -187,6 +187,72 @@ export const AntesDepois = () => (
   </section>
 );
 
+export const BeneficiosPessoas = () => (
+  <section id="beneficios" className="py-20 lg:py-28 bg-background">
+    <div className="container">
+      <div className="max-w-3xl mb-14">
+        <Eyebrow>Equipe e clientes</Eyebrow>
+        <h2 className="mt-5 font-display text-3xl md:text-[2.75rem] font-bold text-foreground leading-[1.1] tracking-tight mb-5">
+          Água boa muda a energia do ambiente e a imagem da sua marca
+        </h2>
+        <p className="text-lg text-muted-foreground leading-relaxed">
+          O ganho não fica só na planilha. Uma equipe bem hidratada rende mais, adoece menos e sente que a
+          empresa investe em saúde e bem-estar. E quem visita percebe esse cuidado na primeira taça servida.
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          {
+            icon: HeartPulse,
+            titulo: "Mais saúde no dia a dia",
+            texto:
+              "Água purificada e alcalina sempre à mão incentiva a hidratação constante, que apoia digestão, imunidade e disposição da equipe ao longo de todo o expediente.",
+          },
+          {
+            icon: Gauge,
+            titulo: "Mais energia e foco",
+            texto:
+              "A desidratação leve já derruba atenção e produtividade. Com água gelada e natural no ponto de uso, ninguém deixa de beber por preguiça de buscar.",
+          },
+          {
+            icon: Timer,
+            titulo: "Menos tempo perdido",
+            texto:
+              "Sem fila na copa, sem galão para trocar e sem pedido atrasado. O time volta para a atividade que realmente gera resultado.",
+          },
+          {
+            icon: Sparkles,
+            titulo: "Percepção de valor",
+            texto:
+              "Um ponto de água elegante, limpo e sempre abastecido comunica padrão. É o tipo de detalhe que cliente, parceiro e candidato reparam.",
+          },
+          {
+            icon: Briefcase,
+            titulo: "Marca empregadora mais forte",
+            texto:
+              "Oferecer água de qualidade é um benefício simples, visível e diário. Ajuda a reter talentos e reforça a cultura de cuidado com as pessoas.",
+          },
+          {
+            icon: Coffee,
+            titulo: "Melhor experiência para o cliente",
+            texto:
+              "Receber com água gelada e natural na hora certa valoriza o atendimento e deixa uma boa impressão antes mesmo da conversa começar.",
+          },
+        ].map(({ icon: Icon, titulo, texto }) => (
+          <Card key={titulo} className="p-7 rounded-3xl border-border/70 bg-card hover:shadow-elevated transition-shadow">
+            <div className="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
+              <Icon className="w-5 h-5 text-primary" />
+            </div>
+            <h3 className="font-display text-lg font-bold text-foreground mb-2.5">{titulo}</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">{texto}</p>
+          </Card>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
 export const Segmentos = () => (
   <section id="segmentos" className="py-20 lg:py-28 bg-water-light">
     <div className="container">

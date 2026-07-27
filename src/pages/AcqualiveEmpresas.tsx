@@ -15,6 +15,9 @@ const Segmentos = lazy(() =>
 const ComoFunciona = lazy(() =>
   import("@/components/empresas/SecoesEmpresas").then((m) => ({ default: m.ComoFunciona }))
 );
+const BeneficiosPessoas = lazy(() =>
+  import("@/components/empresas/SecoesEmpresas").then((m) => ({ default: m.BeneficiosPessoas }))
+);
 const ProvaAutoridade = lazy(() =>
   import("@/components/empresas/SecoesEmpresas").then((m) => ({ default: m.ProvaAutoridade }))
 );
@@ -65,6 +68,7 @@ const AcqualiveEmpresas = () => {
       <Suspense fallback={<Placeholder />}>
         <ScrollReveal variant="zoom"><AntesDepois /></ScrollReveal>
         <ScrollReveal variant="right"><Segmentos /></ScrollReveal>
+        <ScrollReveal variant="up"><BeneficiosPessoas /></ScrollReveal>
         <CarrosselMarcas />
         <ScrollReveal variant="zoom"><SimuladorEconomia /></ScrollReveal>
         <ScrollReveal variant="up"><ComoFunciona /></ScrollReveal>
