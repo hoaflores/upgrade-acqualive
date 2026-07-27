@@ -819,9 +819,93 @@
   background-repeat: no-repeat;
 }
 .pc-card {
+  position: relative;
   background: hsl(0 0% 100% / 0.86);
   border: 1px solid hsl(var(--pc-line));
   backdrop-filter: blur(6px);
+  transition: box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+.pc-card:hover {
+  border-color: hsl(var(--pc-cyan) / 0.5);
+  box-shadow: 0 18px 40px -22px hsl(var(--pc-blue) / 0.45);
 }
 .pc-prose p { margin-bottom: 1rem; line-height: 1.75; }
-@media (prefers-reduced-motion: reduce) { .pc-float { animation: none; } }
+
+/* Fundo aurora aquática, mais premium que o xadrez puro */
+.pc-aurora {
+  background:
+    radial-gradient(70% 60% at 12% 0%, hsl(var(--pc-cyan) / 0.22), transparent 62%),
+    radial-gradient(55% 55% at 88% 8%, hsl(var(--pc-amber) / 0.14), transparent 60%),
+    radial-gradient(60% 60% at 50% 110%, hsl(var(--pc-blue) / 0.16), transparent 65%),
+    linear-gradient(180deg, hsl(var(--pc-paper-2)), hsl(var(--pc-paper)));
+  background-size: 160% 160%, 150% 150%, 170% 170%, 100% 100%;
+  animation: pc-aurora-shift 24s ease-in-out infinite alternate;
+}
+@keyframes pc-aurora-shift {
+  0% { background-position: 0% 0%, 100% 0%, 50% 100%, 0 0; }
+  100% { background-position: 25% 12%, 70% 18%, 40% 85%, 0 0; }
+}
+
+/* Bolhas subindo: toque lúdico de água */
+.pc-bubble {
+  position: absolute;
+  bottom: -12%;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 32% 28%, hsl(0 0% 100% / 0.9), hsl(var(--pc-cyan) / 0.28) 45%, hsl(var(--pc-blue) / 0.12) 70%);
+  border: 1px solid hsl(var(--pc-cyan) / 0.35);
+  animation: pc-rise linear infinite;
+}
+@keyframes pc-rise {
+  0% { transform: translate3d(0, 0, 0) scale(0.7); opacity: 0; }
+  12% { opacity: 0.85; }
+  70% { opacity: 0.6; }
+  100% { transform: translate3d(18px, -105vh, 0) scale(1.15); opacity: 0; }
+}
+
+/* Barra de progresso de leitura */
+.pc-progress {
+  background: linear-gradient(90deg, hsl(var(--pc-blue)), hsl(var(--pc-cyan)) 55%, hsl(var(--pc-amber)));
+  transform-origin: 0 50%;
+}
+
+/* Brilho que percorre o botão principal */
+.pc-shine { position: relative; overflow: hidden; }
+.pc-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 35%, hsl(0 0% 100% / 0.38) 50%, transparent 65%);
+  transform: translateX(-120%);
+  animation: pc-sweep 5.5s ease-in-out infinite;
+}
+@keyframes pc-sweep {
+  0%, 65% { transform: translateX(-120%); }
+  100% { transform: translateX(120%); }
+}
+
+/* Ondulação de água sob o título */
+.pc-ripple::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  width: 46rem;
+  height: 46rem;
+  margin: -23rem 0 0 -23rem;
+  border-radius: 9999px;
+  background: radial-gradient(circle, hsl(var(--pc-cyan) / 0.10), transparent 62%);
+  filter: blur(28px);
+  animation: pc-pulse-ring 7s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes pc-pulse-ring {
+  0%, 100% { transform: scale(0.92); opacity: 0.55; }
+  50% { transform: scale(1.06); opacity: 0.9; }
+}
+
+.pc-tabnum { font-variant-numeric: tabular-nums; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pc-float, .pc-aurora, .pc-bubble, .pc-shine::after, .pc-ripple::before { animation: none; }
+}
+

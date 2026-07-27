@@ -8,6 +8,10 @@ import PerguntasGuia from "@/components/portal/PerguntasGuia";
 import BlogRecentes from "@/components/portal/BlogRecentes";
 import VideosPortal from "@/components/portal/VideosPortal";
 import LeitorArtigo from "@/components/portal/LeitorArtigo";
+import ProgressoLeitura from "@/components/portal/ProgressoLeitura";
+import BolhasAgua from "@/components/portal/BolhasAgua";
+
+
 import ScrollReveal from "@/components/ScrollReveal";
 import { PERGUNTAS_GUIA, REFERÊNCIAS, type Referência } from "@/data/portal-cientifico";
 
@@ -70,6 +74,8 @@ const PortalCientifico = () => {
 
   return (
     <div className="portal-theme min-h-screen font-body">
+      <ProgressoLeitura />
+
       <Helmet>
         <title>Portal Científico Acqualive: estudos sobre água alcalina</title>
         <meta
@@ -125,23 +131,25 @@ const PortalCientifico = () => {
         <section className="border-t border-[hsl(var(--pc-line))] py-20 md:py-28">
           <div className="container">
             <ScrollReveal>
-              <div className="pc-radial overflow-hidden rounded-3xl border border-[hsl(var(--pc-line))] p-10 text-center md:p-16">
-                <ShieldCheck className="mx-auto h-10 w-10 text-[hsl(var(--pc-amber))]" aria-hidden />
-                <h2 className="mt-6 font-display text-3xl font-bold md:text-4xl">
+              <div className="pc-aurora relative overflow-hidden rounded-3xl border border-[hsl(var(--pc-line))] p-10 text-center shadow-[0_40px_80px_-60px_hsl(var(--pc-blue))] md:p-16">
+                <BolhasAgua />
+                <ShieldCheck className="pc-float relative mx-auto h-10 w-10 text-[hsl(var(--pc-amber))]" aria-hidden />
+                <h2 className="relative mt-6 font-display text-3xl font-bold md:text-4xl">
                   Da evidência para o seu copo, todos os dias
                 </h2>
-                <p className="mx-auto mt-4 max-w-2xl text-[hsl(var(--pc-ink-soft))]">
+                <p className="relative mx-auto mt-4 max-w-2xl text-[hsl(var(--pc-ink-soft))]">
                   Tudo o que você leu aqui aponta para a mesma direção: água alcalina, mineralizada e livre de cloro e
                   microplásticos. É exatamente isso que a tecnologia Acqualive entrega direto na sua torneira.
                 </p>
-                <div className="mt-9 flex flex-wrap justify-center gap-3">
+                <div className="relative mt-9 flex flex-wrap justify-center gap-3">
                   <a
                     href="https://www.acqualive.com.br/collections/all/products/purificador-de-agua-alcalina-acqualive-duo-natural-e-gelada"
-                    className="inline-flex items-center gap-2 rounded-full bg-[hsl(var(--pc-blue))] px-8 py-4 text-sm font-semibold text-[hsl(var(--pc-paper))] shadow-lg transition hover:bg-[hsl(var(--pc-cyan))]"
+                    className="pc-shine inline-flex items-center gap-2 rounded-full bg-[hsl(var(--pc-blue))] px-8 py-4 text-sm font-semibold text-[hsl(var(--pc-paper))] shadow-[0_20px_45px_-20px_hsl(var(--pc-blue))] transition hover:-translate-y-0.5 hover:bg-[hsl(var(--pc-cyan))]"
                   >
-                    Conhecer o Acqualive DUO
-                    <ArrowRight className="h-4 w-4" aria-hidden />
+                    <span className="relative z-10">Conhecer o Acqualive DUO</span>
+                    <ArrowRight className="relative z-10 h-4 w-4" aria-hidden />
                   </a>
+
                   <a
                     href="/acqualive-empresas"
                     className="inline-flex items-center gap-2 rounded-full border border-[hsl(var(--pc-blue))] px-8 py-4 text-sm font-semibold text-[hsl(var(--pc-blue))] transition hover:bg-white"

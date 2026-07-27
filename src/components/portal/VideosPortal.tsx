@@ -23,7 +23,7 @@ const VideosPortal = () => (
       <div className="mt-12 grid gap-6 md:grid-cols-2">
         {VÍDEOS.map((v, i) => (
           <ScrollReveal key={v.id} delay={(i % 2) * 90}>
-            <div className="pc-card overflow-hidden rounded-2xl">
+            <div className="pc-card group overflow-hidden rounded-2xl hover:-translate-y-1.5">
               <div className="relative aspect-video bg-[hsl(var(--pc-ink))]">
                 <LiteYouTube
                   id={v.youtubeId}
