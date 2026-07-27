@@ -155,12 +155,13 @@ const PortalCientifico = () => {
                 </p>
                 <div className="relative mt-9 flex flex-wrap justify-center gap-3">
                   <a
-                    href="https://www.acqualive.com.br/collections/all/products/purificador-de-agua-alcalina-acqualive-duo-natural-e-gelada"
+                    href="https://www.acqualive.com.br"
                     className="pc-shine inline-flex items-center gap-2 rounded-full bg-[hsl(var(--pc-blue))] px-8 py-4 text-sm font-semibold text-[hsl(var(--pc-paper))] shadow-[0_20px_45px_-20px_hsl(var(--pc-blue))] transition hover:-translate-y-0.5 hover:bg-[hsl(var(--pc-cyan))]"
                   >
-                    <span className="relative z-10">Conhecer o Acqualive DUO</span>
+                    <span className="relative z-10">Conheça os filtros Acqualive</span>
                     <ArrowRight className="relative z-10 h-4 w-4" aria-hidden />
                   </a>
+
 
                   <a
                     href="/acqualive-empresas"
@@ -177,12 +178,14 @@ const PortalCientifico = () => {
 
       <footer className="border-t border-[hsl(var(--pc-line))] py-10">
         <div className="container flex flex-col items-center gap-4 text-center text-xs text-[hsl(var(--pc-ink-soft))]">
+          <img src={logoAcqualive.url} alt="Acqualive" className="h-10 w-auto" width={260} height={52} loading="lazy" />
           <p className="max-w-2xl">
             Conteúdo de caráter informativo e educativo. Não substitui avaliação, diagnóstico ou tratamento realizado
             por profissional de saúde.
           </p>
           <p>Portal Científico Acqualive</p>
         </div>
+
       </footer>
 
       <LeitorArtigo referência={artigo} onOpenChange={(o) => !o && setArtigo(null)} />
