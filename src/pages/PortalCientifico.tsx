@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Droplets, ShieldCheck, ArrowRight } from "lucide-react";
 import HeroPortal from "@/components/portal/HeroPortal";
+import ManifestoPortal from "@/components/portal/ManifestoPortal";
 import BuscaAcademica from "@/components/portal/BuscaAcademica";
 import BibliotecaArtigos from "@/components/portal/BibliotecaArtigos";
 import PerguntasGuia from "@/components/portal/PerguntasGuia";
