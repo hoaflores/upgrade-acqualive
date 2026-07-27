@@ -19,7 +19,6 @@ const HeroEmpresas = () => {
         <header className="flex items-center justify-between mb-14 lg:mb-20 animate-fade-in">
           <img src={logoAcqualiveWhite.url} alt="Acqualive" width={220} height={48} decoding="async" className="h-11 md:h-12 w-auto" />
           <span className="hidden md:inline-flex items-center text-[11px] font-semibold uppercase tracking-[0.32em] text-primary-foreground/70 border-l border-primary-foreground/20 pl-4">
-            Divisão Empresas
           </span>
         </header>
 
@@ -33,9 +32,8 @@ const HeroEmpresas = () => {
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-[3.75rem] font-bold text-primary-foreground leading-[1.05] tracking-tight mb-7 animate-fade-in-up animation-delay-200">
-              Corte até{" "}
-              <span className="italic font-medium text-accent">R$ 7.920 por ano</span> em galão e tenha água{" "}
-              gelada e natural o dia inteiro.
+              Economize até{" "}
+              <span className="italic font-medium text-accent">R$ 7.920 por ano</span> em trocas de galões e tenha a melhor água para sua empresa!
             </h1>
 
             <div className="h-px w-24 mx-auto lg:mx-0 bg-gradient-to-r from-accent to-transparent mb-7" />
