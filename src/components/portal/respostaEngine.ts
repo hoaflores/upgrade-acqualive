@@ -288,6 +288,11 @@ const frasesOrdenadas = (frases: string[], literais: string[], intenção: Inten
       if (intenção === "seguranca" && /(seguran|risco|adverso|efeito|tolerad|sem alteracao|sem alteração)/i.test(f)) s += 3;
       if (intenção === "comparacao" && /(compara|do que|versus|melhor|maior|menor|em relacao|em relação)/i.test(f)) s += 2;
       if (intenção === "mecanismo" && /(porque|pois|mecanismo|atua|reduz|aumenta|ativa|neutraliza)/i.test(f)) s += 2;
+      // penaliza frases meramente descritivas do estudo, que não respondem nada
+      if (/^(estudo|verbete|compila|documento|revis|ensaio|artigo|pesquisa|meta-?anal|trabalho|este |esta |o estudo|a revis)/i.test(f.trim()))
+        s -= 4;
+      // valoriza frases com achado ou conclusão
+      if (/(mostrou|mostra|reduziu|aumentou|melhorou|associad|indica|resultado|conclui|evidenc|recomend|sustenta)/i.test(f)) s += 2;
       return { f: f.trim(), s };
     })
     .sort((a, b) => b.s - a.s)
@@ -296,10 +301,15 @@ const frasesOrdenadas = (frases: string[], literais: string[], intenção: Inten
 };
 
 const tituloPorIntenção = (intenção: Intenção, consulta: string, top: Referência): string => {
-  const foco = consulta.trim().replace(/\?+$/, "");
+  const foco = consulta
+    .trim()
+    .replace(/\?+$/, "")
+    .replace(/^(o que e|o que é|oque é|oque e|o que sao|o que são|o que significa|que é|que e)\s+/i, "")
+    .trim();
   switch (intenção) {
     case "definicao":
-      return `Definição: ${foco}`;
+      return `Definição: ${foco.charAt(0).toUpperCase()}${foco.slice(1)}`;
+
     case "quantidade":
       return "O que a base indica sobre quantidade";
     case "seguranca":
