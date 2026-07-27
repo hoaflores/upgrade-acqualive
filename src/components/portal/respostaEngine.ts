@@ -392,7 +392,6 @@ export const responder = (consulta: string): RespostaSintetizada | null => {
   } else if (intenção === "simnao" && melhor) {
     const forte = melhor.score >= 22;
 
-    const forte = melhor.score >= 22;
     const abertura = forte
       ? "Sim, a base científica sustenta essa relação."
       : "A base traz indícios, mas a evidência ainda é parcial.";
