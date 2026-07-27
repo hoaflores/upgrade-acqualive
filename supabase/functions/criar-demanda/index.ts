@@ -254,8 +254,11 @@ Deno.serve(async (req) => {
           tipo_mime: a.tipo || null,
           tamanho_bytes: a.tamanho || null,
         });
-        const { data: pub } = supabase.storage.from("demandas-anexos").getPublicUrl(a.path);
-        anexosUrls.push(pub.publicUrl);
+        const { data: signed } = await supabase.storage
+          .from("demandas-anexos")
+          .createSignedUrl(a.path, 60 * 60 * 24 * 365);
+        if (signed?.signedUrl) anexosUrls.push(signed.signedUrl);
+
       }
     }
 
