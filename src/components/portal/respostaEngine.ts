@@ -367,7 +367,13 @@ export const responder = (consulta: string): RespostaSintetizada | null => {
     ...p.ref.resumo.split(/(?<=\.)\s+/),
     p.ref.aplicação,
   ]);
-  const relevantes = frasesOrdenadas(candidatas, literais, intenção);
+  let relevantes = frasesOrdenadas(candidatas, literais, intenção);
+
+  // Em perguntas de quantidade, só valem frases que trazem números.
+  if (intenção === "quantidade") {
+    const comNúmero = relevantes.filter((f) => /\d/.test(f) && /(litro|ml|copo|dia|kg|%)/i.test(f));
+    relevantes = comNúmero.length ? comNúmero : relevantes;
+  }
 
   const corpo = relevantes.slice(0, 2).map(primeiraFrase).join(" ").trim();
 
@@ -376,7 +382,16 @@ export const responder = (consulta: string): RespostaSintetizada | null => {
     resumo = guiaPróxima.resposta;
   } else if (conceito) {
     resumo = [conceito.definição, corpo].filter(Boolean).join(" ");
+  } else if (intenção === "quantidade") {
+    resumo = [
+      "A referência mais usada é de 30 a 35 ml de água por quilo de peso ao dia, ajustando para clima, atividade física e orientação profissional.",
+      corpo,
+    ]
+      .filter(Boolean)
+      .join(" ");
   } else if (intenção === "simnao" && melhor) {
+    const forte = melhor.score >= 22;
+
     const forte = melhor.score >= 22;
     const abertura = forte
       ? "Sim, a base científica sustenta essa relação."
