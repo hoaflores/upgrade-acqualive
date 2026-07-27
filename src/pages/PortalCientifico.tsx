@@ -20,6 +20,7 @@ const SITE = "https://paginas.acqualive.com.br";
 const URL_PÁGINA = `${SITE}/portal-cientifico`;
 
 const NAV = [
+  { href: "#fundamentos", label: "Fundamentos" },
   { href: "#busca", label: "Buscar" },
   { href: "#biblioteca", label: "Biblioteca" },
   { href: "#perguntas", label: "Perguntas" },
@@ -123,6 +124,7 @@ const PortalCientifico = () => {
 
       <main>
         <HeroPortal />
+        <ManifestoPortal onAbrirArtigo={setArtigo} />
         <BuscaAcademica onAbrirArtigo={setArtigo} />
         <BibliotecaArtigos onAbrirArtigo={setArtigo} />
         <PerguntasGuia onAbrirArtigo={setArtigo} />
