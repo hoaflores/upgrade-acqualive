@@ -3,6 +3,7 @@ import { Droplets } from "lucide-react";
 
 type Ponto = {
   ph: number;
+  phMax?: number;
   nome: string;
   descricao: string;
 };
@@ -13,10 +14,18 @@ const PONTOS: Ponto[] = [
   { ph: 5.5, nome: "Água de garrafa PET comum", descricao: "Frequentemente levemente ácida, desmineralizada e com presença documentada de microplásticos." },
   { ph: 6.5, nome: "Água de torneira com cloro", descricao: "Costuma ficar próxima da neutralidade, mas carrega cloro residual e subprodutos da desinfecção." },
   { ph: 7, nome: "Água neutra", descricao: "Ponto de equilíbrio da escala. Nem ácida, nem alcalina." },
-  { ph: 8, nome: "Faixa Acqualive", descricao: "Água alcalina e mineralizada. Faixa estudada por reduzir a carga ácida da dieta e melhorar a percepção de hidratação." },
-  { ph: 9.5, nome: "Água alcalina de estudos clínicos", descricao: "Faixa usada em estudos sobre pepsina, refluxo e viscosidade sanguínea." },
+  {
+    ph: 8,
+    phMax: 9.5,
+    nome: "Faixa Acqualive e dos estudos clínicos",
+    descricao: "Mesma faixa: a água alcalina e mineralizada da Acqualive fica entre pH 8 e 9,5, exatamente o intervalo usado nos estudos clínicos sobre pepsina, refluxo, viscosidade sanguínea e redução da carga ácida da dieta.",
+  },
   { ph: 11, nome: "Solução de limpeza leve", descricao: "Alcalinidade fora da faixa de consumo recomendado para uso diário." },
 ];
+
+const formatoPh = (p: Ponto) =>
+  p.phMax ? `${p.ph.toFixed(1)} a ${p.phMax.toFixed(1)}` : p.ph.toFixed(1);
+
 
 const corPara = (ph: number) => {
   if (ph < 6.5) return "hsl(var(--pc-amber))";
