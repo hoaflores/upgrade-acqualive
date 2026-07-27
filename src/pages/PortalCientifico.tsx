@@ -12,6 +12,9 @@ import LeitorArtigo from "@/components/portal/LeitorArtigo";
 import ProgressoLeitura from "@/components/portal/ProgressoLeitura";
 import BolhasAgua from "@/components/portal/BolhasAgua";
 import EscalaPH from "@/components/portal/EscalaPH";
+import CorpoHidratacao from "@/components/portal/CorpoHidratacao";
+import MitosFatos from "@/components/portal/MitosFatos";
+import QuizHidratacao from "@/components/portal/QuizHidratacao";
 import logoAcqualive from "@/assets/acqualive-logo-azul.png.asset.json";
 
 
@@ -24,6 +27,8 @@ const URL_PÁGINA = `${SITE}/portal-cientifico`;
 const NAV = [
   { href: "#fundamentos", label: "Fundamentos" },
   { href: "#busca", label: "Buscar" },
+  { href: "#corpo", label: "Seu corpo" },
+  { href: "#mitos", label: "Mitos" },
   { href: "#biblioteca", label: "Biblioteca" },
   { href: "#perguntas", label: "Perguntas" },
   { href: "#blog", label: "Blog" },
@@ -134,7 +139,10 @@ const PortalCientifico = () => {
         <ManifestoPortal onAbrirArtigo={setArtigo} />
         <BuscaAcademica onAbrirArtigo={setArtigo} />
         <EscalaPH />
+        <CorpoHidratacao />
+        <MitosFatos />
         <BibliotecaArtigos onAbrirArtigo={setArtigo} />
+        <QuizHidratacao />
         <PerguntasGuia onAbrirArtigo={setArtigo} />
         <BlogRecentes />
         <VideosPortal />
