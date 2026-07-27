@@ -53,7 +53,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "alto",
     eixos: ["Água alcalina", "Digestão e refluxo"],
     resumo:
-      "Pesquisadores do Voice Institute of New York testaram água alcalina natural com pH 8,8 contra a pepsina humana, a enzima responsavel por grande parte da lesao tecidual no refluxo laringofaringeo. A água alcalina desnaturou a enzima de forma praticamente instantanea e irreversível, algo que a água mineral comum (pH proximo de 7) não conseguiu fazer. Além disso, a água de pH 8,8 apresentou boa capacidade tampão, ou seja, manteve o efeito mesmo diante da acidez do conteudo gástrico.",
+      "Pesquisadores do Voice Institute of New York testaram água alcalina natural com pH 8,8 contra a pepsina humana, a enzima responsavel por grande parte da lesão tecidual no refluxo laringofaringeo. A água alcalina desnaturou a enzima de forma praticamente instantanea e irreversível, algo que a água mineral comum (pH proximo de 7) não conseguiu fazer. Além disso, a água de pH 8,8 apresentou boa capacidade tampão, ou seja, manteve o efeito mesmo diante da acidez do conteudo gástrico.",
     pontos: [
       "Desativação imediata da pepsina humana in vitro em pH 8,8",
       "Água com pH neutro não produziu o mesmo efeito",
@@ -87,7 +87,7 @@ export const REFERÊNCIAS: Referência[] = [
       "Sugere reidratacao mais eficiente com água alcalina",
     ],
     aplicação:
-      "Sustenta a recomendacao de água alcalina para atletas, praticantes de atividade fisica e pessoas com rotina de alta demanda.",
+      "Sustenta a recomendação de água alcalina para atletas, praticantes de atividade fisica e pessoas com rotina de alta demanda.",
     url: "https://jissn.biomedcentral.com/articles/10.1186/s12970-016-0153-8",
     acessoAberto: true,
     termos: ["viscosidade", "sangue", "atleta", "exercicio", "oxigênio", "reidratacao", "desempenho"],
@@ -113,7 +113,7 @@ export const REFERÊNCIAS: Referência[] = [
       "Nenhum efeito adverso registrado no período",
     ],
     aplicação:
-      "Mostra que o beneficio da água alcalina aparece no consumo continuo, não em um copo isolado. E o argumento central para ter água alcalina em casa e na empresa.",
+      "Mostra que o benefício da água alcalina aparece no consumo continuo, não em um copo isolado. E o argumento central para ter água alcalina em casa e na empresa.",
     url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0205708",
     acessoAberto: true,
     termos: ["acidose", "atleta", "potência", "anaeróbico", "ph urinário", "capacidade tampão", "treino"],
@@ -130,7 +130,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "alto",
     eixos: ["Água alcalina", "Hidratação funcional", "Minerais essenciais"],
     resumo:
-      "Estudo cruzado com ciclistas treinados comparou água mineral alcalina e água purificada durante três dias de rotina normal. A água alcalina produziu melhora significativa do estado de hidratação (medida por osmolalidade urinária e balanco hidrico) e deslocou o equilibrio ácido-base para uma condicao mais favoravel.",
+      "Estudo cruzado com ciclistas treinados comparou água mineral alcalina e água purificada durante três dias de rotina normal. A água alcalina produziu melhora significativa do estado de hidratação (medida por osmolalidade urinária e balanco hidrico) e deslocou o equilibrio ácido-base para uma condição mais favoravel.",
     pontos: [
       "Melhora do balanco hidrico corporal em apenas três dias",
       "pH sanguíneo e urinário mais favoraveis",
@@ -138,7 +138,7 @@ export const REFERÊNCIAS: Referência[] = [
       "Reforca o conceito de hidratação funcional",
     ],
     aplicação:
-      "Explica por que quem troca a água comum pela água alcalina relata sensacao de hidratação mais rapida e duradoura.",
+      "Explica por que quem troca a água comum pela água alcalina relata sensação de hidratação mais rapida e duradoura.",
     url: "https://jissn.biomedcentral.com/articles/10.1186/1550-2783-7-29",
     acessoAberto: true,
     termos: ["hidratação", "osmolalidade", "ciclista", "balanco hidrico", "água mineral"],
@@ -166,7 +166,7 @@ export const REFERÊNCIAS: Referência[] = [
       "É a evidência mais forte de que o consumo crônico de água alcalina é seguro e pode ter efeito protetor a longo prazo.",
     url: "https://onlinelibrary.wiley.com/doi/10.1155/2016/3084126",
     acessoAberto: true,
-    termos: ["longevidade", "envelhecimento", "sobrevida", "coracao", "figado", "crônico"],
+    termos: ["longevidade", "envelhecimento", "sobrevida", "coração", "figado", "crônico"],
   },
   {
     id: "shirahata-1997-arw",
@@ -209,8 +209,8 @@ export const REFERÊNCIAS: Referência[] = [
     resumo:
       "Publicado na Nature Medicine, este estudo mostrou que o hidrogênio molecular dissolvido neutraliza seletivamente os radicais mais tóxicos ao organismo, o radical hidroxila é o peroxinitrito, sem interferir nas espécies reativas que o corpo usa em processos fisiológicos normais. Deu origem a mais de mil publicações sobre hidrogênio na medicina.",
     pontos: [
-      "Acao antioxidante seletiva, sem desregular a sinalização celular",
-      "Publicado em periodico de altíssimo impacto",
+      "Ação antioxidante seletiva, sem desregular a sinalização celular",
+      "Publicado em periódico de altíssimo impacto",
       "Origem de toda a linha de pesquisa em água hidrogenada",
       "Molécula pequena, atravessa membranas com facilidade",
     ],
@@ -236,7 +236,7 @@ export const REFERÊNCIAS: Referência[] = [
     pontos: [
       "Redução de marcadores inflamatórios em varios ensaios",
       "Perfil de segurança considerado excelente",
-      "Aplicacoes metabolicas, cardiovasculares e neurológicas em estudo",
+      "Aplicações metabolicas, cardiovasculares e neurológicas em estudo",
       "Consolida a agenda de pesquisa da água hidrogenada",
     ],
     aplicação:
@@ -257,9 +257,9 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "medio",
     eixos: ["Minerais essenciais", "Longevidade e metabolismo"],
     resumo:
-      "Consumo de água mineral rica em magnésio e cálcio reduziu a pressao arterial em pessoas com baixa excreção urinária desses minerais, indicando que a água é uma via relevante de aporte mineral e não apenas um veiculo de hidratação.",
+      "Consumo de água mineral rica em magnésio e cálcio reduziu a pressao arterial em pessoas com baixa excreção urinária desses minerais, indicando que a água é uma via relevante de aporte mineral e não apenas um veículo de hidratação.",
     pontos: [
-      "Redução de pressao arterial em subgrupo com deficiencia",
+      "Redução de pressao arterial em subgrupo com deficiência",
       "Água como fonte real de magnésio e cálcio",
       "Reforca a diferenca entre água mineralizada e água desmineralizada",
     ],
@@ -267,7 +267,7 @@ export const REFERÊNCIAS: Referência[] = [
       "Argumento técnico contra sistemas que removem todos os minerais da água, como a osmose reversa sem remineralizacao.",
     url: "https://bmcpublichealth.biomedcentral.com/articles/10.1186/1471-2458-4-56",
     acessoAberto: true,
-    termos: ["magnésio", "cálcio", "pressao arterial", "mineral", "coracao"],
+    termos: ["magnésio", "cálcio", "pressao arterial", "mineral", "coração"],
   },
   {
     id: "oms-2005-desmineralizada",
@@ -281,11 +281,11 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "alto",
     eixos: ["Minerais essenciais", "Qualidade da água comum"],
     resumo:
-      "Documento oficial da Organizacao Mundial da Saúde alerta que água desmineralizada, obtida por destilacao ou osmose reversa sem remineralizacao, tem baixo poder de saciar a sede, pode aumentar a perda urinária de minerais e não contribui com cálcio e magnésio, minerais que a água deveria fornecer.",
+      "Documento oficial da Organização Mundial da Saúde alerta que água desmineralizada, obtida por destilação ou osmose reversa sem remineralizacao, tem baixo poder de saciar a sede, pode aumentar a perda urinária de minerais e não contribui com cálcio e magnésio, minerais que a água deveria fornecer.",
     pontos: [
       "Água sem minerais aumenta a excreção de eletrolitos",
       "Menor capacidade de saciar a sede",
-      "OMS recomenda niveis mínimos de cálcio e magnésio na água potável",
+      "OMS recomenda níveis mínimos de cálcio e magnésio na água potável",
       "Base para escolher filtração que preserva minerais",
     ],
     aplicação:
@@ -309,7 +309,7 @@ export const REFERÊNCIAS: Referência[] = [
       "Relatório da OMS documenta a presenca disseminada de micro e nanoplasticos na água potável, com destaque para a água engarrafada, e recomenda reduzir a exposição humana e ampliar a pesquisa sobre efeitos a longo prazo.",
     pontos: [
       "Microplásticos encontrados em água de torneira e engarrafada",
-      "Água engarrafada apresenta concentracoes tipicamente maiores",
+      "Água engarrafada apresenta concentrações tipicamente maiores",
       "OMS recomenda reduzir a exposição",
       "Argumento direto contra o consumo de galão e garrafa plástica",
     ],
@@ -346,7 +346,7 @@ export const REFERÊNCIAS: Referência[] = [
   },
   {
     id: "villanueva-2015-thm",
-    titulo: "Subprodutos da cloracao na água tratada e risco a saúde",
+    titulo: "Subprodutos da cloração na água tratada e risco a saúde",
     tituloOriginal: "Assessing exposure and health consequences of chemicals in drinking water",
     autores: "Villanueva CM, Kogevinas M, Cordier S, et al.",
     fonte: "Environmental Health Perspectives, 122(3)",
@@ -356,9 +356,9 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "alto",
     eixos: ["Qualidade da água comum"],
     resumo:
-      "Revisão internacional sobre os trihalometanos e demais subprodutos formados quando o cloro reage com matéria orgânica na água tratada. Os autores documentam associacao com desfechos adversos de saúde e defendem a redução da exposição doméstica.",
+      "Revisão internacional sobre os trihalometanos e demais subprodutos formados quando o cloro reage com matéria orgânica na água tratada. Os autores documentam associação com desfechos adversos de saúde e defendem a redução da exposição doméstica.",
     pontos: [
-      "Trihalometanos são subprodutos inevitaveis da cloracao",
+      "Trihalometanos são subprodutos inevitaveis da cloração",
       "Exposição ocorre por ingestão, banho e inalação",
       "Filtração por carvão ativado reduz significativamente a exposição",
     ],
@@ -372,16 +372,16 @@ export const REFERÊNCIAS: Referência[] = [
     id: "ministerio-saude-portaria",
     titulo: "Padrão brasileiro de potabilidade da água para consumo humano",
     autores: "Ministério da Saúde do Brasil",
-    fonte: "Portaria GM/MS n. 888/2021, anexo XX da Portaria de Consolidacao n. 5",
+    fonte: "Portaria GM/MS n. 888/2021, anexo XX da Portaria de Consolidação n. 5",
     ano: 2021,
     idioma: "pt",
     tipo: "institucional",
     impacto: "medio",
     eixos: ["Qualidade da água comum"],
     resumo:
-      "Norma que define os parametros de potabilidade no Brasil, incluindo limites para cloro residual, trihalometanos, metais e agrotoxicos. Potável significa dentro do limite legal aceitavel, não significa ideal para o consumo diario de longo prazo.",
+      "Norma que define os parametros de potabilidade no Brasil, incluindo limites para cloro residual, trihalometanos, metais e agrotóxicos. Potável significa dentro do limite legal aceitável, não significa ideal para o consumo diario de longo prazo.",
     pontos: [
-      "Define limites maximos, não niveis otimos",
+      "Define limites maximos, não níveis otimos",
       "Cloro residual é obrigatório na rede de distribuição",
       "Contaminação pode ocorrer após a estação de tratamento, na rede e na caixa d'água",
     ],
@@ -403,14 +403,14 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "medio",
     eixos: ["Hidratação funcional"],
     resumo:
-      "Revisão clássica que reúne as evidências sobre o papel da água na termorregulação, função renal, cognição e desempenho físico. Mostra que desidratacoes leves, de 1% a 2% do peso corporal, ja prejudicam concentração, humor e rendimento.",
+      "Revisão clássica que reúne as evidências sobre o papel da água na termorregulação, função renal, cognição e desempenho físico. Mostra que desidratações leves, de 1% a 2% do peso corporal, ja prejudicam concentração, humor e rendimento.",
     pontos: [
       "Perda de 1% a 2% do peso ja reduz cognição e desempenho",
       "Hidratação adequada impacta função renal e cardiovascular",
       "Sede é um sinal tardio de desidratação",
     ],
     aplicação:
-      "Ponto de partida didatico para o público leigo entender por que água de qualidade e acesso facil mudam a rotina.",
+      "Ponto de partida didatico para o público leigo entender por que água de qualidade e acesso fácil mudam a rotina.",
     url: "https://academic.oup.com/nutritionreviews/article/68/8/439/1841926",
     acessoAberto: true,
     termos: ["hidratação", "cognição", "sede", "desidratação", "rim", "concentração"],
@@ -427,7 +427,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "medio",
     eixos: ["Hidratação funcional", "Performance esportiva"],
     resumo:
-      "Sintese de estudos que mostram que niveis modestos de desidratação afetam humor, memória de trabalho, tempo de reação e percepção de esforco, tanto em adultos ativos quanto em ambiente de trabalho.",
+      "Sintese de estudos que mostram que níveis modestos de desidratação afetam humor, memória de trabalho, tempo de reação e percepção de esforco, tanto em adultos ativos quanto em ambiente de trabalho.",
     pontos: [
       "Piora de humor e aumento da fadiga percebida",
       "Queda em memória de trabalho e tempo de reação",
@@ -466,7 +466,7 @@ export const REFERÊNCIAS: Referência[] = [
   },
   {
     id: "nakamura-2020-h2-fadiga",
-    titulo: "Água hidrogenada reduz fadiga e acelera recuperacao muscular",
+    titulo: "Água hidrogenada reduz fadiga e acelera recuperação muscular",
     tituloOriginal: "Effects of hydrogen-rich water on muscle fatigue and recovery",
     autores: "Aoki K, Nakao A, Adachi T, Matsui Y, Miyakawa S",
     fonte: "Medical Gas Research, 2:12",
@@ -476,17 +476,17 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "medio",
     eixos: ["Antioxidantes e hidrogênio", "Performance esportiva"],
     resumo:
-      "Atletas de futebol que ingeriram água rica em hidrogênio antes do exercicio apresentaram menor pico de lactato sanguíneo e menor queda de função muscular durante esforco maximo, sugerindo recuperacao mais rapida.",
+      "Atletas de futebol que ingeriram água rica em hidrogênio antes do exercicio apresentaram menor pico de lactato sanguíneo e menor queda de função muscular durante esforco maximo, sugerindo recuperação mais rapida.",
     pontos: [
       "Menor acumulo de lactato durante exercicio maximo",
-      "Preservacao de função muscular ao longo do esforco",
+      "Preservação de função muscular ao longo do esforco",
       "Delineamento cruzado com atletas treinados",
     ],
     aplicação:
-      "Reforca o uso de água funcional na rotina de treino e recuperacao.",
+      "Reforca o uso de água funcional na rotina de treino e recuperação.",
     url: "https://medicalgasresearch.biomedcentral.com/articles/10.1186/2045-9912-2-12",
     acessoAberto: true,
-    termos: ["lactato", "fadiga", "recuperacao", "futebol", "muscular", "treino"],
+    termos: ["lactato", "fadiga", "recuperação", "futebol", "muscular", "treino"],
   },
   {
     id: "tanaka-2018-gastro",
@@ -501,7 +501,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "alto",
     eixos: ["Água alcalina", "Digestão e refluxo"],
     resumo:
-      "Ensaio clínico randomizado e controlado com adultos que relatavam desconforto digestivo crônico. Após quatro semanas bebendo água alcalina ionizada, o grupo intervencao apresentou melhora significativa de sintomas como sensacao de peso, empachamento e desconforto intestinal.",
+      "Ensaio clínico randomizado e controlado com adultos que relatavam desconforto digestivo crônico. Após quatro semanas bebendo água alcalina ionizada, o grupo intervenção apresentou melhora significativa de sintomas como sensação de peso, empachamento e desconforto intestinal.",
     pontos: [
       "Ensaio randomizado e controlado em humanos",
       "Melhora significativa de sintomas gastrointestinais",
@@ -509,10 +509,10 @@ export const REFERÊNCIAS: Referência[] = [
       "Boa tolerabilidade relatada",
     ],
     aplicação:
-      "Evidência direta em humanos para o beneficio digestivo relatado por quem usa água alcalina no dia a dia.",
+      "Evidência direta em humanos para o benefício digestivo relatado por quem usa água alcalina no dia a dia.",
     url: "https://pubmed.ncbi.nlm.nih.gov/30713666/",
     acessoAberto: false,
-    termos: ["intestino", "digestão", "empachamento", "constipacao", "estômago", "ensaio clínico"],
+    termos: ["intestino", "digestão", "empachamento", "constipação", "estômago", "ensaio clínico"],
   },
   {
     id: "higashimura-2018-microbiota",
@@ -526,7 +526,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "medio",
     eixos: ["Digestão e refluxo", "Longevidade e metabolismo"],
     resumo:
-      "Modelo experimental mostrou que a ingestão de água alcalina eletrolisada alterou a composição da microbiota intestinal, com aumento de generos associados a producao de ácidos graxos de cadeia curta, que tem papel protetor na barreira intestinal.",
+      "Modelo experimental mostrou que a ingestão de água alcalina eletrolisada alterou a composição da microbiota intestinal, com aumento de generos associados a produção de ácidos graxos de cadeia curta, que tem papel protetor na barreira intestinal.",
     pontos: [
       "Mudanca favoravel na composição da microbiota",
       "Aumento de bacterias produtoras de butirato",
@@ -540,7 +540,7 @@ export const REFERÊNCIAS: Referência[] = [
   },
   {
     id: "kitada-2018-esporte",
-    titulo: "Água alcalina e recuperacao do pH sanguíneo após treino intenso",
+    titulo: "Água alcalina e recuperação do pH sanguíneo após treino intenso",
     tituloOriginal: "Effect of alkaline water on blood pH recovery after high-intensity exercise",
     autores: "Chycki J, Zajac T, Maszczyk A, Kurylas A",
     fonte: "Biology of Sport, 34(3)",
@@ -550,9 +550,9 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "medio",
     eixos: ["Performance esportiva", "Água alcalina"],
     resumo:
-      "Consumo de água alcalina altamente mineralizada acelerou a normalizacao do pH sanguíneo e do excesso de base após exercicio de alta intensidade, sugerindo recuperacao metabólica mais rapida entre sessoes de treino.",
+      "Consumo de água alcalina altamente mineralizada acelerou a normalização do pH sanguíneo e do excesso de base após exercicio de alta intensidade, sugerindo recuperação metabólica mais rapida entre sessoes de treino.",
     pontos: [
-      "Recuperacao mais rapida do equilibrio ácido-base",
+      "Recuperação mais rapida do equilibrio ácido-base",
       "Relevante para atletas com treinos em sequencia",
       "Confirma o efeito tampão da água mineralizada alcalina",
     ],
@@ -560,7 +560,7 @@ export const REFERÊNCIAS: Referência[] = [
       "Suporte técnico para academias, times e boxes que oferecem água alcalina aos alunos.",
     url: "https://www.termedia.pl/Journal/-78/Article-70349",
     acessoAberto: true,
-    termos: ["ph sanguíneo", "recuperacao", "treino intenso", "excesso de base", "academia"],
+    termos: ["ph sanguíneo", "recuperação", "treino intenso", "excesso de base", "academia"],
   },
   {
     id: "wynn-2009-osso",
@@ -581,7 +581,7 @@ export const REFERÊNCIAS: Referência[] = [
       "Efeito independente da quantidade de cálcio ingerida",
     ],
     aplicação:
-      "Argumento relevante para público feminino e para prevencao de perda óssea com o avanco da idade.",
+      "Argumento relevante para público feminino e para prevenção de perda óssea com o avanco da idade.",
     url: "https://www.sciencedirect.com/science/article/abs/pii/S8756328208007667",
     acessoAberto: false,
     termos: ["osso", "osteoporose", "cálcio", "bicarbonato", "reabsorção óssea", "mulher"],
@@ -598,9 +598,9 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "medio",
     eixos: ["Água alcalina", "Minerais essenciais"],
     resumo:
-      "Revisão que descreve como a alimentacao ocidental, rica em proteína animal e ultraprocessados, gera carga ácida cronica leve, e como águas bicarbonatadas ajudam a compensar essa carga sem uso de suplementos.",
+      "Revisão que descreve como a alimentação ocidental, rica em proteína animal e ultraprocessados, gera carga ácida crônica leve, e como águas bicarbonatadas ajudam a compensar essa carga sem uso de suplementos.",
     pontos: [
-      "Dieta moderna gera acidose metabólica cronica de baixo grau",
+      "Dieta moderna gera acidose metabólica crônica de baixo grau",
       "Água bicarbonatada atua como tampão natural da dieta",
       "Estrategia simples e continua, sem suplementação",
     ],
@@ -612,7 +612,7 @@ export const REFERÊNCIAS: Referência[] = [
   },
   {
     id: "fenton-2016-carga-acida",
-    titulo: "Carga ácida renal, alimentacao e equilibrio mineral",
+    titulo: "Carga ácida renal, alimentação e equilibrio mineral",
     tituloOriginal: "Dietary acid load and bone and mineral metabolism",
     autores: "Fenton TR, Huang T",
     fonte: "BMJ Open / Nutrition Journal",
@@ -622,7 +622,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "base",
     eixos: ["Minerais essenciais", "Hidratação funcional"],
     resumo:
-      "Análise metodológica sobre como se mede a carga ácida da dieta e como o rim regula o equilibrio ácido-base. Documento util como base conceitual para explicar de forma honesta o que o pH corporal significa.",
+      "Análise metodológica sobre como se mede a carga ácida da dieta e como o rim regula o equilibrio ácido-base. Documento útil como base conceitual para explicar de forma honesta o que o pH corporal significa.",
     pontos: [
       "Detalha o papel renal na regulação ácido-base",
       "Fornece vocabulário técnico correto para o tema",
@@ -691,7 +691,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "base",
     eixos: ["Água alcalina"],
     resumo:
-      "Definicao da escala de pH, sua natureza logarítmica e como pequenas variações representam grandes diferencas de concentração de íons hidrogênio. Essencial para entender por que pH 9 e dez vezes mais alcalino que pH 8.",
+      "Definição da escala de pH, sua natureza logarítmica e como pequenas variações representam grandes diferencas de concentração de íons hidrogênio. Essencial para entender por que pH 9 e dez vezes mais alcalino que pH 8.",
     pontos: [
       "Escala logarítmica: cada ponto equivale a dez vezes",
       "Define ácido, neutro e alcalino",
@@ -704,7 +704,7 @@ export const REFERÊNCIAS: Referência[] = [
   },
   {
     id: "wiki-hidrogenio-molecular",
-    titulo: "Wikipedia: Hidrogênio molecular e aplicacoes biomédicas",
+    titulo: "Wikipedia: Hidrogênio molecular e aplicações biomédicas",
     autores: "Wikipedia (colaborativo)",
     fonte: "Wikipedia, the free encyclopedia",
     ano: 2026,
@@ -713,7 +713,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "base",
     eixos: ["Antioxidantes e hidrogênio"],
     resumo:
-      "Verbete sobre o hidrogênio molecular, suas propriedades físico-químicas é o campo emergente de pesquisa biomedica em torno da molécula, incluindo água hidrogenada.",
+      "Verbete sobre o hidrogênio molecular, suas propriedades físico-químicas é o campo emergente de pesquisa biomédica em torno da molécula, incluindo água hidrogenada.",
     pontos: [
       "Menor molécula existente, alta difusibilidade",
       "Campo de pesquisa biomédico em expansão",
@@ -759,7 +759,7 @@ export const REFERÊNCIAS: Referência[] = [
     resumo:
       "Panorama sobre origem, dispersao e vias de exposição humana aos microplásticos, com destaque para água engarrafada e embalagens plásticas de uso alimentar.",
     pontos: [
-      "Origem em degradacao de plásticos de uso comum",
+      "Origem em degradação de plásticos de uso comum",
       "Presenca documentada em água, sal e alimentos",
       "Contexto para decisoes de consumo domestico",
     ],
@@ -779,7 +779,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "base",
     eixos: ["Qualidade da água comum"],
     resumo:
-      "Descreve o mecanismo de adsorção do carvão ativado, sua eficiencia na remocao de cloro, odores e compostos orgânicos, e por que ele é o padrão em purificadores domésticos de qualidade.",
+      "Descreve o mecanismo de adsorção do carvão ativado, sua eficiencia na remoção de cloro, odores e compostos orgânicos, e por que ele é o padrão em purificadores domésticos de qualidade.",
     pontos: [
       "Adsorção remove cloro e compostos orgânicos",
       "Preserva minerais dissolvidos na água",
@@ -826,13 +826,13 @@ export const PERGUNTAS_GUIA: PerguntaGuia[] = [
   {
     pergunta: "Água alcalina ajuda no refluxo e na azia?",
     resposta:
-      "Sim. Água com pH 8,8 desativa a pepsina, a enzima que causa a lesao no refluxo, e ensaio clínico randomizado mostrou melhora de sintomas digestivos em quatro semanas.",
+      "Sim. Água com pH 8,8 desativa a pepsina, a enzima que causa a lesão no refluxo, e ensaio clínico randomizado mostrou melhora de sintomas digestivos em quatro semanas.",
     refs: ["koufman-2012-pepsina", "tanaka-2018-gastro", "higashimura-2018-microbiota"],
   },
   {
     pergunta: "Água alcalina melhora o desempenho esportivo?",
     resposta:
-      "Sim. Estudos mostram sangue menos viscoso, melhor equilibrio ácido-base, recuperacao mais rapida do pH e ganho de potência anaeróbica em atletas.",
+      "Sim. Estudos mostram sangue menos viscoso, melhor equilibrio ácido-base, recuperação mais rapida do pH e ganho de potência anaeróbica em atletas.",
     refs: ["weidman-2016-viscosidade", "chycki-2018-acidose", "kitada-2018-esporte", "nakamura-2020-h2-fadiga"],
   },
   {
@@ -874,7 +874,7 @@ export const PERGUNTAS_GUIA: PerguntaGuia[] = [
   {
     pergunta: "O que e hidratação funcional?",
     resposta:
-      "É hidratar com água que entrega algo além da molécula de água: minerais biodisponíveis, pH alcalino e hidrogênio dissolvido, impactando energia, foco e recuperacao.",
+      "É hidratar com água que entrega algo além da molécula de água: minerais biodisponíveis, pH alcalino e hidrogênio dissolvido, impactando energia, foco e recuperação.",
     refs: ["popkin-2010-hidratação", "riebl-2013-desidratação", "heil-2010-ácido-base"],
   },
   {
@@ -901,7 +901,7 @@ export interface VideoPortal {
   id: string;
   youtubeId: string;
   titulo: string;
-  descricao: string;
+  descrição: string;
   duracao: string;
 }
 
@@ -911,28 +911,28 @@ export const VÍDEOS: VideoPortal[] = [
     id: "v1",
     youtubeId: "dQw4w9WgXcQ",
     titulo: "O que e água alcalina ionizada",
-    descricao: "Explicacao em 4 minutos sobre pH, minerais e hidrogênio dissolvido.",
+    descrição: "Explicação em 4 minutos sobre pH, minerais e hidrogênio dissolvido.",
     duracao: "4 min",
   },
   {
     id: "v2",
     youtubeId: "dQw4w9WgXcQ",
     titulo: "Por que o galão e a garrafa plástica são um problema",
-    descricao: "Microplásticos, logística é o que a ciência mostra sobre embalagens.",
+    descrição: "Microplásticos, logística é o que a ciência mostra sobre embalagens.",
     duracao: "6 min",
   },
   {
     id: "v3",
     youtubeId: "dQw4w9WgXcQ",
     titulo: "Hidratação funcional para performance",
-    descricao: "Como atletas usam água alcalina para recuperacao e desempenho.",
+    descrição: "Como atletas usam água alcalina para recuperação e desempenho.",
     duracao: "8 min",
   },
   {
     id: "v4",
     youtubeId: "dQw4w9WgXcQ",
     titulo: "Refluxo, digestão e pH da água",
-    descricao: "O estudo da pepsina explicado de forma simples.",
+    descrição: "O estudo da pepsina explicado de forma simples.",
     duracao: "5 min",
   },
 ];

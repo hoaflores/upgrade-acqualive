@@ -34,7 +34,7 @@ const VideosPortal = () => (
               <div className="p-5">
                 <p className="text-[11px] uppercase tracking-wider text-[hsl(var(--pc-ink-soft))]">{v.duracao}</p>
                 <h3 className="mt-1 font-display text-lg font-semibold">{v.titulo}</h3>
-                <p className="mt-2 text-sm text-[hsl(var(--pc-ink-soft))]">{v.descricao}</p>
+                <p className="mt-2 text-sm text-[hsl(var(--pc-ink-soft))]">{v.descrição}</p>
               </div>
             </div>
           </ScrollReveal>
