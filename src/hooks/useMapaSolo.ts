@@ -45,9 +45,8 @@ export function useMapaSolo() {
   useEffect(() => {
     let cancel = false;
     supabase
-      .from("franqueados")
-      .select("id,nome,cidade,estado,lat,lng,whatsapp,instagram,foto,observacoes,horario_atendimento,ativo")
-      .eq("ativo", true)
+      .from("franqueados_publicos" as any)
+      .select("id,nome,cidade,estado,lat,lng,whatsapp,instagram,foto,horario_atendimento")
       .order("cidade")
       .then(({ data, error }) => {
         if (cancel) return;

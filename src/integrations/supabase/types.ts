@@ -386,7 +386,45 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      franqueados_publicos: {
+        Row: {
+          cidade: string | null
+          estado: string | null
+          foto: string | null
+          horario_atendimento: string | null
+          id: string | null
+          instagram: string | null
+          lat: number | null
+          lng: number | null
+          nome: string | null
+          whatsapp: string | null
+        }
+        Insert: {
+          cidade?: string | null
+          estado?: string | null
+          foto?: string | null
+          horario_atendimento?: string | null
+          id?: string | null
+          instagram?: string | null
+          lat?: number | null
+          lng?: number | null
+          nome?: string | null
+          whatsapp?: string | null
+        }
+        Update: {
+          cidade?: string | null
+          estado?: string | null
+          foto?: string | null
+          horario_atendimento?: string | null
+          id?: string | null
+          instagram?: string | null
+          lat?: number | null
+          lng?: number | null
+          nome?: string | null
+          whatsapp?: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       gerar_protocolo_demanda: { Args: never; Returns: string }
