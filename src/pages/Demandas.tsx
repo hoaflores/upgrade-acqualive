@@ -146,9 +146,16 @@ export default function Demandas() {
     if (!trackResult || (!novoCmt.trim() && cmtFiles.length === 0)) return;
     setEnviandoCmt(true);
     try {
+      const { data: authData } = await supabase.auth.getUser();
+      const uid = authData.user?.id;
+      if (!uid && cmtFiles.length > 0) {
+        toast({ title: "Faça login para enviar anexos", variant: "destructive" });
+        setEnviandoCmt(false);
+        return;
+      }
       // Upload anexos
       for (const f of cmtFiles) {
-        const path = `comentarios/${Date.now()}-${Math.random().toString(36).slice(2)}-${f.name.replace(/[^\w.-]/g, "_")}`;
+        const path = `comentarios/${uid}/${Date.now()}-${Math.random().toString(36).slice(2)}-${f.name.replace(/[^\w.-]/g, "_")}`;
 
         const { error: upErr } = await supabase.storage.from("demandas-anexos").upload(path, f);
         if (upErr) throw upErr;
@@ -228,10 +235,17 @@ export default function Demandas() {
     }
     setLoading(true);
     try {
+      const { data: authData } = await supabase.auth.getUser();
+      const uid = authData.user?.id;
+      if (!uid && files.length > 0) {
+        toast({ title: "Faça login para enviar anexos", variant: "destructive" });
+        setLoading(false);
+        return;
+      }
       // Upload anexos
       const anexos: any[] = [];
       for (const f of files) {
-        const path = `novas/${Date.now()}-${Math.random().toString(36).slice(2)}-${f.name.replace(/[^\w.-]/g, "_")}`;
+        const path = `novas/${uid}/${Date.now()}-${Math.random().toString(36).slice(2)}-${f.name.replace(/[^\w.-]/g, "_")}`;
         const { error } = await supabase.storage.from("demandas-anexos").upload(path, f);
         if (error) throw error;
         anexos.push({ path, nome: f.name, tipo: f.type, tamanho: f.size });
