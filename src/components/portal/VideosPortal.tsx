@@ -1,27 +1,27 @@
 import ScrollReveal from "@/components/ScrollReveal";
 import LiteYouTube from "@/components/LiteYouTube";
-import { VIDEOS } from "@/data/portal-cientifico";
+import { VÍDEOS } from "@/data/portal-cientifico";
 
 /**
- * Videoteca: o player so carrega apos o clique e usa youtube-nocookie
+ * Videoteca: o player so carrega após o clique e usa youtube-nocookie
  * com controles reduzidos, para manter o estudo dentro do portal.
  */
 const VideosPortal = () => (
-  <section id="videos" className="scroll-mt-20 border-t border-[hsl(var(--pc-line))] py-20 md:py-28">
+  <section id="vídeos" className="scroll-mt-20 border-t border-[hsl(var(--pc-line))] py-20 md:py-28">
     <div className="container">
       <ScrollReveal>
         <div className="max-w-2xl">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[hsl(var(--pc-cyan))]">Videoteca</p>
-          <h2 className="mt-4 font-display text-3xl font-bold md:text-4xl">Ciencia da agua em video</h2>
+          <h2 className="mt-4 font-display text-3xl font-bold md:text-4xl">Ciência da água em vídeo</h2>
           <p className="mt-4 text-[hsl(var(--pc-ink-soft))]">
-            Aulas curtas para entender o que os estudos dizem. Os videos rodam aqui dentro, sem sugestoes externas ao
+            Aulas curtas para entender o que os estudos dizem. Os vídeos rodam aqui dentro, sem sugestões externas ao
             final.
           </p>
         </div>
       </ScrollReveal>
 
       <div className="mt-12 grid gap-6 md:grid-cols-2">
-        {VIDEOS.map((v, i) => (
+        {VÍDEOS.map((v, i) => (
           <ScrollReveal key={v.id} delay={(i % 2) * 90}>
             <div className="pc-card overflow-hidden rounded-2xl">
               <div className="relative aspect-video bg-[hsl(var(--pc-ink))]">

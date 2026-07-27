@@ -4,18 +4,18 @@ import {
   IDIOMA_LABEL,
   IMPACTO_LABEL,
   TIPO_LABEL,
-  type Referencia,
+  type Referência,
 } from "@/data/portal-cientifico";
 import { abrirFonteExterna } from "./portalUtils";
 
 interface Props {
-  referencia: Referencia | null;
+  referência: Referência | null;
   onOpenChange: (open: boolean) => void;
 }
 
-const LeitorArtigo = ({ referencia, onOpenChange }: Props) => {
-  if (!referencia) return null;
-  const r = referencia;
+const LeitorArtigo = ({ referência, onOpenChange }: Props) => {
+  if (!referência) return null;
+  const r = referência;
   const citacao = `${r.autores} (${r.ano}). ${r.tituloOriginal ?? r.titulo}. ${r.fonte}.`;
 
   return (
@@ -47,7 +47,7 @@ const LeitorArtigo = ({ referencia, onOpenChange }: Props) => {
           <section>
             <h3 className="mb-3 flex items-center gap-2 font-display text-lg font-semibold">
               <BookOpenCheck className="h-5 w-5 text-[hsl(var(--pc-cyan))]" aria-hidden />
-              Resumo em portugues
+              Resumo em português
             </h3>
             <p className="text-[15px] leading-relaxed text-[hsl(var(--pc-ink-soft))]">{r.resumo}</p>
           </section>
@@ -65,8 +65,8 @@ const LeitorArtigo = ({ referencia, onOpenChange }: Props) => {
           </section>
 
           <section className="rounded-2xl border border-[hsl(var(--pc-line))] bg-[hsl(var(--pc-paper-2))] p-5">
-            <h3 className="mb-2 font-display text-base font-semibold">Por que isso importa na pratica</h3>
-            <p className="text-[15px] leading-relaxed text-[hsl(var(--pc-ink-soft))]">{r.aplicacao}</p>
+            <h3 className="mb-2 font-display text-base font-semibold">Por que isso importa na prática</h3>
+            <p className="text-[15px] leading-relaxed text-[hsl(var(--pc-ink-soft))]">{r.aplicação}</p>
           </section>
 
           <section>
@@ -88,8 +88,8 @@ const LeitorArtigo = ({ referencia, onOpenChange }: Props) => {
             <ExternalLink className="h-4 w-4" aria-hidden />
           </button>
           <p className="-mt-4 text-xs text-[hsl(var(--pc-ink-soft))]">
-            {r.acessoAberto ? "Acesso aberto." : "Resumo publico; texto completo pode exigir assinatura."} A fonte abre em
-            janela separada para voce nao perder a leitura.
+            {r.acessoAberto ? "Acesso aberto." : "Resumo público; texto completo pode exigir assinatura."} A fonte abre em
+            janela separada para você não perder a leitura.
           </p>
         </div>
       </DialogContent>

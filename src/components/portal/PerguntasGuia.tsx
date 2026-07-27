@@ -5,10 +5,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import ScrollReveal from "@/components/ScrollReveal";
-import { PERGUNTAS_GUIA, REFERENCIAS, type Referencia } from "@/data/portal-cientifico";
+import { PERGUNTAS_GUIA, REFERÊNCIAS, type Referência } from "@/data/portal-cientifico";
 
 interface Props {
-  onAbrirArtigo: (r: Referencia) => void;
+  onAbrirArtigo: (r: Referência) => void;
 }
 
 const PerguntasGuia = ({ onAbrirArtigo }: Props) => (
@@ -17,10 +17,10 @@ const PerguntasGuia = ({ onAbrirArtigo }: Props) => (
       <ScrollReveal>
         <div className="text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[hsl(var(--pc-cyan))]">
-            Perguntas frequentes com referencia
+            Perguntas frequentes com referência
           </p>
           <h2 className="mt-4 font-display text-3xl font-bold md:text-4xl">
-            As duvidas mais comuns, <span className="pc-underline-amber">respondidas pela ciencia</span>
+            As dúvidas mais comuns, <span className="pc-underline-amber">respondidas pela ciência</span>
           </h2>
         </div>
       </ScrollReveal>
@@ -39,8 +39,8 @@ const PerguntasGuia = ({ onAbrirArtigo }: Props) => (
               {g.resposta}
               <ul className="mt-4 space-y-1.5">
                 {g.refs
-                  .map((id) => REFERENCIAS.find((r) => r.id === id))
-                  .filter((r): r is Referencia => !!r)
+                  .map((id) => REFERÊNCIAS.find((r) => r.id === id))
+                  .filter((r): r is Referência => !!r)
                   .map((r) => (
                     <li key={r.id}>
                       <button

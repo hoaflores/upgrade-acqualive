@@ -26,7 +26,7 @@ const BlogRecentes = () => {
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div className="max-w-xl">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[hsl(var(--pc-cyan))]">
-                Publicacoes recentes
+                Publicações recentes
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold md:text-4xl">Direto do blog Acqualive</h2>
               <p className="mt-4 text-[hsl(var(--pc-ink-soft))]">
@@ -44,7 +44,7 @@ const BlogRecentes = () => {
 
         {erro && !carregando && (
           <p className="mt-10 text-center text-sm text-[hsl(var(--pc-ink-soft))]">
-            Nao foi possivel carregar as publicacoes agora. Tente novamente em instantes.
+            Não foi possível carregar as publicações agora. Tente novamente em instantes.
           </p>
         )}
 

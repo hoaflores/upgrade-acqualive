@@ -1,10 +1,10 @@
 import { useMemo, useState } from "react";
-import { EIXOS, REFERENCIAS, type Referencia } from "@/data/portal-cientifico";
+import { EIXOS, REFERÊNCIAS, type Referência } from "@/data/portal-cientifico";
 import ArtigoCard from "./ArtigoCard";
 import ScrollReveal from "@/components/ScrollReveal";
 
 interface Props {
-  onAbrirArtigo: (r: Referencia) => void;
+  onAbrirArtigo: (r: Referência) => void;
 }
 
 const BibliotecaArtigos = ({ onAbrirArtigo }: Props) => {
@@ -13,7 +13,7 @@ const BibliotecaArtigos = ({ onAbrirArtigo }: Props) => {
 
   const lista = useMemo(() => {
     const ordem = { alto: 0, medio: 1, base: 2 } as const;
-    return REFERENCIAS.filter((r) => eixo === "Todos" || r.eixos.includes(eixo)).sort(
+    return REFERÊNCIAS.filter((r) => eixo === "Todos" || r.eixos.includes(eixo)).sort(
       (a, b) => ordem[a.impacto] - ordem[b.impacto] || b.ano - a.ano,
     );
   }, [eixo]);
@@ -25,11 +25,11 @@ const BibliotecaArtigos = ({ onAbrirArtigo }: Props) => {
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[hsl(var(--pc-cyan))]">Biblioteca</p>
             <h2 className="mt-4 font-display text-3xl font-bold md:text-4xl">
-              A enciclopedia da <span className="pc-underline-amber">agua alcalina</span>
+              A enciclopédia da <span className="pc-underline-amber">água alcalina</span>
             </h2>
             <p className="mt-4 text-[hsl(var(--pc-ink-soft))]">
-              Estudos originais, revisoes, documentos da OMS e verbetes enciclopedicos, todos com resumo em portugues
-              escrito para leigos e para profissionais de saude.
+              Estudos originais, revisões, documentos da OMS e verbetes enciclopédicos, todos com resumo em português
+              escrito para leigos e para profissionais de saúde.
             </p>
           </div>
         </ScrollReveal>
@@ -58,7 +58,7 @@ const BibliotecaArtigos = ({ onAbrirArtigo }: Props) => {
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {lista.slice(0, visiveis).map((r, i) => (
             <ScrollReveal key={r.id} delay={(i % 3) * 90}>
-              <ArtigoCard referencia={r} onAbrir={onAbrirArtigo} destaque={r.impacto === "alto"} />
+              <ArtigoCard referência={r} onAbrir={onAbrirArtigo} destaque={r.impacto === "alto"} />
             </ScrollReveal>
           ))}
         </div>
@@ -70,7 +70,7 @@ const BibliotecaArtigos = ({ onAbrirArtigo }: Props) => {
               onClick={() => setVisiveis((v) => v + 9)}
               className="rounded-full border border-[hsl(var(--pc-blue))] px-8 py-3 text-sm font-semibold text-[hsl(var(--pc-blue))] transition hover:bg-[hsl(var(--pc-blue))] hover:text-[hsl(var(--pc-paper))]"
             >
-              Carregar mais referencias ({lista.length - visiveis})
+              Carregar mais referências ({lista.length - visiveis})
             </button>
           </div>
         )}

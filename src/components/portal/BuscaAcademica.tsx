@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 import { Search, Sparkles, Loader2, ArrowUpRight } from "lucide-react";
-import { PERGUNTAS_GUIA, REFERENCIAS, type Referencia } from "@/data/portal-cientifico";
+import { PERGUNTAS_GUIA, REFERÊNCIAS, type Referência } from "@/data/portal-cientifico";
 import { buscarPostsPorTermo, buscarReferencias, type PostBlog } from "./portalUtils";
 
 interface Props {
-  onAbrirArtigo: (r: Referencia) => void;
+  onAbrirArtigo: (r: Referência) => void;
 }
 
 const BuscaAcademica = ({ onAbrirArtigo }: Props) => {
@@ -50,20 +50,20 @@ const BuscaAcademica = ({ onAbrirArtigo }: Props) => {
       <div className="container max-w-4xl">
         <div className="text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[hsl(var(--pc-cyan))]">
-            Motor de busca cientifica
+            Motor de busca científica
           </p>
           <h2 className="mt-4 font-display text-3xl font-bold md:text-4xl">
-            Pergunte. A <span className="pc-underline-amber">ciencia responde.</span>
+            Pergunte. A <span className="pc-underline-amber">ciência responde.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-[hsl(var(--pc-ink-soft))]">
-            Digite uma duvida em linguagem natural. O portal cruza estudos, fontes institucionais e artigos do blog
-            Acqualive para entregar a resposta com referencia.
+            Digite uma dúvida em linguagem natural. O portal cruza estudos, fontes institucionais e artigos do blog
+            Acqualive para entregar a resposta com referência.
           </p>
         </div>
 
         <div className="mt-10">
           <label htmlFor="busca-portal" className="sr-only">
-            Buscar estudos sobre agua alcalina e hidratacao
+            Buscar estudos sobre água alcalina e hidratação
           </label>
           <div className="pc-card flex items-center gap-3 rounded-full px-5 py-3 shadow-lg">
             <Search className="h-5 w-5 shrink-0 text-[hsl(var(--pc-blue))]" aria-hidden />
@@ -72,7 +72,7 @@ const BuscaAcademica = ({ onAbrirArtigo }: Props) => {
               type="search"
               value={consulta}
               onChange={(e) => setConsulta(e.target.value)}
-              placeholder="Ex.: agua alcalina ajuda no refluxo?"
+              placeholder="Ex.: água alcalina ajuda no refluxo?"
               className="w-full bg-transparent py-2 text-base outline-none placeholder:text-[hsl(var(--pc-ink-soft)/0.7)]"
             />
           </div>
@@ -105,8 +105,8 @@ const BuscaAcademica = ({ onAbrirArtigo }: Props) => {
 
             {resultados.length === 0 ? (
               <p className="rounded-2xl border border-dashed border-[hsl(var(--pc-line))] p-8 text-center text-sm text-[hsl(var(--pc-ink-soft))]">
-                Nenhuma referencia encontrada para esse termo. Tente palavras como refluxo, hidratacao, atleta,
-                microplastico, minerais ou hidrogenio.
+                Nenhuma referência encontrada para esse termo. Tente palavras como refluxo, hidratação, atleta,
+                microplástico, minerais ou hidrogênio.
               </p>
             ) : (
               <ol className="space-y-3">
@@ -169,7 +169,7 @@ const BuscaAcademica = ({ onAbrirArtigo }: Props) => {
 
         {!buscando && (
           <p className="mt-8 text-center text-xs text-[hsl(var(--pc-ink-soft))]">
-            {REFERENCIAS.length} referencias indexadas · atualizadas continuamente pela equipe Acqualive
+            {REFERÊNCIAS.length} referências indexadas · atualizadas continuamente pela equipe Acqualive
           </p>
         )}
       </div>

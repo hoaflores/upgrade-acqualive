@@ -1,7 +1,7 @@
 import { normalize } from "@/utils/fuzzySearch";
-import { REFERENCIAS, type Referencia } from "@/data/portal-cientifico";
+import { REFERÊNCIAS, type Referência } from "@/data/portal-cientifico";
 
-/** Dominios em que a navegacao pode acontecer na mesma aba. */
+/** Dominios em que a navegação pode acontecer na mesma aba. */
 const DOMINIOS_INTERNOS = ["acqualive.com.br", "lp.acqualive.com.br", "blog.acqualive.com.br", "paginas.acqualive.com.br"];
 
 export const ehLinkInterno = (url: string) => {
@@ -15,7 +15,7 @@ export const ehLinkInterno = (url: string) => {
 };
 
 /**
- * Abre fontes externas em janela isolada, sem barra de navegacao,
+ * Abre fontes externas em janela isolada, sem barra de navegação,
  * para que o leitor volte facilmente ao portal.
  */
 export const abrirFonteExterna = (url: string) => {
@@ -37,12 +37,12 @@ export const abrirFonteExterna = (url: string) => {
 const pesoImpacto = { alto: 0, medio: 1, base: 2 } as const;
 
 export interface ResultadoBusca {
-  ref: Referencia;
+  ref: Referência;
   score: number;
 }
 
-/** Busca semantica simples por palavras da pergunta, ponderada pelo impacto. */
-export const buscarReferencias = (consulta: string, base: Referencia[] = REFERENCIAS): ResultadoBusca[] => {
+/** Busca semântica simples por palavras da pergunta, ponderada pelo impacto. */
+export const buscarReferencias = (consulta: string, base: Referência[] = REFERÊNCIAS): ResultadoBusca[] => {
   const q = normalize(consulta);
   if (!q) return [];
   const palavras = q.split(" ").filter((p) => p.length > 2);
@@ -51,7 +51,7 @@ export const buscarReferencias = (consulta: string, base: Referencia[] = REFEREN
   return base
     .map((ref) => {
       const titulo = normalize(`${ref.titulo} ${ref.tituloOriginal ?? ""}`);
-      const corpo = normalize(`${ref.resumo} ${ref.aplicacao} ${ref.pontos.join(" ")} ${ref.eixos.join(" ")}`);
+      const corpo = normalize(`${ref.resumo} ${ref.aplicação} ${ref.pontos.join(" ")} ${ref.eixos.join(" ")}`);
       const termos = ref.termos.map(normalize);
 
       let score = 0;
@@ -90,14 +90,14 @@ const BLOG_API = "https://blog.acqualive.com.br/wp-json/wp/v2/posts";
 
 const mapPost = (p: Record<string, unknown>): PostBlog => {
   const embedded = (p._embedded as Record<string, unknown>) ?? {};
-  const media = (embedded["wp:featuredmedia"] as Array<Record<string, unknown>>) ?? [];
+  const média = (embedded["wp:featuredmedia"] as Array<Record<string, unknown>>) ?? [];
   return {
     id: p.id as number,
     titulo: limparHtml(((p.title as Record<string, string>)?.rendered) ?? ""),
     resumo: limparHtml(((p.excerpt as Record<string, string>)?.rendered) ?? "").slice(0, 180),
     link: p.link as string,
     data: p.date as string,
-    imagem: (media[0]?.source_url as string) ?? undefined,
+    imagem: (média[0]?.source_url as string) ?? undefined,
   };
 };
 

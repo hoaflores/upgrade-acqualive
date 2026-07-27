@@ -1,13 +1,13 @@
 import { ArrowUpRight, FileText } from "lucide-react";
-import { IMPACTO_LABEL, TIPO_LABEL, IDIOMA_LABEL, type Referencia } from "@/data/portal-cientifico";
+import { IMPACTO_LABEL, TIPO_LABEL, IDIOMA_LABEL, type Referência } from "@/data/portal-cientifico";
 
 interface Props {
-  referencia: Referencia;
-  onAbrir: (r: Referencia) => void;
+  referência: Referência;
+  onAbrir: (r: Referência) => void;
   destaque?: boolean;
 }
 
-const ArtigoCard = ({ referencia: r, onAbrir, destaque = false }: Props) => (
+const ArtigoCard = ({ referência: r, onAbrir, destaque = false }: Props) => (
   <article
     className={`pc-card group flex h-full flex-col rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-xl ${
       destaque ? "ring-1 ring-[hsl(var(--pc-amber)/0.45)]" : ""

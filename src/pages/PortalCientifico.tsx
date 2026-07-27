@@ -9,33 +9,33 @@ import BlogRecentes from "@/components/portal/BlogRecentes";
 import VideosPortal from "@/components/portal/VideosPortal";
 import LeitorArtigo from "@/components/portal/LeitorArtigo";
 import ScrollReveal from "@/components/ScrollReveal";
-import { PERGUNTAS_GUIA, REFERENCIAS, type Referencia } from "@/data/portal-cientifico";
+import { PERGUNTAS_GUIA, REFERÊNCIAS, type Referência } from "@/data/portal-cientifico";
 
 const SITE = "https://paginas.acqualive.com.br";
-const URL_PAGINA = `${SITE}/portal-cientifico`;
+const URL_PÁGINA = `${SITE}/portal-cientifico`;
 
 const NAV = [
   { href: "#busca", label: "Buscar" },
   { href: "#biblioteca", label: "Biblioteca" },
   { href: "#perguntas", label: "Perguntas" },
   { href: "#blog", label: "Blog" },
-  { href: "#videos", label: "Videos" },
+  { href: "#vídeos", label: "Vídeos" },
 ];
 
 const PortalCientifico = () => {
-  const [artigo, setArtigo] = useState<Referencia | null>(null);
+  const [artigo, setArtigo] = useState<Referência | null>(null);
 
   const jsonLd = [
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      name: "Portal Cientifico Acqualive",
-      url: URL_PAGINA,
+      name: "Portal Científico Acqualive",
+      url: URL_PÁGINA,
       description:
-        "Enciclopedia cientifica sobre agua alcalina, hidratacao funcional e qualidade da agua, com estudos revisados por pares e resumos em portugues.",
+        "Enciclopédia científica sobre água alcalina, hidratação funcional e qualidade da água, com estudos revisados por pares e resumos em português.",
       inLanguage: "pt-BR",
       isPartOf: { "@type": "WebSite", name: "Acqualive", url: SITE },
-      about: ["Agua alcalina", "Hidratacao", "Qualidade da agua", "Hidrogenio molecular", "Saude preventiva"],
+      about: ["Água alcalina", "Hidratação", "Qualidade da água", "Hidrogênio molecular", "Saúde preventiva"],
     },
     {
       "@context": "https://schema.org",
@@ -49,9 +49,9 @@ const PortalCientifico = () => {
     {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      name: "Referencias cientificas sobre agua alcalina",
-      numberOfItems: REFERENCIAS.length,
-      itemListElement: REFERENCIAS.slice(0, 20).map((r, i) => ({
+      name: "Referências científicas sobre água alcalina",
+      numberOfItems: REFERÊNCIAS.length,
+      itemListElement: REFERÊNCIAS.slice(0, 20).map((r, i) => ({
         "@type": "ListItem",
         position: i + 1,
         item: {
@@ -71,15 +71,15 @@ const PortalCientifico = () => {
   return (
     <div className="portal-theme min-h-screen font-body">
       <Helmet>
-        <title>Portal Cientifico Acqualive: estudos sobre agua alcalina</title>
+        <title>Portal Científico Acqualive: estudos sobre água alcalina</title>
         <meta
           name="description"
-          content="Base cientifica sobre agua alcalina, hidratacao funcional e qualidade da agua: estudos revisados por pares, documentos da OMS e resumos em portugues."
+          content="Base científica sobre água alcalina, hidratação funcional e qualidade da água: estudos revisados por pares, documentos da OMS e resumos em português."
         />
-        <meta property="og:title" content="Portal Cientifico Acqualive: estudos sobre agua alcalina" />
+        <meta property="og:title" content="Portal Científico Acqualive: estudos sobre água alcalina" />
         <meta
           property="og:description"
-          content="Pesquise estudos sobre agua alcalina, refluxo, performance, minerais e microplasticos. Resumos em portugues, leitura dentro da pagina."
+          content="Pesquise estudos sobre água alcalina, refluxo, performance, minerais e microplásticos. Resumos em português, leitura dentro da página."
         />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -87,14 +87,14 @@ const PortalCientifico = () => {
       </Helmet>
 
       <nav
-        aria-label="Navegacao do portal"
+        aria-label="Navegação do portal"
         className="sticky top-0 z-40 border-b border-[hsl(var(--pc-line))] bg-[hsl(var(--pc-paper)/0.85)] backdrop-blur"
       >
         <div className="container flex items-center justify-between gap-4 py-3">
           <a href="/" className="flex items-center gap-2 font-display text-sm font-bold text-[hsl(var(--pc-blue))]">
             <Droplets className="h-5 w-5" aria-hidden />
             Acqualive
-            <span className="hidden font-normal text-[hsl(var(--pc-ink-soft))] sm:inline">| Portal Cientifico</span>
+            <span className="hidden font-normal text-[hsl(var(--pc-ink-soft))] sm:inline">| Portal Científico</span>
           </a>
           <ul className="hidden items-center gap-6 text-sm text-[hsl(var(--pc-ink-soft))] md:flex">
             {NAV.map((n) => (
@@ -128,11 +128,11 @@ const PortalCientifico = () => {
               <div className="pc-radial overflow-hidden rounded-3xl border border-[hsl(var(--pc-line))] p-10 text-center md:p-16">
                 <ShieldCheck className="mx-auto h-10 w-10 text-[hsl(var(--pc-amber))]" aria-hidden />
                 <h2 className="mt-6 font-display text-3xl font-bold md:text-4xl">
-                  Da evidencia para o seu copo, todos os dias
+                  Da evidência para o seu copo, todos os dias
                 </h2>
                 <p className="mx-auto mt-4 max-w-2xl text-[hsl(var(--pc-ink-soft))]">
-                  Tudo o que voce leu aqui aponta para a mesma direcao: agua alcalina, mineralizada e livre de cloro e
-                  microplasticos. E exatamente isso que a tecnologia Acqualive entrega direto na sua torneira.
+                  Tudo o que você leu aqui aponta para a mesma direção: água alcalina, mineralizada e livre de cloro e
+                  microplásticos. E exatamente isso que a tecnologia Acqualive entrega direto na sua torneira.
                 </p>
                 <div className="mt-9 flex flex-wrap justify-center gap-3">
                   <a
@@ -146,7 +146,7 @@ const PortalCientifico = () => {
                     href="/acqualive-empresas"
                     className="inline-flex items-center gap-2 rounded-full border border-[hsl(var(--pc-blue))] px-8 py-4 text-sm font-semibold text-[hsl(var(--pc-blue))] transition hover:bg-white"
                   >
-                    Solucoes para empresas
+                    Soluções para empresas
                   </a>
                 </div>
               </div>
@@ -158,14 +158,14 @@ const PortalCientifico = () => {
       <footer className="border-t border-[hsl(var(--pc-line))] py-10">
         <div className="container flex flex-col items-center gap-4 text-center text-xs text-[hsl(var(--pc-ink-soft))]">
           <p className="max-w-2xl">
-            Conteudo de carater informativo e educativo. Nao substitui avaliacao, diagnostico ou tratamento realizado
-            por profissional de saude.
+            Conteudo de caráter informativo e educativo. Não substitui avaliação, diagnóstico ou tratamento realizado
+            por profissional de saúde.
           </p>
-          <p>Portal Cientifico Acqualive</p>
+          <p>Portal Científico Acqualive</p>
         </div>
       </footer>
 
-      <LeitorArtigo referencia={artigo} onOpenChange={(o) => !o && setArtigo(null)} />
+      <LeitorArtigo referência={artigo} onOpenChange={(o) => !o && setArtigo(null)} />
     </div>
   );
 };
