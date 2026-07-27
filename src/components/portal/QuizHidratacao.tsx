@@ -1,6 +1,9 @@
 import { useState } from "react";
-import { Beaker, Check, X, RefreshCw } from "lucide-react";
+import { Beaker, Check, X, RefreshCw, Gift, Loader2, PartyPopper } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
+
 
 type Questao = {
   pergunta: string;
