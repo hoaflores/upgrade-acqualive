@@ -17,7 +17,7 @@ const PONTOS: Ponto[] = [
     id: "cerebro",
     nome: "Cérebro",
     x: 50,
-    y: 8,
+    y: 14,
     titulo: "Foco e clareza mental",
     texto:
       "O tecido cerebral é composto por cerca de 75% de água. Perdas discretas de líquido já aparecem em testes de atenção, memória de trabalho e percepção de esforço.",
@@ -27,7 +27,7 @@ const PONTOS: Ponto[] = [
     id: "boca",
     nome: "Esôfago",
     x: 50,
-    y: 16,
+    y: 30,
     titulo: "Conforto digestivo",
     texto:
       "Água com pH próximo de 8,8 desativa de forma irreversível a pepsina, enzima envolvida na sensação de queimação do refluxo, e ajuda a tamponar o ácido que sobe.",
@@ -37,7 +37,7 @@ const PONTOS: Ponto[] = [
     id: "coracao",
     nome: "Sangue",
     x: 45,
-    y: 25,
+    y: 45,
     titulo: "Viscosidade sanguínea",
     texto:
       "Em estudo com atletas desidratados, a água alcalina reduziu a viscosidade do sangue mais do que a água comum, favorecendo a circulação e a entrega de oxigênio.",
@@ -46,8 +46,8 @@ const PONTOS: Ponto[] = [
   {
     id: "musculos",
     nome: "Músculos",
-    x: 41,
-    y: 62,
+    x: 43,
+    y: 120,
     titulo: "Performance e recuperação",
     texto:
       "O músculo esquelético guarda a maior reserva de água do corpo. Hidratação alcalina e mineralizada está associada a melhor equilíbrio ácido-base após esforço intenso.",
@@ -56,8 +56,8 @@ const PONTOS: Ponto[] = [
   {
     id: "estomago",
     nome: "Estômago",
-    x: 54,
-    y: 31,
+    x: 53,
+    y: 58,
     titulo: "Carga ácida da dieta",
     texto:
       "Água mineralizada com PRAL negativo alcaliniza depois de metabolizada. Ela compensa parte da carga ácida gerada por proteínas, ultraprocessados e refrigerantes.",
@@ -66,8 +66,8 @@ const PONTOS: Ponto[] = [
   {
     id: "rins",
     nome: "Rins",
-    x: 58,
-    y: 37,
+    x: 59,
+    y: 68,
     titulo: "Trabalho renal",
     texto:
       "Os rins são o principal regulador do equilíbrio ácido-base. Reduzir a carga ácida diária diminui a necessidade de mobilizar tampões do próprio corpo.",
@@ -77,7 +77,7 @@ const PONTOS: Ponto[] = [
     id: "ossos",
     nome: "Ossos",
     x: 57,
-    y: 74,
+    y: 155,
     titulo: "Minerais biodisponíveis",
     texto:
       "Cálcio e magnésio dissolvidos na água são absorvidos com boa biodisponibilidade e somam-se à ingestão diária, especialmente em dietas pobres em minerais.",
@@ -86,8 +86,8 @@ const PONTOS: Ponto[] = [
   {
     id: "pele",
     nome: "Pele",
-    x: 72,
-    y: 30,
+    x: 23,
+    y: 72,
     titulo: "Elasticidade e viço",
     texto:
       "A pele é o maior órgão do corpo e um dos primeiros a sinalizar desidratação crônica, com perda de elasticidade e aspecto opaco.",
