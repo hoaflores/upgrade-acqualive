@@ -188,7 +188,7 @@ export const AntesDepois = () => (
 );
 
 export const BeneficiosPessoas = () => (
-  <section id="beneficios" className="py-20 lg:py-28 bg-water-light">
+  <section id="beneficios" className="py-20 lg:py-28 bg-background">
     <div className="container">
       <div className="max-w-3xl mb-14">
         <Eyebrow>Equipe e clientes</Eyebrow>
