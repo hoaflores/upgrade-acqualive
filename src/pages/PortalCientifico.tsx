@@ -8,6 +8,8 @@ import PerguntasGuia from "@/components/portal/PerguntasGuia";
 import BlogRecentes from "@/components/portal/BlogRecentes";
 import VideosPortal from "@/components/portal/VideosPortal";
 import LeitorArtigo from "@/components/portal/LeitorArtigo";
+import ProgressoLeitura from "@/components/portal/ProgressoLeitura";
+
 import ScrollReveal from "@/components/ScrollReveal";
 import { PERGUNTAS_GUIA, REFERÊNCIAS, type Referência } from "@/data/portal-cientifico";
 
