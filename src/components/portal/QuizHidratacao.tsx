@@ -149,6 +149,10 @@ const QuizHidratacao = () => {
             <p className="mx-auto mt-4 max-w-2xl text-[hsl(var(--pc-ink-soft))]">
               Cinco perguntas baseadas nos estudos reunidos neste portal. Cada resposta vem com a explicação científica.
             </p>
+            <p className="mx-auto mt-5 inline-flex items-center gap-2 rounded-2xl border border-[hsl(var(--pc-amber)/0.4)] bg-[hsl(var(--pc-amber)/0.12)] px-5 py-3 text-sm font-semibold text-[hsl(var(--pc-amber))]">
+              <Gift className="h-4 w-4 shrink-0" aria-hidden />
+              Responda ao teste e concorra a descontos, presentes e muito mais
+            </p>
           </div>
         </ScrollReveal>
 
@@ -166,6 +170,71 @@ const QuizHidratacao = () => {
                 {acertos}/{QUESTOES.length}
               </p>
               <p className="mx-auto mt-4 max-w-md text-[hsl(var(--pc-ink-soft))]">{veredito}</p>
+
+              {enviado ? (
+                <div className="mx-auto mt-8 max-w-md rounded-2xl border border-[hsl(var(--pc-cyan)/0.45)] bg-[hsl(var(--pc-cyan)/0.1)] p-6">
+                  <PartyPopper className="mx-auto h-6 w-6 text-[hsl(var(--pc-blue))]" aria-hidden />
+                  <p className="mt-3 font-display text-lg font-bold">Você está concorrendo</p>
+                  <p className="mt-2 text-sm text-[hsl(var(--pc-ink-soft))]">
+                    Registramos sua participação. Um consultor Acqualive entra em contato com as condições especiais,
+                    descontos e presentes disponíveis.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={enviarLead} className="mx-auto mt-8 max-w-md text-left">
+                  <div className="rounded-2xl border border-[hsl(var(--pc-amber)/0.4)] bg-[hsl(var(--pc-amber)/0.1)] p-5">
+                    <p className="flex items-center gap-2 text-sm font-bold text-[hsl(var(--pc-amber))]">
+                      <Gift className="h-4 w-4 shrink-0" aria-hidden />
+                      Concorra a descontos, presentes e muito mais
+                    </p>
+                    <p className="mt-2 text-sm text-[hsl(var(--pc-ink-soft))]">
+                      Independente da sua nota, deixe seu nome e telefone para participar.
+                    </p>
+                  </div>
+
+                  <div className="mt-4 space-y-3">
+                    <input
+                      type="text"
+                      value={nome}
+                      onChange={(e) => setNome(e.target.value)}
+                      maxLength={120}
+                      required
+                      placeholder="Seu nome completo"
+                      className="w-full rounded-2xl border border-[hsl(var(--pc-line))] bg-white/80 px-5 py-3 text-sm outline-none transition focus:border-[hsl(var(--pc-cyan))]"
+                    />
+                    <input
+                      type="tel"
+                      value={telefone}
+                      onChange={(e) => setTelefone(e.target.value)}
+                      maxLength={30}
+                      required
+                      placeholder="WhatsApp com DDD"
+                      className="w-full rounded-2xl border border-[hsl(var(--pc-line))] bg-white/80 px-5 py-3 text-sm outline-none transition focus:border-[hsl(var(--pc-cyan))]"
+                    />
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      maxLength={200}
+                      placeholder="Email (opcional)"
+                      className="w-full rounded-2xl border border-[hsl(var(--pc-line))] bg-white/80 px-5 py-3 text-sm outline-none transition focus:border-[hsl(var(--pc-cyan))]"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={enviando}
+                    className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[hsl(var(--pc-blue))] px-6 py-3.5 text-sm font-semibold text-[hsl(var(--pc-paper))] transition hover:bg-[hsl(var(--pc-cyan))] disabled:opacity-60"
+                  >
+                    {enviando ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden /> : <Gift className="h-4 w-4" aria-hidden />}
+                    {enviando ? "Enviando..." : "Quero concorrer"}
+                  </button>
+                  <p className="mt-3 text-center text-xs text-[hsl(var(--pc-ink-soft))]">
+                    Seus dados são usados apenas para contato da Acqualive.
+                  </p>
+                </form>
+              )}
+
               <div className="mt-8 flex flex-wrap justify-center gap-3">
                 <button
                   type="button"
@@ -177,12 +246,13 @@ const QuizHidratacao = () => {
                 </button>
                 <a
                   href="#biblioteca"
-                  className="inline-flex items-center rounded-full bg-[hsl(var(--pc-blue))] px-6 py-3 text-sm font-semibold text-[hsl(var(--pc-paper))] transition hover:bg-[hsl(var(--pc-cyan))]"
+                  className="inline-flex items-center rounded-full border border-[hsl(var(--pc-line))] bg-white/70 px-6 py-3 text-sm font-semibold text-[hsl(var(--pc-blue))] transition hover:border-[hsl(var(--pc-cyan))]"
                 >
                   Ir para a biblioteca
                 </a>
               </div>
             </div>
+
           ) : (
             <div key={passo} className="pc-fade-in">
               <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-[hsl(var(--pc-cyan))]">
