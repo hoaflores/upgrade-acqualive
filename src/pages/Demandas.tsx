@@ -148,7 +148,8 @@ export default function Demandas() {
     try {
       // Upload anexos
       for (const f of cmtFiles) {
-        const path = `${Date.now()}-${Math.random().toString(36).slice(2)}-${f.name.replace(/[^\w.-]/g, "_")}`;
+        const path = `comentarios/${Date.now()}-${Math.random().toString(36).slice(2)}-${f.name.replace(/[^\w.-]/g, "_")}`;
+
         const { error: upErr } = await supabase.storage.from("demandas-anexos").upload(path, f);
         if (upErr) throw upErr;
         await supabase.from("demanda_anexos").insert({
