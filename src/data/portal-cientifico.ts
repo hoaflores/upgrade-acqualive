@@ -264,7 +264,7 @@ export const REFERÊNCIAS: Referência[] = [
       "Reforca a diferenca entre água mineralizada e água desmineralizada",
     ],
     aplicação:
-      "Argumento técnico contra sistemas que removem todos os minerais da água, como a osmose reversa sem remineralizacao.",
+      "Argumento técnico contra sistemas que removem todos os minerais da água, como a osmose reversa sem remineralização.",
     url: "https://bmcpublichealth.biomedcentral.com/articles/10.1186/1471-2458-4-56",
     acessoAberto: true,
     termos: ["magnésio", "cálcio", "pressao arterial", "mineral", "coração"],
@@ -281,7 +281,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "alto",
     eixos: ["Minerais essenciais", "Qualidade da água comum"],
     resumo:
-      "Documento oficial da Organização Mundial da Saúde alerta que água desmineralizada, obtida por destilação ou osmose reversa sem remineralizacao, tem baixo poder de saciar a sede, pode aumentar a perda urinária de minerais e não contribui com cálcio e magnésio, minerais que a água deveria fornecer.",
+      "Documento oficial da Organização Mundial da Saúde alerta que água desmineralizada, obtida por destilação ou osmose reversa sem remineralização, tem baixo poder de saciar a sede, pode aumentar a perda urinária de minerais e não contribui com cálcio e magnésio, minerais que a água deveria fornecer.",
     pontos: [
       "Água sem minerais aumenta a excreção de eletrolitos",
       "Menor capacidade de saciar a sede",
@@ -629,7 +629,7 @@ export const REFERÊNCIAS: Referência[] = [
       "Serve de fundamento conceitual do portal",
     ],
     aplicação:
-      "Referência de base para o glossário e para explicacoes técnicas do portal.",
+      "Referência de base para o glossário e para explicações técnicas do portal.",
     url: "https://bmjopen.bmj.com/content/6/6/e010438",
     acessoAberto: true,
     termos: ["carga ácida", "rim", "ph corporal", "fisiologia", "glossário"],
@@ -697,7 +697,7 @@ export const REFERÊNCIAS: Referência[] = [
       "Define ácido, neutro e alcalino",
       "Base para interpretar qualquer estudo do portal",
     ],
-    aplicação: "Fundamento técnico usado em todas as explicacoes de pH da Acqualive.",
+    aplicação: "Fundamento técnico usado em todas as explicações de pH da Acqualive.",
     url: "https://pt.wikipedia.org/wiki/PH",
     acessoAberto: true,
     termos: ["ph", "escala", "ácido", "alcalino", "química", "logaritmo"],
@@ -719,7 +719,7 @@ export const REFERÊNCIAS: Referência[] = [
       "Campo de pesquisa biomédico em expansão",
       "Contexto histórico da água hidrogenada",
     ],
-    aplicação: "Apoio conceitual para a secao de antioxidantes do portal.",
+    aplicação: "Apoio conceitual para a seção de antioxidantes do portal.",
     url: "https://en.wikipedia.org/wiki/Hydrogen",
     acessoAberto: true,
     termos: ["hidrogênio", "h2", "molécula", "wikipedia"],
