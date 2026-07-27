@@ -101,10 +101,15 @@ const PortalCientifico = () => {
         className="sticky top-0 z-40 border-b border-[hsl(var(--pc-line))] bg-[hsl(var(--pc-paper)/0.85)] backdrop-blur"
       >
         <div className="container flex items-center justify-between gap-4 py-3">
-          <a href="/" className="flex items-center gap-2 font-display text-sm font-bold text-[hsl(var(--pc-blue))]">
-            <Droplets className="h-5 w-5" aria-hidden />
-            Acqualive
-            <span className="hidden font-normal text-[hsl(var(--pc-ink-soft))] sm:inline">| Portal Científico</span>
+          <a href="/" className="flex items-center gap-2">
+            <img
+              src={logoAcqualive.url}
+              alt="Acqualive"
+              className="h-7 w-auto md:h-8"
+              width={200}
+              height={40}
+            />
+            <span className="hidden text-sm text-[hsl(var(--pc-ink-soft))] sm:inline">| Portal Científico</span>
           </a>
           <ul className="hidden items-center gap-6 text-sm text-[hsl(var(--pc-ink-soft))] md:flex">
             {NAV.map((n) => (
@@ -116,10 +121,10 @@ const PortalCientifico = () => {
             ))}
           </ul>
           <a
-            href="https://www.acqualive.com.br/collections/all/products/purificador-de-agua-alcalina-acqualive-duo-natural-e-gelada"
+            href="https://www.acqualive.com.br"
             className="rounded-full bg-[hsl(var(--pc-blue))] px-4 py-2 text-xs font-semibold text-[hsl(var(--pc-paper))] transition hover:bg-[hsl(var(--pc-cyan))]"
           >
-            Conhecer o DUO
+            Conheça os filtros Acqualive
           </a>
         </div>
       </nav>
@@ -128,10 +133,12 @@ const PortalCientifico = () => {
         <HeroPortal />
         <ManifestoPortal onAbrirArtigo={setArtigo} />
         <BuscaAcademica onAbrirArtigo={setArtigo} />
+        <EscalaPH />
         <BibliotecaArtigos onAbrirArtigo={setArtigo} />
         <PerguntasGuia onAbrirArtigo={setArtigo} />
         <BlogRecentes />
         <VideosPortal />
+
 
         <section className="border-t border-[hsl(var(--pc-line))] py-20 md:py-28">
           <div className="container">
