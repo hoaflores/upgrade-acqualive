@@ -188,17 +188,29 @@ const ManifestoPortal = ({ onAbrirArtigo }: Props) => {
 
 
           <div className="mt-10 grid gap-4 md:grid-cols-2">
-            {publicações.map((r, i) => (
+            {publicações.map((r, i) => {
+              const logo = logoDaFonte(r);
+              return (
               <ScrollReveal key={r.id} delay={(i % 2) * 90}>
                 <button
                   type="button"
                   onClick={() => onAbrirArtigo(r)}
                   className="pc-card group flex h-full w-full flex-col rounded-2xl p-6 text-left transition hover:-translate-y-0.5 hover:shadow-lg"
                 >
-                  <span className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-[hsl(var(--pc-amber))]">
-                    <FileCheck2 className="h-4 w-4" aria-hidden />
+                  {logo ? (
+                    <img
+                      src={logo.src}
+                      alt={logo.alt}
+                      loading="lazy"
+                      className="h-12 w-auto opacity-80 transition group-hover:opacity-100"
+                    />
+                  ) : (
+                    <FileCheck2 className="h-6 w-6 text-[hsl(var(--pc-amber))]" aria-hidden />
+                  )}
+                  <span className="mt-3 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-[hsl(var(--pc-amber))]">
                     {r.fonte}
                   </span>
+
                   <span className="mt-3 font-display text-lg font-semibold text-[hsl(var(--pc-ink))]">{r.titulo}</span>
                   <span className="mt-2 line-clamp-3 text-sm leading-relaxed text-[hsl(var(--pc-ink-soft))]">
                     {r.resumo}
