@@ -94,7 +94,7 @@ export const REFERÊNCIAS: Referência[] = [
   },
   {
     id: "chycki-2018-acidose",
-    titulo: "Água alcalina melhora o equilibrio acido-base é o desempenho de atletas",
+    titulo: "Água alcalina melhora o equilibrio ácido-base é o desempenho de atletas",
     tituloOriginal:
       "Water and electrolyte balance and acid-base status after alkaline water ingestion in combat sport athletes",
     autores: "Chycki J, Kurylas A, Maszczyk A, Golas A, Zajac A",
@@ -119,8 +119,8 @@ export const REFERÊNCIAS: Referência[] = [
     termos: ["acidose", "atleta", "potência", "anaeróbico", "ph urinário", "capacidade tampão", "treino"],
   },
   {
-    id: "heil-2010-acido-base",
-    titulo: "Água mineral alcalina melhora o estado acido-base e a hidratação",
+    id: "heil-2010-ácido-base",
+    titulo: "Água mineral alcalina melhora o estado ácido-base e a hidratação",
     tituloOriginal: "Acid-base balance and hydration status following consumption of mineral-based alkaline bottled water",
     autores: "Heil DP",
     fonte: "Journal of the International Society of Sports Nutrition, 7:29",
@@ -130,7 +130,7 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "alto",
     eixos: ["Água alcalina", "Hidratação funcional", "Minerais essenciais"],
     resumo:
-      "Estudo cruzado com ciclistas treinados comparou água mineral alcalina e água purificada durante três dias de rotina normal. A água alcalina produziu melhora significativa do estado de hidratação (medida por osmolalidade urinária e balanco hidrico) e deslocou o equilibrio acido-base para uma condicao mais favoravel.",
+      "Estudo cruzado com ciclistas treinados comparou água mineral alcalina e água purificada durante três dias de rotina normal. A água alcalina produziu melhora significativa do estado de hidratação (medida por osmolalidade urinária e balanco hidrico) e deslocou o equilibrio ácido-base para uma condicao mais favoravel.",
     pontos: [
       "Melhora do balanco hidrico corporal em apenas três dias",
       "pH sanguíneo e urinário mais favoraveis",
@@ -552,7 +552,7 @@ export const REFERÊNCIAS: Referência[] = [
     resumo:
       "Consumo de água alcalina altamente mineralizada acelerou a normalizacao do pH sanguíneo e do excesso de base após exercicio de alta intensidade, sugerindo recuperacao metabólica mais rapida entre sessoes de treino.",
     pontos: [
-      "Recuperacao mais rapida do equilibrio acido-base",
+      "Recuperacao mais rapida do equilibrio ácido-base",
       "Relevante para atletas com treinos em sequencia",
       "Confirma o efeito tampão da água mineralizada alcalina",
     ],
@@ -587,7 +587,7 @@ export const REFERÊNCIAS: Referência[] = [
     termos: ["osso", "osteoporose", "cálcio", "bicarbonato", "reabsorção óssea", "mulher"],
   },
   {
-    id: "burckhardt-2008-acido-base-dieta",
+    id: "burckhardt-2008-ácido-base-dieta",
     titulo: "Carga ácida da dieta moderna é o papel da água alcalina",
     tituloOriginal: "The effect of the alkali load of mineral water on bone metabolism",
     autores: "Burckhardt P",
@@ -622,9 +622,9 @@ export const REFERÊNCIAS: Referência[] = [
     impacto: "base",
     eixos: ["Minerais essenciais", "Hidratação funcional"],
     resumo:
-      "Análise metodológica sobre como se mede a carga ácida da dieta e como o rim regula o equilibrio acido-base. Documento util como base conceitual para explicar de forma honesta o que o pH corporal significa.",
+      "Análise metodológica sobre como se mede a carga ácida da dieta e como o rim regula o equilibrio ácido-base. Documento util como base conceitual para explicar de forma honesta o que o pH corporal significa.",
     pontos: [
-      "Detalha o papel renal na regulação acido-base",
+      "Detalha o papel renal na regulação ácido-base",
       "Fornece vocabulário técnico correto para o tema",
       "Serve de fundamento conceitual do portal",
     ],
@@ -832,14 +832,14 @@ export const PERGUNTAS_GUIA: PerguntaGuia[] = [
   {
     pergunta: "Água alcalina melhora o desempenho esportivo?",
     resposta:
-      "Sim. Estudos mostram sangue menos viscoso, melhor equilibrio acido-base, recuperacao mais rapida do pH e ganho de potência anaeróbica em atletas.",
+      "Sim. Estudos mostram sangue menos viscoso, melhor equilibrio ácido-base, recuperacao mais rapida do pH e ganho de potência anaeróbica em atletas.",
     refs: ["weidman-2016-viscosidade", "chycki-2018-acidose", "kitada-2018-esporte", "nakamura-2020-h2-fadiga"],
   },
   {
     pergunta: "Água alcalina hidrata melhor que água comum?",
     resposta:
       "As evidências apontam que sim: melhor balanco hidrico em três dias, menor viscosidade sanguínea é melhor estado de hidratação em consumo continuo.",
-    refs: ["heil-2010-acido-base", "weidman-2016-viscosidade", "popkin-2010-hidratação"],
+    refs: ["heil-2010-ácido-base", "weidman-2016-viscosidade", "popkin-2010-hidratação"],
   },
   {
     pergunta: "Beber água alcalina todos os dias é seguro?",
@@ -869,13 +869,13 @@ export const PERGUNTAS_GUIA: PerguntaGuia[] = [
     pergunta: "Água alcalina faz bem para os ossos?",
     resposta:
       "Água mineral alcalina bicarbonatada reduziu marcadores de reabsorção óssea e paratormônio mesmo em pessoas com cálcio adequado na dieta.",
-    refs: ["wynn-2009-osso", "burckhardt-2008-acido-base-dieta", "rylander-2004-magnésio"],
+    refs: ["wynn-2009-osso", "burckhardt-2008-ácido-base-dieta", "rylander-2004-magnésio"],
   },
   {
     pergunta: "O que e hidratação funcional?",
     resposta:
       "É hidratar com água que entrega algo além da molécula de água: minerais biodisponíveis, pH alcalino e hidrogênio dissolvido, impactando energia, foco e recuperacao.",
-    refs: ["popkin-2010-hidratação", "riebl-2013-desidratação", "heil-2010-acido-base"],
+    refs: ["popkin-2010-hidratação", "riebl-2013-desidratação", "heil-2010-ácido-base"],
   },
   {
     pergunta: "Água com hidrogênio realmente tem efeito antioxidante?",
