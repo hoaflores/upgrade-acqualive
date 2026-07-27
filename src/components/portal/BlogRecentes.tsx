@@ -51,14 +51,17 @@ const BlogRecentes = () => {
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((p, i) => (
             <ScrollReveal key={p.id} delay={(i % 3) * 90}>
-              <a href={p.link} className="pc-card group block h-full overflow-hidden rounded-2xl transition hover:-translate-y-1 hover:shadow-xl">
+              <a href={p.link} className="pc-card group block h-full overflow-hidden rounded-2xl hover:-translate-y-1.5">
                 {p.imagem && (
-                  <img
-                    src={p.imagem}
-                    alt={p.titulo}
-                    loading="lazy"
-                    className="h-44 w-full object-cover transition duration-500 group-hover:scale-105"
-                  />
+                  <div className="relative h-44 overflow-hidden">
+                    <img
+                      src={p.imagem}
+                      alt={p.titulo}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--pc-ink)/0.45)] via-transparent to-transparent opacity-70 transition group-hover:opacity-40" />
+                  </div>
                 )}
                 <div className="p-5">
                   <time dateTime={p.data} className="text-[11px] uppercase tracking-wider text-[hsl(var(--pc-ink-soft))]">
@@ -67,7 +70,7 @@ const BlogRecentes = () => {
                   <h3 className="mt-2 font-display text-lg font-semibold leading-snug">{p.titulo}</h3>
                   <p className="mt-2 line-clamp-3 text-sm text-[hsl(var(--pc-ink-soft))]">{p.resumo}</p>
                   <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[hsl(var(--pc-blue))]">
-                    Ler artigo <ArrowUpRight className="h-4 w-4" aria-hidden />
+                    Ler artigo <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden />
                   </span>
                 </div>
               </a>
