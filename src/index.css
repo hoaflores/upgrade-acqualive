@@ -777,3 +777,51 @@
   .emp-reveal, .emp-drift { transition: none; animation: none; }
   .emp-reveal-hidden { opacity: 1; filter: none; transform: none; }
 }
+
+/* ===== Portal Cientifico: papel cientifico claro ===== */
+.portal-theme {
+  --pc-paper: 40 30% 97%;
+  --pc-paper-2: 200 25% 95%;
+  --pc-ink: 210 40% 12%;
+  --pc-ink-soft: 210 16% 38%;
+  --pc-line: 210 20% 86%;
+  --pc-blue: 202 82% 30%;
+  --pc-cyan: 195 76% 45%;
+  --pc-amber: 32 57% 51%;
+  background-color: hsl(var(--pc-paper));
+  color: hsl(var(--pc-ink));
+}
+.pc-grid-paper {
+  background-image:
+    linear-gradient(hsl(var(--pc-blue) / 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--pc-blue) / 0.055) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+.pc-radial {
+  background:
+    radial-gradient(60% 55% at 15% 0%, hsl(var(--pc-cyan) / 0.16), transparent 65%),
+    radial-gradient(50% 50% at 90% 10%, hsl(var(--pc-amber) / 0.12), transparent 60%),
+    linear-gradient(180deg, hsl(var(--pc-paper-2)), hsl(var(--pc-paper)));
+}
+.pc-molecule {
+  background-image: radial-gradient(hsl(var(--pc-blue) / 0.22) 1.6px, transparent 1.7px);
+  background-size: 26px 26px;
+}
+@keyframes pc-float-slow {
+  0%, 100% { transform: translate3d(0,0,0); }
+  50% { transform: translate3d(0,-14px,0); }
+}
+.pc-float { animation: pc-float-slow 9s ease-in-out infinite; }
+.pc-underline-amber {
+  background-image: linear-gradient(hsl(var(--pc-amber) / 0.35), hsl(var(--pc-amber) / 0.35));
+  background-size: 100% 0.38em;
+  background-position: 0 88%;
+  background-repeat: no-repeat;
+}
+.pc-card {
+  background: hsl(0 0% 100% / 0.86);
+  border: 1px solid hsl(var(--pc-line));
+  backdrop-filter: blur(6px);
+}
+.pc-prose p { margin-bottom: 1rem; line-height: 1.75; }
+@media (prefers-reduced-motion: reduce) { .pc-float { animation: none; } }
