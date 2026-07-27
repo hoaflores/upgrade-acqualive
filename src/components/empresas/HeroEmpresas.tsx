@@ -19,7 +19,6 @@ const HeroEmpresas = () => {
         <header className="flex items-center justify-between mb-14 lg:mb-20 animate-fade-in">
           <img src={logoAcqualiveWhite.url} alt="Acqualive" width={220} height={48} decoding="async" className="h-11 md:h-12 w-auto" />
           <span className="hidden md:inline-flex items-center text-[11px] font-semibold uppercase tracking-[0.32em] text-primary-foreground/70 border-l border-primary-foreground/20 pl-4">
-            Divisão Empresas
           </span>
         </header>
 
