@@ -220,7 +220,8 @@ const ManifestoPortal = ({ onAbrirArtigo }: Props) => {
                   </span>
                 </button>
               </ScrollReveal>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
