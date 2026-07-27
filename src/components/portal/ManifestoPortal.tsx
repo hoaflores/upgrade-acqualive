@@ -177,25 +177,15 @@ const ManifestoPortal = ({ onAbrirArtigo }: Props) => {
 
 
           <div className="mt-10 grid gap-4 md:grid-cols-2">
-            {publicações.map((r, i) => {
-              const logo = logoDaFonte(r);
-              return (
+            {publicações.map((r, i) => (
               <ScrollReveal key={r.id} delay={(i % 2) * 90}>
                 <button
                   type="button"
                   onClick={() => onAbrirArtigo(r)}
                   className="pc-card group flex h-full w-full flex-col rounded-2xl p-6 text-left transition hover:-translate-y-0.5 hover:shadow-lg"
                 >
-                  {logo ? (
-                    <img
-                      src={logo.src}
-                      alt={logo.alt}
-                      loading="lazy"
-                      className="h-12 w-auto opacity-80 transition group-hover:opacity-100"
-                    />
-                  ) : (
-                    <FileCheck2 className="h-6 w-6 text-[hsl(var(--pc-amber))]" aria-hidden />
-                  )}
+                  <FileCheck2 className="h-6 w-6 text-[hsl(var(--pc-amber))]" aria-hidden />
+
                   <span className="mt-3 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-[hsl(var(--pc-amber))]">
                     {r.fonte}
                   </span>
