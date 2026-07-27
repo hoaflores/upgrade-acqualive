@@ -1135,13 +1135,23 @@ export default function DemandasSolicitadas() {
                           <Label className="text-xs flex items-center gap-1"><Paperclip className="w-3 h-3" /> Anexos ({anexos.length})</Label>
                           <div className="space-y-1 mt-2">
                             {anexos.map((a) => {
-                              const url = supabase.storage.from("demandas-anexos").getPublicUrl(a.storage_path).data.publicUrl;
+                              const abrirAnexo = async () => {
+                                const { data, error } = await supabase.storage
+                                  .from("demandas-anexos")
+                                  .createSignedUrl(a.storage_path, 300);
+                                if (error || !data?.signedUrl) {
+                                  toast.error("Não foi possível abrir o anexo");
+                                  return;
+                                }
+                                window.open(data.signedUrl, "_blank", "noopener");
+                              };
                               return (
-                                <a key={a.id} href={url} target="_blank" rel="noopener" className="flex items-center gap-2 text-sm text-blue-600 hover:underline">
+                                <button key={a.id} type="button" onClick={abrirAnexo} className="flex items-center gap-2 text-sm text-blue-600 hover:underline">
                                   <ExternalLink className="w-3 h-3" /> {a.nome_arquivo}
-                                </a>
+                                </button>
                               );
                             })}
+
                           </div>
                         </div>
                       )}
