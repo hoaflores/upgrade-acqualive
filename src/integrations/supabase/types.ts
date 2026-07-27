@@ -336,6 +336,39 @@ export type Database = {
         }
         Relationships: []
       }
+      leads_quiz: {
+        Row: {
+          acertos: number | null
+          created_at: string
+          email: string | null
+          id: string
+          nome: string
+          origem: string | null
+          telefone: string
+          total: number | null
+        }
+        Insert: {
+          acertos?: number | null
+          created_at?: string
+          email?: string | null
+          id?: string
+          nome: string
+          origem?: string | null
+          telefone: string
+          total?: number | null
+        }
+        Update: {
+          acertos?: number | null
+          created_at?: string
+          email?: string | null
+          id?: string
+          nome?: string
+          origem?: string | null
+          telefone?: string
+          total?: number | null
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           aprovado: boolean
