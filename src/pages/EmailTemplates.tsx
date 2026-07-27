@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Copy, Check, Eye, Code, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import { acqualiveNews } from "@/emails/acqualive-news";
 
 const EMAILS = [
   {
