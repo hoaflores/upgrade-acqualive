@@ -12,6 +12,9 @@ import LeitorArtigo from "@/components/portal/LeitorArtigo";
 import ProgressoLeitura from "@/components/portal/ProgressoLeitura";
 import BolhasAgua from "@/components/portal/BolhasAgua";
 import EscalaPH from "@/components/portal/EscalaPH";
+import CorpoHidratacao from "@/components/portal/CorpoHidratacao";
+import MitosFatos from "@/components/portal/MitosFatos";
+import QuizHidratacao from "@/components/portal/QuizHidratacao";
 import logoAcqualive from "@/assets/acqualive-logo-azul.png.asset.json";
 
 
