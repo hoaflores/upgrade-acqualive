@@ -106,7 +106,11 @@ const PortalCientifico = () => {
         className="sticky top-0 z-40 border-b border-[hsl(var(--pc-line))] bg-[hsl(var(--pc-paper)/0.85)] backdrop-blur"
       >
         <div className="container flex items-center justify-between gap-4 py-3">
-          <a href="/" className="flex items-center gap-2">
+          <a
+            href="https://www.acqualive.com.br"
+            target="_top"
+            className="flex items-center gap-2"
+          >
             <img
               src={logoAcqualive.url}
               alt="Acqualive"
@@ -186,7 +190,9 @@ const PortalCientifico = () => {
 
       <footer className="border-t border-[hsl(var(--pc-line))] py-10">
         <div className="container flex flex-col items-center gap-4 text-center text-xs text-[hsl(var(--pc-ink-soft))]">
-          <img src={logoAcqualive.url} alt="Acqualive" className="h-10 w-auto" width={260} height={52} loading="lazy" />
+          <a href="https://www.acqualive.com.br" target="_top">
+            <img src={logoAcqualive.url} alt="Acqualive" className="h-10 w-auto" width={260} height={52} loading="lazy" />
+          </a>
           <p className="max-w-2xl">
             Conteúdo de caráter informativo e educativo. Não substitui avaliação, diagnóstico ou tratamento realizado
             por profissional de saúde.
