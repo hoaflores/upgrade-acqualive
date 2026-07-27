@@ -29,20 +29,36 @@ export const FaqEmpresas = () => (
         <Accordion type="single" collapsible className="space-y-3">
           {[
             {
-              q: "Como funciona a instalação na empresa?",
-              a: "A avaliação identifica o melhor ponto de instalação, próximo a um ponto de água e energia. A instalação é feita pela nossa equipe ou pelo franqueado da sua região, com orientação de uso para o time.",
+              q: "O DUO oferece água gelada e natural?",
+              a: "Sim. O Acqualive DUO entrega água gelada e água natural no mesmo equipamento, com saídas independentes para atender as preferências da equipe ao longo do dia.",
             },
             {
-              q: "E se a minha empresa tiver vários andares ou setores?",
-              a: "Nesse caso indicamos mais de um equipamento, distribuídos conforme o fluxo de pessoas. A avaliação define quantos pontos fazem sentido para o seu consumo.",
+              q: "Que tipos de empresa podem utilizar o DUO?",
+              a: "Restaurantes, cafeterias, academias e studios, clínicas e consultórios, escritórios, coworkings, indústrias e operações comerciais em geral. A configuração muda conforme o fluxo de pessoas.",
             },
             {
-              q: "Qual é a manutenção necessária?",
+              q: "Quantas pessoas o equipamento atende?",
+              a: "Depende do fluxo e do horário de pico. Na avaliação analisamos o consumo estimado e indicamos quantos equipamentos fazem sentido para atender sem fila e sem falta de água.",
+            },
+            {
+              q: "É possível instalar mais de um DUO?",
+              a: "Sim. Em empresas com vários andares, setores ou unidades indicamos mais de um equipamento, distribuídos conforme o fluxo de pessoas.",
+            },
+            {
+              q: "O equipamento precisa de ponto de água? A instalação exige obra?",
+              a: "O DUO é ligado a um ponto de água e a um ponto de energia. Na maioria dos casos não é necessária obra, apenas a adequação do ponto quando ele não existe no local escolhido.",
+            },
+            {
+              q: "Como funciona a instalação e onde o DUO pode ficar?",
+              a: "A avaliação identifica o melhor ponto, próximo a água e energia, em copas, recepções, salões, academias ou áreas de produção. A instalação é feita pela nossa equipe ou pelo franqueado da sua região, com orientação de uso para o time.",
+            },
+            {
+              q: "Como funciona a manutenção e a troca do refil?",
               a: "A manutenção é a troca programada dos refis, com periodicidade definida conforme o volume consumido. Avisamos com antecedência e cuidamos da troca.",
             },
             {
-              q: "A água sai gelada?",
-              a: "Sim. O Acqualive DUO entrega água gelada e água natural no mesmo equipamento, com duas saídas independentes para atender as preferências da equipe ao longo do dia.",
+              q: "A Acqualive oferece suporte depois da instalação?",
+              a: "Sim. São mais de 20 anos de mercado, com rede de franqueados e assistência técnica em todo o país acompanhando a operação.",
             },
             {
               q: "Qual é o investimento?",
@@ -53,6 +69,7 @@ export const FaqEmpresas = () => (
               a: "A Acqualive tem rede de franqueados e assistência técnica em todo o país. Envie a sua cidade no formulário e confirmamos o atendimento na sua região.",
             },
           ].map(({ q, a }) => (
+
             <AccordionItem
               key={q}
               value={q}
