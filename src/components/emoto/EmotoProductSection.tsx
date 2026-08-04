@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import productMonolith from "@/assets/emoto/product-monolith.jpg";
+import duoAsset from "@/assets/duo/duo-frente-transp.png.asset.json";
 import cymaticsPattern from "@/assets/emoto/cymatics-pattern.jpg";
 
 const WHATSAPP_URL =
@@ -113,8 +113,8 @@ const EmotoProductSection = () => {
             </div>
 
             <img
-              src={productMonolith}
-              alt="Purificador Acqualive"
+              src={duoAsset.url}
+              alt="Purificador Acqualive DUO"
               className="w-full max-w-md mx-auto relative z-10"
             />
           </motion.div>
