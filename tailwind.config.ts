@@ -110,6 +110,16 @@ export default {
 				highlight: 'hsl(var(--emoto-highlight))',
 				silver: 'hsl(var(--emoto-silver))'
 			},
+			sacra: {
+				bg: 'hsl(var(--sacra-bg))',
+				mist: 'hsl(var(--sacra-mist))',
+				veil: 'hsl(var(--sacra-veil))',
+				ink: 'hsl(var(--sacra-ink))',
+				muted: 'hsl(var(--sacra-muted))',
+				blue: 'hsl(var(--sacra-blue))',
+				deep: 'hsl(var(--sacra-deep))',
+				gold: 'hsl(var(--sacra-gold))'
+			},
 			barro: {
 				cream: 'hsl(var(--barro-cream))',
 				sand: 'hsl(var(--barro-sand))',

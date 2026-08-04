@@ -103,6 +103,18 @@
     --emoto-highlight: 21 89% 55%;
     --emoto-silver: 215 20% 75%;
 
+    /* Sacra LP Colors - luminous light theme (historia Masaru Emoto) */
+    --sacra-bg: 205 60% 98%;
+    --sacra-mist: 202 55% 93%;
+    --sacra-veil: 210 40% 89%;
+    --sacra-ink: 218 48% 16%;
+    --sacra-muted: 215 22% 42%;
+    --sacra-blue: 205 72% 46%;
+    --sacra-deep: 215 62% 34%;
+    --sacra-gold: 38 84% 56%;
+
+
+
     /* VIP Ecosystem Colors - Premium dark theme */
     --vip-bg: 220 40% 6%;
     --vip-surface: 220 35% 10%;
