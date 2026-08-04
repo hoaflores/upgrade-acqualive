@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Upgrade from "./pages/Upgrade";
 import ProgramaIndicacao from "./pages/ProgramaIndicacao";
 import MassaruEmoto from "./pages/MassaruEmoto";
+import MassaruEmotoHistoria from "./pages/MassaruEmotoHistoria";
 import FiltroDeBarro from "./pages/FiltroDeBarro";
 import Terracota from "./pages/Terracota";
 import ComunidadeAcqualive from "./pages/ComunidadeAcqualive";
@@ -56,6 +57,7 @@ const App = () => (
             <Route path="/upgrade" element={<Upgrade />} />
             <Route path="/programa-de-indicacao" element={<ProgramaIndicacao />} />
             <Route path="/massaru-emoto" element={<MassaruEmoto />} />
+            <Route path="/massaru-emoto-historia" element={<MassaruEmotoHistoria />} />
             <Route path="/filtro-de-barro" element={<FiltroDeBarro />} />
             <Route path="/terracota" element={<Terracota />} />
             <Route path="/comunidade-acqualive" element={<ComunidadeAcqualive />} />
