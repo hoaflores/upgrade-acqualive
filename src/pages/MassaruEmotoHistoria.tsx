@@ -353,6 +353,64 @@ const MassaruEmotoHistoria = () => {
           </motion.p>
         </section>
 
+        {/* 03B · A ÁGUA DA NASCENTE */}
+        <section className="bg-gradient-to-b from-white to-sacra-mist/50 px-6 py-24 md:py-32">
+          <div className="mx-auto max-w-3xl space-y-7 text-center">
+            <Etiqueta>A água que a natureza faz</Etiqueta>
+            <Titulo>Por que a água de nascente é diferente.</Titulo>
+            <Frase delay={0.05}>
+              Ela desce devagar por camadas de pedra e areia. Filtra sozinha.
+            </Frase>
+            <Frase delay={0.1}>
+              No caminho, dissolve minerais. Ganha sabor, leveza e um pH levemente alcalino.
+            </Frase>
+            <Frase delay={0.15}>
+              Depois se movimenta. Nunca fica parada em um cano ou em uma caixa fechada.
+            </Frase>
+          </div>
+
+          <div className="mx-auto mt-14 grid max-w-5xl gap-4 md:grid-cols-3">
+            {[
+              {
+                t: "Nascente",
+                d: "Filtragem natural, minerais preservados, água em movimento.",
+              },
+              {
+                t: "Torneira",
+                d: "Cloro para transportar, tubulação antiga, sabor alterado.",
+              },
+              {
+                t: "Garrafa plástica",
+                d: "Semanas paradas, calor, custo alto e lixo todo mês.",
+              },
+            ].map((c, i) => (
+              <motion.div
+                key={c.t}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                whileHover={{ y: -6 }}
+                className="rounded-2xl border border-sacra-veil bg-white p-7 shadow-sm"
+              >
+                <h3 className="font-display text-lg font-semibold text-sacra-ink">{c.t}</h3>
+                <p className="mt-2 font-body text-sm leading-relaxed text-sacra-muted">
+                  {c.d}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.p
+            {...rise}
+            className="mx-auto mt-14 max-w-2xl text-center font-body text-base leading-relaxed text-sacra-muted"
+          >
+            Emoto fotografou essa diferença. O que ele viu no microscópio, a gente sente no
+            gosto.
+          </motion.p>
+        </section>
+
+
         {/* 04 */}
         <section className="bg-gradient-to-b from-sacra-mist/60 to-white px-6 py-24 md:py-32">
           <div className="mx-auto grid max-w-5xl items-center gap-14 lg:grid-cols-2">
@@ -441,7 +499,147 @@ const MassaruEmotoHistoria = () => {
           </motion.p>
         </section>
 
+        {/* 05B · QUALIDADE */}
+        <section className="bg-gradient-to-b from-white to-sacra-mist/50 px-6 py-24 md:py-32">
+          <div className="mx-auto max-w-3xl space-y-7 text-center">
+            <Etiqueta>Qualidade · O que existe dentro do copo</Etiqueta>
+            <Titulo>Água potável e água boa não são a mesma coisa.</Titulo>
+            <Frase delay={0.05}>
+              Potável significa que não vai te fazer mal hoje.
+            </Frase>
+            <Frase delay={0.1}>
+              Boa significa que hidrata, repõe minerais e não deixa gosto nenhum na boca.
+            </Frase>
+          </div>
+
+          <div className="mx-auto mt-14 max-w-4xl space-y-4">
+            {[
+              {
+                t: "Cloro",
+                d: "Protege a água na tubulação, mas altera sabor e aroma. Sai na filtração.",
+              },
+              {
+                t: "Sedimentos e ferrugem",
+                d: "Vêm da rede antiga e da caixa d'água. É o que deixa a água turva.",
+              },
+              {
+                t: "Minerais",
+                d: "Cálcio, magnésio e potássio deveriam ficar. Muitos sistemas tiram tudo junto.",
+              },
+              {
+                t: "pH",
+                d: "Água muito ácida pesa no organismo. A referência da natureza é levemente alcalina.",
+              },
+            ].map((q, i) => (
+              <motion.div
+                key={q.t}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.08 }}
+                className="flex flex-col gap-1 rounded-2xl border border-sacra-veil bg-white p-6 shadow-sm md:flex-row md:items-baseline md:gap-8"
+              >
+                <h3 className="font-display text-base font-semibold text-sacra-deep md:w-48 md:shrink-0 md:text-lg">
+                  {q.t}
+                </h3>
+                <p className="font-body text-sm leading-relaxed text-sacra-muted md:text-base">
+                  {q.d}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.p
+            {...rise}
+            className="mx-auto mt-12 max-w-2xl text-center font-body text-base leading-relaxed text-sacra-muted"
+          >
+            Tirar o que faz mal sem levar embora o que faz bem. É esse o equilíbrio que a
+            engenharia da Acqualive persegue.
+          </motion.p>
+        </section>
+
+        {/* 05C · SAÚDE */}
+        <section className="px-6 py-24 md:py-32">
+          <div className="mx-auto max-w-3xl space-y-7 text-center">
+            <Etiqueta>Saúde e bem-estar · O corpo em água</Etiqueta>
+            <Titulo>Você não bebe água. Você se reconstrói com ela.</Titulo>
+            <Frase delay={0.05}>
+              Ela transporta nutrientes, regula a temperatura e ajuda o corpo a eliminar o
+              que sobra.
+            </Frase>
+            <Frase delay={0.1}>
+              Nenhuma célula funciona bem em um corpo com pouca água.
+            </Frase>
+          </div>
+
+          <div className="mx-auto mt-14 grid max-w-4xl gap-4 sm:grid-cols-3">
+            {[
+              { n: "73%", d: "do cérebro é água" },
+              { n: "83%", d: "do sangue é água" },
+              { n: "31%", d: "dos ossos é água" },
+            ].map((s, i) => (
+              <motion.div
+                key={s.n}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="rounded-2xl border border-white bg-white/85 p-6 text-center shadow-sm backdrop-blur"
+              >
+                <p className="font-display text-3xl font-bold text-sacra-deep">{s.n}</p>
+                <p className="mt-2 font-body text-sm text-sacra-muted">{s.d}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mx-auto mt-10 grid max-w-4xl gap-4 md:grid-cols-2">
+            {[
+              {
+                t: "Energia ao longo do dia",
+                d: "Cansaço no meio da tarde costuma ser sede antes de ser fome.",
+              },
+              {
+                t: "Digestão mais leve",
+                d: "Água acompanha o processo do começo ao fim.",
+              },
+              {
+                t: "Pele e disposição",
+                d: "Hidratação constante aparece antes de tudo no rosto.",
+              },
+              {
+                t: "Vontade de beber",
+                d: "Água com sabor limpo faz a pessoa beber mais, sem esforço.",
+              },
+            ].map((h, i) => (
+              <motion.div
+                key={h.t}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.08 }}
+                whileHover={{ y: -5 }}
+                className="rounded-2xl border border-sacra-veil bg-white p-6 shadow-sm"
+              >
+                <h3 className="font-display text-base font-semibold text-sacra-ink md:text-lg">
+                  {h.t}
+                </h3>
+                <p className="mt-2 font-body text-sm leading-relaxed text-sacra-muted">
+                  {h.d}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.p
+            {...rise}
+            className="mx-auto mt-14 max-w-2xl text-center font-display text-xl font-semibold text-sacra-ink md:text-2xl"
+          >
+            A água que você repete todos os dias é a que constrói você.
+          </motion.p>
+        </section>
+
         {/* 06 CTA */}
+
         <section className="relative overflow-hidden bg-gradient-to-b from-white via-sacra-mist/70 to-white px-6 py-24 md:py-32">
           <div
             aria-hidden
