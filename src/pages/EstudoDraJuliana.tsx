@@ -28,6 +28,8 @@ import SinaisInflamacao from "@/components/estudo/SinaisInflamacao";
 import TecnologiaTriWay from "@/components/estudo/TecnologiaTriWay";
 import OutrosEstudos from "@/components/estudo/OutrosEstudos";
 import VideoEstudo from "@/components/estudo/VideoEstudo";
+import CompartilharEstudo from "@/components/estudo/CompartilharEstudo";
+
 import logoAcqualive from "@/assets/acqualive-logo-azul.png.asset.json";
 import pdfDossie from "@/assets/portal/dossie-juliana-chaves.pdf.asset.json";
 import imgLaboratorio from "@/assets/portal/laboratorio.jpg.asset.json";
@@ -77,7 +79,8 @@ const useCapituloAtivo = () => {
 
 
 const SITE = "https://paginas.acqualive.com.br";
-const URL_PÁGINA = `${SITE}/estudo-dra-juliana`;
+const URL_PÁGINA = `${SITE}/agua-alcalina-estudo-cientifico`;
+
 
 const BotaoPDF = ({ variante = "primario" }: { variante?: "primario" | "secundario" }) => (
   <a
@@ -242,13 +245,14 @@ const EstudoDraJuliana = () => {
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      headline: "Quando a ciência decidiu estudar a água: o estudo da Dra. Juliana Chaves",
+      headline: "Água alcalina e gastrite: o estudo científico da Dra. Juliana Chaves na UFPA",
       description:
-        "Dossiê científico sobre a pesquisa da Dra. Juliana Chaves na Universidade Federal do Pará com água alcalina ionizada em pacientes com gastrite.",
+        "Dossiê científico sobre a pesquisa da Dra. Juliana Chaves na Universidade Federal do Pará com água alcalina ionizada, também chamada de água funcional, em pacientes com gastrite.",
       inLanguage: "pt-BR",
       url: URL_PÁGINA,
       author: { "@type": "Organization", name: "Acqualive" },
-      about: ["Água alcalina ionizada", "Gastrite", "MicroRNAs", "Saúde digestiva"],
+      about: ["Água alcalina", "Água funcional", "Gastrite", "MicroRNAs", "Saúde digestiva"],
+
       citation: REFERÊNCIAS_ESTUDO.map((r) => `${r.autor}. ${r.titulo}. ${r.fonte}.`),
     },
     {
@@ -267,20 +271,21 @@ const EstudoDraJuliana = () => {
       <ProgressoLeitura />
 
       <Helmet>
-        <title>Estudo Dra. Juliana Chaves: água alcalina e gastrite</title>
+        <title>Água alcalina e gastrite: o estudo científico da UFPA</title>
         <meta
           name="description"
-          content="Dossiê científico da pesquisa da Dra. Juliana Chaves na UFPA: água alcalina ionizada Acqualive, gastrite, endoscopia e expressão de microRNAs, com PDF para download."
+          content="Dossiê científico sobre água alcalina, também chamada de água funcional: a pesquisa da Dra. Juliana Chaves na UFPA com gastrite, endoscopia e expressão de microRNAs, com PDF para download."
         />
-        <meta property="og:title" content="Estudo Dra. Juliana Chaves: água alcalina e gastrite" />
+        <meta property="og:title" content="Água alcalina e gastrite: o estudo científico da UFPA" />
         <meta
           property="og:description"
-          content="A pesquisa brasileira que colocou a qualidade da água no centro da conversa sobre saúde digestiva. Leitura interativa e dossiê em PDF."
+          content="A pesquisa brasileira que colocou a qualidade da água funcional no centro da conversa sobre saúde digestiva. Leitura interativa e dossiê em PDF."
         />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
+
 
       <nav
         aria-label="Navegação do dossiê"
@@ -324,13 +329,20 @@ const EstudoDraJuliana = () => {
                 Dossiê científico Acqualive
               </p>
               <h1 className="mt-6 font-display text-4xl font-bold leading-[1.08] md:text-6xl">
-                Quando a ciência decidiu <span className="pc-underline-amber">estudar a água</span>
+                Quando a ciência decidiu estudar a <span className="pc-underline-amber">água alcalina</span>
               </h1>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-[hsl(var(--pc-ink-soft))] md:text-lg">
-                A pesquisa da Dra. Juliana Chaves na Universidade Federal do Pará, a tecnologia de água alcalina
-                ionizada da Acqualive e o estudo brasileiro que ampliou a forma como a ciência olha para a saúde
-                digestiva.
+                A pesquisa da Dra. Juliana Chaves na Universidade Federal do Pará com água alcalina ionizada, aquela
+                que preferimos chamar de água funcional, e o estudo brasileiro que ampliou a forma como a ciência
+                olha para a saúde digestiva.
               </p>
+              <p className="mt-4 max-w-xl rounded-2xl border border-[hsl(var(--pc-line))] bg-white/60 p-4 text-sm leading-relaxed text-[hsl(var(--pc-ink-soft))]">
+                <strong className="text-[hsl(var(--pc-blue))]">Água funcional</strong> é o nome que damos à água
+                alcalina ionizada: filtrada, mineralizada e com características medidas, como pH, minerais e potencial
+                de oxirredução. Quando ela sai de um purificador Acqualive, chamamos de água Acqualive. São formas
+                diferentes de nomear a mesma ideia. Este material é educativo e não é uma oferta de venda.
+              </p>
+
               <div className="mt-9 flex flex-wrap gap-3">
                 <BotaoPDF />
                 <BotaoEstudoOriginal />
@@ -381,6 +393,26 @@ const EstudoDraJuliana = () => {
         <VideoEstudo />
 
         <SinaisInflamacao />
+
+        <section className="border-t border-[hsl(var(--pc-line))] py-12">
+          <div className="container">
+            <ScrollReveal>
+              <div className="pc-card flex flex-col items-center justify-between gap-5 rounded-3xl p-6 md:flex-row md:p-8">
+                <div>
+                  <p className="font-display text-lg font-bold md:text-xl">
+                    Conhece alguém que precisa ler isto?
+                  </p>
+                  <p className="mt-1 text-sm text-[hsl(var(--pc-ink-soft))]">
+                    Envie o dossiê para amigos e familiares. Falar sobre água funcional é falar sobre o hábito mais
+                    repetido do dia.
+                  </p>
+                </div>
+                <CompartilharEstudo compacto />
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
 
         {/* Corpo do dossiê */}
         <section className="py-16 md:py-24">
@@ -653,8 +685,15 @@ const EstudoDraJuliana = () => {
                 </div>
               </div>
             </ScrollReveal>
+
+            <ScrollReveal delay={120}>
+              <div className="mt-10">
+                <CompartilharEstudo />
+              </div>
+            </ScrollReveal>
           </div>
         </section>
+
       </main>
 
       <footer className="border-t border-[hsl(var(--pc-line))] py-10">
