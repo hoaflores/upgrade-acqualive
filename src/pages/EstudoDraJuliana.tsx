@@ -28,6 +28,8 @@ import SinaisInflamacao from "@/components/estudo/SinaisInflamacao";
 import TecnologiaTriWay from "@/components/estudo/TecnologiaTriWay";
 import OutrosEstudos from "@/components/estudo/OutrosEstudos";
 import VideoEstudo from "@/components/estudo/VideoEstudo";
+import CompartilharEstudo from "@/components/estudo/CompartilharEstudo";
+
 import logoAcqualive from "@/assets/acqualive-logo-azul.png.asset.json";
 import pdfDossie from "@/assets/portal/dossie-juliana-chaves.pdf.asset.json";
 import imgLaboratorio from "@/assets/portal/laboratorio.jpg.asset.json";
