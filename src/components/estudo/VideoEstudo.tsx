@@ -1,6 +1,9 @@
 import { PlayCircle } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import LiteYouTube from "@/components/LiteYouTube";
+import BotaoTranscricao from "@/components/estudo/BotaoTranscricao";
+import CompartilharEstudo from "@/components/estudo/CompartilharEstudo";
+import { VIDEO_ID } from "@/components/estudo/links";
 
 /** Capítulo em vídeo: a explicação do estudo pela própria Acqualive. */
 const VideoEstudo = () => (
@@ -23,12 +26,22 @@ const VideoEstudo = () => (
         </div>
       </ScrollReveal>
       <ScrollReveal delay={120}>
-        <div className="relative aspect-video overflow-hidden rounded-3xl border border-[hsl(var(--pc-line))] shadow-[0_40px_80px_-55px_hsl(var(--pc-blue))]">
-          <LiteYouTube
-            id="fR-Nf1eumdo"
-            title="Água Anti-Inflamatória Acqualive, um estudo revolucionário"
-            quality="maxres"
-          />
+        <div>
+          <div className="relative aspect-video overflow-hidden rounded-3xl border border-[hsl(var(--pc-line))] shadow-[0_40px_80px_-55px_hsl(var(--pc-blue))]">
+            <LiteYouTube
+              id={VIDEO_ID}
+              title="Água Funcional Acqualive, um estudo revolucionário sobre água alcalina"
+              quality="maxres"
+            />
+          </div>
+          <div className="mt-5 flex flex-wrap items-center gap-2">
+            <BotaoTranscricao />
+            <CompartilharEstudo compacto />
+          </div>
+          <p className="mt-3 text-xs text-[hsl(var(--pc-ink-soft))]">
+            Envie o vídeo para quem convive com azia, refluxo ou gastrite, ou leve a transcrição para aulas e
+            atendimentos.
+          </p>
         </div>
       </ScrollReveal>
     </div>
@@ -36,3 +49,4 @@ const VideoEstudo = () => (
 );
 
 export default VideoEstudo;
+
