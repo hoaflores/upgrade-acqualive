@@ -198,6 +198,11 @@ const Pergunta = ({ pergunta, resposta }: { pergunta: string; resposta: string }
 };
 
 const EstudoDraJuliana = () => {
+  const ativo = useCapituloAtivo();
+  const itensNav = useMemo(
+    () => CAPÍTULOS.map((c) => ({ id: c.id, numero: c.numero, etiqueta: c.etiqueta })),
+    []
+  );
   const jsonLd = [
     {
       "@context": "https://schema.org",
