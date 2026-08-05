@@ -411,6 +411,7 @@ const ApresentacaoComunidade = () => {
           <button
             onClick={prev}
             disabled={current === 0}
+            aria-label="Slide anterior"
             className="flex items-center gap-2 text-sm font-semibold text-[hsl(var(--vip-text-muted))] hover:text-primary-foreground disabled:opacity-20 transition-colors"
           >
             <ChevronLeft className="w-5 h-5" />
@@ -423,6 +424,8 @@ const ApresentacaoComunidade = () => {
               <button
                 key={i}
                 onClick={() => setCurrent(i)}
+                aria-label={`Ir para o slide ${i + 1} de ${slides.length}`}
+                aria-current={i === current ? "true" : undefined}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   i === current
                     ? "bg-[hsl(var(--vip-gold))] w-6"
@@ -435,11 +438,13 @@ const ApresentacaoComunidade = () => {
           <button
             onClick={next}
             disabled={current === slides.length - 1}
+            aria-label="Próximo slide"
             className="flex items-center gap-2 text-sm font-semibold text-[hsl(var(--vip-text-muted))] hover:text-primary-foreground disabled:opacity-20 transition-colors"
           >
             <span className="hidden sm:inline">Próximo</span>
             <ChevronRight className="w-5 h-5" />
           </button>
+
         </footer>
       </div>
     </>

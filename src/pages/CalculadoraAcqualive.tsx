@@ -113,8 +113,12 @@ export default function CalculadoraAcqualive() {
       <Helmet>
         <title>Calculadora da Hidratação Saudável | Quanto beber por dia</title>
         <meta name="description" content="Descubra com precisão a quantidade ideal de água para o seu corpo, considerando idade, peso, rotina e clima. Cálculo gratuito em menos de 1 minuto." />
+        <meta property="og:title" content="Calculadora da Hidratação Saudável | Acqualive" />
+        <meta property="og:description" content="Quanta água o seu corpo precisa por dia? Cálculo gratuito considerando idade, peso, rotina e clima." />
+        <meta property="og:type" content="website" />
         <link rel="canonical" href="https://paginas.acqualive.com.br/calculadora-acqualive" />
       </Helmet>
+
 
       <header className="container mx-auto px-4 py-6 flex items-center justify-between">
         <img src={logoAzul} alt="Acqualive" className="h-10" />
