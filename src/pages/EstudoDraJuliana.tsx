@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import {
   Download,
@@ -9,11 +9,17 @@ import {
   Quote,
   BookOpen,
   GraduationCap,
+  Clock,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import ProgressoLeitura from "@/components/portal/ProgressoLeitura";
 import FaixaVisual from "@/components/portal/FaixaVisual";
 import BolhasAgua from "@/components/portal/BolhasAgua";
+import TextoGlossario, { ProvedorGlossário } from "@/components/estudo/TextoGlossario";
+import SimuladorPepsina from "@/components/estudo/SimuladorPepsina";
+import GraficoResultados from "@/components/estudo/GraficoResultados";
+import NumeroAnimado from "@/components/estudo/NumeroAnimado";
+import NavegacaoCapitulos from "@/components/estudo/NavegacaoCapitulos";
 import logoAcqualive from "@/assets/acqualive-logo-azul.png.asset.json";
 import pdfDossie from "@/assets/portal/dossie-juliana-chaves.pdf.asset.json";
 import imgLaboratorio from "@/assets/portal/laboratorio.jpg.asset.json";
@@ -27,6 +33,40 @@ import {
   PERGUNTAS,
   REFERÊNCIAS_ESTUDO,
 } from "@/data/estudo-juliana";
+
+/** Minutos de leitura por capítulo: ajuda o leitor a decidir se lê agora ou depois. */
+const minutosDe = (id: string) => {
+  const c = CAPÍTULOS.find((x) => x.id === id);
+  if (!c) return 1;
+  const palavras = c.blocos.reduce(
+    (t, b) => t + ("texto" in b ? b.texto.split(/\s+/).length : b.itens.join(" ").split(/\s+/).length),
+    0
+  );
+  return Math.max(1, Math.round(palavras / 200));
+};
+
+/** Capítulo em leitura, compartilhado pelo índice lateral e pela navegação mobile. */
+const useCapituloAtivo = () => {
+  const [ativo, setAtivo] = useState(CAPÍTULOS[0].id);
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      (entradas) => {
+        const visível = entradas
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+        if (visível) setAtivo(visível.target.id);
+      },
+      { rootMargin: "-20% 0px -65% 0px", threshold: 0 }
+    );
+    CAPÍTULOS.forEach((c) => {
+      const el = document.getElementById(c.id);
+      if (el) obs.observe(el);
+    });
+    return () => obs.disconnect();
+  }, []);
+  return ativo;
+};
+
 
 const SITE = "https://paginas.acqualive.com.br";
 const URL_PÁGINA = `${SITE}/estudo-dra-juliana`;
@@ -47,29 +87,24 @@ const BotaoPDF = ({ variante = "primario" }: { variante?: "primario" | "secundar
 );
 
 /** Índice lateral que acompanha o capítulo em leitura. */
-const ÍndiceCapítulos = () => {
-  const [ativo, setAtivo] = useState(CAPÍTULOS[0].id);
-
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      (entradas) => {
-        const visível = entradas.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
-        if (visível) setAtivo(visível.target.id);
-      },
-      { rootMargin: "-20% 0px -65% 0px", threshold: 0 }
-    );
-    CAPÍTULOS.forEach((c) => {
-      const el = document.getElementById(c.id);
-      if (el) obs.observe(el);
-    });
-    return () => obs.disconnect();
-  }, []);
+const ÍndiceCapítulos = ({ ativo }: { ativo: string }) => {
+  const posição = CAPÍTULOS.findIndex((c) => c.id === ativo);
+  const percentual = Math.round(((posição + 1) / CAPÍTULOS.length) * 100);
 
   return (
     <nav aria-label="Índice do dossiê" className="sticky top-28 hidden lg:block">
-      <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-[hsl(var(--pc-ink-soft))]">
+      <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-[hsl(var(--pc-ink-soft))]">
         Capítulos
       </p>
+      <div className="mb-4 flex items-center gap-2">
+        <div className="h-1 flex-1 overflow-hidden rounded-full bg-[hsl(var(--pc-line))]">
+          <div
+            className="h-full rounded-full bg-[hsl(var(--pc-cyan))] transition-all duration-500"
+            style={{ width: `${percentual}%` }}
+          />
+        </div>
+        <span className="text-[11px] tabular-nums text-[hsl(var(--pc-ink-soft))]">{percentual}%</span>
+      </div>
       <ul className="space-y-1 border-l border-[hsl(var(--pc-line))]">
         {CAPÍTULOS.map((c) => (
           <li key={c.id}>
@@ -87,6 +122,7 @@ const ÍndiceCapítulos = () => {
           </li>
         ))}
       </ul>
+
       <div className="mt-6 border-l border-transparent pl-4">
         <a
           href={pdfDossie.url}
@@ -162,6 +198,11 @@ const Pergunta = ({ pergunta, resposta }: { pergunta: string; resposta: string }
 };
 
 const EstudoDraJuliana = () => {
+  const ativo = useCapituloAtivo();
+  const itensNav = useMemo(
+    () => CAPÍTULOS.map((c) => ({ id: c.id, numero: c.numero, etiqueta: c.etiqueta })),
+    []
+  );
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -234,6 +275,9 @@ const EstudoDraJuliana = () => {
         </div>
       </nav>
 
+      <NavegacaoCapitulos itens={itensNav} ativo={ativo} />
+
+
       <main>
         {/* Hero */}
         <section className="pc-aurora relative overflow-hidden border-b border-[hsl(var(--pc-line))]">
@@ -286,7 +330,7 @@ const EstudoDraJuliana = () => {
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
                 {NÚMEROS.map((n) => (
                   <div key={n.rótulo} className="pc-card rounded-2xl p-5">
-                    <p className="font-display text-3xl font-bold text-[hsl(var(--pc-blue))]">{n.valor}</p>
+                    <NumeroAnimado valor={n.valor} />
                     <p className="mt-2 text-xs leading-relaxed text-[hsl(var(--pc-ink-soft))]">{n.rótulo}</p>
                   </div>
                 ))}
@@ -298,16 +342,21 @@ const EstudoDraJuliana = () => {
         {/* Corpo do dossiê */}
         <section className="py-16 md:py-24">
           <div className="container grid gap-12 lg:grid-cols-[220px_1fr]">
-            <ÍndiceCapítulos />
+            <ÍndiceCapítulos ativo={ativo} />
 
+            <ProvedorGlossário>
             <div className="max-w-3xl">
               {CAPÍTULOS.map((c, índice) => (
                 <article key={c.id} id={c.id} className="scroll-mt-24 border-t border-[hsl(var(--pc-line))] py-12 first:border-t-0 first:pt-0">
                   <ScrollReveal>
-                    <p className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-[hsl(var(--pc-amber))]">
+                    <p className="flex flex-wrap items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-[hsl(var(--pc-amber))]">
                       <span className="tabular-nums">Capítulo {c.numero}</span>
                       <span className="h-px w-10 bg-[hsl(var(--pc-line))]" />
                       {c.etiqueta}
+                      <span className="inline-flex items-center gap-1 text-[hsl(var(--pc-ink-soft))]">
+                        <Clock className="h-3 w-3" aria-hidden />
+                        {minutosDe(c.id)} min
+                      </span>
                     </p>
                     <h2 className="mt-4 font-display text-3xl font-bold leading-tight md:text-4xl">{c.titulo}</h2>
                     <p className="mt-4 border-l-2 border-[hsl(var(--pc-cyan))] pl-4 text-base italic leading-relaxed text-[hsl(var(--pc-ink-soft))]">
@@ -317,7 +366,7 @@ const EstudoDraJuliana = () => {
 
                   <div className="pc-prose mt-8 text-[15px] leading-relaxed text-[hsl(var(--pc-ink))] md:text-base">
                     {c.blocos.map((b, i) => {
-                      if (b.tipo === "p") return <p key={i}>{b.texto}</p>;
+                      if (b.tipo === "p") return <TextoGlossario key={i} texto={b.texto} />;
                       if (b.tipo === "destaque")
                         return (
                           <ScrollReveal key={i}>
@@ -341,6 +390,10 @@ const EstudoDraJuliana = () => {
                       );
                     })}
                   </div>
+
+                  {c.id === "pistas" && <SimuladorPepsina />}
+
+                  {c.id === "resultados" && <GraficoResultados />}
 
                   {c.id === "traducao" && (
                     <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -372,6 +425,7 @@ const EstudoDraJuliana = () => {
                 </article>
               ))}
             </div>
+            </ProvedorGlossário>
           </div>
         </section>
 
