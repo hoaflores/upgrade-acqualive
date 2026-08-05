@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import {
   Download,
@@ -9,11 +9,17 @@ import {
   Quote,
   BookOpen,
   GraduationCap,
+  Clock,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import ProgressoLeitura from "@/components/portal/ProgressoLeitura";
 import FaixaVisual from "@/components/portal/FaixaVisual";
 import BolhasAgua from "@/components/portal/BolhasAgua";
+import TextoGlossario, { ProvedorGlossário } from "@/components/estudo/TextoGlossario";
+import SimuladorPepsina from "@/components/estudo/SimuladorPepsina";
+import GraficoResultados from "@/components/estudo/GraficoResultados";
+import NumeroAnimado from "@/components/estudo/NumeroAnimado";
+import NavegacaoCapitulos from "@/components/estudo/NavegacaoCapitulos";
 import logoAcqualive from "@/assets/acqualive-logo-azul.png.asset.json";
 import pdfDossie from "@/assets/portal/dossie-juliana-chaves.pdf.asset.json";
 import imgLaboratorio from "@/assets/portal/laboratorio.jpg.asset.json";
@@ -27,6 +33,40 @@ import {
   PERGUNTAS,
   REFERÊNCIAS_ESTUDO,
 } from "@/data/estudo-juliana";
+
+/** Minutos de leitura por capítulo: ajuda o leitor a decidir se lê agora ou depois. */
+const minutosDe = (id: string) => {
+  const c = CAPÍTULOS.find((x) => x.id === id);
+  if (!c) return 1;
+  const palavras = c.blocos.reduce(
+    (t, b) => t + ("texto" in b ? b.texto.split(/\s+/).length : b.itens.join(" ").split(/\s+/).length),
+    0
+  );
+  return Math.max(1, Math.round(palavras / 200));
+};
+
+/** Capítulo em leitura, compartilhado pelo índice lateral e pela navegação mobile. */
+const useCapituloAtivo = () => {
+  const [ativo, setAtivo] = useState(CAPÍTULOS[0].id);
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      (entradas) => {
+        const visível = entradas
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+        if (visível) setAtivo(visível.target.id);
+      },
+      { rootMargin: "-20% 0px -65% 0px", threshold: 0 }
+    );
+    CAPÍTULOS.forEach((c) => {
+      const el = document.getElementById(c.id);
+      if (el) obs.observe(el);
+    });
+    return () => obs.disconnect();
+  }, []);
+  return ativo;
+};
+
 
 const SITE = "https://paginas.acqualive.com.br";
 const URL_PÁGINA = `${SITE}/estudo-dra-juliana`;
