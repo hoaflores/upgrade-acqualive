@@ -81,7 +81,7 @@ const SimuladorPepsina = () => {
           className="h-3 w-full rounded-full"
           style={{
             background:
-              "linear-gradient(90deg, hsl(var(--pc-amber)) 0%, hsl(var(--pc-amber)/0.5) 30%, hsl(var(--pc-line)) 50%, hsl(var(--pc-cyan)/0.6) 72%, hsl(var(--pc-blue)) 100%)",
+              "linear-gradient(90deg, hsl(var(--pc-amber)) 0%, hsl(var(--pc-amber)/0.5) 30%, hsl(var(--pc-line)) 46%, hsl(var(--pc-cyan)/0.6) 58%, hsl(var(--pc-blue)) 65%, hsl(var(--pc-blue)) 69%, hsl(var(--pc-line)) 80%, hsl(var(--pc-line)) 100%)",
           }}
           aria-hidden
         />
