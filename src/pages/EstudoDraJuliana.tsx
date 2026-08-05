@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import {
   Download,
+  FileDown,
+  ExternalLink,
   FlaskConical,
   Microscope,
   ArrowRight,
@@ -11,6 +13,7 @@ import {
   GraduationCap,
   Clock,
 } from "lucide-react";
+import { ESTUDO_ORIGINAL, ESTUDO_PUBMED } from "@/components/estudo/links";
 import ScrollReveal from "@/components/ScrollReveal";
 import ProgressoLeitura from "@/components/portal/ProgressoLeitura";
 import FaixaVisual from "@/components/portal/FaixaVisual";
@@ -90,6 +93,33 @@ const BotaoPDF = ({ variante = "primario" }: { variante?: "primario" | "secundar
     <span className="relative z-10">Baixar o dossiê em PDF</span>
   </a>
 );
+
+/** Documento original da pesquisa, hospedado fora da página. */
+const BotaoEstudoOriginal = () => (
+  <a
+    href={ESTUDO_ORIGINAL}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 rounded-full border border-[hsl(var(--pc-blue))] px-7 py-4 text-sm font-semibold text-[hsl(var(--pc-blue))] transition hover:bg-white"
+  >
+    <FileDown className="h-4 w-4" aria-hidden />
+    Baixar o estudo completo
+  </a>
+);
+
+/** Versão revisada por pares, indexada no PubMed. */
+const LinkPubMed = ({ classe = "" }: { classe?: string }) => (
+  <a
+    href={ESTUDO_PUBMED}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`inline-flex items-center gap-2 text-sm font-semibold text-[hsl(var(--pc-amber))] transition hover:opacity-80 ${classe}`}
+  >
+    <ExternalLink className="h-4 w-4" aria-hidden />
+    Ver o artigo no PubMed
+  </a>
+);
+
 
 /** Índice lateral que acompanha o capítulo em leitura. */
 const ÍndiceCapítulos = ({ ativo }: { ativo: string }) => {
@@ -303,6 +333,7 @@ const EstudoDraJuliana = () => {
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <BotaoPDF />
+                <BotaoEstudoOriginal />
                 <a
                   href="#pergunta"
                   className="inline-flex items-center gap-2 rounded-full border border-[hsl(var(--pc-blue))] px-7 py-4 text-sm font-semibold text-[hsl(var(--pc-blue))] transition hover:bg-white"
@@ -311,6 +342,7 @@ const EstudoDraJuliana = () => {
                   <ArrowRight className="h-4 w-4" aria-hidden />
                 </a>
               </div>
+              <LinkPubMed classe="mt-5" />
               <p className="mt-6 flex items-center gap-2 text-xs text-[hsl(var(--pc-ink-soft))]">
                 <GraduationCap className="h-4 w-4" aria-hidden />
                 Universidade Federal do Pará, 2021. Aprovado por Comitê de Ética em Pesquisa.
@@ -597,6 +629,7 @@ const EstudoDraJuliana = () => {
                 </p>
                 <div className="relative mt-9 flex flex-wrap justify-center gap-3">
                   <BotaoPDF />
+                  <BotaoEstudoOriginal />
                   <a
                     href="https://www.acqualive.com.br"
                     className="inline-flex items-center gap-2 rounded-full border border-[hsl(var(--pc-blue))] px-7 py-4 text-sm font-semibold text-[hsl(var(--pc-blue))] transition hover:bg-white"
@@ -604,6 +637,9 @@ const EstudoDraJuliana = () => {
                     Conheça os filtros Acqualive
                     <ArrowRight className="h-4 w-4" aria-hidden />
                   </a>
+                </div>
+                <div className="relative mt-5 flex justify-center">
+                  <LinkPubMed />
                 </div>
               </div>
             </ScrollReveal>
