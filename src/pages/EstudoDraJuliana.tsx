@@ -77,7 +77,8 @@ const useCapituloAtivo = () => {
 
 
 const SITE = "https://paginas.acqualive.com.br";
-const URL_PÁGINA = `${SITE}/estudo-dra-juliana`;
+const URL_PÁGINA = `${SITE}/agua-alcalina-estudo-cientifico`;
+
 
 const BotaoPDF = ({ variante = "primario" }: { variante?: "primario" | "secundario" }) => (
   <a
