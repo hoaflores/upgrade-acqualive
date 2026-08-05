@@ -275,6 +275,9 @@ const EstudoDraJuliana = () => {
         </div>
       </nav>
 
+      <NavegacaoCapitulos itens={itensNav} ativo={ativo} />
+
+
       <main>
         {/* Hero */}
         <section className="pc-aurora relative overflow-hidden border-b border-[hsl(var(--pc-line))]">
