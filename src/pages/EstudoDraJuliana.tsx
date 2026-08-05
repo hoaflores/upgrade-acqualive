@@ -87,29 +87,24 @@ const BotaoPDF = ({ variante = "primario" }: { variante?: "primario" | "secundar
 );
 
 /** Índice lateral que acompanha o capítulo em leitura. */
-const ÍndiceCapítulos = () => {
-  const [ativo, setAtivo] = useState(CAPÍTULOS[0].id);
-
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      (entradas) => {
-        const visível = entradas.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
-        if (visível) setAtivo(visível.target.id);
-      },
-      { rootMargin: "-20% 0px -65% 0px", threshold: 0 }
-    );
-    CAPÍTULOS.forEach((c) => {
-      const el = document.getElementById(c.id);
-      if (el) obs.observe(el);
-    });
-    return () => obs.disconnect();
-  }, []);
+const ÍndiceCapítulos = ({ ativo }: { ativo: string }) => {
+  const posição = CAPÍTULOS.findIndex((c) => c.id === ativo);
+  const percentual = Math.round(((posição + 1) / CAPÍTULOS.length) * 100);
 
   return (
     <nav aria-label="Índice do dossiê" className="sticky top-28 hidden lg:block">
-      <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-[hsl(var(--pc-ink-soft))]">
+      <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-[hsl(var(--pc-ink-soft))]">
         Capítulos
       </p>
+      <div className="mb-4 flex items-center gap-2">
+        <div className="h-1 flex-1 overflow-hidden rounded-full bg-[hsl(var(--pc-line))]">
+          <div
+            className="h-full rounded-full bg-[hsl(var(--pc-cyan))] transition-all duration-500"
+            style={{ width: `${percentual}%` }}
+          />
+        </div>
+        <span className="text-[11px] tabular-nums text-[hsl(var(--pc-ink-soft))]">{percentual}%</span>
+      </div>
       <ul className="space-y-1 border-l border-[hsl(var(--pc-line))]">
         {CAPÍTULOS.map((c) => (
           <li key={c.id}>
@@ -127,6 +122,7 @@ const ÍndiceCapítulos = () => {
           </li>
         ))}
       </ul>
+
       <div className="mt-6 border-l border-transparent pl-4">
         <a
           href={pdfDossie.url}
