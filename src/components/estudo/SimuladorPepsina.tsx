@@ -77,25 +77,26 @@ const SimuladorPepsina = () => {
           className="h-3 w-full rounded-full"
           style={{
             background:
-              "linear-gradient(90deg, hsl(var(--pc-amber)) 0%, hsl(var(--pc-amber)/0.5) 30%, hsl(var(--pc-line)) 46%, hsl(var(--pc-cyan)/0.6) 58%, hsl(var(--pc-blue)) 65%, hsl(var(--pc-blue)) 69%, hsl(var(--pc-line)) 80%, hsl(var(--pc-line)) 100%)",
+              "linear-gradient(90deg, hsl(var(--pc-amber)) 0%, hsl(var(--pc-amber)/0.5) 32%, hsl(var(--pc-line)) 60%, hsl(var(--pc-cyan)/0.6) 76%, hsl(var(--pc-blue)) 100%)",
           }}
           aria-hidden
         />
         <div
           className="pointer-events-none absolute -top-2 h-7 w-7 -translate-x-1/2 rounded-full border-2 border-white shadow-lg transition-all duration-200"
-          style={{ left: `${((ph - 1) / 13) * 100}%`, background: `hsl(var(${f.cor}))` }}
+          style={{ left: `${((ph - PH_MIN) / (PH_MAX - PH_MIN)) * 100}%`, background: `hsl(var(${f.cor}))` }}
           aria-hidden
         />
         <input
           type="range"
-          min={1}
-          max={14}
+          min={PH_MIN}
+          max={PH_MAX}
           step={0.5}
           value={ph}
           onChange={(e) => setPh(Number(e.target.value))}
           aria-label="Ajustar o pH da solução"
           className="absolute inset-0 h-3 w-full cursor-pointer opacity-0"
         />
+
         <div className="mt-3 flex justify-between text-[11px] uppercase tracking-wider text-[hsl(var(--pc-ink-soft))]">
           <span>Ácido</span>
           <span>Neutro</span>
