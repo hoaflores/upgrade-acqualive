@@ -6,7 +6,7 @@ export const ESTUDO_ORIGINAL =
 export const ESTUDO_PUBMED = "https://pubmed.ncbi.nlm.nih.gov/32774757/";
 
 /** Endereço público da página, usado nos botões de compartilhamento. */
-export const URL_ESTUDO = "https://paginas.acqualive.com.br/agua-alcalina-estudo-cientifico";
+export const URL_ESTUDO = "https://paginas.acqualive.com.br/agua-alcalina-inflamacao";
 
 /** Vídeo do capítulo em vídeo do dossiê. */
 export const VIDEO_ID = "fR-Nf1eumdo";

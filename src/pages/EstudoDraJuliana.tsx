@@ -79,7 +79,7 @@ const useCapituloAtivo = () => {
 
 
 const SITE = "https://paginas.acqualive.com.br";
-const URL_PÁGINA = `${SITE}/agua-alcalina-estudo-cientifico`;
+const URL_PÁGINA = `${SITE}/agua-alcalina-inflamacao`;
 
 
 const BotaoPDF = ({ variante = "primario" }: { variante?: "primario" | "secundario" }) => (

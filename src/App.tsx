@@ -92,8 +92,9 @@ const App = () => (
             <Route path="/mapa-solo" element={<Navigate to="/franquias-solo" replace />} />
             <Route path="/acqualive-empresas" element={<AcqualiveEmpresas />} />
             <Route path="/portal-cientifico" element={<PortalCientifico />} />
-            <Route path="/agua-alcalina-estudo-cientifico" element={<EstudoDraJuliana />} />
-            <Route path="/estudo-dra-juliana" element={<Navigate to="/agua-alcalina-estudo-cientifico" replace />} />
+            <Route path="/agua-alcalina-inflamacao" element={<EstudoDraJuliana />} />
+            <Route path="/agua-alcalina-estudo-cientifico" element={<Navigate to="/agua-alcalina-inflamacao" replace />} />
+            <Route path="/estudo-dra-juliana" element={<Navigate to="/agua-alcalina-inflamacao" replace />} />
 
 
             <Route path="/admin/franqueados" element={<AdminFranqueados />} />
