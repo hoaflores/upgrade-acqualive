@@ -327,13 +327,20 @@ const EstudoDraJuliana = () => {
                 Dossiê científico Acqualive
               </p>
               <h1 className="mt-6 font-display text-4xl font-bold leading-[1.08] md:text-6xl">
-                Quando a ciência decidiu <span className="pc-underline-amber">estudar a água</span>
+                Quando a ciência decidiu estudar a <span className="pc-underline-amber">água alcalina</span>
               </h1>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-[hsl(var(--pc-ink-soft))] md:text-lg">
-                A pesquisa da Dra. Juliana Chaves na Universidade Federal do Pará, a tecnologia de água alcalina
-                ionizada da Acqualive e o estudo brasileiro que ampliou a forma como a ciência olha para a saúde
-                digestiva.
+                A pesquisa da Dra. Juliana Chaves na Universidade Federal do Pará com água alcalina ionizada, aquela
+                que preferimos chamar de água funcional, e o estudo brasileiro que ampliou a forma como a ciência
+                olha para a saúde digestiva.
               </p>
+              <p className="mt-4 max-w-xl rounded-2xl border border-[hsl(var(--pc-line))] bg-white/60 p-4 text-sm leading-relaxed text-[hsl(var(--pc-ink-soft))]">
+                <strong className="text-[hsl(var(--pc-blue))]">Água funcional</strong> é o nome que damos à água
+                alcalina ionizada: filtrada, mineralizada e com características medidas, como pH, minerais e potencial
+                de oxirredução. Quando ela sai de um purificador Acqualive, chamamos de água Acqualive. São formas
+                diferentes de nomear a mesma ideia. Este material é educativo e não é uma oferta de venda.
+              </p>
+
               <div className="mt-9 flex flex-wrap gap-3">
                 <BotaoPDF />
                 <BotaoEstudoOriginal />
