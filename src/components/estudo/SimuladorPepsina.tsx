@@ -31,29 +31,25 @@ const FAIXAS = [
     cor: "--pc-ink-soft",
   },
   {
-    max: 10,
+    max: 9.5,
     rótulo: "Faixa alcalina do estudo",
     estado: "Condição estudada para inativação da pepsina",
     texto:
-      "Acima de pH 8,0 pesquisas experimentais observam inativação da pepsina. É nesta faixa, entre 8,5 e 10, que a água do protocolo da Dra. Juliana Chaves foi mantida.",
+      "Acima de pH 8,0 pesquisas experimentais observam inativação da pepsina. É nesta faixa alcalina que a água funcional do protocolo da Dra. Juliana Chaves foi mantida.",
     cor: "--pc-cyan",
-  },
-  {
-    max: 14,
-    rótulo: "Alcalinidade fora do estudo",
-    estado: "Fora da faixa avaliada e do consumo recomendado",
-    texto:
-      "Acima de pH 10 já não estamos falando de água para beber nem da faixa avaliada no estudo. Valores assim aparecem em soluções de limpeza, não em água de consumo diário.",
-    cor: "--pc-ink-soft",
   },
 ];
 
 const faixaDe = (ph: number) => FAIXAS.find((f) => ph <= f.max) ?? FAIXAS[FAIXAS.length - 1];
 
+const PH_MIN = 1;
+const PH_MAX = 9.5;
+
 const SimuladorPepsina = () => {
   const [ph, setPh] = useState(9);
   const f = faixaDe(ph);
   const atividade = Math.max(0, Math.min(100, Math.round(100 - ((ph - 1.5) / 7) * 100)));
+
 
   return (
     <div className="pc-card my-8 rounded-2xl p-6 md:p-8">
