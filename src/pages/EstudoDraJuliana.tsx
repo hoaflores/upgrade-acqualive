@@ -243,13 +243,14 @@ const EstudoDraJuliana = () => {
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      headline: "Quando a ciência decidiu estudar a água: o estudo da Dra. Juliana Chaves",
+      headline: "Água alcalina e gastrite: o estudo científico da Dra. Juliana Chaves na UFPA",
       description:
-        "Dossiê científico sobre a pesquisa da Dra. Juliana Chaves na Universidade Federal do Pará com água alcalina ionizada em pacientes com gastrite.",
+        "Dossiê científico sobre a pesquisa da Dra. Juliana Chaves na Universidade Federal do Pará com água alcalina ionizada, também chamada de água funcional, em pacientes com gastrite.",
       inLanguage: "pt-BR",
       url: URL_PÁGINA,
       author: { "@type": "Organization", name: "Acqualive" },
-      about: ["Água alcalina ionizada", "Gastrite", "MicroRNAs", "Saúde digestiva"],
+      about: ["Água alcalina", "Água funcional", "Gastrite", "MicroRNAs", "Saúde digestiva"],
+
       citation: REFERÊNCIAS_ESTUDO.map((r) => `${r.autor}. ${r.titulo}. ${r.fonte}.`),
     },
     {
