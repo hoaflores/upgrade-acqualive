@@ -39,6 +39,7 @@ import MapaSolo from "./pages/MapaSolo";
 import AdminFranqueados from "./pages/AdminFranqueados";
 import AcqualiveEmpresas from "./pages/AcqualiveEmpresas";
 import PortalCientifico from "./pages/PortalCientifico";
+import EstudoDraJuliana from "./pages/EstudoDraJuliana";
 import NotFound from "./pages/NotFound";
 import RouteSeo from "./components/RouteSeo";
 
@@ -91,6 +92,8 @@ const App = () => (
             <Route path="/mapa-solo" element={<Navigate to="/franquias-solo" replace />} />
             <Route path="/acqualive-empresas" element={<AcqualiveEmpresas />} />
             <Route path="/portal-cientifico" element={<PortalCientifico />} />
+            <Route path="/estudo-dra-juliana" element={<EstudoDraJuliana />} />
+
             <Route path="/admin/franqueados" element={<AdminFranqueados />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
