@@ -92,6 +92,8 @@ const App = () => (
             <Route path="/mapa-solo" element={<Navigate to="/franquias-solo" replace />} />
             <Route path="/acqualive-empresas" element={<AcqualiveEmpresas />} />
             <Route path="/portal-cientifico" element={<PortalCientifico />} />
+            <Route path="/estudo-dra-juliana" element={<EstudoDraJuliana />} />
+
             <Route path="/admin/franqueados" element={<AdminFranqueados />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
