@@ -20,6 +20,11 @@ import SimuladorPepsina from "@/components/estudo/SimuladorPepsina";
 import GraficoResultados from "@/components/estudo/GraficoResultados";
 import NumeroAnimado from "@/components/estudo/NumeroAnimado";
 import NavegacaoCapitulos from "@/components/estudo/NavegacaoCapitulos";
+import FichaEbook from "@/components/estudo/FichaEbook";
+import SinaisInflamacao from "@/components/estudo/SinaisInflamacao";
+import TecnologiaTriWay from "@/components/estudo/TecnologiaTriWay";
+import OutrosEstudos from "@/components/estudo/OutrosEstudos";
+import VideoEstudo from "@/components/estudo/VideoEstudo";
 import logoAcqualive from "@/assets/acqualive-logo-azul.png.asset.json";
 import pdfDossie from "@/assets/portal/dossie-juliana-chaves.pdf.asset.json";
 import imgLaboratorio from "@/assets/portal/laboratorio.jpg.asset.json";
@@ -339,6 +344,12 @@ const EstudoDraJuliana = () => {
           </div>
         </section>
 
+        <FichaEbook />
+
+        <VideoEstudo />
+
+        <SinaisInflamacao />
+
         {/* Corpo do dossiê */}
         <section className="py-16 md:py-24">
           <div className="container grid gap-12 lg:grid-cols-[220px_1fr]">
@@ -479,6 +490,10 @@ const EstudoDraJuliana = () => {
             </ScrollReveal>
           </div>
         </section>
+
+        <TecnologiaTriWay />
+
+        <OutrosEstudos />
 
         {/* Perguntas */}
         <section id="perguntas" className="scroll-mt-24 border-t border-[hsl(var(--pc-line))] py-20 md:py-24">
