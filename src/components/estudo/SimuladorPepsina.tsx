@@ -101,7 +101,7 @@ const SimuladorPepsina = () => {
 
       <div className="mt-7 rounded-xl border border-[hsl(var(--pc-line))] bg-[hsl(var(--pc-paper-2))] p-5">
         <div className="flex items-center justify-between text-sm font-semibold">
-          <span>{f.estado}</span>
+          <span>Atividade estimada da pepsina</span>
           <span className="tabular-nums text-[hsl(var(--pc-ink-soft))]">{atividade}%</span>
         </div>
         <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-[hsl(var(--pc-line))]">
@@ -110,7 +110,8 @@ const SimuladorPepsina = () => {
             style={{ width: `${atividade}%`, background: `hsl(var(${f.cor}))` }}
           />
         </div>
-        <p key={f.rótulo} className="pc-fade-in mt-4 text-sm leading-relaxed text-[hsl(var(--pc-ink-soft))]">
+        <p className="mt-3 text-sm font-semibold" style={{ color: `hsl(var(${f.cor}))` }}>{f.estado}</p>
+        <p key={f.rótulo} className="pc-fade-in mt-2 text-sm leading-relaxed text-[hsl(var(--pc-ink-soft))]">
           {f.texto}
         </p>
       </div>
