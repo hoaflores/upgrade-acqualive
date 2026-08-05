@@ -333,6 +333,7 @@ const EstudoDraJuliana = () => {
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <BotaoPDF />
+                <BotaoEstudoOriginal />
                 <a
                   href="#pergunta"
                   className="inline-flex items-center gap-2 rounded-full border border-[hsl(var(--pc-blue))] px-7 py-4 text-sm font-semibold text-[hsl(var(--pc-blue))] transition hover:bg-white"
@@ -341,6 +342,7 @@ const EstudoDraJuliana = () => {
                   <ArrowRight className="h-4 w-4" aria-hidden />
                 </a>
               </div>
+              <LinkPubMed classe="mt-5" />
               <p className="mt-6 flex items-center gap-2 text-xs text-[hsl(var(--pc-ink-soft))]">
                 <GraduationCap className="h-4 w-4" aria-hidden />
                 Universidade Federal do Pará, 2021. Aprovado por Comitê de Ética em Pesquisa.
