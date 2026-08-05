@@ -394,6 +394,26 @@ const EstudoDraJuliana = () => {
 
         <SinaisInflamacao />
 
+        <section className="border-t border-[hsl(var(--pc-line))] py-12">
+          <div className="container">
+            <ScrollReveal>
+              <div className="pc-card flex flex-col items-center justify-between gap-5 rounded-3xl p-6 md:flex-row md:p-8">
+                <div>
+                  <p className="font-display text-lg font-bold md:text-xl">
+                    Conhece alguém que precisa ler isto?
+                  </p>
+                  <p className="mt-1 text-sm text-[hsl(var(--pc-ink-soft))]">
+                    Envie o dossiê para amigos e familiares. Falar sobre água funcional é falar sobre o hábito mais
+                    repetido do dia.
+                  </p>
+                </div>
+                <CompartilharEstudo compacto />
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
+
         {/* Corpo do dossiê */}
         <section className="py-16 md:py-24">
           <div className="container grid gap-12 lg:grid-cols-[220px_1fr]">
