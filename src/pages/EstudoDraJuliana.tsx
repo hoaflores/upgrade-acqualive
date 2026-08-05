@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import {
   Download,
+  FileDown,
+  ExternalLink,
   FlaskConical,
   Microscope,
   ArrowRight,
@@ -11,6 +13,7 @@ import {
   GraduationCap,
   Clock,
 } from "lucide-react";
+import { ESTUDO_ORIGINAL, ESTUDO_PUBMED } from "@/components/estudo/links";
 import ScrollReveal from "@/components/ScrollReveal";
 import ProgressoLeitura from "@/components/portal/ProgressoLeitura";
 import FaixaVisual from "@/components/portal/FaixaVisual";
