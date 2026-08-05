@@ -34,8 +34,26 @@ const ShowerCare = () => {
           name="description"
           content="Filtro de chuveiro Acqualive Shower Care. Reduz cloro, metais e impurezas para um banho como o de uma cachoeira. Pele macia, cabelo brilhante e respiração leve."
         />
+        <meta property="og:title" content="Acqualive Shower Care | Banho sem cloro" />
+        <meta
+          property="og:description"
+          content="Filtro de chuveiro que reduz cloro, metais e impurezas. Pele macia, cabelo brilhante e respiração leve."
+        />
+        <meta property="og:type" content="product" />
         <link rel="canonical" href="https://paginas.acqualive.com.br/shower-care" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Acqualive Shower Care",
+            image: "https://paginas.acqualive.com.br/images/og-acqualive.jpg",
+            description:
+              "Filtro de chuveiro Acqualive Shower Care. Reduz cloro, metais e impurezas da água do banho.",
+            brand: { "@type": "Brand", name: "Acqualive" },
+          })}
+        </script>
       </Helmet>
+
 
       <main className="min-h-screen bg-[#f7f4ef] text-foreground font-[Outfit]">
         {/* HERO */}

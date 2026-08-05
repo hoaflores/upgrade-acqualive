@@ -15,13 +15,35 @@ const RouteSeo = () => {
   const canonical = `${SITE_URL}${path}`;
   const fullUrl = `${canonical}${search || ""}`;
 
+  const orgJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        name: "Acqualive",
+        url: SITE_URL,
+        logo: `${SITE_URL}/images/og-acqualive.jpg`,
+        description:
+          "Purificadores e ionizadores de água alcalina, mineralizada e livre de cloro.",
+      },
+      {
+        "@type": "WebSite",
+        name: "Acqualive",
+        url: SITE_URL,
+        inLanguage: "pt-BR",
+      },
+    ],
+  };
+
   return (
     <Helmet>
       <link rel="canonical" href={canonical} />
       <meta property="og:url" content={fullUrl} />
       <meta name="twitter:url" content={fullUrl} />
+      <script type="application/ld+json">{JSON.stringify(orgJsonLd)}</script>
     </Helmet>
   );
 };
+
 
 export default RouteSeo;
