@@ -629,6 +629,7 @@ const EstudoDraJuliana = () => {
                 </p>
                 <div className="relative mt-9 flex flex-wrap justify-center gap-3">
                   <BotaoPDF />
+                  <BotaoEstudoOriginal />
                   <a
                     href="https://www.acqualive.com.br"
                     className="inline-flex items-center gap-2 rounded-full border border-[hsl(var(--pc-blue))] px-7 py-4 text-sm font-semibold text-[hsl(var(--pc-blue))] transition hover:bg-white"
@@ -636,6 +637,9 @@ const EstudoDraJuliana = () => {
                     Conheça os filtros Acqualive
                     <ArrowRight className="h-4 w-4" aria-hidden />
                   </a>
+                </div>
+                <div className="relative mt-5 flex justify-center">
+                  <LinkPubMed />
                 </div>
               </div>
             </ScrollReveal>
