@@ -342,16 +342,21 @@ const EstudoDraJuliana = () => {
         {/* Corpo do dossiê */}
         <section className="py-16 md:py-24">
           <div className="container grid gap-12 lg:grid-cols-[220px_1fr]">
-            <ÍndiceCapítulos />
+            <ÍndiceCapítulos ativo={ativo} />
 
+            <ProvedorGlossário>
             <div className="max-w-3xl">
               {CAPÍTULOS.map((c, índice) => (
                 <article key={c.id} id={c.id} className="scroll-mt-24 border-t border-[hsl(var(--pc-line))] py-12 first:border-t-0 first:pt-0">
                   <ScrollReveal>
-                    <p className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-[hsl(var(--pc-amber))]">
+                    <p className="flex flex-wrap items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-[hsl(var(--pc-amber))]">
                       <span className="tabular-nums">Capítulo {c.numero}</span>
                       <span className="h-px w-10 bg-[hsl(var(--pc-line))]" />
                       {c.etiqueta}
+                      <span className="inline-flex items-center gap-1 text-[hsl(var(--pc-ink-soft))]">
+                        <Clock className="h-3 w-3" aria-hidden />
+                        {minutosDe(c.id)} min
+                      </span>
                     </p>
                     <h2 className="mt-4 font-display text-3xl font-bold leading-tight md:text-4xl">{c.titulo}</h2>
                     <p className="mt-4 border-l-2 border-[hsl(var(--pc-cyan))] pl-4 text-base italic leading-relaxed text-[hsl(var(--pc-ink-soft))]">
@@ -361,7 +366,7 @@ const EstudoDraJuliana = () => {
 
                   <div className="pc-prose mt-8 text-[15px] leading-relaxed text-[hsl(var(--pc-ink))] md:text-base">
                     {c.blocos.map((b, i) => {
-                      if (b.tipo === "p") return <p key={i}>{b.texto}</p>;
+                      if (b.tipo === "p") return <TextoGlossario key={i} texto={b.texto} />;
                       if (b.tipo === "destaque")
                         return (
                           <ScrollReveal key={i}>
