@@ -31,12 +31,20 @@ const FAIXAS = [
     cor: "--pc-ink-soft",
   },
   {
-    max: 14,
+    max: 10,
     rótulo: "Faixa alcalina do estudo",
     estado: "Condição estudada para inativação da pepsina",
     texto:
       "Acima de pH 8,0 pesquisas experimentais observam inativação da pepsina. É nesta faixa, entre 8,5 e 10, que a água do protocolo da Dra. Juliana Chaves foi mantida.",
     cor: "--pc-cyan",
+  },
+  {
+    max: 14,
+    rótulo: "Alcalinidade fora do estudo",
+    estado: "Fora da faixa avaliada e do consumo recomendado",
+    texto:
+      "Acima de pH 10 já não estamos falando de água para beber nem da faixa avaliada no estudo. Valores assim aparecem em soluções de limpeza, não em água de consumo diário.",
+    cor: "--pc-ink-soft",
   },
 ];
 
@@ -73,7 +81,7 @@ const SimuladorPepsina = () => {
           className="h-3 w-full rounded-full"
           style={{
             background:
-              "linear-gradient(90deg, hsl(var(--pc-amber)) 0%, hsl(var(--pc-amber)/0.5) 30%, hsl(var(--pc-line)) 50%, hsl(var(--pc-cyan)/0.6) 72%, hsl(var(--pc-blue)) 100%)",
+              "linear-gradient(90deg, hsl(var(--pc-amber)) 0%, hsl(var(--pc-amber)/0.5) 30%, hsl(var(--pc-line)) 46%, hsl(var(--pc-cyan)/0.6) 58%, hsl(var(--pc-blue)) 65%, hsl(var(--pc-blue)) 69%, hsl(var(--pc-line)) 80%, hsl(var(--pc-line)) 100%)",
           }}
           aria-hidden
         />
