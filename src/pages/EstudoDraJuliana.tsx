@@ -91,6 +91,33 @@ const BotaoPDF = ({ variante = "primario" }: { variante?: "primario" | "secundar
   </a>
 );
 
+/** Documento original da pesquisa, hospedado fora da página. */
+const BotaoEstudoOriginal = () => (
+  <a
+    href={ESTUDO_ORIGINAL}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 rounded-full border border-[hsl(var(--pc-blue))] px-7 py-4 text-sm font-semibold text-[hsl(var(--pc-blue))] transition hover:bg-white"
+  >
+    <FileDown className="h-4 w-4" aria-hidden />
+    Baixar o estudo completo
+  </a>
+);
+
+/** Versão revisada por pares, indexada no PubMed. */
+const LinkPubMed = ({ classe = "" }: { classe?: string }) => (
+  <a
+    href={ESTUDO_PUBMED}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`inline-flex items-center gap-2 text-sm font-semibold text-[hsl(var(--pc-amber))] transition hover:opacity-80 ${classe}`}
+  >
+    <ExternalLink className="h-4 w-4" aria-hidden />
+    Ver o artigo no PubMed
+  </a>
+);
+
+
 /** Índice lateral que acompanha o capítulo em leitura. */
 const ÍndiceCapítulos = ({ ativo }: { ativo: string }) => {
   const posição = CAPÍTULOS.findIndex((c) => c.id === ativo);
