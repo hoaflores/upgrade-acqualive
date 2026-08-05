@@ -1,3 +1,5 @@
+import { ESTUDO_ORIGINAL } from "@/components/estudo/links";
+
 /** Conteúdo editorial do Dossiê Científico da Dra. Juliana Chaves. */
 
 export type Capitulo = {
@@ -457,6 +459,7 @@ export const REFERÊNCIAS_ESTUDO = [
     fonte: "Dissertação de Mestrado. Universidade Federal do Pará, 2021",
     nota:
       "Principal referência deste dossiê. Acompanhou pacientes com gastrite submetidos ao consumo de água alcalina ionizada produzida pela tecnologia da Acqualive, avaliando evolução clínica, endoscópica e molecular.",
+    link: ESTUDO_ORIGINAL,
   },
   {
     autor: "Koufman, J. A.; Johnston, N.",
@@ -465,6 +468,7 @@ export const REFERÊNCIAS_ESTUDO = [
     fonte: "Annals of Otology, Rhinology & Laryngology, 2012",
     nota:
       "Um dos estudos mais citados sobre água alcalina e saúde digestiva. Demonstrou a inativação da pepsina em condições experimentais.",
+    link: "https://pubmed.ncbi.nlm.nih.gov/22844861/",
   },
   {
     autor: "Johnston, N.; Dettmar, P. W.; Lively, M. O.; Koufman, J. A.",
@@ -472,6 +476,7 @@ export const REFERÊNCIAS_ESTUDO = [
     fonte: "Refluxo gastroesofágico e laringofaríngeo",
     nota:
       "Trabalhos que aprofundaram o conhecimento sobre a pepsina e modificaram a forma como muitos pesquisadores compreendem essas doenças.",
+    link: "https://pubmed.ncbi.nlm.nih.gov/?term=Johnston+N+pepsin+reflux",
   },
   {
     autor: "Organização Mundial da Saúde (OMS)",
@@ -479,17 +484,20 @@ export const REFERÊNCIAS_ESTUDO = [
     fonte: "Documento de referência internacional",
     nota:
       "Referência sobre qualidade da água destinada ao consumo humano, utilizada por pesquisadores e órgãos reguladores em diferentes países.",
+    link: "https://www.who.int/publications/i/item/9789240045064",
   },
   {
     autor: "Sociedade Brasileira de Endoscopia Digestiva (SOBED)",
     titulo: "Diretrizes de procedimentos endoscópicos",
     fonte: "Interpretação clínica das alterações do trato digestivo",
     nota: "Referência para procedimentos e classificação das alterações observadas durante os exames.",
+    link: "https://www.sobed.org.br/",
   },
   {
     autor: "Sociedade Brasileira de Gastroenterologia (SBG)",
     titulo: "Publicações e consensos",
     fonte: "Gastrite, refluxo e doenças do aparelho digestivo",
     nota: "Base para diagnóstico, tratamento e acompanhamento dos pacientes citados no dossiê.",
+    link: "https://www.sbg.org.br/",
   },
 ];

@@ -594,12 +594,22 @@ const EstudoDraJuliana = () => {
             </ScrollReveal>
             <div className="mx-auto mt-10 grid max-w-4xl gap-4 md:grid-cols-2">
               {REFERÊNCIAS_ESTUDO.map((r) => (
-                <div key={r.titulo} className="pc-card rounded-2xl p-6">
+                <a
+                  key={r.titulo}
+                  href={r.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pc-card group block rounded-2xl p-6 transition hover:-translate-y-1 hover:shadow-lg"
+                >
                   <p className="font-display text-sm font-bold">{r.autor}</p>
                   <p className="mt-2 text-sm italic text-[hsl(var(--pc-ink))]">{r.titulo}</p>
                   <p className="mt-1 text-xs text-[hsl(var(--pc-blue))]">{r.fonte}</p>
                   <p className="mt-3 text-xs leading-relaxed text-[hsl(var(--pc-ink-soft))]">{r.nota}</p>
-                </div>
+                  <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-[hsl(var(--pc-blue))]">
+                    Acessar referência
+                    <ArrowRight className="h-3 w-3 transition group-hover:translate-x-1" aria-hidden />
+                  </span>
+                </a>
               ))}
             </div>
           </div>
