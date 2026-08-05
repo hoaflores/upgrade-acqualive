@@ -268,20 +268,21 @@ const EstudoDraJuliana = () => {
       <ProgressoLeitura />
 
       <Helmet>
-        <title>Estudo Dra. Juliana Chaves: água alcalina e gastrite</title>
+        <title>Água alcalina e gastrite: o estudo científico da UFPA</title>
         <meta
           name="description"
-          content="Dossiê científico da pesquisa da Dra. Juliana Chaves na UFPA: água alcalina ionizada Acqualive, gastrite, endoscopia e expressão de microRNAs, com PDF para download."
+          content="Dossiê científico sobre água alcalina, também chamada de água funcional: a pesquisa da Dra. Juliana Chaves na UFPA com gastrite, endoscopia e expressão de microRNAs, com PDF para download."
         />
-        <meta property="og:title" content="Estudo Dra. Juliana Chaves: água alcalina e gastrite" />
+        <meta property="og:title" content="Água alcalina e gastrite: o estudo científico da UFPA" />
         <meta
           property="og:description"
-          content="A pesquisa brasileira que colocou a qualidade da água no centro da conversa sobre saúde digestiva. Leitura interativa e dossiê em PDF."
+          content="A pesquisa brasileira que colocou a qualidade da água funcional no centro da conversa sobre saúde digestiva. Leitura interativa e dossiê em PDF."
         />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
+
 
       <nav
         aria-label="Navegação do dossiê"
