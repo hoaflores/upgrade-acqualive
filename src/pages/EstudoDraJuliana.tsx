@@ -330,9 +330,11 @@ const EstudoDraJuliana = () => {
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
                 {NÚMEROS.map((n) => (
                   <div key={n.rótulo} className="pc-card rounded-2xl p-5">
-                    <p className="font-display text-3xl font-bold text-[hsl(var(--pc-blue))]">{n.valor}</p>
+                  <div key={n.rótulo} className="pc-card rounded-2xl p-5">
+                    <NumeroAnimado valor={n.valor} />
                     <p className="mt-2 text-xs leading-relaxed text-[hsl(var(--pc-ink-soft))]">{n.rótulo}</p>
                   </div>
+                ))}
                 ))}
               </div>
             </ScrollReveal>
