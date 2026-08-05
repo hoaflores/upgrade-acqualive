@@ -391,6 +391,10 @@ const EstudoDraJuliana = () => {
                     })}
                   </div>
 
+                  {c.id === "pistas" && <SimuladorPepsina />}
+
+                  {c.id === "resultados" && <GraficoResultados />}
+
                   {c.id === "traducao" && (
                     <div className="mt-8 grid gap-4 sm:grid-cols-2">
                       {ANALOGIAS.map((a) => (
@@ -421,6 +425,7 @@ const EstudoDraJuliana = () => {
                 </article>
               ))}
             </div>
+            </ProvedorGlossário>
           </div>
         </section>
 
