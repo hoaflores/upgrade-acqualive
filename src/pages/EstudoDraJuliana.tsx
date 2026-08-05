@@ -665,8 +665,15 @@ const EstudoDraJuliana = () => {
                 </div>
               </div>
             </ScrollReveal>
+
+            <ScrollReveal delay={120}>
+              <div className="mt-10">
+                <CompartilharEstudo />
+              </div>
+            </ScrollReveal>
           </div>
         </section>
+
       </main>
 
       <footer className="border-t border-[hsl(var(--pc-line))] py-10">
