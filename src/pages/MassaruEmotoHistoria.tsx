@@ -456,7 +456,10 @@ const MassaruEmotoHistoria = () => {
           </div>
         </section>
 
+        <HistoriaSidney />
+
         {/* 05 */}
+
         <section className="px-6 py-24 md:py-32">
           <div className="mx-auto max-w-3xl space-y-7 text-center">
             <Etiqueta>05 · O legado</Etiqueta>
