@@ -325,7 +325,7 @@ const MassaruEmotoHistoria = () => {
 
         {/* 03 */}
         <section className="px-6 py-14 md:py-24">
-          <div className="mx-auto max-w-3xl space-y-7 text-center">
+          <div className="mx-auto max-w-3xl space-y-5 text-center">
             <Etiqueta>03 · A virada</Etiqueta>
             <Titulo>Ele acrescentou uma pergunta nova.</Titulo>
             <Frase delay={0.05}>
@@ -364,7 +364,7 @@ const MassaruEmotoHistoria = () => {
 
         {/* 03B · A ÁGUA DA NASCENTE */}
         <section className="bg-gradient-to-b from-white to-sacra-mist/50 px-6 py-14 md:py-24">
-          <div className="mx-auto max-w-3xl space-y-7 text-center">
+          <div className="mx-auto max-w-3xl space-y-5 text-center">
             <Etiqueta>A água que a natureza faz</Etiqueta>
             <Titulo>Por que a água de nascente é diferente.</Titulo>
             <Frase delay={0.05}>
@@ -441,7 +441,7 @@ const MassaruEmotoHistoria = () => {
               />
             </motion.div>
 
-            <div className="order-1 space-y-7 lg:order-2">
+            <div className="order-1 space-y-5 lg:order-2">
               <Etiqueta>04 · O encontro</Etiqueta>
               <Titulo>A Acqualive foi até o Japão.</Titulo>
               <Frase delay={0.05}>
@@ -470,7 +470,7 @@ const MassaruEmotoHistoria = () => {
         {/* 05 */}
 
         <section className="px-6 py-14 md:py-24">
-          <div className="mx-auto max-w-3xl space-y-7 text-center">
+          <div className="mx-auto max-w-3xl space-y-5 text-center">
             <Etiqueta>05 · O legado</Etiqueta>
             <Titulo>Ele deixou uma pergunta. Respondemos com engenharia.</Titulo>
             <Frase delay={0.05}>
@@ -513,7 +513,7 @@ const MassaruEmotoHistoria = () => {
 
         {/* 05B · QUALIDADE */}
         <section className="bg-gradient-to-b from-white to-sacra-mist/50 px-6 py-14 md:py-24">
-          <div className="mx-auto max-w-3xl space-y-7 text-center">
+          <div className="mx-auto max-w-3xl space-y-5 text-center">
             <Etiqueta>Qualidade · O que existe dentro do copo</Etiqueta>
             <Titulo>Água potável e água boa não são a mesma coisa.</Titulo>
             <Frase delay={0.05}>
@@ -572,7 +572,7 @@ const MassaruEmotoHistoria = () => {
 
         {/* 05C · SAÚDE */}
         <section className="px-6 py-14 md:py-24">
-          <div className="mx-auto max-w-3xl space-y-7 text-center">
+          <div className="mx-auto max-w-3xl space-y-5 text-center">
             <Etiqueta>Saúde e bem-estar · O corpo em água</Etiqueta>
             <Titulo>Você não bebe água. Você se reconstrói com ela.</Titulo>
             <Frase delay={0.05}>

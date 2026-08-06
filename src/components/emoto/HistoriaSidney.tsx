@@ -222,7 +222,7 @@ const HistoriaSidney = () => (
           </p>
         </motion.div>
 
-        <div className="space-y-7">
+        <div className="space-y-6">
           <Etiqueta>04B · Sidney Rodrigues</Etiqueta>
           <Titulo>Quem trouxe o Dr. Emoto para o Brasil.</Titulo>
           <Frase delay={0.05}>
