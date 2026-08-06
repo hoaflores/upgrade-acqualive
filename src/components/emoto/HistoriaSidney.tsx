@@ -75,56 +75,125 @@ const PASSOS = [
   },
 ];
 
-const GALERIA = [
+type Foto = {
+  src: string;
+  alt: string;
+  legenda: string;
+  altura: string;
+  fit: "cover" | "contain";
+  offset: number;
+};
+
+const GALERIA: Foto[] = [
   {
     src: banner.url,
     alt: "Equipe Acqualive e Dr. Masaru Emoto diante dos banners do evento O Poder Curativo da Água",
     legenda: "O Poder Curativo da Água, Rio de Janeiro",
-    span: "sm:col-span-2",
+    altura: "h-[420px] md:h-[560px]",
+    fit: "cover",
+    offset: 0,
   },
   {
     src: plateia.url,
     alt: "Auditório lotado durante a palestra do Dr. Masaru Emoto no Rio de Janeiro",
     legenda: "Mais de 1200 pessoas no Clube Monte Líbano",
-    span: "",
+    altura: "h-[300px] md:h-[380px]",
+    fit: "cover",
+    offset: 60,
   },
   {
     src: chegada.url,
     alt: "Dr. Masaru Emoto caminhando acompanhado pela equipe no dia do evento",
     legenda: "A chegada do Dr. Emoto ao evento",
-    span: "",
+    altura: "h-[300px] md:h-[420px]",
+    fit: "cover",
+    offset: -40,
   },
   {
     src: reuniao.url,
     alt: "Dr. Masaru Emoto e a equipe Acqualive reunidos em torno de uma mesa de trabalho",
     legenda: "Reuniões de trabalho com a equipe Acqualive",
-    span: "",
+    altura: "h-[300px] md:h-[360px]",
+    fit: "cover",
+    offset: 40,
   },
   {
     src: time.url,
     alt: "Dr. Masaru Emoto posando com integrantes da equipe Acqualive",
     legenda: "O time que recebeu o Dr. Emoto no Brasil",
-    span: "",
+    altura: "h-[300px] md:h-[440px]",
+    fit: "cover",
+    offset: -60,
   },
   {
     src: palco.url,
     alt: "Palco do evento com a exposição das fotografias de cristais de água",
     legenda: "A exposição de cristais no palco",
-    span: "",
+    altura: "h-[300px] md:h-[380px]",
+    fit: "cover",
+    offset: 30,
   },
   {
     src: palestra.url,
     alt: "Apresentação do purificador Acqualive Vittro durante a palestra",
     legenda: "O Vittro apresentado ao público",
-    span: "",
+    altura: "h-[300px] md:h-[400px]",
+    fit: "cover",
+    offset: -30,
   },
   {
     src: equipe.url,
     alt: "Dr. Masaru Emoto e convidados reunidos para foto oficial do evento",
     legenda: "Foto oficial da noite de lançamento",
-    span: "sm:col-span-2",
+    altura: "h-[380px] md:h-[560px]",
+    fit: "contain",
+    offset: 0,
   },
 ];
+
+const FotoEditorial = ({ foto, largo }: { foto: Foto; largo: boolean }) => {
+  const ref = useRef<HTMLElement | null>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [foto.offset, -foto.offset]);
+  const imgY = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.18, 0.85, 1], [0, 1, 1, 0.35]);
+
+  return (
+    <motion.figure
+      ref={ref as React.RefObject<HTMLElement>}
+      style={{ y, opacity }}
+      className={`group relative overflow-hidden rounded-[28px] border border-sacra-veil bg-white shadow-[0_20px_60px_-30px_rgba(15,40,70,0.45)] ${
+        largo ? "md:col-span-7" : "md:col-span-5"
+      }`}
+    >
+      <div className={`relative overflow-hidden ${foto.altura}`}>
+        <motion.img
+          src={foto.src}
+          alt={foto.alt}
+          loading="lazy"
+          style={foto.fit === "cover" ? { y: imgY } : undefined}
+          className={`h-full w-full transition-transform duration-[1200ms] ease-out ${
+            foto.fit === "cover"
+              ? "scale-110 object-cover group-hover:scale-[1.16]"
+              : "bg-sacra-mist/40 object-contain p-4"
+          }`}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-sacra-ink/70 via-transparent to-transparent opacity-70"
+        />
+        <figcaption className="absolute inset-x-0 bottom-0 p-5 font-body text-sm text-white md:text-base">
+          <span className="mb-2 block h-px w-10 bg-sacra-gold transition-all duration-500 group-hover:w-20" />
+          {foto.legenda}
+        </figcaption>
+      </div>
+    </motion.figure>
+  );
+};
+
 
 const HistoriaSidney = () => (
   <>
