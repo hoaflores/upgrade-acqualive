@@ -299,7 +299,7 @@ const MassaruEmotoHistoria = () => {
 
         {/* FAIXA */}
         <section className="relative">
-          <div className="relative h-[300px] w-full overflow-hidden md:h-[420px]">
+          <div className="relative h-[260px] w-full overflow-hidden sm:h-[320px] md:h-[420px]">
             <motion.img
               src={nascenteJapao}
               alt="Nascente de montanha correndo sobre pedras"
@@ -310,9 +310,9 @@ const MassaruEmotoHistoria = () => {
               transition={{ duration: 2, ease: "easeOut" }}
               className="absolute inset-0 h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/75 to-white/10" />
-            <div className="relative mx-auto flex h-full max-w-5xl items-center px-6">
-              <div className="max-w-md space-y-4">
+            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-white/20 md:bg-gradient-to-r md:from-white md:via-white/75 md:to-white/10" />
+            <div className="relative mx-auto flex h-full max-w-5xl items-end px-6 pb-8 md:items-center md:pb-0">
+              <div className="max-w-md space-y-3 md:space-y-4">
                 <Etiqueta>O padrão da natureza</Etiqueta>
                 <h2 className="font-display text-2xl font-bold leading-tight text-sacra-ink md:text-4xl">
                   Água que se move, respira e carrega minerais.
@@ -320,6 +320,7 @@ const MassaruEmotoHistoria = () => {
               </div>
             </div>
           </div>
+
         </section>
 
         {/* 03 */}
