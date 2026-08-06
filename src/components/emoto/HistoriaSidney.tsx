@@ -154,22 +154,27 @@ const GALERIA: Foto[] = [
 
 const FotoEditorial = ({ foto, largo }: { foto: Foto; largo: boolean }) => {
   const ref = useRef<HTMLElement | null>(null);
+  const isMobile = useIsMobile();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], [foto.offset, -foto.offset]);
+  const offset = isMobile ? 0 : foto.offset;
+  const y = useTransform(scrollYProgress, [0, 1], [offset, -offset]);
   const imgY = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.18, 0.85, 1], [0, 1, 1, 0.35]);
+  const opacityDesk = useTransform(scrollYProgress, [0, 0.18, 0.85, 1], [0, 1, 1, 0.35]);
+  const opacityMob = useTransform(scrollYProgress, [0, 0.12, 1], [0, 1, 1]);
+  const opacity = isMobile ? opacityMob : opacityDesk;
 
   return (
     <motion.figure
       ref={ref as React.RefObject<HTMLElement>}
       style={{ y, opacity }}
-      className={`group relative overflow-hidden rounded-[28px] border border-sacra-veil bg-white shadow-[0_20px_60px_-30px_rgba(15,40,70,0.45)] ${
+      className={`group relative overflow-hidden rounded-[24px] border border-sacra-veil bg-white shadow-[0_20px_60px_-30px_rgba(15,40,70,0.45)] md:rounded-[28px] ${
         largo ? "md:col-span-7" : "md:col-span-5"
       }`}
     >
+
       <div className={`relative overflow-hidden ${foto.altura}`}>
         <motion.img
           src={foto.src}
