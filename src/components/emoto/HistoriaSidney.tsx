@@ -210,16 +210,17 @@ const HistoriaSidney = () => (
         >
           <div className="absolute -inset-8 rounded-full bg-sacra-gold/10 blur-3xl" />
           <img
-            src={retrato.url}
-            alt="Dr. Masaru Emoto ao lado da equipe Acqualive durante sua vinda ao Brasil"
+            src={reuniao.url}
+            alt="Sidney Rodrigues e a equipe Acqualive reunidos com o Dr. Masaru Emoto"
             loading="lazy"
-            width={910}
-            height={768}
-            className="relative rounded-3xl border border-white object-cover shadow-xl"
+            width={1600}
+            height={1200}
+            className="relative aspect-[4/3] w-full rounded-3xl border border-white object-cover shadow-xl"
           />
           <p className="relative mt-3 text-center font-body text-xs text-sacra-muted">
-            Dr. Masaru Emoto no Brasil, a convite da Acqualive
+            Sidney Rodrigues e a equipe Acqualive com o Dr. Masaru Emoto, no Brasil
           </p>
+
         </motion.div>
 
         <div className="space-y-6">
