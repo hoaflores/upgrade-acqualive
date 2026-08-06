@@ -262,12 +262,11 @@ const MassaruEmotoHistoria = () => {
 
         {/* 02 */}
         <section className="relative bg-gradient-to-b from-white to-sacra-mist/60 px-6 py-14 md:py-24">
-          <div className="mx-auto max-w-3xl space-y-7 text-center">
+          <div className="mx-auto max-w-3xl space-y-5 text-center">
             <Etiqueta>02 · Quem foi ele</Etiqueta>
             <Titulo>Masaru Emoto olhou para a água como algo vivo.</Titulo>
             <Frase delay={0.05}>
-              Mais de vinte anos congelando gotas e fotografando o que aparecia no
-              microscópio.
+              Mais de vinte anos congelando gotas e fotografando o que aparecia no microscópio.
             </Frase>
             <Frase delay={0.1}>
               Torneira de cidade grande. Represa. Nascente intocada. Imagens completamente
@@ -275,25 +274,6 @@ const MassaruEmotoHistoria = () => {
             </Frase>
           </div>
 
-          <div className="mx-auto mt-10 md:mt-14 grid max-w-4xl gap-4 sm:grid-cols-3">
-            {[
-              { n: "1943", d: "Nasce em Yokohama" },
-              { n: "+20", d: "Anos de pesquisa com a água" },
-              { n: "Emoto Peace", d: "Livro infantil doado a crianças no mundo" },
-            ].map((s, i) => (
-              <motion.div
-                key={s.n}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="rounded-2xl border border-white bg-white/80 p-6 text-center shadow-sm backdrop-blur"
-              >
-                <p className="font-display text-2xl font-bold text-sacra-deep md:text-3xl">{s.n}</p>
-                <p className="mt-2 font-body text-sm text-sacra-muted">{s.d}</p>
-              </motion.div>
-            ))}
-          </div>
 
           <motion.blockquote
             {...rise}
