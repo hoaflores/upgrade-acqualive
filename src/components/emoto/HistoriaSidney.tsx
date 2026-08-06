@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Mail, Phone, Plane, Award } from "lucide-react";
 import retrato from "@/assets/emoto-historia/emoto-retrato.jpg.asset.json";
 import chegada from "@/assets/emoto-historia/emoto-chegada.jpg.asset.json";
