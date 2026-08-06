@@ -8,6 +8,8 @@ import nascenteJapao from "@/assets/emoto/nascente-japao.jpg";
 import crystalLove from "@/assets/emoto/crystal-love.jpg";
 import crystalChaos from "@/assets/emoto/crystal-chaos.jpg";
 import duoAsset from "@/assets/duo/duo-frente-transp.png.asset.json";
+import HistoriaSidney from "@/components/emoto/HistoriaSidney";
+
 
 const WHATSAPP_URL =
   "https://api.whatsapp.com/send?phone=554130777777&text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20da%20hist%C3%B3ria%20Acqualive%20e%20Masaru%20Emoto%20e%20quero%20saber%20mais.";
@@ -456,7 +458,10 @@ const MassaruEmotoHistoria = () => {
           </div>
         </section>
 
+        <HistoriaSidney />
+
         {/* 05 */}
+
         <section className="px-6 py-24 md:py-32">
           <div className="mx-auto max-w-3xl space-y-7 text-center">
             <Etiqueta>05 · O legado</Etiqueta>
