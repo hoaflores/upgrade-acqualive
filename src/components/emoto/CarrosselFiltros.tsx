@@ -46,7 +46,7 @@ const CarrosselFiltros = () => {
     <div className="relative">
       <div className="absolute inset-0 rounded-full bg-sacra-blue/10 blur-3xl" aria-hidden />
 
-      <div className="relative flex h-[340px] items-center justify-center md:h-[420px]">
+      <div className="relative flex h-[260px] items-center justify-center sm:h-[340px] md:h-[420px]">
         <AnimatePresence mode="wait" custom={dir}>
           <motion.img
             key={atual.src}
@@ -58,7 +58,7 @@ const CarrosselFiltros = () => {
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, x: dir * -40, scale: 0.94 }}
             transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-            className="max-h-full w-auto max-w-[80%] object-contain drop-shadow-2xl"
+            className="max-h-full w-auto max-w-[62%] object-contain drop-shadow-2xl sm:max-w-[70%]"
           />
         </AnimatePresence>
 
@@ -66,7 +66,7 @@ const CarrosselFiltros = () => {
           type="button"
           onClick={() => ir(-1)}
           aria-label="Filtro anterior"
-          className="absolute left-0 flex h-10 w-10 items-center justify-center rounded-full border border-sacra-veil bg-white/85 text-sacra-deep shadow-sm backdrop-blur transition hover:scale-105"
+          className="absolute left-0 flex h-11 w-11 items-center justify-center rounded-full border border-sacra-veil bg-white/90 text-sacra-deep shadow-sm backdrop-blur transition hover:scale-105"
         >
           <ChevronLeft className="h-5 w-5" aria-hidden />
         </button>
@@ -74,11 +74,12 @@ const CarrosselFiltros = () => {
           type="button"
           onClick={() => ir(1)}
           aria-label="Próximo filtro"
-          className="absolute right-0 flex h-10 w-10 items-center justify-center rounded-full border border-sacra-veil bg-white/85 text-sacra-deep shadow-sm backdrop-blur transition hover:scale-105"
+          className="absolute right-0 flex h-11 w-11 items-center justify-center rounded-full border border-sacra-veil bg-white/90 text-sacra-deep shadow-sm backdrop-blur transition hover:scale-105"
         >
           <ChevronRight className="h-5 w-5" aria-hidden />
         </button>
       </div>
+
 
       <div className="relative mt-4 min-h-[64px] text-center">
         <AnimatePresence mode="wait">

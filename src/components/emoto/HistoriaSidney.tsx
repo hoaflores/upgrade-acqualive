@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Mail, Phone, Plane, Award } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
+
 import retrato from "@/assets/emoto-historia/emoto-retrato.jpg.asset.json";
 import chegada from "@/assets/emoto-historia/emoto-chegada.jpg.asset.json";
 import banner from "@/assets/emoto-historia/emoto-banner-evento.jpg.asset.json";
@@ -90,7 +92,7 @@ const GALERIA: Foto[] = [
     src: banner.url,
     alt: "Equipe Acqualive e Dr. Masaru Emoto diante dos banners do evento O Poder Curativo da Água",
     legenda: "O Poder Curativo da Água, Rio de Janeiro",
-    altura: "h-[420px] md:h-[560px]",
+    altura: "h-[260px] sm:h-[340px] md:h-[520px]",
     fit: "cover",
     offset: 0,
   },
@@ -98,7 +100,7 @@ const GALERIA: Foto[] = [
     src: plateia.url,
     alt: "Auditório lotado durante a palestra do Dr. Masaru Emoto no Rio de Janeiro",
     legenda: "Mais de 1200 pessoas no Clube Monte Líbano",
-    altura: "h-[300px] md:h-[380px]",
+    altura: "h-[220px] sm:h-[280px] md:h-[380px]",
     fit: "cover",
     offset: 60,
   },
@@ -106,15 +108,15 @@ const GALERIA: Foto[] = [
     src: chegada.url,
     alt: "Dr. Masaru Emoto caminhando acompanhado pela equipe no dia do evento",
     legenda: "A chegada do Dr. Emoto ao evento",
-    altura: "h-[300px] md:h-[420px]",
+    altura: "h-[220px] sm:h-[280px] md:h-[420px]",
     fit: "cover",
     offset: -40,
   },
   {
-    src: reuniao.url,
-    alt: "Dr. Masaru Emoto e a equipe Acqualive reunidos em torno de uma mesa de trabalho",
-    legenda: "Reuniões de trabalho com a equipe Acqualive",
-    altura: "h-[300px] md:h-[360px]",
+    src: retrato.url,
+    alt: "Dr. Masaru Emoto ao lado de integrante da equipe Acqualive",
+    legenda: "O Dr. Emoto recebido pela Acqualive",
+    altura: "h-[220px] sm:h-[280px] md:h-[360px]",
     fit: "cover",
     offset: 40,
   },
@@ -122,7 +124,7 @@ const GALERIA: Foto[] = [
     src: time.url,
     alt: "Dr. Masaru Emoto posando com integrantes da equipe Acqualive",
     legenda: "O time que recebeu o Dr. Emoto no Brasil",
-    altura: "h-[300px] md:h-[440px]",
+    altura: "h-[220px] sm:h-[280px] md:h-[440px]",
     fit: "cover",
     offset: -60,
   },
@@ -130,7 +132,7 @@ const GALERIA: Foto[] = [
     src: palco.url,
     alt: "Palco do evento com a exposição das fotografias de cristais de água",
     legenda: "A exposição de cristais no palco",
-    altura: "h-[300px] md:h-[380px]",
+    altura: "h-[220px] sm:h-[280px] md:h-[380px]",
     fit: "cover",
     offset: 30,
   },
@@ -138,7 +140,7 @@ const GALERIA: Foto[] = [
     src: palestra.url,
     alt: "Apresentação do purificador Acqualive Vittro durante a palestra",
     legenda: "O Vittro apresentado ao público",
-    altura: "h-[300px] md:h-[400px]",
+    altura: "h-[220px] sm:h-[280px] md:h-[400px]",
     fit: "cover",
     offset: -30,
   },
@@ -146,7 +148,7 @@ const GALERIA: Foto[] = [
     src: equipe.url,
     alt: "Dr. Masaru Emoto e convidados reunidos para foto oficial do evento",
     legenda: "Foto oficial da noite de lançamento",
-    altura: "h-[380px] md:h-[560px]",
+    altura: "h-[260px] sm:h-[340px] md:h-[520px]",
     fit: "contain",
     offset: 0,
   },
@@ -154,22 +156,27 @@ const GALERIA: Foto[] = [
 
 const FotoEditorial = ({ foto, largo }: { foto: Foto; largo: boolean }) => {
   const ref = useRef<HTMLElement | null>(null);
+  const isMobile = useIsMobile();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], [foto.offset, -foto.offset]);
+  const offset = isMobile ? 0 : foto.offset;
+  const y = useTransform(scrollYProgress, [0, 1], [offset, -offset]);
   const imgY = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.18, 0.85, 1], [0, 1, 1, 0.35]);
+  const opacityDesk = useTransform(scrollYProgress, [0, 0.18, 0.85, 1], [0, 1, 1, 0.35]);
+  const opacityMob = useTransform(scrollYProgress, [0, 0.12, 1], [0, 1, 1]);
+  const opacity = isMobile ? opacityMob : opacityDesk;
 
   return (
     <motion.figure
       ref={ref as React.RefObject<HTMLElement>}
       style={{ y, opacity }}
-      className={`group relative overflow-hidden rounded-[28px] border border-sacra-veil bg-white shadow-[0_20px_60px_-30px_rgba(15,40,70,0.45)] ${
+      className={`group relative overflow-hidden rounded-[24px] border border-sacra-veil bg-white shadow-[0_20px_60px_-30px_rgba(15,40,70,0.45)] md:rounded-[28px] ${
         largo ? "md:col-span-7" : "md:col-span-5"
       }`}
     >
+
       <div className={`relative overflow-hidden ${foto.altura}`}>
         <motion.img
           src={foto.src}
@@ -199,8 +206,8 @@ const FotoEditorial = ({ foto, largo }: { foto: Foto; largo: boolean }) => {
 const HistoriaSidney = () => (
   <>
     {/* SIDNEY */}
-    <section id="sidney-rodrigues" className="px-6 py-24 md:py-32">
-      <div className="mx-auto grid max-w-5xl items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
+    <section id="sidney-rodrigues" className="px-6 py-14 md:py-24">
+      <div className="mx-auto grid max-w-5xl items-center gap-10 md:gap-14 lg:grid-cols-[0.9fr_1.1fr]">
         <motion.div
           initial={{ opacity: 0, scale: 0.94 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -210,19 +217,20 @@ const HistoriaSidney = () => (
         >
           <div className="absolute -inset-8 rounded-full bg-sacra-gold/10 blur-3xl" />
           <img
-            src={retrato.url}
-            alt="Dr. Masaru Emoto ao lado da equipe Acqualive durante sua vinda ao Brasil"
+            src={reuniao.url}
+            alt="Sidney Rodrigues e a equipe Acqualive reunidos com o Dr. Masaru Emoto"
             loading="lazy"
-            width={910}
-            height={768}
-            className="relative rounded-3xl border border-white object-cover shadow-xl"
+            width={1600}
+            height={1200}
+            className="relative aspect-[4/3] w-full rounded-3xl border border-white object-cover shadow-xl"
           />
           <p className="relative mt-3 text-center font-body text-xs text-sacra-muted">
-            Dr. Masaru Emoto no Brasil, a convite da Acqualive
+            Sidney Rodrigues e a equipe Acqualive com o Dr. Masaru Emoto, no Brasil
           </p>
+
         </motion.div>
 
-        <div className="space-y-7">
+        <div className="space-y-6">
           <Etiqueta>04B · Sidney Rodrigues</Etiqueta>
           <Titulo>Quem trouxe o Dr. Emoto para o Brasil.</Titulo>
           <Frase delay={0.05}>
@@ -251,7 +259,7 @@ const HistoriaSidney = () => (
     </section>
 
     {/* PASSOS */}
-    <section className="bg-gradient-to-b from-white to-sacra-mist/50 px-6 pb-24 pt-4 md:pb-32">
+    <section className="bg-gradient-to-b from-white to-sacra-mist/50 px-6 pb-14 pt-2 md:pb-24">
       <div className="mx-auto max-w-5xl">
         <div className="grid gap-4 sm:grid-cols-2">
           {PASSOS.map((p, i) => (
@@ -278,7 +286,7 @@ const HistoriaSidney = () => (
     </section>
 
     {/* GALERIA */}
-    <section className="px-6 py-24 md:py-32">
+    <section className="px-6 py-14 md:py-24">
       <div className="mx-auto max-w-5xl">
         <div className="mx-auto max-w-3xl space-y-6 text-center">
           <Etiqueta>2010 e 2014 · Os encontros</Etiqueta>
@@ -299,7 +307,7 @@ const HistoriaSidney = () => (
     </section>
 
     {/* VITTRO E CRISTAL */}
-    <section className="bg-gradient-to-b from-sacra-mist/60 to-white px-6 py-24 md:py-32">
+    <section className="bg-gradient-to-b from-sacra-mist/60 to-white px-6 py-14 md:py-24">
       <div className="mx-auto max-w-5xl">
         <div className="mx-auto max-w-3xl space-y-6 text-center">
           <Etiqueta>2014 · O Vittro</Etiqueta>
@@ -310,7 +318,7 @@ const HistoriaSidney = () => (
           </Frase>
         </div>
 
-        <div className="mt-14 grid items-center gap-8 md:grid-cols-2">
+        <div className="mt-10 md:mt-14 grid items-center gap-8 md:grid-cols-2">
           <motion.figure
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
