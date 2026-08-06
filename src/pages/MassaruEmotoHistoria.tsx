@@ -692,12 +692,11 @@ const MassaruEmotoHistoria = () => {
 
                 <motion.div {...rise} className="pt-4">
                   <a
-                    href={WHATSAPP_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="https://www.acqualive.com.br/collections/all"
+                    target="_top"
                     className="inline-block w-full rounded-2xl bg-gradient-to-r from-sacra-blue to-sacra-gold px-8 py-4 text-center font-display text-base font-semibold text-white shadow-2xl transition-transform duration-300 hover:scale-[1.02] md:text-lg"
                   >
-                    QUERO CONHECER O ACQUALIVE DUO
+                    QUERO CONHECER OS FILTROS ACQUALIVE
                   </a>
                   <p className="mt-4 text-center font-body text-xs text-sacra-muted">
                     Em até 10x sem juros e frete grátis. Consulte regiões disponíveis.
