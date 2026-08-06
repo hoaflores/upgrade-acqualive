@@ -212,7 +212,7 @@ const HistoriaSidney = () => (
       <div className="mx-auto max-w-5xl">
         <div className="mx-auto max-w-3xl space-y-6 text-center">
           <Etiqueta>2010 e 2014 · Os encontros</Etiqueta>
-          <Titulo>Não foi teoria. Foi presença.</Titulo>
+          <Titulo>A presença que validou a teoria!</Titulo>
           <Frase delay={0.05}>
             Registros das duas vindas do Dr. Emoto ao Brasil, das reuniões com a equipe Acqualive
             e das plateias que lotaram os encontros sobre a água.
