@@ -368,14 +368,13 @@ const MassaruEmotoHistoria = () => {
             <Etiqueta>A água que a natureza faz</Etiqueta>
             <Titulo>Por que a água de nascente é diferente.</Titulo>
             <Frase delay={0.05}>
-              Ela desce devagar por camadas de pedra e areia. Filtra sozinha.
+              Ela desce devagar por camadas de pedra e areia, filtra sozinha e dissolve
+              minerais no caminho. Ganha sabor, leveza e um pH levemente alcalino.
             </Frase>
             <Frase delay={0.1}>
-              No caminho, dissolve minerais. Ganha sabor, leveza e um pH levemente alcalino.
+              E nunca fica parada. Água viva é água em movimento.
             </Frase>
-            <Frase delay={0.15}>
-              Depois se movimenta. Nunca fica parada em um cano ou em uma caixa fechada.
-            </Frase>
+
           </div>
 
           <div className="mx-auto mt-10 md:mt-14 grid max-w-5xl gap-4 md:grid-cols-3">
