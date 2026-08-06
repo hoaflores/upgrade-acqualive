@@ -665,16 +665,10 @@ const MassaruEmotoHistoria = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1 }}
-                className="relative"
               >
-                <div className="absolute inset-0 rounded-full bg-sacra-blue/10 blur-3xl" />
-                <img
-                  src={duoAsset.url}
-                  alt="Purificador de água alcalina Acqualive DUO"
-                  loading="lazy"
-                  className="relative mx-auto w-full max-w-sm drop-shadow-2xl"
-                />
+                <CarrosselFiltros />
               </motion.div>
+
 
               <div className="space-y-5">
                 {[
