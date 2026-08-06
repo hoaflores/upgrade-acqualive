@@ -333,7 +333,7 @@ const MassaruEmotoHistoria = () => {
             </Frase>
           </div>
 
-          <div className="mx-auto mt-10 md:mt-14 grid max-w-5xl gap-4 md:grid-cols-3">
+          <div className="mx-auto mt-10 grid md:mt-14 max-w-5xl gap-4 md:grid-cols-3">
             {[
               { t: "Memória", d: "A água registra o ambiente e responde a ele." },
               { t: "Palavra", d: "Música, palavras e intenção nos experimentos." },
@@ -356,7 +356,7 @@ const MassaruEmotoHistoria = () => {
 
           <motion.p
             {...rise}
-            className="mx-auto mt-10 md:mt-14 max-w-2xl text-center font-display text-xl font-semibold text-sacra-ink md:text-2xl"
+            className="mx-auto mt-10 max-w-2xl text-center font-display text-xl font-semibold text-sacra-ink md:text-2xl"
           >
             Aprendemos a tirar a sujeira visível. Ele lembrou de cuidar do que não se vê.
           </motion.p>
@@ -377,7 +377,7 @@ const MassaruEmotoHistoria = () => {
 
           </div>
 
-          <div className="mx-auto mt-10 md:mt-14 grid max-w-5xl gap-4 md:grid-cols-3">
+          <div className="mx-auto mt-10 grid md:mt-14 max-w-5xl gap-4 md:grid-cols-3">
             {[
               {
                 t: "Nascente",
@@ -411,7 +411,7 @@ const MassaruEmotoHistoria = () => {
 
           <motion.p
             {...rise}
-            className="mx-auto mt-10 md:mt-14 max-w-2xl text-center font-body text-base leading-relaxed text-sacra-muted"
+            className="mx-auto mt-10 max-w-2xl text-center font-body text-base leading-relaxed text-sacra-muted"
           >
             Emoto fotografou essa diferença. O que ele viu no microscópio, a gente sente no
             gosto.
@@ -469,7 +469,7 @@ const MassaruEmotoHistoria = () => {
             </Frase>
           </div>
 
-          <div className="mx-auto mt-10 md:mt-14 grid max-w-4xl gap-4 sm:grid-cols-2">
+          <div className="mx-auto mt-10 grid md:mt-14 max-w-4xl gap-4 sm:grid-cols-2">
             {[
               { t: "Filtração em estágios", d: "Retém contaminantes, preserva minerais." },
               { t: "Reposição mineral", d: "Magnésio, cálcio e potássio equilibrados." },
@@ -493,12 +493,6 @@ const MassaruEmotoHistoria = () => {
             ))}
           </div>
 
-          <motion.p
-            {...rise}
-            className="mx-auto mt-10 md:mt-14 max-w-xl text-center font-display text-xl font-semibold text-sacra-ink md:text-2xl"
-          >
-            Setenta por cento de você é água. Essa é a ponte entre a ciência e o cuidado.
-          </motion.p>
         </section>
 
         {/* 05B · QUALIDADE */}
@@ -514,7 +508,7 @@ const MassaruEmotoHistoria = () => {
             </Frase>
           </div>
 
-          <div className="mx-auto mt-10 md:mt-14 max-w-4xl space-y-4">
+          <div className="mx-auto mt-10 max-w-4xl space-y-4">
             {[
               {
                 t: "Cloro",
@@ -574,7 +568,7 @@ const MassaruEmotoHistoria = () => {
             </Frase>
           </div>
 
-          <div className="mx-auto mt-10 md:mt-14 grid max-w-4xl gap-4 sm:grid-cols-3">
+          <div className="mx-auto mt-10 grid max-w-4xl grid-cols-3 gap-3 md:mt-14 md:gap-4">
             {[
               { n: "73%", d: "do cérebro é água" },
               { n: "83%", d: "do sangue é água" },
@@ -588,7 +582,7 @@ const MassaruEmotoHistoria = () => {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="rounded-2xl border border-white bg-white/85 p-6 text-center shadow-sm backdrop-blur"
               >
-                <p className="font-display text-3xl font-bold text-sacra-deep">{s.n}</p>
+                <p className="font-display text-2xl font-bold text-sacra-deep md:text-3xl">{s.n}</p>
                 <p className="mt-2 font-body text-sm text-sacra-muted">{s.d}</p>
               </motion.div>
             ))}
@@ -634,7 +628,7 @@ const MassaruEmotoHistoria = () => {
 
           <motion.p
             {...rise}
-            className="mx-auto mt-10 md:mt-14 max-w-2xl text-center font-display text-xl font-semibold text-sacra-ink md:text-2xl"
+            className="mx-auto mt-10 max-w-2xl text-center font-display text-xl font-semibold text-sacra-ink md:text-2xl"
           >
             A água que você repete todos os dias é a que constrói você.
           </motion.p>
@@ -704,7 +698,7 @@ const MassaruEmotoHistoria = () => {
 
             <motion.p
               {...rise}
-              className="mx-auto mt-20 max-w-xl text-center font-display text-2xl italic leading-relaxed text-sacra-ink md:text-3xl"
+              className="mx-auto mt-12 max-w-xl md:mt-16 text-center font-display text-2xl italic leading-relaxed text-sacra-ink md:text-3xl"
             >
               Beba a vida em sua forma mais completa.
             </motion.p>
