@@ -447,19 +447,10 @@ const MassaruEmotoHistoria = () => {
                 Não para vender filtros. Para continuar uma pesquisa.
               </Frase>
               <Frase delay={0.1}>
-                Apresentamos nossa tecnologia ao instituto de Masaru Emoto e mostramos o que
-                havíamos desenvolvido no Brasil.
+                Levamos nossa tecnologia ao instituto de Masaru Emoto e mostramos o que
+                havíamos desenvolvido no Brasil. Ele aceitou olhar.
               </Frase>
-              <motion.div
-                {...rise}
-                transition={{ ...rise.transition, delay: 0.15 }}
-                className="rounded-2xl border-l-2 border-sacra-gold bg-white p-6 shadow-sm"
-              >
-                <p className="font-body text-base leading-relaxed text-sacra-ink">
-                  Daí nasceu o Acqualive Vittro, em vidro e barro, com as palavras amor e
-                  gratidão gravadas em baixo relevo no filtro.
-                </p>
-              </motion.div>
+
             </div>
           </div>
         </section>
