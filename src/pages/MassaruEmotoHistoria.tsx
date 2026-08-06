@@ -277,7 +277,7 @@ const MassaruEmotoHistoria = () => {
 
           <motion.blockquote
             {...rise}
-            className="mx-auto mt-10 md:mt-14 max-w-3xl rounded-3xl bg-white p-8 text-center shadow-lg md:p-12"
+            className="mx-auto mt-10 max-w-3xl rounded-3xl bg-white p-6 text-center shadow-lg md:mt-14 md:p-12"
           >
             <p className="font-display text-xl italic leading-relaxed text-sacra-ink md:text-3xl">
               "Tudo o que está em sintonia com a natureza se manifesta como um belo cristal
