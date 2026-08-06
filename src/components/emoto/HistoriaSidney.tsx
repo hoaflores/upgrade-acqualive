@@ -288,30 +288,12 @@ const HistoriaSidney = () => (
           </Frase>
         </div>
 
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-6 md:grid-cols-12 md:gap-8">
           {GALERIA.map((g, i) => (
-            <motion.figure
-              key={g.src}
-              initial={{ opacity: 0, y: 26 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.7, delay: (i % 3) * 0.08 }}
-              className={`group overflow-hidden rounded-3xl border border-sacra-veil bg-white shadow-sm ${g.span}`}
-            >
-              <div className="overflow-hidden">
-                <img
-                  src={g.src}
-                  alt={g.alt}
-                  loading="lazy"
-                  className="h-56 w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:h-64"
-                />
-              </div>
-              <figcaption className="px-5 py-4 font-body text-sm text-sacra-muted">
-                {g.legenda}
-              </figcaption>
-            </motion.figure>
+            <FotoEditorial key={g.src} foto={g} largo={i % 2 === 0} />
           ))}
         </div>
+
       </div>
     </section>
 
