@@ -150,9 +150,9 @@ const MassaruEmotoHistoria = () => {
         </section>
 
         {/* 01 */}
-        <section id="capitulo-1" className="relative px-6 py-24 md:py-32">
+        <section id="capitulo-1" className="relative px-6 py-14 md:py-24">
           <div className="mx-auto max-w-5xl">
-            <div className="grid items-center gap-14 lg:grid-cols-2">
+            <div className="grid items-center gap-10 md:gap-14 lg:grid-cols-2">
               <div className="space-y-7">
                 <Etiqueta>01 · Tóquio, anos 90</Etiqueta>
                 <Titulo>Duas gotas da mesma fonte.</Titulo>
@@ -192,7 +192,7 @@ const MassaruEmotoHistoria = () => {
         </section>
 
         {/* COMPARATIVO */}
-        <section className="px-6 pb-24">
+        <section className="px-6 pb-14 md:pb-20">
           <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
             {[
               {
@@ -235,7 +235,7 @@ const MassaruEmotoHistoria = () => {
         </section>
 
         {/* 02 */}
-        <section className="relative bg-gradient-to-b from-white to-sacra-mist/60 px-6 py-24 md:py-32">
+        <section className="relative bg-gradient-to-b from-white to-sacra-mist/60 px-6 py-14 md:py-24">
           <div className="mx-auto max-w-3xl space-y-7 text-center">
             <Etiqueta>02 · Quem foi ele</Etiqueta>
             <Titulo>Masaru Emoto olhou para a água como algo vivo.</Titulo>
@@ -249,7 +249,7 @@ const MassaruEmotoHistoria = () => {
             </Frase>
           </div>
 
-          <div className="mx-auto mt-14 grid max-w-4xl gap-4 sm:grid-cols-3">
+          <div className="mx-auto mt-10 md:mt-14 grid max-w-4xl gap-4 sm:grid-cols-3">
             {[
               { n: "1943", d: "Nasce em Yokohama" },
               { n: "+20", d: "Anos de pesquisa com a água" },
@@ -271,7 +271,7 @@ const MassaruEmotoHistoria = () => {
 
           <motion.blockquote
             {...rise}
-            className="mx-auto mt-14 max-w-3xl rounded-3xl bg-white p-8 text-center shadow-lg md:p-12"
+            className="mx-auto mt-10 md:mt-14 max-w-3xl rounded-3xl bg-white p-8 text-center shadow-lg md:p-12"
           >
             <p className="font-display text-xl italic leading-relaxed text-sacra-ink md:text-3xl">
               "Tudo o que está em sintonia com a natureza se manifesta como um belo cristal
@@ -317,7 +317,7 @@ const MassaruEmotoHistoria = () => {
         </section>
 
         {/* 03 */}
-        <section className="px-6 py-24 md:py-32">
+        <section className="px-6 py-14 md:py-24">
           <div className="mx-auto max-w-3xl space-y-7 text-center">
             <Etiqueta>03 · A virada</Etiqueta>
             <Titulo>Ele acrescentou uma pergunta nova.</Titulo>
@@ -326,7 +326,7 @@ const MassaruEmotoHistoria = () => {
             </Frase>
           </div>
 
-          <div className="mx-auto mt-14 grid max-w-5xl gap-4 md:grid-cols-3">
+          <div className="mx-auto mt-10 md:mt-14 grid max-w-5xl gap-4 md:grid-cols-3">
             {[
               { t: "Memória", d: "A água registra o ambiente e responde a ele." },
               { t: "Palavra", d: "Música, palavras e intenção nos experimentos." },
@@ -349,14 +349,14 @@ const MassaruEmotoHistoria = () => {
 
           <motion.p
             {...rise}
-            className="mx-auto mt-14 max-w-2xl text-center font-display text-xl font-semibold text-sacra-ink md:text-2xl"
+            className="mx-auto mt-10 md:mt-14 max-w-2xl text-center font-display text-xl font-semibold text-sacra-ink md:text-2xl"
           >
             Aprendemos a tirar a sujeira visível. Ele lembrou de cuidar do que não se vê.
           </motion.p>
         </section>
 
         {/* 03B · A ÁGUA DA NASCENTE */}
-        <section className="bg-gradient-to-b from-white to-sacra-mist/50 px-6 py-24 md:py-32">
+        <section className="bg-gradient-to-b from-white to-sacra-mist/50 px-6 py-14 md:py-24">
           <div className="mx-auto max-w-3xl space-y-7 text-center">
             <Etiqueta>A água que a natureza faz</Etiqueta>
             <Titulo>Por que a água de nascente é diferente.</Titulo>
@@ -371,7 +371,7 @@ const MassaruEmotoHistoria = () => {
             </Frase>
           </div>
 
-          <div className="mx-auto mt-14 grid max-w-5xl gap-4 md:grid-cols-3">
+          <div className="mx-auto mt-10 md:mt-14 grid max-w-5xl gap-4 md:grid-cols-3">
             {[
               {
                 t: "Nascente",
@@ -405,7 +405,7 @@ const MassaruEmotoHistoria = () => {
 
           <motion.p
             {...rise}
-            className="mx-auto mt-14 max-w-2xl text-center font-body text-base leading-relaxed text-sacra-muted"
+            className="mx-auto mt-10 md:mt-14 max-w-2xl text-center font-body text-base leading-relaxed text-sacra-muted"
           >
             Emoto fotografou essa diferença. O que ele viu no microscópio, a gente sente no
             gosto.
@@ -414,8 +414,8 @@ const MassaruEmotoHistoria = () => {
 
 
         {/* 04 */}
-        <section className="bg-gradient-to-b from-sacra-mist/60 to-white px-6 py-24 md:py-32">
-          <div className="mx-auto grid max-w-5xl items-center gap-14 lg:grid-cols-2">
+        <section className="bg-gradient-to-b from-sacra-mist/60 to-white px-6 py-14 md:py-24">
+          <div className="mx-auto grid max-w-5xl items-center gap-10 md:gap-14 lg:grid-cols-2">
             <motion.div
               initial={{ opacity: 0, scale: 0.94 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -462,7 +462,7 @@ const MassaruEmotoHistoria = () => {
 
         {/* 05 */}
 
-        <section className="px-6 py-24 md:py-32">
+        <section className="px-6 py-14 md:py-24">
           <div className="mx-auto max-w-3xl space-y-7 text-center">
             <Etiqueta>05 · O legado</Etiqueta>
             <Titulo>Ele deixou uma pergunta. Respondemos com engenharia.</Titulo>
@@ -472,7 +472,7 @@ const MassaruEmotoHistoria = () => {
             </Frase>
           </div>
 
-          <div className="mx-auto mt-14 grid max-w-4xl gap-4 sm:grid-cols-2">
+          <div className="mx-auto mt-10 md:mt-14 grid max-w-4xl gap-4 sm:grid-cols-2">
             {[
               { t: "Filtração em estágios", d: "Retém contaminantes, preserva minerais." },
               { t: "Reposição mineral", d: "Magnésio, cálcio e potássio equilibrados." },
@@ -498,14 +498,14 @@ const MassaruEmotoHistoria = () => {
 
           <motion.p
             {...rise}
-            className="mx-auto mt-14 max-w-xl text-center font-display text-xl font-semibold text-sacra-ink md:text-2xl"
+            className="mx-auto mt-10 md:mt-14 max-w-xl text-center font-display text-xl font-semibold text-sacra-ink md:text-2xl"
           >
             Setenta por cento de você é água. Essa é a ponte entre a ciência e o cuidado.
           </motion.p>
         </section>
 
         {/* 05B · QUALIDADE */}
-        <section className="bg-gradient-to-b from-white to-sacra-mist/50 px-6 py-24 md:py-32">
+        <section className="bg-gradient-to-b from-white to-sacra-mist/50 px-6 py-14 md:py-24">
           <div className="mx-auto max-w-3xl space-y-7 text-center">
             <Etiqueta>Qualidade · O que existe dentro do copo</Etiqueta>
             <Titulo>Água potável e água boa não são a mesma coisa.</Titulo>
@@ -517,7 +517,7 @@ const MassaruEmotoHistoria = () => {
             </Frase>
           </div>
 
-          <div className="mx-auto mt-14 max-w-4xl space-y-4">
+          <div className="mx-auto mt-10 md:mt-14 max-w-4xl space-y-4">
             {[
               {
                 t: "Cloro",
@@ -564,7 +564,7 @@ const MassaruEmotoHistoria = () => {
         </section>
 
         {/* 05C · SAÚDE */}
-        <section className="px-6 py-24 md:py-32">
+        <section className="px-6 py-14 md:py-24">
           <div className="mx-auto max-w-3xl space-y-7 text-center">
             <Etiqueta>Saúde e bem-estar · O corpo em água</Etiqueta>
             <Titulo>Você não bebe água. Você se reconstrói com ela.</Titulo>
@@ -577,7 +577,7 @@ const MassaruEmotoHistoria = () => {
             </Frase>
           </div>
 
-          <div className="mx-auto mt-14 grid max-w-4xl gap-4 sm:grid-cols-3">
+          <div className="mx-auto mt-10 md:mt-14 grid max-w-4xl gap-4 sm:grid-cols-3">
             {[
               { n: "73%", d: "do cérebro é água" },
               { n: "83%", d: "do sangue é água" },
@@ -637,7 +637,7 @@ const MassaruEmotoHistoria = () => {
 
           <motion.p
             {...rise}
-            className="mx-auto mt-14 max-w-2xl text-center font-display text-xl font-semibold text-sacra-ink md:text-2xl"
+            className="mx-auto mt-10 md:mt-14 max-w-2xl text-center font-display text-xl font-semibold text-sacra-ink md:text-2xl"
           >
             A água que você repete todos os dias é a que constrói você.
           </motion.p>
@@ -645,7 +645,7 @@ const MassaruEmotoHistoria = () => {
 
         {/* 06 CTA */}
 
-        <section className="relative overflow-hidden bg-gradient-to-b from-white via-sacra-mist/70 to-white px-6 py-24 md:py-32">
+        <section className="relative overflow-hidden bg-gradient-to-b from-white via-sacra-mist/70 to-white px-6 py-14 md:py-24">
           <div
             aria-hidden
             className="absolute left-1/2 top-10 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-white blur-3xl"

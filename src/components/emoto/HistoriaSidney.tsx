@@ -199,8 +199,8 @@ const FotoEditorial = ({ foto, largo }: { foto: Foto; largo: boolean }) => {
 const HistoriaSidney = () => (
   <>
     {/* SIDNEY */}
-    <section id="sidney-rodrigues" className="px-6 py-24 md:py-32">
-      <div className="mx-auto grid max-w-5xl items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
+    <section id="sidney-rodrigues" className="px-6 py-14 md:py-24">
+      <div className="mx-auto grid max-w-5xl items-center gap-10 md:gap-14 lg:grid-cols-[0.9fr_1.1fr]">
         <motion.div
           initial={{ opacity: 0, scale: 0.94 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -251,7 +251,7 @@ const HistoriaSidney = () => (
     </section>
 
     {/* PASSOS */}
-    <section className="bg-gradient-to-b from-white to-sacra-mist/50 px-6 pb-24 pt-4 md:pb-32">
+    <section className="bg-gradient-to-b from-white to-sacra-mist/50 px-6 pb-14 pt-2 md:pb-24">
       <div className="mx-auto max-w-5xl">
         <div className="grid gap-4 sm:grid-cols-2">
           {PASSOS.map((p, i) => (
@@ -278,7 +278,7 @@ const HistoriaSidney = () => (
     </section>
 
     {/* GALERIA */}
-    <section className="px-6 py-24 md:py-32">
+    <section className="px-6 py-14 md:py-24">
       <div className="mx-auto max-w-5xl">
         <div className="mx-auto max-w-3xl space-y-6 text-center">
           <Etiqueta>2010 e 2014 · Os encontros</Etiqueta>
@@ -299,7 +299,7 @@ const HistoriaSidney = () => (
     </section>
 
     {/* VITTRO E CRISTAL */}
-    <section className="bg-gradient-to-b from-sacra-mist/60 to-white px-6 py-24 md:py-32">
+    <section className="bg-gradient-to-b from-sacra-mist/60 to-white px-6 py-14 md:py-24">
       <div className="mx-auto max-w-5xl">
         <div className="mx-auto max-w-3xl space-y-6 text-center">
           <Etiqueta>2014 · O Vittro</Etiqueta>
@@ -310,7 +310,7 @@ const HistoriaSidney = () => (
           </Frase>
         </div>
 
-        <div className="mt-14 grid items-center gap-8 md:grid-cols-2">
+        <div className="mt-10 md:mt-14 grid items-center gap-8 md:grid-cols-2">
           <motion.figure
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
