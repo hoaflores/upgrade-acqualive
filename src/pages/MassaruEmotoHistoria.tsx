@@ -73,7 +73,7 @@ const MassaruEmotoHistoria = () => {
 
       <article className="min-h-screen overflow-x-hidden bg-sacra-bg">
         {/* HERO */}
-        <section className="relative flex min-h-[92vh] flex-col items-center justify-center overflow-hidden">
+        <section className="relative flex min-h-[86svh] flex-col justify-center overflow-hidden pb-12 pt-24 md:min-h-[92vh] md:pb-16">
           <motion.div
             className="absolute inset-0 z-0"
             initial={{ scale: 1.12, opacity: 0 }}
@@ -96,143 +96,169 @@ const MassaruEmotoHistoria = () => {
             initial={{ opacity: 0, scale: 0.7 }}
             animate={{ opacity: 0.7, scale: 1 }}
             transition={{ duration: 3, ease: "easeOut" }}
-            className="absolute left-1/2 top-1/3 z-0 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white blur-3xl"
+            className="absolute left-1/2 top-1/3 z-0 h-[320px] w-[320px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white blur-3xl md:h-[520px] md:w-[520px]"
           />
 
-          <div className="relative z-10 mx-auto max-w-3xl px-6 text-center">
-            <motion.span
-              initial={{ opacity: 0, y: -14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="mb-7 block font-body text-[11px] font-semibold uppercase tracking-[0.3em] text-sacra-deep md:text-xs"
-            >
-              A história da água viva
-            </motion.span>
+          <div className="relative z-10 mx-auto grid w-full max-w-5xl items-center gap-10 px-6 lg:grid-cols-[1.05fr_0.95fr]">
+            <div className="text-center lg:text-left">
+              <motion.span
+                initial={{ opacity: 0, y: -14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.8 }}
+                className="mb-4 block font-body text-[10px] font-semibold uppercase tracking-[0.28em] text-sacra-deep md:text-xs"
+              >
+                A história da água viva
+              </motion.span>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 26 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 1 }}
-              className="mb-6 font-display text-4xl font-bold leading-[1.08] text-sacra-ink md:text-6xl lg:text-7xl"
-            >
-              A água escuta.
-              <br />
-              <span className="bg-gradient-to-r from-sacra-blue via-sacra-deep to-sacra-gold bg-clip-text text-transparent">
-                Alguém precisava olhar.
-              </span>
-            </motion.h1>
+              <motion.h1
+                initial={{ opacity: 0, y: 26 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 1 }}
+                className="mb-4 font-display text-[2.1rem] font-bold leading-[1.06] text-sacra-ink sm:text-5xl lg:text-6xl"
+              >
+                A água escuta.
+                <br />
+                <span className="bg-gradient-to-r from-sacra-blue via-sacra-deep to-sacra-gold bg-clip-text text-transparent">
+                  Alguém precisava olhar.
+                </span>
+              </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.1, duration: 1 }}
-              className="mx-auto mb-10 max-w-xl font-body text-base leading-relaxed text-sacra-muted md:text-lg"
-            >
-              De um microscópio em Tóquio até a sua cozinha.
-            </motion.p>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8, duration: 1 }}
+                className="mx-auto mb-6 max-w-md font-body text-base leading-relaxed text-sacra-muted lg:mx-0 md:text-lg"
+              >
+                De um microscópio em Tóquio até a sua cozinha: a pesquisa de Masaru Emoto e o
+                filtro que nasceu dela.
+              </motion.p>
 
-            <motion.button
-              onClick={scrollToStory}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1, y: [0, 9, 0] }}
-              transition={{
-                opacity: { delay: 1.3, duration: 0.5 },
-                y: { delay: 1.7, duration: 1.8, repeat: Infinity },
-              }}
-              className="mx-auto flex flex-col items-center gap-2 text-sacra-deep transition-colors hover:text-sacra-gold"
+              <motion.div
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1, duration: 0.8 }}
+                className="flex flex-col items-stretch gap-3 sm:flex-row sm:justify-center lg:justify-start"
+              >
+                <button
+                  onClick={scrollToStory}
+                  className="rounded-2xl bg-gradient-to-r from-sacra-blue to-sacra-gold px-6 py-3.5 font-display text-sm font-semibold text-white shadow-xl transition-transform hover:scale-[1.02] md:text-base"
+                >
+                  COMEÇAR A HISTÓRIA
+                </button>
+                <a
+                  href="https://www.acqualive.com.br/collections/all"
+                  target="_top"
+                  className="rounded-2xl border border-sacra-blue/30 bg-white/70 px-6 py-3.5 text-center font-display text-sm font-semibold text-sacra-deep backdrop-blur transition-colors hover:bg-white md:text-base"
+                >
+                  Ver os filtros Acqualive
+                </a>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2, duration: 0.8 }}
+                className="mt-7 grid grid-cols-3 gap-3 text-center lg:text-left"
+              >
+                {[
+                  { n: "1943", d: "Yokohama, Japão" },
+                  { n: "+20", d: "anos de pesquisa" },
+                  { n: "2010", d: "Dr. Emoto no Brasil" },
+                ].map((s) => (
+                  <div key={s.n}>
+                    <p className="font-display text-lg font-bold text-sacra-deep md:text-2xl">
+                      {s.n}
+                    </p>
+                    <p className="font-body text-[11px] leading-snug text-sacra-muted md:text-xs">
+                      {s.d}
+                    </p>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.94 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.6, duration: 1.2 }}
+              className="relative"
             >
-              <span className="font-body text-[11px] font-semibold uppercase tracking-[0.22em]">
-                Comece pelo começo
-              </span>
-              <ChevronDown className="h-5 w-5" />
-            </motion.button>
+              <div className="absolute -inset-6 rounded-full bg-white blur-3xl" aria-hidden />
+              <img
+                src={gotaLuz}
+                alt="Gota de água suspensa em luz suave"
+                width={1600}
+                height={1000}
+                className="relative aspect-[4/3] w-full rounded-3xl border border-white/70 object-cover shadow-2xl"
+              />
+              <p className="relative mt-3 text-center font-body text-xs text-sacra-muted">
+                A mesma água pode chegar de formas muito diferentes até você.
+              </p>
+            </motion.div>
           </div>
         </section>
 
         {/* 01 */}
         <section id="capitulo-1" className="relative px-6 py-14 md:py-24">
           <div className="mx-auto max-w-5xl">
-            <div className="grid items-center gap-10 md:gap-14 lg:grid-cols-2">
-              <div className="space-y-7">
-                <Etiqueta>01 · Tóquio, anos 90</Etiqueta>
-                <Titulo>Duas gotas da mesma fonte.</Titulo>
-                <Frase delay={0.05}>Uma virou caos. A outra, um hexágono perfeito.</Frase>
-                <Frase delay={0.1}>
-                  A química era idêntica. A diferença estava no que cada uma ouviu antes de
-                  congelar.
-                </Frase>
-                <motion.p
-                  {...rise}
-                  transition={{ ...rise.transition, delay: 0.15 }}
-                  className="font-display text-xl font-semibold text-sacra-ink md:text-2xl"
-                >
-                  Uma recebeu insultos. A outra, uma oração.
-                </motion.p>
-              </div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.94 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 1 }}
-                className="relative"
+            <div className="mx-auto max-w-2xl space-y-5 text-center">
+              <Etiqueta>01 · Tóquio, anos 90</Etiqueta>
+              <Titulo>Duas gotas da mesma fonte.</Titulo>
+              <Frase delay={0.05}>
+                Uma virou caos. A outra, um hexágono perfeito. A química era idêntica: a
+                diferença estava no que cada uma ouviu antes de congelar.
+              </Frase>
+              <motion.p
+                {...rise}
+                transition={{ ...rise.transition, delay: 0.1 }}
+                className="font-display text-xl font-semibold text-sacra-ink md:text-2xl"
               >
-                <div className="absolute -inset-8 rounded-full bg-white blur-3xl" />
-                <img
-                  src={gotaLuz}
-                  alt="Gota de água suspensa em luz suave"
-                  loading="lazy"
-                  width={1600}
-                  height={1000}
-                  className="relative rounded-3xl border border-white/70 object-cover shadow-xl"
-                />
-              </motion.div>
+                Uma recebeu insultos. A outra, uma oração.
+              </motion.p>
+            </div>
+
+            <div className="mt-10 grid gap-5 sm:grid-cols-2 md:mt-14 md:gap-6">
+              {[
+                {
+                  img: crystalChaos,
+                  titulo: "Desprezo",
+                  texto: "Sem simetria. Sem centro.",
+                  ring: "border-sacra-veil",
+                },
+                {
+                  img: crystalLove,
+                  titulo: "Gratidão",
+                  texto: "Geometria inteira. Luz uniforme.",
+                  ring: "border-sacra-gold/50",
+                },
+              ].map((item, i) => (
+                <motion.figure
+                  key={item.titulo}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.25 }}
+                  transition={{ duration: 0.7, delay: i * 0.12 }}
+                  whileHover={{ y: -6 }}
+                  className={`overflow-hidden rounded-3xl border bg-white shadow-lg ${item.ring}`}
+                >
+                  <img
+                    src={item.img}
+                    alt={`Cristal de água associado a ${item.titulo.toLowerCase()}`}
+                    loading="lazy"
+                    className="h-44 w-full object-cover sm:h-52 md:h-60"
+                  />
+                  <figcaption className="p-5 md:p-6">
+                    <h3 className="font-display text-lg font-semibold text-sacra-ink">
+                      {item.titulo}
+                    </h3>
+                    <p className="mt-1 font-body text-sm text-sacra-muted">{item.texto}</p>
+                  </figcaption>
+                </motion.figure>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* COMPARATIVO */}
-        <section className="px-6 pb-14 md:pb-20">
-          <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
-            {[
-              {
-                img: crystalChaos,
-                titulo: "Desprezo",
-                texto: "Sem simetria. Sem centro.",
-                ring: "border-sacra-veil",
-              },
-              {
-                img: crystalLove,
-                titulo: "Gratidão",
-                texto: "Geometria inteira. Luz uniforme.",
-                ring: "border-sacra-gold/50",
-              },
-            ].map((item, i) => (
-              <motion.figure
-                key={item.titulo}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.7, delay: i * 0.12 }}
-                whileHover={{ y: -6 }}
-                className={`overflow-hidden rounded-3xl border bg-white shadow-lg ${item.ring}`}
-              >
-                <img
-                  src={item.img}
-                  alt={`Cristal de água associado a ${item.titulo.toLowerCase()}`}
-                  loading="lazy"
-                  className="h-52 w-full object-cover md:h-60"
-                />
-                <figcaption className="p-6">
-                  <h3 className="font-display text-lg font-semibold text-sacra-ink">
-                    {item.titulo}
-                  </h3>
-                  <p className="mt-1 font-body text-sm text-sacra-muted">{item.texto}</p>
-                </figcaption>
-              </motion.figure>
-            ))}
-          </div>
-        </section>
 
         {/* 02 */}
         <section className="relative bg-gradient-to-b from-white to-sacra-mist/60 px-6 py-14 md:py-24">
