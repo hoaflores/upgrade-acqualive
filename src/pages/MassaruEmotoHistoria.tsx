@@ -7,8 +7,8 @@ import hexagonCrystal from "@/assets/emoto/hexagon-crystal.jpg";
 import nascenteJapao from "@/assets/emoto/nascente-japao.jpg";
 import crystalLove from "@/assets/emoto/crystal-love.jpg";
 import crystalChaos from "@/assets/emoto/crystal-chaos.jpg";
-import duoAsset from "@/assets/duo/duo-frente-transp.png.asset.json";
 import HistoriaSidney from "@/components/emoto/HistoriaSidney";
+import CarrosselFiltros from "@/components/emoto/CarrosselFiltros";
 
 
 const WHATSAPP_URL =
