@@ -56,7 +56,7 @@ const LiteYouTube = ({
       className={`${className} group/play`}
     >
       <img
-        src={`https://i.ytimg.com/vi/${id}/${thumbName}.jpg`}
+        src={thumbSrc}
         alt={title}
         loading="lazy"
         width={480}
