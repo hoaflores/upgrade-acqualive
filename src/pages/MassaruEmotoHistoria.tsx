@@ -281,8 +281,10 @@ const MassaruEmotoHistoria = () => {
               Masaru Emoto
             </footer>
           </motion.blockquote>
+        </section>
 
-          <motion.p
+        <VideosEmoto />
+
             {...rise}
             className="mx-auto mt-10 max-w-2xl text-center font-body text-sm leading-relaxed text-sacra-muted"
           >
