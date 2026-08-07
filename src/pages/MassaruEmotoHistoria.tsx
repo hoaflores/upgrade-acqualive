@@ -9,6 +9,8 @@ import crystalLove from "@/assets/emoto/crystal-love.jpg";
 import crystalChaos from "@/assets/emoto/crystal-chaos.jpg";
 import HistoriaSidney from "@/components/emoto/HistoriaSidney";
 import CarrosselFiltros from "@/components/emoto/CarrosselFiltros";
+import VideosEmoto from "@/components/emoto/VideosEmoto";
+
 
 
 const WHATSAPP_URL =
