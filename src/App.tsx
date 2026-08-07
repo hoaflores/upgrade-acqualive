@@ -40,6 +40,7 @@ import AdminFranqueados from "./pages/AdminFranqueados";
 import AcqualiveEmpresas from "./pages/AcqualiveEmpresas";
 import PortalCientifico from "./pages/PortalCientifico";
 import EstudoDraJuliana from "./pages/EstudoDraJuliana";
+import Links from "./pages/Links";
 import NotFound from "./pages/NotFound";
 import RouteSeo from "./components/RouteSeo";
 
@@ -95,6 +96,8 @@ const App = () => (
             <Route path="/agua-alcalina-inflamacao" element={<EstudoDraJuliana />} />
             <Route path="/agua-alcalina-estudo-cientifico" element={<Navigate to="/agua-alcalina-inflamacao" replace />} />
             <Route path="/estudo-dra-juliana" element={<Navigate to="/agua-alcalina-inflamacao" replace />} />
+            <Route path="/link" element={<Links />} />
+            <Route path="/links" element={<Navigate to="/link" replace />} />
 
 
             <Route path="/admin/franqueados" element={<AdminFranqueados />} />
