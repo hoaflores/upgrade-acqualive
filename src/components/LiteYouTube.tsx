@@ -10,6 +10,8 @@ interface LiteYouTubeProps {
   className?: string;
   /** Usa o dominio youtube-nocookie (sem cookies de rastreamento) */
   nocookie?: boolean;
+  /** Imagem customizada de capa (sobrepõe a thumbnail do YouTube) */
+  poster?: string;
 }
 
 /**
