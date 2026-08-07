@@ -246,11 +246,11 @@ const HistoriaSidney = () => (
             className="rounded-2xl border-l-2 border-sacra-gold bg-white p-6 shadow-sm"
           >
             <p className="font-display text-lg font-semibold leading-snug text-sacra-ink">
-              "Mandei um e-mail para o escritório dele em Tóquio. Para minha surpresa, responderam
-              com um telefone para que eu ligasse."
+              "Mandamos um e-mail para o escritório dele em Tóquio. Para nossa surpresa, responderam
+              com um telefone para que entrássemos em contato."
             </p>
             <p className="mt-3 font-body text-sm text-sacra-muted">
-              Sidney Rodrigues, diretor científico da Acqualive
+              {"\n"}
             </p>
           </motion.div>
         </div>
