@@ -26,10 +26,12 @@ const LiteYouTube = ({
   quality = "hq",
   className = "absolute inset-0 w-full h-full",
   nocookie = false,
+  poster,
 }: LiteYouTubeProps) => {
   const [active, setActive] = useState(false);
 
   const thumbName = quality === "maxres" ? "maxresdefault" : quality === "sd" ? "sddefault" : "hqdefault";
+  const thumbSrc = poster ?? `https://i.ytimg.com/vi/${id}/${thumbName}.jpg`;
   const autoplayParams = params.includes("autoplay=") ? params : `autoplay=1&${params}`;
   const host = nocookie ? "https://www.youtube-nocookie.com" : "https://www.youtube.com";
 
