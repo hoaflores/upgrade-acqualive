@@ -285,13 +285,6 @@ const MassaruEmotoHistoria = () => {
 
         <VideosEmoto />
 
-            {...rise}
-            className="mx-auto mt-10 max-w-2xl text-center font-body text-sm leading-relaxed text-sacra-muted"
-          >
-            Com honestidade: o trabalho dele nunca foi consenso científico. Emoto sempre o
-            apresentou como um convite à observação e ao respeito, não como dogma.
-          </motion.p>
-        </section>
 
         {/* FAIXA */}
         <section className="relative">
