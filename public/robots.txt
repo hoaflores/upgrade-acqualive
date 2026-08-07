@@ -12,6 +12,8 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /link
+Disallow: /links
 
 Sitemap: https://paginas.acqualive.com.br/sitemap.xml
 
