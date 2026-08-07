@@ -10,6 +10,8 @@ interface LiteYouTubeProps {
   className?: string;
   /** Usa o dominio youtube-nocookie (sem cookies de rastreamento) */
   nocookie?: boolean;
+  /** Imagem customizada de capa (sobrepõe a thumbnail do YouTube) */
+  poster?: string;
 }
 
 /**
@@ -24,10 +26,12 @@ const LiteYouTube = ({
   quality = "hq",
   className = "absolute inset-0 w-full h-full",
   nocookie = false,
+  poster,
 }: LiteYouTubeProps) => {
   const [active, setActive] = useState(false);
 
   const thumbName = quality === "maxres" ? "maxresdefault" : quality === "sd" ? "sddefault" : "hqdefault";
+  const thumbSrc = poster ?? `https://i.ytimg.com/vi/${id}/${thumbName}.jpg`;
   const autoplayParams = params.includes("autoplay=") ? params : `autoplay=1&${params}`;
   const host = nocookie ? "https://www.youtube-nocookie.com" : "https://www.youtube.com";
 
@@ -52,7 +56,7 @@ const LiteYouTube = ({
       className={`${className} group/play`}
     >
       <img
-        src={`https://i.ytimg.com/vi/${id}/${thumbName}.jpg`}
+        src={thumbSrc}
         alt={title}
         loading="lazy"
         width={480}
