@@ -145,14 +145,8 @@ const MassaruEmotoHistoria = () => {
                 >
                   COMEÇAR A HISTÓRIA
                 </button>
-                <a
-                  href="https://www.acqualive.com.br/collections/all"
-                  target="_top"
-                  className="rounded-2xl border border-sacra-blue/30 bg-white/70 px-6 py-3.5 text-center font-display text-sm font-semibold text-sacra-deep backdrop-blur transition-colors hover:bg-white md:text-base"
-                >
-                  Ver os filtros Acqualive
-                </a>
               </motion.div>
+
 
               <motion.div
                 initial={{ opacity: 0 }}
