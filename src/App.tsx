@@ -96,6 +96,8 @@ const App = () => (
             <Route path="/agua-alcalina-inflamacao" element={<EstudoDraJuliana />} />
             <Route path="/agua-alcalina-estudo-cientifico" element={<Navigate to="/agua-alcalina-inflamacao" replace />} />
             <Route path="/estudo-dra-juliana" element={<Navigate to="/agua-alcalina-inflamacao" replace />} />
+            <Route path="/link" element={<Links />} />
+            <Route path="/links" element={<Navigate to="/link" replace />} />
 
 
             <Route path="/admin/franqueados" element={<AdminFranqueados />} />
