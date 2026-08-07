@@ -234,12 +234,11 @@ const HistoriaSidney = () => (
           <Etiqueta>04B · Sidney Rodrigues</Etiqueta>
           <Titulo>Quem trouxe o Dr. Emoto para o Brasil.</Titulo>
           <Frase delay={0.05}>
-            Sidney Rodrigues, diretor científico da Acqualive, foi o responsável por transformar
-            admiração em encontro.
+            A Acqualive, foi a responsável por transformar admiração em um encontro
+            transformador.
           </Frase>
           <Frase delay={0.1}>
-            Antes de existir parceria, existiu curiosidade. E uma pergunta simples: será que ele
-            responde?
+            {"\n"}
           </Frase>
           <motion.div
             {...rise}
