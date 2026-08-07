@@ -404,7 +404,7 @@ const MassaruEmotoHistoria = () => {
             {...rise}
             className="mx-auto mt-10 max-w-2xl text-center font-body text-base leading-relaxed text-sacra-muted"
           >
-            Emoto fotografou essa diferença. O que ele viu no microscópio, a gente sente no
+            Emoto fotografou essa diferença. O que ele viu no microscópio, sentimos no
             gosto.
           </motion.p>
         </section>
