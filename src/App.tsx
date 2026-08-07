@@ -40,6 +40,7 @@ import AdminFranqueados from "./pages/AdminFranqueados";
 import AcqualiveEmpresas from "./pages/AcqualiveEmpresas";
 import PortalCientifico from "./pages/PortalCientifico";
 import EstudoDraJuliana from "./pages/EstudoDraJuliana";
+import Links from "./pages/Links";
 import NotFound from "./pages/NotFound";
 import RouteSeo from "./components/RouteSeo";
 
