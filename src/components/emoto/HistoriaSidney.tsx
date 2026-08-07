@@ -237,9 +237,6 @@ const HistoriaSidney = () => (
             A Acqualive, foi a responsável por transformar admiração em um encontro
             transformador.
           </Frase>
-          <Frase delay={0.1}>
-            {"\n"}
-          </Frase>
           <motion.div
             {...rise}
             transition={{ ...rise.transition, delay: 0.15 }}
@@ -248,9 +245,6 @@ const HistoriaSidney = () => (
             <p className="font-display text-lg font-semibold leading-snug text-sacra-ink">
               "Mandamos um e-mail para o escritório dele em Tóquio. Para nossa surpresa, responderam
               com um telefone para que entrássemos em contato."
-            </p>
-            <p className="mt-3 font-body text-sm text-sacra-muted">
-              {"\n"}
             </p>
           </motion.div>
         </div>
