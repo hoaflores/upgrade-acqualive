@@ -9,6 +9,8 @@ import crystalLove from "@/assets/emoto/crystal-love.jpg";
 import crystalChaos from "@/assets/emoto/crystal-chaos.jpg";
 import HistoriaSidney from "@/components/emoto/HistoriaSidney";
 import CarrosselFiltros from "@/components/emoto/CarrosselFiltros";
+import VideosEmoto from "@/components/emoto/VideosEmoto";
+
 
 
 const WHATSAPP_URL =
@@ -145,14 +147,8 @@ const MassaruEmotoHistoria = () => {
                 >
                   COMEÇAR A HISTÓRIA
                 </button>
-                <a
-                  href="https://www.acqualive.com.br/collections/all"
-                  target="_top"
-                  className="rounded-2xl border border-sacra-blue/30 bg-white/70 px-6 py-3.5 text-center font-display text-sm font-semibold text-sacra-deep backdrop-blur transition-colors hover:bg-white md:text-base"
-                >
-                  Ver os filtros Acqualive
-                </a>
               </motion.div>
+
 
               <motion.div
                 initial={{ opacity: 0 }}
@@ -287,15 +283,10 @@ const MassaruEmotoHistoria = () => {
               Masaru Emoto
             </footer>
           </motion.blockquote>
-
-          <motion.p
-            {...rise}
-            className="mx-auto mt-10 max-w-2xl text-center font-body text-sm leading-relaxed text-sacra-muted"
-          >
-            Com honestidade: o trabalho dele nunca foi consenso científico. Emoto sempre o
-            apresentou como um convite à observação e ao respeito, não como dogma.
-          </motion.p>
         </section>
+
+        <VideosEmoto />
+
 
         {/* FAIXA */}
         <section className="relative">
@@ -413,7 +404,7 @@ const MassaruEmotoHistoria = () => {
             {...rise}
             className="mx-auto mt-10 max-w-2xl text-center font-body text-base leading-relaxed text-sacra-muted"
           >
-            Emoto fotografou essa diferença. O que ele viu no microscópio, a gente sente no
+            Emoto fotografou essa diferença. O que ele viu no microscópio, sentimos no
             gosto.
           </motion.p>
         </section>
