@@ -99,6 +99,9 @@ const App = () => (
             <Route path="/estudo-dra-juliana" element={<Navigate to="/agua-alcalina-inflamacao" replace />} />
             <Route path="/link" element={<Links />} />
             <Route path="/links" element={<Navigate to="/link" replace />} />
+            <Route path="/água-limpa" element={<AguaLimpa />} />
+            <Route path="/agua-limpa" element={<AguaLimpa />} />
+
 
 
             <Route path="/admin/franqueados" element={<AdminFranqueados />} />
