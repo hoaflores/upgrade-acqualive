@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { ShieldCheck, Droplets, Lock } from "lucide-react";
+import { ShieldCheck, Droplets } from "lucide-react";
 import logo from "@/assets/acqualive-logo-color.png";
 import PlayerAgua from "@/components/agua-limpa/PlayerAgua";
 import FormContato from "@/components/agua-limpa/FormContato";
