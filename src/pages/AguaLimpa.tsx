@@ -14,6 +14,12 @@ const AguaLimpa = () => {
 
   const unlock = useCallback(() => setLiberado(true), []);
 
+  /** O formulario tambem abre sozinho apos o tempo definido, mesmo sem play no video. */
+  useEffect(() => {
+    const t = window.setTimeout(() => setLiberado(true), UNLOCK_AT * 1000);
+    return () => window.clearTimeout(t);
+  }, []);
+
   useEffect(() => {
     if (liberado) {
       formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
