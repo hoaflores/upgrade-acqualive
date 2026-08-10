@@ -3,7 +3,7 @@ import { z } from "zod";
 import { Loader2, Send, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -115,21 +115,6 @@ const FormContato = () => {
           onChange={(e) => set("email", e.target.value)}
           maxLength={255}
           className="h-12 rounded-xl"
-        />
-        <Input
-          placeholder="Sua cidade"
-          value={form.cidade}
-          onChange={(e) => set("cidade", e.target.value)}
-          maxLength={100}
-          className="h-12 rounded-xl"
-        />
-        <Textarea
-          placeholder="Conte rapidamente sua dúvida (opcional)"
-          value={form.mensagem}
-          onChange={(e) => set("mensagem", e.target.value)}
-          maxLength={1000}
-          rows={3}
-          className="rounded-xl"
         />
       </div>
 
