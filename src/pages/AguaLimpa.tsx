@@ -64,12 +64,19 @@ const AguaLimpa = () => {
           {liberado ? (
             <FormContato />
           ) : (
-            <div className="rounded-2xl border border-dashed border-border bg-muted/40 p-6 text-center">
+            <button
+              type="button"
+              onClick={unlock}
+              className="w-full rounded-2xl border border-dashed border-primary/40 bg-muted/40 p-6 text-center transition-colors hover:bg-muted/70"
+            >
               <Lock className="mx-auto h-5 w-5 text-muted-foreground" aria-hidden />
               <p className="mt-3 text-sm text-muted-foreground">
                 Quer cuidar da água da sua família? CLIQUE AQUI e Deixe seu contato e vamos garantir a melhor água para você!
               </p>
-            </div>
+              <span className="mt-4 inline-flex h-11 w-full items-center justify-center rounded-xl bg-primary px-6 text-sm font-semibold text-primary-foreground">
+                QUERO ABRIR O FORMULÁRIO AGORA
+              </span>
+            </button>
           )}
         </div>
 
