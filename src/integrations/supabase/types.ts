@@ -282,6 +282,39 @@ export type Database = {
         }
         Relationships: []
       }
+      leads_agua_limpa: {
+        Row: {
+          cidade: string | null
+          created_at: string
+          email: string | null
+          id: string
+          mensagem: string | null
+          nome: string
+          origem: string | null
+          telefone: string
+        }
+        Insert: {
+          cidade?: string | null
+          created_at?: string
+          email?: string | null
+          id?: string
+          mensagem?: string | null
+          nome: string
+          origem?: string | null
+          telefone: string
+        }
+        Update: {
+          cidade?: string | null
+          created_at?: string
+          email?: string | null
+          id?: string
+          mensagem?: string | null
+          nome?: string
+          origem?: string | null
+          telefone?: string
+        }
+        Relationships: []
+      }
       leads_empresas: {
         Row: {
           cidade: string | null
