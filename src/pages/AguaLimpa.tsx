@@ -61,7 +61,7 @@ const AguaLimpa = () => {
             <div className="rounded-2xl border border-dashed border-border bg-muted/40 p-6 text-center">
               <Lock className="mx-auto h-5 w-5 text-muted-foreground" aria-hidden />
               <p className="mt-3 text-sm text-muted-foreground">
-                Quer cuidar da água da sua família? Deixe aqui seu contato e vamos garantir a melhor água para você!
+                Quer cuidar da água da sua família? CLIQUE AQUI e Deixe seu contato e vamos garantir a melhor água para você!
               </p>
             </div>
           )}
