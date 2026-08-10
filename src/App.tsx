@@ -41,6 +41,7 @@ import AcqualiveEmpresas from "./pages/AcqualiveEmpresas";
 import PortalCientifico from "./pages/PortalCientifico";
 import EstudoDraJuliana from "./pages/EstudoDraJuliana";
 import Links from "./pages/Links";
+import AguaLimpa from "./pages/AguaLimpa";
 import NotFound from "./pages/NotFound";
 import RouteSeo from "./components/RouteSeo";
 
@@ -98,6 +99,9 @@ const App = () => (
             <Route path="/estudo-dra-juliana" element={<Navigate to="/agua-alcalina-inflamacao" replace />} />
             <Route path="/link" element={<Links />} />
             <Route path="/links" element={<Navigate to="/link" replace />} />
+            <Route path="/água-limpa" element={<AguaLimpa />} />
+            <Route path="/agua-limpa" element={<AguaLimpa />} />
+
 
 
             <Route path="/admin/franqueados" element={<AdminFranqueados />} />
