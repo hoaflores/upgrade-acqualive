@@ -64,25 +64,6 @@ const AguaLimpa = () => {
           {liberado && <FormContato />}
         </div>
 
-
-        <ul className="mt-8 grid grid-cols-1 gap-3 text-sm sm:grid-cols-3">
-          <li className="flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-3 text-foreground">
-            <Droplets className="h-4 w-4 text-primary" aria-hidden />
-            Água fresquinha todo dia
-          </li>
-          <li className="flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-3 text-foreground">
-            <ShieldCheck className="h-4 w-4 text-primary" aria-hidden />
-            Sem cloro e sem impurezas
-          </li>
-          <li className="flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-3 text-foreground">
-            <ShieldCheck className="h-4 w-4 text-primary" aria-hidden />
-            Instalação simples
-          </li>
-        </ul>
-
-        <p className="mt-10 text-center text-xs text-muted-foreground">
-          Acqualive, saúde e bem-estar começam pela água.
-        </p>
       </div>
     </main>
   );
