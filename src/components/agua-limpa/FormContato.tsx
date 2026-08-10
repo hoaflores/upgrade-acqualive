@@ -56,6 +56,16 @@ const FormContato = () => {
       });
       return;
     }
+    void supabase.functions.invoke("agua-limpa-sheet", {
+      body: {
+        nome: parsed.data.nome,
+        telefone: parsed.data.telefone,
+        email: parsed.data.email || null,
+        cidade: parsed.data.cidade || null,
+        mensagem: parsed.data.mensagem || null,
+        origem: "agua-limpa",
+      },
+    });
     setOk(true);
   };
 
