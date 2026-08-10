@@ -45,7 +45,7 @@ const AguaLimpa = () => {
 
       <div className="mx-auto w-full max-w-xl px-5 pb-16 pt-8">
         <header className="text-center">
-          <img src={logo} alt="Acqualive" className="mx-auto h-10 w-auto" />
+          <img src={logo} alt="Acqualive" className="mx-auto h-16 w-auto sm:h-20" />
         </header>
 
         <h1 className="mt-8 text-center text-[28px] font-bold leading-tight text-foreground sm:text-4xl">
