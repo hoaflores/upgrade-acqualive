@@ -1,9 +1,13 @@
 import PaginaAguaLimpa from "@/components/agua-limpa/PaginaAguaLimpa";
+import videoAsset from "@/assets/agua-limpa-ph.mp4.asset.json";
+import posterAsset from "@/assets/agua-limpa-ph-poster.jpg.asset.json";
 
 const AguaLimpaPh = () => (
   <PaginaAguaLimpa
-    unlockAt={40}
-    youtubeId="AJE1RgfxY2s"
+    unlockAt={36}
+    videoUrl={videoAsset.url}
+    posterUrl={posterAsset.url}
+    vertical
     origem="agua-limpa-ph"
     paginaLabel="Água Limpa (pH)"
   />
