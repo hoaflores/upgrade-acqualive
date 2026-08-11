@@ -116,8 +116,8 @@ const PlayerAgua = ({ unlockAt, onUnlock, youtubeId, videoUrl, posterUrl }: Play
     >
       <video
         ref={ref}
-        src={videoAsset.url}
-        poster={posterAsset.url}
+        src={videoUrl ?? videoAsset.url}
+        poster={posterUrl ?? posterAsset.url}
         playsInline
         preload="metadata"
         onClick={toggle}
