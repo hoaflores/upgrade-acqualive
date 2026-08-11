@@ -19,6 +19,8 @@ type LinkItem = {
 const LINKS: LinkItem[] = [
   { path: "/", title: "Home Acqualive", description: "Pagina inicial das paginas Acqualive.", category: "Institucional" },
   { path: "/agua-limpa", title: "Agua Limpa (VSL)", description: "Pagina mobile com video e formulario de contato.", category: "Ofertas" },
+  { path: "/agua-limpa-nagle", title: "Agua Limpa (VSL Nagle)", description: "Variacao da VSL com video do Dr. Nagle.", category: "Ofertas" },
+  { path: "/agua-limpa-ph", title: "Agua Limpa (VSL pH)", description: "Variacao da VSL com video sobre pH da agua.", category: "Ofertas" },
   { path: "/upgrade", title: "Upgrade Acqualive", description: "Oferta de troca do purificador comum pelo Acqualive.", category: "Ofertas" },
   { path: "/acqualive-empresas", title: "Acqualive Empresas", description: "Solucao B2B com simulador de economia e captacao de leads.", category: "Ofertas" },
   { path: "/franquias-solo", title: "Franquias Solo", description: "Mapa de franqueados e convite para ser representante.", category: "Negocios" },
