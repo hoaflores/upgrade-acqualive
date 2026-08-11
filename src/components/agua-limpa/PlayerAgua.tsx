@@ -18,10 +18,14 @@ interface PlayerAguaProps {
   onUnlock: () => void;
   /** Se informado, exibe um video do YouTube no lugar do arquivo proprio */
   youtubeId?: string;
+  /** Fonte de video propria (sobrepoe o video padrao) */
+  videoUrl?: string;
+  /** Capa do video proprio */
+  posterUrl?: string;
 }
 
 /** Player proprietario, leve e mobile-first, com controle de velocidade. */
-const PlayerAgua = ({ unlockAt, onUnlock, youtubeId }: PlayerAguaProps) => {
+const PlayerAgua = ({ unlockAt, onUnlock, youtubeId, videoUrl, posterUrl }: PlayerAguaProps) => {
   const ref = useRef<HTMLVideoElement>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
   const [playing, setPlaying] = useState(false);
