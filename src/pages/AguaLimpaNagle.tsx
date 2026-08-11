@@ -7,6 +7,7 @@ const AguaLimpaNagle = () => (
     unlockAt={69}
     videoUrl={videoAsset.url}
     posterUrl={posterAsset.url}
+    vertical
     origem="agua-limpa-nagle"
     paginaLabel="Água Limpa (Nagle)"
   />
