@@ -16,10 +16,12 @@ interface PlayerAguaProps {
   /** Tempo assistido (em segundos) necessario para liberar o formulario */
   unlockAt: number;
   onUnlock: () => void;
+  /** Se informado, exibe um video do YouTube no lugar do arquivo proprio */
+  youtubeId?: string;
 }
 
 /** Player proprietario, leve e mobile-first, com controle de velocidade. */
-const PlayerAgua = ({ unlockAt, onUnlock }: PlayerAguaProps) => {
+const PlayerAgua = ({ unlockAt, onUnlock, youtubeId }: PlayerAguaProps) => {
   const ref = useRef<HTMLVideoElement>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
   const [playing, setPlaying] = useState(false);
@@ -87,6 +89,21 @@ const PlayerAgua = ({ unlockAt, onUnlock }: PlayerAguaProps) => {
   };
 
   const progress = duration ? (current / duration) * 100 : 0;
+
+  if (youtubeId) {
+    return (
+      <div className="relative overflow-hidden rounded-2xl bg-foreground/90 shadow-xl ring-1 ring-border">
+        <iframe
+          src={`https://www.youtube.com/embed/${youtubeId}?rel=0&modestbranding=1&playsinline=1`}
+          title="Vídeo Acqualive"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          className="aspect-video w-full"
+        />
+      </div>
+    );
+  }
 
   return (
     <div

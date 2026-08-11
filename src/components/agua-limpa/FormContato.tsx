@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { z } from "zod";
-import { Loader2, Send, CheckCircle2 } from "lucide-react";
+import { Loader2, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -14,18 +14,53 @@ const schema = z.object({
     .trim()
     .regex(/^[\d\s()+-]{10,20}$/, "Informe um WhatsApp válido"),
   email: z.string().trim().email("Informe um e-mail válido").max(255).or(z.literal("")),
-  cidade: z.string().trim().max(100).optional(),
-  mensagem: z.string().trim().max(1000).optional(),
 });
 
+const WHATSAPP = "5511940689011";
+
+interface FormContatoProps {
+  /** Identificador da origem do lead (rota/campanha) */
+  origem?: string;
+  /** Nome amigavel da pagina para a mensagem do WhatsApp */
+  paginaLabel?: string;
+}
+
 /** Formulario simples de contato liberado apos um terco do video. */
-const FormContato = () => {
+const FormContato = ({ origem = "agua-limpa", paginaLabel = "Água Limpa" }: FormContatoProps) => {
   const { toast } = useToast();
   const [enviando, setEnviando] = useState(false);
-  const [ok, setOk] = useState(false);
-  const [form, setForm] = useState({ nome: "", telefone: "", email: "", cidade: "", mensagem: "" });
+  const [form, setForm] = useState({ nome: "", telefone: "", email: "" });
+  const sessionId = useMemo(
+    () => `${origem}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+    [origem],
+  );
+  const timer = useRef<number>();
+  const ultimoEnvio = useRef("");
 
   const set = (k: string, v: string) => setForm((p) => ({ ...p, [k]: v }));
+
+  /** Sincronizacao em tempo real (debounce) com a planilha, mesmo sem enviar. */
+  useEffect(() => {
+    const preenchido = form.nome.trim() || form.telefone.trim() || form.email.trim();
+    if (!preenchido) return;
+    const snapshot = JSON.stringify(form);
+    if (snapshot === ultimoEnvio.current) return;
+    window.clearTimeout(timer.current);
+    timer.current = window.setTimeout(() => {
+      ultimoEnvio.current = snapshot;
+      void supabase.functions.invoke("agua-limpa-sheet", {
+        body: {
+          sessionId,
+          nome: form.nome || null,
+          telefone: form.telefone || null,
+          email: form.email || null,
+          origem,
+          status: "parcial",
+        },
+      });
+    }, 800);
+    return () => window.clearTimeout(timer.current);
+  }, [form, origem, sessionId]);
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,12 +78,10 @@ const FormContato = () => {
       nome: parsed.data.nome,
       telefone: parsed.data.telefone,
       email: parsed.data.email || null,
-      cidade: parsed.data.cidade || null,
-      mensagem: parsed.data.mensagem || null,
-      origem: "agua-limpa",
+      origem,
     });
-    setEnviando(false);
     if (error) {
+      setEnviando(false);
       toast({
         title: "Não foi possível enviar",
         description: "Tente novamente em instantes.",
@@ -56,30 +89,25 @@ const FormContato = () => {
       });
       return;
     }
-    void supabase.functions.invoke("agua-limpa-sheet", {
+    await supabase.functions.invoke("agua-limpa-sheet", {
       body: {
+        sessionId,
         nome: parsed.data.nome,
         telefone: parsed.data.telefone,
         email: parsed.data.email || null,
-        cidade: parsed.data.cidade || null,
-        mensagem: parsed.data.mensagem || null,
-        origem: "agua-limpa",
+        origem,
+        status: "enviado",
       },
     });
-    setOk(true);
-  };
+    setEnviando(false);
 
-  if (ok) {
-    return (
-      <div className="rounded-2xl border border-border bg-card p-8 text-center shadow-sm">
-        <CheckCircle2 className="mx-auto h-10 w-10 text-primary" />
-        <h3 className="mt-4 text-xl font-semibold text-foreground">Recebemos seu contato</h3>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Em breve um especialista da Acqualive fala com você para entender a água da sua casa.
-        </p>
-      </div>
-    );
-  }
+    const texto =
+      `Olá Laura! Meu nome é ${parsed.data.nome}. ` +
+      `Vim da página ${paginaLabel} da Acqualive (${origem}) e quero cuidar da água da minha família. ` +
+      `Meu WhatsApp: ${parsed.data.telefone}` +
+      (parsed.data.email ? ` | E-mail: ${parsed.data.email}` : "");
+    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`, "_blank");
+  };
 
   return (
     <form onSubmit={onSubmit} className="rounded-2xl border border-border bg-card p-6 shadow-sm">
