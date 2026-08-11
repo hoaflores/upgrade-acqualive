@@ -13,6 +13,10 @@ interface PaginaAguaLimpaProps {
   origem?: string;
   /** Nome amigavel da pagina */
   paginaLabel?: string;
+  /** Video proprio (url) */
+  videoUrl?: string;
+  /** Capa do video proprio */
+  posterUrl?: string;
 }
 
 /** Layout mobile-first da VSL Agua Limpa, reutilizado pelas variacoes de video. */
@@ -21,6 +25,8 @@ const PaginaAguaLimpa = ({
   youtubeId,
   origem = "agua-limpa",
   paginaLabel = "Água Limpa",
+  videoUrl,
+  posterUrl,
 }: PaginaAguaLimpaProps) => {
   const [liberado, setLiberado] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
@@ -70,7 +76,7 @@ const PaginaAguaLimpa = ({
         </p>
 
         <section className="mt-7">
-          <PlayerAgua unlockAt={unlockAt} onUnlock={unlock} youtubeId={youtubeId} />
+          <PlayerAgua unlockAt={unlockAt} onUnlock={unlock} youtubeId={youtubeId} videoUrl={videoUrl} posterUrl={posterUrl} />
         </section>
 
         <div ref={formRef} className="mt-8 scroll-mt-6">

@@ -1,9 +1,12 @@
 import PaginaAguaLimpa from "@/components/agua-limpa/PaginaAguaLimpa";
+import videoAsset from "@/assets/agua-limpa-nagle.mp4.asset.json";
+import posterAsset from "@/assets/agua-limpa-nagle-poster.jpg.asset.json";
 
 const AguaLimpaNagle = () => (
   <PaginaAguaLimpa
-    unlockAt={40}
-    youtubeId="iVueKxGl0d4"
+    unlockAt={69}
+    videoUrl={videoAsset.url}
+    posterUrl={posterAsset.url}
     origem="agua-limpa-nagle"
     paginaLabel="Água Limpa (Nagle)"
   />
