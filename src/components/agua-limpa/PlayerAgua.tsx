@@ -22,10 +22,12 @@ interface PlayerAguaProps {
   videoUrl?: string;
   /** Capa do video proprio */
   posterUrl?: string;
+  /** Video no formato vertical (Reels 9:16) */
+  vertical?: boolean;
 }
 
 /** Player proprietario, leve e mobile-first, com controle de velocidade. */
-const PlayerAgua = ({ unlockAt, onUnlock, youtubeId, videoUrl, posterUrl }: PlayerAguaProps) => {
+const PlayerAgua = ({ unlockAt, onUnlock, youtubeId, videoUrl, posterUrl, vertical }: PlayerAguaProps) => {
   const ref = useRef<HTMLVideoElement>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
   const [playing, setPlaying] = useState(false);
@@ -112,7 +114,9 @@ const PlayerAgua = ({ unlockAt, onUnlock, youtubeId, videoUrl, posterUrl }: Play
   return (
     <div
       ref={wrapRef}
-      className="relative overflow-hidden rounded-2xl bg-foreground/90 shadow-xl ring-1 ring-border"
+      className={`relative mx-auto overflow-hidden rounded-2xl bg-foreground/90 shadow-xl ring-1 ring-border ${
+        vertical ? "w-full max-w-[380px]" : "w-full"
+      }`}
     >
       <video
         ref={ref}
@@ -121,7 +125,7 @@ const PlayerAgua = ({ unlockAt, onUnlock, youtubeId, videoUrl, posterUrl }: Play
         playsInline
         preload="metadata"
         onClick={toggle}
-        className="aspect-video w-full cursor-pointer bg-black object-cover"
+        className={`w-full cursor-pointer bg-black object-contain ${vertical ? "aspect-[9/16]" : "aspect-video"}`}
       />
 
       {!started && (
