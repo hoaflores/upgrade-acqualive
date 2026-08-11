@@ -4,7 +4,7 @@ import posterAsset from "@/assets/agua-limpa-nagle-poster.jpg.asset.json";
 
 const AguaLimpaNagle = () => (
   <PaginaAguaLimpa
-    unlockAt={69}
+    unlockAt={60}
     videoUrl={videoAsset.url}
     posterUrl={posterAsset.url}
     vertical
