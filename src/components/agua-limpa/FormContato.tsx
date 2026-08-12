@@ -102,7 +102,7 @@ const FormContato = ({ origem = "agua-limpa", paginaLabel = "Água Limpa" }: For
     setEnviando(false);
 
     const texto =
-      `Oi, Laura! Vi a página ${paginaLabel} e gostaria de entender melhor como cuidar da água da minha família.`;
+      `Oi, Laura! Gostaria de entender melhor como cuidar da água da minha família.`;
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`, "_blank");
   };
 
