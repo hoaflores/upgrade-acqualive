@@ -42,14 +42,20 @@ const PaginaAguaLimpa = ({
     return () => window.clearTimeout(t);
   }, [unlockAt]);
 
+  /** Rola ate o formulario apenas se o video nao estiver rodando (evita pulo no meio do video). */
   useEffect(() => {
-    if (liberado) {
+    if (!liberado) return;
+    const t = window.setTimeout(() => {
+      const video = document.querySelector("video");
+      if (video && !video.paused) return;
       formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    }, 400);
+    return () => window.clearTimeout(t);
   }, [liberado]);
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen overflow-x-hidden bg-background">
+
       <Helmet>
         <title>A água da sua família está realmente limpa? | Acqualive</title>
         <meta
