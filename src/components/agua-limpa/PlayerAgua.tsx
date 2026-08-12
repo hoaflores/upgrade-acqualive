@@ -123,9 +123,6 @@ const PlayerAgua = ({ unlockAt, onUnlock, youtubeId, videoUrl, posterUrl, vertic
         src={videoUrl ?? videoAsset.url}
         poster={posterUrl ?? posterAsset.url}
         playsInline
-        // @ts-expect-error atributos nativos do iOS/Android
-        webkit-playsinline="true"
-        x5-playsinline="true"
         controls={false}
         preload="none"
         onClick={toggle}
