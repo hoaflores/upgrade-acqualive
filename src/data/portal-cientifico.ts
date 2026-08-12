@@ -917,33 +917,62 @@ export interface VideoPortal {
 export const VÍDEOS: VideoPortal[] = [
   {
     id: "v1",
-    youtubeId: "dQw4w9WgXcQ",
-    titulo: "O que e água alcalina ionizada",
-    descrição: "Explicação em 4 minutos sobre pH, minerais e hidrogênio dissolvido.",
-    duracao: "4 min",
+    youtubeId: "OnsWHtGad1Y",
+    titulo: "Tudo o que você precisa saber sobre a água",
+    descrição:
+      "Uma aula introdutória sobre o que existe dentro da água que chega até você: cloro, minerais, pH e o que cada um representa para a saúde no longo prazo.",
+    duracao: "Fundamentos",
   },
   {
     id: "v2",
-    youtubeId: "dQw4w9WgXcQ",
-    titulo: "Por que o galão e a garrafa plástica são um problema",
-    descrição: "Microplásticos, logística é o que a ciência mostra sobre embalagens.",
-    duracao: "6 min",
+    youtubeId: "Futw3uOmTQA",
+    titulo: "O poder da hidratação na saúde e na longevidade",
+    descrição:
+      "Conversa com o Dr. Julio no podcast Olá, Pessoal sobre hidratação celular, envelhecimento e o papel da qualidade da água na prevenção.",
+    duracao: "Podcast",
   },
   {
     id: "v3",
-    youtubeId: "dQw4w9WgXcQ",
-    titulo: "Hidratação funcional para performance",
-    descrição: "Como atletas usam água alcalina para recuperação e desempenho.",
-    duracao: "8 min",
+    youtubeId: "Hbjzm1Lx99w",
+    titulo: "Por que escolher a Acqualive",
+    descrição:
+      "O raciocínio por trás da tecnologia: alcalinizar, mineralizar e retirar cloro sem transformar a água em algo artificial.",
+    duracao: "Tecnologia",
   },
   {
     id: "v4",
-    youtubeId: "dQw4w9WgXcQ",
-    titulo: "Refluxo, digestão e pH da água",
-    descrição: "O estudo da pepsina explicado de forma simples.",
-    duracao: "5 min",
+    youtubeId: "woNSg0nfOWI",
+    titulo: "A melhor tecnologia para purificar a sua água",
+    descrição:
+      "Como funciona o processo de purificação em etapas e por que ele preserva os minerais que o corpo aproveita.",
+    duracao: "Tecnologia",
+  },
+  {
+    id: "v5",
+    youtubeId: "OxWUxA6oxXE",
+    titulo: "Smart Filters: saúde e segurança para a família",
+    descrição:
+      "A linha de filtros inteligentes explicada em detalhes, do ponto de instalação ao que sai na torneira todos os dias.",
+    duracao: "Produto",
+  },
+  {
+    id: "v6",
+    youtubeId: "WEjrg93fkTM",
+    titulo: "Purificador de água alcalina Acqualive Terracota",
+    descrição:
+      "A tradição do barro encontrando a ciência da água alcalina: o que muda no sabor, na temperatura e na mineralização.",
+    duracao: "Produto",
+  },
+  {
+    id: "v7",
+    youtubeId: "52lCNTPK8-A",
+    titulo: "Acqualive entrega a perfeição",
+    descrição:
+      "Um panorama rápido de como a marca traduz evidência científica em água fresquinha, leve e pronta para beber.",
+    duracao: "Institucional",
   },
 ];
+
 
 export const IMPACTO_LABEL: Record<Impacto, string> = {
   alto: "Evidência de alto impacto",
