@@ -123,7 +123,8 @@ const PlayerAgua = ({ unlockAt, onUnlock, youtubeId, videoUrl, posterUrl, vertic
         src={videoUrl ?? videoAsset.url}
         poster={posterUrl ?? posterAsset.url}
         playsInline
-        preload="metadata"
+        controls={false}
+        preload="none"
         onClick={toggle}
         className={`w-full cursor-pointer bg-black object-contain ${vertical ? "aspect-[9/16]" : "aspect-video"}`}
       />
@@ -133,13 +134,20 @@ const PlayerAgua = ({ unlockAt, onUnlock, youtubeId, videoUrl, posterUrl, vertic
           type="button"
           onClick={toggle}
           aria-label="Assistir ao vídeo"
-          className="absolute inset-0 flex items-center justify-center bg-primary/25 backdrop-blur-[1px] transition-colors hover:bg-primary/35"
+          className="absolute inset-0 flex items-center justify-center transition-colors"
         >
-          <span className="flex h-20 w-20 items-center justify-center rounded-full bg-background/95 shadow-2xl">
+          <img
+            src={posterUrl ?? posterAsset.url}
+            alt="Capa do vídeo Acqualive"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <span className="absolute inset-0 bg-primary/20" />
+          <span className="relative flex h-20 w-20 items-center justify-center rounded-full bg-background/95 shadow-2xl">
             <Play className="ml-1 h-8 w-8 fill-current text-primary" />
           </span>
         </button>
       )}
+
 
       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pb-3 pt-8">
         <input

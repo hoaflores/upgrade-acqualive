@@ -73,23 +73,35 @@ const FormContato = ({ origem = "agua-limpa", paginaLabel = "Água Limpa" }: For
       });
       return;
     }
+
+    const texto = "Oi, Laura! Gostaria de entender melhor como cuidar da água da minha família.";
+    const waUrl = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`;
+    // A aba precisa ser aberta no mesmo gesto do usuario, senao o mobile bloqueia.
+    const janela = window.open("", "_blank");
+
     setEnviando(true);
-    const { error } = await supabase.from("leads_agua_limpa").insert({
-      nome: parsed.data.nome,
-      telefone: parsed.data.telefone,
-      email: parsed.data.email || null,
-      origem,
-    });
-    if (error) {
-      setEnviando(false);
-      toast({
-        title: "Não foi possível enviar",
-        description: "Tente novamente em instantes.",
-        variant: "destructive",
+    window.clearTimeout(timer.current);
+
+    // Envios em segundo plano: o WhatsApp nao espera a rede.
+    void supabase
+      .from("leads_agua_limpa")
+      .insert({
+        nome: parsed.data.nome,
+        telefone: parsed.data.telefone,
+        email: parsed.data.email || null,
+        origem,
+      })
+      .then(({ error }) => {
+        if (error) {
+          toast({
+            title: "Não foi possível registrar",
+            description: "Fale com a gente pelo WhatsApp que resolvemos por lá.",
+            variant: "destructive",
+          });
+        }
       });
-      return;
-    }
-    await supabase.functions.invoke("agua-limpa-sheet", {
+
+    void supabase.functions.invoke("agua-limpa-sheet", {
       body: {
         sessionId,
         nome: parsed.data.nome,
@@ -99,11 +111,11 @@ const FormContato = ({ origem = "agua-limpa", paginaLabel = "Água Limpa" }: For
         status: "enviado",
       },
     });
-    setEnviando(false);
 
-    const texto =
-      `Oi, Laura! Gostaria de entender melhor como cuidar da água da minha família.`;
-    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`, "_blank");
+    if (janela) janela.location.href = waUrl;
+    else window.location.href = waUrl;
+
+    window.setTimeout(() => setEnviando(false), 1200);
   };
 
   return (
