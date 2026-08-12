@@ -102,10 +102,7 @@ const FormContato = ({ origem = "agua-limpa", paginaLabel = "Água Limpa" }: For
     setEnviando(false);
 
     const texto =
-      `Olá Laura! Meu nome é ${parsed.data.nome}. ` +
-      `Vim da página ${paginaLabel} da Acqualive (${origem}) e quero cuidar da água da minha família. ` +
-      `Meu WhatsApp: ${parsed.data.telefone}` +
-      (parsed.data.email ? ` | E-mail: ${parsed.data.email}` : "");
+      `Oi, Laura! Vi a página ${paginaLabel} e gostaria de entender melhor como cuidar da água da minha família.`;
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`, "_blank");
   };
 
