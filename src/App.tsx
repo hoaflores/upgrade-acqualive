@@ -42,7 +42,7 @@ import PortalCientifico from "./pages/PortalCientifico";
 import EstudoDraJuliana from "./pages/EstudoDraJuliana";
 import Links from "./pages/Links";
 import AguaLimpa from "./pages/AguaLimpa";
-import AguaLimpaNagle from "./pages/AguaLimpaNagle";
+import AguaLimpaFalarSerio from "./pages/AguaLimpaFalarSerio";
 import AguaLimpaPh from "./pages/AguaLimpaPh";
 import NotFound from "./pages/NotFound";
 import RouteSeo from "./components/RouteSeo";
@@ -102,7 +102,8 @@ const App = () => (
             <Route path="/link" element={<Links />} />
             <Route path="/links" element={<Navigate to="/link" replace />} />
             <Route path="/agua-limpa" element={<AguaLimpa />} />
-            <Route path="/agua-limpa-nagle" element={<AguaLimpaNagle />} />
+            <Route path="/agua-limpa-falar-serio" element={<AguaLimpaFalarSerio />} />
+            <Route path="/agua-limpa-nagle" element={<Navigate to="/agua-limpa-falar-serio" replace />} />
             <Route path="/agua-limpa-ph" element={<AguaLimpaPh />} />
 
 
