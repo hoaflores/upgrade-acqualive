@@ -1,19 +1,19 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
-
-const SITE_URL = "https://paginas.acqualive.com.br";
+import { DEFAULT_IMAGE, SITE_URL, findRouteMeta } from "@/seo/routeMeta";
 
 /**
- * Garante que cada rota tenha canonical / og:url / twitter:url apontando
- * para a URL completa do slug atual (nunca para a home), para que a
- * miniatura de compartilhamento (WhatsApp, Telegram, email, redes) seja
- * sempre a da pagina compartilhada.
+ * Head dinamico no navegador. A miniatura de compartilhamento em si vem do
+ * HTML estatico gerado por rota no build (scripts/prerender-meta.ts), porque
+ * os robos de preview nao executam JavaScript.
  */
 const RouteSeo = () => {
   const { pathname, search } = useLocation();
   const path = pathname === "/" ? "" : pathname.replace(/\/+$/, "");
   const canonical = `${SITE_URL}${path}`;
   const fullUrl = `${canonical}${search || ""}`;
+  const meta = findRouteMeta(pathname);
+  const image = meta?.image ?? DEFAULT_IMAGE;
 
   const orgJsonLd = {
     "@context": "https://schema.org",
@@ -40,10 +40,18 @@ const RouteSeo = () => {
       <link rel="canonical" href={canonical} />
       <meta property="og:url" content={fullUrl} />
       <meta name="twitter:url" content={fullUrl} />
+      <meta property="og:image" content={image} />
+      <meta name="twitter:image" content={image} />
+      {meta && <title>{meta.title}</title>}
+      {meta && <meta name="description" content={meta.description} />}
+      {meta && <meta property="og:title" content={meta.title} />}
+      {meta && <meta property="og:description" content={meta.description} />}
+      {meta && <meta name="twitter:title" content={meta.title} />}
+      {meta && <meta name="twitter:description" content={meta.description} />}
+      {meta?.noindex && <meta name="robots" content="noindex, follow" />}
       <script type="application/ld+json">{JSON.stringify(orgJsonLd)}</script>
     </Helmet>
   );
 };
-
 
 export default RouteSeo;
