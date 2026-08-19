@@ -160,7 +160,7 @@ const FormContato = ({ origem = "agua-limpa", paginaLabel = "Água Limpa" }: For
         {enviando ? "Enviando..." : "QUERO FALAR COM A ACQUALIVE"}
       </Button>
       <p className="mt-3 text-center text-xs text-muted-foreground">
-        Seus dados ficam protegidos e são usados apenas para este contato.
+        Seus dados ficam protegidos.
       </p>
     </form>
   );
