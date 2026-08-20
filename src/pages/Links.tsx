@@ -23,6 +23,7 @@ const LINKS: LinkItem[] = [
   { path: "/agua-limpa-ph", title: "Agua Limpa (VSL pH)", description: "Variacao da VSL com video sobre pH da agua.", category: "Ofertas" },
   { path: "/upgrade", title: "Upgrade Acqualive", description: "Oferta de troca do purificador comum pelo Acqualive.", category: "Ofertas" },
   { path: "/acqualive-empresas", title: "Acqualive Empresas", description: "Solucao B2B com simulador de economia e captacao de leads.", category: "Ofertas" },
+  { path: "/old-empresas", title: "Acqualive Empresas (versao antiga)", description: "Replica da pagina empresas.acqualive.com.br migrada para o Lovable.", category: "Ofertas" },
   { path: "/franquias-solo", title: "Franquias Solo", description: "Mapa de franqueados e convite para ser representante.", category: "Negocios" },
   { path: "/programa-de-indicacao", title: "Programa de Indicacao", description: "Indique e ganhe um Kit de Refis completo.", category: "Indicacao" },
   { path: "/acqualive-club", title: "Acqualive Club", description: "Area de vantagens e beneficios para clientes.", category: "Indicacao" },
