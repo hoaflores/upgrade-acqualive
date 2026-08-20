@@ -38,6 +38,7 @@ import EmailMaeNutrida from "./pages/EmailMaeNutrida";
 import MapaSolo from "./pages/MapaSolo";
 import AdminFranqueados from "./pages/AdminFranqueados";
 import AcqualiveEmpresas from "./pages/AcqualiveEmpresas";
+import OldEmpresas from "./pages/OldEmpresas";
 import PortalCientifico from "./pages/PortalCientifico";
 import EstudoDraJuliana from "./pages/EstudoDraJuliana";
 import Links from "./pages/Links";
