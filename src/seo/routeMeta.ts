@@ -198,6 +198,13 @@ export const routeMeta: RouteMeta[] = [
     priority: "0.9",
   },
   {
+    path: "/old-empresas",
+    title: "Acqualive Empresas | A solução ideal para a sua empresa",
+    description:
+      "Mude a água da sua empresa e ganhe mais economia, produtividade e saúde. Compare litragem e custo dos filtros Acqualive.",
+    noindex: true,
+  },
+  {
     path: "/portal-cientifico",
     title: "Portal Científico Acqualive | A ciência da água",
     description:
