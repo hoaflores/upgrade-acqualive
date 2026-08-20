@@ -38,6 +38,7 @@ import EmailMaeNutrida from "./pages/EmailMaeNutrida";
 import MapaSolo from "./pages/MapaSolo";
 import AdminFranqueados from "./pages/AdminFranqueados";
 import AcqualiveEmpresas from "./pages/AcqualiveEmpresas";
+import OldEmpresas from "./pages/OldEmpresas";
 import PortalCientifico from "./pages/PortalCientifico";
 import EstudoDraJuliana from "./pages/EstudoDraJuliana";
 import Links from "./pages/Links";
@@ -95,6 +96,7 @@ const App = () => (
             <Route path="/franquias-solo" element={<MapaSolo />} />
             <Route path="/mapa-solo" element={<Navigate to="/franquias-solo" replace />} />
             <Route path="/acqualive-empresas" element={<AcqualiveEmpresas />} />
+            <Route path="/old-empresas" element={<OldEmpresas />} />
             <Route path="/portal-cientifico" element={<PortalCientifico />} />
             <Route path="/agua-alcalina-inflamacao" element={<EstudoDraJuliana />} />
             <Route path="/agua-alcalina-estudo-cientifico" element={<Navigate to="/agua-alcalina-inflamacao" replace />} />

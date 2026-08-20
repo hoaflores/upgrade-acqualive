@@ -1,0 +1,568 @@
+import { useState } from "react";
+import { Helmet } from "react-helmet-async";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
+
+import logo from "@/assets/old-empresas/logo.jpg.asset.json";
+import bannerTopo from "@/assets/old-empresas/banner-topo1.jpg.asset.json";
+import produtos06 from "@/assets/old-empresas/produtos_06.jpg.asset.json";
+import produtos08 from "@/assets/old-empresas/produtos_08.jpg.asset.json";
+import produtos10 from "@/assets/old-empresas/produtos_10.jpg.asset.json";
+import produtos10b from "@/assets/old-empresas/produtos_10_b.jpg.asset.json";
+import produtos03 from "@/assets/old-empresas/produtos_03.jpg.asset.json";
+import banner2 from "@/assets/old-empresas/banner2.jpg.asset.json";
+import bg3 from "@/assets/old-empresas/bg3.jpg.asset.json";
+import filtros3 from "@/assets/old-empresas/filtros_acqualive3.png.asset.json";
+import filtros2 from "@/assets/old-empresas/filtros_acqualive2.png.asset.json";
+import ligueIcon from "@/assets/old-empresas/ligue.png.asset.json";
+import icone1 from "@/assets/old-empresas/icone1.png.asset.json";
+import icone2 from "@/assets/old-empresas/icone2.png.asset.json";
+import icone3 from "@/assets/old-empresas/icone3.png.asset.json";
+import icone4 from "@/assets/old-empresas/icone4.png.asset.json";
+import icone5 from "@/assets/old-empresas/icone5.png.asset.json";
+import check from "@/assets/old-empresas/check.png.asset.json";
+import niionImg from "@/assets/old-empresas/niion.png.asset.json";
+import dep03 from "@/assets/old-empresas/depoimentos_03.jpg.asset.json";
+import dep04 from "@/assets/old-empresas/depoimentos_04.jpg.asset.json";
+import dep06 from "@/assets/old-empresas/depoimentos_06.jpg.asset.json";
+import dep15 from "@/assets/old-empresas/depoimentos_15.jpg.asset.json";
+import dep11 from "@/assets/old-empresas/depoimentos_11.jpg.asset.json";
+import dep12 from "@/assets/old-empresas/depoimentos_12.jpg.asset.json";
+import selos from "@/assets/old-empresas/selos.jpg.asset.json";
+
+const AZUL = "#1460B6";
+const CINZA = "#8A94A2";
+
+const TELEFONE = "(51) 99343-7359";
+const TELEFONE_LINK = "tel:+5551993437359";
+const TELEFONE_0800 = "0800 605 6501";
+const TELEFONE_0800_LINK = "tel:08006056501";
+
+const PRODUTOS = [
+  {
+    nome: "FRESH V6",
+    imagem: produtos06.url,
+    nota: "*bebedouro não incluído",
+    preco: "R$1.549,00",
+    capacidade: "1500 litros*",
+    litro1: "R$0,61",
+    litro2: "R$0,20**",
+  },
+  {
+    nome: "FRESH V10",
+    imagem: produtos08.url,
+    nota: "*bebedouro não incluído",
+    preco: "R$1.599,00",
+    capacidade: "1500 litros*",
+    litro1: "R$0,63",
+    litro2: "R$0,20**",
+  },
+  {
+    nome: "NIION",
+    imagem: produtos10.url,
+    imagemAlt: produtos10b.url,
+    nota: "",
+    preco: "R$ 2.389,00",
+    capacidade: "8000 litros",
+    litro1: "R$0,29",
+    litro2: "R$0,20**",
+  },
+  {
+    nome: "GALÃO",
+    imagem: produtos03.url,
+    nota: "",
+    preco: "R$12,90",
+    capacidade: "20 litros",
+    litro1: "R$0,64",
+    litro2: "R$0,64",
+  },
+];
+
+const ICONES = [
+  { img: icone1.url, alt: "icone1", texto: <>Nossos produtos atendem diferentes necessidades, para sua <strong>empresa</strong></> },
+  { img: icone2.url, alt: "icone2", texto: <><strong>Compre online ou por telefone</strong> e receba o filtro no seu endereço</> },
+  { img: icone3.url, alt: "icone3", texto: <>Desfrute dos benefícios de consumir uma <strong>água pura, alcalina e ionizada</strong></> },
+  { img: icone4.url, alt: "icone4", texto: <>Uma vez adquirido o filtro, <strong>você só precisa trocar o refil</strong></> },
+  { img: icone5.url, alt: "icone5", texto: <>Parcele seu pedido em <strong>até 10x no cartão</strong> ou economize adquirindo um <strong>combo</strong></> },
+];
+
+const BENEFICIOS_ESQ = [
+  { titulo: "PRATICIDADE", texto: "Água sempre disponível, sem a necessidade de fazer pedidos." },
+  { titulo: "SEGURANÇA", texto: "Evite a circulação de pessoas estranhas no interior da empresa" },
+  { titulo: "PUREZA", texto: "A água de galão pode ser contaminada por agentes externos e o plástico pode ser cancerígeno por causa do Bisfenol-A" },
+];
+
+const BENEFICIOS_DIR = [
+  { titulo: "SAÚDE", texto: "Estudos mostram que a água alcalina ionizada aumenta a imunidade" },
+  { titulo: "ORGANIZAÇÃO", texto: "Evite o acúmulo de galões vazios até a próxima compra" },
+  { titulo: "GARANTIA", texto: "A Acqualive possui todas as certificações para garantir a entrega da melhor água do mundo" },
+];
+
+const DEPOIMENTOS = [
+  {
+    foto: dep03.url,
+    texto:
+      "“Eu já era cliente da Acqualive há mais de um ano por conta dos benefícios da água alcalina para a saúde e o bem-estar da família. Minha empresa está em busca de cuidar, cada vez mais, do funcionário, pois eles são o maior capital de uma empresa. Por isso instalei os filtros para que meus funcionários possam ter uma saúde melhor, isso é muito importante para nós.”",
+    nome: "Leonardo Curioni",
+    cargo: "CEO Sices Solar SP",
+  },
+  {
+    foto: dep04.url,
+    texto:
+      "“Me apaixonei pela Empresa. Eu falo para todos da água alcalina ionizada Acqualive porque, realmente, sou fã.”",
+    nome: "Caroline Du Fernandes",
+    cargo: "Empresária",
+  },
+  {
+    foto: dep06.url,
+    texto:
+      "“Para os resultados em uma academia, a parte de nutrição é muito importante. Por isso, a gente conta com uma água diferenciada, uma água alcalina ionizada que faz com que a gente consiga ter nos nossos alunos e atletas um melhor resultado, isso já é comprovado!”",
+    nome: "Christian Krause",
+    cargo: "Academia Sinergy",
+  },
+  {
+    foto: dep15.url,
+    texto:
+      "“A água não é só ‘tomar água’, qual água? De onde ela vem? Qual a qualidade? É aí que inicia-se tudo. Nós usamos há quase dez anos os filtros da Acqualive. Pra mim a Acqualive foi um divisor de águas, porque há muito tempo eu vinha buscando qualidade nesse quesito de hidratação e água.”",
+    nome: "Silvia Bauer Vitta",
+    cargo: "Centro de Bem-Estar Físico",
+  },
+  {
+    foto: dep11.url,
+    texto:
+      "“Eu utilizo o filtro Acqualive há 6 anos e aqui na clínica todos os pacientes também têm acesso à essa água pura e alcalina para ingerir. Que, além de todos os benefícios de alcalinizar nosso corpo e manter os nutrientes, ela também é uma água que não tem resíduo de sabor.”",
+    nome: "Cláudia Flach Dir. Médica",
+    cargo: "Clínica Cláudia Flach",
+  },
+  {
+    foto: dep12.url,
+    texto:
+      "“Meus pacientes me perguntam: Maribel, qual o filtro que você indica? Eu indico os filtros da Acqualive porque eu confio e não me imagino sem ele. Conheço diversos profissionais que, assim como eu, utilizam e recomendam a Acqualive.”",
+    nome: "Maribel Melos",
+    cargo: "Nutricionista Funcional",
+  },
+];
+
+interface FormProps {
+  variante?: "empilhado" | "linha";
+  origem: string;
+}
+
+const FormMeLigue = ({ variante = "empilhado", origem }: FormProps) => {
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [telefone, setTelefone] = useState("");
+  const [enviando, setEnviando] = useState(false);
+
+  const enviar = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!nome.trim() || !email.trim() || !telefone.trim()) {
+      toast.error("Preencha nome, e-mail e telefone.");
+      return;
+    }
+    setEnviando(true);
+    const { error } = await supabase.from("leads_empresas").insert({
+      nome: nome.trim(),
+      email: email.trim(),
+      telefone: telefone.trim(),
+      empresa: nome.trim(),
+      origem,
+      mensagem: "Solicitou retorno pelo formulario ME LIGUE",
+    });
+    setEnviando(false);
+    if (error) {
+      toast.error("Nao foi possivel enviar. Tente novamente ou ligue para nos.");
+      return;
+    }
+    toast.success("Recebemos seu contato. Em breve ligamos para voce.");
+    setNome("");
+    setEmail("");
+    setTelefone("");
+  };
+
+  const inputClass =
+    "w-full bg-white px-5 py-4 text-[15px] text-[#5b6472] placeholder:text-[#9aa3b0] outline-none border-0";
+
+  if (variante === "linha") {
+    return (
+      <form onSubmit={enviar} className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full">
+        <input className={inputClass} placeholder="Nome" value={nome} onChange={(e) => setNome(e.target.value)} />
+        <input className={inputClass} placeholder="E-mail" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <input className={inputClass} placeholder="DDD+Telefone" value={telefone} onChange={(e) => setTelefone(e.target.value)} />
+        <button
+          type="submit"
+          disabled={enviando}
+          className="bg-white text-[#1460B6] text-xl font-medium tracking-wide py-4 hover:bg-white/90 transition-colors disabled:opacity-60"
+        >
+          {enviando ? "ENVIANDO..." : "ME LIGUE"}
+        </button>
+      </form>
+    );
+  }
+
+  return (
+    <form onSubmit={enviar} className="w-full max-w-[500px] mx-auto space-y-4">
+      <input className={inputClass} placeholder="Nome" value={nome} onChange={(e) => setNome(e.target.value)} />
+      <input className={inputClass} placeholder="E-mail" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+      <input className={inputClass} placeholder="DDD+Telefone" value={telefone} onChange={(e) => setTelefone(e.target.value)} />
+      <button
+        type="submit"
+        disabled={enviando}
+        className="w-full bg-white text-[#1460B6] text-2xl font-medium tracking-wide py-4 hover:bg-white/90 transition-colors disabled:opacity-60"
+      >
+        {enviando ? "ENVIANDO..." : "ME LIGUE"}
+      </button>
+    </form>
+  );
+};
+
+const OldEmpresas = () => {
+  return (
+    <div className="min-h-screen bg-white" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+      <Helmet>
+        <title>Acqualive Empresas | A solução ideal para a sua empresa</title>
+        <meta
+          name="description"
+          content="Mude a água da sua empresa e ganhe mais economia, produtividade e saúde. Compare litragem e custo dos filtros Acqualive."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        />
+      </Helmet>
+
+      {/* HEADER */}
+      <header className="bg-white">
+        <div className="max-w-[1280px] mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <img src={logo.url} alt="Acqualive" className="h-14 w-auto" />
+          <p className="text-lg md:text-2xl tracking-wide uppercase" style={{ color: CINZA }}>
+            a solução ideal <strong style={{ color: AZUL }}>para a sua empresa</strong>
+          </p>
+        </div>
+      </header>
+
+      {/* HERO */}
+      <section className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="bg-white pt-8">
+          <div className="text-center px-6">
+            <p className="uppercase tracking-[0.08em] text-sm md:text-base font-medium" style={{ color: CINZA }}>
+              mude a água da sua empresa
+            </p>
+            <h1
+              className="uppercase text-2xl md:text-4xl font-medium leading-tight mt-2"
+              style={{ color: AZUL }}
+            >
+              e ganhe mais economia,
+              <br />
+              produtividade e saúde
+            </h1>
+          </div>
+          <img src={bannerTopo.url} alt="Purificador Acqualive em ambiente corporativo" className="w-full mt-4" />
+        </div>
+
+        <div className="bg-[#1460B6] text-white flex items-center">
+          <div className="w-full px-6 py-12 lg:py-0 text-center">
+            <p className="uppercase tracking-[0.1em] text-sm md:text-base">ligue</p>
+            <a href={TELEFONE_LINK} className="block text-4xl md:text-6xl font-medium my-2 hover:opacity-90">
+              {TELEFONE}
+            </a>
+            <p className="uppercase text-sm md:text-base mb-8">ou ligamos para você!</p>
+            <FormMeLigue origem="old-empresas-topo" />
+          </div>
+        </div>
+      </section>
+
+      {/* ECONOMIA */}
+      <section className="max-w-[1280px] mx-auto px-6 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <p className="text-2xl md:text-[28px] uppercase leading-snug" style={{ color: CINZA }}>
+            Mais benefícios
+            <br />e maior economia
+            <br />para sua empresa
+          </p>
+          <p className="text-2xl md:text-[28px] uppercase leading-snug" style={{ color: CINZA }}>
+            <span style={{ color: AZUL }}>30% de economia</span>
+            <br />
+            no segundo ano
+          </p>
+          <p className="text-2xl md:text-[28px] uppercase leading-snug" style={{ color: CINZA }}>
+            <span style={{ color: AZUL }}>55% de economia</span>
+            <br />
+            em 5 anos
+          </p>
+        </div>
+
+        <hr className="my-12 border-[#d7dce2]" />
+
+        <h2 className="text-center text-2xl md:text-[32px] uppercase" style={{ color: CINZA }}>
+          Confira os comparativos de <strong style={{ color: AZUL }}>litragem e custo</strong>
+        </h2>
+
+        {/* COMPARATIVO */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+          {PRODUTOS.map((p) => (
+            <div key={p.nome} className="flex flex-col">
+              <div className="relative flex items-end justify-center h-[260px]">
+                <img src={p.imagem} alt={p.nome} className="max-h-[260px] w-auto object-contain relative z-10" />
+              </div>
+              <div className="bg-[#E4E8ED] pt-6 pb-6 text-center">
+                <h3 className="text-2xl uppercase" style={{ color: "#4b5563" }}>
+                  {p.nome}
+                </h3>
+                {p.nota && <p className="text-[11px] mt-1" style={{ color: CINZA }}>{p.nota}</p>}
+              </div>
+              <div className="bg-[#E4E8ED] mt-2 py-6 text-center space-y-5">
+                <div>
+                  <p className="text-[11px] uppercase tracking-wide" style={{ color: "#6b7280" }}>preço</p>
+                  <p className="text-xl font-medium" style={{ color: AZUL }}>{p.preco}</p>
+                </div>
+                <div>
+                  <p className="text-[11px] uppercase tracking-wide" style={{ color: "#6b7280" }}>capacidade</p>
+                  <p className="text-xl font-medium" style={{ color: AZUL }}>{p.capacidade}</p>
+                </div>
+                <div>
+                  <p className="text-[11px] uppercase tracking-wide" style={{ color: "#6b7280" }}>
+                    valor/litro
+                    <br />
+                    <span className="text-[10px]">1º ANO</span>
+                  </p>
+                  <p className="text-xl font-medium" style={{ color: AZUL }}>{p.litro1}</p>
+                </div>
+                <div>
+                  <p className="text-[11px] uppercase tracking-wide" style={{ color: "#6b7280" }}>
+                    valor/litro
+                    <br />
+                    <span className="text-[10px]">A PARTIR DO 2º ANO</span>
+                  </p>
+                  <p className="text-xl font-medium" style={{ color: AZUL }}>{p.litro2}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-right text-[11px] uppercase mt-4 leading-relaxed" style={{ color: CINZA }}>
+          <p>* capacidade representa a vida útil dos refis</p>
+          <p>** baseado no valor de troca dos refis</p>
+        </div>
+      </section>
+
+      {/* PRODUTIVIDADE */}
+      <section className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
+        <div>
+          <img src={banner2.url} alt="Equipe trabalhando em escritório" className="w-full h-auto object-cover" />
+        </div>
+        <div className="px-6 lg:pr-16 max-w-[620px]">
+          <h2 className="text-3xl md:text-[40px] uppercase leading-tight" style={{ color: CINZA }}>
+            Você sabia que
+            <br />
+            <span style={{ color: AZUL }}>a água</span> pode <span style={{ color: AZUL }}>influenciar</span>
+            <br />
+            na <span style={{ color: AZUL }}>produtividade no trabalho</span>?
+          </h2>
+          <p className="mt-8 text-[15px] leading-relaxed" style={{ color: "#5b6472" }}>
+            A falta de hidratação pode provocar uma redução súbita de pressão e um aumento do esforço cardiovascular.
+            Alguns sintomas comuns desse quadro são dores de cabeça, cansaço e diminuição da capacidade de concentração.
+            Quem trabalha em ambiente fechado com ar-condicionado precisa tomar ainda mais cuidado.
+          </p>
+          <p className="mt-4 text-[15px] leading-relaxed" style={{ color: "#5b6472" }}>
+            Um bom truque é manter sempre um copo ou garrafa reutilizável em sua mesa ou posto de trabalho. Além disso, é
+            preciso que se tenha acesso à uma água de qualidade. A água ionizada é leve e capaz de hidratação, oferecendo
+            muito mais energia para o seu dia a dia.
+          </p>
+        </div>
+      </section>
+
+      {/* AGUA ALCALINA SEMPRE A MAO */}
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-end max-w-[1280px] mx-auto px-6 py-16">
+        <div className="max-w-[420px] mx-auto lg:mx-0 text-[15px] leading-relaxed" style={{ color: "#5b6472" }}>
+          <p>
+            <strong style={{ color: AZUL }}>
+              A Acqualive possibilita o tratamento de água da forma mais completa e garante que você tenha à mão uma
+              água alcalina, antioxidante, pura, magnesiana e hidratante.
+            </strong>{" "}
+            Pensando em oferecer mais facilidade na hora do consumo, a Acqualive desenvolveu uma linha de produtos capaz
+            de transformar a água da torneira na água ideal para a saúde.
+          </p>
+          <p className="mt-4">
+            Além disso, também oferece uma variada linha de filtros, que atendem diferentes necessidades.
+          </p>
+          <p className="mt-4">
+            Converse com nossos consultores e descubra qual a melhor solução para atender as necessidades da sua
+            empresa.
+          </p>
+        </div>
+        <div className="relative">
+          <img src={bg3.url} alt="Copo com água alcalina" className="w-full h-auto object-contain" />
+          <h2 className="text-3xl md:text-[42px] uppercase leading-tight text-right mt-4" style={{ color: CINZA }}>
+            água alcalina
+            <br />
+            ionizada <span style={{ color: AZUL }}>sempre</span>
+            <br />
+            <span style={{ color: AZUL }}>à mão</span>
+          </h2>
+        </div>
+      </section>
+
+      {/* FILTRO IDEAL */}
+      <section className="pt-8">
+        <h2 className="text-center text-3xl md:text-[42px] uppercase leading-tight px-6" style={{ color: CINZA }}>
+          Descubra <span style={{ color: AZUL }}>o filtro ideal</span>
+          <br />
+          para sua empresa
+        </h2>
+        <div className="mt-8">
+          <img src={filtros3.url} alt="Linha de filtros Acqualive" className="w-full max-w-[1100px] mx-auto" />
+        </div>
+      </section>
+
+      {/* LIGUE AZUL */}
+      <section className="bg-[#1460B6] text-white relative">
+        <div className="max-w-[1280px] mx-auto px-6 -mt-6">
+          <img src={filtros2.url} alt="Filtros Acqualive" className="w-full max-w-[1100px] mx-auto -translate-y-16" />
+        </div>
+        <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 -mt-10 pb-14">
+          <div className="text-center">
+            <img src={ligueIcon.url} alt="" className="h-14 w-auto mx-auto" />
+            <h2 className="text-5xl md:text-6xl mt-4">LIGUE</h2>
+            <hr className="border-white/50 max-w-[280px] mx-auto my-5" />
+            <a href={TELEFONE_LINK} className="block text-4xl md:text-5xl hover:opacity-90">
+              {TELEFONE}
+            </a>
+            <hr className="border-white/50 max-w-[280px] mx-auto my-5" />
+            <p className="uppercase text-sm md:text-base leading-relaxed">
+              Horário de Atendimento:
+              <br />
+              Seg a Sex: 9h às 19h – Sáb: 9h às 12h
+            </p>
+          </div>
+          <div className="bg-white/10 p-8 lg:p-10">
+            <p className="text-right uppercase text-lg md:text-xl mb-6">
+              ou <strong>nós ligamos pra você</strong>
+            </p>
+            <FormMeLigue origem="old-empresas-meio" />
+          </div>
+        </div>
+
+        {/* ICONES */}
+        <div className="max-w-[1280px] mx-auto px-6 pb-14 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 divide-y sm:divide-y-0 sm:divide-x divide-white/25">
+          {ICONES.map((i) => (
+            <div key={i.alt} className="px-6 py-6 text-center">
+              <img src={i.img} alt={i.alt} className="h-16 w-auto mx-auto" />
+              <p className="mt-4 text-[15px] leading-snug">{i.texto}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* OUTROS BENEFICIOS */}
+      <section className="max-w-[1280px] mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          <div className="space-y-12 lg:text-right order-2 lg:order-1">
+            {BENEFICIOS_ESQ.map((b) => (
+              <div key={b.titulo}>
+                <img src={check.url} alt="" className="h-10 w-auto lg:ml-auto" />
+                <h3 className="text-2xl tracking-[0.12em] mt-2" style={{ color: AZUL }}>
+                  {b.titulo}
+                </h3>
+                <p className="mt-2 text-[15px] leading-snug" style={{ color: "#5b6472" }}>
+                  {b.texto}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="order-1 lg:order-2 text-center">
+            <h2 className="text-3xl md:text-[38px] uppercase" style={{ color: CINZA }}>
+              outros <strong style={{ color: AZUL }}>benefícios</strong>
+            </h2>
+            <img src={niionImg.url} alt="Refis Acqualive NIION" className="w-full max-w-[420px] mx-auto mt-6" />
+          </div>
+
+          <div className="space-y-12 order-3">
+            {BENEFICIOS_DIR.map((b) => (
+              <div key={b.titulo}>
+                <img src={check.url} alt="" className="h-10 w-auto" />
+                <h3 className="text-2xl tracking-[0.12em] mt-2" style={{ color: AZUL }}>
+                  {b.titulo}
+                </h3>
+                <p className="mt-2 text-[15px] leading-snug" style={{ color: "#5b6472" }}>
+                  {b.texto}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* DEPOIMENTOS */}
+      <section className="max-w-[1280px] mx-auto px-6 pb-16">
+        <h2 className="text-center text-3xl md:text-[38px] uppercase font-medium" style={{ color: AZUL }}>
+          Opinião de quem usa
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12">
+          {DEPOIMENTOS.map((d) => (
+            <div key={d.nome} className="text-center">
+              <img
+                src={d.foto}
+                alt={d.nome}
+                className="w-[230px] h-[230px] rounded-full object-cover mx-auto"
+                loading="lazy"
+              />
+              <p className="mt-6 text-[15px] leading-relaxed" style={{ color: "#5b6472" }}>
+                {d.texto}
+              </p>
+              <p className="mt-6 font-medium leading-snug" style={{ color: AZUL }}>
+                {d.nome}
+                <br />
+                {d.cargo}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* FAIXA FINAL */}
+      <section className="bg-[#1460B6] text-white py-10">
+        <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+          <div className="text-center">
+            <p className="uppercase text-lg">ligue para nós</p>
+            <a href={TELEFONE_LINK} className="block text-3xl md:text-4xl mt-2 hover:opacity-90">
+              {TELEFONE}
+            </a>
+          </div>
+          <div className="lg:col-span-2">
+            <p className="uppercase text-lg mb-4">ou ligamos para você</p>
+            <FormMeLigue variante="linha" origem="old-empresas-rodape" />
+          </div>
+        </div>
+      </section>
+
+      {/* RODAPE */}
+      <footer className="bg-white py-10">
+        <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <div className="flex flex-wrap gap-10 uppercase text-sm" style={{ color: AZUL }}>
+              <a href="/politica-de-privacidade" className="hover:underline">política de privacidade</a>
+              <a href="/termos-de-uso" className="hover:underline">termos de uso</a>
+            </div>
+            <p className="mt-6 uppercase text-sm leading-relaxed" style={{ color: CINZA }}>
+              CNPJ: 20.158.447/0001-09
+              <br />
+              Acqualive © Todos os direitos reservados.
+            </p>
+            <p className="mt-4 text-sm" style={{ color: CINZA }}>
+              <a href={TELEFONE_0800_LINK} className="hover:underline">{TELEFONE_0800}</a>
+            </p>
+          </div>
+          <div className="flex lg:justify-end">
+            <img src={selos.url} alt="Selos Loja Confiável e Reclame Aqui" className="h-24 w-auto" loading="lazy" />
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default OldEmpresas;
