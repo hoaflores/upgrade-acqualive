@@ -306,7 +306,7 @@ const OldEmpresas = () => {
               <div className="relative flex items-end justify-center h-[260px]">
                 <img src={p.imagem} alt={p.nome} className="max-h-[260px] w-auto object-contain relative z-10" />
               </div>
-              <div className="bg-[#E4E8ED] pt-6 pb-6 text-center -mt-14 pt-20">
+              <div className="bg-[#E4E8ED] pt-6 pb-6 text-center">
                 <h3 className="text-2xl uppercase" style={{ color: "#4b5563" }}>
                   {p.nome}
                 </h3>
