@@ -95,6 +95,7 @@ const App = () => (
             <Route path="/franquias-solo" element={<MapaSolo />} />
             <Route path="/mapa-solo" element={<Navigate to="/franquias-solo" replace />} />
             <Route path="/acqualive-empresas" element={<AcqualiveEmpresas />} />
+            <Route path="/old-empresas" element={<OldEmpresas />} />
             <Route path="/portal-cientifico" element={<PortalCientifico />} />
             <Route path="/agua-alcalina-inflamacao" element={<EstudoDraJuliana />} />
             <Route path="/agua-alcalina-estudo-cientifico" element={<Navigate to="/agua-alcalina-inflamacao" replace />} />
