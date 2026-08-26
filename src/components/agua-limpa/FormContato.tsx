@@ -25,6 +25,8 @@ interface FormContatoProps {
   paginaLabel?: string;
   /** Numero do WhatsApp para o CTA (somente digitos, com DDD e DDI) */
   whatsappNumber?: string;
+  /** Nome do contato que aparece na saudacao da mensagem do WhatsApp */
+  contatoNome?: string;
 }
 
 /** Formulario simples de contato liberado apos um terco do video. */
