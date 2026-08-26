@@ -78,7 +78,7 @@ const FormContato = ({ origem = "agua-limpa", paginaLabel = "Água Limpa", whats
       return;
     }
 
-    const texto = "Oi, Laura! Gostaria de entender melhor como cuidar da água da minha família.";
+    const texto = `Oi, ${contatoNome}! Gostaria de entender melhor como cuidar da água da minha família.`;
     const waUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(texto)}`;
     // A aba precisa ser aberta no mesmo gesto do usuario, senao o mobile bloqueia.
     const janela = window.open("", "_blank");
