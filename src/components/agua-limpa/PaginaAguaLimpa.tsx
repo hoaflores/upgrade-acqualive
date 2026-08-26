@@ -21,6 +21,8 @@ interface PaginaAguaLimpaProps {
   vertical?: boolean;
   /** Numero do WhatsApp para o CTA (somente digitos, com DDD e DDI) */
   whatsappNumber?: string;
+  /** Nome do contato que aparece na saudacao da mensagem do WhatsApp */
+  contatoNome?: string;
 }
 
 /** Layout mobile-first da VSL Agua Limpa, reutilizado pelas variacoes de video. */
