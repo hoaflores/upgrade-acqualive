@@ -35,6 +35,7 @@ const PaginaAguaLimpa = ({
   posterUrl,
   vertical,
   whatsappNumber,
+  contatoNome,
 }: PaginaAguaLimpaProps) => {
   const [liberado, setLiberado] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
