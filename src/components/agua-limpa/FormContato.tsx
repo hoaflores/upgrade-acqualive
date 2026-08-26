@@ -28,7 +28,7 @@ interface FormContatoProps {
 }
 
 /** Formulario simples de contato liberado apos um terco do video. */
-const FormContato = ({ origem = "agua-limpa", paginaLabel = "Água Limpa" }: FormContatoProps) => {
+const FormContato = ({ origem = "agua-limpa", paginaLabel = "Água Limpa", whatsappNumber = DEFAULT_WHATSAPP }: FormContatoProps) => {
   const { toast } = useToast();
   const [enviando, setEnviando] = useState(false);
   const [form, setForm] = useState({ nome: "", telefone: "", email: "" });
