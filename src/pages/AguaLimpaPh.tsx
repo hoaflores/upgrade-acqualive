@@ -10,6 +10,7 @@ const AguaLimpaPh = () => (
     vertical
     origem="agua-limpa-ph"
     paginaLabel="Água Limpa (pH)"
+    whatsappNumber="5551994896709"
   />
 );
 
