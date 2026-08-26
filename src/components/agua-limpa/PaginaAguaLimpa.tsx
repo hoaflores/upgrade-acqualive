@@ -19,6 +19,8 @@ interface PaginaAguaLimpaProps {
   posterUrl?: string;
   /** Video vertical (Reels) */
   vertical?: boolean;
+  /** Numero do WhatsApp para o CTA (somente digitos, com DDD e DDI) */
+  whatsappNumber?: string;
 }
 
 /** Layout mobile-first da VSL Agua Limpa, reutilizado pelas variacoes de video. */
