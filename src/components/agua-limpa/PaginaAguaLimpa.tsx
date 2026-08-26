@@ -21,6 +21,8 @@ interface PaginaAguaLimpaProps {
   vertical?: boolean;
   /** Numero do WhatsApp para o CTA (somente digitos, com DDD e DDI) */
   whatsappNumber?: string;
+  /** Nome do contato que aparece na saudacao da mensagem do WhatsApp */
+  contatoNome?: string;
 }
 
 /** Layout mobile-first da VSL Agua Limpa, reutilizado pelas variacoes de video. */
@@ -33,6 +35,7 @@ const PaginaAguaLimpa = ({
   posterUrl,
   vertical,
   whatsappNumber,
+  contatoNome,
 }: PaginaAguaLimpaProps) => {
   const [liberado, setLiberado] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
@@ -92,7 +95,7 @@ const PaginaAguaLimpa = ({
         </section>
 
         <div ref={formRef} className="mt-8 scroll-mt-6">
-          {liberado && <FormContato origem={origem} paginaLabel={paginaLabel} whatsappNumber={whatsappNumber} />}
+          {liberado && <FormContato origem={origem} paginaLabel={paginaLabel} whatsappNumber={whatsappNumber} contatoNome={contatoNome} />}
         </div>
       </div>
     </main>

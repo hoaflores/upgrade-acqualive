@@ -25,10 +25,12 @@ interface FormContatoProps {
   paginaLabel?: string;
   /** Numero do WhatsApp para o CTA (somente digitos, com DDD e DDI) */
   whatsappNumber?: string;
+  /** Nome do contato que aparece na saudacao da mensagem do WhatsApp */
+  contatoNome?: string;
 }
 
 /** Formulario simples de contato liberado apos um terco do video. */
-const FormContato = ({ origem = "agua-limpa", paginaLabel = "Água Limpa", whatsappNumber = DEFAULT_WHATSAPP }: FormContatoProps) => {
+const FormContato = ({ origem = "agua-limpa", paginaLabel = "Água Limpa", whatsappNumber = DEFAULT_WHATSAPP, contatoNome = "Laura" }: FormContatoProps) => {
   const { toast } = useToast();
   const [enviando, setEnviando] = useState(false);
   const [form, setForm] = useState({ nome: "", telefone: "", email: "" });
@@ -76,7 +78,7 @@ const FormContato = ({ origem = "agua-limpa", paginaLabel = "Água Limpa", whats
       return;
     }
 
-    const texto = "Oi, Laura! Gostaria de entender melhor como cuidar da água da minha família.";
+    const texto = `Oi, ${contatoNome}! Gostaria de entender melhor como cuidar da água da minha família.`;
     const waUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(texto)}`;
     // A aba precisa ser aberta no mesmo gesto do usuario, senao o mobile bloqueia.
     const janela = window.open("", "_blank");
