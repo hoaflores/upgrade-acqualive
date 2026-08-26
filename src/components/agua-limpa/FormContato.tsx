@@ -16,17 +16,19 @@ const schema = z.object({
   email: z.string().trim().email("Informe um e-mail válido").max(255).or(z.literal("")),
 });
 
-const WHATSAPP = "5511940689011";
+const DEFAULT_WHATSAPP = "5511940689011";
 
 interface FormContatoProps {
   /** Identificador da origem do lead (rota/campanha) */
   origem?: string;
   /** Nome amigavel da pagina para a mensagem do WhatsApp */
   paginaLabel?: string;
+  /** Numero do WhatsApp para o CTA (somente digitos, com DDD e DDI) */
+  whatsappNumber?: string;
 }
 
 /** Formulario simples de contato liberado apos um terco do video. */
-const FormContato = ({ origem = "agua-limpa", paginaLabel = "Água Limpa" }: FormContatoProps) => {
+const FormContato = ({ origem = "agua-limpa", paginaLabel = "Água Limpa", whatsappNumber = DEFAULT_WHATSAPP }: FormContatoProps) => {
   const { toast } = useToast();
   const [enviando, setEnviando] = useState(false);
   const [form, setForm] = useState({ nome: "", telefone: "", email: "" });
@@ -75,7 +77,7 @@ const FormContato = ({ origem = "agua-limpa", paginaLabel = "Água Limpa" }: For
     }
 
     const texto = "Oi, Laura! Gostaria de entender melhor como cuidar da água da minha família.";
-    const waUrl = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`;
+    const waUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(texto)}`;
     // A aba precisa ser aberta no mesmo gesto do usuario, senao o mobile bloqueia.
     const janela = window.open("", "_blank");
 
