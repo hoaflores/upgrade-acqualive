@@ -32,6 +32,7 @@ const PaginaAguaLimpa = ({
   videoUrl,
   posterUrl,
   vertical,
+  whatsappNumber,
 }: PaginaAguaLimpaProps) => {
   const [liberado, setLiberado] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
