@@ -95,7 +95,7 @@ const PaginaAguaLimpa = ({
         </section>
 
         <div ref={formRef} className="mt-8 scroll-mt-6">
-          {liberado && <FormContato origem={origem} paginaLabel={paginaLabel} whatsappNumber={whatsappNumber} />}
+          {liberado && <FormContato origem={origem} paginaLabel={paginaLabel} whatsappNumber={whatsappNumber} contatoNome={contatoNome} />}
         </div>
       </div>
     </main>
