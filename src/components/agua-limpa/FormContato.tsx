@@ -16,13 +16,15 @@ const schema = z.object({
   email: z.string().trim().email("Informe um e-mail válido").max(255).or(z.literal("")),
 });
 
-const WHATSAPP = "5511940689011";
+const DEFAULT_WHATSAPP = "5511940689011";
 
 interface FormContatoProps {
   /** Identificador da origem do lead (rota/campanha) */
   origem?: string;
   /** Nome amigavel da pagina para a mensagem do WhatsApp */
   paginaLabel?: string;
+  /** Numero do WhatsApp para o CTA (somente digitos, com DDD e DDI) */
+  whatsappNumber?: string;
 }
 
 /** Formulario simples de contato liberado apos um terco do video. */
