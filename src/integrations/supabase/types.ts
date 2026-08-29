@@ -14,6 +14,122 @@ export type Database = {
   }
   public: {
     Tables: {
+      aulas: {
+        Row: {
+          amostra_gratis: boolean
+          created_at: string
+          descricao: string | null
+          duracao_seg: number
+          id: string
+          material_url: string | null
+          modulo_id: string
+          ordem: number
+          thumb_url: string | null
+          titulo: string
+          updated_at: string
+          video_id: string | null
+          video_provider: string
+        }
+        Insert: {
+          amostra_gratis?: boolean
+          created_at?: string
+          descricao?: string | null
+          duracao_seg?: number
+          id?: string
+          material_url?: string | null
+          modulo_id: string
+          ordem?: number
+          thumb_url?: string | null
+          titulo: string
+          updated_at?: string
+          video_id?: string | null
+          video_provider?: string
+        }
+        Update: {
+          amostra_gratis?: boolean
+          created_at?: string
+          descricao?: string | null
+          duracao_seg?: number
+          id?: string
+          material_url?: string | null
+          modulo_id?: string
+          ordem?: number
+          thumb_url?: string | null
+          titulo?: string
+          updated_at?: string
+          video_id?: string | null
+          video_provider?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "aulas_modulo_id_fkey"
+            columns: ["modulo_id"]
+            isOneToOne: false
+            referencedRelation: "modulos"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      cursos: {
+        Row: {
+          banner_url: string | null
+          capa_url: string | null
+          categoria: string
+          checkout_url: string | null
+          created_at: string
+          descricao: string | null
+          destaque: boolean
+          gratuito: boolean
+          id: string
+          nivel: string
+          ordem: number
+          preco_centavos: number
+          publicado: boolean
+          slug: string
+          subtitulo: string | null
+          titulo: string
+          updated_at: string
+        }
+        Insert: {
+          banner_url?: string | null
+          capa_url?: string | null
+          categoria?: string
+          checkout_url?: string | null
+          created_at?: string
+          descricao?: string | null
+          destaque?: boolean
+          gratuito?: boolean
+          id?: string
+          nivel?: string
+          ordem?: number
+          preco_centavos?: number
+          publicado?: boolean
+          slug: string
+          subtitulo?: string | null
+          titulo: string
+          updated_at?: string
+        }
+        Update: {
+          banner_url?: string | null
+          capa_url?: string | null
+          categoria?: string
+          checkout_url?: string | null
+          created_at?: string
+          descricao?: string | null
+          destaque?: boolean
+          gratuito?: boolean
+          id?: string
+          nivel?: string
+          ordem?: number
+          preco_centavos?: number
+          publicado?: boolean
+          slug?: string
+          subtitulo?: string | null
+          titulo?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       demanda_anexos: {
         Row: {
           created_at: string
@@ -225,6 +341,128 @@ export type Database = {
         }
         Relationships: []
       }
+      feed_posts: {
+        Row: {
+          autor_nome: string
+          categoria: string
+          conteudo: string
+          created_at: string
+          fixado: boolean
+          id: string
+          imagem_url: string | null
+          link_url: string | null
+          publicado: boolean
+          resumo: string | null
+          titulo: string
+          updated_at: string
+        }
+        Insert: {
+          autor_nome?: string
+          categoria?: string
+          conteudo?: string
+          created_at?: string
+          fixado?: boolean
+          id?: string
+          imagem_url?: string | null
+          link_url?: string | null
+          publicado?: boolean
+          resumo?: string | null
+          titulo: string
+          updated_at?: string
+        }
+        Update: {
+          autor_nome?: string
+          categoria?: string
+          conteudo?: string
+          created_at?: string
+          fixado?: boolean
+          id?: string
+          imagem_url?: string | null
+          link_url?: string | null
+          publicado?: boolean
+          resumo?: string | null
+          titulo?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      forum_respostas: {
+        Row: {
+          autor_id: string
+          autor_nome: string
+          conteudo: string
+          created_at: string
+          id: string
+          topico_id: string
+          updated_at: string
+        }
+        Insert: {
+          autor_id: string
+          autor_nome?: string
+          conteudo: string
+          created_at?: string
+          id?: string
+          topico_id: string
+          updated_at?: string
+        }
+        Update: {
+          autor_id?: string
+          autor_nome?: string
+          conteudo?: string
+          created_at?: string
+          id?: string
+          topico_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "forum_respostas_topico_id_fkey"
+            columns: ["topico_id"]
+            isOneToOne: false
+            referencedRelation: "forum_topicos"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      forum_topicos: {
+        Row: {
+          autor_id: string
+          autor_nome: string
+          categoria: string
+          conteudo: string
+          created_at: string
+          fechado: boolean
+          fixado: boolean
+          id: string
+          titulo: string
+          updated_at: string
+        }
+        Insert: {
+          autor_id: string
+          autor_nome?: string
+          categoria?: string
+          conteudo: string
+          created_at?: string
+          fechado?: boolean
+          fixado?: boolean
+          id?: string
+          titulo: string
+          updated_at?: string
+        }
+        Update: {
+          autor_id?: string
+          autor_nome?: string
+          categoria?: string
+          conteudo?: string
+          created_at?: string
+          fechado?: boolean
+          fixado?: boolean
+          id?: string
+          titulo?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       franqueados: {
         Row: {
           ativo: boolean
@@ -402,6 +640,169 @@ export type Database = {
         }
         Relationships: []
       }
+      matriculas: {
+        Row: {
+          ativa: boolean
+          created_at: string
+          curso_id: string
+          expira_em: string | null
+          id: string
+          origem: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          ativa?: boolean
+          created_at?: string
+          curso_id: string
+          expira_em?: string | null
+          id?: string
+          origem?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          ativa?: boolean
+          created_at?: string
+          curso_id?: string
+          expira_em?: string | null
+          id?: string
+          origem?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "matriculas_curso_id_fkey"
+            columns: ["curso_id"]
+            isOneToOne: false
+            referencedRelation: "cursos"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      membros: {
+        Row: {
+          avatar_url: string | null
+          bio: string | null
+          cidade: string | null
+          created_at: string
+          email: string
+          id: string
+          nome: string
+          updated_at: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          bio?: string | null
+          cidade?: string | null
+          created_at?: string
+          email?: string
+          id: string
+          nome?: string
+          updated_at?: string
+        }
+        Update: {
+          avatar_url?: string | null
+          bio?: string | null
+          cidade?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          nome?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      modulos: {
+        Row: {
+          created_at: string
+          curso_id: string
+          descricao: string | null
+          id: string
+          ordem: number
+          titulo: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          curso_id: string
+          descricao?: string | null
+          id?: string
+          ordem?: number
+          titulo: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          curso_id?: string
+          descricao?: string | null
+          id?: string
+          ordem?: number
+          titulo?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "modulos_curso_id_fkey"
+            columns: ["curso_id"]
+            isOneToOne: false
+            referencedRelation: "cursos"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      produtos: {
+        Row: {
+          ativo: boolean
+          categoria: string
+          checkout_url: string | null
+          created_at: string
+          descricao: string | null
+          destaque: boolean
+          id: string
+          imagem_url: string | null
+          nome: string
+          ordem: number
+          preco_centavos: number
+          preco_de_centavos: number | null
+          slug: string
+          updated_at: string
+        }
+        Insert: {
+          ativo?: boolean
+          categoria?: string
+          checkout_url?: string | null
+          created_at?: string
+          descricao?: string | null
+          destaque?: boolean
+          id?: string
+          imagem_url?: string | null
+          nome: string
+          ordem?: number
+          preco_centavos?: number
+          preco_de_centavos?: number | null
+          slug: string
+          updated_at?: string
+        }
+        Update: {
+          ativo?: boolean
+          categoria?: string
+          checkout_url?: string | null
+          created_at?: string
+          descricao?: string | null
+          destaque?: boolean
+          id?: string
+          imagem_url?: string | null
+          nome?: string
+          ordem?: number
+          preco_centavos?: number
+          preco_de_centavos?: number | null
+          slug?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           aprovado: boolean
@@ -434,6 +835,44 @@ export type Database = {
           updated_at?: string
         }
         Relationships: []
+      }
+      progresso_aulas: {
+        Row: {
+          aula_id: string
+          concluida: boolean
+          created_at: string
+          id: string
+          segundos_assistidos: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          aula_id: string
+          concluida?: boolean
+          created_at?: string
+          id?: string
+          segundos_assistidos?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          aula_id?: string
+          concluida?: boolean
+          created_at?: string
+          id?: string
+          segundos_assistidos?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "progresso_aulas_aula_id_fkey"
+            columns: ["aula_id"]
+            isOneToOne: false
+            referencedRelation: "aulas"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       user_roles: {
         Row: {
