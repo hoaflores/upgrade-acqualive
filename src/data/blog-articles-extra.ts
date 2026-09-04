@@ -2783,7 +2783,7 @@ const article21 = {
   <p>Sem contar o peso, o preço acumulado ao longo dos anos e o fato de que a água acaba justamente quando ninguém está em casa para trocar.</p>
 
   <h2 id="o-que-fazer">O que fazer agora, na prática</h2>
-  <ol class="numbered-list">
+  <ol>
     <li><strong>Confira o lote:</strong> se você comprou água mineral recentemente, verifique marca e lote antes de consumir.</li>
     <li><strong>Não descarte a embalagem</strong> de um produto suspeito. Ela é a prova para troca e para a vigilância sanitária.</li>
     <li><strong>Evite deixar garrafa plástica no sol</strong> ou no porta-malas do carro.</li>
@@ -2798,10 +2798,10 @@ const article21 = {
 
   <p>Se você quer entender a diferença entre um Purificador Comum e a tecnologia de ionização, comece pelo nosso guia <a href="https://blog.acqualive.com.br/qual-melhor-filtro-de-agua/" target="_blank">Qual é o melhor filtro de água?</a>.</p>
 
-  <div class="final-cta">
-    <h3>Pare de comprar água. Comece a produzir a sua.</h3>
+  <div class="cta-section">
+    <h2>Pare de comprar água. Comece a <span>produzir a sua</span></h2>
     <p>Purificadores Acqualive com água alcalina, mineralizada e livre de cloro. Em até 10x sem juros e com frete grátis. Consulte regiões disponíveis.</p>
-    <a href="https://acqualive.com.br" target="_blank" rel="noopener">Ver os purificadores Acqualive →</a>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Ver os purificadores Acqualive →</a>
   </div>
 
   <div class="related-links">
