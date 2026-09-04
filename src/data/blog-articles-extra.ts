@@ -2677,7 +2677,6 @@ const article20 = {
   )
 };
 
-export const EXTRA_ARTICLES = [article6, article7, article8, article9, article10, article11, article12, article13, article14, article15, article16, article17, article18, article19, article20, article21];
 
 // ============================================================
 // ARTIGO 21 (card 22) — Anvisa interdita agua mineral por coliformes
@@ -2816,3 +2815,5 @@ const article21 = {
 </main>`
   )
 };
+
+export const EXTRA_ARTICLES = [article6, article7, article8, article9, article10, article11, article12, article13, article14, article15, article16, article17, article18, article19, article20, article21];
