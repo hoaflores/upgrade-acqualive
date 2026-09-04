@@ -2677,4 +2677,143 @@ const article20 = {
   )
 };
 
-export const EXTRA_ARTICLES = [article6, article7, article8, article9, article10, article11, article12, article13, article14, article15, article16, article17, article18, article19, article20];
+
+// ============================================================
+// ARTIGO 21 (card 22) — Anvisa interdita agua mineral por coliformes
+// ============================================================
+const article21 = {
+  title: "Anvisa interdita água mineral por coliformes: o que isso revela sobre a água que você compra engarrafada",
+  slug: "anvisa-interdita-agua-mineral-coliformes",
+  html: wrap(
+    `<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anvisa Interdita Água Mineral por Coliformes: O Que Isso Significa | Acqualive</title>
+<meta name="description" content="A Anvisa interditou uma marca de água mineral após detectar coliformes totais. Entenda o que são coliformes, por que água engarrafada não é sinônimo de pureza e como garantir água segura em casa.">
+<meta name="keywords" content="anvisa agua mineral, coliformes na agua, agua mineral contaminada, agua engarrafada segura, purificador de agua, agua alcalina, Acqualive, qualidade da agua">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Acqualive">
+<link rel="canonical" href="https://blog.acqualive.com.br/anvisa-interdita-agua-mineral-coliformes/">
+<meta property="og:title" content="Anvisa interdita água mineral por coliformes: o que isso revela sobre a água engarrafada">
+<meta property="og:description" content="Lacre, rótulo e marca conhecida não são garantia de pureza. Entenda o caso, o risco dos coliformes e o que fazer para ter água segura todos os dias.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/agua-mineral-contaminada.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Anvisa interdita água mineral por coliformes: o que isso revela sobre a água que você compra engarrafada","description":"Análise do caso de interdição de água mineral pela Anvisa em setembro de 2026, o que são coliformes totais e como garantir água segura em casa.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-09-04","dateModified":"2026-09-04","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/agua-mineral-contaminada.jpg"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"O que são coliformes totais na água?","acceptedAnswer":{"@type":"Answer","text":"Coliformes totais são um grupo de bactérias usado como indicador de qualidade da água. A presença delas não significa necessariamente doença imediata, mas indica falha de higiene, de envase ou de proteção da fonte, e sinaliza que outros micro-organismos podem ter entrado no produto."}},
+{"@type":"Question","name":"Água mineral engarrafada é sempre segura?","acceptedAnswer":{"@type":"Answer","text":"Não. A água mineral passa por controle sanitário, mas depende de fonte protegida, higiene da linha de envase, transporte e armazenamento corretos. Interdições cautelares da Anvisa mostram que falhas acontecem, e o consumidor só descobre depois que o produto já foi vendido."}},
+{"@type":"Question","name":"Como saber se a água que eu bebo está contaminada?","acceptedAnswer":{"@type":"Answer","text":"A contaminação microbiológica não muda cor, cheiro nem sabor na maioria dos casos. Por isso o controle depende de laudo laboratorial. Em casa, a proteção prática é usar um purificador com elemento filtrante certificado e trocar o refil no prazo indicado pelo fabricante."}},
+{"@type":"Question","name":"Purificador de água resolve o problema de bactérias?","acceptedAnswer":{"@type":"Answer","text":"Um purificador com elemento filtrante certificado retém partículas, cloro e contaminantes e reduz a carga bacteriana da água tratada que chega pela rede. O ponto central é manter a manutenção em dia, porque um refil vencido deixa de proteger."}},
+{"@type":"Question","name":"O que fazer se eu comprei um lote interditado?","acceptedAnswer":{"@type":"Answer","text":"Não consuma o produto, guarde a embalagem com o número do lote, procure o ponto de venda para troca ou reembolso e registre a ocorrência na vigilância sanitária local."}}
+]}
+</script>`,
+    `<header class="article-header">
+  <div class="header-inner">
+    <span class="badge">QUALIDADE DA ÁGUA</span>
+    <h1>Anvisa interdita água mineral por <span>coliformes</span>: o que isso revela sobre a água que você compra engarrafada</h1>
+    <p class="header-desc">O lacre estava fechado. O rótulo estava certo. E mesmo assim o laudo apontou bactérias indicadoras de contaminação.</p>
+    <div class="header-meta">
+      <span>Acqualive</span><span>•</span><span>04 set 2026</span><span>•</span><span>8 min de leitura</span>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/agua-mineral-contaminada.jpg" alt="Prateleira de supermercado com garrafas plásticas de água mineral lacradas em destaque sob luz azulada" width="1280" height="800" loading="eager">
+  </div>
+</header>
+
+<main class="article-body">
+  <p>Em 2 de setembro de 2026, a Anvisa determinou a <strong>interdição cautelar</strong> de uma marca de água mineral sem gás depois que um laudo do Laboratório Central de Saúde Pública Noel Nutels detectou <strong>coliformes totais</strong> em uma amostra de 250 ml. O produto não pode ser consumido nem comercializado até que a segurança seja comprovada por novos testes. A informação foi publicada no Diário Oficial da União e divulgada pela <a href="https://agenciabrasil.ebc.com.br/saude/noticia/2026-09/anvisa-interdita-agua-mineral-da-marca-vitoriosa-por-conter-coliformes" target="_blank" rel="noopener">Agência Brasil</a>.</p>
+
+  <p>O caso virou notícia rapidamente, e por um motivo simples: ele quebra uma crença que quase todo brasileiro carrega. A de que <strong>água engarrafada é, por definição, água segura</strong>.</p>
+
+  <div class="quote">A contaminação microbiológica não muda cor, não muda cheiro e quase nunca muda sabor. Quem bebe não percebe nada.</div>
+
+  <nav class="toc">
+    <div class="toc-title">Neste artigo</div>
+    <ol>
+      <li><a href="#coliformes">O que são coliformes totais e por que eles importam</a></li>
+      <li><a href="#lacre">Por que o lacre não é garantia de pureza</a></li>
+      <li><a href="#plastico">O outro problema da garrafa: plástico e microplásticos</a></li>
+      <li><a href="#galao">E o galão de 20 litros?</a></li>
+      <li><a href="#o-que-fazer">O que fazer agora, na prática</a></li>
+      <li><a href="#acqualive">A alternativa: sua própria fonte em casa</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="coliformes">O que são coliformes totais e por que eles importam</h2>
+  <p>Coliformes totais são um grupo de bactérias usado no mundo inteiro como <strong>indicador de qualidade</strong>. Elas não são, necessariamente, causadoras diretas de doença. O papel delas é outro, e é justamente por isso que assustam: elas funcionam como um alarme.</p>
+
+  <p>Se coliformes chegaram dentro de uma garrafa lacrada, significa que existe uma porta aberta em algum ponto do processo. Pode ser a proteção da fonte, o sistema de envase, a higienização das linhas, a manipulação. E, se essa porta está aberta para coliformes, ela está aberta para outros micro-organismos que não são apenas indicadores.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-number">250 ml</div><div class="stat-label">volume da amostra em que os coliformes foram detectados</div></div>
+    <div class="stat-card"><div class="stat-number">0</div><div class="stat-label">é o limite legal de coliformes totais para água mineral envasada</div></div>
+    <div class="stat-card"><div class="stat-number">Zero sinal</div><div class="stat-label">de cor, cheiro ou gosto na maioria das contaminações microbiológicas</div></div>
+  </div>
+
+  <h2 id="lacre">Por que o lacre não é garantia de pureza</h2>
+  <p>A água mineral brasileira é regulada e fiscalizada, e a maioria das marcas cumpre o protocolo. O ponto não é acusar o setor. O ponto é entender a <strong>cadeia de risco</strong>, porque ela é longa:</p>
+
+  <ul class="check-list">
+    <li><strong>Fonte:</strong> precisa estar protegida de infiltrações e do entorno.</li>
+    <li><strong>Envase:</strong> linhas, bicos e tampas precisam de higienização rigorosa e constante.</li>
+    <li><strong>Transporte:</strong> caminhão quente, sol direto e empilhamento inadequado afetam o produto.</li>
+    <li><strong>Ponto de venda:</strong> garrafa exposta ao calor por semanas muda a química do plástico.</li>
+    <li><strong>Sua casa:</strong> a garrafa aberta na geladeira vira um novo ambiente para micro-organismos.</li>
+  </ul>
+
+  <p>Cada elo desses é um lugar onde algo pode dar errado. E o consumidor só fica sabendo quando a interdição sai no Diário Oficial, o que costuma acontecer depois que o produto já foi vendido e consumido.</p>
+
+  <div class="mid-cta">
+    <p>Água segura não deveria depender de sorte no supermercado.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Acqualive →</a>
+  </div>
+
+  <h2 id="plastico">O outro problema da garrafa: plástico e microplásticos</h2>
+  <p>Mesmo quando o laudo microbiológico está perfeito, a garrafa plástica traz uma segunda questão. Estudos publicados nos últimos anos identificaram <strong>centenas de milhares de partículas de nanoplástico por litro</strong> em água engarrafada, e a exposição ao calor durante o transporte e a estocagem tende a aumentar essa liberação.</p>
+
+  <p>Já escrevemos sobre isso em detalhe no artigo <a href="https://blog.acqualive.com.br/agua-que-voce-bebe-tem-microplasticos/" target="_blank">A água que você bebe tem microplásticos?</a>. O resumo é direto: a garrafa resolve um problema de logística e cria outro de saúde e bem-estar a longo prazo.</p>
+
+  <h2 id="galao">E o galão de 20 litros?</h2>
+  <p>O galão retornável tem um agravante que quase ninguém considera: ele é <strong>reutilizado dezenas de vezes</strong>. A higienização entre um uso e outro é responsabilidade do envasador, e a qualidade dela varia muito. Some a isso o bico do bebedouro, que raramente é sanitizado em casa, e você tem um ponto de contato exposto ao ar o dia inteiro.</p>
+
+  <p>Sem contar o peso, o preço acumulado ao longo dos anos e o fato de que a água acaba justamente quando ninguém está em casa para trocar.</p>
+
+  <h2 id="o-que-fazer">O que fazer agora, na prática</h2>
+  <ol>
+    <li><strong>Confira o lote:</strong> se você comprou água mineral recentemente, verifique marca e lote antes de consumir.</li>
+    <li><strong>Não descarte a embalagem</strong> de um produto suspeito. Ela é a prova para troca e para a vigilância sanitária.</li>
+    <li><strong>Evite deixar garrafa plástica no sol</strong> ou no porta-malas do carro.</li>
+    <li><strong>Nunca reutilize</strong> garrafa descartável para beber água ao longo da semana.</li>
+    <li><strong>Assuma o controle da sua fonte:</strong> um purificador em casa tira a sua água da cadeia de risco do produto industrializado.</li>
+  </ol>
+
+  <h2 id="acqualive">A alternativa: sua própria fonte em casa</h2>
+  <p>A lição de fundo desse episódio é que <strong>terceirizar a sua água é terceirizar o seu controle</strong>. Quando a água nasce na sua torneira, passa por um elemento filtrante certificado e sai pronta para beber, você elimina de uma vez o transporte, a estocagem, o plástico e a fila de intermediários.</p>
+
+  <p>É exatamente isso que a Acqualive faz. Nossos purificadores retêm cloro, sedimentos e contaminantes, e ainda devolvem à água o que a rede tirou dela: <strong>alcalinidade, minerais biodisponíveis como o magnésio e ação antioxidante</strong>. Água fresquinha, todos os dias, sem galão, sem garrafa e sem depender de um laudo que você nunca vai ler.</p>
+
+  <p>Se você quer entender a diferença entre um Purificador Comum e a tecnologia de ionização, comece pelo nosso guia <a href="https://blog.acqualive.com.br/qual-melhor-filtro-de-agua/" target="_blank">Qual é o melhor filtro de água?</a>.</p>
+
+  <div class="cta-section">
+    <h2>Pare de comprar água. Comece a <span>produzir a sua</span></h2>
+    <p>Purificadores Acqualive com água alcalina, mineralizada e livre de cloro. Em até 10x sem juros e com frete grátis. Consulte regiões disponíveis.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Ver os purificadores Acqualive →</a>
+  </div>
+
+  <div class="related-links">
+    <h4>Continue lendo</h4>
+    <ul>
+      <li><a href="https://blog.acqualive.com.br/agua-da-torneira-segura-brasil/" target="_blank">A água da torneira é segura no Brasil?</a></li>
+      <li><a href="https://blog.acqualive.com.br/agua-que-voce-bebe-tem-microplasticos/" target="_blank">A água que você bebe tem microplásticos?</a></li>
+      <li><a href="https://blog.acqualive.com.br/agua-anti-inflamatoria/" target="_blank">Água anti-inflamatória: o copo que desliga a inflamação silenciosa</a></li>
+    </ul>
+  </div>
+</main>`
+  )
+};
+
+export const EXTRA_ARTICLES = [article6, article7, article8, article9, article10, article11, article12, article13, article14, article15, article16, article17, article18, article19, article20, article21];
