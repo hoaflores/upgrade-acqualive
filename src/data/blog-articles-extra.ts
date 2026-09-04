@@ -2816,4 +2816,272 @@ const article21 = {
   )
 };
 
-export const EXTRA_ARTICLES = [article6, article7, article8, article9, article10, article11, article12, article13, article14, article15, article16, article17, article18, article19, article20, article21];
+const article22 = {
+  title: "Brasil perde quase 40% da água tratada no caminho até a torneira: o que isso muda na água que chega em casa",
+  slug: "perdas-de-agua-tratada-brasil-qualidade",
+  html: wrap(
+    `<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perdas de Água Tratada no Brasil: O Que Isso Faz Com a Sua Torneira | Acqualive</title>
+<meta name="description" content="Quase 40% da água tratada se perde antes de chegar às casas brasileiras. Entenda como vazamentos e rede antiga afetam a qualidade da água que sai da sua torneira e o que fazer dentro de casa.">
+<meta name="keywords" content="perdas de agua brasil, agua tratada, rede de distribuicao, qualidade da agua da torneira, crise hidrica, purificador de agua, agua alcalina, Acqualive">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Acqualive">
+<link rel="canonical" href="https://blog.acqualive.com.br/perdas-de-agua-tratada-brasil-qualidade/">
+<meta property="og:title" content="Brasil perde quase 40% da água tratada no caminho até a torneira">
+<meta property="og:description" content="Vazamentos, rede antiga e pressão irregular não desperdiçam apenas água. Eles mudam a qualidade do que chega no seu copo.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/perdas-agua-brasil.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Brasil perde quase 40% da água tratada no caminho até a torneira","description":"Como as perdas na distribuição e a idade da rede afetam a qualidade da água que chega nas casas brasileiras, e o que fazer no ponto de consumo.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-09-04","dateModified":"2026-09-04","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/perdas-agua-brasil.jpg"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"O que são perdas de água na distribuição?","acceptedAnswer":{"@type":"Answer","text":"São os volumes de água já tratada que não chegam ao consumidor. Incluem perdas físicas, como vazamentos e rompimentos na rede, e perdas aparentes, como ligações irregulares e erros de medição. No Brasil, esse índice fica próximo de 40% do volume produzido."}},
+{"@type":"Question","name":"Vazamento na rede afeta a qualidade da água?","acceptedAnswer":{"@type":"Answer","text":"Sim. Um ponto de vazamento é também um ponto de fragilidade. Quando a pressão da rede cai, por manutenção ou intermitência no abastecimento, pode ocorrer entrada de material externo pelo mesmo ponto por onde a água escapava, o que compromete a qualidade no trecho final da distribuição."}},
+{"@type":"Question","name":"Por que a água chega com cheiro de cloro ou barrenta às vezes?","acceptedAnswer":{"@type":"Answer","text":"O cloro é adicionado no tratamento e precisa permanecer na rede até o consumo, por isso o cheiro. Já a água barrenta costuma aparecer depois de manutenções, quando o sedimento acumulado nas tubulações antigas se solta com a variação de pressão."}},
+{"@type":"Question","name":"A caixa d'água da minha casa influencia?","acceptedAnswer":{"@type":"Answer","text":"Muito. A caixa é o último reservatório antes da torneira e deve ser tampada, vedada e limpa a cada seis meses. Uma caixa mal vedada anula boa parte do trabalho feito na estação de tratamento."}},
+{"@type":"Question","name":"Um purificador resolve o problema da rede?","acceptedAnswer":{"@type":"Answer","text":"O purificador não conserta a rede pública, mas atua no ponto de consumo, que é o único trecho sob o seu controle. Ele retém sedimentos, reduz cloro e melhora sabor e odor, e no caso do Acqualive ainda entrega água alcalina e mineralizada."}}
+]}
+</script>`,
+    `<header class="article-header">
+  <div class="header-inner">
+    <span class="badge">SANEAMENTO E QUALIDADE</span>
+    <h1>Brasil perde quase <span>40% da água tratada</span> no caminho até a torneira</h1>
+    <p class="header-desc">O desperdício é o número que aparece na manchete. O que quase ninguém conta é o efeito disso na qualidade da água que chega no seu copo.</p>
+    <div class="header-meta">
+      <span>Acqualive</span><span>•</span><span>04 set 2026</span><span>•</span><span>7 min de leitura</span>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/perdas-agua-brasil.jpg" alt="Vista aérea de uma estação de tratamento de água com tubulações e reservatórios circulares no fim da tarde" width="1280" height="800" loading="eager">
+  </div>
+</header>
+
+<main class="article-body">
+  <p>O Instituto Trata Brasil divulgou em 2026 um levantamento que continua incomodando: perto de <strong>40% de toda a água tratada no país se perde antes de chegar às casas</strong>. É água que passou por captação, tratamento, cloração e bombeamento, custou energia e dinheiro, e simplesmente escapa no caminho. Segundo o instituto, reduzir essas perdas poderia abastecer <a href="https://tratabrasil.org.br/reduzir-perdas-de-agua-no-brasil-poderia-abastecer-populacao-maior-que-um-dos-paises-sede-da-copa-do-mundo-2026/" target="_blank" rel="noopener">quase 48 milhões de brasileiros por ano</a>.</p>
+
+  <p>No começo de setembro, o tema voltou ao noticiário por um contraste quase irônico: um estudo apontou que <strong>Manaus, na região mais rica em água doce do planeta, corre risco crítico de escassez até 2040</strong>. Não falta água na natureza. Falta água que chegue bem no fim da linha.</p>
+
+  <div class="quote">Perda de água não é só uma conta de desperdício. É um mapa de todos os pontos frágeis entre a estação de tratamento e a sua cozinha.</div>
+
+  <nav class="toc">
+    <div class="toc-title">Neste artigo</div>
+    <ol>
+      <li><a href="#o-que-e">O que exatamente se perde no caminho</a></li>
+      <li><a href="#qualidade">Por que isso afeta a qualidade, e não só o volume</a></li>
+      <li><a href="#sinais">Os sinais que você já percebeu na sua torneira</a></li>
+      <li><a href="#caixa">O último trecho é o seu: caixa d água e encanamento</a></li>
+      <li><a href="#o-que-fazer">O que dá para fazer dentro de casa</a></li>
+      <li><a href="#acqualive">Tratar de novo, no ponto de consumo</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="o-que-e">O que exatamente se perde no caminho</h2>
+  <p>As perdas se dividem em dois grupos. As <strong>perdas físicas</strong> são as visíveis e as invisíveis: rompimentos, vazamentos em juntas, tubulações com décadas de uso, reservatórios com extravasamento. As <strong>perdas aparentes</strong> envolvem ligações irregulares e hidrômetros descalibrados, ou seja, água que chega mas não é medida.</p>
+
+  <p>O primeiro grupo é o que interessa para quem se preocupa com saúde. Cada vazamento é um furo, e um furo funciona nos dois sentidos.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-number">40%</div><div class="stat-label">da água tratada se perde antes do consumo no Brasil</div></div>
+    <div class="stat-card"><div class="stat-number">48 mi</div><div class="stat-label">de pessoas poderiam ser abastecidas por ano se essas perdas caíssem</div></div>
+    <div class="stat-card"><div class="stat-number">2040</div><div class="stat-label">horizonte de risco hídrico crítico apontado para Manaus</div></div>
+  </div>
+
+  <h2 id="qualidade">Por que isso afeta a qualidade, e não só o volume</h2>
+  <p>A rede de distribuição trabalha pressurizada justamente para que nada de fora entre nela. Quando a pressão cai, e ela cai em manutenções, em rodízios de abastecimento e em picos de consumo, o cenário se inverte por alguns instantes.</p>
+
+  <ul class="check-list">
+    <li><strong>Refluxo em pontos de vazamento:</strong> com pressão baixa, o mesmo furo por onde a água saía pode aspirar água do solo ao redor.</li>
+    <li><strong>Sedimento em suspensão:</strong> tubulações antigas acumulam depósito, e a variação brusca de pressão solta esse material de uma vez.</li>
+    <li><strong>Consumo de cloro residual:</strong> quanto mais longo e comprometido o trecho, mais cloro se gasta pelo caminho, deixando o fim da rede menos protegido.</li>
+    <li><strong>Intermitência:</strong> cada retomada de abastecimento empurra o que estava parado na tubulação direto para as casas.</li>
+  </ul>
+
+  <p>Nada disso significa que a água tratada brasileira seja ruim. Significa que a qualidade medida na saída da estação não é necessariamente a qualidade que chega na sua torneira.</p>
+
+  <div class="mid-cta">
+    <p>Você não controla a rede da cidade. Controla o último metro antes do seu copo.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Acqualive →</a>
+  </div>
+
+  <h2 id="sinais">Os sinais que você já percebeu na sua torneira</h2>
+  <p>Se você mora em cidade grande, provavelmente já viu pelo menos um destes episódios: água esbranquiçada logo depois de uma obra na rua, cheiro forte de cloro em determinados dias, gosto metálico no fim da tarde, resíduo escuro no filtro da torneira em pouco tempo de uso.</p>
+
+  <p>São pistas de que o percurso teve interferência. E é por isso que <strong>tratar a água de novo, no ponto de consumo, deixou de ser exagero</strong>.</p>
+
+  <h2 id="caixa">O último trecho é o seu: caixa d água e encanamento</h2>
+  <p>Existe um pedaço da rede que não é da concessionária: o que começa no cavalete e termina na sua torneira. Nesse trecho, a caixa d água é o ponto mais sensível.</p>
+
+  <ul class="check-list">
+    <li>Tampa vedada, sem frestas para insetos, poeira e luz.</li>
+    <li>Limpeza a cada seis meses, com registro da data.</li>
+    <li>Extravasor com tela, para impedir entrada de animais.</li>
+    <li>Atenção redobrada em prédios com reservatório inferior e superior.</li>
+  </ul>
+
+  <h2 id="o-que-fazer">O que dá para fazer dentro de casa</h2>
+  <ol>
+    <li><strong>Depois de manutenção na rua,</strong> deixe a água correr alguns minutos antes de usar para beber ou cozinhar.</li>
+    <li><strong>Mantenha a caixa d água no calendário,</strong> como você faz com a revisão do carro.</li>
+    <li><strong>Não estique o prazo do refil.</strong> Elemento filtrante saturado deixa de proteger e passa a acumular.</li>
+    <li><strong>Prefira tratamento no ponto de uso,</strong> ou seja, o mais perto possível de onde a água é consumida.</li>
+    <li><strong>Evite estocar em galão exposto ao sol,</strong> que é trocar um problema por outro.</li>
+  </ol>
+
+  <h2 id="acqualive">Tratar de novo, no ponto de consumo</h2>
+  <p>A conta de 40% é um problema de infraestrutura, e a solução dele leva décadas e bilhões. A sua decisão é bem mais simples e imediata: garantir que, seja qual for o estado da rede lá fora, a água que entra no seu copo passe por um último tratamento aqui dentro.</p>
+
+  <p>É exatamente isso que um purificador Acqualive faz. Ele retém sedimentos e partículas, elimina o cloro que sobrou do caminho, corrige sabor e odor, e ainda entrega água <strong>alcalina, mineralizada e antioxidante</strong>, direto na torneira, fresquinha e sem galão.</p>
+
+  <div class="cta-section">
+    <h2>A rede é da cidade. A água do seu copo <span>é sua</span></h2>
+    <p>Purificadores Acqualive com água alcalina, mineralizada e livre de cloro. Em até 10x sem juros e com frete grátis. Consulte regiões disponíveis.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Ver os purificadores Acqualive →</a>
+  </div>
+
+  <div class="related-links">
+    <h4>Continue lendo</h4>
+    <ul>
+      <li><a href="https://blog.acqualive.com.br/anvisa-interdita-agua-mineral-coliformes/" target="_blank">Anvisa interdita água mineral por coliformes</a></li>
+      <li><a href="https://blog.acqualive.com.br/agua-da-torneira-segura-brasil/" target="_blank">A água da torneira é segura no Brasil?</a></li>
+      <li><a href="https://blog.acqualive.com.br/agua-que-voce-bebe-tem-microplasticos/" target="_blank">A água que você bebe tem microplásticos?</a></li>
+    </ul>
+  </div>
+</main>`
+  )
+};
+
+const article23 = {
+  title: "240 mil partículas de plástico por litro: o que a ciência de 2026 já sabe sobre microplásticos no corpo humano",
+  slug: "microplasticos-corpo-humano-2026",
+  html: wrap(
+    `<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microplásticos no Corpo Humano: O Que a Ciência de 2026 Já Sabe | Acqualive</title>
+<meta name="description" content="Estudos de 2026 revisam os efeitos dos microplásticos no corpo humano, de cognição a coração e microbiota. Entenda as evidências, o que ainda falta provar e como reduzir sua exposição pela água.">
+<meta name="keywords" content="microplasticos no corpo humano, nanoplasticos, agua engarrafada plastico, microplasticos saude, purificador de agua, agua alcalina, Acqualive">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Acqualive">
+<link rel="canonical" href="https://blog.acqualive.com.br/microplasticos-corpo-humano-2026/">
+<meta property="og:title" content="240 mil partículas de plástico por litro: o que a ciência já sabe sobre microplásticos no corpo">
+<meta property="og:description" content="Revisões publicadas em 2026 investigam efeitos em cognição, coração e microbiota. O que é evidência, o que é hipótese e o que dá para fazer hoje.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/microplasticos-corpo.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"240 mil partículas de plástico por litro: o que a ciência de 2026 já sabe sobre microplásticos no corpo humano","description":"Panorama das evidências científicas de 2026 sobre microplásticos e nanoplásticos na saúde humana e como reduzir a exposição pela água.","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive"},"datePublished":"2026-09-04","dateModified":"2026-09-04","mainEntityOfPage":{"@type":"WebPage"},"image":"https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/microplasticos-corpo.jpg"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Quantos microplásticos existem na água engarrafada?","acceptedAnswer":{"@type":"Answer","text":"Um estudo amplamente divulgado identificou cerca de 240 mil partículas plásticas por litro em água engarrafada, sendo a maior parte nanoplásticos, pequenos demais para serem vistos e detectados por métodos convencionais."}},
+{"@type":"Question","name":"Microplásticos fazem mal à saúde?","acceptedAnswer":{"@type":"Answer","text":"As revisões publicadas em 2026 apontam associações com inflamação, estresse oxidativo e alterações na microbiota intestinal, além de linhas de investigação sobre efeitos cardiovasculares e cognitivos. A ciência ainda não estabeleceu limites seguros de exposição para humanos, por isso a recomendação prática é reduzir a exposição evitável."}},
+{"@type":"Question","name":"Ferver a água elimina microplásticos?","acceptedAnswer":{"@type":"Answer","text":"Ferver ajuda no aspecto microbiológico e pode fazer parte das partículas se agregarem a minerais e sedimentarem, mas não é um método confiável de remoção. A retenção depende de elemento filtrante adequado."}},
+{"@type":"Question","name":"Como reduzir a exposição a microplásticos no dia a dia?","acceptedAnswer":{"@type":"Answer","text":"Trocar garrafas e galões plásticos por água filtrada no ponto de consumo, usar copos e garrafas de vidro ou inox, não esquentar comida em recipiente plástico e evitar deixar plástico exposto ao calor e ao sol."}},
+{"@type":"Question","name":"Um purificador retém microplásticos?","acceptedAnswer":{"@type":"Answer","text":"Elementos filtrantes certificados retêm partículas na faixa dos microplásticos e reduzem a carga de sedimentos e cloro. O ponto crítico é respeitar o prazo de troca do refil, porque um elemento saturado perde eficiência."}}
+]}
+</script>`,
+    `<header class="article-header">
+  <div class="header-inner">
+    <span class="badge">CIÊNCIA DA ÁGUA</span>
+    <h1><span>240 mil partículas</span> de plástico por litro: o que a ciência de 2026 já sabe sobre microplásticos no corpo</h1>
+    <p class="header-desc">A maior parte delas é invisível. E a discussão científica deste ano deixou de ser se estamos expostos, e passou a ser o quanto isso pesa.</p>
+    <div class="header-meta">
+      <span>Acqualive</span><span>•</span><span>04 set 2026</span><span>•</span><span>9 min de leitura</span>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images/microplasticos-corpo.jpg" alt="Copo de água transparente sobre bancada com partículas minúsculas suspensas iluminadas por luz azul" width="1280" height="800" loading="eager">
+  </div>
+</header>
+
+<main class="article-body">
+  <p>Em 2024, um estudo pioneiro usando microscopia de espalhamento Raman estimulado encontrou, em média, <strong>cerca de 240 mil partículas plásticas por litro de água engarrafada</strong>. O número chocou por dois motivos: era muito maior do que se imaginava e, principalmente, porque <strong>cerca de 90% dessas partículas eram nanoplásticos</strong>, pequenos o bastante para atravessar barreiras biológicas.</p>
+
+  <p>De lá para cá, o assunto saiu do laboratório e virou pauta de saúde pública. Em 2026, revisões sistemáticas publicadas em periódicos brasileiros e portugueses reuniram uma década de estudos para responder à pergunta que interessa: <strong>o que essas partículas fazem dentro de nós?</strong></p>
+
+  <div class="quote">A pergunta deixou de ser se você está exposto. Passou a ser quanto dessa exposição é evitável.</div>
+
+  <nav class="toc">
+    <div class="toc-title">Neste artigo</div>
+    <ol>
+      <li><a href="#numero">De onde vem o número de 240 mil</a></li>
+      <li><a href="#evidencias">O que as revisões de 2026 encontraram</a></li>
+      <li><a href="#hipotese">O que ainda é hipótese, e por que isso importa</a></li>
+      <li><a href="#brasil">Microplástico não está só na garrafa</a></li>
+      <li><a href="#reduzir">Como reduzir a exposição de verdade</a></li>
+      <li><a href="#acqualive">Água filtrada no ponto de consumo</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="numero">De onde vem o número de 240 mil</h2>
+  <p>Métodos tradicionais só enxergavam partículas acima de um determinado tamanho. Quando a técnica melhorou, apareceu o que estava escondido: a fração nanométrica, invisível para os métodos antigos. Foi por isso que a contagem saltou de centenas para centenas de milhares por litro.</p>
+
+  <p>A origem é conhecida: a própria embalagem, a tampa, o processo de envase e, sobretudo, o <strong>calor</strong>. Garrafa dentro de caminhão fechado, estoque em galpão quente, garrafa esquecida no carro. Cada ciclo térmico acelera a liberação.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-number">240 mil</div><div class="stat-label">partículas plásticas por litro em água engarrafada, em média</div></div>
+    <div class="stat-card"><div class="stat-number">90%</div><div class="stat-label">delas são nanoplásticos, invisíveis aos métodos convencionais</div></div>
+    <div class="stat-card"><div class="stat-number">2015 a 2026</div><div class="stat-label">período coberto por revisões sistemáticas publicadas neste ano</div></div>
+  </div>
+
+  <h2 id="evidencias">O que as revisões de 2026 encontraram</h2>
+  <p>As revisões publicadas neste ano convergem em alguns pontos, que aparecem repetidamente nos estudos experimentais e nos trabalhos com amostras humanas:</p>
+
+  <ul class="check-list">
+    <li><strong>Inflamação e estresse oxidativo:</strong> a presença de partículas estranhas ativa resposta inflamatória local e aumenta a produção de radicais livres.</li>
+    <li><strong>Microbiota intestinal:</strong> alterações na composição bacteriana do intestino, com reflexo em permeabilidade e resposta imune.</li>
+    <li><strong>Sistema cardiovascular:</strong> partículas já foram identificadas em tecido humano, incluindo placas arteriais, o que abriu uma frente inteira de investigação.</li>
+    <li><strong>Sistema nervoso:</strong> estudos em modelos animais indicam passagem de nanopartículas e efeitos sobre comportamento e cognição, área ainda em construção.</li>
+    <li><strong>Distribuição ampla:</strong> os trabalhos brasileiros também detectam microplásticos em reservatórios de abastecimento público e até em águas subterrâneas.</li>
+  </ul>
+
+  <div class="mid-cta">
+    <p>A exposição pelo ar e pelos alimentos é difícil de controlar. A da água, não.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Acqualive →</a>
+  </div>
+
+  <h2 id="hipotese">O que ainda é hipótese, e por que isso importa</h2>
+  <p>Ser honesto com a ciência é parte do trabalho. A Organização Mundial da Saúde e as próprias revisões de 2026 são claras: <strong>ainda não existe um limite de exposição seguro estabelecido para humanos</strong>, e boa parte dos efeitos descritos vem de estudos em células e animais, com doses que nem sempre representam a exposição real do dia a dia.</p>
+
+  <p>Isso não é motivo para relaxar, é motivo para agir com bom senso. Quando uma exposição é <strong>evitável, barata de evitar e sem contrapartida negativa</strong>, a decisão racional é reduzi-la enquanto a ciência amadurece.</p>
+
+  <h2 id="brasil">Microplástico não está só na garrafa</h2>
+  <p>Um levantamento publicado em 2026 encontrou microplásticos na água e no sedimento de um reservatório de abastecimento público no interior de São Paulo. Outro trabalho investigou a ocorrência em águas subterrâneas ligadas ao Sistema Aquífero Guarani.</p>
+
+  <p>Ou seja, o problema não se resolve trocando de marca de garrafa. Ele se resolve mudando o <strong>ponto</strong> em que a água é tratada: o mais perto possível de você.</p>
+
+  <h2 id="reduzir">Como reduzir a exposição de verdade</h2>
+  <ol>
+    <li><strong>Saia do plástico descartável na água de beber.</strong> É a maior fonte evitável e a mais fácil de trocar.</li>
+    <li><strong>Use vidro ou inox</strong> na garrafa que você carrega e nos copos de casa.</li>
+    <li><strong>Nunca esquente comida em recipiente plástico</strong> e evite lavar plástico em água muito quente.</li>
+    <li><strong>Tire o plástico do sol.</strong> Calor é o gatilho que mais acelera a liberação de partículas.</li>
+    <li><strong>Filtre no ponto de consumo</strong> e troque o refil no prazo, sem esticar.</li>
+  </ol>
+
+  <h2 id="acqualive">Água filtrada no ponto de consumo</h2>
+  <p>Um purificador Acqualive instalado na sua cozinha remove sedimentos e partículas, elimina o cloro e entrega água <strong>alcalina, mineralizada e antioxidante</strong> na hora do consumo. Sem garrafa, sem galão, sem semanas de estoque no calor.</p>
+
+  <p>É a maneira mais direta de tirar da rotina a fonte de microplásticos que está inteiramente sob o seu controle, e ainda melhorar a qualidade da água em outros aspectos ao mesmo tempo.</p>
+
+  <div class="cta-section">
+    <h2>Menos plástico no copo. <span>Mais água de verdade</span></h2>
+    <p>Purificadores Acqualive com água alcalina, mineralizada e livre de cloro. Em até 10x sem juros e com frete grátis. Consulte regiões disponíveis.</p>
+    <a href="https://acqualive.com.br" target="_blank" rel="noopener" class="cta-button">Ver os purificadores Acqualive →</a>
+  </div>
+
+  <div class="related-links">
+    <h4>Continue lendo</h4>
+    <ul>
+      <li><a href="https://blog.acqualive.com.br/agua-que-voce-bebe-tem-microplasticos/" target="_blank">A água que você bebe tem microplásticos?</a></li>
+      <li><a href="https://blog.acqualive.com.br/anvisa-interdita-agua-mineral-coliformes/" target="_blank">Anvisa interdita água mineral por coliformes</a></li>
+      <li><a href="https://blog.acqualive.com.br/agua-anti-inflamatoria/" target="_blank">Água anti-inflamatória: o copo que desliga a inflamação silenciosa</a></li>
+    </ul>
+  </div>
+</main>`
+  )
+};
+
+export const EXTRA_ARTICLES = [article6, article7, article8, article9, article10, article11, article12, article13, article14, article15, article16, article17, article18, article19, article20, article21, article22, article23];
