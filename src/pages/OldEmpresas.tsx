@@ -453,7 +453,7 @@ const OldEmpresas = () => {
                   rel="noopener noreferrer"
                   className="mt-auto block bg-[#1460B6] text-white uppercase text-[15px] tracking-wide py-3 hover:bg-[#11529c] transition-colors"
                 >
-                  falar com o alex
+                  FALAR COM O NOSSO CONSULTOR ALEX
                 </a>
               </div>
             </div>
