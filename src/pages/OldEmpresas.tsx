@@ -4,8 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
-import logo from "@/assets/old-empresas/logo.jpg.asset.json";
-import bannerTopo from "@/assets/old-empresas/banner-topo1.jpg.asset.json";
+import logo from "@/assets/acqualive-logo-azul.png.asset.json";
 import banner2 from "@/assets/old-empresas/banner2.jpg.asset.json";
 import bg3 from "@/assets/old-empresas/bg3.jpg.asset.json";
 import ligueIcon from "@/assets/old-empresas/ligue.png.asset.json";
@@ -26,6 +25,7 @@ import duoFrente from "@/assets/duo/duo-frente-transp.png.asset.json";
 import duoAmbClinica from "@/assets/duo/Duo_Ambientada_2.png.asset.json";
 import duoAmbAcademia from "@/assets/duo/Duo_Ambientada_3.png.asset.json";
 import duoAmbCozinha from "@/assets/duo/Duo_Ambientada_1.png.asset.json";
+import duoAmbGarrafa from "@/assets/duo/Duo_Ambientada_4.png.asset.json";
 
 const AZUL = "#1460B6";
 const CINZA = "#8A94A2";
@@ -248,7 +248,7 @@ const FormMeLigue = ({ variante = "empilhado", origem }: FormProps) => {
       <button
         type="submit"
         disabled={enviando}
-        className="w-full bg-white text-[#1460B6] text-2xl font-medium tracking-wide py-4 hover:bg-white/90 transition-colors disabled:opacity-60"
+        className="w-full bg-white text-[#1460B6] text-xl sm:text-2xl font-medium tracking-wide py-4 hover:bg-white/90 transition-colors disabled:opacity-60"
       >
         {enviando ? "ENVIANDO..." : "ME LIGUE"}
       </button>
@@ -300,7 +300,7 @@ const WhatsAppFlutuante = () => {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar com Alex no WhatsApp"
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg hover:scale-105 transition-transform"
+      className="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg hover:scale-105 transition-transform"
     >
       <WhatsAppIcon className="w-7 h-7 text-white" />
     </a>
@@ -326,8 +326,8 @@ const OldEmpresas = () => {
       {/* HEADER */}
       <header className="bg-white">
         <div className="max-w-[1280px] mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <img src={logo.url} alt="Acqualive" className="h-14 w-auto" />
-          <p className="text-lg md:text-2xl tracking-wide uppercase" style={{ color: CINZA }}>
+          <img src={logo.url} alt="Acqualive" className="h-10 md:h-14 w-auto" />
+          <p className="text-center md:text-right text-base md:text-2xl tracking-wide uppercase" style={{ color: CINZA }}>
             a solução ideal <strong style={{ color: AZUL }}>para a sua empresa</strong>
           </p>
         </div>
@@ -335,13 +335,13 @@ const OldEmpresas = () => {
 
       {/* HERO */}
       <section id="topo" className="grid grid-cols-1 lg:grid-cols-2">
-        <div className="bg-white pt-8">
+        <div className="bg-white pt-6 md:pt-8">
           <div className="text-center px-6">
-            <p className="uppercase tracking-[0.08em] text-sm md:text-base font-medium" style={{ color: CINZA }}>
+            <p className="uppercase tracking-[0.08em] text-xs sm:text-sm md:text-base font-medium" style={{ color: CINZA }}>
               mude a água da sua empresa
             </p>
             <h1
-              className="uppercase text-2xl md:text-4xl font-medium leading-tight mt-2"
+              className="uppercase text-xl sm:text-2xl md:text-4xl font-medium leading-tight mt-2"
               style={{ color: AZUL }}
             >
               e ganhe mais economia,
@@ -350,20 +350,20 @@ const OldEmpresas = () => {
             </h1>
           </div>
           <img
-            src={bannerTopo.url}
-            alt="Ambiente corporativo com água Acqualive"
-            className="w-full mt-4"
+            src={duoAmbClinica.url}
+            alt="Acqualive DUO instalado em ambiente corporativo"
+            className="w-full mt-4 max-h-[480px] object-cover object-center"
           />
         </div>
 
         <div className="bg-[#1460B6] text-white flex items-center">
-          <div className="w-full px-6 py-12 lg:py-0 text-center">
+          <div className="w-full px-5 sm:px-6 py-10 md:py-12 text-center">
             <p className="uppercase tracking-[0.1em] text-sm md:text-base">fale com o alex</p>
             <a
               href={WA_GERAL}
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-4xl md:text-6xl font-medium my-2 hover:opacity-90"
+              className="block text-3xl sm:text-4xl md:text-6xl font-medium my-2 hover:opacity-90"
             >
               {WHATSAPP_EXIBICAO}
             </a>
@@ -374,19 +374,19 @@ const OldEmpresas = () => {
       </section>
 
       {/* ECONOMIA */}
-      <section id="economia" className="max-w-[1280px] mx-auto px-6 py-14">
+      <section id="economia" className="max-w-[1280px] mx-auto px-6 py-10 md:py-14">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <p className="text-2xl md:text-[28px] uppercase leading-snug" style={{ color: CINZA }}>
+          <p className="text-xl sm:text-2xl md:text-[28px] uppercase leading-snug" style={{ color: CINZA }}>
             Mais benefícios
             <br />e maior economia
             <br />para sua empresa
           </p>
-          <p className="text-2xl md:text-[28px] uppercase leading-snug" style={{ color: CINZA }}>
+          <p className="text-xl sm:text-2xl md:text-[28px] uppercase leading-snug" style={{ color: CINZA }}>
             <span style={{ color: AZUL }}>fim do galão</span>
             <br />
             e da logística de entregas
           </p>
-          <p className="text-2xl md:text-[28px] uppercase leading-snug" style={{ color: CINZA }}>
+          <p className="text-xl sm:text-2xl md:text-[28px] uppercase leading-snug" style={{ color: CINZA }}>
             <span style={{ color: AZUL }}>custo previsível</span>
             <br />
             com a troca dos refis
@@ -395,7 +395,7 @@ const OldEmpresas = () => {
 
         <hr className="my-12 border-[#d7dce2]" />
 
-        <h2 className="text-center text-2xl md:text-[32px] uppercase" style={{ color: CINZA }}>
+        <h2 className="text-center text-xl sm:text-2xl md:text-[32px] uppercase" style={{ color: CINZA }}>
           Conheça as soluções <strong style={{ color: AZUL }}>Acqualive para empresas</strong>
         </h2>
 
@@ -459,19 +459,19 @@ const OldEmpresas = () => {
           ))}
         </div>
 
-        <div className="text-right text-[11px] uppercase mt-4 leading-relaxed" style={{ color: CINZA }}>
+        <div className="text-left md:text-right text-[11px] uppercase mt-4 leading-relaxed" style={{ color: CINZA }}>
           <p>* consulte as condições comerciais para empresas</p>
           <p>** compatibilidade do DUO Lite avaliada em cada ponto de consumo</p>
         </div>
       </section>
 
       {/* PRODUTIVIDADE */}
-      <section id="produtividade" className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
+      <section id="produtividade" className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-10 pb-12 lg:pb-0">
         <div>
-          <img src={banner2.url} alt="Equipe trabalhando em escritório" className="w-full h-auto object-cover" loading="lazy" />
+          <img src={banner2.url} alt="Equipe trabalhando em escritório" className="w-full h-[220px] sm:h-[320px] lg:h-auto object-cover" loading="lazy" />
         </div>
         <div className="px-6 lg:pr-16 max-w-[620px]">
-          <h2 className="text-3xl md:text-[40px] uppercase leading-tight" style={{ color: CINZA }}>
+          <h2 className="text-2xl sm:text-3xl md:text-[40px] uppercase leading-tight" style={{ color: CINZA }}>
             Você sabia que
             <br />
             <span style={{ color: AZUL }}>a água</span> pode <span style={{ color: AZUL }}>influenciar</span>
@@ -492,7 +492,7 @@ const OldEmpresas = () => {
       </section>
 
       {/* AGUA ALCALINA SEMPRE A MAO */}
-      <section id="tecnologia" className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-end max-w-[1280px] mx-auto px-6 py-16">
+      <section id="tecnologia" className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-end max-w-[1280px] mx-auto px-6 py-12 md:py-16">
         <div className="max-w-[420px] mx-auto lg:mx-0 text-[15px] leading-relaxed" style={{ color: "#5b6472" }}>
           <p>
             <strong style={{ color: AZUL }}>
@@ -513,7 +513,7 @@ const OldEmpresas = () => {
         </div>
         <div className="relative">
           <img src={bg3.url} alt="Copo com água alcalina" className="w-full h-auto object-contain" loading="lazy" />
-          <h2 className="text-3xl md:text-[42px] uppercase leading-tight text-right mt-4" style={{ color: CINZA }}>
+          <h2 className="text-2xl sm:text-3xl md:text-[42px] uppercase leading-tight text-right mt-4" style={{ color: CINZA }}>
             água alcalina
             <br />
             ionizada <span style={{ color: AZUL }}>sempre</span>
@@ -524,42 +524,40 @@ const OldEmpresas = () => {
       </section>
 
       {/* SOLUCAO IDEAL */}
-      <section className="pt-8">
-        <h2 className="text-center text-3xl md:text-[42px] uppercase leading-tight px-6" style={{ color: CINZA }}>
+      <section className="py-12 md:py-16">
+        <h2 className="text-center text-2xl sm:text-3xl md:text-[42px] uppercase leading-tight px-6" style={{ color: CINZA }}>
           Descubra <span style={{ color: AZUL }}>a solução ideal</span>
           <br />
           para sua empresa
         </h2>
-        <div className="mt-8">
+        <div className="mt-8 max-w-[1100px] mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
           <img
-            src={duoAmbClinica.url}
-            alt="Acqualive DUO instalado em recepção de clínica"
-            className="w-full max-w-[1100px] mx-auto"
+            src={duoAmbGarrafa.url}
+            alt="Acqualive DUO em recepção de clínica"
+            className="w-full h-[260px] sm:h-[340px] object-cover"
+            loading="lazy"
+          />
+          <img
+            src={duoAmbAcademia.url}
+            alt="Acqualive DUO em ambiente de academia"
+            className="w-full h-[260px] sm:h-[340px] object-cover"
             loading="lazy"
           />
         </div>
       </section>
 
       {/* CONTATO AZUL */}
-      <section id="contato" className="bg-[#1460B6] text-white relative">
-        <div className="max-w-[1280px] mx-auto px-6 -mt-6">
-          <img
-            src={duoAmbAcademia.url}
-            alt="Acqualive DUO em ambiente de academia"
-            className="w-full max-w-[1100px] mx-auto -translate-y-16"
-            loading="lazy"
-          />
-        </div>
-        <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 -mt-10 pb-14">
+      <section id="contato" className="bg-[#1460B6] text-white">
+        <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 py-12 md:py-14">
           <div className="text-center">
             <img src={ligueIcon.url} alt="" className="h-14 w-auto mx-auto" />
-            <h2 className="text-5xl md:text-6xl mt-4">FALE</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl mt-4">FALE</h2>
             <hr className="border-white/50 max-w-[280px] mx-auto my-5" />
             <a
               href={WA_GERAL}
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-4xl md:text-5xl hover:opacity-90"
+              className="block text-3xl sm:text-4xl md:text-5xl hover:opacity-90 break-words"
             >
               {WHATSAPP_EXIBICAO}
             </a>
@@ -570,7 +568,7 @@ const OldEmpresas = () => {
               Seg a Sex: 9h às 19h – Sáb: 9h às 12h
             </p>
           </div>
-          <div className="bg-white/10 p-8 lg:p-10">
+          <div className="bg-white/10 p-6 sm:p-8 lg:p-10">
             <p className="text-right uppercase text-lg md:text-xl mb-6">
               ou <strong>nós ligamos pra você</strong>
             </p>
@@ -590,7 +588,7 @@ const OldEmpresas = () => {
       </section>
 
       {/* OUTROS BENEFICIOS */}
-      <section id="beneficios" className="max-w-[1280px] mx-auto px-6 py-16">
+      <section id="beneficios" className="max-w-[1280px] mx-auto px-6 py-12 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           <div className="space-y-12 lg:text-right order-2 lg:order-1">
             {BENEFICIOS_ESQ.map((b) => (
@@ -607,7 +605,7 @@ const OldEmpresas = () => {
           </div>
 
           <div className="order-1 lg:order-2 text-center">
-            <h2 className="text-3xl md:text-[38px] uppercase" style={{ color: CINZA }}>
+            <h2 className="text-2xl sm:text-3xl md:text-[38px] uppercase" style={{ color: CINZA }}>
               outros <strong style={{ color: AZUL }}>benefícios</strong>
             </h2>
             <img
@@ -636,16 +634,16 @@ const OldEmpresas = () => {
 
       {/* DEPOIMENTOS */}
       <section id="depoimentos" className="max-w-[1280px] mx-auto px-6 pb-16">
-        <h2 className="text-center text-3xl md:text-[38px] uppercase font-medium" style={{ color: AZUL }}>
+        <h2 className="text-center text-2xl sm:text-3xl md:text-[38px] uppercase font-medium" style={{ color: AZUL }}>
           Opinião de quem usa
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10 md:mt-12">
           {DEPOIMENTOS.map((d) => (
             <div key={d.nome} className="text-center">
               <img
                 src={d.foto}
                 alt={d.nome}
-                className="w-[230px] h-[230px] rounded-full object-cover mx-auto"
+                className="w-[180px] h-[180px] sm:w-[230px] sm:h-[230px] rounded-full object-cover mx-auto"
                 loading="lazy"
               />
               <p className="mt-6 text-[15px] leading-relaxed" style={{ color: "#5b6472" }}>
