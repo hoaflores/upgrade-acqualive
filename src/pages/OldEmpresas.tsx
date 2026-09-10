@@ -4,8 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
-import logo from "@/assets/old-empresas/logo.jpg.asset.json";
-import bannerTopo from "@/assets/old-empresas/banner-topo1.jpg.asset.json";
+import logo from "@/assets/acqualive-logo-azul.png.asset.json";
 import banner2 from "@/assets/old-empresas/banner2.jpg.asset.json";
 import bg3 from "@/assets/old-empresas/bg3.jpg.asset.json";
 import ligueIcon from "@/assets/old-empresas/ligue.png.asset.json";
