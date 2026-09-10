@@ -524,33 +524,31 @@ const OldEmpresas = () => {
       </section>
 
       {/* SOLUCAO IDEAL */}
-      <section className="pt-8">
-        <h2 className="text-center text-3xl md:text-[42px] uppercase leading-tight px-6" style={{ color: CINZA }}>
+      <section className="py-12 md:py-16">
+        <h2 className="text-center text-2xl sm:text-3xl md:text-[42px] uppercase leading-tight px-6" style={{ color: CINZA }}>
           Descubra <span style={{ color: AZUL }}>a solução ideal</span>
           <br />
           para sua empresa
         </h2>
-        <div className="mt-8">
+        <div className="mt-8 max-w-[1100px] mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
           <img
-            src={duoAmbClinica.url}
-            alt="Acqualive DUO instalado em recepção de clínica"
-            className="w-full max-w-[1100px] mx-auto"
+            src={duoAmbGarrafa.url}
+            alt="Acqualive DUO em recepção de clínica"
+            className="w-full h-[260px] sm:h-[340px] object-cover"
+            loading="lazy"
+          />
+          <img
+            src={duoAmbAcademia.url}
+            alt="Acqualive DUO em ambiente de academia"
+            className="w-full h-[260px] sm:h-[340px] object-cover"
             loading="lazy"
           />
         </div>
       </section>
 
       {/* CONTATO AZUL */}
-      <section id="contato" className="bg-[#1460B6] text-white relative">
-        <div className="max-w-[1280px] mx-auto px-6 -mt-6">
-          <img
-            src={duoAmbAcademia.url}
-            alt="Acqualive DUO em ambiente de academia"
-            className="w-full max-w-[1100px] mx-auto -translate-y-16"
-            loading="lazy"
-          />
-        </div>
-        <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 -mt-10 pb-14">
+      <section id="contato" className="bg-[#1460B6] text-white">
+        <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 py-12 md:py-14">
           <div className="text-center">
             <img src={ligueIcon.url} alt="" className="h-14 w-auto mx-auto" />
             <h2 className="text-5xl md:text-6xl mt-4">FALE</h2>
