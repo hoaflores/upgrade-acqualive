@@ -335,13 +335,13 @@ const OldEmpresas = () => {
 
       {/* HERO */}
       <section id="topo" className="grid grid-cols-1 lg:grid-cols-2">
-        <div className="bg-white pt-8">
+        <div className="bg-white pt-6 md:pt-8">
           <div className="text-center px-6">
-            <p className="uppercase tracking-[0.08em] text-sm md:text-base font-medium" style={{ color: CINZA }}>
+            <p className="uppercase tracking-[0.08em] text-xs sm:text-sm md:text-base font-medium" style={{ color: CINZA }}>
               mude a água da sua empresa
             </p>
             <h1
-              className="uppercase text-2xl md:text-4xl font-medium leading-tight mt-2"
+              className="uppercase text-xl sm:text-2xl md:text-4xl font-medium leading-tight mt-2"
               style={{ color: AZUL }}
             >
               e ganhe mais economia,
@@ -350,20 +350,20 @@ const OldEmpresas = () => {
             </h1>
           </div>
           <img
-            src={bannerTopo.url}
-            alt="Ambiente corporativo com água Acqualive"
-            className="w-full mt-4"
+            src={duoAmbClinica.url}
+            alt="Acqualive DUO instalado em ambiente corporativo"
+            className="w-full mt-4 max-h-[480px] object-cover object-center"
           />
         </div>
 
         <div className="bg-[#1460B6] text-white flex items-center">
-          <div className="w-full px-6 py-12 lg:py-0 text-center">
+          <div className="w-full px-5 sm:px-6 py-10 md:py-12 lg:py-0 text-center">
             <p className="uppercase tracking-[0.1em] text-sm md:text-base">fale com o alex</p>
             <a
               href={WA_GERAL}
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-4xl md:text-6xl font-medium my-2 hover:opacity-90"
+              className="block text-3xl sm:text-4xl md:text-6xl font-medium my-2 hover:opacity-90"
             >
               {WHATSAPP_EXIBICAO}
             </a>
