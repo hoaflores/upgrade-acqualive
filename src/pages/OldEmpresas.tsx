@@ -357,7 +357,7 @@ const OldEmpresas = () => {
         </div>
 
         <div className="bg-[#1460B6] text-white flex items-center">
-          <div className="w-full px-5 sm:px-6 py-10 md:py-12 lg:py-0 text-center">
+          <div className="w-full px-5 sm:px-6 py-10 md:py-12 text-center">
             <p className="uppercase tracking-[0.1em] text-sm md:text-base">fale com o alex</p>
             <a
               href={WA_GERAL}
