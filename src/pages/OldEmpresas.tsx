@@ -1,19 +1,13 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 import logo from "@/assets/old-empresas/logo.jpg.asset.json";
 import bannerTopo from "@/assets/old-empresas/banner-topo1.jpg.asset.json";
-import produtos06 from "@/assets/old-empresas/produtos_06.jpg.asset.json";
-import produtos08 from "@/assets/old-empresas/produtos_08.jpg.asset.json";
-import produtos10 from "@/assets/old-empresas/produtos_10.jpg.asset.json";
-import produtos10b from "@/assets/old-empresas/produtos_10_b.jpg.asset.json";
-import produtos03 from "@/assets/old-empresas/produtos_03.jpg.asset.json";
 import banner2 from "@/assets/old-empresas/banner2.jpg.asset.json";
 import bg3 from "@/assets/old-empresas/bg3.jpg.asset.json";
-import filtros3 from "@/assets/old-empresas/filtros_acqualive3.png.asset.json";
-import filtros2 from "@/assets/old-empresas/filtros_acqualive2.png.asset.json";
 import ligueIcon from "@/assets/old-empresas/ligue.png.asset.json";
 import icone1 from "@/assets/old-empresas/icone1.png.asset.json";
 import icone2 from "@/assets/old-empresas/icone2.png.asset.json";
@@ -21,7 +15,6 @@ import icone3 from "@/assets/old-empresas/icone3.png.asset.json";
 import icone4 from "@/assets/old-empresas/icone4.png.asset.json";
 import icone5 from "@/assets/old-empresas/icone5.png.asset.json";
 import check from "@/assets/old-empresas/check.png.asset.json";
-import niionImg from "@/assets/old-empresas/niion.png.asset.json";
 import dep03 from "@/assets/old-empresas/depoimentos_03.jpg.asset.json";
 import dep04 from "@/assets/old-empresas/depoimentos_04.jpg.asset.json";
 import dep06 from "@/assets/old-empresas/depoimentos_06.jpg.asset.json";
@@ -29,60 +22,77 @@ import dep15 from "@/assets/old-empresas/depoimentos_15.jpg.asset.json";
 import dep11 from "@/assets/old-empresas/depoimentos_11.jpg.asset.json";
 import dep12 from "@/assets/old-empresas/depoimentos_12.jpg.asset.json";
 import selos from "@/assets/old-empresas/selos.jpg.asset.json";
+import duoFrente from "@/assets/duo/duo-frente-transp.png.asset.json";
+import duoAmbClinica from "@/assets/duo/Duo_Ambientada_2.png.asset.json";
+import duoAmbAcademia from "@/assets/duo/Duo_Ambientada_3.png.asset.json";
+import duoAmbCozinha from "@/assets/duo/Duo_Ambientada_1.png.asset.json";
 
 const AZUL = "#1460B6";
 const CINZA = "#8A94A2";
 
-const TELEFONE = "(51) 99343-7359";
-const TELEFONE_LINK = "tel:+5551993437359";
+/** Responsavel comercial da pagina: Alex */
+const WHATSAPP_NUMERO = "555194896709";
+const WHATSAPP_EXIBICAO = "(51) 99489-6709";
 const TELEFONE_0800 = "0800 605 6501";
 const TELEFONE_0800_LINK = "tel:08006056501";
 
+const wa = (mensagem: string) =>
+  `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(mensagem)}`;
+
+const WA_GERAL = wa(
+  "Olá, Alex! Vim pela página Acqualive para Empresas e gostaria de saber mais sobre as soluções."
+);
+
+/**
+ * Produtos empresariais atuais: Acqualive DUO e Acqualive DUO Lite.
+ * DUO: dados confirmados na pagina oficial do produto.
+ * DUO Lite: sem ficha tecnica e sem imagem oficial disponiveis ate o momento.
+ * Nao publicar preco, capacidade ou custo por litro sem fonte confirmada.
+ */
 const PRODUTOS = [
   {
-    nome: "FRESH V6",
-    imagem: produtos06.url,
-    nota: "*bebedouro não incluído",
-    preco: "R$1.549,00",
-    capacidade: "1500 litros*",
-    litro1: "R$0,61",
-    litro2: "R$0,20**",
+    nome: "ACQUALIVE DUO",
+    imagem: duoFrente.url,
+    alt: "Acqualive DUO, purificador de água alcalina natural e gelada",
+    nota: "*água natural e gelada no mesmo equipamento",
+    destaques: [
+      "Consumo direto no ponto de uso",
+      "Água natural e gelada",
+      "Tecnologia TriWay Acqualive",
+      "Água alcalina ionizada",
+      "Bancada, balcão, armário ou parede",
+    ],
+    preco: "R$ 4.397,00",
+    precoNota: "10x sem juros",
+    cta: wa(
+      "Olá, Alex! Vim pela página Acqualive para Empresas e gostaria de saber mais sobre o Acqualive DUO."
+    ),
   },
   {
-    nome: "FRESH V10",
-    imagem: produtos08.url,
-    nota: "*bebedouro não incluído",
-    preco: "R$1.599,00",
-    capacidade: "1500 litros*",
-    litro1: "R$0,63",
-    litro2: "R$0,20**",
-  },
-  {
-    nome: "NIION",
-    imagem: produtos10.url,
-    imagemAlt: produtos10b.url,
-    nota: "",
-    preco: "R$ 2.389,00",
-    capacidade: "8000 litros",
-    litro1: "R$0,29",
-    litro2: "R$0,20**",
-  },
-  {
-    nome: "GALÃO",
-    imagem: produtos03.url,
-    nota: "",
-    preco: "R$12,90",
-    capacidade: "20 litros",
-    litro1: "R$0,64",
-    litro2: "R$0,64",
+    nome: "ACQUALIVE DUO LITE",
+    imagem: null,
+    alt: "Acqualive DUO Lite",
+    nota: "*compatibilidade avaliada ponto a ponto",
+    destaques: [
+      "Versatilidade de instalação",
+      "Torneiras, copas e cozinhas",
+      "Geladeiras, cafeteiras e máquinas de suco",
+      "Bebedouros e bebedouros industriais",
+      "Instalação discreta, inclusive sob a pia",
+    ],
+    preco: "Consulte",
+    precoNota: "condições comerciais para empresas",
+    cta: wa(
+      "Olá, Alex! Vim pela página Acqualive para Empresas e gostaria de saber mais sobre o Acqualive DUO Lite."
+    ),
   },
 ];
 
 const ICONES = [
-  { img: icone1.url, alt: "icone1", texto: <>Nossos produtos atendem diferentes necessidades, para sua <strong>empresa</strong></> },
-  { img: icone2.url, alt: "icone2", texto: <><strong>Compre online ou por telefone</strong> e receba o filtro no seu endereço</> },
+  { img: icone1.url, alt: "icone1", texto: <>O <strong>Acqualive DUO</strong> e o <strong>DUO Lite</strong> atendem diferentes necessidades da sua <strong>empresa</strong></> },
+  { img: icone2.url, alt: "icone2", texto: <><strong>Fale com nosso consultor</strong> e receba a solução instalada no seu endereço</> },
   { img: icone3.url, alt: "icone3", texto: <>Desfrute dos benefícios de consumir uma <strong>água pura, alcalina e ionizada</strong></> },
-  { img: icone4.url, alt: "icone4", texto: <>Uma vez adquirido o filtro, <strong>você só precisa trocar o refil</strong></> },
+  { img: icone4.url, alt: "icone4", texto: <>Uma vez adquirido o equipamento, <strong>você só precisa trocar o refil</strong></> },
   { img: icone5.url, alt: "icone5", texto: <>Parcele seu pedido em <strong>até 10x no cartão</strong> ou economize adquirindo um <strong>combo</strong></> },
 ];
 
@@ -143,6 +153,17 @@ const DEPOIMENTOS = [
   },
 ];
 
+const SECOES: { id: string; rotulo: string }[] = [
+  { id: "topo", rotulo: "o início da página" },
+  { id: "economia", rotulo: "Economia" },
+  { id: "produtividade", rotulo: "Água e Produtividade" },
+  { id: "tecnologia", rotulo: "Água Alcalina Ionizada" },
+  { id: "produtos", rotulo: "Acqualive DUO e DUO Lite" },
+  { id: "contato", rotulo: "Contato" },
+  { id: "beneficios", rotulo: "Benefícios" },
+  { id: "depoimentos", rotulo: "Opinião de Quem Usa" },
+];
+
 interface FormProps {
   variante?: "empilhado" | "linha";
   origem: string;
@@ -152,6 +173,7 @@ const FormMeLigue = ({ variante = "empilhado", origem }: FormProps) => {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [telefone, setTelefone] = useState("");
+  const [empresa, setEmpresa] = useState("");
   const [enviando, setEnviando] = useState(false);
 
   const enviar = async (e: React.FormEvent) => {
@@ -165,19 +187,35 @@ const FormMeLigue = ({ variante = "empilhado", origem }: FormProps) => {
       nome: nome.trim(),
       email: email.trim(),
       telefone: telefone.trim(),
-      empresa: nome.trim(),
+      empresa: empresa.trim() || nome.trim(),
       origem,
       mensagem: "Solicitou retorno pelo formulario ME LIGUE",
     });
     setEnviando(false);
     if (error) {
-      toast.error("Nao foi possivel enviar. Tente novamente ou ligue para nos.");
-      return;
+      toast.error("Nao foi possivel enviar. Tente novamente ou fale conosco no WhatsApp.");
     }
-    toast.success("Recebemos seu contato. Em breve ligamos para voce.");
-    setNome("");
-    setEmail("");
-    setTelefone("");
+
+    const linhas = [
+      `Nome: ${nome.trim()}`,
+      empresa.trim() ? `Empresa: ${empresa.trim()}` : "",
+      `Telefone: ${telefone.trim()}`,
+      `E-mail: ${email.trim()}`,
+    ].filter(Boolean);
+
+    const mensagem = `Olá, Alex! Vim pela página Acqualive para Empresas.\n\n${linhas.join(
+      "\n"
+    )}\n\nGostaria de conhecer melhor as soluções da Acqualive para minha empresa.`;
+
+    window.open(wa(mensagem), "_blank", "noopener,noreferrer");
+
+    if (!error) {
+      toast.success("Recebemos seu contato. Estamos abrindo o WhatsApp do Alex.");
+      setNome("");
+      setEmail("");
+      setTelefone("");
+      setEmpresa("");
+    }
   };
 
   const inputClass =
@@ -185,8 +223,9 @@ const FormMeLigue = ({ variante = "empilhado", origem }: FormProps) => {
 
   if (variante === "linha") {
     return (
-      <form onSubmit={enviar} className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full">
+      <form onSubmit={enviar} className="grid grid-cols-1 md:grid-cols-5 gap-4 w-full">
         <input className={inputClass} placeholder="Nome" value={nome} onChange={(e) => setNome(e.target.value)} />
+        <input className={inputClass} placeholder="Empresa" value={empresa} onChange={(e) => setEmpresa(e.target.value)} />
         <input className={inputClass} placeholder="E-mail" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         <input className={inputClass} placeholder="DDD+Telefone" value={telefone} onChange={(e) => setTelefone(e.target.value)} />
         <button
@@ -203,6 +242,7 @@ const FormMeLigue = ({ variante = "empilhado", origem }: FormProps) => {
   return (
     <form onSubmit={enviar} className="w-full max-w-[500px] mx-auto space-y-4">
       <input className={inputClass} placeholder="Nome" value={nome} onChange={(e) => setNome(e.target.value)} />
+      <input className={inputClass} placeholder="Empresa" value={empresa} onChange={(e) => setEmpresa(e.target.value)} />
       <input className={inputClass} placeholder="E-mail" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
       <input className={inputClass} placeholder="DDD+Telefone" value={telefone} onChange={(e) => setTelefone(e.target.value)} />
       <button
@@ -216,14 +256,65 @@ const FormMeLigue = ({ variante = "empilhado", origem }: FormProps) => {
   );
 };
 
+/** Botao flutuante de WhatsApp com identificacao da secao visivel. */
+const WhatsAppFlutuante = () => {
+  const [rotulo, setRotulo] = useState<string | null>(null);
+  const visiveis = useRef<Map<string, number>>(new Map());
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entradas) => {
+        entradas.forEach((entrada) => {
+          visiveis.current.set(entrada.target.id, entrada.isIntersecting ? entrada.intersectionRatio : 0);
+        });
+        let melhorId: string | null = null;
+        let melhorRatio = 0;
+        visiveis.current.forEach((ratio, id) => {
+          if (ratio > melhorRatio) {
+            melhorRatio = ratio;
+            melhorId = id;
+          }
+        });
+        const secao = SECOES.find((s) => s.id === melhorId);
+        setRotulo(secao && secao.id !== "topo" ? secao.rotulo : null);
+      },
+      { threshold: [0, 0.25, 0.5, 0.75, 1] }
+    );
+
+    SECOES.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, []);
+
+  const link = rotulo
+    ? wa(
+        `Olá, Alex! Vim pela página Acqualive para Empresas. Eu estava vendo a seção de ${rotulo} e gostaria de saber mais.`
+      )
+    : WA_GERAL;
+
+  return (
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar com Alex no WhatsApp"
+      className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg hover:scale-105 transition-transform"
+    >
+      <WhatsAppIcon className="w-7 h-7 text-white" />
+    </a>
+  );
+};
+
 const OldEmpresas = () => {
   return (
     <div className="min-h-screen bg-white" style={{ fontFamily: "'DM Sans', sans-serif" }}>
       <Helmet>
-        <title>Acqualive Empresas | A solução ideal para a sua empresa</title>
+        <title>Acqualive Empresas | Acqualive DUO e DUO Lite para o seu negócio</title>
         <meta
           name="description"
-          content="Mude a água da sua empresa e ganhe mais economia, produtividade e saúde. Compare litragem e custo dos filtros Acqualive."
+          content="Água alcalina ionizada para a sua empresa com o Acqualive DUO e o Acqualive DUO Lite. Fale com o nosso consultor e descubra a solução ideal."
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -243,7 +334,7 @@ const OldEmpresas = () => {
       </header>
 
       {/* HERO */}
-      <section className="grid grid-cols-1 lg:grid-cols-2">
+      <section id="topo" className="grid grid-cols-1 lg:grid-cols-2">
         <div className="bg-white pt-8">
           <div className="text-center px-6">
             <p className="uppercase tracking-[0.08em] text-sm md:text-base font-medium" style={{ color: CINZA }}>
@@ -258,14 +349,23 @@ const OldEmpresas = () => {
               produtividade e saúde
             </h1>
           </div>
-          <img src={bannerTopo.url} alt="Purificador Acqualive em ambiente corporativo" className="w-full mt-4" />
+          <img
+            src={bannerTopo.url}
+            alt="Ambiente corporativo com água Acqualive"
+            className="w-full mt-4"
+          />
         </div>
 
         <div className="bg-[#1460B6] text-white flex items-center">
           <div className="w-full px-6 py-12 lg:py-0 text-center">
-            <p className="uppercase tracking-[0.1em] text-sm md:text-base">ligue</p>
-            <a href={TELEFONE_LINK} className="block text-4xl md:text-6xl font-medium my-2 hover:opacity-90">
-              {TELEFONE}
+            <p className="uppercase tracking-[0.1em] text-sm md:text-base">fale com o alex</p>
+            <a
+              href={WA_GERAL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-4xl md:text-6xl font-medium my-2 hover:opacity-90"
+            >
+              {WHATSAPP_EXIBICAO}
             </a>
             <p className="uppercase text-sm md:text-base mb-8">ou ligamos para você!</p>
             <FormMeLigue origem="old-empresas-topo" />
@@ -274,7 +374,7 @@ const OldEmpresas = () => {
       </section>
 
       {/* ECONOMIA */}
-      <section className="max-w-[1280px] mx-auto px-6 py-14">
+      <section id="economia" className="max-w-[1280px] mx-auto px-6 py-14">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <p className="text-2xl md:text-[28px] uppercase leading-snug" style={{ color: CINZA }}>
             Mais benefícios
@@ -282,29 +382,47 @@ const OldEmpresas = () => {
             <br />para sua empresa
           </p>
           <p className="text-2xl md:text-[28px] uppercase leading-snug" style={{ color: CINZA }}>
-            <span style={{ color: AZUL }}>30% de economia</span>
+            <span style={{ color: AZUL }}>fim do galão</span>
             <br />
-            no segundo ano
+            e da logística de entregas
           </p>
           <p className="text-2xl md:text-[28px] uppercase leading-snug" style={{ color: CINZA }}>
-            <span style={{ color: AZUL }}>55% de economia</span>
+            <span style={{ color: AZUL }}>custo previsível</span>
             <br />
-            em 5 anos
+            com a troca dos refis
           </p>
         </div>
 
         <hr className="my-12 border-[#d7dce2]" />
 
         <h2 className="text-center text-2xl md:text-[32px] uppercase" style={{ color: CINZA }}>
-          Confira os comparativos de <strong style={{ color: AZUL }}>litragem e custo</strong>
+          Conheça as soluções <strong style={{ color: AZUL }}>Acqualive para empresas</strong>
         </h2>
 
-        {/* COMPARATIVO */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+        {/* PRODUTOS: DUO e DUO LITE */}
+        <div id="produtos" className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 max-w-[860px] mx-auto">
           {PRODUTOS.map((p) => (
             <div key={p.nome} className="flex flex-col">
               <div className="relative flex items-end justify-center h-[260px]">
-                <img src={p.imagem} alt={p.nome} className="max-h-[260px] w-auto object-contain relative z-10" />
+                {p.imagem ? (
+                  <img
+                    src={p.imagem}
+                    alt={p.alt}
+                    loading="lazy"
+                    className="max-h-[260px] w-auto object-contain relative z-10"
+                  />
+                ) : (
+                  /* Placeholder: aguardando imagem oficial do Acqualive DUO Lite */
+                  <div className="w-full h-[260px] bg-[#F2F4F7] border border-dashed border-[#c9d0d9] flex items-center justify-center text-center px-6">
+                    <p className="text-[13px] uppercase leading-snug" style={{ color: CINZA }}>
+                      imagem oficial do
+                      <br />
+                      acqualive duo lite
+                      <br />
+                      <span className="text-[11px]">em breve</span>
+                    </p>
+                  </div>
+                )}
               </div>
               <div className="bg-[#E4E8ED] pt-6 pb-6 text-center">
                 <h3 className="text-2xl uppercase" style={{ color: "#4b5563" }}>
@@ -312,46 +430,45 @@ const OldEmpresas = () => {
                 </h3>
                 {p.nota && <p className="text-[11px] mt-1" style={{ color: CINZA }}>{p.nota}</p>}
               </div>
-              <div className="bg-[#E4E8ED] mt-2 py-6 text-center space-y-5">
+              <div className="bg-[#E4E8ED] mt-2 py-6 px-6 text-center space-y-5 flex-1 flex flex-col">
+                <ul className="space-y-3 text-left">
+                  {p.destaques.map((d) => (
+                    <li key={d} className="flex gap-3 items-start">
+                      <img src={check.url} alt="" className="h-5 w-auto mt-[2px]" />
+                      <span className="text-[14px] leading-snug" style={{ color: "#5b6472" }}>
+                        {d}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
                 <div>
                   <p className="text-[11px] uppercase tracking-wide" style={{ color: "#6b7280" }}>preço</p>
                   <p className="text-xl font-medium" style={{ color: AZUL }}>{p.preco}</p>
+                  <p className="text-[11px]" style={{ color: CINZA }}>{p.precoNota}</p>
                 </div>
-                <div>
-                  <p className="text-[11px] uppercase tracking-wide" style={{ color: "#6b7280" }}>capacidade</p>
-                  <p className="text-xl font-medium" style={{ color: AZUL }}>{p.capacidade}</p>
-                </div>
-                <div>
-                  <p className="text-[11px] uppercase tracking-wide" style={{ color: "#6b7280" }}>
-                    valor/litro
-                    <br />
-                    <span className="text-[10px]">1º ANO</span>
-                  </p>
-                  <p className="text-xl font-medium" style={{ color: AZUL }}>{p.litro1}</p>
-                </div>
-                <div>
-                  <p className="text-[11px] uppercase tracking-wide" style={{ color: "#6b7280" }}>
-                    valor/litro
-                    <br />
-                    <span className="text-[10px]">A PARTIR DO 2º ANO</span>
-                  </p>
-                  <p className="text-xl font-medium" style={{ color: AZUL }}>{p.litro2}</p>
-                </div>
+                <a
+                  href={p.cta}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto block bg-[#1460B6] text-white uppercase text-[15px] tracking-wide py-3 hover:bg-[#11529c] transition-colors"
+                >
+                  falar com o alex
+                </a>
               </div>
             </div>
           ))}
         </div>
 
         <div className="text-right text-[11px] uppercase mt-4 leading-relaxed" style={{ color: CINZA }}>
-          <p>* capacidade representa a vida útil dos refis</p>
-          <p>** baseado no valor de troca dos refis</p>
+          <p>* consulte as condições comerciais para empresas</p>
+          <p>** compatibilidade do DUO Lite avaliada em cada ponto de consumo</p>
         </div>
       </section>
 
       {/* PRODUTIVIDADE */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
+      <section id="produtividade" className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
         <div>
-          <img src={banner2.url} alt="Equipe trabalhando em escritório" className="w-full h-auto object-cover" />
+          <img src={banner2.url} alt="Equipe trabalhando em escritório" className="w-full h-auto object-cover" loading="lazy" />
         </div>
         <div className="px-6 lg:pr-16 max-w-[620px]">
           <h2 className="text-3xl md:text-[40px] uppercase leading-tight" style={{ color: CINZA }}>
@@ -375,18 +492,19 @@ const OldEmpresas = () => {
       </section>
 
       {/* AGUA ALCALINA SEMPRE A MAO */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-end max-w-[1280px] mx-auto px-6 py-16">
+      <section id="tecnologia" className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-end max-w-[1280px] mx-auto px-6 py-16">
         <div className="max-w-[420px] mx-auto lg:mx-0 text-[15px] leading-relaxed" style={{ color: "#5b6472" }}>
           <p>
             <strong style={{ color: AZUL }}>
               A Acqualive possibilita o tratamento de água da forma mais completa e garante que você tenha à mão uma
               água alcalina, antioxidante, pura, magnesiana e hidratante.
             </strong>{" "}
-            Pensando em oferecer mais facilidade na hora do consumo, a Acqualive desenvolveu uma linha de produtos capaz
-            de transformar a água da torneira na água ideal para a saúde.
+            Pensando em oferecer mais facilidade na hora do consumo, a Acqualive desenvolveu o Acqualive DUO e o
+            Acqualive DUO Lite, capazes de transformar a água da torneira na água ideal para a saúde.
           </p>
           <p className="mt-4">
-            Além disso, também oferece uma variada linha de filtros, que atendem diferentes necessidades.
+            O DUO entrega água natural e gelada no próprio equipamento. O DUO Lite leva a tecnologia Acqualive até
+            torneiras, copas, cozinhas e equipamentos compatíveis da sua operação.
           </p>
           <p className="mt-4">
             Converse com nossos consultores e descubra qual a melhor solução para atender as necessidades da sua
@@ -394,7 +512,7 @@ const OldEmpresas = () => {
           </p>
         </div>
         <div className="relative">
-          <img src={bg3.url} alt="Copo com água alcalina" className="w-full h-auto object-contain" />
+          <img src={bg3.url} alt="Copo com água alcalina" className="w-full h-auto object-contain" loading="lazy" />
           <h2 className="text-3xl md:text-[42px] uppercase leading-tight text-right mt-4" style={{ color: CINZA }}>
             água alcalina
             <br />
@@ -405,30 +523,45 @@ const OldEmpresas = () => {
         </div>
       </section>
 
-      {/* FILTRO IDEAL */}
+      {/* SOLUCAO IDEAL */}
       <section className="pt-8">
         <h2 className="text-center text-3xl md:text-[42px] uppercase leading-tight px-6" style={{ color: CINZA }}>
-          Descubra <span style={{ color: AZUL }}>o filtro ideal</span>
+          Descubra <span style={{ color: AZUL }}>a solução ideal</span>
           <br />
           para sua empresa
         </h2>
         <div className="mt-8">
-          <img src={filtros3.url} alt="Linha de filtros Acqualive" className="w-full max-w-[1100px] mx-auto" />
+          <img
+            src={duoAmbClinica.url}
+            alt="Acqualive DUO instalado em recepção de clínica"
+            className="w-full max-w-[1100px] mx-auto"
+            loading="lazy"
+          />
         </div>
       </section>
 
-      {/* LIGUE AZUL */}
-      <section className="bg-[#1460B6] text-white relative">
+      {/* CONTATO AZUL */}
+      <section id="contato" className="bg-[#1460B6] text-white relative">
         <div className="max-w-[1280px] mx-auto px-6 -mt-6">
-          <img src={filtros2.url} alt="Filtros Acqualive" className="w-full max-w-[1100px] mx-auto -translate-y-16" />
+          <img
+            src={duoAmbAcademia.url}
+            alt="Acqualive DUO em ambiente de academia"
+            className="w-full max-w-[1100px] mx-auto -translate-y-16"
+            loading="lazy"
+          />
         </div>
         <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 -mt-10 pb-14">
           <div className="text-center">
             <img src={ligueIcon.url} alt="" className="h-14 w-auto mx-auto" />
-            <h2 className="text-5xl md:text-6xl mt-4">LIGUE</h2>
+            <h2 className="text-5xl md:text-6xl mt-4">FALE</h2>
             <hr className="border-white/50 max-w-[280px] mx-auto my-5" />
-            <a href={TELEFONE_LINK} className="block text-4xl md:text-5xl hover:opacity-90">
-              {TELEFONE}
+            <a
+              href={WA_GERAL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-4xl md:text-5xl hover:opacity-90"
+            >
+              {WHATSAPP_EXIBICAO}
             </a>
             <hr className="border-white/50 max-w-[280px] mx-auto my-5" />
             <p className="uppercase text-sm md:text-base leading-relaxed">
@@ -449,7 +582,7 @@ const OldEmpresas = () => {
         <div className="max-w-[1280px] mx-auto px-6 pb-14 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 divide-y sm:divide-y-0 sm:divide-x divide-white/25">
           {ICONES.map((i) => (
             <div key={i.alt} className="px-6 py-6 text-center">
-              <img src={i.img} alt={i.alt} className="h-16 w-auto mx-auto" />
+              <img src={i.img} alt={i.alt} className="h-16 w-auto mx-auto" loading="lazy" />
               <p className="mt-4 text-[15px] leading-snug">{i.texto}</p>
             </div>
           ))}
@@ -457,7 +590,7 @@ const OldEmpresas = () => {
       </section>
 
       {/* OUTROS BENEFICIOS */}
-      <section className="max-w-[1280px] mx-auto px-6 py-16">
+      <section id="beneficios" className="max-w-[1280px] mx-auto px-6 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           <div className="space-y-12 lg:text-right order-2 lg:order-1">
             {BENEFICIOS_ESQ.map((b) => (
@@ -477,7 +610,12 @@ const OldEmpresas = () => {
             <h2 className="text-3xl md:text-[38px] uppercase" style={{ color: CINZA }}>
               outros <strong style={{ color: AZUL }}>benefícios</strong>
             </h2>
-            <img src={niionImg.url} alt="Refis Acqualive NIION" className="w-full max-w-[420px] mx-auto mt-6" />
+            <img
+              src={duoAmbCozinha.url}
+              alt="Acqualive DUO em copa corporativa"
+              className="w-full max-w-[420px] mx-auto mt-6"
+              loading="lazy"
+            />
           </div>
 
           <div className="space-y-12 order-3">
@@ -497,7 +635,7 @@ const OldEmpresas = () => {
       </section>
 
       {/* DEPOIMENTOS */}
-      <section className="max-w-[1280px] mx-auto px-6 pb-16">
+      <section id="depoimentos" className="max-w-[1280px] mx-auto px-6 pb-16">
         <h2 className="text-center text-3xl md:text-[38px] uppercase font-medium" style={{ color: AZUL }}>
           Opinião de quem usa
         </h2>
@@ -527,9 +665,14 @@ const OldEmpresas = () => {
       <section className="bg-[#1460B6] text-white py-10">
         <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
           <div className="text-center">
-            <p className="uppercase text-lg">ligue para nós</p>
-            <a href={TELEFONE_LINK} className="block text-3xl md:text-4xl mt-2 hover:opacity-90">
-              {TELEFONE}
+            <p className="uppercase text-lg">fale com o alex</p>
+            <a
+              href={WA_GERAL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-3xl md:text-4xl mt-2 hover:opacity-90"
+            >
+              {WHATSAPP_EXIBICAO}
             </a>
           </div>
           <div className="lg:col-span-2">
@@ -561,6 +704,8 @@ const OldEmpresas = () => {
           </div>
         </div>
       </footer>
+
+      <WhatsAppFlutuante />
     </div>
   );
 };
