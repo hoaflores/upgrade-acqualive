@@ -65,6 +65,7 @@ const PRODUTOS = [
     ],
     preco: "10x de R$ 439,70",
     precoNota: "",
+    ctaLabel: "FALAR COM O NOSSO CONSULTOR ALEX",
     cta: wa(
       "Olá, Alex! Vim pela página Acqualive para Empresas e gostaria de saber mais sobre o Acqualive DUO."
     ),
@@ -83,6 +84,7 @@ const PRODUTOS = [
     ],
     preco: "10x de R$ 109,70",
     precoNota: "\n",
+    ctaLabel: "FALAR COM O NOSSO CONSULTOR ALEX ",
     cta: wa(
       "Olá, Alex! Vim pela página Acqualive para Empresas e gostaria de saber mais sobre o Acqualive DUO Lite."
     ),
@@ -453,7 +455,7 @@ const OldEmpresas = () => {
                   rel="noopener noreferrer"
                   className="mt-auto block bg-[#1460B6] text-white uppercase text-[15px] tracking-wide py-3 hover:bg-[#11529c] transition-colors"
                 >
-                  falar com o alex
+                  {p.ctaLabel}
                 </a>
               </div>
             </div>
