@@ -23,9 +23,9 @@ import dep12 from "@/assets/old-empresas/depoimentos_12.jpg.asset.json";
 import selos from "@/assets/old-empresas/selos.jpg.asset.json";
 import duoFrente from "@/assets/duo/duo-frente-transp.png.asset.json";
 import duoSecao1 from "@/assets/old-empresas/duo-secao1-empresas.png.asset.json";
-import duoAmbAcademia from "@/assets/duo/Duo_Ambientada_3.png.asset.json";
+import duoRecepcao from "@/assets/old-empresas/duo-escritorio-recepcao.png.asset.json";
+import duoCopa from "@/assets/old-empresas/duo-copa-empresa.png.asset.json";
 import duoAmbCozinha from "@/assets/duo/Duo_Ambientada_1.png.asset.json";
-import duoAmbGarrafa from "@/assets/duo/Duo_Ambientada_4.png.asset.json";
 import duoLiteEmpresas from "@/assets/old-empresas/duo-lite-empresas.png.asset.json";
 
 const AZUL = "#1460B6";
@@ -355,7 +355,7 @@ const OldEmpresas = () => {
           <img
             src={duoSecao1.url}
             alt="Acqualive DUO em ambiente corporativo, entregando água natural e gelada para equipes"
-            className="w-full mt-4 max-h-[480px] object-cover object-center"
+            className="w-full mt-4 h-auto"
           />
         </div>
 
@@ -535,15 +535,15 @@ const OldEmpresas = () => {
         </h2>
         <div className="mt-8 max-w-[1100px] mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
           <img
-            src={duoAmbGarrafa.url}
-            alt="Acqualive DUO em recepção de clínica"
-            className="w-full h-[260px] sm:h-[340px] object-cover"
+            src={duoRecepcao.url}
+            alt="Acqualive DUO instalado em recepção de escritório"
+            className="w-full h-auto"
             loading="lazy"
           />
           <img
-            src={duoAmbAcademia.url}
-            alt="Acqualive DUO em ambiente de academia"
-            className="w-full h-[260px] sm:h-[340px] object-cover"
+            src={duoCopa.url}
+            alt="Colaborador servindo água no Acqualive DUO na copa da empresa"
+            className="w-full h-auto"
             loading="lazy"
           />
         </div>
