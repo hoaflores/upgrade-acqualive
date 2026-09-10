@@ -77,10 +77,10 @@ const PRODUTOS = [
     nota: "*compatibilidade avaliada ponto a ponto",
     destaques: [
       "Versatilidade de instalação",
-      "Torneiras, copas e cozinhas",
-      "Geladeiras, cafeteiras e máquinas de suco",
+      "Água alcalina com excelente custo-benefício",
+      "Tecnologia TriWay Acqualive",
       "Bebedouros e bebedouros industriais",
-      "Instalação discreta, inclusive sob a pia",
+      "Geladeiras, cafeteiras e máquinas de suco",
     ],
     preco: "10x de R$ 109,70",
     precoNota: "\n",
