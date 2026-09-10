@@ -64,7 +64,7 @@ const PRODUTOS = [
       "Bancada, balcão, armário ou parede",
     ],
     preco: "10x de R$ 439,70",
-    precoNota: "10x sem juros",
+    precoNota: "",
     cta: wa(
       "Olá, Alex! Vim pela página Acqualive para Empresas e gostaria de saber mais sobre o Acqualive DUO."
     ),
@@ -82,7 +82,7 @@ const PRODUTOS = [
       "Instalação discreta, inclusive sob a pia",
     ],
     preco: "10x de R$ 109,70",
-    precoNota: "10x sem juros",
+    precoNota: "\n",
     cta: wa(
       "Olá, Alex! Vim pela página Acqualive para Empresas e gostaria de saber mais sobre o Acqualive DUO Lite."
     ),
