@@ -63,7 +63,7 @@ const PRODUTOS = [
       "Água alcalina ionizada",
       "Bancada, balcão, armário ou parede",
     ],
-    preco: "R$ 4.397,00",
+    preco: "10x de R$ 439,70",
     precoNota: "10x sem juros",
     cta: wa(
       "Olá, Alex! Vim pela página Acqualive para Empresas e gostaria de saber mais sobre o Acqualive DUO."
@@ -71,8 +71,8 @@ const PRODUTOS = [
   },
   {
     nome: "ACQUALIVE DUO LITE",
-    imagem: null,
-    alt: "Acqualive DUO Lite",
+    imagem: duoLiteEmpresas.url,
+    alt: "Acqualive DUO Lite instalado sob a pia em ambiente corporativo",
     nota: "*compatibilidade avaliada ponto a ponto",
     destaques: [
       "Versatilidade de instalação",
@@ -81,8 +81,8 @@ const PRODUTOS = [
       "Bebedouros e bebedouros industriais",
       "Instalação discreta, inclusive sob a pia",
     ],
-    preco: "Consulte",
-    precoNota: "condições comerciais para empresas",
+    preco: "10x de R$ 109,70",
+    precoNota: "10x sem juros",
     cta: wa(
       "Olá, Alex! Vim pela página Acqualive para Empresas e gostaria de saber mais sobre o Acqualive DUO Lite."
     ),
