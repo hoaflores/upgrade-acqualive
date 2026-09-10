@@ -26,6 +26,7 @@ import duoSecao1 from "@/assets/old-empresas/duo-secao1-empresas.png.asset.json"
 import duoAmbAcademia from "@/assets/duo/Duo_Ambientada_3.png.asset.json";
 import duoAmbCozinha from "@/assets/duo/Duo_Ambientada_1.png.asset.json";
 import duoAmbGarrafa from "@/assets/duo/Duo_Ambientada_4.png.asset.json";
+import duoLiteEmpresas from "@/assets/old-empresas/duo-lite-empresas.png.asset.json";
 
 const AZUL = "#1460B6";
 const CINZA = "#8A94A2";
