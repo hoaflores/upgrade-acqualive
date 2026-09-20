@@ -22,7 +22,7 @@ import dep11 from "@/assets/old-empresas/depoimentos_11.jpg.asset.json";
 import dep12 from "@/assets/old-empresas/depoimentos_12.jpg.asset.json";
 import selos from "@/assets/old-empresas/selos.jpg.asset.json";
 import duoFrente from "@/assets/duo/duo-frente-transp.png.asset.json";
-import duoSecao1 from "@/assets/old-empresas/duo-secao1-empresas.png.asset.json";
+import duoSecao1 from "@/assets/old-empresas/duo-hero-empresas.jpg.asset.json";
 import duoRecepcao from "@/assets/old-empresas/duo-escritorio-recepcao.png.asset.json";
 import duoCopa from "@/assets/old-empresas/duo-copa-empresa.png.asset.json";
 import duoAmbCozinha from "@/assets/duo/Duo_Ambientada_1.png.asset.json";
