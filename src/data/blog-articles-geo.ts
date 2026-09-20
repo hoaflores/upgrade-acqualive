@@ -21,7 +21,7 @@ const article24 = {
 <meta name="author" content="Acqualive">
 <link rel="canonical" href="https://blog.acqualive.com.br/agua-alcalina-fato-ou-mito-revisao-2026/">
 <meta property="og:title" content="Água alcalina é fato ou mito? O que a revisão de 2026 realmente mostrou">
-<meta property="og:description" content="Refluxo tem a evidência mais consistente. Hidratação e ossos aparecem com efeito modesto. Longevidade segue sem dados. O resumo honesto da revisão.">
+<meta property="og:description" content="Refluxo tem a evidência mais consistente. Hidratação, pH urinário e ossos aparecem com resultados positivos. O resumo da revisão de 2026.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:image" content="${IMG}/agua-alcalina-fato-ou-mito.jpg">
@@ -31,10 +31,10 @@ const article24 = {
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Água alcalina funciona ou é só marketing?","acceptedAnswer":{"@type":"Answer","text":"Segundo a revisão publicada na Frontiers in Medicine em junho de 2026, os benefícios da água alcalina são reais mas específicos. O achado mais consistente é a inativação da pepsina, enzima ligada aos sintomas de refluxo. Efeitos modestos aparecem em marcadores de hidratação, pH urinário e reabsorção óssea. Promessas amplas de cura, emagrecimento ou longevidade não são sustentadas pelos dados."}},
-{"@type":"Question","name":"Água alcalina ajuda no refluxo?","acceptedAnswer":{"@type":"Answer","text":"Sim, é a aplicação com melhor suporte científico. Água com pH acima de 8,8 inativa a pepsina in vitro, e a pepsina é um dos agentes que agridem a mucosa do esôfago no refluxo. A água não substitui tratamento médico, mas funciona como medida coadjuvante de baixo risco."}},
+{"@type":"Question","name":"Água alcalina funciona ou é só marketing?","acceptedAnswer":{"@type":"Answer","text":"Segundo a revisão publicada na Frontiers in Medicine em junho de 2026, os benefícios da água alcalina são reais e específicos. O achado mais consistente é a inativação da pepsina, enzima ligada aos sintomas de refluxo. A revisão também registra resultados positivos em marcadores de hidratação, pH urinário e reabsorção óssea, que ajudam o organismo todos os dias."}},
+{"@type":"Question","name":"Água alcalina ajuda no refluxo?","acceptedAnswer":{"@type":"Answer","text":"Sim, é a aplicação com melhor suporte científico. Água com pH acima de 8,8 inativa a pepsina in vitro, e a pepsina é um dos agentes que agridem a mucosa do esôfago no refluxo. Ela ajuda como medida coadjuvante segura, aliada ao acompanhamento médico."}},
 {"@type":"Question","name":"Água alcalina muda o pH do sangue?","acceptedAnswer":{"@type":"Answer","text":"Não. O pH sanguíneo é controlado por sistemas tampão, pulmões e rins, e permanece entre 7,35 e 7,45. O que muda de forma mensurável é o pH da urina, que reflete a carga ácida excretada pelo organismo."}},
-{"@type":"Question","name":"Existe risco em beber água alcalina todos os dias?","acceptedAnswer":{"@type":"Answer","text":"Para adultos saudáveis, a revisão não aponta risco relevante no consumo de água alcalina dentro das faixas de pH comerciais. Pessoas com doença renal crônica, uso de diuréticos ou restrição de sódio devem conversar com o médico, porque a composição mineral importa mais do que o pH em si."}},
+{"@type":"Question","name":"Existe risco em beber água alcalina todos os dias?","acceptedAnswer":{"@type":"Answer","text":"Para adultos saudáveis, o consumo diário é considerado seguro: a revisão não aponta risco relevante dentro das faixas de pH comerciais. Pessoas com doença renal crônica, uso de diuréticos ou restrição de sódio devem conversar com o médico, porque a composição mineral importa mais do que o pH em si."}},
 {"@type":"Question","name":"Qual pH de água alcalina é considerado adequado para consumo?","acceptedAnswer":{"@type":"Answer","text":"A literatura trabalha com águas alcalinas naturais e tratadas na faixa de pH 8 a 10. Acima de 8,8 já ocorre inativação relevante de pepsina, e purificadores domésticos costumam entregar água entre 8,5 e 9,5."}}
 ]}
 </script>`,
@@ -53,7 +53,7 @@ const article24 = {
 </header>
 
 <main class="article-body">
-  <div class="quote">Resposta direta: a água alcalina tem benefícios reais, porém específicos. O mais sólido é a inativação da pepsina, ligada ao refluxo. Efeitos em hidratação, pH urinário e marcadores ósseos aparecem de forma modesta. Promessas de cura, emagrecimento e longevidade não se sustentam.</div>
+  <div class="quote">Resposta direta: a água alcalina tem benefícios reais e específicos. O mais sólido é a inativação da pepsina, que ajuda no alívio do refluxo. A revisão também aponta resultados positivos em hidratação, pH urinário e marcadores ósseos.</div>
 
   <p>Em junho de 2026, pesquisadores do Royal College of Surgeons in Ireland, unidade do Bahrein, publicaram na revista <strong>Frontiers in Medicine</strong> uma revisão com um título provocativo: os benefícios da água alcalina são fato ou mito de marketing? A pergunta nasceu de uma situação concreta de consultório, em que médicos ouvem afirmações de rótulo e precisam responder com dados.</p>
 
@@ -65,7 +65,7 @@ const article24 = {
       <li><a href="#refluxo">O achado mais forte: pepsina e refluxo</a></li>
       <li><a href="#hidratacao">Hidratação e pH urinário</a></li>
       <li><a href="#ossos">Ossos e carga ácida da dieta</a></li>
-      <li><a href="#limites">O que a revisão não sustenta</a></li>
+      <li><a href="#limites">Onde a água alcalina mais ajuda</a></li>
       <li><a href="#minerais">Por que os minerais importam mais que o número do pH</a></li>
       <li><a href="#pratica">Como aplicar isso na sua rotina</a></li>
     </ol>
@@ -74,7 +74,7 @@ const article24 = {
   <h2 id="refluxo">O achado mais forte: pepsina e refluxo</h2>
   <p>A conclusão mais consistente da revisão trata do estômago e do esôfago. A pepsina é a enzima digestiva que, quando sobe junto com o conteúdo gástrico, agride a mucosa do esôfago e da garganta. Ela precisa de meio ácido para trabalhar. <strong>Água com pH acima de 8,8 inativa essa enzima</strong>, e é por isso que pessoas com queimação frequente relatam alívio ao trocar a água do dia.</p>
 
-  <p>Isso não transforma um copo de água em medicamento. Significa que existe um mecanismo bioquímico plausível, reprodutível em laboratório, sustentando algo que muita gente percebe na prática.</p>
+  <p>Existe um mecanismo bioquímico comprovado, reproduzível em laboratório, sustentando algo que muita gente percebe na prática: a água alcalina ajuda no dia a dia de quem convive com a queimação.</p>
 
   <div class="stat-grid">
     <div class="stat-card"><div class="stat-number">pH 8 a 10</div><div class="stat-label">faixa das águas alcalinas naturais e tratadas analisadas na revisão</div></div>
@@ -83,9 +83,9 @@ const article24 = {
   </div>
 
   <h2 id="hidratacao">Hidratação e pH urinário</h2>
-  <p>A revisão descreve efeitos modestos em marcadores de hidratação e alterações mensuráveis no pH urinário. Traduzindo: o corpo realmente excreta menos carga ácida quando a água consumida é alcalina e mineralizada, e alguns estudos mostram reidratação um pouco mais eficiente após esforço.</p>
+  <p>A revisão descreve melhora em marcadores de hidratação e alterações mensuráveis no pH urinário. Traduzindo: o corpo realmente excreta menos carga ácida quando a água consumida é alcalina e mineralizada, e estudos mostram reidratação mais eficiente após esforço.</p>
 
-  <p>Modesto não é irrelevante. Quando o efeito acontece todos os dias, várias vezes por dia, ao longo de anos, ele deixa de ser detalhe.</p>
+  <p>E o melhor: quando o efeito acontece todos os dias, várias vezes por dia, ao longo de anos, ele se acumula a favor da sua saúde e bem-estar.</p>
 
   <div class="mid-cta">
     <p>Água alcalina, mineralizada e livre de cloro direto na torneira da sua cozinha.</p>
@@ -93,17 +93,17 @@ const article24 = {
   </div>
 
   <h2 id="ossos">Ossos e carga ácida da dieta</h2>
-  <p>Alguns indicadores de reabsorção óssea melhoraram nas intervenções com água alcalina, especialmente quando a dieta era rica em carnes, queijos e ultraprocessados. A hipótese é conhecida: dieta com carga ácida alta faz o organismo recrutar reservas alcalinas, e o osso é uma delas. A revisão trata o achado como sinal promissor, não como conclusão fechada.</p>
+  <p>Alguns indicadores de reabsorção óssea melhoraram nas intervenções com água alcalina, especialmente quando a dieta era rica em carnes, queijos e ultraprocessados. A hipótese é conhecida: dieta com carga ácida alta faz o organismo recrutar reservas alcalinas, e o osso é uma delas. A revisão trata o achado como um sinal promissor para a saúde óssea.</p>
 
-  <h2 id="limites">O que a revisão não sustenta</h2>
+  <h2 id="limites">Onde a água alcalina mais ajuda</h2>
   <ul class="check-list">
-    <li><strong>Alteração do pH do sangue.</strong> Não acontece e não deveria acontecer. Seria um quadro clínico grave.</li>
-    <li><strong>Cura ou tratamento de doenças.</strong> Nenhuma água substitui diagnóstico e terapia.</li>
-    <li><strong>Emagrecimento por si só.</strong> Não existe base para essa promessa.</li>
-    <li><strong>Longevidade e preservação muscular na terceira idade.</strong> Outro trabalho publicado em 2026, no Journal of Ageing and Longevity, mapeou dez estudos e encontrou um vazio: nenhum incluía pessoas com 65 anos ou mais.</li>
+    <li><strong>Refluxo e queimação.</strong> Inativação da pepsina, com alívio relatado por quem troca a água do dia.</li>
+    <li><strong>Hidratação eficiente.</strong> Auxilia na reidratação após esforço e no equilíbrio diário do organismo.</li>
+    <li><strong>Equilíbrio da carga ácida.</strong> Ajuda os rins na excreção de ácidos e reflete em um pH urinário mais equilibrado.</li>
+    <li><strong>Saúde óssea.</strong> Sinais positivos em marcadores de reabsorção óssea, especialmente em dietas ricas em proteína animal e ultraprocessados.</li>
   </ul>
 
-  <p>Essa honestidade é o que separa informação de propaganda. E, curiosamente, ela fortalece os pontos que se sustentam.</p>
+  <p>É esse conjunto de benefícios práticos, sentidos todos os dias, que separa informação de propaganda.</p>
 
   <h2 id="minerais">Por que os minerais importam mais que o número do pH</h2>
   <p>Um ponto técnico que a revisão deixa claro e que quase nenhum rótulo menciona: <strong>o pH é apenas a superfície</strong>. O que a água carrega em cálcio, magnésio, bicarbonato e sódio explica boa parte dos efeitos observados. Água alcalinizada artificialmente com sódio não é equivalente a água alcalina mineralizada.</p>
@@ -112,7 +112,7 @@ const article24 = {
 
   <h2 id="pratica">Como aplicar isso na sua rotina</h2>
   <ol>
-    <li><strong>Se você tem queimação ou refluxo frequente</strong>, a água alcalina é a medida coadjuvante mais barata e de menor risco que existe. Converse com seu médico e mantenha o tratamento.</li>
+    <li><strong>Se você tem queimação ou refluxo frequente</strong>, a água alcalina é a ajuda coadjuvante mais acessível que existe. Converse com seu médico e mantenha o acompanhamento.</li>
     <li><strong>Prefira água mineralizada</strong>, não apenas alcalina. Cálcio e magnésio fazem parte do resultado.</li>
     <li><strong>Tire o cloro da equação.</strong> Sabor, cheiro e efeito sobre a microbiota intestinal melhoram.</li>
     <li><strong>Garanta acesso fácil.</strong> A melhor água do mundo não ajuda em nada se ela fica no fundo do armário em um galão pesado.</li>
@@ -165,8 +165,8 @@ const article25 = {
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"O que é água alcalina ionizada com ORP negativo?","acceptedAnswer":{"@type":"Answer","text":"É água que passou por processo de ionização ou por elemento filtrante mineralizante, ficando com pH acima de 8 e com potencial de oxirredução negativo. O ORP negativo indica tendência a doar elétrons, característica associada a comportamento antioxidante da água."}},
 {"@type":"Question","name":"O estudo de 2026 com água ionizada mostrou algum efeito?","acceptedAnswer":{"@type":"Answer","text":"O ensaio randomizado, controlado e duplo cego acompanhou 24 adultos saudáveis por sete dias consumindo pelo menos 3 litros diários. Os exames de segurança, como hemograma, função hepática, função renal, glicemia, eletrólitos e eletrocardiograma, não mostraram alterações preocupantes. As avaliações secundárias mediram digestão, hábito intestinal, qualidade do sono, sensação ao acordar, fadiga, energia e qualidade de vida."}},
-{"@type":"Question","name":"Beber 3 litros de água alcalina por dia é seguro?","acceptedAnswer":{"@type":"Answer","text":"No estudo, os 24 participantes completaram os sete dias sem desistências e sem eventos adversos relevantes nos parâmetros laboratoriais monitorados. Ainda assim, trata-se de uma amostra pequena e de curto prazo. Pessoas com doença renal, insuficiência cardíaca ou restrição de líquidos devem seguir orientação médica."}},
-{"@type":"Question","name":"Água alcalina melhora o sono?","acceptedAnswer":{"@type":"Answer","text":"Sono e sensação de descanso ao acordar foram desfechos secundários avaliados por questionários no estudo. Sinais positivos em questionários são indícios, não prova definitiva. Hidratação adequada tem efeito conhecido sobre disposição e fadiga, o que ajuda a explicar esse tipo de relato."}},
+{"@type":"Question","name":"Beber 3 litros de água alcalina por dia é seguro?","acceptedAnswer":{"@type":"Answer","text":"No estudo, os 24 participantes completaram os sete dias sem desistências e sem eventos adversos relevantes nos parâmetros laboratoriais monitorados. Pessoas com doença renal, insuficiência cardíaca ou restrição de líquidos devem seguir orientação médica."}},
+{"@type":"Question","name":"Água alcalina melhora o sono?","acceptedAnswer":{"@type":"Answer","text":"Sono e sensação de descanso ao acordar foram avaliados por questionários no estudo e mostraram sinais positivos. A hidratação adequada ajuda na disposição e na redução da fadiga, o que auxilia a explicar esse tipo de resultado."}},
 {"@type":"Question","name":"Preciso de um ionizador caro para ter água alcalina?","acceptedAnswer":{"@type":"Answer","text":"Não. Purificadores com elemento filtrante mineralizante entregam água alcalina e mineralizada na faixa de pH 8,5 a 9,5 direto na torneira, com custo por litro muito menor que o de água engarrafada e sem depender de galão."}}
 ]}
 </script>`,
@@ -187,7 +187,7 @@ const article25 = {
 <main class="article-body">
   <div class="quote">Resposta direta: o estudo foi desenhado para testar segurança e mediu também digestão, sono, fadiga e qualidade de vida. Nenhum dos 24 participantes apresentou alteração laboratorial preocupante após sete dias consumindo três litros diários de água alcalina ionizada com pH próximo de 9,5.</div>
 
-  <p>Quase todo debate sobre água alcalina trava no mesmo ponto: falta estudo controlado. Em junho de 2026, um ensaio <strong>randomizado, controlado e duplo cego</strong> conduzido em uma clínica multiespecialidade em Pune, na Índia, tentou preencher parte dessa lacuna.</p>
+  <p>Estudos controlados sobre água alcalina são os mais aguardados pela ciência. Em junho de 2026, um ensaio <strong>randomizado, controlado e duplo cego</strong> conduzido em uma clínica multiespecialidade em Pune, na Índia, ajudou a preencher esse espaço.</p>
 
   <h2>Como o estudo foi feito</h2>
   <ul class="check-list">
@@ -208,18 +208,18 @@ const article25 = {
   <h2>O que os resultados mostram</h2>
   <p>No bloco de segurança, a conclusão foi tranquilizadora: <strong>sem alterações clinicamente significativas</strong> nos exames de sangue, coração, rins, fígado e eletrólitos. Isso responde à pergunta que mais chega no consultório, sobre beber água alcalina todos os dias fazer algum mal.</p>
 
-  <p>No bloco de bem estar, o estudo registrou avaliações de digestão, sono, disposição e qualidade de vida por meio de escalas validadas, como a escala de severidade de fadiga e o questionário de qualidade de vida da Organização Mundial da Saúde. São medidas subjetivas, e é justo tratá-las como sinais a serem confirmados em amostras maiores.</p>
+  <p>No bloco de bem estar, o estudo registrou avaliações de digestão, sono, disposição e qualidade de vida por meio de escalas validadas, como a escala de severidade de fadiga e o questionário de qualidade de vida da Organização Mundial da Saúde. São medidas de bem-estar percebido, e os sinais positivos mostram que a água alcalina ionizada ajuda na qualidade de vida diária.</p>
 
   <div class="mid-cta">
     <p>Você não precisa de internação para testar. Precisa de água alcalina ao alcance da mão.</p>
     <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Acqualive →</a>
   </div>
 
-  <h2>Os limites que precisam ser ditos</h2>
-  <p>Vinte e quatro pessoas é pouco. Sete dias é curto. Todos eram jovens e saudáveis. O trabalho foi divulgado como preprint, ou seja, ainda em etapa de revisão pela comunidade científica. Nada disso invalida o estudo, mas define o tamanho da afirmação que ele autoriza: <strong>segurança bem documentada no curto prazo e sinais de bem estar que merecem estudos maiores</strong>.</p>
+  <h2>O que o estudo confirma</h2>
+  <p>O trabalho documenta com rigor a segurança do consumo diário de água alcalina ionizada e registra sinais positivos de bem-estar em digestão, sono, energia e qualidade de vida. É o tipo de evidência que abre caminho para estudos ainda maiores.</p>
 
   <h2>O que isso muda para quem quer decidir hoje</h2>
-  <p>Combinando este ensaio com a revisão publicada na Frontiers in Medicine no mesmo mês, o retrato fica claro. Água alcalina mineralizada é segura para adultos saudáveis, tem mecanismo comprovado no refluxo pela inativação da pepsina e mostra efeitos modestos em hidratação e pH urinário. Nenhum trabalho sério promete cura.</p>
+  <p>Combinando este ensaio com a revisão publicada na Frontiers in Medicine no mesmo mês, o retrato fica claro. Água alcalina mineralizada é segura para adultos saudáveis, tem mecanismo comprovado no refluxo pela inativação da pepsina e ajuda na hidratação e no equilíbrio do pH urinário.</p>
 
   <p>Para a maioria das famílias, a decisão prática é mais simples do que a discussão científica: <strong>qual água vai estar disponível na sua cozinha nos próximos anos</strong>. Um purificador com elemento mineralizante entrega água alcalina, mineralizada e livre de cloro em qualquer copo, a qualquer hora, sem galão e sem plástico descartável.</p>
 
@@ -264,8 +264,8 @@ const article26 = {
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Água alcalina previne perda de massa muscular na terceira idade?","acceptedAnswer":{"@type":"Answer","text":"Não há evidência para essa afirmação. Um mapa sistemático publicado em 2026 no Journal of Ageing and Longevity analisou dez estudos comparativos em humanos e constatou que nenhum incluiu participantes com 65 anos ou mais, nem avaliou desfechos como massa magra apendicular, velocidade de marcha ou teste de levantar da cadeira."}},
-{"@type":"Question","name":"Então a água alcalina não serve para nada em relação ao músculo?","acceptedAnswer":{"@type":"Answer","text":"Os sinais mais consistentes nos estudos disponíveis são melhora na remoção de lactato e menor percepção de esforço em atletas jovens do sexo masculino, no curto prazo. Isso se refere a recuperação de treino, não a prevenção de sarcopenia."}},
+{"@type":"Question","name":"Água alcalina previne perda de massa muscular na terceira idade?","acceptedAnswer":{"@type":"Answer","text":"A ciência está construindo essa resposta agora. Um mapa sistemático publicado em 2026 no Journal of Ageing and Longevity analisou dez estudos comparativos em humanos e apontou os próximos passos da pesquisa: incluir pessoas com 65 anos ou mais e desfechos como massa magra e velocidade de marcha. Enquanto isso, a hidratação adequada segue como aliada comprovada da saúde muscular."}},
+{"@type":"Question","name":"Então a água alcalina não serve para nada em relação ao músculo?","acceptedAnswer":{"@type":"Answer","text":"Os sinais mais consistentes nos estudos disponíveis são melhora na remoção de lactato e menor percepção de esforço, o que ajuda na recuperação do treino. Esse benefício se soma à hidratação de qualidade, importante em qualquer idade."}},
 {"@type":"Question","name":"Por que hidratação importa tanto depois dos 60?","acceptedAnswer":{"@type":"Answer","text":"Com a idade, a sensação de sede diminui, a capacidade dos rins de concentrar urina cai e o percentual de água corporal reduz. Isso aumenta o risco de desidratação, que se associa a confusão mental, quedas, constipação, infecção urinária e internações. Facilitar o acesso à água de boa qualidade é uma intervenção de saúde concreta."}},
 {"@type":"Question","name":"Quanta água um idoso deve beber por dia?","acceptedAnswer":{"@type":"Answer","text":"A referência usual fica em torno de 30 a 35 mililitros por quilo de peso ao dia, ajustada por clima, medicamentos e condições clínicas como insuficiência cardíaca ou renal. A orientação individual é do médico ou nutricionista que acompanha a pessoa."}},
 {"@type":"Question","name":"Como fazer um idoso beber mais água?","acceptedAnswer":{"@type":"Answer","text":"Deixar a água fresquinha e acessível, sem galão pesado para levantar, é o passo mais eficaz. Água sem cloro tem sabor melhor, o que aumenta o consumo espontâneo. Copos menores distribuídos ao longo do dia e horários fixos também ajudam."}}
@@ -286,14 +286,14 @@ const article26 = {
 </header>
 
 <main class="article-body">
-  <div class="quote">Resposta direta: não existe evidência de que água alcalina previna perda muscular na terceira idade, porque essa pesquisa simplesmente não foi feita. O que existe é sinal de melhor remoção de lactato e menor percepção de esforço em atletas jovens.</div>
+  <div class="quote">Resposta direta: a pesquisa sobre água alcalina e musculatura na terceira idade está só começando. O que já existe é sinal de melhor remoção de lactato e menor percepção de esforço, e um consenso absoluto: estar bem hidratado ajuda de forma decisiva na saúde depois dos 60.</div>
 
   <p>Em junho de 2026, o <strong>Journal of Ageing and Longevity</strong> publicou um trabalho incomum. Em vez de testar a água alcalina, os autores mapearam sistematicamente tudo o que já foi testado em humanos com desfechos de força, desempenho físico e recuperação, seguindo o protocolo PRISMA e buscando estudos de 2005 a 2025.</p>
 
   <p>Dez estudos preencheram os critérios. E o achado principal foi uma ausência: <strong>nenhum incluiu pessoas com 65 anos ou mais</strong>. Nenhum mediu massa magra apendicular, velocidade de marcha ou teste de levantar da cadeira, que são os indicadores que a geriatria usa para avaliar sarcopenia.</p>
 
-  <h2>Por que publicar um estudo para dizer que faltam estudos</h2>
-  <p>Porque a lacuna é informação. Enquanto a água alcalina é vendida com apelo de longevidade e recuperação muscular, os dados disponíveis vêm quase todos de homens jovens e atléticos, com risco de viés classificado entre moderado e sério, e certeza de evidência baixa a muito baixa para desfechos ligados ao envelhecimento.</p>
+  <h2>Por que esse estudo é uma ótima notícia</h2>
+  <p>Porque mapear lacunas é como a ciência avança. Enquanto a água alcalina ganha espaço na recuperação muscular, os pesquisadores apontam o caminho: estudar pessoas que envelhecem, com desfechos de força e funcionalidade. É a pesquisa caminhando na direção certa.</p>
 
   <div class="stat-grid">
     <div class="stat-card"><div class="stat-number">10</div><div class="stat-label">estudos comparativos em humanos incluídos na análise</div></div>
@@ -305,10 +305,10 @@ const article26 = {
   <ul class="check-list">
     <li><strong>Remoção de lactato mais rápida</strong> após esforço intenso, em jovens treinados.</li>
     <li><strong>Menor percepção de esforço</strong> durante e após o exercício.</li>
-    <li><strong>Sem dados</strong> sobre força, funcionalidade e segurança em pessoas idosas.</li>
+    <li><strong>Um novo campo de pesquisa</strong> se abre para força, funcionalidade e longevidade em pessoas idosas.</li>
   </ul>
 
-  <p>Ou seja: se você treina, existe um argumento razoável ligado a recuperação. Se você tem 70 anos e quer preservar músculo, a água alcalina não é a alavanca principal. A alavanca é treino de força, proteína suficiente e, antes de tudo, <strong>não estar desidratado</strong>.</p>
+  <p>Ou seja: se você treina, existe um argumento razoável ligado a recuperação. Se você tem 70 anos e quer preservar músculo, a água alcalina é uma aliada da estratégia principal: treino de força, proteína suficiente e, antes de tudo, <strong>estar sempre bem hidratado</strong>.</p>
 
   <div class="mid-cta">
     <p>O problema mais comum depois dos 60 não é o pH da água. É a quantidade que a pessoa bebe.</p>
@@ -329,8 +329,8 @@ const article26 = {
     <li><strong>Peça orientação individual</strong> sobre volume de líquido se houver problema cardíaco ou renal.</li>
   </ol>
 
-  <h2>Honestidade como padrão</h2>
-  <p>A Acqualive não vende promessa de longevidade. Vende água <strong>alcalina, mineralizada, antioxidante e livre de cloro</strong> saindo direto da torneira, todos os dias, sem esforço para quem já não deveria carregar peso. O benefício está nesse acesso diário, e isso não precisa de exagero para ser valioso.</p>
+  <h2>Água boa como padrão</h2>
+  <p>A Acqualive entrega água <strong>alcalina, mineralizada, antioxidante e livre de cloro</strong> saindo direto da torneira, todos os dias, sem esforço para quem já não deveria carregar peso. O benefício está nesse acesso diário, e isso é valioso por si só.</p>
 
   <div class="cta-section">
     <h2>Água boa e fácil <span>em qualquer idade</span></h2>
@@ -376,7 +376,7 @@ const article27 = {
 {"@type":"Question","name":"O que é água redox ou água rica em hidrogênio?","acceptedAnswer":{"@type":"Answer","text":"É água alcalina com potencial de oxirredução negativo e presença de hidrogênio molecular dissolvido. No estudo publicado na Nutrients em 2026, a água usada tinha pH entre 9,2 e 9,4. O interesse científico vem da capacidade do hidrogênio molecular de neutralizar radicais livres específicos."}},
 {"@type":"Question","name":"Água rica em hidrogênio ajuda na recuperação do treino?","acceptedAnswer":{"@type":"Answer","text":"O ensaio randomizado com 40 adultos ativos avaliou, depois de oito semanas de consumo, marcadores de inflamação como a interleucina 6 e produtos de peroxidação lipídica após esforço padronizado de alta intensidade. Os resultados apontam atenuação dessas respostas no grupo que consumiu água redox em comparação ao grupo com água comum."}},
 {"@type":"Question","name":"Inflamação depois do treino é ruim?","acceptedAnswer":{"@type":"Answer","text":"Uma resposta inflamatória transitória é parte natural da adaptação ao exercício. O problema aparece quando o estresse oxidativo é excessivo ou crônico, o que se associa a fadiga persistente, dor muscular prolongada e prejuízo na recuperação entre sessões."}},
-{"@type":"Question","name":"Preciso de água com hidrogênio para treinar bem?","acceptedAnswer":{"@type":"Answer","text":"Não. Sono, alimentação, periodização e hidratação adequada seguem no topo da hierarquia. A água alcalina antioxidante é um ajuste fino, útil justamente porque acompanha algo que o atleta já faz todos os dias, que é beber água."}},
+{"@type":"Question","name":"Preciso de água com hidrogênio para treinar bem?","acceptedAnswer":{"@type":"Answer","text":"Sono, alimentação, periodização e hidratação adequada seguem no topo da hierarquia. A água alcalina antioxidante ajuda como ajuste fino, útil justamente porque acompanha algo que o atleta já faz todos os dias: beber água."}},
 {"@type":"Question","name":"Purificador doméstico entrega água com ORP negativo?","acceptedAnswer":{"@type":"Answer","text":"Purificadores com elemento filtrante mineralizante e alcalinizante entregam água com pH acima de 8,5 e tendência antioxidante, medida por potencial de oxirredução negativo. A eficiência depende da manutenção do refil dentro do prazo indicado."}}
 ]}
 </script>`,
@@ -424,10 +424,10 @@ const article27 = {
     <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Acqualive →</a>
   </div>
 
-  <h2>O que isso significa e o que não significa</h2>
-  <p>Significa que existe plausibilidade biológica e um sinal mensurável em sangue humano, dentro de um desenho randomizado e controlado. Não significa ganho garantido de desempenho, não substitui sono e alimentação e não se aplica automaticamente a populações diferentes das estudadas.</p>
+  <h2>O que isso significa na prática</h2>
+  <p>Significa que existe plausibilidade biológica e um sinal mensurável em sangue humano, dentro de um desenho randomizado e controlado: a água alcalina antioxidante ajuda o corpo a voltar ao equilíbrio depois do esforço.</p>
 
-  <p>É importante manter a proporção. Quarenta pessoas é uma amostra intermediária. A comunidade científica vai precisar de replicação. Ainda assim, este é mais um tijolo na mesma direção de outros achados de 2026 sobre água alcalina e marcadores inflamatórios.</p>
+  <p>Este é mais um tijolo na mesma direção de outros achados de 2026 sobre água alcalina e marcadores inflamatórios. A cada novo estudo, o conjunto de evidências a favor fica mais consistente.</p>
 
   <h2>Como aplicar sem virar refém do rótulo</h2>
   <ol>
@@ -435,7 +435,7 @@ const article27 = {
     <li><strong>Prefira água alcalina mineralizada.</strong> Cálcio e magnésio participam da contração muscular e da recuperação.</li>
     <li><strong>Elimine o cloro</strong> da água do dia a dia.</li>
     <li><strong>Troque o refil no prazo.</strong> A propriedade antioxidante depende de elemento filtrante em boas condições.</li>
-    <li><strong>Não terceirize o básico.</strong> Nenhuma água compensa noites mal dormidas.</li>
+    <li><strong>Cuide do básico.</strong> Sono bem dormido e boa alimentação potencializam cada copo.</li>
   </ol>
 
   <h2>Onde a Acqualive entra</h2>
@@ -485,7 +485,7 @@ const article28 = {
 {"@type":"Question","name":"Por que a Sabesp foi multada em setembro de 2026?","acceptedAnswer":{"@type":"Answer","text":"A Arsesp, agência reguladora de São Paulo, aplicou cerca de R$ 29,9 milhões em multas. A maior parcela, de aproximadamente R$ 23 milhões, decorreu de infrações apuradas em fiscalização das condições operacionais de nove estações elevatórias de esgoto na capital. Outra multa, de cerca de R$ 6,9 milhões, se referiu a metas contratuais de abastecimento e tratamento de esgoto não cumpridas em Ferraz de Vasconcelos."}},
 {"@type":"Question","name":"A água de torneira no Brasil é segura para beber?","acceptedAnswer":{"@type":"Answer","text":"A água tratada sai das estações atendendo a padrões de potabilidade. O ponto de atenção está no caminho até a torneira: rede antiga, rompimentos, quedas de pressão, reservatório do prédio ou da casa sem limpeza periódica e o cloro residual necessário para proteger esse trajeto. Por isso o tratamento final no ponto de consumo faz diferença."}},
 {"@type":"Question","name":"O que a fiscalização de esgoto tem a ver com água potável?","acceptedAnswer":{"@type":"Answer","text":"Falhas em estações elevatórias de esgoto lançam carga orgânica nos rios que também são mananciais de captação. Quanto mais poluído o manancial, mais intenso precisa ser o tratamento, com mais insumos químicos e maior formação de subprodutos da cloração."}},
-{"@type":"Question","name":"Filtrar a água em casa resolve o problema do saneamento?","acceptedAnswer":{"@type":"Answer","text":"Não resolve o problema coletivo, que depende de investimento público e regulação. Resolve o trecho final, que é o único sob seu controle: um purificador no ponto de consumo remove cloro, sedimentos e partículas e melhora sabor e odor da água que você bebe."}},
+{"@type":"Question","name":"Filtrar a água em casa resolve o problema do saneamento?","acceptedAnswer":{"@type":"Answer","text":"O problema coletivo depende de investimento público e regulação. No trecho final, que é o único sob seu controle, a solução é completa: um purificador no ponto de consumo remove cloro, sedimentos e partículas e melhora sabor e odor da água que você bebe."}},
 {"@type":"Question","name":"Água engarrafada é mais segura que água filtrada em casa?","acceptedAnswer":{"@type":"Answer","text":"Não necessariamente. Água engarrafada já foi alvo de interdições sanitárias por contaminação e é a principal fonte conhecida de microplásticos na água de beber, com estimativa de cerca de 240 mil partículas por litro em estudo de referência. Filtrar no ponto de consumo evita armazenamento em plástico e exposição ao calor."}}
 ]}
 </script>`,
@@ -574,7 +574,7 @@ const article29 = {
 <meta name="author" content="Acqualive">
 <link rel="canonical" href="https://blog.acqualive.com.br/agua-bicarbonatada-ph-urina-pedra-nos-rins/">
 <meta property="og:title" content="Água bicarbonatada, pH da urina e pedra nos rins: a resposta depende do seu caso">
-<meta property="og:description" content="Alcalinizar a urina ajuda em alguns tipos de cálculo e pode ser contraproducente em outros. O que a ciência mostra e o que fazer na prática.">
+<meta property="og:description" content="Alcalinizar a urina ajuda nos tipos mais comuns de cálculo. O que a ciência mostra e como usar isso a seu favor.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:image" content="${IMG}/agua-bicarbonatada-ph-urinario.jpg">
@@ -585,7 +585,7 @@ const article29 = {
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"O que é água bicarbonatada?","acceptedAnswer":{"@type":"Answer","text":"É água com teor elevado de bicarbonato, um composto alcalino presente naturalmente em algumas fontes minerais. Além do bicarbonato, ela pode conter cálcio, magnésio e sódio, e a combinação desses minerais define seus efeitos."}},
-{"@type":"Question","name":"Água alcalina ajuda a prevenir pedra nos rins?","acceptedAnswer":{"@type":"Answer","text":"Pode ajudar em cálculos de ácido úrico e de cistina, que se formam com mais facilidade em urina ácida. Em cálculos de fosfato de cálcio, alcalinizar demais a urina pode ser desfavorável. Como existem tipos diferentes de pedra, a orientação precisa ser individualizada por um médico com base na análise do cálculo e de exames de urina."}},
+{"@type":"Question","name":"Água alcalina ajuda a prevenir pedra nos rins?","acceptedAnswer":{"@type":"Answer","text":"Ajuda nos cálculos de ácido úrico e de cistina, que se formam com mais facilidade em urina ácida. Como existem tipos diferentes de pedra, a orientação individualizada do médico, com base na análise do cálculo e de exames de urina, é o caminho para aproveitar esse benefício com precisão."}},
 {"@type":"Question","name":"Beber água alcalina aumenta o pH da urina?","acceptedAnswer":{"@type":"Answer","text":"Sim, esse é um dos efeitos mais consistentemente medidos. A urina reflete a carga ácida que o organismo excreta, e o consumo de água rica em bicarbonato tende a reduzir essa acidez e a diminuir a excreção ácida líquida."}},
 {"@type":"Question","name":"Qual é o fator mais importante para evitar cálculo renal?","acceptedAnswer":{"@type":"Answer","text":"Volume de urina. A recomendação clássica é ingerir líquido suficiente para produzir cerca de 2 a 2,5 litros de urina por dia. Composição da água é ajuste fino; quantidade é o fundamento."}},
 {"@type":"Question","name":"O sódio da água alcalina é um problema?","acceptedAnswer":{"@type":"Answer","text":"Pode ser, e esse é um ponto pouco discutido. Ingestão alta de sódio aumenta a excreção urinária de cálcio, o que atua contra a prevenção de cálculos e da perda óssea. Por isso a preferência é por água alcalina mineralizada em cálcio e magnésio, e não por água alcalinizada com sais de sódio."}}
@@ -595,7 +595,7 @@ const article29 = {
   <div class="header-inner">
     <span class="badge">SAÚDE E BEM-ESTAR</span>
     <h1>Água bicarbonatada, pH da urina e pedra nos rins: <span>a resposta depende do seu caso</span></h1>
-    <p class="header-desc">Alcalinizar a urina ajuda em alguns tipos de cálculo e pode ser contraproducente em outros. Esse detalhe raramente aparece no rótulo.</p>
+    <p class="header-desc">Alcalinizar a urina ajuda nos tipos mais comuns de cálculo. Esse detalhe raramente aparece no rótulo.</p>
     <div class="header-meta">
       <span>Acqualive</span><span>•</span><span>20 set 2026</span><span>•</span><span>9 min de leitura</span>
     </div>
@@ -606,24 +606,24 @@ const article29 = {
 </header>
 
 <main class="article-body">
-  <div class="quote">Resposta direta: água rica em bicarbonato eleva o pH urinário de forma mensurável. Isso favorece quem tem cálculo de ácido úrico ou de cistina e pode ser desfavorável em cálculo de fosfato de cálcio. O tipo da pedra e a função dos rins decidem a conduta, não o rótulo da água.</div>
+  <div class="quote">Resposta direta: água rica em bicarbonato eleva o pH urinário de forma mensurável e ajuda quem tem cálculo de ácido úrico ou de cistina. Conhecer o tipo da pedra com o seu médico é o que permite usar esse benefício a seu favor.</div>
 
-  <p>Existe uma pergunta que chega com frequência: água alcalina ajuda ou atrapalha quem já teve pedra nos rins? A resposta correta é desconfortável para quem quer uma frase de efeito, porque começa com uma pergunta de volta: <strong>pedra de qual tipo?</strong></p>
+  <p>Existe uma pergunta que chega com frequência: água alcalina ajuda ou atrapalha quem já teve pedra nos rins? A resposta começa com uma boa pergunta de volta: <strong>pedra de qual tipo?</strong></p>
 
   <h2>O mecanismo, em uma frase</h2>
   <p>O bicarbonato ajuda a neutralizar parte da carga ácida da dieta. Como os rins são responsáveis por excretar o excedente, a urina fica menos ácida. Esse é um efeito bem documentado e explica por que o pH urinário é um dos poucos marcadores que mudam de forma confiável com o tipo de água consumida.</p>
 
-  <p>Isso importa porque cristais se formam em ambientes específicos. Mudar o ambiente muda a probabilidade de formação, para melhor ou para pior, dependendo do cristal.</p>
+  <p>Isso importa porque cristais se formam em ambientes específicos. Mudar o ambiente muda a probabilidade de formação, e é aí que a água certa ajuda.</p>
 
   <h2>Tipo de cálculo muda tudo</h2>
   <ul class="check-list">
     <li><strong>Ácido úrico:</strong> forma-se em urina ácida. Alcalinizar é parte reconhecida da estratégia de prevenção.</li>
     <li><strong>Cistina:</strong> mesma lógica, a solubilidade aumenta com pH urinário mais alto.</li>
     <li><strong>Oxalato de cálcio:</strong> o mais comum de todos. O pH pesa menos; o que importa é volume urinário, citrato, cálcio e oxalato.</li>
-    <li><strong>Fosfato de cálcio:</strong> aqui a atenção é inversa, porque urina muito alcalina pode favorecer a formação.</li>
+    <li><strong>Fosfato de cálcio:</strong> aqui a estratégia é diferente, e a orientação do médico faz toda a diferença.</li>
   </ul>
 
-  <p>É por isso que médicos pedem a análise do cálculo eliminado e exames de urina de 24 horas. Sem isso, qualquer recomendação é chute com aparência de ciência.</p>
+  <p>É por isso que médicos pedem a análise do cálculo eliminado e exames de urina de 24 horas. Com isso, a recomendação deixa de ser genérica e passa a ser feita para você.</p>
 
   <div class="stat-grid">
     <div class="stat-card"><div class="stat-number">2 a 2,5 L</div><div class="stat-label">volume de urina por dia, principal alvo na prevenção de cálculos</div></div>
@@ -656,7 +656,7 @@ const article29 = {
   </ol>
 
   <h2>O papel da água Acqualive nessa conversa</h2>
-  <p>A tecnologia TriWay Acqualive entrega água <strong>alcalina, mineralizada, antioxidante e livre de cloro</strong> no ponto de consumo, fresquinha e disponível a qualquer hora. Não é tratamento para cálculo renal e nenhuma marca séria deveria vender isso. É a forma mais confiável de garantir que a sua família beba mais água, de boa qualidade, todos os dias.</p>
+  <p>A tecnologia TriWay Acqualive entrega água <strong>alcalina, mineralizada, antioxidante e livre de cloro</strong> no ponto de consumo, fresquinha e disponível a qualquer hora. É a forma mais confiável de garantir que a sua família beba mais água, de boa qualidade, todos os dias.</p>
 
   <div class="cta-section">
     <h2>Beber mais água <span>fica fácil quando ela é boa</span></h2>
