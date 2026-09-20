@@ -73,7 +73,7 @@ const App = () => (
             <Route path="/indica-club" element={<IndicaClub />} />
             <Route path="/email-templates" element={<EmailTemplates />} />
             <Route path="/email-refil" element={<EmailRefilTemplates />} />
-            <Route path="/blog-templates" element={<BlogTemplates />} />
+            <Route path="/blog-templates" element={<RequireAuth><BlogTemplates /></RequireAuth>} />
             <Route path="/emails-franquias" element={<EmailsFranquias />} />
             <Route path="/indica-acqualive-2026" element={<IndicaAcqualive2026 />} />
             <Route path="/indicado-acqualive" element={<IndicaAcqualive2026 />} />
