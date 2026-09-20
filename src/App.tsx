@@ -19,6 +19,7 @@ import IndicaClub from "./pages/IndicaClub";
 import EmailTemplates from "./pages/EmailTemplates";
 import EmailRefilTemplates from "./pages/EmailRefilTemplates";
 import BlogTemplates from "./pages/BlogTemplates";
+import RequireAuth from "./components/admin/RequireAuth";
 import EmailsFranquias from "./pages/EmailsFranquias";
 import IndicaAcqualive2026 from "./pages/IndicaAcqualive2026";
 import DayanSiebra from "./pages/DayanSiebra";
