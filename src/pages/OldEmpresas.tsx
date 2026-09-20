@@ -495,7 +495,10 @@ const OldEmpresas = () => {
       </section>
 
       {/* AGUA ALCALINA SEMPRE A MAO */}
-      <section id="tecnologia" className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-end max-w-[1280px] mx-auto px-6 py-12 md:py-16">
+      <section
+        id="tecnologia"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-end py-12 md:py-16 px-6 lg:pr-0 lg:pl-[max(1.5rem,calc((100vw-1280px)/2+1.5rem))]"
+      >
         <div className="max-w-[420px] mx-auto lg:mx-0 text-[15px] leading-relaxed" style={{ color: "#5b6472" }}>
           <p>
             <strong style={{ color: AZUL }}>
@@ -514,9 +517,9 @@ const OldEmpresas = () => {
             empresa.
           </p>
         </div>
-        <div className="relative">
-          <img src={bg3.url} alt="Copo com água alcalina" className="w-full h-auto object-contain" loading="lazy" />
-          <h2 className="text-2xl sm:text-3xl md:text-[42px] uppercase leading-tight text-right mt-4" style={{ color: CINZA }}>
+        <div className="relative -mx-6 lg:mx-0">
+          <img src={bg3.url} alt="Copo com água alcalina" className="w-full h-auto object-contain object-right" loading="lazy" />
+          <h2 className="text-2xl sm:text-3xl md:text-[42px] uppercase leading-tight text-right mt-4 pr-6 lg:pr-10" style={{ color: CINZA }}>
             água alcalina
             <br />
             ionizada <span style={{ color: AZUL }}>sempre</span>
