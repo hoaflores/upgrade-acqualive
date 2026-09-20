@@ -302,7 +302,7 @@ const WhatsAppFlutuante = () => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Falar com Alex no WhatsApp"
+      aria-label="Falar com nosso consultor no WhatsApp"
       className="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg hover:scale-105 transition-transform"
     >
       <WhatsAppIcon className="w-7 h-7 text-white" />
