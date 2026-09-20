@@ -187,7 +187,7 @@ const article25 = {
 <main class="article-body">
   <div class="quote">Resposta direta: o estudo foi desenhado para testar segurança e mediu também digestão, sono, fadiga e qualidade de vida. Nenhum dos 24 participantes apresentou alteração laboratorial preocupante após sete dias consumindo três litros diários de água alcalina ionizada com pH próximo de 9,5.</div>
 
-  <p>Quase todo debate sobre água alcalina trava no mesmo ponto: falta estudo controlado. Em junho de 2026, um ensaio <strong>randomizado, controlado e duplo cego</strong> conduzido em uma clínica multiespecialidade em Pune, na Índia, tentou preencher parte dessa lacuna.</p>
+  <p>Estudos controlados sobre água alcalina são os mais aguardados pela ciência. Em junho de 2026, um ensaio <strong>randomizado, controlado e duplo cego</strong> conduzido em uma clínica multiespecialidade em Pune, na Índia, ajudou a preencher esse espaço.</p>
 
   <h2>Como o estudo foi feito</h2>
   <ul class="check-list">
