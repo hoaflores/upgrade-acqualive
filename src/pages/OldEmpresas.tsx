@@ -31,7 +31,7 @@ import duoLiteEmpresas from "@/assets/old-empresas/duo-lite-empresas.png.asset.j
 const AZUL = "#1460B6";
 const CINZA = "#8A94A2";
 
-/** Responsavel comercial da pagina: Alex */
+/** Contato comercial da pagina: nosso consultor */
 const WHATSAPP_NUMERO = "555194896709";
 const WHATSAPP_EXIBICAO = "(51) 99489-6709";
 const TELEFONE_0800 = "0800 605 6501";
@@ -41,7 +41,7 @@ const wa = (mensagem: string) =>
   `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(mensagem)}`;
 
 const WA_GERAL = wa(
-  "Olá, Alex! Vim pela página Acqualive para Empresas e gostaria de saber mais sobre as soluções."
+  "Olá! Vim pela página Acqualive para Empresas e gostaria de saber mais sobre as soluções."
 );
 
 /**
@@ -65,9 +65,9 @@ const PRODUTOS = [
     ],
     preco: "10x de R$ 439,70",
     precoNota: "",
-    ctaLabel: "FALAR COM O NOSSO CONSULTOR ALEX",
+    ctaLabel: "FALAR COM O NOSSO CONSULTOR",
     cta: wa(
-      "Olá, Alex! Vim pela página Acqualive para Empresas e gostaria de saber mais sobre o Acqualive DUO."
+      "Olá! Vim pela página Acqualive para Empresas e gostaria de saber mais sobre o Acqualive DUO."
     ),
   },
   {
@@ -84,9 +84,9 @@ const PRODUTOS = [
     ],
     preco: "10x de R$ 109,70",
     precoNota: "\n",
-    ctaLabel: "FALAR COM O NOSSO CONSULTOR ALEX ",
+    ctaLabel: "FALAR COM O NOSSO CONSULTOR ",
     cta: wa(
-      "Olá, Alex! Vim pela página Acqualive para Empresas e gostaria de saber mais sobre o Acqualive DUO Lite."
+      "Olá! Vim pela página Acqualive para Empresas e gostaria de saber mais sobre o Acqualive DUO Lite."
     ),
   },
 ];
@@ -206,14 +206,14 @@ const FormMeLigue = ({ variante = "empilhado", origem }: FormProps) => {
       `E-mail: ${email.trim()}`,
     ].filter(Boolean);
 
-    const mensagem = `Olá, Alex! Vim pela página Acqualive para Empresas.\n\n${linhas.join(
+    const mensagem = `Olá! Vim pela página Acqualive para Empresas.\n\n${linhas.join(
       "\n"
     )}\n\nGostaria de conhecer melhor as soluções da Acqualive para minha empresa.`;
 
     window.open(wa(mensagem), "_blank", "noopener,noreferrer");
 
     if (!error) {
-      toast.success("Recebemos seu contato. Estamos abrindo o WhatsApp do Alex.");
+      toast.success("Recebemos seu contato. Estamos abrindo o WhatsApp do nosso consultor.");
       setNome("");
       setEmail("");
       setTelefone("");
@@ -293,7 +293,7 @@ const WhatsAppFlutuante = () => {
 
   const link = rotulo
     ? wa(
-        `Olá, Alex! Vim pela página Acqualive para Empresas. Eu estava vendo a seção de ${rotulo} e gostaria de saber mais.`
+        `Olá! Vim pela página Acqualive para Empresas. Eu estava vendo a seção de ${rotulo} e gostaria de saber mais.`
       )
     : WA_GERAL;
 
@@ -361,7 +361,7 @@ const OldEmpresas = () => {
 
         <div className="bg-[#1460B6] text-white flex items-center">
           <div className="w-full px-5 sm:px-6 py-10 md:py-12 text-center">
-            <p className="uppercase tracking-[0.1em] text-sm md:text-base">fale com o alex</p>
+            <p className="uppercase tracking-[0.1em] text-sm md:text-base">fale com o nosso consultor</p>
             <a
               href={WA_GERAL}
               target="_blank"
@@ -669,7 +669,7 @@ const OldEmpresas = () => {
       <section className="bg-[#1460B6] text-white py-10">
         <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
           <div className="text-center">
-            <p className="uppercase text-lg">fale com o alex</p>
+            <p className="uppercase text-lg">fale com o nosso consultor</p>
             <a
               href={WA_GERAL}
               target="_blank"
