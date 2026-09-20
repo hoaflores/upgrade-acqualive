@@ -6,7 +6,7 @@ import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 import logo from "@/assets/acqualive-logo-azul.png.asset.json";
 import banner2 from "@/assets/old-empresas/banner2.jpg.asset.json";
-import bg3 from "@/assets/old-empresas/bg3.jpg.asset.json";
+import bg3 from "@/assets/old-empresas/agua-alcalina-mao.png.asset.json";
 import ligueIcon from "@/assets/old-empresas/ligue.png.asset.json";
 import icone1 from "@/assets/old-empresas/icone1.png.asset.json";
 import icone2 from "@/assets/old-empresas/icone2.png.asset.json";
