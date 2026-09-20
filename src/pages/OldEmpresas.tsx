@@ -517,9 +517,9 @@ const OldEmpresas = () => {
             empresa.
           </p>
         </div>
-        <div className="relative">
-          <img src={bg3.url} alt="Copo com água alcalina" className="w-full h-auto object-contain" loading="lazy" />
-          <h2 className="text-2xl sm:text-3xl md:text-[42px] uppercase leading-tight text-right mt-4" style={{ color: CINZA }}>
+        <div className="relative -mx-6 lg:mx-0">
+          <img src={bg3.url} alt="Copo com água alcalina" className="w-full h-auto object-contain object-right" loading="lazy" />
+          <h2 className="text-2xl sm:text-3xl md:text-[42px] uppercase leading-tight text-right mt-4 pr-6 lg:pr-10" style={{ color: CINZA }}>
             água alcalina
             <br />
             ionizada <span style={{ color: AZUL }}>sempre</span>
