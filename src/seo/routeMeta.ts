@@ -198,7 +198,7 @@ export const routeMeta: RouteMeta[] = [
     priority: "0.9",
   },
   {
-    path: "/old-empresas",
+    path: "/acqualive-duo-empresas",
     title: "Acqualive Empresas | A solução ideal para a sua empresa",
     description:
       "Mude a água da sua empresa e ganhe mais economia, produtividade e saúde. Compare litragem e custo dos filtros Acqualive.",
