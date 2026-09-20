@@ -310,6 +310,133 @@ const WhatsAppFlutuante = () => {
   );
 };
 
+const LITRO_DUO = 0.17;
+const LITRO_GALAO = 0.95;
+
+const brl = (v: number) =>
+  v.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 2 });
+
+const ComparativoLitro = () => {
+  const [litrosDia, setLitrosDia] = useState(100);
+
+  const litrosMes = litrosDia * 30;
+  const gastoGalao = litrosMes * LITRO_GALAO;
+  const gastoDuo = litrosMes * LITRO_DUO;
+  const economiaMes = gastoGalao - gastoDuo;
+  const economiaAno = economiaMes * 12;
+  const proporcao = Math.max((gastoDuo / gastoGalao) * 100, 6);
+
+  return (
+    <div className="mt-14 rounded-3xl border border-[#d7dce2] bg-gradient-to-b from-[#f4f8fd] to-white p-6 sm:p-10 shadow-sm">
+      <h2 className="text-center text-xl sm:text-2xl md:text-[32px] uppercase leading-tight" style={{ color: CINZA }}>
+        Quanto custa o litro da água <strong style={{ color: AZUL }}>na sua empresa?</strong>
+      </h2>
+
+      {/* Cards de preço por litro */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 max-w-[720px] mx-auto">
+        <div className="rounded-2xl bg-white border border-[#e3e8ef] p-5 text-center">
+          <p className="uppercase text-xs sm:text-sm tracking-wide" style={{ color: CINZA }}>
+            Galão de 20 litros
+          </p>
+          <p className="text-3xl sm:text-4xl font-semibold mt-1" style={{ color: CINZA }}>
+            R$ 0,95<span className="text-base font-normal">/litro</span>
+          </p>
+          <p className="text-xs mt-2" style={{ color: CINZA }}>
+            Galão de 20 L a R$ 18,90
+          </p>
+        </div>
+        <div
+          className="rounded-2xl p-5 text-center text-white shadow-xl"
+          style={{ background: "linear-gradient(135deg, #1460B6 0%, #0d4b8f 100%)" }}
+        >
+          <p className="uppercase text-xs sm:text-sm tracking-wide text-white/80">Acqualive DUO</p>
+          <p className="text-3xl sm:text-4xl font-semibold mt-1">
+            a partir de R$ 0,17<span className="text-base font-normal text-white/80">/litro</span>
+          </p>
+          <p className="text-xs mt-2 text-white/70">Cálculo baseado no valor da troca de refis</p>
+        </div>
+      </div>
+
+      {/* Slider de consumo */}
+      <div className="max-w-[720px] mx-auto mt-10">
+        <label className="block text-center uppercase text-sm sm:text-base tracking-wide" style={{ color: CINZA }}>
+          Consumo da sua empresa:{" "}
+          <strong style={{ color: AZUL }}>
+            {litrosDia} litros/dia
+          </strong>
+        </label>
+        <input
+          type="range"
+          min={20}
+          max={500}
+          step={10}
+          value={litrosDia}
+          onChange={(e) => setLitrosDia(Number(e.target.value))}
+          className="w-full mt-4 accent-[#1460B6] h-2 cursor-pointer"
+          aria-label="Consumo diário de água em litros"
+        />
+        <div className="flex justify-between text-xs mt-1" style={{ color: CINZA }}>
+          <span>20 L</span>
+          <span>500 L</span>
+        </div>
+      </div>
+
+      {/* Barras comparativas */}
+      <div className="max-w-[720px] mx-auto mt-8 space-y-5">
+        <div>
+          <div className="flex justify-between text-sm sm:text-base mb-1" style={{ color: CINZA }}>
+            <span className="uppercase">Com galão</span>
+            <strong>{brl(gastoGalao)}/mês</strong>
+          </div>
+          <div className="h-9 rounded-full bg-[#e3e8ef] overflow-hidden">
+            <div
+              className="h-full rounded-full transition-all duration-500"
+              style={{ width: "100%", background: "linear-gradient(90deg, #9aa5b1, #8A94A2)" }}
+            />
+          </div>
+        </div>
+        <div>
+          <div className="flex justify-between text-sm sm:text-base mb-1" style={{ color: AZUL }}>
+            <span className="uppercase font-medium">Com Acqualive DUO</span>
+            <strong>{brl(gastoDuo)}/mês</strong>
+          </div>
+          <div className="h-9 rounded-full bg-[#dbe8f7] overflow-hidden">
+            <div
+              className="h-full rounded-full transition-all duration-500"
+              style={{ width: `${proporcao}%`, background: "linear-gradient(90deg, #1460B6, #2f80d6)" }}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Economia em destaque */}
+      <div
+        className="max-w-[720px] mx-auto mt-10 rounded-2xl p-6 sm:p-8 text-center text-white shadow-2xl"
+        style={{ background: "linear-gradient(135deg, #1460B6 0%, #0d4b8f 100%)" }}
+      >
+        <p className="uppercase tracking-wide text-sm sm:text-base text-white/85">Sua empresa economiza</p>
+        <p className="text-4xl sm:text-5xl md:text-6xl font-semibold my-2">{brl(economiaMes)}</p>
+        <p className="uppercase text-sm sm:text-base text-white/85">
+          por mês &bull; <strong className="text-white">{brl(economiaAno)} por ano</strong>
+        </p>
+        <a
+          href={WA_GERAL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-6 bg-white text-[#1460B6] font-semibold uppercase tracking-wide rounded-full px-8 py-3 text-sm sm:text-base hover:opacity-90 transition-opacity"
+        >
+          Quero economizar na minha empresa
+        </a>
+      </div>
+
+      <p className="text-center text-xs mt-6 max-w-[640px] mx-auto" style={{ color: CINZA }}>
+        Valor do litro Acqualive calculado com base no valor da troca de refis. Comparativo considera galão de 20
+        litros a R$ 18,90, equivalente a R$ 0,95 por litro. Valores estimados, podem variar conforme a região.
+      </p>
+    </div>
+  );
+};
+
 const OldEmpresas = () => {
   return (
     <div className="min-h-screen bg-white" style={{ fontFamily: "'DM Sans', sans-serif" }}>
