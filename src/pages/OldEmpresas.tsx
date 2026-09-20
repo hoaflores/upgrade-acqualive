@@ -495,7 +495,10 @@ const OldEmpresas = () => {
       </section>
 
       {/* AGUA ALCALINA SEMPRE A MAO */}
-      <section id="tecnologia" className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-end max-w-[1280px] mx-auto px-6 py-12 md:py-16">
+      <section
+        id="tecnologia"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-end py-12 md:py-16 px-6 lg:pr-0 lg:pl-[max(1.5rem,calc((100vw-1280px)/2+1.5rem))]"
+      >
         <div className="max-w-[420px] mx-auto lg:mx-0 text-[15px] leading-relaxed" style={{ color: "#5b6472" }}>
           <p>
             <strong style={{ color: AZUL }}>
