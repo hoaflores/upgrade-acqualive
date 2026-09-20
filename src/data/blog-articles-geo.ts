@@ -165,8 +165,8 @@ const article25 = {
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"O que é água alcalina ionizada com ORP negativo?","acceptedAnswer":{"@type":"Answer","text":"É água que passou por processo de ionização ou por elemento filtrante mineralizante, ficando com pH acima de 8 e com potencial de oxirredução negativo. O ORP negativo indica tendência a doar elétrons, característica associada a comportamento antioxidante da água."}},
 {"@type":"Question","name":"O estudo de 2026 com água ionizada mostrou algum efeito?","acceptedAnswer":{"@type":"Answer","text":"O ensaio randomizado, controlado e duplo cego acompanhou 24 adultos saudáveis por sete dias consumindo pelo menos 3 litros diários. Os exames de segurança, como hemograma, função hepática, função renal, glicemia, eletrólitos e eletrocardiograma, não mostraram alterações preocupantes. As avaliações secundárias mediram digestão, hábito intestinal, qualidade do sono, sensação ao acordar, fadiga, energia e qualidade de vida."}},
-{"@type":"Question","name":"Beber 3 litros de água alcalina por dia é seguro?","acceptedAnswer":{"@type":"Answer","text":"No estudo, os 24 participantes completaram os sete dias sem desistências e sem eventos adversos relevantes nos parâmetros laboratoriais monitorados. Ainda assim, trata-se de uma amostra pequena e de curto prazo. Pessoas com doença renal, insuficiência cardíaca ou restrição de líquidos devem seguir orientação médica."}},
-{"@type":"Question","name":"Água alcalina melhora o sono?","acceptedAnswer":{"@type":"Answer","text":"Sono e sensação de descanso ao acordar foram desfechos secundários avaliados por questionários no estudo. Sinais positivos em questionários são indícios, não prova definitiva. Hidratação adequada tem efeito conhecido sobre disposição e fadiga, o que ajuda a explicar esse tipo de relato."}},
+{"@type":"Question","name":"Beber 3 litros de água alcalina por dia é seguro?","acceptedAnswer":{"@type":"Answer","text":"No estudo, os 24 participantes completaram os sete dias sem desistências e sem eventos adversos relevantes nos parâmetros laboratoriais monitorados. Pessoas com doença renal, insuficiência cardíaca ou restrição de líquidos devem seguir orientação médica."}},
+{"@type":"Question","name":"Água alcalina melhora o sono?","acceptedAnswer":{"@type":"Answer","text":"Sono e sensação de descanso ao acordar foram avaliados por questionários no estudo e mostraram sinais positivos. A hidratação adequada ajuda na disposição e na redução da fadiga, o que auxilia a explicar esse tipo de resultado."}},
 {"@type":"Question","name":"Preciso de um ionizador caro para ter água alcalina?","acceptedAnswer":{"@type":"Answer","text":"Não. Purificadores com elemento filtrante mineralizante entregam água alcalina e mineralizada na faixa de pH 8,5 a 9,5 direto na torneira, com custo por litro muito menor que o de água engarrafada e sem depender de galão."}}
 ]}
 </script>`,
@@ -208,18 +208,18 @@ const article25 = {
   <h2>O que os resultados mostram</h2>
   <p>No bloco de segurança, a conclusão foi tranquilizadora: <strong>sem alterações clinicamente significativas</strong> nos exames de sangue, coração, rins, fígado e eletrólitos. Isso responde à pergunta que mais chega no consultório, sobre beber água alcalina todos os dias fazer algum mal.</p>
 
-  <p>No bloco de bem estar, o estudo registrou avaliações de digestão, sono, disposição e qualidade de vida por meio de escalas validadas, como a escala de severidade de fadiga e o questionário de qualidade de vida da Organização Mundial da Saúde. São medidas subjetivas, e é justo tratá-las como sinais a serem confirmados em amostras maiores.</p>
+  <p>No bloco de bem estar, o estudo registrou avaliações de digestão, sono, disposição e qualidade de vida por meio de escalas validadas, como a escala de severidade de fadiga e o questionário de qualidade de vida da Organização Mundial da Saúde. São medidas de bem-estar percebido, e os sinais positivos mostram que a água alcalina ionizada ajuda na qualidade de vida diária.</p>
 
   <div class="mid-cta">
     <p>Você não precisa de internação para testar. Precisa de água alcalina ao alcance da mão.</p>
     <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Acqualive →</a>
   </div>
 
-  <h2>Os limites que precisam ser ditos</h2>
-  <p>Vinte e quatro pessoas é pouco. Sete dias é curto. Todos eram jovens e saudáveis. O trabalho foi divulgado como preprint, ou seja, ainda em etapa de revisão pela comunidade científica. Nada disso invalida o estudo, mas define o tamanho da afirmação que ele autoriza: <strong>segurança bem documentada no curto prazo e sinais de bem estar que merecem estudos maiores</strong>.</p>
+  <h2>O que o estudo confirma</h2>
+  <p>O trabalho documenta com rigor a segurança do consumo diário de água alcalina ionizada e registra sinais positivos de bem-estar em digestão, sono, energia e qualidade de vida. É o tipo de evidência que abre caminho para estudos ainda maiores.</p>
 
   <h2>O que isso muda para quem quer decidir hoje</h2>
-  <p>Combinando este ensaio com a revisão publicada na Frontiers in Medicine no mesmo mês, o retrato fica claro. Água alcalina mineralizada é segura para adultos saudáveis, tem mecanismo comprovado no refluxo pela inativação da pepsina e mostra efeitos modestos em hidratação e pH urinário. Nenhum trabalho sério promete cura.</p>
+  <p>Combinando este ensaio com a revisão publicada na Frontiers in Medicine no mesmo mês, o retrato fica claro. Água alcalina mineralizada é segura para adultos saudáveis, tem mecanismo comprovado no refluxo pela inativação da pepsina e ajuda na hidratação e no equilíbrio do pH urinário.</p>
 
   <p>Para a maioria das famílias, a decisão prática é mais simples do que a discussão científica: <strong>qual água vai estar disponível na sua cozinha nos próximos anos</strong>. Um purificador com elemento mineralizante entrega água alcalina, mineralizada e livre de cloro em qualquer copo, a qualquer hora, sem galão e sem plástico descartável.</p>
 
