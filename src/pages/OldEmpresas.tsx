@@ -523,6 +523,8 @@ const OldEmpresas = () => {
           </p>
         </div>
 
+        <ComparativoLitro />
+
         <hr className="my-12 border-[#d7dce2]" />
 
         <h2 className="text-center text-xl sm:text-2xl md:text-[32px] uppercase" style={{ color: CINZA }}>
