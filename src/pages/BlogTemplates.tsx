@@ -3,6 +3,7 @@ import { Copy, Check, Eye, Code, ChevronLeft, ChevronRight, ListChecks, External
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { EXTRA_ARTICLES } from "@/data/blog-articles-extra";
+import { GEO_ARTICLES } from "@/data/blog-articles-geo";
 
 const BASE_ARTICLES = [
   {
@@ -4076,7 +4077,7 @@ const BASE_ARTICLES = [
   },
 ];
 
-const RAW_ARTICLES = [...BASE_ARTICLES, ...EXTRA_ARTICLES];
+const RAW_ARTICLES = [...BASE_ARTICLES, ...EXTRA_ARTICLES, ...GEO_ARTICLES];
 
 const pickMeta = (html: string) => {
   const g = (re: RegExp) => { const m = html.match(re); return m ? m[1] : ""; };
