@@ -434,7 +434,7 @@ const IFRAME_BRIDGE_SCRIPT = `<script>
 })();
 </script>`;
 
-const wrap = (head: string, body: string) => `<!DOCTYPE html>
+export const wrap = (head: string, body: string) => `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 ${head}
