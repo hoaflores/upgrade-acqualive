@@ -19,7 +19,6 @@ import IndicaClub from "./pages/IndicaClub";
 import EmailTemplates from "./pages/EmailTemplates";
 import EmailRefilTemplates from "./pages/EmailRefilTemplates";
 import BlogTemplates from "./pages/BlogTemplates";
-import RequireAuth from "./components/admin/RequireAuth";
 import EmailsFranquias from "./pages/EmailsFranquias";
 import IndicaAcqualive2026 from "./pages/IndicaAcqualive2026";
 import DayanSiebra from "./pages/DayanSiebra";
@@ -74,7 +73,7 @@ const App = () => (
             <Route path="/indica-club" element={<IndicaClub />} />
             <Route path="/email-templates" element={<EmailTemplates />} />
             <Route path="/email-refil" element={<EmailRefilTemplates />} />
-            <Route path="/blog-templates" element={<RequireAuth><BlogTemplates /></RequireAuth>} />
+            <Route path="/blog-templates" element={<BlogTemplates />} />
             <Route path="/emails-franquias" element={<EmailsFranquias />} />
             <Route path="/indica-acqualive-2026" element={<IndicaAcqualive2026 />} />
             <Route path="/indicado-acqualive" element={<IndicaAcqualive2026 />} />
