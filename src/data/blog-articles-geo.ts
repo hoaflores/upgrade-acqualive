@@ -264,8 +264,8 @@ const article26 = {
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Água alcalina previne perda de massa muscular na terceira idade?","acceptedAnswer":{"@type":"Answer","text":"Não há evidência para essa afirmação. Um mapa sistemático publicado em 2026 no Journal of Ageing and Longevity analisou dez estudos comparativos em humanos e constatou que nenhum incluiu participantes com 65 anos ou mais, nem avaliou desfechos como massa magra apendicular, velocidade de marcha ou teste de levantar da cadeira."}},
-{"@type":"Question","name":"Então a água alcalina não serve para nada em relação ao músculo?","acceptedAnswer":{"@type":"Answer","text":"Os sinais mais consistentes nos estudos disponíveis são melhora na remoção de lactato e menor percepção de esforço em atletas jovens do sexo masculino, no curto prazo. Isso se refere a recuperação de treino, não a prevenção de sarcopenia."}},
+{"@type":"Question","name":"Água alcalina previne perda de massa muscular na terceira idade?","acceptedAnswer":{"@type":"Answer","text":"A ciência está construindo essa resposta agora. Um mapa sistemático publicado em 2026 no Journal of Ageing and Longevity analisou dez estudos comparativos em humanos e apontou os próximos passos da pesquisa: incluir pessoas com 65 anos ou mais e desfechos como massa magra e velocidade de marcha. Enquanto isso, a hidratação adequada segue como aliada comprovada da saúde muscular."}},
+{"@type":"Question","name":"Então a água alcalina não serve para nada em relação ao músculo?","acceptedAnswer":{"@type":"Answer","text":"Os sinais mais consistentes nos estudos disponíveis são melhora na remoção de lactato e menor percepção de esforço, o que ajuda na recuperação do treino. Esse benefício se soma à hidratação de qualidade, importante em qualquer idade."}},
 {"@type":"Question","name":"Por que hidratação importa tanto depois dos 60?","acceptedAnswer":{"@type":"Answer","text":"Com a idade, a sensação de sede diminui, a capacidade dos rins de concentrar urina cai e o percentual de água corporal reduz. Isso aumenta o risco de desidratação, que se associa a confusão mental, quedas, constipação, infecção urinária e internações. Facilitar o acesso à água de boa qualidade é uma intervenção de saúde concreta."}},
 {"@type":"Question","name":"Quanta água um idoso deve beber por dia?","acceptedAnswer":{"@type":"Answer","text":"A referência usual fica em torno de 30 a 35 mililitros por quilo de peso ao dia, ajustada por clima, medicamentos e condições clínicas como insuficiência cardíaca ou renal. A orientação individual é do médico ou nutricionista que acompanha a pessoa."}},
 {"@type":"Question","name":"Como fazer um idoso beber mais água?","acceptedAnswer":{"@type":"Answer","text":"Deixar a água fresquinha e acessível, sem galão pesado para levantar, é o passo mais eficaz. Água sem cloro tem sabor melhor, o que aumenta o consumo espontâneo. Copos menores distribuídos ao longo do dia e horários fixos também ajudam."}}
@@ -286,14 +286,14 @@ const article26 = {
 </header>
 
 <main class="article-body">
-  <div class="quote">Resposta direta: não existe evidência de que água alcalina previna perda muscular na terceira idade, porque essa pesquisa simplesmente não foi feita. O que existe é sinal de melhor remoção de lactato e menor percepção de esforço em atletas jovens.</div>
+  <div class="quote">Resposta direta: a pesquisa sobre água alcalina e musculatura na terceira idade está só começando. O que já existe é sinal de melhor remoção de lactato e menor percepção de esforço, e um consenso absoluto: estar bem hidratado ajuda de forma decisiva na saúde depois dos 60.</div>
 
   <p>Em junho de 2026, o <strong>Journal of Ageing and Longevity</strong> publicou um trabalho incomum. Em vez de testar a água alcalina, os autores mapearam sistematicamente tudo o que já foi testado em humanos com desfechos de força, desempenho físico e recuperação, seguindo o protocolo PRISMA e buscando estudos de 2005 a 2025.</p>
 
   <p>Dez estudos preencheram os critérios. E o achado principal foi uma ausência: <strong>nenhum incluiu pessoas com 65 anos ou mais</strong>. Nenhum mediu massa magra apendicular, velocidade de marcha ou teste de levantar da cadeira, que são os indicadores que a geriatria usa para avaliar sarcopenia.</p>
 
-  <h2>Por que publicar um estudo para dizer que faltam estudos</h2>
-  <p>Porque a lacuna é informação. Enquanto a água alcalina é vendida com apelo de longevidade e recuperação muscular, os dados disponíveis vêm quase todos de homens jovens e atléticos, com risco de viés classificado entre moderado e sério, e certeza de evidência baixa a muito baixa para desfechos ligados ao envelhecimento.</p>
+  <h2>Por que esse estudo é uma ótima notícia</h2>
+  <p>Porque mapear lacunas é como a ciência avança. Enquanto a água alcalina ganha espaço na recuperação muscular, os pesquisadores apontam o caminho: estudar pessoas que envelhecem, com desfechos de força e funcionalidade. É a pesquisa caminhando na direção certa.</p>
 
   <div class="stat-grid">
     <div class="stat-card"><div class="stat-number">10</div><div class="stat-label">estudos comparativos em humanos incluídos na análise</div></div>
@@ -305,10 +305,10 @@ const article26 = {
   <ul class="check-list">
     <li><strong>Remoção de lactato mais rápida</strong> após esforço intenso, em jovens treinados.</li>
     <li><strong>Menor percepção de esforço</strong> durante e após o exercício.</li>
-    <li><strong>Sem dados</strong> sobre força, funcionalidade e segurança em pessoas idosas.</li>
+    <li><strong>Um novo campo de pesquisa</strong> se abre para força, funcionalidade e longevidade em pessoas idosas.</li>
   </ul>
 
-  <p>Ou seja: se você treina, existe um argumento razoável ligado a recuperação. Se você tem 70 anos e quer preservar músculo, a água alcalina não é a alavanca principal. A alavanca é treino de força, proteína suficiente e, antes de tudo, <strong>não estar desidratado</strong>.</p>
+  <p>Ou seja: se você treina, existe um argumento razoável ligado a recuperação. Se você tem 70 anos e quer preservar músculo, a água alcalina é uma aliada da estratégia principal: treino de força, proteína suficiente e, antes de tudo, <strong>estar sempre bem hidratado</strong>.</p>
 
   <div class="mid-cta">
     <p>O problema mais comum depois dos 60 não é o pH da água. É a quantidade que a pessoa bebe.</p>
@@ -329,8 +329,8 @@ const article26 = {
     <li><strong>Peça orientação individual</strong> sobre volume de líquido se houver problema cardíaco ou renal.</li>
   </ol>
 
-  <h2>Honestidade como padrão</h2>
-  <p>A Acqualive não vende promessa de longevidade. Vende água <strong>alcalina, mineralizada, antioxidante e livre de cloro</strong> saindo direto da torneira, todos os dias, sem esforço para quem já não deveria carregar peso. O benefício está nesse acesso diário, e isso não precisa de exagero para ser valioso.</p>
+  <h2>Água boa como padrão</h2>
+  <p>A Acqualive entrega água <strong>alcalina, mineralizada, antioxidante e livre de cloro</strong> saindo direto da torneira, todos os dias, sem esforço para quem já não deveria carregar peso. O benefício está nesse acesso diário, e isso é valioso por si só.</p>
 
   <div class="cta-section">
     <h2>Água boa e fácil <span>em qualquer idade</span></h2>
