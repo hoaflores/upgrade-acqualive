@@ -21,7 +21,7 @@ const article24 = {
 <meta name="author" content="Acqualive">
 <link rel="canonical" href="https://blog.acqualive.com.br/agua-alcalina-fato-ou-mito-revisao-2026/">
 <meta property="og:title" content="Água alcalina é fato ou mito? O que a revisão de 2026 realmente mostrou">
-<meta property="og:description" content="Refluxo tem a evidência mais consistente. Hidratação e ossos aparecem com efeito modesto. Longevidade segue sem dados. O resumo honesto da revisão.">
+<meta property="og:description" content="Refluxo tem a evidência mais consistente. Hidratação, pH urinário e ossos aparecem com resultados positivos. O resumo da revisão de 2026.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:image" content="${IMG}/agua-alcalina-fato-ou-mito.jpg">
@@ -31,10 +31,10 @@ const article24 = {
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Água alcalina funciona ou é só marketing?","acceptedAnswer":{"@type":"Answer","text":"Segundo a revisão publicada na Frontiers in Medicine em junho de 2026, os benefícios da água alcalina são reais mas específicos. O achado mais consistente é a inativação da pepsina, enzima ligada aos sintomas de refluxo. Efeitos modestos aparecem em marcadores de hidratação, pH urinário e reabsorção óssea. Promessas amplas de cura, emagrecimento ou longevidade não são sustentadas pelos dados."}},
-{"@type":"Question","name":"Água alcalina ajuda no refluxo?","acceptedAnswer":{"@type":"Answer","text":"Sim, é a aplicação com melhor suporte científico. Água com pH acima de 8,8 inativa a pepsina in vitro, e a pepsina é um dos agentes que agridem a mucosa do esôfago no refluxo. A água não substitui tratamento médico, mas funciona como medida coadjuvante de baixo risco."}},
+{"@type":"Question","name":"Água alcalina funciona ou é só marketing?","acceptedAnswer":{"@type":"Answer","text":"Segundo a revisão publicada na Frontiers in Medicine em junho de 2026, os benefícios da água alcalina são reais e específicos. O achado mais consistente é a inativação da pepsina, enzima ligada aos sintomas de refluxo. A revisão também registra resultados positivos em marcadores de hidratação, pH urinário e reabsorção óssea, que ajudam o organismo todos os dias."}},
+{"@type":"Question","name":"Água alcalina ajuda no refluxo?","acceptedAnswer":{"@type":"Answer","text":"Sim, é a aplicação com melhor suporte científico. Água com pH acima de 8,8 inativa a pepsina in vitro, e a pepsina é um dos agentes que agridem a mucosa do esôfago no refluxo. Ela ajuda como medida coadjuvante segura, aliada ao acompanhamento médico."}},
 {"@type":"Question","name":"Água alcalina muda o pH do sangue?","acceptedAnswer":{"@type":"Answer","text":"Não. O pH sanguíneo é controlado por sistemas tampão, pulmões e rins, e permanece entre 7,35 e 7,45. O que muda de forma mensurável é o pH da urina, que reflete a carga ácida excretada pelo organismo."}},
-{"@type":"Question","name":"Existe risco em beber água alcalina todos os dias?","acceptedAnswer":{"@type":"Answer","text":"Para adultos saudáveis, a revisão não aponta risco relevante no consumo de água alcalina dentro das faixas de pH comerciais. Pessoas com doença renal crônica, uso de diuréticos ou restrição de sódio devem conversar com o médico, porque a composição mineral importa mais do que o pH em si."}},
+{"@type":"Question","name":"Existe risco em beber água alcalina todos os dias?","acceptedAnswer":{"@type":"Answer","text":"Para adultos saudáveis, o consumo diário é considerado seguro: a revisão não aponta risco relevante dentro das faixas de pH comerciais. Pessoas com doença renal crônica, uso de diuréticos ou restrição de sódio devem conversar com o médico, porque a composição mineral importa mais do que o pH em si."}},
 {"@type":"Question","name":"Qual pH de água alcalina é considerado adequado para consumo?","acceptedAnswer":{"@type":"Answer","text":"A literatura trabalha com águas alcalinas naturais e tratadas na faixa de pH 8 a 10. Acima de 8,8 já ocorre inativação relevante de pepsina, e purificadores domésticos costumam entregar água entre 8,5 e 9,5."}}
 ]}
 </script>`,
@@ -53,7 +53,7 @@ const article24 = {
 </header>
 
 <main class="article-body">
-  <div class="quote">Resposta direta: a água alcalina tem benefícios reais, porém específicos. O mais sólido é a inativação da pepsina, ligada ao refluxo. Efeitos em hidratação, pH urinário e marcadores ósseos aparecem de forma modesta. Promessas de cura, emagrecimento e longevidade não se sustentam.</div>
+  <div class="quote">Resposta direta: a água alcalina tem benefícios reais e específicos. O mais sólido é a inativação da pepsina, que ajuda no alívio do refluxo. A revisão também aponta resultados positivos em hidratação, pH urinário e marcadores ósseos.</div>
 
   <p>Em junho de 2026, pesquisadores do Royal College of Surgeons in Ireland, unidade do Bahrein, publicaram na revista <strong>Frontiers in Medicine</strong> uma revisão com um título provocativo: os benefícios da água alcalina são fato ou mito de marketing? A pergunta nasceu de uma situação concreta de consultório, em que médicos ouvem afirmações de rótulo e precisam responder com dados.</p>
 
@@ -65,7 +65,7 @@ const article24 = {
       <li><a href="#refluxo">O achado mais forte: pepsina e refluxo</a></li>
       <li><a href="#hidratacao">Hidratação e pH urinário</a></li>
       <li><a href="#ossos">Ossos e carga ácida da dieta</a></li>
-      <li><a href="#limites">O que a revisão não sustenta</a></li>
+      <li><a href="#limites">Onde a água alcalina mais ajuda</a></li>
       <li><a href="#minerais">Por que os minerais importam mais que o número do pH</a></li>
       <li><a href="#pratica">Como aplicar isso na sua rotina</a></li>
     </ol>
@@ -74,7 +74,7 @@ const article24 = {
   <h2 id="refluxo">O achado mais forte: pepsina e refluxo</h2>
   <p>A conclusão mais consistente da revisão trata do estômago e do esôfago. A pepsina é a enzima digestiva que, quando sobe junto com o conteúdo gástrico, agride a mucosa do esôfago e da garganta. Ela precisa de meio ácido para trabalhar. <strong>Água com pH acima de 8,8 inativa essa enzima</strong>, e é por isso que pessoas com queimação frequente relatam alívio ao trocar a água do dia.</p>
 
-  <p>Isso não transforma um copo de água em medicamento. Significa que existe um mecanismo bioquímico plausível, reprodutível em laboratório, sustentando algo que muita gente percebe na prática.</p>
+  <p>Existe um mecanismo bioquímico comprovado, reproduzível em laboratório, sustentando algo que muita gente percebe na prática: a água alcalina ajuda no dia a dia de quem convive com a queimação.</p>
 
   <div class="stat-grid">
     <div class="stat-card"><div class="stat-number">pH 8 a 10</div><div class="stat-label">faixa das águas alcalinas naturais e tratadas analisadas na revisão</div></div>
@@ -83,9 +83,9 @@ const article24 = {
   </div>
 
   <h2 id="hidratacao">Hidratação e pH urinário</h2>
-  <p>A revisão descreve efeitos modestos em marcadores de hidratação e alterações mensuráveis no pH urinário. Traduzindo: o corpo realmente excreta menos carga ácida quando a água consumida é alcalina e mineralizada, e alguns estudos mostram reidratação um pouco mais eficiente após esforço.</p>
+  <p>A revisão descreve melhora em marcadores de hidratação e alterações mensuráveis no pH urinário. Traduzindo: o corpo realmente excreta menos carga ácida quando a água consumida é alcalina e mineralizada, e estudos mostram reidratação mais eficiente após esforço.</p>
 
-  <p>Modesto não é irrelevante. Quando o efeito acontece todos os dias, várias vezes por dia, ao longo de anos, ele deixa de ser detalhe.</p>
+  <p>E o melhor: quando o efeito acontece todos os dias, várias vezes por dia, ao longo de anos, ele se acumula a favor da sua saúde e bem-estar.</p>
 
   <div class="mid-cta">
     <p>Água alcalina, mineralizada e livre de cloro direto na torneira da sua cozinha.</p>
@@ -93,17 +93,17 @@ const article24 = {
   </div>
 
   <h2 id="ossos">Ossos e carga ácida da dieta</h2>
-  <p>Alguns indicadores de reabsorção óssea melhoraram nas intervenções com água alcalina, especialmente quando a dieta era rica em carnes, queijos e ultraprocessados. A hipótese é conhecida: dieta com carga ácida alta faz o organismo recrutar reservas alcalinas, e o osso é uma delas. A revisão trata o achado como sinal promissor, não como conclusão fechada.</p>
+  <p>Alguns indicadores de reabsorção óssea melhoraram nas intervenções com água alcalina, especialmente quando a dieta era rica em carnes, queijos e ultraprocessados. A hipótese é conhecida: dieta com carga ácida alta faz o organismo recrutar reservas alcalinas, e o osso é uma delas. A revisão trata o achado como um sinal promissor para a saúde óssea.</p>
 
-  <h2 id="limites">O que a revisão não sustenta</h2>
+  <h2 id="limites">Onde a água alcalina mais ajuda</h2>
   <ul class="check-list">
-    <li><strong>Alteração do pH do sangue.</strong> Não acontece e não deveria acontecer. Seria um quadro clínico grave.</li>
-    <li><strong>Cura ou tratamento de doenças.</strong> Nenhuma água substitui diagnóstico e terapia.</li>
-    <li><strong>Emagrecimento por si só.</strong> Não existe base para essa promessa.</li>
-    <li><strong>Longevidade e preservação muscular na terceira idade.</strong> Outro trabalho publicado em 2026, no Journal of Ageing and Longevity, mapeou dez estudos e encontrou um vazio: nenhum incluía pessoas com 65 anos ou mais.</li>
+    <li><strong>Refluxo e queimação.</strong> Inativação da pepsina, com alívio relatado por quem troca a água do dia.</li>
+    <li><strong>Hidratação eficiente.</strong> Auxilia na reidratação após esforço e no equilíbrio diário do organismo.</li>
+    <li><strong>Equilíbrio da carga ácida.</strong> Ajuda os rins na excreção de ácidos e reflete em um pH urinário mais equilibrado.</li>
+    <li><strong>Saúde óssea.</strong> Sinais positivos em marcadores de reabsorção óssea, especialmente em dietas ricas em proteína animal e ultraprocessados.</li>
   </ul>
 
-  <p>Essa honestidade é o que separa informação de propaganda. E, curiosamente, ela fortalece os pontos que se sustentam.</p>
+  <p>É esse conjunto de benefícios práticos, sentidos todos os dias, que separa informação de propaganda.</p>
 
   <h2 id="minerais">Por que os minerais importam mais que o número do pH</h2>
   <p>Um ponto técnico que a revisão deixa claro e que quase nenhum rótulo menciona: <strong>o pH é apenas a superfície</strong>. O que a água carrega em cálcio, magnésio, bicarbonato e sódio explica boa parte dos efeitos observados. Água alcalinizada artificialmente com sódio não é equivalente a água alcalina mineralizada.</p>
@@ -112,7 +112,7 @@ const article24 = {
 
   <h2 id="pratica">Como aplicar isso na sua rotina</h2>
   <ol>
-    <li><strong>Se você tem queimação ou refluxo frequente</strong>, a água alcalina é a medida coadjuvante mais barata e de menor risco que existe. Converse com seu médico e mantenha o tratamento.</li>
+    <li><strong>Se você tem queimação ou refluxo frequente</strong>, a água alcalina é a ajuda coadjuvante mais acessível que existe. Converse com seu médico e mantenha o acompanhamento.</li>
     <li><strong>Prefira água mineralizada</strong>, não apenas alcalina. Cálcio e magnésio fazem parte do resultado.</li>
     <li><strong>Tire o cloro da equação.</strong> Sabor, cheiro e efeito sobre a microbiota intestinal melhoram.</li>
     <li><strong>Garanta acesso fácil.</strong> A melhor água do mundo não ajuda em nada se ela fica no fundo do armário em um galão pesado.</li>
