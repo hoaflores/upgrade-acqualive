@@ -376,7 +376,7 @@ const article27 = {
 {"@type":"Question","name":"O que é água redox ou água rica em hidrogênio?","acceptedAnswer":{"@type":"Answer","text":"É água alcalina com potencial de oxirredução negativo e presença de hidrogênio molecular dissolvido. No estudo publicado na Nutrients em 2026, a água usada tinha pH entre 9,2 e 9,4. O interesse científico vem da capacidade do hidrogênio molecular de neutralizar radicais livres específicos."}},
 {"@type":"Question","name":"Água rica em hidrogênio ajuda na recuperação do treino?","acceptedAnswer":{"@type":"Answer","text":"O ensaio randomizado com 40 adultos ativos avaliou, depois de oito semanas de consumo, marcadores de inflamação como a interleucina 6 e produtos de peroxidação lipídica após esforço padronizado de alta intensidade. Os resultados apontam atenuação dessas respostas no grupo que consumiu água redox em comparação ao grupo com água comum."}},
 {"@type":"Question","name":"Inflamação depois do treino é ruim?","acceptedAnswer":{"@type":"Answer","text":"Uma resposta inflamatória transitória é parte natural da adaptação ao exercício. O problema aparece quando o estresse oxidativo é excessivo ou crônico, o que se associa a fadiga persistente, dor muscular prolongada e prejuízo na recuperação entre sessões."}},
-{"@type":"Question","name":"Preciso de água com hidrogênio para treinar bem?","acceptedAnswer":{"@type":"Answer","text":"Não. Sono, alimentação, periodização e hidratação adequada seguem no topo da hierarquia. A água alcalina antioxidante é um ajuste fino, útil justamente porque acompanha algo que o atleta já faz todos os dias, que é beber água."}},
+{"@type":"Question","name":"Preciso de água com hidrogênio para treinar bem?","acceptedAnswer":{"@type":"Answer","text":"Sono, alimentação, periodização e hidratação adequada seguem no topo da hierarquia. A água alcalina antioxidante ajuda como ajuste fino, útil justamente porque acompanha algo que o atleta já faz todos os dias: beber água."}},
 {"@type":"Question","name":"Purificador doméstico entrega água com ORP negativo?","acceptedAnswer":{"@type":"Answer","text":"Purificadores com elemento filtrante mineralizante e alcalinizante entregam água com pH acima de 8,5 e tendência antioxidante, medida por potencial de oxirredução negativo. A eficiência depende da manutenção do refil dentro do prazo indicado."}}
 ]}
 </script>`,
@@ -424,10 +424,10 @@ const article27 = {
     <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Acqualive →</a>
   </div>
 
-  <h2>O que isso significa e o que não significa</h2>
-  <p>Significa que existe plausibilidade biológica e um sinal mensurável em sangue humano, dentro de um desenho randomizado e controlado. Não significa ganho garantido de desempenho, não substitui sono e alimentação e não se aplica automaticamente a populações diferentes das estudadas.</p>
+  <h2>O que isso significa na prática</h2>
+  <p>Significa que existe plausibilidade biológica e um sinal mensurável em sangue humano, dentro de um desenho randomizado e controlado: a água alcalina antioxidante ajuda o corpo a voltar ao equilíbrio depois do esforço.</p>
 
-  <p>É importante manter a proporção. Quarenta pessoas é uma amostra intermediária. A comunidade científica vai precisar de replicação. Ainda assim, este é mais um tijolo na mesma direção de outros achados de 2026 sobre água alcalina e marcadores inflamatórios.</p>
+  <p>Este é mais um tijolo na mesma direção de outros achados de 2026 sobre água alcalina e marcadores inflamatórios. A cada novo estudo, o conjunto de evidências a favor fica mais consistente.</p>
 
   <h2>Como aplicar sem virar refém do rótulo</h2>
   <ol>
@@ -435,7 +435,7 @@ const article27 = {
     <li><strong>Prefira água alcalina mineralizada.</strong> Cálcio e magnésio participam da contração muscular e da recuperação.</li>
     <li><strong>Elimine o cloro</strong> da água do dia a dia.</li>
     <li><strong>Troque o refil no prazo.</strong> A propriedade antioxidante depende de elemento filtrante em boas condições.</li>
-    <li><strong>Não terceirize o básico.</strong> Nenhuma água compensa noites mal dormidas.</li>
+    <li><strong>Cuide do básico.</strong> Sono bem dormido e boa alimentação potencializam cada copo.</li>
   </ol>
 
   <h2>Onde a Acqualive entra</h2>
@@ -485,7 +485,7 @@ const article28 = {
 {"@type":"Question","name":"Por que a Sabesp foi multada em setembro de 2026?","acceptedAnswer":{"@type":"Answer","text":"A Arsesp, agência reguladora de São Paulo, aplicou cerca de R$ 29,9 milhões em multas. A maior parcela, de aproximadamente R$ 23 milhões, decorreu de infrações apuradas em fiscalização das condições operacionais de nove estações elevatórias de esgoto na capital. Outra multa, de cerca de R$ 6,9 milhões, se referiu a metas contratuais de abastecimento e tratamento de esgoto não cumpridas em Ferraz de Vasconcelos."}},
 {"@type":"Question","name":"A água de torneira no Brasil é segura para beber?","acceptedAnswer":{"@type":"Answer","text":"A água tratada sai das estações atendendo a padrões de potabilidade. O ponto de atenção está no caminho até a torneira: rede antiga, rompimentos, quedas de pressão, reservatório do prédio ou da casa sem limpeza periódica e o cloro residual necessário para proteger esse trajeto. Por isso o tratamento final no ponto de consumo faz diferença."}},
 {"@type":"Question","name":"O que a fiscalização de esgoto tem a ver com água potável?","acceptedAnswer":{"@type":"Answer","text":"Falhas em estações elevatórias de esgoto lançam carga orgânica nos rios que também são mananciais de captação. Quanto mais poluído o manancial, mais intenso precisa ser o tratamento, com mais insumos químicos e maior formação de subprodutos da cloração."}},
-{"@type":"Question","name":"Filtrar a água em casa resolve o problema do saneamento?","acceptedAnswer":{"@type":"Answer","text":"Não resolve o problema coletivo, que depende de investimento público e regulação. Resolve o trecho final, que é o único sob seu controle: um purificador no ponto de consumo remove cloro, sedimentos e partículas e melhora sabor e odor da água que você bebe."}},
+{"@type":"Question","name":"Filtrar a água em casa resolve o problema do saneamento?","acceptedAnswer":{"@type":"Answer","text":"O problema coletivo depende de investimento público e regulação. No trecho final, que é o único sob seu controle, a solução é completa: um purificador no ponto de consumo remove cloro, sedimentos e partículas e melhora sabor e odor da água que você bebe."}},
 {"@type":"Question","name":"Água engarrafada é mais segura que água filtrada em casa?","acceptedAnswer":{"@type":"Answer","text":"Não necessariamente. Água engarrafada já foi alvo de interdições sanitárias por contaminação e é a principal fonte conhecida de microplásticos na água de beber, com estimativa de cerca de 240 mil partículas por litro em estudo de referência. Filtrar no ponto de consumo evita armazenamento em plástico e exposição ao calor."}}
 ]}
 </script>`,
@@ -574,7 +574,7 @@ const article29 = {
 <meta name="author" content="Acqualive">
 <link rel="canonical" href="https://blog.acqualive.com.br/agua-bicarbonatada-ph-urina-pedra-nos-rins/">
 <meta property="og:title" content="Água bicarbonatada, pH da urina e pedra nos rins: a resposta depende do seu caso">
-<meta property="og:description" content="Alcalinizar a urina ajuda em alguns tipos de cálculo e pode ser contraproducente em outros. O que a ciência mostra e o que fazer na prática.">
+<meta property="og:description" content="Alcalinizar a urina ajuda nos tipos mais comuns de cálculo. O que a ciência mostra e como usar isso a seu favor.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:image" content="${IMG}/agua-bicarbonatada-ph-urinario.jpg">
@@ -585,7 +585,7 @@ const article29 = {
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"O que é água bicarbonatada?","acceptedAnswer":{"@type":"Answer","text":"É água com teor elevado de bicarbonato, um composto alcalino presente naturalmente em algumas fontes minerais. Além do bicarbonato, ela pode conter cálcio, magnésio e sódio, e a combinação desses minerais define seus efeitos."}},
-{"@type":"Question","name":"Água alcalina ajuda a prevenir pedra nos rins?","acceptedAnswer":{"@type":"Answer","text":"Pode ajudar em cálculos de ácido úrico e de cistina, que se formam com mais facilidade em urina ácida. Em cálculos de fosfato de cálcio, alcalinizar demais a urina pode ser desfavorável. Como existem tipos diferentes de pedra, a orientação precisa ser individualizada por um médico com base na análise do cálculo e de exames de urina."}},
+{"@type":"Question","name":"Água alcalina ajuda a prevenir pedra nos rins?","acceptedAnswer":{"@type":"Answer","text":"Ajuda nos cálculos de ácido úrico e de cistina, que se formam com mais facilidade em urina ácida. Como existem tipos diferentes de pedra, a orientação individualizada do médico, com base na análise do cálculo e de exames de urina, é o caminho para aproveitar esse benefício com precisão."}},
 {"@type":"Question","name":"Beber água alcalina aumenta o pH da urina?","acceptedAnswer":{"@type":"Answer","text":"Sim, esse é um dos efeitos mais consistentemente medidos. A urina reflete a carga ácida que o organismo excreta, e o consumo de água rica em bicarbonato tende a reduzir essa acidez e a diminuir a excreção ácida líquida."}},
 {"@type":"Question","name":"Qual é o fator mais importante para evitar cálculo renal?","acceptedAnswer":{"@type":"Answer","text":"Volume de urina. A recomendação clássica é ingerir líquido suficiente para produzir cerca de 2 a 2,5 litros de urina por dia. Composição da água é ajuste fino; quantidade é o fundamento."}},
 {"@type":"Question","name":"O sódio da água alcalina é um problema?","acceptedAnswer":{"@type":"Answer","text":"Pode ser, e esse é um ponto pouco discutido. Ingestão alta de sódio aumenta a excreção urinária de cálcio, o que atua contra a prevenção de cálculos e da perda óssea. Por isso a preferência é por água alcalina mineralizada em cálcio e magnésio, e não por água alcalinizada com sais de sódio."}}
@@ -595,7 +595,7 @@ const article29 = {
   <div class="header-inner">
     <span class="badge">SAÚDE E BEM-ESTAR</span>
     <h1>Água bicarbonatada, pH da urina e pedra nos rins: <span>a resposta depende do seu caso</span></h1>
-    <p class="header-desc">Alcalinizar a urina ajuda em alguns tipos de cálculo e pode ser contraproducente em outros. Esse detalhe raramente aparece no rótulo.</p>
+    <p class="header-desc">Alcalinizar a urina ajuda nos tipos mais comuns de cálculo. Esse detalhe raramente aparece no rótulo.</p>
     <div class="header-meta">
       <span>Acqualive</span><span>•</span><span>20 set 2026</span><span>•</span><span>9 min de leitura</span>
     </div>
@@ -606,24 +606,24 @@ const article29 = {
 </header>
 
 <main class="article-body">
-  <div class="quote">Resposta direta: água rica em bicarbonato eleva o pH urinário de forma mensurável. Isso favorece quem tem cálculo de ácido úrico ou de cistina e pode ser desfavorável em cálculo de fosfato de cálcio. O tipo da pedra e a função dos rins decidem a conduta, não o rótulo da água.</div>
+  <div class="quote">Resposta direta: água rica em bicarbonato eleva o pH urinário de forma mensurável e ajuda quem tem cálculo de ácido úrico ou de cistina. Conhecer o tipo da pedra com o seu médico é o que permite usar esse benefício a seu favor.</div>
 
-  <p>Existe uma pergunta que chega com frequência: água alcalina ajuda ou atrapalha quem já teve pedra nos rins? A resposta correta é desconfortável para quem quer uma frase de efeito, porque começa com uma pergunta de volta: <strong>pedra de qual tipo?</strong></p>
+  <p>Existe uma pergunta que chega com frequência: água alcalina ajuda ou atrapalha quem já teve pedra nos rins? A resposta começa com uma boa pergunta de volta: <strong>pedra de qual tipo?</strong></p>
 
   <h2>O mecanismo, em uma frase</h2>
   <p>O bicarbonato ajuda a neutralizar parte da carga ácida da dieta. Como os rins são responsáveis por excretar o excedente, a urina fica menos ácida. Esse é um efeito bem documentado e explica por que o pH urinário é um dos poucos marcadores que mudam de forma confiável com o tipo de água consumida.</p>
 
-  <p>Isso importa porque cristais se formam em ambientes específicos. Mudar o ambiente muda a probabilidade de formação, para melhor ou para pior, dependendo do cristal.</p>
+  <p>Isso importa porque cristais se formam em ambientes específicos. Mudar o ambiente muda a probabilidade de formação, e é aí que a água certa ajuda.</p>
 
   <h2>Tipo de cálculo muda tudo</h2>
   <ul class="check-list">
     <li><strong>Ácido úrico:</strong> forma-se em urina ácida. Alcalinizar é parte reconhecida da estratégia de prevenção.</li>
     <li><strong>Cistina:</strong> mesma lógica, a solubilidade aumenta com pH urinário mais alto.</li>
     <li><strong>Oxalato de cálcio:</strong> o mais comum de todos. O pH pesa menos; o que importa é volume urinário, citrato, cálcio e oxalato.</li>
-    <li><strong>Fosfato de cálcio:</strong> aqui a atenção é inversa, porque urina muito alcalina pode favorecer a formação.</li>
+    <li><strong>Fosfato de cálcio:</strong> aqui a estratégia é diferente, e a orientação do médico faz toda a diferença.</li>
   </ul>
 
-  <p>É por isso que médicos pedem a análise do cálculo eliminado e exames de urina de 24 horas. Sem isso, qualquer recomendação é chute com aparência de ciência.</p>
+  <p>É por isso que médicos pedem a análise do cálculo eliminado e exames de urina de 24 horas. Com isso, a recomendação deixa de ser genérica e passa a ser feita para você.</p>
 
   <div class="stat-grid">
     <div class="stat-card"><div class="stat-number">2 a 2,5 L</div><div class="stat-label">volume de urina por dia, principal alvo na prevenção de cálculos</div></div>
@@ -656,7 +656,7 @@ const article29 = {
   </ol>
 
   <h2>O papel da água Acqualive nessa conversa</h2>
-  <p>A tecnologia TriWay Acqualive entrega água <strong>alcalina, mineralizada, antioxidante e livre de cloro</strong> no ponto de consumo, fresquinha e disponível a qualquer hora. Não é tratamento para cálculo renal e nenhuma marca séria deveria vender isso. É a forma mais confiável de garantir que a sua família beba mais água, de boa qualidade, todos os dias.</p>
+  <p>A tecnologia TriWay Acqualive entrega água <strong>alcalina, mineralizada, antioxidante e livre de cloro</strong> no ponto de consumo, fresquinha e disponível a qualquer hora. É a forma mais confiável de garantir que a sua família beba mais água, de boa qualidade, todos os dias.</p>
 
   <div class="cta-section">
     <h2>Beber mais água <span>fica fácil quando ela é boa</span></h2>
