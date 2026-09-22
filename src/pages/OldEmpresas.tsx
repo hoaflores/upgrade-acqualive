@@ -27,6 +27,25 @@ import duoRecepcao from "@/assets/old-empresas/duo-escritorio-recepcao.png.asset
 import duoCopa from "@/assets/old-empresas/duo-copa-empresa.png.asset.json";
 import duoAmbCozinha from "@/assets/duo/Duo_Ambientada_1.png.asset.json";
 import duoLiteEmpresas from "@/assets/old-empresas/duo-lite-empresas.png.asset.json";
+import logoSynergy from "@/assets/logos/synergy.jpg.asset.json";
+import logoGaloCinza from "@/assets/logos/galo-cinza.jpg.asset.json";
+import logoWilliamSons from "@/assets/logos/william-sons.webp.asset.json";
+import logoVitta from "@/assets/logos/vitta.jpg.asset.json";
+import logoDalleLaste from "@/assets/logos/dalle-laste.png.asset.json";
+import logoUrbanFarmcy from "@/assets/logos/urban-farmcy.jpg.asset.json";
+import logoRaw from "@/assets/logos/raw.jpg.asset.json";
+import logoCasaViva from "@/assets/logos/casa-viva.jpg.asset.json";
+
+const EMPRESAS_CLIENTES = [
+  { nome: "William & Sons Coffee Co.", src: logoWilliamSons.url },
+  { nome: "Synergy Centro de Treinamento", src: logoSynergy.url },
+  { nome: "Restaurante Galo Cinza", src: logoGaloCinza.url },
+  { nome: "Vitta Centro de Bem-Estar Físico", src: logoVitta.url },
+  { nome: "Clínica Dalle Laste", src: logoDalleLaste.url },
+  { nome: "Urban Farmcy", src: logoUrbanFarmcy.url },
+  { nome: "Restaurante Raw", src: logoRaw.url },
+  { nome: "Casa Vivá", src: logoCasaViva.url },
+];
 
 const AZUL = "#1460B6";
 const CINZA = "#8A94A2";
@@ -192,7 +211,7 @@ const FormMeLigue = ({ variante = "empilhado", origem }: FormProps) => {
       telefone: telefone.trim(),
       empresa: empresa.trim() || nome.trim(),
       origem,
-      mensagem: "Solicitou retorno pelo formulario ME LIGUE",
+      mensagem: "Solicitou mais informacoes pelo formulario da pagina de empresas",
     });
     setEnviando(false);
     if (error) {
@@ -234,9 +253,9 @@ const FormMeLigue = ({ variante = "empilhado", origem }: FormProps) => {
         <button
           type="submit"
           disabled={enviando}
-          className="bg-white text-[#1460B6] text-xl font-medium tracking-wide py-4 hover:bg-white/90 transition-colors disabled:opacity-60"
+          className="bg-white text-[#1460B6] text-base font-semibold tracking-wide py-4 px-2 hover:bg-white/90 transition-colors disabled:opacity-60"
         >
-          {enviando ? "ENVIANDO..." : "ME LIGUE"}
+          {enviando ? "ENVIANDO..." : "QUERO MAIS INFORMAÇÕES"}
         </button>
       </form>
     );
@@ -251,9 +270,9 @@ const FormMeLigue = ({ variante = "empilhado", origem }: FormProps) => {
       <button
         type="submit"
         disabled={enviando}
-        className="w-full bg-white text-[#1460B6] text-xl sm:text-2xl font-medium tracking-wide py-4 hover:bg-white/90 transition-colors disabled:opacity-60"
+        className="w-full bg-white text-[#1460B6] text-lg sm:text-xl font-semibold tracking-wide py-4 hover:bg-white/90 transition-colors disabled:opacity-60"
       >
-        {enviando ? "ENVIANDO..." : "ME LIGUE"}
+        {enviando ? "ENVIANDO..." : "QUERO MAIS INFORMAÇÕES"}
       </button>
     </form>
   );
@@ -488,17 +507,25 @@ const OldEmpresas = () => {
 
         <div className="bg-[#1460B6] text-white flex items-center">
           <div className="w-full px-5 sm:px-6 py-10 md:py-12 text-center">
-            <p className="uppercase tracking-[0.1em] text-sm md:text-base">fale com o nosso consultor</p>
-            <a
-              href={WA_GERAL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-3xl sm:text-4xl md:text-6xl font-medium my-2 hover:opacity-90"
-            >
-              {WHATSAPP_EXIBICAO}
-            </a>
-            <p className="uppercase text-sm md:text-base mb-8">ou ligamos para você!</p>
+            <p className="uppercase tracking-[0.18em] text-[11px] md:text-xs text-white/80">
+              a solução ideal para a sua empresa
+            </p>
+            <h2 className="uppercase text-2xl sm:text-3xl md:text-[34px] font-medium leading-tight mt-3">
+              receba uma proposta
+              <br />
+              sem custo para a sua empresa
+            </h2>
+            <p className="text-sm md:text-[15px] text-white/85 leading-relaxed mt-4 mb-8 max-w-[440px] mx-auto">
+              Preencha os dados abaixo e nosso consultor entra em contato com a melhor solução de água alcalina
+              ionizada para o seu negócio, com condições comerciais para empresas.
+            </p>
             <FormMeLigue origem="old-empresas-topo" />
+            <p className="text-xs md:text-sm mt-6 text-white/80">
+              Prefere falar agora?{" "}
+              <a href={WA_GERAL} target="_blank" rel="noopener noreferrer" className="underline hover:opacity-90">
+                {WHATSAPP_EXIBICAO}
+              </a>
+            </p>
           </div>
         </div>
       </section>
@@ -626,9 +653,12 @@ const OldEmpresas = () => {
       {/* AGUA ALCALINA SEMPRE A MAO */}
       <section
         id="tecnologia"
-        className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-end py-12 md:py-16 px-6 lg:pr-0 lg:pl-[max(1.5rem,calc((100vw-1280px)/2+1.5rem))]"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-10 md:py-14 px-6 lg:pr-0 lg:pl-[max(1.5rem,calc((100vw-1280px)/2+1.5rem))]"
       >
-        <div className="max-w-[420px] mx-auto lg:mx-0 text-[15px] leading-relaxed" style={{ color: "#5b6472" }}>
+        <div className="max-w-[460px] mx-auto lg:mx-0 text-[15px] leading-relaxed" style={{ color: "#5b6472" }}>
+          <h2 className="text-2xl sm:text-3xl md:text-[38px] uppercase leading-tight mb-6" style={{ color: CINZA }}>
+            água alcalina ionizada <span style={{ color: AZUL }}>sempre à mão</span>
+          </h2>
           <p>
             <strong style={{ color: AZUL }}>
               A Acqualive possibilita o tratamento de água da forma mais completa e garante que você tenha à mão uma
@@ -648,13 +678,6 @@ const OldEmpresas = () => {
         </div>
         <div className="relative -mx-6 lg:mx-0">
           <img src={bg3.url} alt="Copo com água alcalina" className="w-full h-auto object-contain object-right" loading="lazy" />
-          <h2 className="text-2xl sm:text-3xl md:text-[42px] uppercase leading-tight text-right mt-4 pr-6 lg:pr-10" style={{ color: CINZA }}>
-            água alcalina
-            <br />
-            ionizada <span style={{ color: AZUL }}>sempre</span>
-            <br />
-            <span style={{ color: AZUL }}>à mão</span>
-          </h2>
         </div>
       </section>
 
