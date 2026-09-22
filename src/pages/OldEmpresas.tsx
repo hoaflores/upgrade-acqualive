@@ -852,17 +852,21 @@ const OldEmpresas = () => {
                 {[...EMPRESAS_CLIENTES, ...EMPRESAS_CLIENTES].map((e, i) => (
                   <div
                     key={`${e.nome}-${i}`}
-                    className="flex h-20 w-[190px] sm:w-[220px] flex-shrink-0 items-center justify-center border-r border-[#E7EBF1] px-8 last:border-r-0"
+                    className="flex h-28 w-[190px] sm:w-[220px] flex-shrink-0 flex-col items-center justify-center gap-2 border-r border-[#E7EBF1] px-6 last:border-r-0"
                   >
                     <img
                       src={e.src}
                       alt={e.nome}
                       title={e.nome}
-                      className="max-h-[56px] w-auto object-contain opacity-70 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 mix-blend-multiply"
+                      className="max-h-[48px] w-auto object-contain opacity-70 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 mix-blend-multiply"
                       loading="lazy"
                     />
+                    <span className="text-center text-[11px] leading-tight text-[#8A94A2]">
+                      {e.nome}
+                    </span>
                   </div>
                 ))}
+
               </div>
             </div>
           </div>
