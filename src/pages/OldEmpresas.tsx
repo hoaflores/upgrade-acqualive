@@ -839,28 +839,32 @@ const OldEmpresas = () => {
           </p>
         </div>
 
-        <div
-          className="group relative mt-10 overflow-hidden py-2"
-          style={{
-            maskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
-            WebkitMaskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
-          }}
-        >
-          <div className="flex w-max animate-marquee gap-5 group-hover:[animation-play-state:paused]">
-            {[...EMPRESAS_CLIENTES, ...EMPRESAS_CLIENTES].map((e, i) => (
-              <div
-                key={`${e.nome}-${i}`}
-                className="flex h-[112px] w-[210px] sm:w-[240px] flex-shrink-0 items-center justify-center rounded-xl border border-[#E4E8ED] bg-white px-7 shadow-[0_6px_22px_-14px_rgba(20,96,182,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-[#1460B6]/35 hover:shadow-[0_14px_32px_-16px_rgba(20,96,182,0.45)]"
-              >
-                <img
-                  src={e.src}
-                  alt={e.nome}
-                  title={e.nome}
-                  className="max-h-[68px] w-auto object-contain"
-                  loading="lazy"
-                />
+        <div className="max-w-[1280px] mx-auto px-6 mt-10">
+          <div className="rounded-2xl border border-[#E7EBF1] bg-gradient-to-b from-white to-[#F6F9FC] py-8 shadow-[0_18px_40px_-32px_rgba(20,96,182,0.45)]">
+            <div
+              className="group relative overflow-hidden"
+              style={{
+                maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+                WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+              }}
+            >
+              <div className="flex w-max animate-marquee items-center group-hover:[animation-play-state:paused]">
+                {[...EMPRESAS_CLIENTES, ...EMPRESAS_CLIENTES].map((e, i) => (
+                  <div
+                    key={`${e.nome}-${i}`}
+                    className="flex h-20 w-[190px] sm:w-[220px] flex-shrink-0 items-center justify-center border-r border-[#E7EBF1] px-8 last:border-r-0"
+                  >
+                    <img
+                      src={e.src}
+                      alt={e.nome}
+                      title={e.nome}
+                      className="max-h-[56px] w-auto object-contain opacity-70 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 mix-blend-multiply"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
