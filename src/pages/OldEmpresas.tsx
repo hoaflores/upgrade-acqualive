@@ -825,28 +825,46 @@ const OldEmpresas = () => {
       </section>
 
       {/* EMPRESAS QUE USAM */}
-      <section className="max-w-[1280px] mx-auto px-6 pb-16">
-        <h2 className="text-center text-2xl sm:text-3xl md:text-[38px] uppercase font-medium" style={{ color: CINZA }}>
-          empresas que já usam <span style={{ color: AZUL }}>a Acqualive</span>
-        </h2>
-        <p className="text-center text-[15px] mt-4 max-w-[640px] mx-auto leading-relaxed" style={{ color: "#5b6472" }}>
-          Restaurantes, clínicas, cafeterias, academias e escritórios que já oferecem água alcalina ionizada para
-          equipes e clientes todos os dias.
-        </p>
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 md:gap-8 items-center">
-          {EMPRESAS_CLIENTES.map((e) => (
-            <div key={e.nome} className="flex items-center justify-center p-4">
-              <img
-                src={e.src}
-                alt={e.nome}
-                title={e.nome}
-                className="max-h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
-                loading="lazy"
-              />
-            </div>
-          ))}
+      <section className="pb-16">
+        <div className="max-w-[1280px] mx-auto px-6">
+          <p className="text-center uppercase tracking-[0.2em] text-[11px] md:text-xs" style={{ color: CINZA }}>
+            parceiros Acqualive
+          </p>
+          <h2 className="text-center text-2xl sm:text-3xl md:text-[38px] uppercase font-medium mt-3" style={{ color: CINZA }}>
+            empresas que já usam <span style={{ color: AZUL }}>a Acqualive</span>
+          </h2>
+          <p className="text-center text-[15px] mt-4 max-w-[640px] mx-auto leading-relaxed" style={{ color: "#5b6472" }}>
+            Restaurantes, clínicas, cafeterias, academias e escritórios que já oferecem água alcalina ionizada para
+            equipes e clientes todos os dias.
+          </p>
+        </div>
+
+        <div
+          className="group relative mt-10 overflow-hidden py-2"
+          style={{
+            maskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+            WebkitMaskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+          }}
+        >
+          <div className="flex w-max animate-marquee gap-5 group-hover:[animation-play-state:paused]">
+            {[...EMPRESAS_CLIENTES, ...EMPRESAS_CLIENTES].map((e, i) => (
+              <div
+                key={`${e.nome}-${i}`}
+                className="flex h-[112px] w-[210px] sm:w-[240px] flex-shrink-0 items-center justify-center rounded-xl border border-[#E4E8ED] bg-white px-7 shadow-[0_6px_22px_-14px_rgba(20,96,182,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-[#1460B6]/35 hover:shadow-[0_14px_32px_-16px_rgba(20,96,182,0.45)]"
+              >
+                <img
+                  src={e.src}
+                  alt={e.nome}
+                  title={e.nome}
+                  className="max-h-[68px] w-auto object-contain"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
+
 
 
       {/* FAIXA FINAL */}
