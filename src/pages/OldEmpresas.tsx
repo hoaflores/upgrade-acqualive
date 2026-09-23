@@ -474,9 +474,9 @@ const OldEmpresas = () => {
 
       {/* HEADER */}
       <header className="bg-white">
-        <div className="max-w-[1280px] mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <img src={logo.url} alt="Acqualive" className="h-10 md:h-14 w-auto" />
-          <p className="text-center md:text-right text-xl sm:text-2xl md:text-3xl tracking-wide uppercase leading-tight" style={{ color: CINZA }}>
+        <div className="max-w-[1280px] mx-auto px-6 pt-6 pb-4 md:py-6 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4">
+          <img src={logo.url} alt="Acqualive" className="h-14 sm:h-16 md:h-20 w-auto" />
+          <p className="text-center md:text-right text-lg sm:text-2xl md:text-3xl tracking-wide uppercase leading-snug max-w-[18ch] md:max-w-none" style={{ color: CINZA }}>
             a solução ideal <strong style={{ color: AZUL }}>para a sua empresa</strong>
           </p>
 
@@ -485,19 +485,20 @@ const OldEmpresas = () => {
 
       {/* HERO */}
       <section id="topo" className="grid grid-cols-1 lg:grid-cols-2">
-        <div className="bg-white pt-6 md:pt-8">
+        <div className="bg-white pt-2 md:pt-8">
           <div className="text-center px-6">
-            <p className="uppercase tracking-[0.08em] text-[11px] sm:text-xs md:text-sm font-medium" style={{ color: CINZA }}>
+            <p className="uppercase tracking-[0.12em] text-[10px] sm:text-xs md:text-sm font-medium" style={{ color: CINZA }}>
               mude a água da sua empresa
             </p>
             <h1
-              className="uppercase text-lg sm:text-xl md:text-3xl font-medium leading-tight mt-2"
+              className="uppercase text-base sm:text-xl md:text-3xl font-medium leading-snug mt-1.5 md:mt-2"
               style={{ color: AZUL }}
             >
               e ganhe mais economia,
               <br />
               produtividade e saúde
             </h1>
+
 
           </div>
           <img
