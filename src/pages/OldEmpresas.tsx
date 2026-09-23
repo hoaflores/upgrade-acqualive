@@ -476,9 +476,10 @@ const OldEmpresas = () => {
       <header className="bg-white">
         <div className="max-w-[1280px] mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <img src={logo.url} alt="Acqualive" className="h-10 md:h-14 w-auto" />
-          <p className="text-center md:text-right text-base md:text-2xl tracking-wide uppercase" style={{ color: CINZA }}>
+          <p className="text-center md:text-right text-xl sm:text-2xl md:text-3xl tracking-wide uppercase leading-tight" style={{ color: CINZA }}>
             a solução ideal <strong style={{ color: AZUL }}>para a sua empresa</strong>
           </p>
+
         </div>
       </header>
 
