@@ -487,17 +487,18 @@ const OldEmpresas = () => {
       <section id="topo" className="grid grid-cols-1 lg:grid-cols-2">
         <div className="bg-white pt-6 md:pt-8">
           <div className="text-center px-6">
-            <p className="uppercase tracking-[0.08em] text-xs sm:text-sm md:text-base font-medium" style={{ color: CINZA }}>
+            <p className="uppercase tracking-[0.08em] text-[11px] sm:text-xs md:text-sm font-medium" style={{ color: CINZA }}>
               mude a água da sua empresa
             </p>
             <h1
-              className="uppercase text-xl sm:text-2xl md:text-4xl font-medium leading-tight mt-2"
+              className="uppercase text-lg sm:text-xl md:text-3xl font-medium leading-tight mt-2"
               style={{ color: AZUL }}
             >
               e ganhe mais economia,
               <br />
               produtividade e saúde
             </h1>
+
           </div>
           <img
             src={duoSecao1.url}
