@@ -564,6 +564,55 @@ const OldEmpresas = () => {
 
         <ComparativoLitro />
 
+      {/* EMPRESAS QUE USAM */}
+      <div className="pt-12">
+        <div className="">
+          <p className="text-center uppercase tracking-[0.2em] text-[11px] md:text-xs" style={{ color: CINZA }}>
+            parceiros Acqualive
+          </p>
+          <h2 className="text-center text-2xl sm:text-3xl md:text-[38px] uppercase font-medium mt-3" style={{ color: CINZA }}>
+            empresas que já usam a <span style={{ color: AZUL }}>Acqualive</span>
+          </h2>
+          <p className="text-center text-[15px] mt-4 max-w-[640px] mx-auto leading-relaxed" style={{ color: "#5b6472" }}>
+            Restaurantes, clínicas, cafeterias, academias e escritórios que já oferecem água alcalina ionizada para
+            equipes e clientes todos os dias.
+          </p>
+        </div>
+
+        <div className=" mt-10">
+          <div className="rounded-2xl border border-[#E7EBF1] bg-gradient-to-b from-white to-[#F6F9FC] py-8 shadow-[0_18px_40px_-32px_rgba(20,96,182,0.45)]">
+            <div
+              className="group relative overflow-hidden"
+              style={{
+                maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+                WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+              }}
+            >
+              <div className="flex w-max animate-marquee items-center group-hover:[animation-play-state:paused]">
+                {[...EMPRESAS_CLIENTES, ...EMPRESAS_CLIENTES].map((e, i) => (
+                  <div
+                    key={`${e.nome}-${i}`}
+                    className="flex h-28 w-[190px] sm:w-[220px] flex-shrink-0 flex-col items-center justify-center gap-2 border-r border-[#E7EBF1] px-6 last:border-r-0"
+                  >
+                    <img
+                      src={e.src}
+                      alt={e.nome}
+                      title={e.nome}
+                      className="max-h-[48px] w-auto object-contain transition duration-300 hover:scale-105"
+                      loading="lazy"
+                    />
+                    <span className="text-center text-[11px] leading-tight text-[#8A94A2]">
+                      {e.nome}
+                    </span>
+                  </div>
+                ))}
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
         <hr className="my-12 border-[#d7dce2]" />
 
         <h2 className="text-center text-xl sm:text-2xl md:text-[32px] uppercase" style={{ color: CINZA }}>
@@ -836,54 +885,6 @@ const OldEmpresas = () => {
         </div>
       </section>
 
-      {/* EMPRESAS QUE USAM */}
-      <section className="pb-16">
-        <div className="max-w-[1280px] mx-auto px-6">
-          <p className="text-center uppercase tracking-[0.2em] text-[11px] md:text-xs" style={{ color: CINZA }}>
-            parceiros Acqualive
-          </p>
-          <h2 className="text-center text-2xl sm:text-3xl md:text-[38px] uppercase font-medium mt-3" style={{ color: CINZA }}>
-            empresas que já usam <span style={{ color: AZUL }}>a Acqualive</span>
-          </h2>
-          <p className="text-center text-[15px] mt-4 max-w-[640px] mx-auto leading-relaxed" style={{ color: "#5b6472" }}>
-            Restaurantes, clínicas, cafeterias, academias e escritórios que já oferecem água alcalina ionizada para
-            equipes e clientes todos os dias.
-          </p>
-        </div>
-
-        <div className="max-w-[1280px] mx-auto px-6 mt-10">
-          <div className="rounded-2xl border border-[#E7EBF1] bg-gradient-to-b from-white to-[#F6F9FC] py-8 shadow-[0_18px_40px_-32px_rgba(20,96,182,0.45)]">
-            <div
-              className="group relative overflow-hidden"
-              style={{
-                maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
-                WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
-              }}
-            >
-              <div className="flex w-max animate-marquee items-center group-hover:[animation-play-state:paused]">
-                {[...EMPRESAS_CLIENTES, ...EMPRESAS_CLIENTES].map((e, i) => (
-                  <div
-                    key={`${e.nome}-${i}`}
-                    className="flex h-28 w-[190px] sm:w-[220px] flex-shrink-0 flex-col items-center justify-center gap-2 border-r border-[#E7EBF1] px-6 last:border-r-0"
-                  >
-                    <img
-                      src={e.src}
-                      alt={e.nome}
-                      title={e.nome}
-                      className="max-h-[48px] w-auto object-contain opacity-70 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 mix-blend-multiply"
-                      loading="lazy"
-                    />
-                    <span className="text-center text-[11px] leading-tight text-[#8A94A2]">
-                      {e.nome}
-                    </span>
-                  </div>
-                ))}
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
 
