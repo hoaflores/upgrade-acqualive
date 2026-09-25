@@ -946,7 +946,6 @@ export type Database = {
         }
         Returns: boolean
       }
-      is_membro: { Args: { _user_id: string }; Returns: boolean }
       tem_acesso_painel: { Args: { _user_id: string }; Returns: boolean }
     }
     Enums: {
