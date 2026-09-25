@@ -23,6 +23,22 @@ Deno.serve(async (req) => {
     const parsed = Body.safeParse(await req.json().catch(() => null));
     if (!parsed.success) return json({ error: parsed.error.flatten().fieldErrors }, 400);
     const { nome, email, telefone, empresa, origem } = parsed.data;
+    const sheetOk = (async () => {
+      try {
+        const lk = Deno.env.get("LOVABLE_API_KEY"), sk = Deno.env.get("GOOGLE_SHEETS_API_KEY");
+        if (!lk || !sk) return false;
+        const r = await fetch(
+          `https://connector-gateway.lovable.dev/google_sheets/v4/spreadsheets/1KCoJYwIWH_R2FLcN-wTAiUebQv1SA1WIw1Z3lgozQfo/values/A:F:append?valueInputOption=USER_ENTERED&insertDataOption=INSERT_ROWS`,
+          {
+            method: "POST",
+            headers: { Authorization: `Bearer ${lk}`, "X-Connection-Api-Key": sk, "Content-Type": "application/json" },
+            body: JSON.stringify({ values: [[new Date().toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" }), nome, email, telefone, empresa, origem]] }),
+          },
+        );
+        if (!r.ok) console.error("sheet", r.status, await r.text());
+        return r.ok;
+      } catch (e) { console.error("sheet", e); return false; }
+    })();
     const h = { "Api-Token": apiKey, "Content-Type": "application/json" };
     const ac = async (path: string, init?: RequestInit) => {
       const r = await fetch(`${apiUrl}/api/3/${path}`, { ...init, headers: h });
@@ -79,7 +95,7 @@ Deno.serve(async (req) => {
       }),
     });
 
-    return json({ success: true, listId });
+    return json({ success: true, listId, sheet: await sheetOk });
   } catch (e) {
     console.error(e);
     return json({ error: "Erro interno" }, 500);
