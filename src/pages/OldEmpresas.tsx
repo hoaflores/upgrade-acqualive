@@ -213,6 +213,15 @@ const FormMeLigue = ({ variante = "empilhado", origem }: FormProps) => {
       origem,
       mensagem: "Solicitou mais informacoes pelo formulario da pagina de empresas",
     });
+    void supabase.functions.invoke("duo-empresas-activecampaign", {
+      body: {
+        nome: nome.trim(),
+        email: email.trim(),
+        telefone: telefone.trim(),
+        empresa: empresa.trim(),
+        origem,
+      },
+    });
     setEnviando(false);
     if (error) {
       toast.error("Nao foi possivel enviar. Tente novamente ou fale conosco no WhatsApp.");
