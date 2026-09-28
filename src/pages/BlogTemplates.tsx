@@ -1,9 +1,10 @@
 import { useState, useRef, useEffect } from "react";
-import { Copy, Check, Eye, Code, ChevronLeft, ChevronRight, ListChecks, ExternalLink } from "lucide-react";
+import { Copy, Check, Eye, Code, ChevronLeft, ChevronRight, ListChecks, ExternalLink, List, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { EXTRA_ARTICLES } from "@/data/blog-articles-extra";
 import { GEO_ARTICLES } from "@/data/blog-articles-geo";
+import { SERIE_PRIMAVERA_ARTICLES } from "@/data/blog-articles-serie-primavera";
 
 const BASE_ARTICLES = [
   {
@@ -4077,7 +4078,7 @@ const BASE_ARTICLES = [
   },
 ];
 
-const RAW_ARTICLES = [...BASE_ARTICLES, ...EXTRA_ARTICLES, ...GEO_ARTICLES];
+const RAW_ARTICLES = [...BASE_ARTICLES, ...EXTRA_ARTICLES, ...GEO_ARTICLES, ...SERIE_PRIMAVERA_ARTICLES];
 
 const pickMeta = (html: string) => {
   const g = (re: RegExp) => { const m = html.match(re); return m ? m[1] : ""; };
@@ -4978,6 +4979,15 @@ const ARTICLES = [
   ...RAW_ARTICLES,
 ];
 
+const N_BASE = BASE_ARTICLES.length + EXTRA_ARTICLES.length;
+const N_GEO = N_BASE + GEO_ARTICLES.length;
+const GRUPOS = [
+  { nome: "Home do blog", de: 0, ate: 0 },
+  { nome: "Primeiros artigos", de: 1, ate: N_BASE },
+  { nome: "Série ciência e GEO", de: N_BASE + 1, ate: N_GEO },
+  { nome: "Série primavera 2026", de: N_GEO + 1, ate: N_GEO + SERIE_PRIMAVERA_ARTICLES.length },
+];
+
 const extractMeta = (html: string) => {
   const get = (re: RegExp) => { const m = html.match(re); return m ? m[1] : ""; };
   return {
@@ -4992,6 +5002,8 @@ const BlogTemplates = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [viewMode, setViewMode] = useState<"preview" | "code" | "meta">("preview");
   const [copied, setCopied] = useState(false);
+  const [listOpen, setListOpen] = useState(false);
+  const [busca, setBusca] = useState("");
   const [iframeHeight, setIframeHeight] = useState<number>(2800);
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const iframeWrapperRef = useRef<HTMLDivElement | null>(null);
@@ -5087,19 +5099,68 @@ const BlogTemplates = () => {
               <ChevronLeft className="h-4 w-4" />
             </Button>
 
-            {ARTICLES.map((_, i) => (
+            <div className="relative">
               <button
-                key={i}
-                onClick={() => setCurrentIndex(i)}
-                className={`w-8 h-8 rounded-md text-xs font-bold transition-colors ${
-                  i === currentIndex
-                    ? "bg-[#3b82f6] text-white"
-                    : "bg-[#1c2333] text-gray-400 hover:bg-[#2a3142]"
-                }`}
+                type="button"
+                onClick={() => setListOpen((o) => !o)}
+                className="flex items-center gap-2 h-9 rounded-md bg-[#1c2333] px-3 text-xs font-semibold text-gray-200 hover:bg-[#2a3142] min-w-[240px] max-w-[420px]"
               >
-                {i + 1}
+                <List className="h-4 w-4 shrink-0 text-[#3b82f6]" />
+                <span className="text-[#3b82f6] font-bold shrink-0">{currentIndex + 1}.</span>
+                <span className="truncate">{article.title}</span>
               </button>
-            ))}
+              {listOpen && (
+                <>
+                  <div className="fixed inset-0 z-40" onClick={() => setListOpen(false)} />
+                  <div className="absolute left-1/2 -translate-x-1/2 top-11 z-50 w-[min(92vw,560px)] rounded-lg border border-[#1c2333] bg-[#161b26] shadow-2xl">
+                    <div className="flex items-center gap-2 border-b border-[#1c2333] px-3 py-2">
+                      <Search className="h-4 w-4 text-gray-500" />
+                      <input
+                        autoFocus
+                        value={busca}
+                        onChange={(e) => setBusca(e.target.value)}
+                        placeholder="Buscar artigo por título ou número"
+                        className="flex-1 bg-transparent text-sm text-gray-200 outline-none placeholder:text-gray-500"
+                      />
+                      <button type="button" onClick={() => setListOpen(false)} aria-label="Fechar lista" className="text-gray-500 hover:text-white">
+                        <X className="h-4 w-4" />
+                      </button>
+                    </div>
+                    <div className="max-h-[60vh] overflow-y-auto py-1">
+                      {GRUPOS.map((g) => {
+                        const itens = ARTICLES.map((a, i) => ({ a, i }))
+                          .filter(({ i }) => i >= g.de && i <= g.ate)
+                          .filter(({ a, i }) => {
+                            const q = busca.trim().toLowerCase();
+                            return !q || a.title.toLowerCase().includes(q) || String(i + 1) === q;
+                          });
+                        if (!itens.length) return null;
+                        return (
+                          <div key={g.nome}>
+                            <div className="sticky top-0 bg-[#161b26] px-3 pt-3 pb-1 text-[10px] font-bold uppercase tracking-wider text-gray-500">
+                              {g.nome} <span className="text-gray-600">({itens.length})</span>
+                            </div>
+                            {itens.map(({ a, i }) => (
+                              <button
+                                key={i}
+                                type="button"
+                                onClick={() => { setCurrentIndex(i); setListOpen(false); setBusca(""); }}
+                                className={`flex w-full items-start gap-3 px-3 py-2 text-left text-sm transition-colors ${
+                                  i === currentIndex ? "bg-[#3b82f6]/15 text-white" : "text-gray-300 hover:bg-[#1c2333]"
+                                }`}
+                              >
+                                <span className={`shrink-0 w-7 text-right text-xs font-bold ${i === currentIndex ? "text-[#3b82f6]" : "text-gray-500"}`}>{i + 1}</span>
+                                <span className="line-clamp-2">{a.title}</span>
+                              </button>
+                            ))}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
 
             <Button
               size="sm"

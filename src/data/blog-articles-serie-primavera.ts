@@ -973,7 +973,7 @@ ${[
   .map(([t, d]) => `  <div class="fx-box"><h3>${t}</h3><p style="margin:0">${d}</p></div>`)
   .join("\n")}
 ${MID_CTA("Água alcalina, mineralizada e antioxidante para a sua rotina de cuidado.")}
-  <p>Para o banho, o <a href="https://paginas.acqualive.com.br/shower-care" target="_blank">Shower Care Acqualive</a> ajuda a reduzir o cloro da água do chuveiro.</p>
+  <p>Para o banho, o <a href="https://paginas.acqualive.com.br/acqualive-shower" target="_blank">Shower Care Acqualive</a> ajuda a reduzir o cloro da água do chuveiro.</p>
 ${CTA_FINAL("Pele bonita", "começa no copo")}`,
   related: [
     ["Receitas que mudam com a água", R("receitas-cafe-cha-agua-alcalina")],
