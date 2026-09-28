@@ -5,6 +5,7 @@
 // Imagens publicas no bucket blog-images.
 
 import { wrap } from "./blog-articles-extra";
+import { SERIE_PRIMAVERA_SEO } from "./blog-articles-serie-primavera-seo";
 
 const IMG = "https://kvlkcavrxxwxxvijwqhd.supabase.co/storage/v1/object/public/blog-images";
 const BLOG = "https://blog.acqualive.com.br";
