@@ -25,7 +25,7 @@ const S = {
   mg: ["NIH Office of Dietary Supplements: Magnesium fact sheet", "https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/"],
   cdc: ["CDC: Heat and older adults", "https://www.cdc.gov/heat-health/"],
   sbp: ["Sociedade Brasileira de Pediatria: hidratação na infância", "https://www.sbp.com.br/"],
-  kosh: ["Koschel et al.: Health effects of alkaline water. revisão (PubMed)", "https://pubmed.ncbi.nlm.nih.gov/?term=alkaline+water+health"],
+  kosh: ["PubMed: estudos indexados sobre água alcalina e saúde", "https://pubmed.ncbi.nlm.nih.gov/?term=alkaline+water+health"],
   snis: ["Instituto Trata Brasil: dados de saneamento e perdas de água", "https://tratabrasil.org.br/"],
   aaha: ["WSAVA: diretrizes de nutrição e cuidados para cães e gatos", "https://wsava.org/global-guidelines/"],
   pele: ["Palma et al.: Dietary water affects human skin hydration and biomechanics. Clin Cosmet Investig Dermatol, 2015", "https://pubmed.ncbi.nlm.nih.gov/26345226/"],
