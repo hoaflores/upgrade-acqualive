@@ -110,7 +110,39 @@ const MID_CTA = (texto: string) => `
     <a href="https://acqualive.com.br" target="_blank" rel="noopener">Conhecer o Acqualive →</a>
   </div>`;
 
-const make = (c: Cfg) => ({
+const slugify = (s: string) =>
+  s
+    .replace(/<[^>]+>/g, "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
+const make = (c0: Cfg) => {
+  const x = SERIE_PRIMAVERA_SEO[c0.slug];
+  const faq: Faq[] = x ? [...c0.faq, ...x.faq] : c0.faq;
+  // extra sections enter before the final CTA
+  let body = c0.body;
+  if (x) {
+    const i = body.lastIndexOf('<div class="cta-section">');
+    const cut = i > 0 ? body.lastIndexOf("\n", i) : -1;
+    body = cut > 0 ? body.slice(0, cut) + x.sections + body.slice(cut) : body + x.sections;
+  }
+  // ids on h2 + TOC
+  const toc: [string, string][] = [];
+  body = body.replace(/<h2>(.*?)<\/h2>/g, (_m, t: string) => {
+    const id = slugify(t);
+    toc.push([id, t.replace(/<[^>]+>/g, "")]);
+    return `<h2 id="${id}">${t}</h2>`;
+  });
+  toc.push(["perguntas-frequentes", "Perguntas frequentes"]);
+  const words = (body + faq.join(" ")).replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
+  const read = `${Math.max(4, Math.round(words / 200))} min`;
+  const c = { ...c0, faq, body, read };
+  const sources = x?.sources ?? [];
+  const takeaways = x?.takeaways ?? [];
+  return {
   title: c.title,
   slug: c.slug,
   html: wrap(
@@ -119,17 +151,28 @@ const make = (c: Cfg) => ({
 <title>${c.metaTitle}</title>
 <meta name="description" content="${c.desc}">
 <meta name="keywords" content="${c.keywords}">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="author" content="Acqualive">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="Equipe Acqualive">
 <link rel="canonical" href="${BLOG}/${c.slug}/">
 <meta property="og:title" content="${c.title}">
 <meta property="og:description" content="${c.desc}">
 <meta property="og:type" content="article">
+<meta property="og:url" content="${BLOG}/${c.slug}/">
+<meta property="og:site_name" content="Blog Acqualive">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:image" content="${IMG}/${c.img}">
+<meta property="og:image:alt" content="${c.alt}">
+<meta property="article:published_time" content="${c.date}">
+<meta property="article:modified_time" content="${c.date}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${c.title}">
+<meta name="twitter:description" content="${c.desc}">
+<meta name="twitter:image" content="${IMG}/${c.img}">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"${esc(c.title)}","description":"${esc(c.desc)}","author":{"@type":"Organization","name":"Acqualive"},"publisher":{"@type":"Organization","name":"Acqualive","logo":{"@type":"ImageObject","url":"${BLOG}/logo.png"}},"datePublished":"${c.date}","dateModified":"${c.date}","inLanguage":"pt-BR","image":"${IMG}/${c.img}","mainEntityOfPage":"${BLOG}/${c.slug}/"}
+{"@context":"https://schema.org","@type":"Article","headline":"${esc(c.title)}","description":"${esc(c.desc)}","keywords":"${esc(c.keywords)}","wordCount":${words},"articleSection":"Saúde e bem-estar","author":{"@type":"Organization","name":"Equipe Acqualive","url":"https://acqualive.com.br"},"publisher":{"@type":"Organization","name":"Acqualive","url":"https://acqualive.com.br","logo":{"@type":"ImageObject","url":"${BLOG}/logo.png"}},"datePublished":"${c.date}","dateModified":"${c.date}","inLanguage":"pt-BR","image":{"@type":"ImageObject","url":"${IMG}/${c.img}","width":1280,"height":800},"mainEntityOfPage":{"@type":"WebPage","@id":"${BLOG}/${c.slug}/"},"speakable":{"@type":"SpeakableSpecification","cssSelector":[".quote",".fx-key"]}${sources.length ? `,"citation":[${sources.map(([t, u]) => `{"@type":"CreativeWork","name":"${esc(t)}","url":"${u}"}`).join(",")}]` : ""}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog Acqualive","item":"${BLOG}/"},{"@type":"ListItem","position":2,"name":"${esc(c.title)}","item":"${BLOG}/${c.slug}/"}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[${c.faq
@@ -139,13 +182,25 @@ const make = (c: Cfg) => ({
       )
       .join(",")}]}
 </script>
-${FMT_CSS}`,
+${FMT_CSS}
+<style>
+.fx-key{background:#eef6ff;border-left:5px solid #1460b6;border-radius:12px;padding:20px 24px;margin:24px 0}
+.fx-key h3{margin:0 0 10px;font-size:17px;color:#12304f}
+.fx-key ul{margin:0;padding-left:20px}.fx-key li{margin:6px 0}
+.fx-toc{border:1px solid #dbe7f7;border-radius:12px;padding:18px 22px;margin:24px 0;background:#fff}
+.fx-toc b{display:block;margin-bottom:8px;color:#12304f}
+.fx-toc ol{margin:0;padding-left:20px}.fx-toc li{margin:4px 0}.fx-toc a{color:#1460b6;text-decoration:none}
+.fx-src{font-size:14px;color:#40546b;border-top:1px solid #e3ecf8;margin-top:32px;padding-top:18px}
+.fx-src ol{padding-left:20px}.fx-src a{color:#1460b6}
+.fx-author{display:flex;gap:14px;align-items:center;background:#f7faff;border-radius:12px;padding:16px 18px;margin:28px 0;font-size:14px;color:#40546b}
+.fx-author b{color:#12304f}
+</style>`,
     `<header class="article-header">
   <div class="header-inner">
     <span class="badge">${c.badge}</span>
     <h1>${c.h1}</h1>
     <p class="header-desc">${c.sub}</p>
-    <div class="header-meta"><span>Acqualive</span><span>•</span><span>${c.dateLabel}</span><span>•</span><span>${c.read} de leitura</span></div>
+    <div class="header-meta"><span>Equipe Acqualive</span><span>•</span><span>Atualizado em ${c.dateLabel}</span><span>•</span><span>${c.read} de leitura</span></div>
   </div>
   <div class="hero-img-wrap">
     <img src="${IMG}/${c.img}" alt="${c.alt}" width="1280" height="800" loading="eager">
@@ -154,14 +209,19 @@ ${FMT_CSS}`,
 
 <main class="article-body">
   <div class="quote">Resposta direta: ${c.answer}</div>
+${takeaways.length ? `  <div class="fx-key"><h3>Pontos-chave deste artigo</h3><ul>${takeaways.map((t) => `<li>${t}</li>`).join("")}</ul></div>` : ""}
+  <nav class="fx-toc" aria-label="Neste artigo"><b>Neste artigo</b><ol>${toc.map(([id, t]) => `<li><a href="#${id}">${t}</a></li>`).join("")}</ol></nav>
 ${c.body}
 
-  <h2>Perguntas frequentes</h2>
+  <h2 id="perguntas-frequentes">Perguntas frequentes</h2>
 ${c.faq
   .map(
     ([q, a]) => `  <details class="fx-acc"><summary>${q}</summary><div class="fx-acc-body">${a}</div></details>`,
   )
   .join("\n")}
+
+  <div class="fx-author"><div><b>Equipe Acqualive</b><br>Conteúdo produzido pela equipe de saúde e bem-estar da Acqualive, com base em fontes científicas e órgãos oficiais. Este artigo é informativo e não substitui a orientação de um profissional de saúde.</div></div>
+${sources.length ? `  <div class="fx-src"><h3>Fontes e referências</h3><ol>${sources.map(([t, u]) => `<li><a href="${u}" target="_blank" rel="noopener">${t}</a></li>`).join("")}</ol></div>` : ""}
 
   <div class="related-links">
     <h4>Continue lendo</h4>
@@ -172,7 +232,8 @@ ${c.related.map(([t, u]) => `      <li><a href="${u}" target="_blank">${t}</a></
   </div>
 </main>`,
   ),
-});
+  };
+};
 
 const R = (slug: string) => `${BLOG}/${slug}/`;
 
