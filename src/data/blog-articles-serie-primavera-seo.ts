@@ -9,7 +9,7 @@ export interface SeoExtra {
   sources: [string, string][];
 }
 
-const S = {
+const S: Record<string, [string, string]> = {
   who: ["Organização Mundial da Saúde: Guidelines for drinking-water quality, 4ª edição", "https://www.who.int/publications/i/item/9789241549950"],
   efsa: ["EFSA: Scientific Opinion on Dietary Reference Values for water (2010)", "https://www.efsa.europa.eu/en/efsajournal/pub/1459"],
   nasem: ["National Academies: Dietary Reference Intakes for Water, Potassium, Sodium, Chloride and Sulfate", "https://nap.nationalacademies.org/catalog/10925"],
@@ -31,7 +31,7 @@ const S = {
   pele: ["Palma et al.: Dietary water affects human skin hydration and biomechanics. Clin Cosmet Investig Dermatol, 2015", "https://pubmed.ncbi.nlm.nih.gov/26345226/"],
   cloro: ["CDC: History of drinking water treatment", "https://www.cdc.gov/healthywater/drinking/history.html"],
   cafe: ["Specialty Coffee Association: Water Quality Standard", "https://sca.coffee/research/coffee-standards"],
-} as const;
+};
 
 const tb = (head: string[], rows: string[][]) =>
   `<table class="fx-table"><thead><tr>${head.map((h) => `<th>${h}</th>`).join("")}</tr></thead><tbody>${rows
