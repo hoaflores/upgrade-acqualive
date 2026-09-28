@@ -5004,6 +5004,8 @@ const BlogTemplates = () => {
   const [copied, setCopied] = useState(false);
   const [listOpen, setListOpen] = useState(false);
   const [busca, setBusca] = useState("");
+  const [metaBusca, setMetaBusca] = useState("");
+  const [metaGrupo, setMetaGrupo] = useState("Todos");
   const [iframeHeight, setIframeHeight] = useState<number>(2800);
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const iframeWrapperRef = useRef<HTMLDivElement | null>(null);
@@ -5203,12 +5205,56 @@ const BlogTemplates = () => {
           </pre>
         ) : (
           <div className="bg-[#161b26] rounded-lg p-6 border border-[#1c2333]">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-lg font-bold text-white">Metadados SEO — Todos os artigos</h2>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-lg font-bold text-white">Metadados SEO: todos os artigos</h2>
               <span className="text-xs text-gray-400">{ARTICLES.length} artigos</span>
             </div>
-            <div className="space-y-4">
-              {ARTICLES.map((a, i) => {
+            <div className="flex items-center gap-2 rounded-md border border-[#1c2333] bg-[#0d1117] px-3 py-2 mb-3">
+              <Search className="h-4 w-4 text-gray-500" />
+              <input
+                value={metaBusca}
+                onChange={(e) => setMetaBusca(e.target.value)}
+                placeholder="Buscar por título, slug, palavra-chave ou número"
+                className="flex-1 bg-transparent text-sm text-gray-200 outline-none placeholder:text-gray-500"
+              />
+              {metaBusca && (
+                <button type="button" onClick={() => setMetaBusca("")} aria-label="Limpar busca" className="text-gray-500 hover:text-white">
+                  <X className="h-4 w-4" />
+                </button>
+              )}
+            </div>
+            <div className="flex flex-wrap gap-2 mb-6">
+              {["Todos", ...GRUPOS.map((g) => g.nome)].map((n) => (
+                <button
+                  key={n}
+                  type="button"
+                  onClick={() => setMetaGrupo(n)}
+                  className={`rounded-full px-3 py-1 text-xs font-semibold transition-colors ${
+                    metaGrupo === n ? "bg-[#3b82f6] text-white" : "bg-[#1c2333] text-gray-300 hover:bg-[#2a3142]"
+                  }`}
+                >
+                  {n}
+                </button>
+              ))}
+            </div>
+            <div className="space-y-8">
+              {GRUPOS.filter((g) => metaGrupo === "Todos" || metaGrupo === g.nome).map((g) => {
+                const q = metaBusca.trim().toLowerCase();
+                const itens = ARTICLES.map((a, i) => ({ a, i }))
+                  .filter(({ i }) => i >= g.de && i <= g.ate)
+                  .filter(({ a, i }) => {
+                    if (!q) return true;
+                    const m = extractMeta(a.html);
+                    return String(i + 1) === q || [a.title, a.slug, m.keywords, m.metaTitle].join(" ").toLowerCase().includes(q);
+                  });
+                if (!itens.length) return null;
+                return (
+                  <div key={g.nome}>
+                    <div className="mb-3 flex items-center gap-2 border-b border-[#1c2333] pb-2 text-[11px] font-bold uppercase tracking-wider text-gray-400">
+                      {g.nome} <span className="text-gray-600">({itens.length})</span>
+                    </div>
+                    <div className="space-y-4">
+              {itens.map(({ a, i }) => {
                 const meta = extractMeta(a.html);
                 const copyAll = () => {
                   navigator.clipboard.writeText(
@@ -5252,6 +5298,10 @@ const BlogTemplates = () => {
                           </a>
                         ) : <span className="text-gray-500">—</span>}
                       </div>
+                    </div>
+                  </div>
+                );
+              })}
                     </div>
                   </div>
                 );
