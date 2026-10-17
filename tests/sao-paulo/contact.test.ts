@@ -1,5 +1,5 @@
 import { test, expect } from "bun:test";
-import { saoPauloContact, saoPauloWhatsAppUrl } from "./sao-paulo-contact";
+import { saoPauloContact, saoPauloWhatsAppUrl } from "../../src/data/sao-paulo-contact";
 
 test("São Paulo preserves its existing WhatsApp destination", () => {
   expect(new URL(saoPauloWhatsAppUrl()).pathname).toBe("/5511989712793");

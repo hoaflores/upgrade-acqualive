@@ -1,5 +1,5 @@
 import { test, expect } from "bun:test";
-import { allowsSaoPauloMarketing } from "./sao-paulo-privacy";
+import { allowsSaoPauloMarketing } from "../../src/data/sao-paulo-privacy";
 
 test("marketing tracking stays disabled before a choice", () => {
   expect(allowsSaoPauloMarketing(null)).toBe(false);
