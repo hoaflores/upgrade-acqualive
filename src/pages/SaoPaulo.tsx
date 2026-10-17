@@ -124,28 +124,27 @@ const SaoPaulo = () => {
     const map = shadow.querySelector<HTMLIFrameElement>('[data-id="b10ebed"] iframe');
     if (map) map.src = `https://maps.google.com/maps?q=${encodeURIComponent(saoPauloContact.address)}&t=m&z=16&output=embed`;
     shadow.querySelectorAll<HTMLAnchorElement>('.elementor-button[href="#faleconosco"]').forEach(anchor => {
-      const product = anchor.closest('[data-id="4f7647bf"]') ? "V Self" : anchor.closest('[data-id="190f17c4"]') ? "Terracota e linha Vittro" : undefined;
+      const product = anchor.closest('[data-id="4f7647bf"]') ? "V Self" : anchor.closest('[data-id="190f17c4"]') ? "Terracota e Acqualive DUO" : undefined;
       anchor.href = saoPauloWhatsAppUrl(product);
       anchor.target = "_blank"; anchor.rel = "noopener noreferrer";
       anchor.removeAttribute("role");
       const label = anchor.querySelector(".elementor-button-text");
-      if (label) label.textContent = product ? `Consultar ${product}` : "Falar com a equipe de São Paulo";
+      if (label) label.textContent = "Quero Beber Água Alcalina Ionizada";
     });
     shadow.querySelectorAll<HTMLAnchorElement>('.elementor-button[href="#produtos"]').forEach(anchor => {
       anchor.removeAttribute("role");
       const label = anchor.querySelector(".elementor-button-text");
-      if (label) label.textContent = "Conhecer os modelos";
+      if (label) label.textContent = "VER PRODUTOS";
     });
     const primaryTarget = shadow.querySelector('[data-id="4836dc2e"] .elementor-button-wrapper');
     const primaryRoot = primaryTarget ? createRoot(primaryTarget) : null;
-    primaryRoot?.render(<div className="sp-hero-actions"><Button asChild className="elementor-button"><a href={saoPauloWhatsAppUrl()} target="_blank" rel="noopener noreferrer">Falar com a equipe de São Paulo</a></Button><Button asChild variant="outline"><a href="#produtos">Conhecer os modelos</a></Button></div>);
+    primaryRoot?.render(<div className="sp-hero-actions"><Button asChild className="elementor-button"><a href="#produtos">VER PRODUTOS</a></Button></div>);
     const locationLabel = shadow.querySelector('[data-id="345a19e"] p');
     if (locationLabel) locationLabel.textContent = "São Paulo";
     const imageDescriptions: Record<string, string> = {
       "25f22c85": "Purificador Acqualive da linha por gravidade",
       "58c7e7f": "V Self e versão com suporte de madeira apresentados na página original",
-      "eab5130": "Modelos Terracota e Vittro apresentados na página original",
-      "792d241": "Imagem ilustrativa da seção de manutenção",
+      "792d241": "Imagem ilustrativa da tecnologia Acqualive",
       "eb88383": "Encontro de franqueados Acqualive",
     };
     Object.entries(imageDescriptions).forEach(([id, description]) => {

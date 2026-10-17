@@ -11,6 +11,7 @@
 - [x] Verify images, interactions and desktop/mobile layouts.
 
 # São Paulo content review
+- [x] Recover the original commercial copy and replace discontinued Vittro with Acqualive DUO, preserving verified corrections.
 - [x] Audit actual content against official sources and record findings.
 - [x] Correct verified claims, model descriptions, maintenance and accessibility locally.
 - [x] Preserve contact channels and integrations; document unconfirmed local conditions.
