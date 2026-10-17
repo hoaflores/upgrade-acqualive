@@ -10,6 +10,7 @@ import currentLogo from "@/assets/logo-acqualive.png";
 import currentLogoWhite from "@/assets/logo-branca.png";
 import terracotaAsset from "@/assets/filtros/terracota.png.asset.json";
 import duoAsset from "@/assets/duo/duo-frente-transp.png.asset.json";
+import duoLiteAsset from "@/assets/sao-paulo/duo-lite-pia.png.asset.json";
 import heroAsset from "@/assets/sao-paulo/4a34494261ea.jpg.asset.json";
 import { saoPauloContact, saoPauloWhatsAppUrl } from "@/data/sao-paulo-contact";
 import { allowsSaoPauloMarketing, SP_MARKETING_PREFERENCE } from "@/data/sao-paulo-privacy";
@@ -164,6 +165,7 @@ const SaoPaulo = () => {
       {[
         { name: "Terracota", image: terracotaAsset.url, tag: "Design que faz parte da sua casa", headline: "Água alcalina, naturalmente na sua rotina.", paragraphs: ["O Terracota une reservatório cerâmico, capacidade de 6 L e um design que valoriza o ambiente. Água filtrada em temperatura ambiente, sempre por perto para acompanhar seus momentos.", "Uma escolha para quem aprecia a simplicidade do sistema por gravidade e quer transformar o hábito de beber água em parte do dia a dia."] },
         { name: "Acqualive DUO", image: duoAsset.url, tag: "Tecnologia e praticidade todos os dias", headline: "Natural ou gelada. Do seu jeito.", paragraphs: ["O Acqualive DUO combina refrigeração e tecnologia TriWay Acqualive para oferecer água alcalina natural e gelada em um único purificador.", "Na cozinha de casa ou na empresa, é uma solução prática para ter água à mão e acompanhar diferentes momentos da sua rotina. Conheça o modelo e consulte as condições com nossa equipe."] },
+        { name: "Acqualive Duo Lite", image: duoLiteAsset.url, tag: "Água alcalina direto da torneira", headline: "Sem ocupar espaço na bancada.", paragraphs: ["O Acqualive Duo Lite tem dois estágios de filtragem: membrana UF para ultrafiltração e elemento filtrante alcalino com carvão ativado e minerais. Retenção de partículas Classe A pelo Inmetro e eficiência bacteriológica.", "Instalado sob a pia, com 27 cm de altura e 15 cm de largura, também pode ser ligado a cafeteiras, geladeiras, máquinas de suco e bebedouros. Consulte as condições com nossa equipe."] },
       ].map(product => <article key={product.name} className="sp-product-story">
         <div className="sp-product-visual"><img src={product.image} alt={`Purificador ${product.name}`} loading="lazy" width="400" height="500" /></div>
         <div className="sp-product-copy"><p className="sp-eyebrow">{product.tag}</p><h3>{product.name}</h3><p className="sp-product-headline">{product.headline}</p>{product.paragraphs.map(text => <p key={text}>{text}</p>)}<Button asChild className="elementor-button"><a href={saoPauloWhatsAppUrl(product.name)} target="_blank" rel="noopener noreferrer">Quero conhecer o {product.name}</a></Button></div>
@@ -192,7 +194,7 @@ const SaoPaulo = () => {
     const map = shadow.querySelector<HTMLIFrameElement>('[data-id="b10ebed"] iframe');
     if (map) map.src = `https://maps.google.com/maps?q=${encodeURIComponent(saoPauloContact.address)}&t=m&z=16&output=embed`;
     shadow.querySelectorAll<HTMLAnchorElement>('.elementor-button[href="#faleconosco"]').forEach(anchor => {
-      const product = anchor.closest('[data-id="4f7647bf"]') ? "V Self" : anchor.closest('[data-id="190f17c4"]') ? "Terracota e Acqualive DUO" : undefined;
+      const product = anchor.closest('[data-id="4f7647bf"]') ? "V Self" : anchor.closest('[data-id="190f17c4"]') ? "Terracota, Acqualive DUO e Duo Lite" : undefined;
       anchor.href = saoPauloWhatsAppUrl(product);
       anchor.target = "_blank"; anchor.rel = "noopener noreferrer";
       anchor.removeAttribute("role");
