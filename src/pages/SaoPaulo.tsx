@@ -8,6 +8,9 @@ import pageCss from "@/assets/sao-paulo/page.css?raw";
 import refinementCss from "@/assets/sao-paulo/refinement.css?raw";
 import currentLogo from "@/assets/logo-acqualive.png";
 import currentLogoWhite from "@/assets/logo-branca.png";
+import terracotaAsset from "@/assets/filtros/terracota.png.asset.json";
+import duoAsset from "@/assets/duo/duo-frente-transp.png.asset.json";
+import heroAsset from "@/assets/sao-paulo/4a34494261ea.jpg.asset.json";
 import { saoPauloContact, saoPauloWhatsAppUrl } from "@/data/sao-paulo-contact";
 import { allowsSaoPauloMarketing, SP_MARKETING_PREFERENCE } from "@/data/sao-paulo-privacy";
 
@@ -111,6 +114,24 @@ const SaoPaulo = () => {
     fonts.textContent = (pageCss.match(/@font-face\s*\{[^}]+\}/g) ?? []).join("\n");
     document.head.appendChild(fonts);
     shadow.innerHTML = `<style>${pageCss}\n${refinementCss}</style>${pageHtml}`;
+    const hero = shadow.querySelector('[data-id="53155e8f"]');
+    if (hero) {
+      const photo = document.createElement("img");
+      photo.className = "sp-hero-photo"; photo.src = heroAsset.url;
+      photo.alt = ""; photo.fetchPriority = "high";
+      hero.prepend(photo);
+    }
+    const productTarget = shadow.querySelector('[data-id="190f17c4"]');
+    const productRoot = productTarget ? createRoot(productTarget) : null;
+    productRoot?.render(<div className="sp-product-stories">
+      {[
+        { name: "Terracota", image: terracotaAsset.url, tag: "Design que faz parte da sua casa", headline: "Água alcalina, naturalmente na sua rotina.", paragraphs: ["O Terracota une reservatório cerâmico, capacidade de 6 L e um design que valoriza o ambiente. Água filtrada em temperatura ambiente, sempre por perto para acompanhar seus momentos.", "Uma escolha para quem aprecia a simplicidade do sistema por gravidade e quer transformar o hábito de beber água em parte do dia a dia."] },
+        { name: "Acqualive DUO", image: duoAsset.url, tag: "Tecnologia e praticidade todos os dias", headline: "Natural ou gelada. Do seu jeito.", paragraphs: ["O Acqualive DUO combina refrigeração e tecnologia TriWay Acqualive para oferecer água alcalina natural e gelada em um único purificador.", "Na cozinha de casa ou na empresa, é uma solução prática para ter água à mão e acompanhar diferentes momentos da sua rotina. Conheça o modelo e consulte as condições com nossa equipe."] },
+      ].map(product => <article key={product.name} className="sp-product-story">
+        <div className="sp-product-visual"><img src={product.image} alt={`Purificador ${product.name}`} loading="lazy" width="400" height="500" /></div>
+        <div className="sp-product-copy"><p className="sp-eyebrow">{product.tag}</p><h3>{product.name}</h3><p className="sp-product-headline">{product.headline}</p>{product.paragraphs.map(text => <p key={text}>{text}</p>)}<Button asChild className="elementor-button"><a href={saoPauloWhatsAppUrl(product.name)} target="_blank" rel="noopener noreferrer">Quero conhecer o {product.name}</a></Button></div>
+      </article>)}
+    </div>);
     const reasons = document.createElement("div");
     reasons.className = "sp-reasons-grid";
     const firstReason = shadow.querySelector('[data-id="251c08c9"]');
@@ -272,6 +293,7 @@ const SaoPaulo = () => {
       shadow.removeEventListener("click", click); shadow.removeEventListener("keydown", keydown);
       formRoot?.unmount();
       primaryRoot?.unmount();
+      productRoot?.unmount();
     };
   }, []);
   return <div ref={host} />;
