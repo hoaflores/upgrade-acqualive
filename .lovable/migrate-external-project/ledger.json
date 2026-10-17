@@ -2,14 +2,80 @@
   "source": "https://saopaulo.acqualive.com.br",
   "destination": "/sao-paulo",
   "capabilities": [
-    {"capability":"page content and layout","source":"WordPress/Elementor public HTML","outcome":"migrate","status":"pending","next_action":"Internalize markup and styles without legacy runtime"},
-    {"capability":"media and fonts","source":"source domain and font providers","outcome":"migrate","status":"pending","next_action":"Download all referenced bytes and create project asset pointers"},
-    {"capability":"contact form","source":"Elementor backend destination unavailable","outcome":"replace with user-specified Google Sheets","status":"pending","next_action":"Implement and verify submission to the São Paulo spreadsheet"},
-    {"capability":"FAQ and testimonial carousel","source":"Elementor interactions","outcome":"migrate","status":"pending","next_action":"Replace with isolated native interactions"},
-    {"capability":"YouTube and Google Maps","source":"independent external providers","outcome":"preserve","status":"pending","next_action":"Verify embeds retain source IDs and location"},
-    {"capability":"WhatsApp and phone","source":"existing contact links","outcome":"preserve","status":"pending","next_action":"Use resolved direct WhatsApp destination and existing phone"},
-    {"capability":"analytics","source":"Facebook Pixel and retired Universal Analytics","outcome":"preserve supported Pixel; UA is retired","status":"pending","next_action":"Preserve Pixel ID without obsolete WordPress scripts"},
-    {"capability":"auth, database records, schedules, payments","source":"none detected in public landing page","outcome":"not applicable","status":"not applicable","next_action":null},
-    {"capability":"source-domain cutover","source":"domain will be discontinued","outcome":"no redirects or source-domain requests","status":"pending","next_action":"Test page with all source-domain traffic blocked"}
-  ]
+    {
+      "capability": "page content and layout",
+      "source": "WordPress/Elementor public HTML",
+      "outcome": "migrate",
+      "status": "complete",
+      "next_action": null
+    },
+    {
+      "capability": "media and fonts",
+      "source": "source domain and font providers",
+      "outcome": "migrate",
+      "status": "complete",
+      "next_action": null
+    },
+    {
+      "capability": "contact form",
+      "source": "Elementor backend destination unavailable",
+      "outcome": "replace with user-specified Google Sheets",
+      "status": "complete",
+      "next_action": null
+    },
+    {
+      "capability": "FAQ and testimonial carousel",
+      "source": "Elementor interactions",
+      "outcome": "migrate",
+      "status": "complete",
+      "next_action": null
+    },
+    {
+      "capability": "YouTube and Google Maps",
+      "source": "independent external providers",
+      "outcome": "preserve",
+      "status": "complete",
+      "next_action": null
+    },
+    {
+      "capability": "WhatsApp and phone",
+      "source": "existing contact links",
+      "outcome": "preserve",
+      "status": "complete",
+      "next_action": null
+    },
+    {
+      "capability": "analytics",
+      "source": "Facebook Pixel and retired Universal Analytics",
+      "outcome": "preserve supported Pixel; UA is retired",
+      "status": "complete",
+      "next_action": null
+    },
+    {
+      "capability": "auth, database records, schedules, payments",
+      "source": "none detected in public landing page",
+      "outcome": "not applicable",
+      "status": "not applicable",
+      "next_action": null
+    },
+    {
+      "capability": "source-domain cutover",
+      "source": "domain will be discontinued",
+      "outcome": "no redirects or source-domain requests",
+      "status": "complete",
+      "next_action": null
+    }
+  ],
+  "verification": {
+    "desktop": "1280x1800",
+    "mobile": "390x844",
+    "old_domain_requests": 0,
+    "images": "all loaded using exact downloaded bytes via test-only local asset routing; sandbox CDN proxy unavailable",
+    "form": "real UI submission and Google Sheets readback confirmed",
+    "faq": "opened",
+    "carousel": "next arrow moved track",
+    "analytics": "original Facebook Pixel retained; Universal Analytics retired",
+    "captcha": "legacy domain-bound reCAPTCHA removed; validated public write-only form and honeypot substitute",
+    "published": false
+  }
 }
