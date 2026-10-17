@@ -121,6 +121,43 @@ const SaoPaulo = () => {
       photo.alt = ""; photo.fetchPriority = "high";
       hero.prepend(photo);
     }
+    // Recompose the existing closing content without rewriting the commercial copy.
+    const support = shadow.querySelector('[data-id="35c6db03"] .elementor-widget-wrap');
+    if (support) {
+      const composition = document.createElement("div"); composition.className = "sp-support-layout";
+      const heading = document.createElement("div"); heading.className = "sp-support-heading";
+      const copy = document.createElement("div"); copy.className = "sp-support-copy";
+      ["5d86099", "7daabe3e"].forEach(id => {
+        const node = shadow.querySelector(`[data-id="${id}"]`); if (node) heading.appendChild(node);
+      });
+      ["4c8b0587", "31a28527"].forEach(id => {
+        const node = shadow.querySelector(`[data-id="${id}"]`); if (node) copy.appendChild(node);
+      });
+      composition.append(heading, copy);
+      shadow.querySelector('[data-id="345d5a58"] .elementor-widget-wrap')?.appendChild(composition);
+    }
+    const habit = shadow.querySelector('[data-id="3ca76024"] .elementor-text-editor');
+    if (habit) {
+      habit.classList.add("sp-habit-layout");
+      const heading = document.createElement("h2");
+      heading.textContent = "Um cuidado que começa com a água.";
+      heading.className = "sp-habit-heading";
+      habit.prepend(heading);
+    }
+    const invitation = shadow.querySelector('[data-id="4b93f825"] .elementor-widget-wrap');
+    if (invitation) {
+      const copy = document.createElement("div"); copy.className = "sp-invitation-copy";
+      while (invitation.firstChild) copy.appendChild(invitation.firstChild);
+      const image = document.createElement("img");
+      image.src = duoAsset.url; image.alt = "Acqualive DUO"; image.loading = "lazy";
+      image.className = "sp-invitation-product";
+      invitation.classList.add("sp-invitation-layout"); invitation.append(copy, image);
+    }
+    const location = shadow.querySelector('[data-id="22057d9"] .elementor-widget-wrap');
+    if (location) {
+      const title = document.createElement("h3"); title.textContent = "Acqualive São Paulo";
+      title.className = "sp-location-title"; location.prepend(title);
+    }
     const productTarget = shadow.querySelector('[data-id="190f17c4"]');
     const productRoot = productTarget ? createRoot(productTarget) : null;
     productRoot?.render(<div className="sp-product-stories">
