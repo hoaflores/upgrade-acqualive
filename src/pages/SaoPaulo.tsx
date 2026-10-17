@@ -111,6 +111,26 @@ const SaoPaulo = () => {
     fonts.textContent = (pageCss.match(/@font-face\s*\{[^}]+\}/g) ?? []).join("\n");
     document.head.appendChild(fonts);
     shadow.innerHTML = `<style>${pageCss}\n${refinementCss}</style>${pageHtml}`;
+    const reasons = document.createElement("div");
+    reasons.className = "sp-reasons-grid";
+    const firstReason = shadow.querySelector('[data-id="251c08c9"]');
+    firstReason?.before(reasons);
+    ["251c08c9", "2c044c6a", "458c234d", "1fb4653c", "7f2cc7ae", "7f8eb878", "6d12dc6f"].forEach((id, index) => {
+      const section = shadow.querySelector<HTMLElement>(`[data-id="${id}"]`);
+      if (!section) return;
+      section.dataset.spNumber = String(index + 1).padStart(2, "0");
+      reasons.appendChild(section);
+    });
+    const featureList = shadow.querySelector('[data-id="5f9ba46e"] .elementor-widget-wrap')
+      ?? shadow.querySelector('[data-id="5f9ba46e"]');
+    // Mark the existing technical column without changing its content.
+    shadow.querySelector('[data-id="5f9ba46e"]')?.classList.add("sp-features-column");
+    const technicalImage = shadow.querySelector('[data-id="25f22c85"]');
+    technicalImage?.closest('.elementor-row')?.classList.add("sp-technical-layout");
+    if (featureList) featureList.classList.add("sp-feature-list");
+    ["79985013", "2e6215b0", "6481294f", "1992bb", "1e3fd4a1"].forEach(id => {
+      shadow.querySelector(`[data-id="${id}"]`)?.classList.add("sp-legacy-divider");
+    });
     shadow.querySelector(".elementor-2")?.setAttribute("lang", "pt-BR");
     shadow.querySelectorAll<HTMLElement>("[data-sp-contact]").forEach(node => {
       const key = node.dataset.spContact;
