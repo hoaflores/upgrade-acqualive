@@ -63,7 +63,7 @@
   max-width: none; top: 50%; left: 0; transform: translateY(-50%);
 }
 .elementor-2 .elementor-element-345a19e { text-align: right; color: hsl(var(--primary)); font-size: 18px; width: 100%; }
-.elementor-2 .elementor-element-345a19e p { margin: 0; font-family: Montserrat, Arial, sans-serif !important; font-weight: 500; white-space: nowrap; }
+.elementor-2 .elementor-element-345a19e p { margin: 0; text-align: right !important; font-size: 18px !important; font-family: Montserrat, Arial, sans-serif !important; font-weight: 500; white-space: nowrap; }
 .elementor-2 .elementor-element.elementor-element-53155e8f { padding: 64px 24px !important; }
 .elementor-2 .elementor-element-53155e8f > .elementor-container { min-height: 0; max-width: 960px; }
 .elementor-2 .elementor-element-3d843bd,
@@ -139,6 +139,7 @@
   .elementor-2 .elementor-element-7a461377 .elementor-column:first-child { width: 70%; }
   .elementor-2 .elementor-element-7a461377 .elementor-column:last-child { width: 30%; }
   .elementor-2 .elementor-element-345a19e { font-size: 14px; }
+  .elementor-2 .elementor-element-345a19e p { font-size: 14px !important; }
   .elementor-2 .elementor-element.elementor-element-53155e8f { padding: 36px 16px !important; }
   .elementor-2 .elementor-widget-heading .elementor-heading-title { font-size: 26px !important; }
   .elementor-2 .elementor-element-592f750 .elementor-heading-title { font-size: 24px !important; }
