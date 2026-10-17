@@ -6,6 +6,27 @@ import { supabase } from "@/integrations/supabase/client";
 import pageHtml from "@/assets/sao-paulo/page.html?raw";
 import pageCss from "@/assets/sao-paulo/page.css?raw";
 
+type Pixel = ((...args: unknown[]) => void) & { queue?: unknown[][]; push?: Pixel; loaded?: boolean; version?: string; callMethod?: (...args: unknown[]) => void };
+const trackVisit = () => {
+  const target = window as Window & { fbq?: Pixel; _fbq?: Pixel; spPixelInitialized?: boolean };
+  if (!target.fbq) {
+    const pixel: Pixel = (...args) => {
+      if (pixel.callMethod) pixel.callMethod(...args);
+      else pixel.queue?.push(args);
+    };
+    pixel.queue = []; pixel.push = pixel; pixel.loaded = true; pixel.version = "2.0";
+    target.fbq = pixel; target._fbq = pixel;
+    const script = document.createElement("script");
+    script.async = true; script.src = "https://connect.facebook.net/en_US/fbevents.js";
+    document.head.appendChild(script);
+  }
+  if (!target.spPixelInitialized) {
+    target.fbq("init", "282648086654648");
+    target.spPixelInitialized = true;
+  }
+  target.fbq("trackSingle", "282648086654648", "PageView");
+};
+
 const Contato = () => {
   const [busy, setBusy] = useState(false);
   const [status, setStatus] = useState("");
@@ -57,10 +78,19 @@ const SaoPaulo = () => {
     const element = host.current;
     if (!element) return;
     const shadow = element.shadowRoot ?? element.attachShadow({ mode: "open" });
+    // Browsers do not register @font-face definitions from shadow stylesheets.
+    const fonts = document.createElement("style");
+    fonts.textContent = (pageCss.match(/@font-face\s*\{[^}]+\}/g) ?? []).join("\n");
+    document.head.appendChild(fonts);
     shadow.innerHTML = `<style>${pageCss}</style>${pageHtml}`;
+    trackVisit();
     const formTarget = shadow.querySelector("#sao-paulo-form-root");
     const formRoot = formTarget ? createRoot(formTarget) : null;
-    formRoot?.render(<Contato />);
+    formRoot?.render(<><Contato /><Button asChild className="sp-whatsapp"><a href="https://wa.me/5511989712793" target="_blank" rel="noopener noreferrer" aria-label="Falar com Acqualive São Paulo no WhatsApp"><i className="fa fa-whatsapp" aria-hidden="true" /></a></Button></>);
+    shadow.querySelectorAll<HTMLElement>(".elementor-swiper-button").forEach(arrow => {
+      arrow.setAttribute("role", "button"); arrow.tabIndex = 0;
+      arrow.setAttribute("aria-label", arrow.classList.contains("elementor-swiper-button-prev") ? "Depoimento anterior" : "Próximo depoimento");
+    });
     const click = (event: Event) => {
       const target = event.target;
       if (!(target instanceof Element)) return;
@@ -86,7 +116,7 @@ const SaoPaulo = () => {
       }
     };
     const keydown = (event: Event) => {
-      if (event instanceof KeyboardEvent && (event.key === "Enter" || event.key === " ") && event.target instanceof HTMLElement && event.target.matches(".elementor-tab-title")) {
+      if (event instanceof KeyboardEvent && (event.key === "Enter" || event.key === " ") && event.target instanceof HTMLElement && event.target.matches(".elementor-tab-title, .elementor-swiper-button")) {
         event.preventDefault(); event.target.click();
       }
     };
@@ -108,6 +138,7 @@ const SaoPaulo = () => {
     resize.observe(element);
     return () => {
       window.clearInterval(timer); resize.disconnect();
+      fonts.remove();
       shadow.removeEventListener("click", click); shadow.removeEventListener("keydown", keydown);
       formRoot?.unmount();
     };
