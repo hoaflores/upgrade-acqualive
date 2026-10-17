@@ -49,9 +49,11 @@
   padding: 16px 24px !important;
   border-bottom: 1px solid hsl(var(--border) / .5);
 }
-.elementor-2 .elementor-element-7a461377 .elementor-row { align-items: center; flex-wrap: nowrap; }
+.elementor-2 .elementor-element-7a461377 > .elementor-container { width: 100%; }
+.elementor-2 .elementor-element-7a461377 .elementor-row { align-items: center; flex-wrap: nowrap; width: 100%; }
 .elementor-2 .elementor-element-7a461377 .elementor-column { width: 50%; }
 .elementor-2 .elementor-element-7a461377 .elementor-column-wrap { padding: 0; }
+.elementor-2 .elementor-element-b36a80b .elementor-widget-wrap { justify-content: flex-end; }
 .elementor-2 .elementor-element-57c97f1a { text-align: left; }
 .elementor-2 .elementor-element-57c97f1a > .elementor-widget-container { margin: 0; }
 .sp-brand { position: relative; display: block; width: 260px; height: 48px; overflow: hidden; }
@@ -60,8 +62,8 @@
   position: absolute; width: 260px !important; height: auto;
   max-width: none; top: 50%; left: 0; transform: translateY(-50%);
 }
-.elementor-2 .elementor-element-345a19e { text-align: right; color: hsl(var(--muted-foreground)); font-size: 14px; }
-.elementor-2 .elementor-element-345a19e p { margin: 0; }
+.elementor-2 .elementor-element-345a19e { text-align: right; color: hsl(var(--primary)); font-size: 18px; width: 100%; }
+.elementor-2 .elementor-element-345a19e p { margin: 0; font-family: Montserrat, Arial, sans-serif !important; font-weight: 500; white-space: nowrap; }
 .elementor-2 .elementor-element.elementor-element-53155e8f { padding: 64px 24px !important; }
 .elementor-2 .elementor-element-53155e8f > .elementor-container { min-height: 0; max-width: 960px; }
 .elementor-2 .elementor-element-3d843bd,
@@ -136,7 +138,7 @@
   .sp-footer-brand img { width: 190px !important; }
   .elementor-2 .elementor-element-7a461377 .elementor-column:first-child { width: 70%; }
   .elementor-2 .elementor-element-7a461377 .elementor-column:last-child { width: 30%; }
-  .elementor-2 .elementor-element-345a19e { font-size: 13px; }
+  .elementor-2 .elementor-element-345a19e { font-size: 14px; }
   .elementor-2 .elementor-element.elementor-element-53155e8f { padding: 36px 16px !important; }
   .elementor-2 .elementor-widget-heading .elementor-heading-title { font-size: 26px !important; }
   .elementor-2 .elementor-element-592f750 .elementor-heading-title { font-size: 24px !important; }
