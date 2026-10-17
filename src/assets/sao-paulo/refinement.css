@@ -109,6 +109,9 @@
 .elementor-2 .sp-dark-section .elementor-widget-text-editor,
 .elementor-2 .sp-dark-section .elementor-icon-list-text { color: hsl(var(--primary-foreground)) !important; }
 .elementor-2 .elementor-widget-image img { object-fit: contain; }
+.elementor-2 .sp-current-products { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: center; }
+.elementor-2 .sp-current-products img { width: 100%; height: 320px; object-fit: contain; }
+.elementor-2 .elementor-element-af3df43 { padding: 24px; color: hsl(var(--foreground)); }
 .elementor-2 .sp-image-motion img { transition: transform .6s ease; }
 .elementor-2 .sp-image-motion:hover img { transform: translateY(-6px); }
 .elementor-2 .sp-image-motion.sp-in-view { animation: sp-image-reveal .9s ease both; }
