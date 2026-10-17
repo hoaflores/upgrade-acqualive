@@ -410,6 +410,7 @@
 .elementor-2 .sp-education .elementor-column-wrap { padding: 0 !important; margin: 0 !important; background: transparent !important; }
 .elementor-2 .sp-education .elementor-widget-container { margin: 0 !important; padding: 0 !important; border: 0 !important; background: transparent !important; }
 .elementor-2 .sp-education .elementor-widget { margin-bottom: 0; min-width: 0; }
+.elementor-2 .sp-education .elementor-widget.elementor-hidden-phone { display: block !important; }
 .elementor-2 .sp-education .elementor-text-editor { text-align: left !important; }
 .elementor-2 .sp-education .elementor-widget-text-editor p { font-size: 16px !important; line-height: 1.65 !important; margin: 0 0 18px; }
 .elementor-2 .sp-education .elementor-widget-text-editor p:last-child { margin-bottom: 0; }
