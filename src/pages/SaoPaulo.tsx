@@ -86,6 +86,8 @@ const SaoPaulo = () => {
     fonts.textContent = (pageCss.match(/@font-face\s*\{[^}]+\}/g) ?? []).join("\n");
     document.head.appendChild(fonts);
     shadow.innerHTML = `<style>${pageCss}\n${refinementCss}</style>${pageHtml}`;
+    const locationLabel = shadow.querySelector('[data-id="345a19e"] p');
+    if (locationLabel) locationLabel.textContent = "São Paulo";
     const logo = shadow.querySelector<HTMLImageElement>('[data-id="57c97f1a"] img');
     if (logo) {
       logo.src = currentLogo;
