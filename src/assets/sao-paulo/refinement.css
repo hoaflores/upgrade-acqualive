@@ -201,6 +201,9 @@
 .elementor-2 .elementor-element.elementor-element-2143e381 { padding-bottom: 32px !important; background: hsl(var(--secondary)) !important; color: hsl(var(--secondary-foreground)); }
 .elementor-2 .elementor-element-275d4c62 { max-width: 850px; text-align: left; }
 .elementor-2 .elementor-element.elementor-element-4915070c { padding-top: 0 !important; min-height: 0 !important; }
+.elementor-2 .elementor-element-4915070c > .elementor-container { min-height: 0 !important; height: auto !important; }
+.elementor-2 .elementor-element-7a461377 .elementor-column-wrap { padding: 0 !important; }
+.elementor-2 .elementor-element-345a19e p { font-size: 16px !important; }
 .sp-technical-layout { align-items: center; gap: 40px; }
 .sp-technical-layout > .elementor-column:first-child { width: 38%; }
 .sp-technical-layout > .sp-features-column { width: calc(62% - 40px); }
@@ -211,8 +214,8 @@
 .sp-feature-list .elementor-col-33 { display: none; }
 .sp-feature-list .elementor-col-66 { width: 100% !important; }
 .elementor-2 .sp-feature-list .elementor-column-wrap { padding: 0 !important; }
-.elementor-2 .sp-feature-list h3 { font-size: 19px; margin-bottom: 10px; }
-.elementor-2 .sp-feature-list p { font-size: 13px !important; line-height: 1.7 !important; margin-bottom: 0; }
+.elementor-2 .sp-feature-list h3 { font-size: 20px; margin-bottom: 14px; }
+.elementor-2 .sp-feature-list p { font-size: 15px !important; line-height: 1.7 !important; margin-bottom: 0; }
 .elementor-2 .elementor-element-25f22c85 img { width: 100%; max-height: 560px; }
 .elementor-2 .elementor-element-379c9bf { text-align: left; max-width: 760px; }
 .elementor-2 .elementor-element-a273a27 { max-width: 760px; color: hsl(var(--muted-foreground)); margin: 20px 0 40px; }
@@ -281,6 +284,10 @@
   .elementor-2 .elementor-element-592f750 .elementor-heading-title { font-size: 21px !important; }
   .elementor-2 .elementor-element-592f750 .elementor-heading-title > span:first-child { font-size: 38px; line-height: 1.15; }
   .elementor-2 .elementor-element-04da8d6 p { font-size: 15px !important; }
+  .elementor-2 .elementor-element.elementor-element-53155e8f { padding: 40px 24px 32px !important; }
+  .elementor-2 .elementor-element-04da8d6 .elementor-widget-container { margin: 0 !important; }
+  .elementor-2 .elementor-element-345a19e p { font-size: 13px !important; }
+  .elementor-2 .sp-feature-list p { font-size: 14px !important; }
   .sp-reasons-grid { grid-template-columns: minmax(0,1fr); padding: 0 24px 40px; }
   .elementor-2 .sp-reasons-grid > .elementor-top-section { padding: 24px 0 !important; }
   .elementor-2 .elementor-element-3b7ea4c5 .elementor-column,
