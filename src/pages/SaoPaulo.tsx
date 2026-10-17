@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import pageHtml from "@/assets/sao-paulo/page.html?raw";
 import pageCss from "@/assets/sao-paulo/page.css?raw";
+import refinementCss from "@/assets/sao-paulo/refinement.css?raw";
+import currentLogo from "@/assets/logo-acqualive.png";
+import currentLogoWhite from "@/assets/logo-branca.png";
 
 type Pixel = ((...args: unknown[]) => void) & { queue?: unknown[][]; push?: Pixel; loaded?: boolean; version?: string; callMethod?: (...args: unknown[]) => void };
 const trackVisit = () => {
@@ -82,7 +85,36 @@ const SaoPaulo = () => {
     const fonts = document.createElement("style");
     fonts.textContent = (pageCss.match(/@font-face\s*\{[^}]+\}/g) ?? []).join("\n");
     document.head.appendChild(fonts);
-    shadow.innerHTML = `<style>${pageCss}</style>${pageHtml}`;
+    shadow.innerHTML = `<style>${pageCss}\n${refinementCss}</style>${pageHtml}`;
+    const logo = shadow.querySelector<HTMLImageElement>('[data-id="57c97f1a"] img');
+    if (logo) {
+      logo.src = currentLogo;
+      logo.alt = "Acqualive";
+      logo.loading = "eager";
+      logo.removeAttribute("width"); logo.removeAttribute("height");
+      logo.parentElement?.classList.add("sp-brand");
+    }
+    const footer = shadow.querySelector('[data-id="5492a288"] .elementor-widget-wrap');
+    if (footer) {
+      const brand = document.createElement("div");
+      brand.className = "sp-brand sp-footer-brand";
+      const image = document.createElement("img");
+      image.src = currentLogoWhite; image.alt = "Acqualive"; image.loading = "lazy";
+      brand.appendChild(image); footer.prepend(brand);
+    }
+    ["53496fef", "4915070c", "23a46f38", "35c6db03", "5a70ff98"].forEach(id => {
+      shadow.querySelector(`[data-id="${id}"]`)?.classList.add("sp-dark-section");
+    });
+    const imageObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => entry.target.classList.toggle("sp-in-view", entry.isIntersecting));
+    }, { threshold: 0.15 });
+    ["478f6b24", "42ba3efd", "36402a26", "25f22c85", "58c7e7f", "eab5130"].forEach(id => {
+      const image = shadow.querySelector(`[data-id="${id}"]`);
+      if (!image) return;
+      image.classList.add("sp-image-motion");
+      if (["25f22c85", "58c7e7f", "eab5130"].includes(id)) image.classList.add("sp-product-motion");
+      imageObserver.observe(image);
+    });
     trackVisit();
     const formTarget = shadow.querySelector("#sao-paulo-form-root");
     const formRoot = formTarget ? createRoot(formTarget) : null;
@@ -137,7 +169,7 @@ const SaoPaulo = () => {
     });
     resize.observe(element);
     return () => {
-      window.clearInterval(timer); resize.disconnect();
+      window.clearInterval(timer); resize.disconnect(); imageObserver.disconnect();
       fonts.remove();
       shadow.removeEventListener("click", click); shadow.removeEventListener("keydown", keydown);
       formRoot?.unmount();
