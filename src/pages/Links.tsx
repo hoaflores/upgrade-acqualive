@@ -17,6 +17,7 @@ type LinkItem = {
  * IMPORTANTE: toda nova rota publica do projeto deve ser adicionada aqui.
  */
 const LINKS: LinkItem[] = [
+  { path: "/sao-paulo", title: "Acqualive São Paulo", description: "Purificadores, ionizadores e atendimento Acqualive em São Paulo.", category: "Institucional" },
   { path: "/", title: "Home Acqualive", description: "Pagina inicial das paginas Acqualive.", category: "Institucional" },
   { path: "/agua-limpa", title: "Agua Limpa (VSL)", description: "Pagina mobile com video e formulario de contato.", category: "Ofertas" },
   { path: "/agua-limpa-falar-serio", title: "Agua Limpa (Falar Serio)", description: "Variacao da VSL Agua Limpa.", category: "Ofertas" },
