@@ -141,6 +141,19 @@ const SaoPaulo = () => {
     primaryRoot?.render(<div className="sp-hero-actions"><Button asChild className="elementor-button"><a href={saoPauloWhatsAppUrl()} target="_blank" rel="noopener noreferrer">Falar com a equipe de São Paulo</a></Button><Button asChild variant="outline"><a href="#produtos">Conhecer os modelos</a></Button></div>);
     const locationLabel = shadow.querySelector('[data-id="345a19e"] p');
     if (locationLabel) locationLabel.textContent = "São Paulo";
+    const imageDescriptions: Record<string, string> = {
+      "25f22c85": "Purificador Acqualive da linha por gravidade",
+      "58c7e7f": "V Self e versão com suporte de madeira apresentados na página original",
+      "eab5130": "Modelos Terracota e Vittro apresentados na página original",
+      "792d241": "Imagem ilustrativa da seção de manutenção",
+      "eb88383": "Encontro de franqueados Acqualive",
+    };
+    Object.entries(imageDescriptions).forEach(([id, description]) => {
+      shadow.querySelector(`[data-id="${id}"] img`)?.setAttribute("alt", description);
+    });
+    shadow.querySelectorAll<HTMLImageElement>('img[alt$=".png"]').forEach(image => {
+      image.alt = ""; image.removeAttribute("title");
+    });
     const logo = shadow.querySelector<HTMLImageElement>('[data-id="57c97f1a"] img');
     if (logo) {
       logo.src = currentLogo;
