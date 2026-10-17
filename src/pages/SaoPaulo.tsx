@@ -8,6 +8,8 @@ import pageCss from "@/assets/sao-paulo/page.css?raw";
 import refinementCss from "@/assets/sao-paulo/refinement.css?raw";
 import currentLogo from "@/assets/logo-acqualive.png";
 import currentLogoWhite from "@/assets/logo-branca.png";
+import { saoPauloContact, saoPauloWhatsAppUrl } from "@/data/sao-paulo-contact";
+import { allowsSaoPauloMarketing, SP_MARKETING_PREFERENCE } from "@/data/sao-paulo-privacy";
 
 type Pixel = ((...args: unknown[]) => void) & { queue?: unknown[][]; push?: Pixel; loaded?: boolean; version?: string; callMethod?: (...args: unknown[]) => void };
 const trackVisit = () => {
@@ -28,6 +30,27 @@ const trackVisit = () => {
     target.spPixelInitialized = true;
   }
   target.fbq("trackSingle", "282648086654648", "PageView");
+};
+
+const MarketingPreference = () => {
+  const [choice, setChoice] = useState<string | null>(() => {
+    try { return localStorage.getItem(SP_MARKETING_PREFERENCE); } catch { return null; }
+  });
+  const [editing, setEditing] = useState(!choice);
+  const choose = (value: "accepted" | "rejected") => {
+    try { localStorage.setItem(SP_MARKETING_PREFERENCE, value); } catch { /* Preference remains valid for this visit. */ }
+    setChoice(value); setEditing(false);
+    window.dispatchEvent(new CustomEvent("sp-marketing-preference", { detail: value }));
+  };
+  return <aside className="sp-privacy-preference" aria-label="Preferências de privacidade">
+    {editing ? <>
+      <p>Permitir a medição de visitas pelo Meta nesta página? Você pode recusar sem impedir o atendimento.</p>
+      <div className="sp-privacy-actions">
+        <Button type="button" variant="outline" onClick={() => choose("rejected")}>Recusar</Button>
+        <Button type="button" onClick={() => choose("accepted")}>Permitir</Button>
+      </div>
+    </> : <Button type="button" variant="link" onClick={() => setEditing(true)}>Gerenciar preferências de privacidade</Button>}
+  </aside>;
 };
 
 const Contato = () => {
@@ -57,9 +80,10 @@ const Contato = () => {
         { name: "email", label: "E-mail", type: "email", limit: 255 },
         { name: "telefone", label: "Telefone", type: "tel", limit: 25 },
       ].map(field => <div key={field.name} className="elementor-field-group elementor-column elementor-col-100">
-        <input className={fieldClass} name={field.name} type={field.type} aria-label={field.label} placeholder={`${field.label}*`} required maxLength={field.limit} />
+        <label htmlFor={`sp-${field.name}`} className="elementor-field-label">{field.label}*</label>
+        <input id={`sp-${field.name}`} className={fieldClass} name={field.name} type={field.type} autoComplete={field.name === "nome" ? "name" : field.name === "telefone" ? "tel" : "email"} placeholder={field.label} required maxLength={field.limit} />
       </div>)}
-      <div className="elementor-field-group elementor-column elementor-col-100"><textarea className={fieldClass} name="mensagem" aria-label="Mensagem" placeholder="Mensagem" rows={3} maxLength={2000} /></div>
+      <div className="elementor-field-group elementor-column elementor-col-100"><label htmlFor="sp-mensagem" className="elementor-field-label">Mensagem</label><textarea id="sp-mensagem" className={fieldClass} name="mensagem" placeholder="Mensagem" rows={3} maxLength={2000} /></div>
       <div className="elementor-field-group elementor-column elementor-col-100">
         <label htmlFor="sp-horario" className="elementor-field-label">Preferência de contato:</label>
         <div className="elementor-field elementor-select-wrapper"><select id="sp-horario" className={fieldClass} name="horario">
@@ -68,9 +92,10 @@ const Contato = () => {
       </div>
       <div className="sp-trap" aria-hidden="true"><input name="website" tabIndex={-1} autoComplete="off" /></div>
       <div className="elementor-field-group elementor-column elementor-col-100">
-        <Button type="submit" className="elementor-button elementor-size-xl" disabled={busy}>{busy ? "ENVIANDO..." : "AGENDAR"}</Button>
+        <Button type="submit" className="elementor-button elementor-size-xl" disabled={busy}>{busy ? "ENVIANDO..." : "ENVIAR SOLICITAÇÃO"}</Button>
       </div>
     </div>
+    <p className="sp-collection-notice">Sua solicitação e seus dados de contato são encaminhados à equipe de São Paulo e registrados em uma planilha de atendimento. <a href="https://www.acqualive.com.br/pages/politica-de-privacidade" target="_top">Consultar a política institucional de privacidade</a>.</p>
     <p className="sp-status" data-error={failed} role="status" aria-live="polite">{status}</p>
   </form>;
 };
@@ -86,6 +111,34 @@ const SaoPaulo = () => {
     fonts.textContent = (pageCss.match(/@font-face\s*\{[^}]+\}/g) ?? []).join("\n");
     document.head.appendChild(fonts);
     shadow.innerHTML = `<style>${pageCss}\n${refinementCss}</style>${pageHtml}`;
+    shadow.querySelector(".elementor-2")?.setAttribute("lang", "pt-BR");
+    shadow.querySelectorAll<HTMLElement>("[data-sp-contact]").forEach(node => {
+      const key = node.dataset.spContact;
+      if (key === "address") node.textContent = saoPauloContact.address;
+      if (key === "cnpj") node.textContent = saoPauloContact.cnpj;
+      if (key === "telephone" && node instanceof HTMLAnchorElement) {
+        node.textContent = saoPauloContact.telephoneLabel;
+        node.href = `tel:+${saoPauloContact.telephone}`;
+      }
+    });
+    const map = shadow.querySelector<HTMLIFrameElement>('[data-id="b10ebed"] iframe');
+    if (map) map.src = `https://maps.google.com/maps?q=${encodeURIComponent(saoPauloContact.address)}&t=m&z=16&output=embed`;
+    shadow.querySelectorAll<HTMLAnchorElement>('.elementor-button[href="#faleconosco"]').forEach(anchor => {
+      const product = anchor.closest('[data-id="4f7647bf"]') ? "V Self" : anchor.closest('[data-id="190f17c4"]') ? "Terracota e linha Vittro" : undefined;
+      anchor.href = saoPauloWhatsAppUrl(product);
+      anchor.target = "_blank"; anchor.rel = "noopener noreferrer";
+      anchor.removeAttribute("role");
+      const label = anchor.querySelector(".elementor-button-text");
+      if (label) label.textContent = product ? `Consultar ${product}` : "Falar com a equipe de São Paulo";
+    });
+    shadow.querySelectorAll<HTMLAnchorElement>('.elementor-button[href="#produtos"]').forEach(anchor => {
+      anchor.removeAttribute("role");
+      const label = anchor.querySelector(".elementor-button-text");
+      if (label) label.textContent = "Conhecer os modelos";
+    });
+    const primaryTarget = shadow.querySelector('[data-id="4836dc2e"] .elementor-button-wrapper');
+    const primaryRoot = primaryTarget ? createRoot(primaryTarget) : null;
+    primaryRoot?.render(<div className="sp-hero-actions"><Button asChild className="elementor-button"><a href={saoPauloWhatsAppUrl()} target="_blank" rel="noopener noreferrer">Falar com a equipe de São Paulo</a></Button><Button asChild variant="outline"><a href="#produtos">Conhecer os modelos</a></Button></div>);
     const locationLabel = shadow.querySelector('[data-id="345a19e"] p');
     if (locationLabel) locationLabel.textContent = "São Paulo";
     const logo = shadow.querySelector<HTMLImageElement>('[data-id="57c97f1a"] img');
@@ -117,10 +170,20 @@ const SaoPaulo = () => {
       if (["25f22c85", "58c7e7f", "eab5130"].includes(id)) image.classList.add("sp-product-motion");
       imageObserver.observe(image);
     });
-    trackVisit();
+    let trackedVisit = false;
+    const updateMarketing = (preference: string | null) => {
+      const allowed = allowsSaoPauloMarketing(preference);
+      (window as Window & { fbq?: Pixel }).fbq?.("consent", allowed ? "grant" : "revoke");
+      if (allowed && !trackedVisit) { trackVisit(); trackedVisit = true; }
+    };
+    try { updateMarketing(localStorage.getItem(SP_MARKETING_PREFERENCE)); } catch { updateMarketing(null); }
+    const preferenceChanged = (event: Event) => {
+      if (event instanceof CustomEvent && typeof event.detail === "string") updateMarketing(event.detail);
+    };
+    window.addEventListener("sp-marketing-preference", preferenceChanged);
     const formTarget = shadow.querySelector("#sao-paulo-form-root");
     const formRoot = formTarget ? createRoot(formTarget) : null;
-    formRoot?.render(<><Contato /><Button asChild className="sp-whatsapp"><a href="https://wa.me/5511989712793" target="_blank" rel="noopener noreferrer" aria-label="Falar com Acqualive São Paulo no WhatsApp"><i className="fa fa-whatsapp" aria-hidden="true" /></a></Button></>);
+    formRoot?.render(<><Contato /><MarketingPreference /><Button asChild className="sp-whatsapp"><a href={saoPauloWhatsAppUrl()} target="_blank" rel="noopener noreferrer" aria-label="Falar com Acqualive São Paulo no WhatsApp"><i className="fa fa-whatsapp" aria-hidden="true" /></a></Button></>);
     shadow.querySelectorAll<HTMLElement>(".elementor-swiper-button").forEach(arrow => {
       arrow.setAttribute("role", "button"); arrow.tabIndex = 0;
       arrow.setAttribute("aria-label", arrow.classList.contains("elementor-swiper-button-prev") ? "Depoimento anterior" : "Próximo depoimento");
@@ -172,9 +235,11 @@ const SaoPaulo = () => {
     resize.observe(element);
     return () => {
       window.clearInterval(timer); resize.disconnect(); imageObserver.disconnect();
+      window.removeEventListener("sp-marketing-preference", preferenceChanged);
       fonts.remove();
       shadow.removeEventListener("click", click); shadow.removeEventListener("keydown", keydown);
       formRoot?.unmount();
+      primaryRoot?.unmount();
     };
   }, []);
   return <div ref={host} />;
