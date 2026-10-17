@@ -11,7 +11,8 @@
 - [x] Verify images, interactions and desktop/mobile layouts.
 
 # São Paulo content review
-- [ ] Audit actual content against official sources and record findings.
-- [ ] Correct verified claims, model descriptions, maintenance and accessibility locally.
-- [ ] Preserve contact channels and integrations; document unconfirmed local conditions.
-- [ ] Deliver before/after report, sources and actual static test results without publishing.
+- [x] Audit actual content against official sources and record findings.
+- [x] Correct verified claims, model descriptions, maintenance and accessibility locally.
+- [x] Preserve contact channels and integrations; document unconfirmed local conditions.
+- [x] Deliver before/after report, sources and actual static test results without publishing.
+- [ ] Confirm local legal/contact details, legacy product availability, offer terms and testimonial permissions. Blocker: Acqualive confirmation.
