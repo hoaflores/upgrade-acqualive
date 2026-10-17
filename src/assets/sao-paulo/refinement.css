@@ -93,9 +93,16 @@
 .elementor-2 input:focus-visible,
 .elementor-2 textarea:focus-visible,
 .elementor-2 select:focus-visible { outline: 3px solid hsl(var(--accent)); outline-offset: 4px; }
-.elementor-2 .sp-dark-section {
+.elementor-2 .elementor-top-section.sp-dark-section {
   background: var(--gradient-water) !important;
-  color: hsl(var(--primary-foreground));
+  color: hsl(var(--secondary-foreground));
+}
+.elementor-2 .elementor-top-section.sp-dark-section > .elementor-background-overlay { display: none; }
+.elementor-2 .elementor-top-section.sp-dark-section .elementor-widget,
+.elementor-2 .elementor-top-section.sp-dark-section .elementor-heading-title,
+.elementor-2 .elementor-top-section.sp-dark-section .elementor-widget-text-editor,
+.elementor-2 .elementor-top-section.sp-dark-section .elementor-icon-list-text {
+  color: hsl(var(--secondary-foreground)) !important;
 }
 .elementor-2 .sp-dark-section .elementor-inner-section,
 .elementor-2 .sp-dark-section .elementor-column-wrap { background: transparent !important; }
