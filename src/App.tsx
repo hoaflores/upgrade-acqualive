@@ -46,6 +46,7 @@ import AguaLimpa from "./pages/AguaLimpa";
 import AguaLimpaFalarSerio from "./pages/AguaLimpaFalarSerio";
 import AguaLimpaPh from "./pages/AguaLimpaPh";
 import NotFound from "./pages/NotFound";
+import SaoPaulo from "./pages/SaoPaulo";
 import RouteSeo from "./components/RouteSeo";
 
 const queryClient = new QueryClient();
@@ -61,6 +62,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/upgrade" element={<Upgrade />} />
+            <Route path="/sao-paulo" element={<SaoPaulo />} />
             <Route path="/programa-de-indicacao" element={<ProgramaIndicacao />} />
             <Route path="/massaru-emoto" element={<MassaruEmoto />} />
             <Route path="/massaru-emoto-historia" element={<MassaruEmotoHistoria />} />
