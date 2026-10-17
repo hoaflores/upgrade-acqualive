@@ -169,16 +169,6 @@ const SaoPaulo = () => {
         <div className="sp-product-copy"><p className="sp-eyebrow">{product.tag}</p><h3>{product.name}</h3><p className="sp-product-headline">{product.headline}</p>{product.paragraphs.map(text => <p key={text}>{text}</p>)}<Button asChild className="elementor-button"><a href={saoPauloWhatsAppUrl(product.name)} target="_blank" rel="noopener noreferrer">Quero conhecer o {product.name}</a></Button></div>
       </article>)}
     </div>);
-    const reasons = document.createElement("div");
-    reasons.className = "sp-reasons-grid";
-    const firstReason = shadow.querySelector('[data-id="251c08c9"]');
-    firstReason?.before(reasons);
-    ["251c08c9", "2c044c6a", "458c234d", "1fb4653c", "7f2cc7ae", "7f8eb878", "6d12dc6f"].forEach((id, index) => {
-      const section = shadow.querySelector<HTMLElement>(`[data-id="${id}"]`);
-      if (!section) return;
-      section.dataset.spNumber = String(index + 1).padStart(2, "0");
-      reasons.appendChild(section);
-    });
     const featureList = shadow.querySelector('[data-id="5f9ba46e"] .elementor-widget-wrap')
       ?? shadow.querySelector('[data-id="5f9ba46e"]');
     // Mark the existing technical column without changing its content.
