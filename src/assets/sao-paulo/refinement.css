@@ -200,7 +200,7 @@
 .elementor-2 .sp-reasons-grid > section:last-child { grid-column: 1 / -1; max-width: 760px; }
 .elementor-2 .elementor-element.elementor-element-2143e381 { padding-bottom: 32px !important; background: hsl(var(--secondary)) !important; color: hsl(var(--secondary-foreground)); }
 .elementor-2 .elementor-element-275d4c62 { max-width: 850px; text-align: left; }
-.elementor-2 .elementor-element.elementor-element-4915070c { padding-top: 0 !important; min-height: 0 !important; }
+.elementor-2 .elementor-element.elementor-element-4915070c { padding-top: 0 !important; min-height: 0 !important; height: auto !important; }
 .elementor-2 .elementor-element-4915070c > .elementor-container { min-height: 0 !important; height: auto !important; }
 .elementor-2 .elementor-element-7a461377 .elementor-column-wrap { padding: 0 !important; }
 .elementor-2 .elementor-element-345a19e p { font-size: 16px !important; }
