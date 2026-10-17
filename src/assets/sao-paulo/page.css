@@ -200,5 +200,7 @@ img.emoji {
 .elementor-swiper-button{cursor:pointer}.swiper-pagination{display:none}
 .sp-status{margin-top:16px;text-align:center}.sp-status[data-error=true]{color:var(--sp-error)}
 .sp-trap{position:absolute;left:-10000px}.elementor-form button:disabled{opacity:.6;cursor:wait}
+:host{--sp-whatsapp:#25d366;--sp-contact-shadow:1px 1px 2px #888}
+.elementor a.sp-whatsapp{position:fixed;width:60px;height:60px;bottom:40px;right:40px;background:var(--sp-whatsapp);color:var(--sp-white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:var(--sp-contact-shadow);z-index:1000;padding:0}
 .elementor-widget-image img{height:auto;max-width:100%}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
