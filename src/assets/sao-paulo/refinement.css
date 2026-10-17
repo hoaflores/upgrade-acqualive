@@ -307,6 +307,67 @@
 @media (prefers-reduced-motion: reduce) {
   .elementor-2 *, .elementor-2 *::before, .elementor-2 *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+/* Closing sequence: support, daily habit, invitation and contact. */
+.elementor-2 .elementor-element-35c6db03 .elementor-widget-container,
+.elementor-2 .elementor-element-2224d803 .elementor-widget-container,
+.elementor-2 .elementor-element-5a70ff98 .elementor-widget-container,
+.elementor-2 .elementor-element-34d1603 .elementor-widget-container { margin: 0 !important; padding: 0 !important; }
+.elementor-2 .elementor-element-35c6db03 .elementor-column-wrap,
+.elementor-2 .elementor-element-2224d803 .elementor-column-wrap,
+.elementor-2 .elementor-element-5a70ff98 .elementor-column-wrap { padding: 0 !important; }
+.sp-support-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; width: 100%; }
+.sp-support-heading { padding-right: 40px; border-right: 1px solid hsl(var(--secondary-foreground) / .25); }
+.elementor-2 .sp-support-heading .elementor-heading-title { font-size: 42px !important; line-height: 1.18 !important; }
+.elementor-2 .elementor-element-5d86099 { margin-bottom: 20px; }
+.elementor-2 .sp-support-copy .elementor-heading-title { font-size: 24px !important; margin-bottom: 20px; }
+.elementor-2 .sp-support-copy p { font-size: 15px !important; margin-bottom: 16px; }
+.elementor-2 .elementor-element-2224d803 > .elementor-background-overlay { display: none; }
+.elementor-2 .elementor-element-3ca76024 { max-width: none; }
+.elementor-2 .sp-habit-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 0 80px; }
+.elementor-2 h2.sp-habit-heading { grid-row: 1 / 3; font-size: 34px; font-weight: 600; line-height: 1.3; text-wrap: balance; max-width: 390px; margin: 0; border-left: 3px solid hsl(var(--accent)); padding-left: 24px; }
+.elementor-2 .sp-habit-layout p { margin: 0 0 16px; font-size: 15px !important; }
+.elementor-2 .sp-invitation-layout { display: grid !important; grid-template-columns: minmax(0,1fr) 280px; gap: 80px; align-items: center; }
+.sp-invitation-copy { min-width: 0; width: 100%; }
+.elementor-2 .elementor-element-5a70ff98 .elementor-heading-title { text-align: left; font-size: 42px !important; line-height: 1.2 !important; max-width: 650px; }
+.elementor-2 .elementor-element-5a70ff98 .elementor-text-editor { margin: 24px 0; max-width: 640px; }
+.elementor-2 .elementor-element-5a70ff98 .elementor-text-editor p { text-align: left; font-size: 15px !important; margin-bottom: 16px; }
+.elementor-2 .elementor-element-459f3d2 { text-align: left; margin-top: 28px; }
+.elementor-2 img.sp-invitation-product { width: 100%; height: 330px; object-fit: contain; }
+.elementor-2 .elementor-element-de46187 .elementor-heading-title { text-align: left; max-width: 700px; }
+.elementor-2 .elementor-element-34d1603 > .elementor-container > .elementor-row { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(0,1fr); gap: 80px; align-items: start; }
+.elementor-2 .elementor-element-34d1603 > .elementor-container > .elementor-row > .elementor-column { width: 100%; min-width: 0; }
+.elementor-2 .elementor-element-34d1603 .elementor-column-wrap { padding: 0 !important; }
+.elementor-2 .elementor-element-620fafd { margin-bottom: 28px; }
+.elementor-2 .elementor-element-34d1603 .elementor-form-fields-wrapper { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; margin: 0; }
+.elementor-2 .elementor-element-34d1603 .elementor-field-group { width: 100% !important; padding: 0; margin: 0; min-width: 0; display: block; }
+.elementor-2 .elementor-element-34d1603 .elementor-field-group:has(textarea),
+.elementor-2 .elementor-element-34d1603 .elementor-field-group:has(input[type="tel"]),
+.elementor-2 .elementor-element-34d1603 .elementor-field-group:has(select),
+.elementor-2 .elementor-element-34d1603 .elementor-field-group:has(button) { grid-column: 1 / -1; }
+.elementor-2 .elementor-element-34d1603 .elementor-field-textual { width: 100%; min-height: 54px; margin: 0; }
+.elementor-2 .elementor-element-34d1603 textarea.elementor-field-textual { min-height: 110px; }
+.elementor-2 .elementor-element-34d1603 .elementor-button { width: 100%; }
+.sp-trap { display: none; }
+.elementor-2 .elementor-element-34d1603 .sp-collection-notice { margin-top: 20px; font-size: 12px; }
+.elementor-2 .elementor-element-34d1603 .sp-privacy-preference { margin-top: 24px; }
+.elementor-2 .elementor-element-34d1603 .sp-privacy-preference p { font-size: 12px; }
+.elementor-2 .elementor-element-34d1603 .sp-location-title { font-size: 25px; color: hsl(var(--foreground)); margin-bottom: 20px; }
+.elementor-2 .elementor-element-c0911e6 p { padding-left: 20px; border-left: 3px solid hsl(var(--accent)); margin: 0 0 16px; }
+.elementor-2 .elementor-element-ba7fd79 p { font-size: 13px; color: hsl(var(--muted-foreground)); margin: 0 0 28px; }
+.elementor-2 .elementor-element-b10ebed iframe { width: 100%; height: 360px; border-radius: 8px; }
+@media (max-width: 767px) {
+  .sp-support-layout,
+  .elementor-2 .sp-habit-layout,
+  .elementor-2 .sp-invitation-layout,
+  .elementor-2 .elementor-element-34d1603 > .elementor-container > .elementor-row { grid-template-columns: minmax(0,1fr); gap: 32px; }
+  .sp-support-heading { border-right: 0; border-bottom: 1px solid hsl(var(--secondary-foreground) / .25); padding: 0 0 24px; }
+  .elementor-2 .sp-support-heading .elementor-heading-title,
+  .elementor-2 .elementor-element-5a70ff98 .elementor-heading-title { font-size: 30px !important; }
+  .elementor-2 h2.sp-habit-heading { grid-row: auto; font-size: 28px; }
+  .elementor-2 img.sp-invitation-product { height: 220px; }
+  .elementor-2 .elementor-element-34d1603 .elementor-form-fields-wrapper { grid-template-columns: minmax(0,1fr); gap: 18px; }
+  .elementor-2 .elementor-element-b10ebed iframe { height: 280px; }
+}
 /* Art direction: photographic opening and individual product stories. */
 :host { --sp-hero-veil: hsl(var(--card) / .94); --sp-hero-clear: hsl(var(--card) / 0); }
 .elementor-2 .elementor-element.elementor-element-53155e8f { position: relative; isolation: isolate; overflow: hidden; padding: 68px 32px !important; }
@@ -324,7 +385,7 @@
 .sp-hero-actions { justify-content: flex-start; }
 .elementor-2 .elementor-widget-heading .elementor-heading-title { text-align: left; }
 .elementor-2 .elementor-element-5a70ff98 .elementor-heading-title,
-.elementor-2 .elementor-element-de46187 .elementor-heading-title { text-align: center; }
+.elementor-2 .elementor-element-de46187 .elementor-heading-title { text-align: left; }
 .elementor-2 .elementor-element-4f7647bf > .elementor-container > .elementor-row { align-items: center; }
 .sp-product-story { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: center; gap: 72px; padding: 56px 0; }
 .sp-product-story + .sp-product-story { border-top: 1px solid hsl(var(--border)); }
