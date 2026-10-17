@@ -33,8 +33,8 @@ const img = (file: string) => `${SITE_URL}/images/${file}`;
 export const routeMeta: RouteMeta[] = [
   {
     path: "/sao-paulo",
-    title: "Acqualive São Paulo | Filtros e ionizadores de água alcalina",
-    description: "Conheça os filtros e ionizadores Acqualive em São Paulo. Água purificada, alcalina e mineralizada para sua família. Agende seu atendimento.",
+    title: "Acqualive São Paulo | Purificadores e Filtros de Água",
+    description: "Conheça purificadores, filtros para banho e refis Acqualive. Fale com a equipe de São Paulo e consulte modelos e disponibilidade.",
     changefreq: "monthly",
     priority: "0.8",
   },
