@@ -6,6 +6,7 @@
 - [x] Verify desktop/mobile and submission with original domain blocked.
 
 # São Paulo visual refinement
+- [x] Separate Terracota/DUO stories, remove the requested science section and refine photographic opening, alignment and hierarchy.
 - [x] Refine typography, editorial layout, product presentation and reading rhythm while preserving copy.
 - [x] Replace legacy logos with current Acqualive branding.
 - [x] Align the page with Upgrade styling and add subtle image animations.
