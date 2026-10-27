@@ -1,0 +1,2307 @@
+/*
+ * LP Black Friday Acqualive 2026: identidade das peças oficiais da campanha.
+ * Estúdio grafite com luz de cima, piso que reflete, produto recortado, fitas laranja,
+ * caixa laranja da oferta, etiqueta branca e selo dourado.
+ * Cores tiradas das artes: laranja #ff5501, ouro #bd9f73, grafite #14181e a #707070.
+ * Tudo fica dentro de .bf para não interferir no resto do projeto Lovable.
+ */
+
+.bf {
+  --ink: #0d0e10;
+  --ink-2: #141619;
+  --graphite: #1d2026;
+  --mist: #aab0b9;
+  --soft: #d6d9de;
+  --white: #ffffff;
+  --orange: #ff5501;
+  --orange-hover: #e84c00;
+  --tape: #ff6a26;
+  --gold: #bd9f73;
+  --gold-light: #e4cba3;
+  --gold-dark: #8a6433;
+  --gold-ink: #5a3d18;
+
+  --f-black: "Poppins", "DM Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --f-thin: "Barlow Condensed", "Arial Narrow", ui-sans-serif, sans-serif;
+  --f-offer: "Barlow Semi Condensed", "Barlow Condensed", "Arial Narrow", ui-sans-serif, sans-serif;
+  --f-body: "DM Sans Variable", "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --m: clamp(16px, 4vw, 56px);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  font-family: var(--f-body);
+  font-optical-sizing: auto;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: var(--white);
+  background: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+.bf *,
+.bf *::before,
+.bf *::after {
+  box-sizing: border-box;
+}
+
+.bf :where(h1, h2, h3, p, figure, blockquote, ul, ol) {
+  margin: 0;
+  padding: 0;
+}
+
+.bf :where(ul, ol) {
+  list-style: none;
+}
+
+.bf :where(a) {
+  color: inherit;
+}
+
+.bf img {
+  max-width: none;
+}
+
+.bf ::selection {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.bf :focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.bf h1,
+.bf h2,
+.bf h3 {
+  text-wrap: balance;
+}
+
+.bf p {
+  text-wrap: pretty;
+}
+
+.bf .num {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.bf .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.bf-wrap {
+  width: 100%;
+  max-width: 1360px;
+  margin-inline: auto;
+  padding-inline: max(var(--m), env(safe-area-inset-left, 0px));
+  position: relative;
+}
+
+/* ---------- Estúdio ---------- */
+
+.bf-studio {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  /* taste-skill-ignore: luz de estúdio das peças oficiais da campanha */
+  background:
+    radial-gradient(55% 75% at var(--lx, 52%) -8%, rgba(150, 150, 152, 0.72) 0%, rgba(92, 92, 95, 0.5) 28%, rgba(46, 46, 49, 0) 68%),
+    linear-gradient(90deg, #12161b 0%, #1b1f25 26%, #2b2b2d 52%, #18191b 78%, #0f1011 100%);
+}
+
+.bf-studio--left {
+  --lx: 34%;
+}
+
+.bf-studio--right {
+  --lx: 70%;
+}
+
+/* luz azul desfocada no canto, como nas peças */
+.bf-studio__glow {
+  position: absolute;
+  z-index: -1;
+  left: -12%;
+  top: -18%;
+  width: 46%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  /* taste-skill-ignore: bokeh das peças da campanha */
+  background:
+    radial-gradient(circle at 50% 50%, rgba(78, 118, 168, 0.42) 0%, rgba(40, 70, 110, 0.22) 38%, rgba(20, 30, 45, 0) 66%);
+  filter: blur(24px);
+  pointer-events: none;
+}
+
+.bf-studio--right .bf-studio__glow {
+  left: auto;
+  right: -14%;
+}
+
+/* piso brilhante */
+.bf-studio__floor {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--floor, 28%);
+  /* taste-skill-ignore: piso refletivo das peças da campanha */
+  background:
+    linear-gradient(180deg, rgba(160, 176, 196, 0.16) 0%, rgba(52, 66, 84, 0.5) 18%, rgba(24, 32, 42, 0.86) 60%, rgba(10, 12, 15, 0.98) 100%);
+  pointer-events: none;
+}
+
+.bf-studio__floor::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: 18px;
+  /* taste-skill-ignore: linha do horizonte do piso */
+  background: linear-gradient(180deg, rgba(190, 200, 214, 0) 0%, rgba(190, 200, 214, 0.18) 50%, rgba(190, 200, 214, 0) 100%);
+  filter: blur(4px);
+}
+
+/* ---------- Produto com reflexo ---------- */
+
+.bf-product {
+  position: absolute;
+  display: block;
+  z-index: 2;
+}
+
+.bf-product > img {
+  display: block;
+  height: 100%;
+  width: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.bf-product::after {
+  /* sombra de contato no piso */
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: -3%;
+  height: 7%;
+  border-radius: 50%;
+  /* taste-skill-ignore: sombra de contato do recorte no piso */
+  background: radial-gradient(closest-side, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  z-index: 0;
+}
+
+.bf-product__mirror {
+  position: absolute !important;
+  left: 0;
+  top: 100%;
+  z-index: 0 !important;
+  transform: scaleY(-1);
+  opacity: 0.2;
+  -webkit-mask-image: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0) 30%);
+  mask-image: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0) 30%);
+  pointer-events: none;
+}
+
+/* ---------- Fita ---------- */
+
+.bf-tape {
+  --h: clamp(44px, 4.6vw, 72px);
+  --tx: 50%;
+  --ty: 50%;
+  --ta: 0deg;
+  position: absolute;
+  left: var(--tx);
+  top: var(--ty);
+  width: 260vmax;
+  height: var(--h);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--tape);
+  color: var(--white);
+  transform: translate(-50%, -50%) rotate(var(--ta));
+  transform-origin: 50% 50%;
+  pointer-events: none;
+  /* taste-skill-ignore: fita física sobre a cena, como nas peças */
+  box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.55);
+}
+
+.bf-tape::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* taste-skill-ignore: brilho e textura de fita plástica */
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.1)),
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.03) 0 2px, rgba(0, 0, 0, 0) 2px 9px);
+}
+
+.bf-tape__track {
+  display: flex;
+  flex: none;
+  white-space: nowrap;
+  /* texto das fitas bem devagar, para dar para ler */
+  animation: bf-marquee 220s linear infinite;
+}
+
+.bf-tape--reverse .bf-tape__track {
+  animation-direction: reverse;
+}
+
+.bf-tape__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  padding-right: 0.6em;
+  font-family: var(--f-offer);
+  font-weight: 700;
+  font-size: calc(var(--h) * 0.48);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.bf-tape__item svg {
+  width: 0.7em;
+  height: 0.7em;
+}
+
+.bf-tape--blur {
+  filter: blur(7px);
+  opacity: 0.92;
+}
+
+@keyframes bf-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---------- Etiqueta branca ---------- */
+
+.bf-label {
+  display: inline-flex;
+  flex-direction: column;
+  background: var(--white);
+  color: #15161a;
+  border-radius: 12px;
+  padding: 0.75em 1.05em 0.8em;
+  font-family: var(--f-black);
+  font-weight: 600;
+  font-size: clamp(0.875rem, 1.35vw, 1.375rem);
+  line-height: 1.08;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  /* taste-skill-ignore: etiqueta sobre a cena, como nas peças */
+  box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.7);
+  z-index: 4;
+}
+
+.bf-label__accent {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+/* ---------- Selo dourado ---------- */
+
+.bf-seal {
+  position: absolute;
+  z-index: 4;
+  width: clamp(124px, 12vw, 196px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  color: var(--gold-ink);
+  /* taste-skill-ignore: medalha dourada das peças */
+  background: radial-gradient(circle at 34% 28%, var(--gold-light) 0%, var(--gold) 42%, var(--gold-dark) 100%);
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.22),
+    inset 0 -6px 14px rgba(70, 40, 10, 0.25),
+    0 20px 34px -14px rgba(0, 0, 0, 0.7);
+}
+
+.bf-seal__ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: bf-spin 40s linear infinite;
+}
+
+.bf-seal__ring text {
+  font-family: var(--f-black);
+  font-weight: 600;
+  font-size: 12.5px;
+  letter-spacing: 2.6px;
+  text-transform: uppercase;
+  fill: var(--gold-ink);
+}
+
+.bf-seal__face {
+  position: absolute;
+  inset: 20%;
+  border-radius: 50%;
+  border: 1px solid rgba(90, 61, 24, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1;
+}
+
+.bf-seal__top,
+.bf-seal__bottom {
+  font-family: var(--f-black);
+  font-weight: 600;
+  font-size: 0.56em;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: clamp(0.5rem, 0.62vw, 0.75rem);
+}
+
+.bf-seal__value {
+  font-family: var(--f-offer);
+  font-weight: 800;
+  font-size: clamp(1.45rem, 2.15vw, 2.4rem);
+  letter-spacing: -0.01em;
+  margin: 0.08em 0;
+  color: #3f2a0f;
+}
+
+@keyframes bf-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- Tipografia da campanha ---------- */
+
+.bf-bf {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.86;
+}
+
+.bf-bf__black {
+  font-family: var(--f-black);
+  font-weight: 700;
+  color: var(--orange);
+  font-size: clamp(3.75rem, 8.6vw, 8.75rem);
+  letter-spacing: -0.005em;
+}
+
+.bf-bf__friday {
+  font-family: var(--f-thin);
+  font-weight: 100;
+  color: var(--white);
+  font-size: clamp(5rem, 12.4vw, 12.6rem);
+  letter-spacing: 0.035em;
+  margin-top: 0.02em;
+  margin-left: -0.03em;
+}
+
+.bf-kicker {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--f-offer);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.bf-kicker__brand {
+  font-size: clamp(2.25rem, 3.7vw, 3.75rem);
+  letter-spacing: 0.01em;
+}
+
+.bf-kicker__product {
+  font-size: clamp(1.5rem, 2.35vw, 2.4rem);
+  letter-spacing: 0.01em;
+  margin-top: 0.12em;
+}
+
+.bf-offerbox {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: clamp(22px, 2.4vw, 34px);
+  padding: 0.9em 1.5em 0.85em;
+  background: var(--orange);
+  color: var(--white);
+  border-radius: 10px;
+  font-family: var(--f-offer);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 0.95;
+  font-size: clamp(1.4rem, 2.25vw, 2.3rem);
+}
+
+.bf-offerbox__plus {
+  position: absolute;
+  left: 0.35em;
+  top: -0.62em;
+  font-family: var(--f-black);
+  font-weight: 700;
+  font-size: 2.1em;
+  line-height: 1;
+}
+
+.bf-offerbox__big {
+  font-weight: 800;
+  font-size: 2.15em;
+  line-height: 0.92;
+  letter-spacing: 0.005em;
+}
+
+.bf-offerbox__line + .bf-offerbox__big,
+.bf-offerbox__big + .bf-offerbox__line {
+  margin-top: 0.06em;
+}
+
+.bf-offerbox__line:last-child {
+  font-size: 0.8em;
+}
+
+.bf-h2 {
+  font-family: var(--f-black);
+  font-weight: 700;
+  font-size: clamp(2rem, 4.2vw, 3.75rem);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  max-width: 18ch;
+}
+
+.bf-h2 em {
+  font-style: normal;
+  color: var(--orange);
+}
+
+/* ---------- Botões ---------- */
+
+.bf-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65em;
+  min-height: 56px;
+  padding: 0.85em 1.4em;
+  border-radius: 10px;
+  font-family: var(--f-black);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2;
+  text-decoration: none;
+  transition:
+    background-color 0.2s var(--ease),
+    transform 0.2s var(--ease);
+}
+
+.bf-btn svg {
+  width: 1.35em;
+  height: 1.35em;
+  flex: none;
+}
+
+.bf-btn--orange {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.bf-btn--ink {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.bf-btn--ghost {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .bf-btn--orange:hover {
+    background: var(--orange-hover);
+  }
+  .bf-btn--ghost:hover {
+    background: rgba(255, 255, 255, 0.16);
+  }
+  .bf-btn:active {
+    transform: translateY(1px);
+  }
+}
+
+.bf-textlink {
+  font-weight: 600;
+  color: var(--soft);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+}
+
+.bf-textlink:hover {
+  color: var(--white);
+}
+
+/* botão de compra: rótulo, linha menor e seta */
+.bf-btn--buy {
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 64px;
+  padding: 0.7em 1.15em 0.7em 1.35em;
+  text-align: left;
+}
+
+.bf-btn__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.bf-btn__text > span:first-child {
+  font-size: 1.0625rem;
+}
+
+.bf-btn__sub {
+  font-family: var(--f-body);
+  font-weight: 500;
+  font-size: 0.8125rem;
+  opacity: 0.88;
+  margin-top: 2px;
+}
+
+.bf-btn--buy svg {
+  width: 1.4em;
+  height: 1.4em;
+  transition: transform 0.2s var(--ease);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .bf-btn--buy:hover svg {
+    transform: translateX(3px);
+  }
+  .bf-btn--white:hover {
+    background: #e9eaec;
+  }
+}
+
+.bf-btn--white {
+  background: var(--white);
+  color: var(--ink);
+}
+
+/* alternativa discreta pelo WhatsApp */
+.bf-walink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--soft);
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.35);
+  text-underline-offset: 0.3em;
+}
+
+.bf-walink svg {
+  width: 1.15em;
+  height: 1.15em;
+  flex: none;
+  color: #25d366;
+}
+
+.bf-walink:hover {
+  color: var(--white);
+}
+
+/* ---------- Palco do produto (topo e peça espelhada) ---------- */
+/*
+ * Tudo dentro do palco é posicionado em % do próprio palco, por produto.
+ * A fita é ancorada pelo centro (--tx, --ty) e tem 260vmax de comprimento:
+ * as duas pontas sempre saem da cena, nunca aparecem soltas no meio da tela.
+ */
+
+.bf-stage {
+  position: relative;
+  align-self: stretch;
+}
+
+.bf-stage__tape {
+  --tx: 55%;
+  --ty: 45%;
+  --ta: 36deg;
+  z-index: 1;
+}
+
+.bf-stage__label {
+  position: absolute;
+}
+
+/*
+ * Composição do palco: o produto fica com o espaço dele.
+ * Etiqueta no canto de cima à direita e selo no piso à direita, os dois fora do produto.
+ */
+.bf-stage__label {
+  right: 0;
+  top: 5%;
+  font-size: clamp(0.75rem, 1vw, 1.125rem);
+}
+
+.bf-stage .bf-stage__seal {
+  right: 2%;
+  top: 36%;
+  width: clamp(92px, 8vw, 124px);
+}
+
+.bf-stage .bf-seal__value {
+  font-size: clamp(1.05rem, 1.45vw, 1.55rem);
+}
+
+.bf-stage .bf-seal__top,
+.bf-stage .bf-seal__bottom {
+  font-size: clamp(0.4375rem, 0.5vw, 0.5625rem);
+}
+
+.bf-stage--terracota .bf-stage__product {
+  left: 17%;
+  bottom: 12%;
+  height: 76%;
+}
+
+.bf-stage--terracota .bf-stage__extra {
+  left: 0;
+  bottom: 5%;
+  height: 18%;
+  z-index: 3;
+}
+
+.bf-stage--duo .bf-stage__product {
+  left: 4%;
+  bottom: 12%;
+  height: 74%;
+}
+
+.bf-stage--duo .bf-stage__extra {
+  left: 46%;
+  bottom: 5%;
+  height: 38%;
+  z-index: 3;
+}
+
+.bf-buy__selector {
+  margin-top: 14px;
+}
+
+.bf-stage__selector {
+  position: absolute;
+  right: 0;
+  bottom: 3%;
+  z-index: 5;
+}
+
+.bf-swatches {
+  display: flex;
+  gap: 8px;
+}
+
+.bf-swatch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 14px 8px 10px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(10, 12, 15, 0.55);
+  color: var(--soft);
+  font: 600 0.875rem/1 var(--f-body);
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.bf-swatch::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--sw);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.bf-swatch[aria-pressed="true"] {
+  color: var(--white);
+  box-shadow: inset 0 0 0 2px var(--white);
+}
+
+.bf-volt {
+  display: inline-flex;
+  margin-top: 16px;
+  padding: 4px;
+  border-radius: 10px;
+  background: rgba(10, 12, 15, 0.5);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16);
+}
+
+.bf-volt button {
+  min-height: 44px;
+  min-width: 64px;
+  border: 0;
+  background: transparent;
+  color: var(--soft);
+  font: 600 0.9375rem/1 var(--f-body);
+  padding: 10px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.bf-volt button[aria-pressed="true"] {
+  background: var(--white);
+  color: var(--ink);
+}
+
+/* ---------- Oferta (caixa laranja) e compra ---------- */
+
+.bf-deal {
+  grid-area: deal;
+  position: relative;
+  z-index: 5;
+  align-self: end;
+}
+
+.bf-buy {
+  grid-area: buy;
+  position: relative;
+  z-index: 5;
+  align-self: start;
+}
+
+.bf-stage {
+  grid-area: stage;
+}
+
+.bf-buy__desc {
+  margin-top: 24px;
+  color: var(--soft);
+  max-width: 40ch;
+}
+
+.bf-price {
+  margin-top: 22px;
+  color: var(--soft);
+  font-size: 1rem;
+}
+
+.bf-price__worth {
+  font-family: var(--f-offer);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--mist);
+  margin-bottom: 2px;
+}
+
+.bf-price__worth s {
+  text-decoration-thickness: 2px;
+}
+
+.bf-price__value {
+  font-family: var(--f-offer);
+  font-weight: 800;
+  font-size: clamp(2.25rem, 3.3vw, 3.25rem);
+  line-height: 1;
+  color: var(--white);
+  letter-spacing: 0.005em;
+}
+
+.bf-price__terms {
+  margin-top: 4px;
+}
+
+.bf-price__terms b {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.bf-ctas {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  margin-top: 20px;
+  max-width: 400px;
+}
+
+.bf-ctas .bf-walink {
+  align-self: flex-start;
+}
+
+/* selos de confiança, sem caixa: uma linha de texto pequeno com marcador */
+.bf-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin-top: 14px;
+  max-width: 420px;
+  font-size: 0.8125rem;
+  color: var(--mist);
+}
+
+.bf-trust li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bf-trust li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+.bf-trust li:first-child::before {
+  display: none;
+}
+
+.bf-trust li:first-child {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.bf-stars {
+  width: 70px;
+  height: 12px;
+  color: #ffb21a;
+}
+
+/* ---------- 1. Topo ---------- */
+
+.bf-hero {
+  --floor: 27%;
+  min-height: min(100svh, 980px);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: clamp(24px, 3vw, 40px);
+}
+
+.bf-hero__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-top: 20px;
+  z-index: 6;
+}
+
+.bf-hero__valid {
+  font-size: 0.875rem;
+  color: var(--soft);
+}
+
+.bf-hero__nav {
+  display: flex;
+  gap: 28px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.bf-hero__nav a {
+  text-decoration: none;
+  color: var(--soft);
+  padding-block: 10px;
+}
+
+.bf-hero__nav a:hover {
+  color: var(--white);
+}
+
+.bf-hero__grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  grid-template-rows: 1fr auto auto auto 1fr;
+  grid-template-areas:
+    ".     stage"
+    "brand stage"
+    "deal  stage"
+    "buy   stage"
+    ".     stage";
+  column-gap: clamp(24px, 4vw, 72px);
+  padding-top: clamp(8px, 1.6vw, 24px);
+}
+
+.bf-hero__brand {
+  grid-area: brand;
+  position: relative;
+  z-index: 5;
+}
+
+.bf-hero__logo {
+  font-size: clamp(1.25rem, 1.6vw, 1.75rem);
+  margin-bottom: clamp(12px, 1.2vw, 18px);
+  margin-left: 0.25em;
+}
+
+/* BLACK FRIDAY menor no topo: o espaço vai para a oferta */
+.bf-hero .bf-bf__black {
+  font-size: clamp(3rem, 5.4vw, 5.6rem);
+}
+
+.bf-hero .bf-bf__friday {
+  font-size: clamp(4.3rem, 7.8vw, 8.1rem);
+}
+
+/* oferta numa linha: título à esquerda, caixa laranja à direita */
+.bf-hero .bf-deal {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2vw, 32px);
+  margin-top: clamp(26px, 2.8vw, 44px);
+}
+
+.bf-hero .bf-deal .bf-kicker__brand {
+  font-size: clamp(1.9rem, 2.7vw, 2.9rem);
+}
+
+.bf-hero .bf-deal .bf-kicker__product {
+  font-size: clamp(1.25rem, 1.75vw, 1.85rem);
+}
+
+.bf-hero .bf-deal .bf-offerbox {
+  margin-top: 0;
+  font-size: clamp(1.1rem, 1.5vw, 1.6rem);
+}
+
+.bf-hero .bf-stage {
+  min-height: clamp(520px, 76svh, 800px);
+}
+
+/* fita do topo: atravessa o palco de cima para baixo, por trás do produto, como no banner */
+.bf-hero .bf-stage__tape {
+  /* desce da esquerda para a direita, pelo meio do produto, e sai pelo alto acima do texto */
+  --tx: 44%;
+  --ty: 44%;
+  --ta: 30deg;
+}
+
+.bf-hero--duo .bf-stage__tape {
+  --tx: 32%;
+  --ty: 44%;
+}
+
+/*
+ * Computador: a fita corre baixa, pelo piso do estúdio, levemente inclinada,
+ * com o produto em pé na frente dela. Nunca cruza o texto e não fica em pé.
+ * No tablet e no celular volta a fita do palco, atrás do produto.
+ */
+.bf-ribbon {
+  z-index: 1;
+}
+
+.bf-ribbon--hero {
+  --tx: 50%;
+  --ty: calc(100% - 108px);
+  --ta: -3.5deg;
+}
+
+.bf-ribbon--scene {
+  --tx: 50%;
+  --ty: calc(100% - 108px);
+  --ta: 3.5deg;
+}
+
+@media (min-width: 2000px) {
+  .bf-ribbon--hero,
+  .bf-ribbon--scene {
+    --ty: calc(100% - 128px);
+  }
+}
+
+/* espaço embaixo para a fita do piso passar inteira, de borda a borda, sem encostar no texto */
+.bf-hero {
+  padding-bottom: clamp(160px, 12vw, 190px);
+}
+
+.bf-hero .bf-stage__tape,
+.bf-scene .bf-stage__tape {
+  display: none;
+}
+
+/* ---------- 2. A conta ---------- */
+
+.bf-conta {
+  --floor: 30%;
+  padding-block: clamp(80px, 9vw, 140px);
+}
+
+.bf-conta__sum {
+  display: grid;
+  grid-template-columns: auto auto auto auto minmax(320px, auto);
+  justify-content: start;
+  align-items: end;
+  gap: clamp(16px, 2.6vw, 44px);
+  margin-top: clamp(40px, 5vw, 72px);
+}
+
+.bf-conta__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.bf-conta__img {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bf-conta__img img {
+  height: 100%;
+  width: auto;
+}
+
+.bf-conta__img--main {
+  height: clamp(220px, 24vw, 340px);
+}
+
+.bf-conta__img--gift {
+  height: clamp(150px, 15vw, 210px);
+}
+
+.bf-conta__sum--duo .bf-conta__img--gift {
+  height: clamp(190px, 20vw, 280px);
+}
+
+.bf-conta__img--gift.is-double img + img {
+  margin-left: -42%;
+  transform: translateY(-8%);
+  position: relative;
+  z-index: -1;
+  filter: brightness(0.82);
+}
+
+.bf-conta__item figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  min-height: 3.6em;
+}
+
+.bf-conta__name {
+  font-size: 0.9375rem;
+  color: var(--mist);
+}
+
+.bf-conta__value {
+  font-family: var(--f-offer);
+  font-weight: 700;
+  font-size: 1.625rem;
+  line-height: 1.1;
+}
+
+.bf-conta__value s {
+  color: var(--mist);
+  font-weight: 600;
+  text-decoration-thickness: 2px;
+}
+
+.bf-conta__value b {
+  color: var(--orange);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.bf-conta__op {
+  font-family: var(--f-black);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  color: var(--orange);
+  line-height: 1;
+  align-self: center;
+}
+
+.bf-conta__result {
+  align-self: center;
+  padding-left: clamp(0px, 1vw, 16px);
+}
+
+.bf-conta__worth {
+  font-family: var(--f-offer);
+  font-weight: 600;
+  font-size: clamp(1.25rem, 1.8vw, 1.75rem);
+  color: var(--mist);
+}
+
+.bf-conta__worth s {
+  text-decoration-thickness: 2px;
+}
+
+.bf-conta__pay {
+  white-space: nowrap;
+  font-family: var(--f-offer);
+  font-weight: 800;
+  font-size: clamp(3.25rem, 5.4vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.005em;
+}
+
+.bf-conta__pay span {
+  display: block;
+  font-weight: 700;
+  font-size: 0.34em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 0.1em;
+}
+
+.bf-conta__terms {
+  margin-top: 10px;
+  color: var(--soft);
+  font-size: 0.9375rem;
+  max-width: 34ch;
+}
+
+.bf-specs {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2.4vw, 40px);
+  margin-top: clamp(56px, 6vw, 96px);
+  color: var(--mist);
+  font-size: 1rem;
+}
+
+.bf-specs li {
+  padding-top: 18px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.bf-specs b {
+  display: block;
+  color: var(--white);
+  font-family: var(--f-offer);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+/* ---------- 3. A peça espelhada do outro produto ---------- */
+
+.bf-scene {
+  --floor: 26%;
+  min-height: min(100svh, 940px);
+  display: flex;
+  align-items: stretch;
+  padding-block: clamp(48px, 6vw, 88px) clamp(170px, 13vw, 200px);
+}
+
+.bf-scene__grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "stage deal"
+    "stage buy";
+  column-gap: clamp(24px, 4vw, 72px);
+}
+
+.bf-scene .bf-stage {
+  min-height: clamp(460px, 70svh, 760px);
+}
+
+/* fita da peça espelhada: sobe da esquerda para a direita e sai pelo alto antes da coluna de texto */
+.bf-scene .bf-stage__tape {
+  /* sobe da esquerda para a direita pelo alto do produto e sai pelo topo acima do texto */
+  --tx: 44%;
+  --ty: 34%;
+  --ta: -30deg;
+}
+
+.bf-scene--duo .bf-stage__tape {
+  --tx: 32%;
+}
+
+
+/* ---------- 4. Outras ofertas: miniaturas das peças ---------- */
+
+.bf-offers {
+  background: var(--ink);
+  padding-block: clamp(80px, 9vw, 140px);
+}
+
+.bf-offers__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(12px, 1.4vw, 20px);
+  margin-top: clamp(36px, 4vw, 56px);
+}
+
+.bf-card {
+  --floor: 20%;
+  border-radius: 16px;
+  min-height: 500px;
+  padding: clamp(22px, 2.4vw, 36px);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 18px;
+}
+
+.bf-card__head {
+  position: relative;
+  z-index: 3;
+}
+
+.bf-card__line {
+  font-family: var(--f-offer);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(1.25rem, 1.7vw, 1.625rem);
+  line-height: 1;
+}
+
+.bf-card__off {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 6px;
+  line-height: 0.8;
+}
+
+.bf-card__rs {
+  font-family: var(--f-black);
+  font-weight: 700;
+  font-size: clamp(1.25rem, 1.6vw, 1.625rem);
+  margin-top: 0.9em;
+  margin-right: 0.1em;
+}
+
+.bf-card__num {
+  font-family: var(--f-black);
+  font-weight: 700;
+  font-size: clamp(4.5rem, 7vw, 6.75rem);
+  letter-spacing: -0.03em;
+}
+
+.bf-card__offword {
+  font-family: var(--f-black);
+  font-weight: 700;
+  font-size: clamp(1.25rem, 1.75vw, 1.75rem);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 0.02em;
+  margin-left: 0.15em;
+  line-height: 1;
+}
+
+.bf-card__extra {
+  display: inline-block;
+  margin-top: 14px;
+  background: var(--orange);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-family: var(--f-offer);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9375rem;
+  line-height: 1.15;
+  max-width: 24ch;
+}
+
+.bf-card__product {
+  right: 5%;
+  bottom: 17%;
+  height: 62%;
+}
+
+.bf-card__foot {
+  position: relative;
+  z-index: 3;
+  max-width: 54%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bf-card__note {
+  font-size: 0.875rem;
+  color: var(--soft);
+}
+
+.bf-card__sizes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bf-card__sizes li a {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 8px 8px 8px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  background: rgba(8, 10, 13, 0.55);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transition: box-shadow 0.2s var(--ease);
+}
+
+.bf-card__prices {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.1;
+}
+
+.bf-card__go {
+  font-family: var(--f-black);
+  font-weight: 600;
+  font-size: 0.875rem;
+  background: var(--orange);
+  color: var(--white);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.bf-card__size {
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.bf-card__was {
+  font-size: 0.875rem;
+  color: var(--mist);
+  text-decoration: line-through;
+}
+
+.bf-card__price {
+  font-family: var(--f-offer);
+  font-weight: 800;
+  font-size: 1.375rem;
+  line-height: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .bf-card__sizes li a:hover {
+    box-shadow: inset 0 0 0 1px var(--orange);
+  }
+}
+
+.bf-card .bf-btn {
+  align-self: stretch;
+  min-height: 56px;
+}
+
+.bf-card__switch {
+  margin-top: 0;
+  align-self: flex-start;
+}
+
+.bf-card__pricing {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 10px;
+}
+
+.bf-card__pricing .bf-card__price {
+  font-size: 2rem;
+}
+
+.bf-card__terms {
+  flex-basis: 100%;
+  font-size: 0.875rem;
+  color: var(--soft);
+}
+
+/* ---------- 5. Prova ---------- */
+
+.bf-proof {
+  background: var(--ink-2);
+  padding-block: clamp(80px, 9vw, 130px);
+}
+
+.bf-proof__facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 2.4vw, 40px);
+}
+
+.bf-proof__facts li {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 18px;
+  box-shadow: inset 0 2px 0 var(--orange);
+}
+
+.bf-proof__big {
+  font-family: var(--f-offer);
+  font-weight: 800;
+  font-size: clamp(2.5rem, 4.2vw, 4rem);
+  line-height: 0.95;
+  white-space: nowrap;
+}
+
+.bf-proof__line {
+  color: var(--mist);
+  font-size: 0.9375rem;
+  max-width: 26ch;
+}
+
+.bf-proof .bf-h2 {
+  margin-bottom: clamp(36px, 4vw, 56px);
+}
+
+.bf-quotes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(12px, 1.4vw, 20px);
+  margin-top: clamp(56px, 6vw, 88px);
+}
+
+.bf-quotes__item figure {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  padding: clamp(22px, 2.2vw, 32px);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.bf-quotes blockquote {
+  font-family: var(--f-black);
+  font-weight: 600;
+  font-size: clamp(1.0625rem, 1.3vw, 1.25rem);
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+}
+
+.bf-quotes figcaption {
+  color: var(--mist);
+  font-size: 0.9375rem;
+}
+
+.bf-quotes figcaption {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.bf-quotes figcaption b {
+  display: block;
+  color: var(--white);
+}
+
+.bf-avatar {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 2px var(--orange);
+}
+
+.bf-avatar--empty {
+  display: grid;
+  place-items: center;
+  background: #2a2d33;
+  color: var(--soft);
+  font: 700 1.0625rem/1 var(--f-black);
+  letter-spacing: 0.02em;
+}
+
+/* ---------- 6. Dúvidas ---------- */
+
+.bf-faq {
+  background: var(--ink);
+  padding-block: clamp(80px, 9vw, 130px);
+}
+
+.bf-faq__grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(32px, 5vw, 96px);
+  align-items: start;
+}
+
+.bf-faq__grid .bf-h2 {
+  position: sticky;
+  top: 32px;
+}
+
+.bf-faq__item {
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.bf-faq__item summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 22px 0;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--f-black);
+  font-weight: 600;
+  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+  line-height: 1.3;
+}
+
+.bf-faq__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.bf-faq__icon {
+  position: relative;
+  flex: none;
+  width: 18px;
+  height: 18px;
+}
+
+.bf-faq__icon::before,
+.bf-faq__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 18px;
+  height: 2px;
+  background: var(--orange);
+  transition: transform 0.25s var(--ease);
+}
+
+.bf-faq__icon::after {
+  transform: rotate(90deg);
+}
+
+.bf-faq__item[open] .bf-faq__icon::after {
+  transform: rotate(0deg);
+}
+
+.bf-faq__item p {
+  padding-bottom: 24px;
+  color: var(--soft);
+  max-width: 62ch;
+}
+
+/* ---------- 7. Fechamento ---------- */
+
+.bf-close {
+  --floor: 24%;
+  padding-block: clamp(96px, 11vw, 168px);
+  text-align: center;
+}
+
+.bf-close__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+}
+
+.bf-bf--close {
+  align-items: center;
+}
+
+.bf-bf--close .bf-bf__black {
+  font-size: clamp(3rem, 7vw, 6.5rem);
+}
+
+.bf-bf--close .bf-bf__friday {
+  font-size: clamp(3.4rem, 8.4vw, 8rem);
+  margin-left: 0;
+}
+
+.bf-count {
+  display: flex;
+  gap: clamp(8px, 1.2vw, 16px);
+  margin-top: clamp(28px, 3vw, 44px);
+}
+
+.bf-count__unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: clamp(68px, 7vw, 104px);
+  padding: 14px 8px 12px;
+  border-radius: 12px;
+  background: rgba(8, 10, 13, 0.55);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.bf-count__v {
+  font-family: var(--f-offer);
+  font-weight: 800;
+  font-size: clamp(2.25rem, 4vw, 3.75rem);
+  line-height: 1;
+}
+
+.bf-count__l {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mist);
+  margin-top: 4px;
+}
+
+.bf-close__text {
+  margin-top: 26px;
+  margin-bottom: 22px;
+  max-width: 44ch;
+  color: var(--soft);
+}
+
+.bf-close__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.bf-close__ctas .bf-btn {
+  min-width: 300px;
+}
+
+.bf-close__tape {
+  --tx: 6%;
+  --ty: 14%;
+  --ta: -12deg;
+  z-index: 1;
+}
+
+.bf-close__tape-2 {
+  --h: clamp(52px, 5vw, 84px);
+  --tx: 94%;
+  --ty: 90%;
+  --ta: -12deg;
+  z-index: 1;
+}
+
+.bf-close__ctas.is-duo-first {
+  flex-direction: row-reverse;
+}
+
+.bf-ended {
+  --floor: 24%;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.bf-ended__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+}
+
+/* ---------- Rodapé ---------- */
+
+.bf-footer {
+  background: #08090a;
+  padding-block: 48px calc(48px + env(safe-area-inset-bottom, 0px));
+  color: var(--mist);
+  font-size: 0.875rem;
+}
+
+.bf-footer__inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px 32px;
+  align-items: center;
+}
+
+.bf-footer__logo {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.bf-footer__phone {
+  justify-self: end;
+  font-family: var(--f-offer);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.bf-footer__meta,
+.bf-footer__legal {
+  grid-column: 1 / -1;
+}
+
+.bf-footer__meta a {
+  display: inline-block;
+  padding-block: 12px;
+  text-underline-offset: 0.25em;
+}
+
+.bf-footer__phone {
+  padding-block: 8px;
+}
+
+/* ---------- Barra fixa (celular) ---------- */
+
+.bf-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  display: flex;
+  gap: 8px;
+  padding: 10px max(12px, env(safe-area-inset-left, 0px)) calc(10px + env(safe-area-inset-bottom, 0px));
+  background: rgba(10, 11, 13, 0.9);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transform: translateY(110%);
+  transition: transform 0.35s var(--ease);
+}
+
+.bf-bar[data-visible="true"] {
+  transform: none;
+}
+
+.bf-bar .bf-btn {
+  flex: 1;
+  min-height: 58px;
+}
+
+.bf-bar__wa {
+  flex: none;
+  width: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  color: #25d366;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.bf-bar__wa svg {
+  width: 26px;
+  height: 26px;
+}
+
+@media (min-width: 900px) {
+  .bf-bar {
+    display: none;
+  }
+}
+
+/* ---------- Movimento ---------- */
+
+.bf.is-js [data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s var(--ease),
+    transform 0.7s var(--ease);
+}
+
+.bf.is-js [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+.bf-swap {
+  animation: bf-fade 0.5s var(--ease);
+}
+
+@keyframes bf-fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+.bf-hero .bf-bf__black,
+.bf-hero .bf-bf__friday,
+.bf-hero .bf-deal,
+.bf-hero .bf-buy,
+.bf-hero .bf-stage > :not(.bf-stage__tape) {
+  animation: bf-rise 0.9s var(--ease) both;
+}
+
+.bf-hero .bf-bf__friday {
+  animation-delay: 0.08s;
+}
+
+.bf-hero .bf-deal,
+.bf-hero .bf-buy {
+  animation-delay: 0.22s;
+}
+
+.bf-hero .bf-stage > :not(.bf-stage__tape) {
+  animation-name: bf-fade;
+  animation-delay: 0.12s;
+}
+
+@keyframes bf-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bf *,
+  .bf *::before,
+  .bf *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .bf.is-js [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 1099px) {
+  .bf-hero__grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "brand"
+      "deal"
+      "stage"
+      "buy";
+    row-gap: 0;
+  }
+  .bf-hero .bf-stage {
+    min-height: 560px;
+  }
+
+  .bf-hero__nav,
+  .bf-ribbon {
+    display: none;
+  }
+  .bf-hero {
+    padding-bottom: 32px;
+  }
+  .bf-scene {
+    padding-bottom: 64px;
+  }
+  .bf-hero .bf-stage__tape,
+  .bf-scene .bf-stage__tape {
+    display: flex;
+  }
+  .bf-hero .bf-stage__tape,
+  .bf-hero--duo .bf-stage__tape {
+    --tx: 55%;
+    --ty: 50%;
+    --ta: -18deg;
+  }
+  .bf-stage--terracota .bf-stage__product {
+    left: 38%;
+  }
+  .bf-stage--terracota .bf-stage__extra {
+    left: 20%;
+  }
+  .bf-stage--duo .bf-stage__product {
+    left: 26%;
+  }
+  .bf-stage--duo .bf-stage__extra {
+    left: 52%;
+  }
+
+  .bf-conta__sum {
+    grid-template-columns: auto auto auto;
+    justify-content: start;
+  }
+  .bf-conta__sum .bf-conta__op:nth-of-type(2) {
+    display: none;
+  }
+  .bf-conta__result {
+    grid-column: 1 / -1;
+    padding-left: 0;
+    margin-top: 24px;
+  }
+
+  .bf-scene__grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "deal"
+      "stage"
+      "buy";
+    row-gap: 8px;
+  }
+  .bf-scene .bf-stage {
+    min-height: 600px;
+  }
+  .bf-scene .bf-stage__tape {
+    --tx: 50%;
+    --ty: 56%;
+    --ta: -22deg;
+  }
+
+  .bf-proof__facts {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+  }
+  .bf-quotes {
+    grid-template-columns: 1fr;
+  }
+  .bf-faq__grid {
+    grid-template-columns: 1fr;
+  }
+  .bf-faq__grid .bf-h2 {
+    position: static;
+  }
+}
+
+/* ---------- Celular (mais de 90% dos acessos) ---------- */
+
+@media (max-width: 720px) {
+  .bf {
+    font-size: 1rem;
+  }
+  .bf-hero__bar {
+    padding-top: 14px;
+  }
+  .bf-hero__valid {
+    font-size: 0.75rem;
+    max-width: 30ch;
+  }
+  .bf-hero__logo {
+    font-size: 1.375rem;
+    margin-left: 0.2em;
+  }
+  .bf-bf__black {
+    font-size: 25vw;
+  }
+  .bf-bf__friday {
+    font-size: 36vw;
+  }
+  .bf-kicker__brand {
+    font-size: 2.5rem;
+  }
+  .bf-kicker__product {
+    font-size: 1.625rem;
+  }
+  .bf-offerbox {
+    font-size: 1.5rem;
+  }
+  .bf-ctas {
+    max-width: none;
+  }
+  .bf-ctas .bf-walink {
+    align-self: center;
+  }
+  .bf-trust {
+    justify-content: center;
+    max-width: none;
+  }
+
+  /* palco ocupa a largura toda da tela */
+  .bf-stage {
+    margin-inline: calc(var(--m) * -1);
+  }
+  .bf-stage__selector {
+    right: var(--m);
+    bottom: 2%;
+  }
+  .bf-seal__top,
+  .bf-seal__bottom {
+    font-size: 0.4375rem;
+  }
+  .bf-seal__value {
+    font-size: 1.3rem;
+  }
+  .bf-seal__ring text {
+    font-size: 13px;
+  }
+  .bf-stage__label {
+    font-size: 0.75rem;
+  }
+
+  /* Celular: uma coisa de cada vez. Sem etiqueta e sem selo no palco; cores junto do preço. */
+  .bf-stage__label,
+  .bf-stage__seal,
+  .bf-stage__selector {
+    display: none;
+  }
+  .bf-buy__selector {
+    display: block;
+  }
+
+  /* a oferta numa linha só: título à esquerda, caixa laranja à direita */
+  .bf .bf-deal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .bf .bf-deal .bf-kicker__brand {
+    font-size: 7.4vw;
+  }
+  .bf .bf-deal .bf-kicker__product {
+    font-size: 4.8vw;
+  }
+  .bf .bf-deal .bf-offerbox {
+    flex: none;
+    margin-top: 0;
+    font-size: 4.3vw;
+    padding: 0.85em 1.1em 0.75em;
+  }
+  .bf .bf-deal .bf-offerbox__plus {
+    font-size: 1.8em;
+    top: -0.58em;
+    left: 0.2em;
+  }
+
+  /* Topo: BLACK FRIDAY, oferta, produto limpo, preço e botão */
+  .bf-hero__grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "brand"
+      "deal"
+      "stage"
+      "buy";
+    padding-top: 14px;
+    row-gap: 0;
+  }
+  .bf-hero__logo {
+    margin-bottom: 10px;
+  }
+  .bf-hero .bf-bf__black {
+    font-size: 21vw;
+  }
+  .bf-hero .bf-bf__friday {
+    font-size: 30vw;
+  }
+  .bf-hero .bf-deal {
+    margin-top: 22px;
+  }
+  .bf-hero .bf-stage {
+    min-height: 0;
+    height: 92vw;
+  }
+  .bf-hero .bf-stage__tape,
+  .bf-hero--duo .bf-stage__tape {
+    --tx: 50%;
+    --ty: 50%;
+    --ta: -22deg;
+  }
+  .bf-hero .bf-stage--terracota .bf-stage__product {
+    left: 30%;
+    height: 82%;
+    bottom: 12%;
+  }
+  .bf-hero .bf-stage--terracota .bf-stage__extra {
+    left: 5%;
+    bottom: 5%;
+    height: 21%;
+  }
+  .bf-hero .bf-stage--duo .bf-stage__product {
+    left: 14%;
+    height: 80%;
+    bottom: 12%;
+  }
+  .bf-hero .bf-stage--duo .bf-stage__extra {
+    left: auto;
+    right: 5%;
+    bottom: 5%;
+    height: 40%;
+  }
+  .bf-hero .bf-buy .bf-price {
+    margin-top: 4px;
+  }
+
+  /* Conta */
+  .bf-conta__sum {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 10px;
+    justify-content: stretch;
+  }
+  .bf-conta__item figcaption {
+    min-height: 0;
+  }
+  .bf-conta__img--main {
+    height: 180px;
+  }
+  .bf-conta__img--gift {
+    height: min(74px, 19vw);
+  }
+  .bf-conta__sum--duo .bf-conta__img--gift {
+    height: 150px;
+  }
+  .bf-conta__value {
+    font-size: 1.25rem;
+  }
+  .bf-conta__name {
+    font-size: 0.8125rem;
+  }
+  .bf-conta__op {
+    font-size: 2rem;
+  }
+  .bf-specs {
+    grid-template-columns: 1fr;
+  }
+
+  /* Peça espelhada: oferta, produto limpo, preço e botão */
+  .bf-scene {
+    padding-block: 56px 40px;
+  }
+  .bf-scene .bf-stage {
+    min-height: 0;
+    height: 96vw;
+  }
+  .bf-scene .bf-stage__tape {
+    --tx: 50%;
+    --ty: 50%;
+    --ta: -22deg;
+  }
+  .bf-scene .bf-stage--terracota .bf-stage__product {
+    left: 30%;
+    height: 82%;
+    bottom: 12%;
+  }
+  .bf-scene .bf-stage--terracota .bf-stage__extra {
+    left: 5%;
+    bottom: 5%;
+    height: 21%;
+  }
+  .bf-scene .bf-stage--duo .bf-stage__product {
+    left: 14%;
+    height: 80%;
+    bottom: 12%;
+  }
+  .bf-scene .bf-stage--duo .bf-stage__extra {
+    right: 5%;
+    bottom: 5%;
+    height: 40%;
+  }
+  .bf-scene .bf-buy__desc {
+    margin-top: 8px;
+  }
+
+  .bf-offers__grid {
+    grid-template-columns: 1fr;
+  }
+  .bf-card {
+    min-height: 0;
+    grid-template-rows: auto 300px auto;
+  }
+  .bf-card__product {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    justify-self: center;
+    height: 260px;
+    margin-top: 20px;
+  }
+  .bf-card__foot {
+    max-width: none;
+  }
+  .bf-card .bf-studio__floor {
+    display: none;
+  }
+  .bf-card .bf-walink {
+    align-self: center;
+  }
+  .bf-card__sizes li a {
+    gap: 8px;
+    padding-left: 12px;
+  }
+  .bf-card__size {
+    white-space: nowrap;
+  }
+  .bf-card__go {
+    padding: 10px;
+  }
+
+  /* barra fixa: rótulo numa linha só, mesmo em telas de 320 px */
+  .bf-bar .bf-btn {
+    padding-inline: 1em 0.9em;
+  }
+  .bf-bar .bf-btn__text {
+    min-width: 0;
+  }
+  .bf-bar .bf-btn__text > span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .bf-bar .bf-btn__text > span:first-child {
+    font-size: clamp(0.9375rem, 4.3vw, 1.0625rem);
+  }
+  .bf-walink {
+    font-size: 0.875rem;
+  }
+
+  .bf-proof__facts {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bf-count__unit {
+    min-width: 0;
+    flex: 1;
+  }
+  .bf-count {
+    align-self: stretch;
+  }
+  .bf-close__ctas,
+  .bf-close__ctas.is-duo-first {
+    flex-direction: column;
+    align-self: stretch;
+  }
+  .bf-close__ctas.is-duo-first {
+    flex-direction: column-reverse;
+  }
+  .bf-close__ctas .bf-btn {
+    min-width: 0;
+    width: 100%;
+  }
+  .bf-close__tape {
+    --tx: 6%;
+    --ty: 8%;
+    --ta: -16deg;
+  }
+  .bf-close__tape-2 {
+    display: none;
+  }
+  .bf-footer__inner {
+    grid-template-columns: 1fr;
+  }
+  .bf-footer__phone {
+    justify-self: start;
+  }
+}
