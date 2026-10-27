@@ -25,6 +25,7 @@ const LINKS: LinkItem[] = [
   { path: "/upgrade", title: "Upgrade Acqualive", description: "Oferta de troca do purificador comum pelo Acqualive.", category: "Ofertas" },
   { path: "/acqualive-empresas", title: "Acqualive Empresas", description: "Solucao B2B com simulador de economia e captacao de leads.", category: "Ofertas" },
   { path: "/acqualive-duo-empresas", title: "Acqualive Duo Empresas", description: "Replica da pagina empresas.acqualive.com.br migrada para o Lovable.", category: "Ofertas" },
+  { path: "/black-refis-26", title: "Black Friday Acqualive", description: "Refil gratis na compra do Terracota e do DUO ate 30/11.", category: "Ofertas" },
   { path: "/franquias-solo", title: "Franquias Solo", description: "Mapa de franqueados e convite para ser representante.", category: "Negocios" },
   { path: "/programa-de-indicacao", title: "Programa de Indicacao", description: "Indique e ganhe um Kit de Refis completo.", category: "Indicacao" },
   { path: "/acqualive-club", title: "Acqualive Club", description: "Area de vantagens e beneficios para clientes.", category: "Indicacao" },
