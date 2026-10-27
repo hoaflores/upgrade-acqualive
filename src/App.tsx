@@ -47,6 +47,7 @@ import AguaLimpaFalarSerio from "./pages/AguaLimpaFalarSerio";
 import AguaLimpaPh from "./pages/AguaLimpaPh";
 import NotFound from "./pages/NotFound";
 import SaoPaulo from "./pages/SaoPaulo";
+import BlackFriday from "./pages/BlackFriday";
 import RouteSeo from "./components/RouteSeo";
 
 const queryClient = new QueryClient();
@@ -116,6 +117,7 @@ const App = () => (
 
             <Route path="/admin/franqueados" element={<AdminFranqueados />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="/black-refis-26" element={<BlackFriday />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
