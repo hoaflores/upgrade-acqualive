@@ -254,7 +254,8 @@ export const routeMeta: RouteMeta[] = [
     description:
       "Black Friday Acqualive até 30/11: Terracota com 2 kits de refil grátis e DUO com o Kit Refil DUO grátis. Em até 10x sem juros.",
     image: `${SITE_URL}/black-friday/og.jpg`,
-    noindex: true,
+    changefreq: "daily",
+    priority: "0.9",
   },
   {
     path: "/link",
