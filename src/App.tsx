@@ -111,13 +111,9 @@ const App = () => (
             <Route path="/agua-limpa-falar-serio" element={<AguaLimpaFalarSerio />} />
             <Route path="/agua-limpa-nagle" element={<Navigate to="/agua-limpa-falar-serio" replace />} />
             <Route path="/agua-limpa-ph" element={<AguaLimpaPh />} />
-
-
-
-
+            <Route path="/black-refis-26" element={<BlackFriday />} />
             <Route path="/admin/franqueados" element={<AdminFranqueados />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="/black-refis-26" element={<BlackFriday />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
