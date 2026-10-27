@@ -19,9 +19,9 @@ import { useReveal } from "@/components/black-friday/shared";
 
 /**
  * LP Black Friday Acqualive 2026: tráfego quente (remarketing e parceiros).
- * Foco no Terracota e no DUO. Por padrão não é indexada; para indexar, troque NOINDEX para false.
+ * Foco no Terracota e no DUO. Indexada: aparece no mapa do site e nas buscas. Para esconder de novo, troque NOINDEX para true.
  */
-const NOINDEX = true;
+const NOINDEX = false;
 
 const META = {
   title: "Black Friday Acqualive | Terracota e DUO com refil grátis",
