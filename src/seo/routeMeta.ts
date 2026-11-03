@@ -103,13 +103,6 @@ export const routeMeta: RouteMeta[] = [
     priority: "0.6",
   },
   {
-    path: "/acqualive-club",
-    title: "Acqualive Club | Vantagens para clientes",
-    description: "Participe do Acqualive Club e aproveite benefícios exclusivos de quem é cliente Acqualive.",
-    changefreq: "monthly",
-    priority: "0.6",
-  },
-  {
     path: "/indica-club",
     title: "Indica Club Acqualive | Indique e seja premiado",
     description: "Compartilhe água de verdade com quem você ama e ganhe recompensas a cada indicação.",
