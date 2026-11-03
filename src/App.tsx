@@ -72,7 +72,6 @@ const App = () => (
             <Route path="/comunidade-acqualive" element={<ComunidadeAcqualive />} />
             <Route path="/apresentacao-comunidade-projeto" element={<ApresentacaoComunidade />} />
             <Route path="/indica-pdf" element={<IndicaPDF />} />
-            <Route path="/acqualive-club" element={<Bonifiq />} />
             <Route path="/indica-club" element={<IndicaClub />} />
             <Route path="/email-templates" element={<EmailTemplates />} />
             <Route path="/email-refil" element={<EmailRefilTemplates />} />
