@@ -14,7 +14,6 @@ import Terracota from "./pages/Terracota";
 import ComunidadeAcqualive from "./pages/ComunidadeAcqualive";
 import ApresentacaoComunidade from "./pages/ApresentacaoComunidade";
 import IndicaPDF from "./pages/IndicaPDF";
-import Bonifiq from "./pages/Bonifiq";
 import IndicaClub from "./pages/IndicaClub";
 import EmailTemplates from "./pages/EmailTemplates";
 import EmailRefilTemplates from "./pages/EmailRefilTemplates";

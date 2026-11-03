@@ -28,7 +28,6 @@ const LINKS: LinkItem[] = [
   { path: "/black-refis-26", title: "Black Friday Acqualive", description: "Refil gratis na compra do Terracota e do DUO ate 30/11.", category: "Ofertas" },
   { path: "/franquias-solo", title: "Franquias Solo", description: "Mapa de franqueados e convite para ser representante.", category: "Negocios" },
   { path: "/programa-de-indicacao", title: "Programa de Indicacao", description: "Indique e ganhe um Kit de Refis completo.", category: "Indicacao" },
-  { path: "/acqualive-club", title: "Acqualive Club", description: "Area de vantagens e beneficios para clientes.", category: "Indicacao" },
   { path: "/indica-club", title: "Indica Club", description: "Pagina de indicacao com os pilares de saude.", category: "Indicacao" },
   { path: "/indica-acqualive-2026", title: "Indica Acqualive 2026", description: "Campanha de indicacao para novos clientes.", category: "Indicacao" },
   { path: "/comunidade-acqualive", title: "Ecossistema VIP", description: "Comunidade VIP com privilegios exclusivos.", category: "Comunidade" },
