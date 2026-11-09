@@ -242,7 +242,7 @@ export const routeMeta: RouteMeta[] = [
     noindex: true,
   },
   {
-    path: "/black-refis-26",
+    path: "/black-friday-26",
     title: "Black Friday Acqualive | Terracota e DUO com refil grátis",
     description:
       "Black Friday Acqualive até 30/11: Terracota com 2 kits de refil grátis e DUO com o Kit Refil DUO grátis. Em até 10x sem juros.",
