@@ -286,21 +286,21 @@ export const TESTIMONIALS = [
     name: "Angelina Sabino",
     place: "SP",
     /** Foto original da cliente: coloque o arquivo em public/black-friday/ e o caminho aqui, ex.: "/black-friday/angelina.jpg" */
-    photo: "",
+    photo: "/black-friday/angelina.png",
   },
   {
     quote:
       "Uma das minhas maiores preocupações era a troca do refil. Me surpreendi: é simples, rápida e só acontece a cada vários meses. Não virou um problema, virou rotina.",
     name: "Mártin Lavies",
     place: "RS",
-    photo: "",
+    photo: "/black-friday/martin.png",
   },
   {
     quote:
       "Estou muito satisfeita com o meu purificador. O design é lindo, o manejo muito fácil e a água realmente fica muito melhor. Super recomendo.",
     name: "Virginia Dornelles",
     place: "BA",
-    photo: "",
+    photo: "/black-friday/virginia.png",
   },
 ];
 
