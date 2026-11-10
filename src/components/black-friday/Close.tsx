@@ -25,7 +25,7 @@ const useCountdown = () => {
 };
 
 /** 7. Fechamento: a cena da campanha de novo, com o tempo que falta. */
-export const CloseScene = forwardRef<HTMLElement, { lead: CampaignLead; premiumSize?: number }>(({ lead, premiumSize = 1 }, ref) => {
+export const CloseScene = forwardRef<HTMLElement, { lead: CampaignLead; premiumSize?: number; economyWording?: boolean }>(({ lead, premiumSize = 1, economyWording }, ref) => {
   const premium = OFFER_CARDS[0].sizes[premiumSize];
   const c = useCountdown();
   const units = [
@@ -36,7 +36,7 @@ export const CloseScene = forwardRef<HTMLElement, { lead: CampaignLead; premiumS
   ];
   return (
     <Studio className="bf-close" light="center" aria-labelledby="close-title" ref={ref}>
-      <Tape className="bf-close__tape" text="O melhor desconto do ano" />
+      <Tape className="bf-close__tape" text={economyWording ? "A melhor economia do ano" : "O melhor desconto do ano"} />
       <Tape className="bf-close__tape-2" text="Black Friday Acqualive" blur reverse />
       <div className="bf-wrap bf-close__inner">
         <h2 id="close-title" className="bf-bf bf-bf--close">

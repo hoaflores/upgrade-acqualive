@@ -85,6 +85,7 @@ const BlackFriday = ({ forceLead, forceEnded }: { forceLead?: Lead; forceEnded?:
   useReveal(rootRef);
 
   const [lead] = useState<Lead>(() => forceLead ?? readLead());
+  const economyWording = window.location.pathname.replace(/\/$/, "") === "/black-terracota-26";
   const other: Lead = lead === "terracota" ? "duo" : "terracota";
   const [ended] = useState(() => forceEnded ?? isOver());
 
@@ -143,7 +144,7 @@ const BlackFriday = ({ forceLead, forceEnded }: { forceLead?: Lead; forceEnded?:
 
   return (
     <div ref={rootRef} className="bf">
-      <Hero ref={heroCtaRef} product={lead} {...choice} />
+      <Hero ref={heroCtaRef} product={lead} economyWording={economyWording} {...choice} />
       <main>
         {lead !== "premium" && <Conta product={lead} {...choice} />}
         <SceneSection product={other} {...choice} />
@@ -153,9 +154,9 @@ const BlackFriday = ({ forceLead, forceEnded }: { forceLead?: Lead; forceEnded?:
         {/* depois das outras ofertas a barra do celular volta com o produto principal */}
         <div data-product={lead}>
           <Proof />
-          <Faq />
+          <Faq economyWording={economyWording} />
         </div>
-        <CloseScene ref={closeRef} lead={lead} premiumSize={premiumSize} />
+        <CloseScene ref={closeRef} lead={lead} premiumSize={premiumSize} economyWording={economyWording} />
       </main>
       <Footer />
       <MobileBar visible={!heroCtaVisible && !closeVisible && focus !== "none"} product={barProduct} />
