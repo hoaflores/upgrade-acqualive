@@ -1,4 +1,3 @@
-# São Paulo migration
 # Black Friday product variants
 - [ ] Create Terracota-first and V Self Premium-first routes with matching purchase selections and route metadata.
 - [ ] Verify both variants on desktop and mobile without changing the original campaign page.

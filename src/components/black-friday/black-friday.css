@@ -684,6 +684,24 @@
   height: 76%;
 }
 
+.bf-stage--premium .bf-stage__product {
+  left: 20%;
+  bottom: 12%;
+  height: 76%;
+}
+
+.bf-stage--premium .bf-stage__extra {
+  left: 0;
+  bottom: 5%;
+  height: 20%;
+  z-index: 3;
+}
+
+.bf-hero--premium .bf-kicker__product {
+  max-width: 12ch;
+  letter-spacing: 0;
+}
+
 .bf-stage--terracota .bf-stage__extra {
   left: 0;
   bottom: 5%;
@@ -1930,6 +1948,12 @@
   .bf-stage--terracota .bf-stage__product {
     left: 38%;
   }
+  .bf-stage--premium .bf-stage__product {
+    left: 38%;
+  }
+  .bf-stage--premium .bf-stage__extra {
+    left: 20%;
+  }
   .bf-stage--terracota .bf-stage__extra {
     left: 20%;
   }
@@ -2124,6 +2148,16 @@
     left: 30%;
     height: 82%;
     bottom: 12%;
+  }
+  .bf-hero .bf-stage--premium .bf-stage__product {
+    left: 30%;
+    height: 82%;
+    bottom: 12%;
+  }
+  .bf-hero .bf-stage--premium .bf-stage__extra {
+    left: 5%;
+    bottom: 5%;
+    height: 21%;
   }
   .bf-hero .bf-stage--terracota .bf-stage__extra {
     left: 5%;

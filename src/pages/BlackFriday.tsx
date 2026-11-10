@@ -25,14 +25,6 @@ import { findRouteMeta } from "@/seo/routeMeta";
  */
 const NOINDEX = false;
 
-const META = {
-  title: "Black Friday Acqualive | Terracota e DUO com refil grátis",
-  description:
-    "Black Friday Acqualive até 30/11: Terracota com 2 kits de refil grátis e DUO com o Kit Refil DUO grátis. Em até 10x sem juros.",
-  /** Imagem de quando o link é compartilhado (WhatsApp, Facebook). Fica em public/black-friday/og.jpg. */
-  image: "/black-friday/og.jpg",
-};
-
 /**
  * Título, descrição e imagem de compartilhamento.
  * Atenção: o WhatsApp e o Facebook não rodam JavaScript. Para a prévia do link aparecer com foto,
