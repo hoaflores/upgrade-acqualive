@@ -163,8 +163,14 @@ export const SCENES: Record<Lead, SceneData> = {
   },
 };
 
-const sceneData = (product: Lead, choice: Choice): SceneData => {
+const sceneData = (product: Lead, choice: Choice, economyWording = false): SceneData => {
   const data = SCENES[product];
+  if (product === "terracota" && economyWording) return {
+    ...data,
+    tape: "Mais de R$ 1.000 de economia no seu filtro Acqualive",
+    label: { top: "A melhor", accent: ["economia", "do ano!"] },
+    seal: { ...data.seal, ring: "Mais de R$1.000 de economia", bottom: "de economia" },
+  };
   if (product !== "premium") return data;
   const size = OFFER_CARDS[0].sizes[choice.premiumSize];
   return { ...data, price: size.price, worth: size.was };
@@ -298,8 +304,8 @@ const Buy = ({
 
 /* ---------- 1. Topo: a peça do produto principal ---------- */
 
-export const Hero = forwardRef<HTMLDivElement, { product: Lead } & Choice>(({ product, ...c }, ctaRef) => {
-  const d = sceneData(product, c);
+export const Hero = forwardRef<HTMLDivElement, { product: Lead; economyWording?: boolean } & Choice>(({ product, economyWording, ...c }, ctaRef) => {
+  const d = sceneData(product, c, economyWording);
   const days = daysLeft();
   return (
     <Studio as="header" id="topo" className={`bf-hero bf-hero--${product}`} light="center" data-product={product}>

@@ -43,7 +43,7 @@ const FAQ: { q: string; a: ReactNode }[] = [
 ];
 
 /** 6. Dúvidas: acordeão escuro, a primeira aberta. */
-export const Faq = () => (
+export const Faq = ({ economyWording = false }: { economyWording?: boolean }) => (
   <section className="bf-faq" aria-labelledby="faq-title">
     <div className="bf-wrap bf-faq__grid">
       <h2 id="faq-title" className="bf-h2" data-reveal>
@@ -56,7 +56,7 @@ export const Faq = () => (
               <span>{item.q}</span>
               <span className="bf-faq__icon" aria-hidden="true" />
             </summary>
-            <p>{item.a}</p>
+            <p>{economyWording && typeof item.a === "string" ? item.a.replace("de desconto", "de economia") : item.a}</p>
           </details>
         ))}
       </div>
