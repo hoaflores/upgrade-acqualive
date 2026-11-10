@@ -1,6 +1,7 @@
 import { forwardRef, useEffect, useState } from "react";
 import { AcqualiveLogo } from "./Logo";
-import { CAMPAIGN, DUO, STORE_URL, TERRACOTA, WHATSAPP_DISPLAY, brl, buyUrl, whatsappUrl } from "./offers";
+import { CAMPAIGN, DUO, OFFER_CARDS, STORE_URL, TERRACOTA, WHATSAPP_DISPLAY, brl, buyUrl, whatsappUrl } from "./offers";
+import type { CampaignLead } from "./variants";
 import { Studio, Tape } from "./Scene";
 import { BuyButton, WhatsAppIcon, WhatsAppLink, track } from "./shared";
 
@@ -24,7 +25,8 @@ const useCountdown = () => {
 };
 
 /** 7. Fechamento: a cena da campanha de novo, com o tempo que falta. */
-export const CloseScene = forwardRef<HTMLElement, { lead: "terracota" | "duo" }>(({ lead }, ref) => {
+export const CloseScene = forwardRef<HTMLElement, { lead: CampaignLead; premiumSize?: number }>(({ lead, premiumSize = 1 }, ref) => {
+  const premium = OFFER_CARDS[0].sizes[premiumSize];
   const c = useCountdown();
   const units = [
     { v: c.d, l: "dias" },
@@ -53,6 +55,7 @@ export const CloseScene = forwardRef<HTMLElement, { lead: "terracota" | "duo" }>
         )}
         <p className="bf-close__text">Os preços e os brindes da Black já estão aplicados na loja.</p>
         <div className={`bf-close__ctas ${lead === "duo" ? "is-duo-first" : ""}`}>
+          {lead === "premium" && <BuyButton href={buyUrl(premium.handle, premium.variantId)} product={premium.handle} placement="fechamento" label={`Comprar o V Self Premium ${premium.label}`} sub={`${brl(premium.price)} com R$ 250 OFF`} />}
           <BuyButton
             href={buyUrl(TERRACOTA.variants[0].handle, TERRACOTA.variants[0].variantId)}
             product="terracota-terracota"
@@ -127,9 +130,11 @@ export const Footer = () => (
   </footer>
 );
 
-export type BarProduct = "terracota" | "gray" | "duo" | "duo220";
+export type BarProduct = "terracota" | "gray" | "duo" | "duo220" | "premium6" | "premium10";
 
 const BAR = {
+  premium6: { href: buyUrl(OFFER_CARDS[0].sizes[0].handle, OFFER_CARDS[0].sizes[0].variantId), label: "Comprar o V Self Premium 6 L", sub: `${brl(OFFER_CARDS[0].sizes[0].price)} com R$ 250 OFF`, product: OFFER_CARDS[0].sizes[0].handle },
+  premium10: { href: buyUrl(OFFER_CARDS[0].sizes[1].handle, OFFER_CARDS[0].sizes[1].variantId), label: "Comprar o V Self Premium 10 L", sub: `${brl(OFFER_CARDS[0].sizes[1].price)} com R$ 250 OFF`, product: OFFER_CARDS[0].sizes[1].handle },
   terracota: {
     href: buyUrl(TERRACOTA.variants[0].handle, TERRACOTA.variants[0].variantId),
     label: "Comprar o Terracota",

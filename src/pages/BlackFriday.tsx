@@ -16,20 +16,14 @@ import { Proof } from "@/components/black-friday/Proof";
 import { VideoMaster } from "@/components/black-friday/VideoMaster";
 import { isOver } from "@/components/black-friday/offers";
 import { useReveal } from "@/components/black-friday/shared";
+import { resolveCampaignLead } from "@/components/black-friday/variants";
+import { findRouteMeta } from "@/seo/routeMeta";
 
 /**
  * LP Black Friday Acqualive 2026: tráfego quente (remarketing e parceiros).
  * Foco no Terracota e no DUO. Indexada: aparece no mapa do site e nas buscas. Para esconder de novo, troque NOINDEX para true.
  */
 const NOINDEX = false;
-
-const META = {
-  title: "Black Friday Acqualive | Terracota e DUO com refil grátis",
-  description:
-    "Black Friday Acqualive até 30/11: Terracota com 2 kits de refil grátis e DUO com o Kit Refil DUO grátis. Em até 10x sem juros.",
-  /** Imagem de quando o link é compartilhado (WhatsApp, Facebook). Fica em public/black-friday/og.jpg. */
-  image: "/black-friday/og.jpg",
-};
 
 /**
  * Título, descrição e imagem de compartilhamento.
@@ -38,6 +32,7 @@ const META = {
  */
 const useMeta = () => {
   useEffect(() => {
+    const META = findRouteMeta(window.location.pathname) ?? { title: "Black Friday Acqualive", description: "Ofertas Acqualive", image: "/black-friday/og.jpg" };
     const previousTitle = document.title;
     document.title = META.title;
     const set = (attr: "name" | "property", key: string, content: string) => {
@@ -55,7 +50,7 @@ const useMeta = () => {
         else if (tag) tag.content = previous;
       };
     };
-    const image = new URL(META.image, window.location.origin).href;
+    const image = new URL(META.image ?? "/black-friday/og.jpg", window.location.origin).href;
     const restore = [
       set("name", "description", META.description),
       set("property", "og:title", META.title),
@@ -80,8 +75,7 @@ const useMeta = () => {
 const DEFAULT_LEAD: Lead = "duo";
 const readLead = (): Lead => {
   if (typeof window === "undefined") return DEFAULT_LEAD;
-  const p = new URLSearchParams(window.location.search).get("produto")?.toLowerCase();
-  return p === "terracota" ? "terracota" : p === "duo" ? "duo" : DEFAULT_LEAD;
+  return resolveCampaignLead(window.location.pathname, window.location.search);
 };
 
 /** forceLead e forceEnded servem só para a prévia de revisão mostrar as versões lado a lado. */
@@ -100,6 +94,7 @@ const BlackFriday = ({ forceLead, forceEnded }: { forceLead?: Lead; forceEnded?:
   const [closeVisible, setCloseVisible] = useState(false);
   const [color, setColor] = useState<Color>("terracota");
   const [volt, setVolt] = useState<Volt>("127v");
+  const [premiumSize, setPremiumSize] = useState(1);
   const [focus, setFocus] = useState<Lead | "none">(lead);
 
   // a barra do celular mostra o produto da seção que está na tela
@@ -117,7 +112,7 @@ const BlackFriday = ({ forceLead, forceEnded }: { forceLead?: Lead; forceEnded?:
     root.querySelectorAll("[data-product]").forEach((el) => io.observe(el));
     return () => io.disconnect();
   }, [ended]);
-  const barProduct: BarProduct = focus === "duo" ? (volt === "220v" ? "duo220" : "duo") : color;
+  const barProduct: BarProduct = focus === "premium" ? (premiumSize === 0 ? "premium6" : "premium10") : focus === "duo" ? (volt === "220v" ? "duo220" : "duo") : color;
 
   useEffect(() => {
     if (ended) return;
@@ -135,7 +130,7 @@ const BlackFriday = ({ forceLead, forceEnded }: { forceLead?: Lead; forceEnded?:
     };
   }, [ended]);
 
-  const choice = { color, onColor: setColor, volt, onVolt: setVolt };
+  const choice = { color, onColor: setColor, volt, onVolt: setVolt, premiumSize, onPremiumSize: setPremiumSize };
 
   if (ended) {
     return (
@@ -150,8 +145,9 @@ const BlackFriday = ({ forceLead, forceEnded }: { forceLead?: Lead; forceEnded?:
     <div ref={rootRef} className="bf">
       <Hero ref={heroCtaRef} product={lead} {...choice} />
       <main>
-        <Conta product={lead} {...choice} />
+        {lead !== "premium" && <Conta product={lead} {...choice} />}
         <SceneSection product={other} {...choice} />
+        {lead === "premium" && <SceneSection product="duo" {...choice} />}
         <VideoMaster />
         <Offers />
         {/* depois das outras ofertas a barra do celular volta com o produto principal */}
@@ -159,7 +155,7 @@ const BlackFriday = ({ forceLead, forceEnded }: { forceLead?: Lead; forceEnded?:
           <Proof />
           <Faq />
         </div>
-        <CloseScene ref={closeRef} lead={lead} />
+        <CloseScene ref={closeRef} lead={lead} premiumSize={premiumSize} />
       </main>
       <Footer />
       <MobileBar visible={!heroCtaVisible && !closeVisible && focus !== "none"} product={barProduct} />
