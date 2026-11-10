@@ -5,6 +5,7 @@ import {
   CUTOUTS,
   DUO,
   PIX,
+  OFFER_CARDS,
   RATINGS,
   REFIL,
   TERRACOTA,
@@ -15,10 +16,12 @@ import {
 } from "./offers";
 import { Label, OfferBox, Product, Seal, Studio, Tape } from "./Scene";
 import { BuyButton, WhatsAppLink } from "./shared";
+import { Button } from "@/components/ui/button";
+import type { CampaignLead } from "./variants";
 
 /* ---------- Tipos e estado ---------- */
 
-export type Lead = "terracota" | "duo";
+export type Lead = CampaignLead;
 export type Color = "terracota" | "gray";
 export type Volt = (typeof DUO.variants)[number]["id"];
 
@@ -27,6 +30,8 @@ export type Choice = {
   onColor: (c: Color) => void;
   volt: Volt;
   onVolt: (v: Volt) => void;
+  premiumSize: number;
+  onPremiumSize: (size: number) => void;
 };
 
 /* ---------- O que muda de um produto para o outro ---------- */
@@ -83,6 +88,33 @@ const VoltSwitch = ({ volt, onVolt }: Choice) => (
 );
 
 export const SCENES: Record<Lead, SceneData> = {
+  premium: {
+    kicker: "V Self Premium com",
+    box: ["R$ 250", "OFF", "Na Black Friday"],
+    tape: "V Self Premium com R$ 250 OFF",
+    label: { top: "Suporte de madeira", accent: ["acabamento", "premium"] },
+    seal: { ring: "Black Friday Acqualive", top: "Economize", value: "R$250", bottom: "no Premium" },
+    desc: "Suporte de madeira, torneira de inox e água alcalina por gravidade. Escolha 6 ou 10 litros, com Kit Refil Fresh Nanno V extra com 50% OFF.",
+    price: OFFER_CARDS[0].sizes[1].price,
+    installments: 10,
+    worth: OFFER_CARDS[0].sizes[1].was,
+    rating: "Suporte de madeira e torneira de inox",
+    main: ({ premiumSize }) => ({ src: OFFER_CARDS[0].sizes[premiumSize].photo, alt: `Acqualive V Self Premium ${OFFER_CARDS[0].sizes[premiumSize].label} com suporte de madeira`, width: 320, height: 560 }),
+    extra: { src: CUTOUTS.caixaNanno, alt: "Kit Refil Fresh Nanno V extra disponível com 50% OFF", width: 483, height: 396 },
+    buy: ({ premiumSize }) => {
+      const size = OFFER_CARDS[0].sizes[premiumSize];
+      return { href: buyUrl(size.handle, size.variantId), label: `Comprar o V Self Premium ${size.label}`, product: size.handle };
+    },
+    buySub: "R$ 250 OFF + kit extra com 50% OFF",
+    whatsapp: ({ premiumSize }) => `${OFFER_CARDS[0].whatsappMessage} Tamanho: ${OFFER_CARDS[0].sizes[premiumSize].label}.`,
+    selector: ({ premiumSize, onPremiumSize }) => (
+      <div className="bf-volt" role="group" aria-label="Tamanho do V Self Premium">
+        {OFFER_CARDS[0].sizes.map((size, index) => (
+          <Button key={size.label} variant="ghost" aria-pressed={premiumSize === index} onClick={() => onPremiumSize(index)}>{size.label}</Button>
+        ))}
+      </div>
+    ),
+  },
   terracota: {
     kicker: "Terracota com",
     box: ["2 kits refil", "Extra", "Fresh Nanno V"],
@@ -129,6 +161,13 @@ export const SCENES: Record<Lead, SceneData> = {
     whatsapp: ({ volt }) => `${DUO.whatsappMessage} Voltagem: ${volt}.`,
     selector: (c) => <VoltSwitch {...c} />,
   },
+};
+
+const sceneData = (product: Lead, choice: Choice): SceneData => {
+  const data = SCENES[product];
+  if (product !== "premium") return data;
+  const size = OFFER_CARDS[0].sizes[choice.premiumSize];
+  return { ...data, price: size.price, worth: size.was };
 };
 
 /* ---------- Partes ---------- */
@@ -231,7 +270,7 @@ const Buy = ({
       <div className="bf-price num">
         {showWorth && (
           <p className="bf-price__worth">
-            <s>{brl(d.worth)}</s> em produtos, por
+            <s>{brl(d.worth)}</s> {product === "premium" ? "por" : "em produtos, por"}
           </p>
         )}
         <p className="bf-price__value">{brl(d.price)}</p>
@@ -245,7 +284,7 @@ const Buy = ({
           )}
         </p>
       </div>
-      {product === "duo" && d.selector(c)}
+      {(product === "duo" || product === "premium") && d.selector(c)}
       {/* as cores ficam junto do preço, fora do palco, para o produto respirar */}
       {product === "terracota" && <div className="bf-buy__selector">{d.selector(c)}</div>}
       <div ref={ctaRef} className="bf-ctas">
@@ -260,7 +299,7 @@ const Buy = ({
 /* ---------- 1. Topo: a peça do produto principal ---------- */
 
 export const Hero = forwardRef<HTMLDivElement, { product: Lead } & Choice>(({ product, ...c }, ctaRef) => {
-  const d = SCENES[product];
+  const d = sceneData(product, c);
   const days = daysLeft();
   return (
     <Studio as="header" id="topo" className={`bf-hero bf-hero--${product}`} light="center" data-product={product}>
@@ -275,6 +314,7 @@ export const Hero = forwardRef<HTMLDivElement, { product: Lead } & Choice>(({ pr
         <nav className="bf-hero__nav" aria-label="Ofertas">
           <a href="#terracota">Terracota</a>
           <a href="#duo">DUO</a>
+          {product === "premium" && <a href="#topo">V Self Premium</a>}
           <a href="#ofertas">Outras ofertas</a>
         </nav>
       </div>
@@ -293,7 +333,7 @@ export const Hero = forwardRef<HTMLDivElement, { product: Lead } & Choice>(({ pr
         </div>
         <Deal d={d} />
         <Stage product={product} d={d} c={c} priority />
-        <Buy product={product} d={d} c={c} placement="topo" ctaRef={ctaRef} />
+        <Buy product={product} d={d} c={c} placement="topo" ctaRef={ctaRef} showWorth={product === "premium"} showDesc={product === "premium"} />
       </div>
     </Studio>
   );
@@ -304,7 +344,7 @@ Hero.displayName = "Hero";
 /* ---------- 3. A peça do outro produto, espelhada ---------- */
 
 export const SceneSection = ({ product, ...c }: { product: Lead } & Choice) => {
-  const d = SCENES[product];
+  const d = sceneData(product, c);
   return (
     <Studio
       id={product}

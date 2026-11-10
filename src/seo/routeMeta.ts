@@ -251,6 +251,22 @@ export const routeMeta: RouteMeta[] = [
     priority: "0.9",
   },
   {
+    path: "/black-terracota-26",
+    title: "Black Friday Terracota | Acqualive com 2 kits de refil grátis",
+    description: "Terracota em destaque na Black Friday Acqualive: 2 Kits Refil Fresh Nanno V grátis, em até 10x sem juros. Ofertas até 30/11/2026.",
+    image: `${SITE_URL}/black-friday/og.jpg`,
+    changefreq: "daily",
+    priority: "0.9",
+  },
+  {
+    path: "/black-premium-26",
+    title: "Black Friday V Self Premium | Acqualive com R$ 250 OFF",
+    description: "Acqualive V Self Premium em destaque: 6 ou 10 litros com R$ 250 OFF e Kit Refil Fresh Nanno V extra com 50% OFF. Ofertas até 30/11/2026.",
+    image: `${SITE_URL}/black-friday/og.jpg`,
+    changefreq: "daily",
+    priority: "0.9",
+  },
+  {
     path: "/link",
     title: "Links Acqualive | Todos os conteúdos em um lugar",
     description: "Acesso rápido a todas as páginas, materiais e ferramentas públicas da Acqualive.",

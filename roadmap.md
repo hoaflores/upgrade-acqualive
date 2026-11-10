@@ -1,4 +1,9 @@
 # São Paulo migration
+# Black Friday product variants
+- [ ] Create Terracota-first and V Self Premium-first routes with matching purchase selections and route metadata.
+- [ ] Verify both variants on desktop and mobile without changing the original campaign page.
+
+# São Paulo migration
 - [x] Preserve complete original page, imagery, fonts and styling internally.
 - [x] Preserve FAQ, carousel, video/map embeds and direct contact links.
 - [x] Send form leads to the user-specified São Paulo spreadsheet.

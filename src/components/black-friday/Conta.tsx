@@ -40,7 +40,7 @@ const CONTA = {
 } as const;
 
 /** 2. A conta do produto principal: produto + brinde = quanto vale e quanto custa. No mesmo estúdio da campanha. */
-export const Conta = ({ product, ...c }: { product: Lead } & Choice) => {
+export const Conta = ({ product, ...c }: { product: Exclude<Lead, "premium"> } & Choice) => {
   const d = SCENES[product];
   const k = CONTA[product];
   const main = d.main(c);
